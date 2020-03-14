@@ -352,6 +352,7 @@ MigrationBackup/
 # App config
 appsettings.Development.json
 appsettings.json
+_README.md
 
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
@@ -360,3 +361,4 @@ ClientApp/node_modules
 ClientApp/dist
 VueClient/node_modules
 VueClient/dist
+
