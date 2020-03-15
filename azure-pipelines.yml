@@ -46,4 +46,5 @@ steps:
   inputs:
     azureSubscription: 'ShortpoetServiceConnection'
     appName: 'Shortpoet'
-    package: $(System.ArtifactsDirectory)/**/*.zip    
+    package: $(System.ArtifactsDirectory)/**/*.zip
+    deploymentMethod: zipDeploy    
