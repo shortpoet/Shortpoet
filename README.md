@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/sorianocarlitos/Shortpoet/_apis/build/status/shortpoet.Shortpoet?branchName=master)](https://dev.azure.com/sorianocarlitos/Shortpoet/_build/latest?definitionId=1&branchName=base)
+
 # Shortpoet
 
 https://dev.azure.com/sorianocarlitos/Shortpoet/_apis/serviceendpoint/endpoints?api-version=5.0-preview.2
