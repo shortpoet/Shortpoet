@@ -17,18 +17,18 @@ variables:
 steps:
 - script: echo hello from Windows
 
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
 - task: UseDotNet@2
   displayName: 'Install .NET Core sdk'
   inputs:
     packageType: sdk
     version: 3.1.100
     installationPath: $(Agent.ToolsDirectory)/dotnet
+
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
 
 - task: VSBuild@1
   inputs:
