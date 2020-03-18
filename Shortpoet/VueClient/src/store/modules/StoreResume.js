@@ -31,13 +31,13 @@ export const actions = {
       const url = rootGetters.getUrlPrefix + endpoints.resume.RESUME_API
       // console.log(url)
       const response = await axios.get(url)
-      console.log(response)
+      // console.log(response)
       commit(SET_RESUME, response.data)
       commit(SET_RESUME_LOADED, true)
-      console.info('resume loaded')
+      // console.info('resume loaded')
       // console.log(state.tableaux)
     } catch (err) {
-      console.error(err)
+      // console.error(err)
       commit(SET_RESUME_LOADED, false)
     }
   }

@@ -10,7 +10,7 @@
         :address="getResume.address"
       />
       <StartExperience
-        :experience="resume.experience"      
+        :experience="getResume.experience"      
       />
       <StartEducation />
       <StartSkills />

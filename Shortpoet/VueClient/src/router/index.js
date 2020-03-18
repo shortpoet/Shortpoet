@@ -15,9 +15,9 @@ const routes = function(paths) {
     // .concat([{path: '*', redirect: '/resume'}])
 }
 
-console.log(paths)
-var x = routes(paths)
-console.log(x)
+// console.log(paths)
+// var x = routes(paths)
+// console.log(x)
 
 const scrollBehavior = (to, from, savedPosition) => {
   if (savedPosition) {
@@ -37,5 +37,5 @@ const router = new VueRouter({
   routes: routes(paths),
   scrollBehavior: scrollBehavior
 })
-console.log(router)
+// console.log(router)
 export default router
