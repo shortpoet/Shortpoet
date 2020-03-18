@@ -353,6 +353,7 @@ MigrationBackup/
 appsettings.Development.json
 appsettings.json
 _README.md
+__README.md
 
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat

@@ -9,8 +9,8 @@ using Microsoft.Extensions.Logging;
 namespace Shortpoet.Controllers
 {
     // [Authorize]
-    [ApiController]
-    [Route("[controller]")]
+    // [ApiController]
+    // [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -25,7 +25,7 @@ namespace Shortpoet.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        // [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

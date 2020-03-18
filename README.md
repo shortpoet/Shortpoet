@@ -64,16 +64,23 @@ https://stackoverflow.com/questions/56574113/build-net-core-3-0-on-azure-pipelin
 https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml
 
 
-
 # azure sql
 
 https://markheath.net/post/connect-web-app-sql-database-azure-cli
 
 https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-dotnetcore-sqldb-app
 
+https://docs.microsoft.com/en-us/azure/sql-database/scripts/sql-database-create-and-configure-database-cli?toc=%2fcli%2fazure%2ftoc.json
+
 # azure cli 
 
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest
+
 https://docs.microsoft.com/en-us/azure/sql-database/sql-database-cli-samples?toc=%2Fcli%2Fazure%2Ftoc.json&bc=%2Fcli%2Fazure%2Fbreadcrumb%2Ftoc.json&tabs=single-database
+
+https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest
+
+https://docs.microsoft.com/en-us/cli/azure/appservice/plan?view=azure-cli-latest
 
 https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline-cli?view=azure-devops&tabs=browser#run-a-pipeline
 
@@ -97,11 +104,23 @@ https://docs.microsoft.com/en-us/azure/app-service/configure-ssl-certificate#upl
 
 https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-deployment?view=azure-devops#sample-post-deployment-script
 
+https://docs.microsoft.com/en-us/azure/sql-database/scripts/sql-database-create-and-configure-database-cli?toc=%2fcli%2fazure%2ftoc.json
+
 # azure deploy
 
 https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-deployment?view=azure-devops#sample-post-deployment-script
 
 # azure identity
+
+https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-3.1&tabs=visual-studio#prevent-publish-of-static-identity-assets
+
+https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-3.0&tabs=visual-studio#scaffold-identity-into-a-razor-project-with-authorization
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/platform-specific-configuration?view=aspnetcore-3.1
+
+https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.1&tabs=visual-studio#require-https
+
+https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-register-applications?tabs=applications
 
 https://www.identityserver.com/documentation/adminui/Configuration_and_Integration/Configuring_AdminUI/
 
@@ -113,3 +132,24 @@ https://docs.microsoft.com/en-us/aspnet/core/security/key-vault-configuration?vi
 
 https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization
 
+https://forums.asp.net/t/2150518.aspx?InvalidOperationException+No+service+for+type+Microsoft+AspNetCore+Identity+UserManager+1+Microsoft+AspNetCore+Identity+IdentityUser+has+been+registered+
+
+# dotnet / ef
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/tools/dotnet-aspnet-codegenerator?view=aspnetcore-3.1
+
+https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet
+
+https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding
+
+https://www.learnentityframeworkcore.com/walkthroughs/existing-database
+
+# debug 
+
+https://www.dotnetcurry.com/aspnet/1373/debugging-aspnet-core-using-visual-studio-code
+
+- node.js continues to run process after VS stop debug
+
+    - https://github.com/dotnet/aspnetcore/issues/5204
+
+    - https://stackoverflow.com/questions/14790910/stop-all-instances-of-node-js-server

@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h3>Message</h3>
+    <p>@Model.Message</p>
+    <hr />
+    <h3>Username</h3>
+    @String.Join("\n        ", HttpContext.Request.Headers.Select(k => String.Format("{0} = {1}", k, HttpContext.Request.Headers[k.ToString()])))
+    <ul>
+      @foreach (var key in Request.Headers)
+      {
+        <li>
+          <b>@Html.Encode(key)</b> 
+        </li>
+      }
+    </ul>
+
+    @String.Join("\n        ", HttpContext.User.Claims.Select(c => String.Format("{0}", c)))
+    <ul>
+      @foreach (var claim in User.Claims)
+      {
+        <li>
+          <b>@Html.Encode(claim)</b>
+        </li>
+      }
+    </ul>
+
+    @* @String.Join("\n        ", Model.HttpContext.Session.Keys.Cast<string>().Select(k => String.Format("{0} = {1}", k, Model.HttpContext.Session.Keys[k])))     *@
+  </p>
+</div>
