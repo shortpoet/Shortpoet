@@ -44,7 +44,8 @@ namespace Shortpoet.Controllers
           .Include(r => r.Skills)
           .Include(r => r.SpokenLanguages)
           .AsNoTracking()
-          .Where(r => r.ResumeId == id);
+          .Where(r => r.ResumeId == id)
+          .FirstOrDefault();
         return new JsonResult(resume);
       }
     }
