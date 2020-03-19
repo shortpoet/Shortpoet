@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using VueCliMiddleware;
+using Newtonsoft.Json;
 
 namespace Shortpoet
 {
@@ -44,7 +45,7 @@ namespace Shortpoet
             // use below with option to enable UseMvc
             services.AddMvc(options => {
                 options.EnableEndpointRouting = false;
-            });
+            }).AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
             
             services.AddControllersWithViews();
             services.AddRazorPages();

@@ -10,12 +10,20 @@
         :address="getResume.address"
       />
       <StartExperience
-        :experience="getResume.experience"      
+        :experiences="getResume.experiences"      
       />
-      <StartEducation />
-      <StartSkills />
-      <StartInterests />
-      <StartAwards />
+      <StartEducation
+        :educations="getResume.educations"
+      />
+      <StartSkills
+        :skills="getResume.skills"
+      />
+      <StartInterests
+        :interests="getResume.interests"
+      />
+      <StartAwards
+        :awards="getResume.awards"
+      />
     </div>
   </div>
 </template>
@@ -26,8 +34,8 @@ import StartAbout from '@/components/Resume/StartBootstrap/StartAbout'
 import StartExperience from '@/components/Resume/StartBootstrap/StartExperience'
 import StartEducation from '@/components/Resume/StartBootstrap/StartEducation'
 import StartSkills from '@/components/Resume/StartBootstrap/StartSkills'
-import StartInterests from '@/components/Resume/StartBootstrap/StartSkills'
-import StartAwards from '@/components/Resume/StartBootstrap/StartSkills'
+import StartInterests from '@/components/Resume/StartBootstrap/StartInterests'
+import StartAwards from '@/components/Resume/StartBootstrap/StartAwards'
 import { mapGetters, mapActions } from 'vuex'
 
 // const yaml = require('js-yaml')
