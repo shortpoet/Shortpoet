@@ -72,6 +72,8 @@ https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-dotnetcor
 
 https://docs.microsoft.com/en-us/azure/sql-database/scripts/sql-database-create-and-configure-database-cli?toc=%2fcli%2fazure%2ftoc.json
 
+https://docs.microsoft.com/en-us/azure/sql-database/sql-database-cli-samples?tabs=single-database
+
 # azure cli 
 
 https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest

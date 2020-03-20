@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Shortpoet.Data;
 using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace Shortpoet
 {
@@ -35,6 +36,7 @@ namespace Shortpoet
           var hostingEnvironment = services.GetService<IWebHostEnvironment>();
           // run this code first before DBInit is written to test the rest of the setup
           // context.Database.EnsureCreated();
+          context.Database.Migrate();
           DbInitializer.InitializeDb(context, hostingEnvironment);
         }
         catch (Exception ex)

@@ -10,7 +10,7 @@ using Shortpoet.Data;
 namespace Shortpoet.Migrations
 {
     [DbContext(typeof(ResumeDbContext))]
-    [Migration("20200320015205_InitialCreate")]
+    [Migration("20200320024431_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
