@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shortpoet.Data;
 
-namespace Shortpoet.Migrations.ResumeDb
+namespace Shortpoet.Migrations
 {
     [DbContext(typeof(ResumeDbContext))]
-    partial class ResumeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200320015205_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

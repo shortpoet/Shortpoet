@@ -21,7 +21,7 @@ namespace Shortpoet.Data
       Console.WriteLine(environment.WebRootPath);
       Console.WriteLine("############################");
 
-      context.Database.EnsureCreated();
+      // context.Database.EnsureCreated();
       // Look for any dashboards.
       if (context.Resumes.Any())
       {

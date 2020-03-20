@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Shortpoet.Migrations.ResumeDb
+namespace Shortpoet.Migrations
 {
     public partial class InitialCreate : Migration
     {

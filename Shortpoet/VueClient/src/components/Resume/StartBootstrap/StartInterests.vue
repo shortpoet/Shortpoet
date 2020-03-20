@@ -11,6 +11,11 @@
 <script>
 export default {
   name: 'StartInterests',
+  props: {
+    interests: {
+      type: Array
+    }
+  }
 }
 </script>
 
