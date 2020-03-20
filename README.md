@@ -1,14 +1,15 @@
 [![Build Status](https://dev.azure.com/sorianocarlitos/Shortpoet/_apis/build/status/shortpoet.Shortpoet?branchName=master)](https://dev.azure.com/sorianocarlitos/Shortpoet/_build/latest?definitionId=1&branchName=dev)
 
 # Shortpoet
-
+https://shortpoet.scm.azurewebsites.net/DebugConsole
 https://dev.azure.com/sorianocarlitos/Shortpoet/_apis/serviceendpoint/endpoints?api-version=5.0-preview.2
 
 - Setting ASPNETCORE_ENVIRONMENT to "Production" enabled app to read from build "dist" and deployed correctly.  
     - ?? figure out how to run the node server in development
 
 http://vorillaz.github.io/devicons/#/main
-
+https://www.hexcolortool.com/#b56036
+https://stackoverflow.com/questions/50778850/vue-cli-favicon
 # Azure
 
 https://github.com/Azure-Samples
@@ -147,6 +148,10 @@ https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet
 https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding
 
 https://www.learnentityframeworkcore.com/walkthroughs/existing-database
+
+https://www.entityframeworktutorial.net/efcore/cli-commands-for-ef-core-migration.aspx
+
+https://www.red-gate.com/simple-talk/sql/database-administration/using-migration-scripts-in-database-deployments/
 
 # debug 
 
