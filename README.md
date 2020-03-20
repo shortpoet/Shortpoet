@@ -7,6 +7,8 @@ https://dev.azure.com/sorianocarlitos/Shortpoet/_apis/serviceendpoint/endpoints?
 - Setting ASPNETCORE_ENVIRONMENT to "Production" enabled app to read from build "dist" and deployed correctly.  
     - ?? figure out how to run the node server in development
 
+http://vorillaz.github.io/devicons/#/main
+
 # Azure
 
 https://github.com/Azure-Samples
