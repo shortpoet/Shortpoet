@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Shortpoet.Data;
+using Shortpoet.Data.Seed;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 

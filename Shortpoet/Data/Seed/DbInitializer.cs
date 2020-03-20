@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 
 
-namespace Shortpoet.Data
+namespace Shortpoet.Data.Seed
 {
   public class DbInitializer
   {
@@ -30,13 +30,13 @@ namespace Shortpoet.Data
       Resume resume = new Resume();
       if (environment.EnvironmentName == "Development")
       {
-        string path = @".\VueClient\src\assets\carlos_resume.json";
+        string path = @"Data\Seed\carlos_resume.json";
         // string path = @".\Data\Seed\public.json";
          resume = Resume.LoadJson(path);
       }
       else 
       {
-        string path = "VueClient/src/assets/carlos_resume.json";
+        string path = "Data/Seed/carlos_resume.json";
         // string path = @".\Data\Seed\public.json";
         resume = Resume.LoadJson(path);
       }

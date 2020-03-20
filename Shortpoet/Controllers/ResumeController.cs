@@ -30,7 +30,7 @@ namespace Shortpoet.Controllers
     //   [HttpGet]
       public IActionResult Get()
       {
-        string path = @".\VueClient\src\assets\carlos_resume.json";
+        string path = @"Data\Seed\carlos_resume.json";
         Resume resume = Resume.LoadJson(path);
         return new JsonResult(resume);
       }
