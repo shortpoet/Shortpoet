@@ -7,7 +7,7 @@
 const paths = [
   {
     path: '/',
-    view: 'Home'
+    view: 'Start'
   },
   {
     path: '/about',
