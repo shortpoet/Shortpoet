@@ -28,7 +28,8 @@ export const mutations = {
 export const actions = {
   async loadResume ({ commit, rootGetters }) {
     try {
-      const url = rootGetters.getUrlPrefix + endpoints.resume.RESUME_API
+      const resPoint = rootGetters.getEnv === 'production' ? endpoints.resume.RESUME_FETCH_API : endpoints.resume.RESUME_GET_API
+      const url = rootGetters.getUrlPrefix + resPoint
       // console.log(url)
       const response = await axios.get(url)
       // console.log(response)
