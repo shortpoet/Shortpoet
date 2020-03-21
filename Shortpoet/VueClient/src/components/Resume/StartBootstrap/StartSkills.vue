@@ -46,38 +46,65 @@
       <div class="subheading mb-3">
         Workflow
       </div>
-      <ul class="fa-ul mb-0">
+      <ul class="fa-ul mb-3 skill-list">
       <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa fa-check"></i>
           Mobile-First, Responsive Design</li>
       <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa fa-check"></i>
           Cross Browser Testing &amp; Debugging</li>
       <li>
-          <i class="fa-li fa fa-check"></i>
-          Cross Functional Teams</li>
+          <i class="fa fa-check"></i>
+          CI/CD</li>
       <li>
-          <i class="fa-li fa fa-check"></i>
+          <i class="fa fa-check"></i>
           Agile Development &amp; Scrum</li>
       </ul>
-      <div class="subheading mb-3">Other</div>
-      <ul class="fa-ul mb-0">
-        <li>
-            <i class="fa-li fa fa-check"></i>
-            Mobile-First, Responsive Design
-        </li>
-      </ul>
+      <div
+        v-for="(type, i) in skills"
+        :key="i"
+      >
+        <div class="subheading mb-3">
+          {{ type.type }}
+        </div>
+        <ul class="fa-ul mb-3 skill-list">
+          <li
+            v-for="(skill, i) in listSkills(type.details)"
+            :key="i"
+          >
+              <i class="fa fa-check"></i>
+              {{ skill }}
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-    name: 'StartSkills',
+  name: 'StartSkills',
+  props: {
+    skills: {
+      type: Array,
+      default: () => []
+    }
+  },
+  methods: {
+    listSkills(skills) {
+      return skills.split(',')
+    }
+  },
+  mounted () {
+  }
 }
 </script>
 
 <style scoped>
+.skill-list li {
+  display: inline;
+  margin: 0rem .5rem 0rem 0rem;
+}
 .vue-devicon {
   /* height: 48px;
   width: 48px;

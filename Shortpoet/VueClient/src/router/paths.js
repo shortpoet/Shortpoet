@@ -17,10 +17,10 @@ const paths = [
     path: '/resume',
     view: 'Resume'
   },
-  {
-    path: '/start',
-    view: 'Start'
-  }
+  // {
+  //   path: '/start',
+  //   view: 'Start'
+  // }
 ]
 
 export default paths

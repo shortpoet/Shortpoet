@@ -6,9 +6,11 @@
       <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p> -->
       <p class="mb-0">{{ interests }}</p>
     </div>
+    <div class="short-poetry my-auto">
+      <div class='embed-container'><iframe src='//instagram.com/p/BK2nW22Bg1l/embed/' frameborder='0' scrolling='no' allowtransparency='true'></iframe></div>    
+    </div>
   </section>
 </template>
-
 <script>
 export default {
   name: 'StartInterests',
@@ -21,5 +23,13 @@ export default {
 </script>
 
 <style scoped>
-
+#interests {
+  align-items: center;
+}
+.short-poetry {
+  height: 50%;
+  width: 50%;  
+}
+.embed-container { position: relative; padding-bottom: 150%; height: 0; overflow: hidden; max-width: 100%; } 
+.embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 </style>

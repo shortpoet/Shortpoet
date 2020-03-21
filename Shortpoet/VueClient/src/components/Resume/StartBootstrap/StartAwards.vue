@@ -1,12 +1,19 @@
 <template>
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
     <div class="my-auto">
-      <h2 class="mb-5">Awards &amp; Certifications</h2>
+      <h2 class="mb-5">Spoken Languages &amp; Certifications</h2>
       <ul class="fa-ul mb-0">
+        <li
+          v-for="(lang, i) in awards"
+          :key="i"
+        >
+          <i class="fa-li fa fa-trophy text-warning"></i>
+          {{ recase(lang.type) }}: {{ lang.languages }}
+          </li>
         <li>
           <i class="fa-li fa fa-trophy text-warning"></i>
-          Google Analytics Certified Developer</li>
-        <li>
+          Certified Interpreter</li>
+        <!-- <li>
           <i class="fa-li fa fa-trophy text-warning"></i>
           Mobile Web Specialist - Google Certification</li>
         <li>
@@ -29,15 +36,27 @@
         <li>
           <i class="fa-li fa fa-trophy text-warning"></i>
           3<sup>rd</sup>
-          Place - James Buchanan High School - Hackathon 2005</li>
+          Place - James Buchanan High School - Hackathon 2005</li> -->
       </ul>
     </div>
   </section>
 </template>
 
 <script>
+import _recase from '@/utils/recase.js'
 export default {
   name: 'StartAwards',
+  props: {
+    awards: {
+      type: Array,
+      default: () => []
+    }
+  },
+  methods: {
+    recase(input) {
+      return _recase(input)
+    }
+  }
 }
 </script>
 

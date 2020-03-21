@@ -7,7 +7,8 @@
       <div class="subheading mb-5">{{ address }}
         <a href="mailto:name@email.com">{{ email }}</a>
       </div>
-      <p class="mb-5">{{ aboutMe }}</p>
+      <p class="mb-5">{{ aboutMe1 }}</p>
+      <p class="mb-5">{{ aboutMe2 }}</p>
       <ul class="list-inline list-social-icons mb-0">
         <li class="list-inline-item">
           <a href="#">
@@ -64,6 +65,14 @@ export default {
       },
       address: {
         type: String
+      }
+    },
+    computed: {
+      aboutMe1 () {
+        return this.aboutMe.slice(0, this.aboutMe.indexOf('The call'))
+      },
+      aboutMe2 () {
+        return this.aboutMe.slice(this.aboutMe.indexOf('The call'))
       }
     }
 }

@@ -18,11 +18,11 @@
       <StartSkills
         :skills="getResume.skills"
       />
+      <StartAwards
+        :awards="getResume.spokenLanguages"
+      />
       <StartInterests
         :interests="getResume.interests"
-      />
-      <StartAwards
-        :awards="getResume.awards"
       />
     </div>
   </div>
@@ -58,7 +58,16 @@ export default {
   },
   computed: {
     ...mapGetters('resume', ['getResume', 'getResumeLoaded']),
-    resume () { return this.getResume }
+    resume () {
+
+      return this.getResume.skills.forEach(skill => {
+        console.log(skill)
+        skill.details = skill.details.split(',')
+        console.log(skill)
+      })
+      
+    }
+    
   },
   methods: {
     ...mapActions('resume', ['loadResume']),

@@ -2,7 +2,7 @@
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
     <div class="my-auto">
       <h2 class="mb-5">Education</h2>
-      <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="ed in educations" :key="ed.educationId">
+      <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="(ed, i) in educations" :key="i">
         <div class="resume-content mr-auto">
           <h3 class="mb-0">{{ ed.institution }}</h3>
           <div class="subheading mb-3">{{ ed.degree }}</div>

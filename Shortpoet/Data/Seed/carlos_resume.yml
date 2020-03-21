@@ -4,14 +4,13 @@ name: CARLOS
 surname: SORIANO
 address: St. Louis, MO 
 email: shortpoet@gmail.com
-aboutMe: "Language Data Specialist - operate at the intersection of language and data. 
+aboutMe: Language Data Specialist - operate at the intersection of language and data. 
   Driven to analyze and provide insight from data on modes of speech as they reflect human behavior. 
   Through experience across hospitality, sales, and freelance language services, 
   I developed a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty witnessed everywhere from hospitals to courthouses and union halls in between. 
   The call to bridge the gap between analogue expertise with long-dormant digital dexterity came in the form of my brother, freecodecamp, and finally formal training at 
-  Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills such as: 
-  Object-Oriented Programming with Python and JavaScript, Relational and Document Databases with MySQL and MongoDB, Plotting and Data Visualization with Pandas and Matplotlib, Web Dev with HTML and CSS. 
-  Leveraging these skills for analysis of socio-economic trends across the spectrum of the most widely spoken languages allows my clients a unique perspective on their field of choice."
+  Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - leveraging these for analysis of socio-economic trends across the spectrum of the 
+  most widely spoken languages allows my clients a unique perspective on their field of choice.
 experiences:
   - type: software
     jobs:
@@ -99,8 +98,12 @@ skills:
     details: Trados
   - type: miscelaneous
     details: Internet Research, Microsoft Office, Adobe Creative Suite, YogaWorks 200hr Yoga TeacherTraning, Cicerone Beer Server Certification
-interests:
-  - Cooking, organic gardening, yoga, health and fitness, scuba diving, voiceovers, acting
+interests: >
+  When I'm not knuckle-deep in code, I like to knead bread, dig gardens, vermicompost and cook tasty meals.  
+  I do some yoga and pilates to work on the code-bod.  
+  I have been known to be insipired by the dramatic muses.  Ask for an accent sometime!
+  Being a big fan of perspective, when I started going underwater at age 11, what once was a world of fear turned into a world of wonder.  When I can,
+  SCUBA is pretty sweet stuff.  Speaking of perspective, here's some shortpoetry...
 spokenLanguages:
   - type: fluent
     languages: English, Spanish, Tagalog

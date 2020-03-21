@@ -10,8 +10,8 @@ export const index = {
 }
 export const resume = {
   // RESUME @/store/modules/StoreResume.js
-  // RESUME_API: '/api/Resume/Get'
-  RESUME_API: '/api/Resume/Fetch/1'
+  RESUME_API: '/api/Resume/Get'
+  // RESUME_API: '/api/Resume/Fetch/1'
 }
 export const auth = {
   // AUTH @/store/modules/StoreAuth.js
