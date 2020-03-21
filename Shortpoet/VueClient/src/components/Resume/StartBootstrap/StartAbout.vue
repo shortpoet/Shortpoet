@@ -4,8 +4,11 @@
       <h1 class="mb-0">{{ name }}
         <span class="text-primary">{{ surname }}</span>
       </h1>
+      <!-- https://lonewolfonline.net/html-character-codes-ascii-entity-unicode-symbols/ -->
       <div class="subheading mb-5">{{ address }}
-        <a href="mailto:name@email.com">{{ email }}</a>
+        <span class="ml-1">&#937;</span> 
+        <span class="mx-2" style="color:#343a40">&#8226;</span> 
+        <a :href="email">{{ email }}</a>
       </div>
       <p class="mb-5">{{ aboutMe1 }}</p>
       <p class="mb-5">{{ aboutMe2 }}</p>
