@@ -10,6 +10,13 @@ https://dev.azure.com/sorianocarlitos/Shortpoet/_apis/serviceendpoint/endpoints?
 http://vorillaz.github.io/devicons/#/main
 https://www.hexcolortool.com/#b56036
 https://stackoverflow.com/questions/50778850/vue-cli-favicon
+
+http://embedresponsively.com/
+https://developers.facebook.com/docs/instagram/embedding/#get--p--post-url--media
+
+https://www.google.com/webmasters/verification/home?pli=1
+https://domains.google.com/m/registrar?d=shortpoet.com#d=shortpoet.com
+
 # Azure
 
 https://github.com/Azure-Samples

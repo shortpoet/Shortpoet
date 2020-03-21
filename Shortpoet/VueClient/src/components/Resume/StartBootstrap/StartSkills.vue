@@ -63,18 +63,21 @@
       <div
         v-for="(type, i) in skills"
         :key="i"
+        class="skill-grid"
       >
         <div class="subheading mb-3">
           {{ type.type }}
         </div>
         <ul class="fa-ul mb-3 skill-list">
-          <li
-            v-for="(skill, i) in listSkills(type.details)"
-            :key="i"
-          >
-              <i class="fa fa-check"></i>
-              {{ skill }}
-          </li>
+            <li
+              v-for="(skill, i) in listSkills(type.details)"
+              :key="i"
+            >          
+              <span class="skill">
+                <i class="fa fa-check"></i>
+                {{ skill }}
+              </span>
+            </li>
         </ul>
       </div>
     </div>
@@ -101,10 +104,6 @@ export default {
 </script>
 
 <style scoped>
-.skill-list li {
-  display: inline;
-  margin: 0rem .5rem 0rem 0rem;
-}
 .vue-devicon {
   /* height: 48px;
   width: 48px;
@@ -117,4 +116,45 @@ export default {
   padding: .25rem;
   margin-bottom: .8rem;
 }
+.skill-grid {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+.skill-list li {
+  /* adding inline-block instead of inline allowed the icon and text to stay on same line */
+  display: inline-block;
+  margin: 0rem .5rem 0rem 0rem;
+}
+
+/*
+  in case one would want to implement the below
+  https://stackoverflow.com/questions/50310201/make-elements-wrap-in-groups-not-one-by-one
+ */
+
+.skill {
+  /* flex: 0 0 33%; */
+  /* display: inline-block; */
+}
+
+/* @media ( max-width: 800px) {
+  .skill-grid {
+    width: 50%;
+  }
+}
+
+@media ( max-width: 600px) {
+  .skill-grid {
+    width: 33%;
+  }
+}
+
+@media ( max-width: 400px) {
+  .skill-grid {
+    width: 15%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+} */
 </style>

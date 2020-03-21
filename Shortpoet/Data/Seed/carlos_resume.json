@@ -12,7 +12,7 @@
         {
           "position": "Software Engineer",
           "company": "Boeing",
-          "description": "Current responsibilities include: Ensure data integrity of daily loading form source systems mostly using c#/dotnet and sql scripts. Some python and R. Reconstructing legacy Angular data viz products using dotnet and vue. Developing new ETL and frontend architectures and components for reusable data analytics pipeline. Deployment of products using Cloud Foundry, Gitlab CI/CD and other enterprise hosting systems. Liaising with other teams/departments to collaborate in data flow and analytics.",
+          "description": "Current responsibilities include - Ensure data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with some python and R. Reconstructing legacy Angular data viz products using dotnet and vue. Developing new ETL and frontend architectures and components for reusable data analytics pipeline. Deployment of products using Cloud Foundry, Gitlab CI/CD and other enterprise hosting systems. Liaising with other teams/departments to collaborate in data flow and analytics.",
           "startDate": "April 2019",
           "endDate": "Present"
         }
