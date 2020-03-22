@@ -8,7 +8,7 @@
       <div class="subheading mb-5">{{ address }}
         <span class="ml-1">&#937;</span> 
         <span class="mx-2" style="color:#343a40">&#8226;</span> 
-        <a :href="email">{{ email }}</a>
+        <a :href="'mailto:' + email">{{ email }}</a>
       </div>
       <p class="mb-5">{{ aboutMe1 }}</p>
       <p class="mb-5">{{ aboutMe2 }}</p>
