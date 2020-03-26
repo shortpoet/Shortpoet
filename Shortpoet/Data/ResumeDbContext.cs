@@ -33,6 +33,13 @@ namespace Shortpoet.Data
       modelBuilder.Entity<Education>().ToTable("Educations", "Profiles")
         // .HasKey(ed => ed.EducationId)
         ;
+      modelBuilder.Entity<Skill>().ToTable("Skills", "Profiles")
+        .HasKey(sk => sk.SkillId)
+        ;
+      modelBuilder.Entity<SpokenLanguages>().ToTable("SpokenLanguages", "Profiles")
+        .HasKey(sl => sl.SpokenLanguagesId)
+        ;
+
       modelBuilder.Entity<Experience>(builder => {
         builder.ToTable("Experiences", "Profiles");
         builder.HasKey(ex => ex.ExperienceId);
@@ -50,6 +57,7 @@ namespace Shortpoet.Data
       });
       modelBuilder.Entity<Job>(builder => {
         builder.ToTable("Jobs", "Profiles");
+        builder.HasKey(j => j.JobId);
         builder.HasOne(j => j.Experience)
           .WithMany(ex => ex.Jobs)
           .HasForeignKey(j => new { j.ResumeId })
@@ -59,12 +67,6 @@ namespace Shortpoet.Data
             .OnDelete(DeleteBehavior.NoAction)
         ;
       });
-      modelBuilder.Entity<Skill>().ToTable("Skills", "Profiles")
-        // .HasKey(sk => sk.SkillId)
-        ;
-      modelBuilder.Entity<SpokenLanguages>().ToTable("SpokenLanguages", "Profiles")
-        // .HasKey(sl => sl.SpokenLanguagesId)
-        ;
     }
   }
 }

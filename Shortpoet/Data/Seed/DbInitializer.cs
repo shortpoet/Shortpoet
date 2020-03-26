@@ -40,6 +40,11 @@ namespace Shortpoet.Data.Seed
         // string path = @".\Data\Seed\public.json";
         resume = Resume.LoadJson(path);
       }
+      // these 3 lines ensure entities load in context in correct order 
+      // when just adding resume the order in resume object was correct but ids assigned in different order
+      foreach (var x in resume.SpokenLanguages.Reverse()) { context.SpokenLanguages.Add(x); }
+      foreach (var x in resume.Skills.Reverse()) { context.Skills.Add(x); }
+      foreach (var x in resume.Educations.Reverse()) { context.Educations.Add(x); }
       context.Resumes.Add(resume);
       context.SaveChanges();
 
@@ -64,6 +69,8 @@ namespace Shortpoet.Data.Seed
 
       // context.Entry(resume).State = EntityState.Modified;
       context.SaveChanges();
+      Console.WriteLine("#######################");
+      Console.WriteLine("Seed Data Context Changes Saved");
     }
   }
 }

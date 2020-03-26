@@ -9,8 +9,8 @@ namespace Shortpoet.Data.Models.Resume
     public class SpokenLanguages
     {
         public int SpokenLanguagesId { get; set; }
-        public virtual Resume Resume { get; set; }
         public int? ResumeId { get; set; }
+        public virtual Resume Resume { get; set; }
         public string Type { get; set; }
         public string Languages { get; set; }
         public bool TranslationInterpretationProfessional { get; set; }

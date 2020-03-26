@@ -37,8 +37,8 @@ namespace Shortpoet
           var hostingEnvironment = services.GetService<IWebHostEnvironment>();
           // run this code first before DBInit is written to test the rest of the setup
           // context.Database.EnsureCreated();
-          DbInitializer.InitializeDb(context, hostingEnvironment);
           context.Database.Migrate();
+          DbInitializer.InitializeDb(context, hostingEnvironment);
         }
         catch (Exception ex)
         {
