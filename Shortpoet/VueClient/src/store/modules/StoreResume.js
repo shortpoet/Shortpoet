@@ -10,7 +10,8 @@ import {
 } from '@/store/api-endpoints'
 
 export const state = {
-  resume: {
+  resume: {},
+  _resume: {
     "title": "Carlos Resume March 2020",
     "name": "CARLOS",
     "surname": "SORIANO",
@@ -181,7 +182,7 @@ export const state = {
       }
     ]
   },
-  resumeLoaded: true
+  resumeLoaded: false
 }
 
 export const getters = {
@@ -203,12 +204,12 @@ export const actions = {
       // console.log(url)
       const response = await axios.get(url)
       
-      // console.log(response)
-      // commit(SET_RESUME, response.data)
+      console.log(response)
+      commit(SET_RESUME, response.data)
       // commit(SET_RESUME, resume)
 
-      // commit(SET_RESUME_LOADED, true)
-      return response
+      commit(SET_RESUME_LOADED, true)
+      // return response
       // console.info('resume loaded')
       // console.log(state.tableaux)
     } catch (err) {

@@ -96,7 +96,7 @@ export default {
       $('body').scrollspy({
         target: '#sideNav'
       })
-      // this.loadResume()
+      this.loadResume()
     })
   }
 }

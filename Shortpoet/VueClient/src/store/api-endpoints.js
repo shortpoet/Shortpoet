@@ -5,7 +5,8 @@ export const index = {
   //     let clientRoot = window.location.protocol + '//' + window.location.host
   // FROM dbana/app/.../authservice.js
 
-  BACKEND_PREFIX_PROD: 'https://' + window.location.hostname,
+  // BACKEND_PREFIX_PROD: 'https://' + window.location.hostname,
+  BACKEND_PREFIX_PROD: 'https://shortpoet.azurewebsites.net',
   BACKEND_PREFIX_DEV: 'https://localhost:5001'
 }
 export const resume = {
