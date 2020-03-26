@@ -27,14 +27,14 @@ namespace Shortpoet.Data
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<Resume>().ToTable("Resumes", "Profile")
+      modelBuilder.Entity<Resume>().ToTable("Resumes", "Profiles")
         // .HasKey(r => r.ResumeId)
         ;
-      modelBuilder.Entity<Education>().ToTable("Educations", "Profile")
+      modelBuilder.Entity<Education>().ToTable("Educations", "Profiles")
         // .HasKey(ed => ed.EducationId)
         ;
       modelBuilder.Entity<Experience>(builder => {
-        builder.ToTable("Experiences", "Profile");
+        builder.ToTable("Experiences", "Profiles");
         builder.HasKey(ex => ex.ExperienceId);
         // builder.HasKey(ex => new { ex.ResumeId, ex.ExperienceId });
         builder.HasOne(ex => ex.Resume)
@@ -49,7 +49,7 @@ namespace Shortpoet.Data
         ;
       });
       modelBuilder.Entity<Job>(builder => {
-        builder.ToTable("Jobs", "Profile");
+        builder.ToTable("Jobs", "Profiles");
         builder.HasOne(j => j.Experience)
           .WithMany(ex => ex.Jobs)
           .HasForeignKey(j => new { j.ResumeId })
@@ -59,10 +59,10 @@ namespace Shortpoet.Data
             .OnDelete(DeleteBehavior.NoAction)
         ;
       });
-      modelBuilder.Entity<Skill>().ToTable("Skills", "Profile")
+      modelBuilder.Entity<Skill>().ToTable("Skills", "Profiles")
         // .HasKey(sk => sk.SkillId)
         ;
-      modelBuilder.Entity<SpokenLanguages>().ToTable("SpokenLanguages", "Profile")
+      modelBuilder.Entity<SpokenLanguages>().ToTable("SpokenLanguages", "Profiles")
         // .HasKey(sl => sl.SpokenLanguagesId)
         ;
     }

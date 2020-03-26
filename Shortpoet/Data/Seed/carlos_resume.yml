@@ -79,6 +79,16 @@ experiences:
         offering particular assistance interpreting for members of the multi-cultural staff and management
       startDate: September 2005
       endDate: April 2006
+educations:
+  - institution: Washington University in St. Louis
+    degree: Data Analytics Certificate
+    focus: Python, Javascript, Tableau
+  - institution: University of Pennsylvania
+    degree: Bachelor of Arts and Sciences
+    focus:  major in East Asian Languages and Cultures, Chinese Concentration, relevant coursework in linguistics and anthropology
+  - institution: Thacher School
+    degree: Private secondary boarding school
+    focus: emphasis on academics, the outdoors, camping, horsemanship, and environmental awareness, Year Abroad in France
 skills:
   - type: dotnet
     details: Framework 4.x, Core, Entity Framework, Razor, MVC
@@ -98,12 +108,6 @@ skills:
     details: Trados
   - type: miscelaneous
     details: Internet Research, Microsoft Office, Adobe Creative Suite, YogaWorks 200hr Yoga TeacherTraning, Cicerone Beer Server Certification
-interests: >
-  When I'm not knuckle-deep in code, I like to knead bread, dig gardens, vermicompost and cook tasty meals.  
-  I do some yoga and pilates to work on the code-bod.  
-  I have been known to be insipired by the dramatic muses.  Ask for an accent sometime!
-  Being a big fan of perspective, when I started going underwater at age 11, what once was a world of fear turned into a world of wonder.  When I can,
-  SCUBA is pretty sweet stuff.  Speaking of perspective, here's some shortpoetry...
 spokenLanguages:
   - type: native
     languages: English, Spanish, Tagalog
@@ -117,13 +121,9 @@ spokenLanguages:
   - type: workingKnowledge
     languages: German, Portuguese
     translationInterpretationProfessional: false
-educations:
-  - institution: Washington University in St. Louis
-    degree: Data Analytics Certificate
-    focus: Python, Javascript, Tableau
-  - institution: University of Pennsylvania
-    degree: Bachelor of Arts and Sciences
-    focus:  major in East Asian Languages and Cultures, Chinese Concentration, relevant coursework in linguistics and anthropology
-  - institution: Thacher School
-    degree: Private secondary boarding school
-    focus: emphasis on academics, the outdoors, camping, horsemanship, and environmental awareness, Year Abroad in France
+interests: >
+  When I'm not knuckle-deep in code, I like to knead bread, dig gardens, vermicompost and cook tasty meals.  
+  I do some yoga and pilates to work on the code-bod.  
+  I have been known to be insipired by the dramatic muses.  Ask for an accent sometime!
+  Being a big fan of perspective, when I started going underwater at age 11, what once was a world of fear turned into a world of wonder.  When I can,
+  SCUBA is pretty sweet stuff.  Speaking of perspective, here's some shortpoetry...
