@@ -40,7 +40,7 @@ export default {
   name: 'StartNav',
   data () {
     return {
-      pic: require('@/assets/profile_pic.jpg')
+      pic: require('@/assets/github_profile_pic.png')
     }
   },
   methods: {
