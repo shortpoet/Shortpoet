@@ -43,26 +43,66 @@ namespace Shortpoet.Data.Seed
       
       // these 3 lines ensure entities load in context in correct order 
       // when just adding resume the order in resume object was correct but ids assigned in different order
-      foreach (var x in resume.SpokenLanguages.Reverse()) { context.SpokenLanguages.Add(x); }
-      foreach (var x in resume.Skills.Reverse()) { context.Skills.Add(x); }
-      foreach (var x in resume.Educations.Reverse()) { context.Educations.Add(x); }
+      // var ls = new List<SpokenLanguages>();
+      // var ss = new List<Skill>();
+      // var eds = new List<Education>();
+      // var exs = new List<Experience>();
+      foreach (var x in resume.SpokenLanguages.Reverse()) { 
+        context.SpokenLanguages.Add(x); 
+        // ls.Add(x); 
+        }
+      foreach (var x in resume.Skills.Reverse()) { 
+        context.Skills.Add(x); 
+        // ss.Add(x); 
+        }
+      foreach (var x in resume.Educations.Reverse()) { 
+        context.Educations.Add(x); 
+        // eds.Add(x); 
+        }
       foreach (var x in resume.Experiences.Reverse()){
-        var jobs = new List<Job>();
-        foreach (var y in x.Jobs) {
-          jobs.Add(y);
+        // var jobs = new List<Job>();
+        foreach (var y in x.Jobs.Reverse()) {
+          // var job = new Job {
+          //   Position = y.Position,
+          //   Company = y.Company,
+          //   Description = y.Description,
+          //   StartDate = y.StartDate,
+          //   EndDate = y.EndDate
+          // };
+          // jobs.Add(job);
+          context.Jobs.Add(y);
         }
         context.Experiences.Add(x);
+        // var experience = new Experience{
+        //   Type = x.Type,
+        //   Jobs = jobs
+        // };
+        // experiences.Add(experience);
+        // context.Experiences.Add(experience);
+        // exs.Add(experience);
       }
-
-      context.Resumes.Add(resume);
+      // var _resume = new Resume {
+      //   Title = resume.Title,
+      //   Name = resume.Name,
+      //   Surname = resume.Surname,
+      //   Address = resume.Address,
+      //   Email = resume.Email,
+      //   AboutMe = resume.AboutMe,
+      //   Interests = resume.Interests,
+      //   Experiences = exs,
+      //   Educations = eds,
+      //   Skills = ss,
+      //   SpokenLanguages = ls
+      // };
+      context.Add(resume);
       context.SaveChanges();
 
       // writing this to be able to load the jobs before the resume and avoid null entry
-      var experiences = new List<Experience>();
+      // var experiences = new List<Experience>();
       foreach (var experience in resume.Experiences)
       {
-        var _experience = new Experience();
-        var jobs = new List<Job>();
+        // var _experience = new Experience();
+        // var jobs = new List<Job>();
         foreach (var job in experience.Jobs)
         {
           // var _job = new Job();
