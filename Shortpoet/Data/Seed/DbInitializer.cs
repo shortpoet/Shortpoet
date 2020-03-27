@@ -60,6 +60,10 @@ namespace Shortpoet.Data.Seed
           // _job = job;
           // context.Jobs.Add(_job);
           // jobs.Add(_job);
+          // ####
+          // ## try this
+          // ## https://stackoverflow.com/questions/5212751/how-can-i-get-id-of-inserted-entity-in-entity-framework
+          // ####
           context.Entry(job).Property("ResumeId").CurrentValue = context.Resumes.Where(r => r.Title == resume.Title).First().ResumeId;
         }
         // _experience = experience;
