@@ -3,7 +3,7 @@
 # Variables
 commit_message=$1
 gh="/h/source/repos/shortpoet.github.io"
-sh="/h/source/repos/shortpoet"
+sh="/h/source/repos/Shortpoet"
 
 
 
@@ -15,7 +15,8 @@ ECHO ===========================================================================
 ECHO = switching to VueClient directory
 ECHO ========================================================================================
 
-cd Shortpoet/VueClient
+# using full path to ensure proper capitalization for npm
+cd $sh/Shortpoet/VueClient
 
 ECHO ========================================================================================
 ECHO = initiating npm build
