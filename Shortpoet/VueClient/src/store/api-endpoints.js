@@ -6,7 +6,7 @@ export const index = {
   // FROM dbana/app/.../authservice.js
 
   // BACKEND_PREFIX_PROD: 'https://' + window.location.hostname,
-  BACKEND_PREFIX_PROD: window.location.protocol + window.location.hostname,
+  BACKEND_PREFIX_PROD: window.location.href,
   BACKEND_PREFIX_DEV: 'https://localhost:5001'
 }
 export const resume = {
