@@ -363,3 +363,5 @@ ClientApp/dist
 VueClient/node_modules
 VueClient/dist
 
+#all config
+*.config
