@@ -140,8 +140,8 @@ namespace Shortpoet
                 if (env.IsDevelopment())
                 {
                     //spa.UseReactDevelopmentServer(npmScript: "start");
-                    // spa.UseVueCli(npmScript: "serve");
-                    spa.UseVueCli(npmScript: "servelocal");
+                    spa.UseVueCli(npmScript: "serve");
+                    // spa.UseVueCli(npmScript: "servelocal");
                     // spa.UseVueCli(npmScript: "serve", port: 8080);
                 }
             });
