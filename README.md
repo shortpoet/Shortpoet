@@ -121,6 +121,8 @@ https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-rm-we
 
 https://docs.microsoft.com/en-us/azure/sql-database/scripts/sql-database-create-and-configure-database-cli?toc=%2fcli%2fazure%2ftoc.json
 
+https://stackoverflow.com/questions/42972086/azure-cli-in-git-bash
+
 # azure deploy
 
 https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-rm-web-app-deployment?view=azure-devops#sample-post-deployment-script
