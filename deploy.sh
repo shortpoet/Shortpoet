@@ -5,17 +5,15 @@ commit_message=$1
 gh="/h/source/repos/shortpoet.github.io"
 sh="/h/source/repos/Shortpoet"
 
-
-
 ECHO ========================================================================================
 ECHO = initiating script with commit message:
 ECHO = $1
 ECHO ========================================================================================
-ECHO ==>
+ECHO "==>"
 ECHO ========================================================================================
 ECHO = switching to VueClient directory
 ECHO ========================================================================================
-ECHO ==>
+ECHO "==>"
 # using full path to ensure proper capitalization for npm
 cd $sh/Shortpoet/VueClient
 
@@ -28,7 +26,7 @@ npm run build
 ECHO ========================================================================================
 ECHO = switching to shortpoet directory
 ECHO ========================================================================================
-ECHO ==>
+ECHO "==>"
 cd $sh
 
 ECHO ========================================================================================
@@ -43,20 +41,20 @@ git push
 ECHO ========================================================================================
 ECHO = switching to github pages repo
 ECHO ========================================================================================
-ECHO ==>
+ECHO "==>"
 cd $gh
 
 ECHO ========================================================================================
 ECHO = replacing items in github pages repo with dist folder contents
 ECHO ========================================================================================
-ECHO ==>
+ECHO "==>"
 rm -rf img/ js/ css/ fonts/ index.html
 cp -af ../shortpoet/Shortpoet/VueClient/dist/. .
 
 ECHO ========================================================================================
 ECHO = pushing to github pages master branch 
 ECHO ========================================================================================
-ECHO ==>
+ECHO "==>"
 git checkout master
 git add .
 git commit -m "$commit_message"
