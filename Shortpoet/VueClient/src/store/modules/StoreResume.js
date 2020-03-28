@@ -1,5 +1,5 @@
 import axios from 'axios'
-// import resume from '@/assets/resume.js'
+import resume from '@/assets/resume.js'
 import {
   SET_RESUME,
   SET_RESUME_LOADED
@@ -33,9 +33,8 @@ export const actions = {
       // console.log(url)
       const response = await axios.get(url)
       
-      // console.log(response)
+      console.log(response)
       commit(SET_RESUME, response.data)
-      // commit(SET_RESUME, resume)
 
       commit(SET_RESUME_LOADED, true)
       // return response
@@ -43,7 +42,9 @@ export const actions = {
       // console.log(state.tableaux)
     } catch (err) {
       // console.error(err)
-      commit(SET_RESUME_LOADED, false)
+      // adding hardcoded resume in case server call fails on static served version
+      commit(SET_RESUME, resume)
+      // commit(SET_RESUME_LOADED, false)
     }
   }
 }
