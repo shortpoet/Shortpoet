@@ -1,6 +1,7 @@
 <template>
   <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
     <div class="my-auto">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2" :src="pic" alt="profile pic">
       <h1 class="mb-0">{{ name }}
         <span class="text-primary">{{ surname }}</span>
       </h1>
@@ -77,6 +78,11 @@ export default {
       },
       address: {
         type: String
+      }
+    },
+    data () {
+      return {
+        pic: require('@/assets/github_profile_pic.png')
       }
     },
     computed: {

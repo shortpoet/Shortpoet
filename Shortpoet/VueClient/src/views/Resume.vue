@@ -1,6 +1,5 @@
 <template>
   <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
-    <StartNav />
     <div class="container-fluid p-0">
       <StartAbout
         :name="getResume.name"
@@ -29,7 +28,6 @@
 </template>
 
 <script>
-import StartNav from '@/components/Resume/ResumeRx/RxNav.vue'
 import StartAbout from '@/components/Resume/ResumeRx/RxAbout'
 import StartExperience from '@/components/Resume/ResumeRx/RxExperience'
 import StartEducation from '@/components/Resume/ResumeRx/RxEducation'
@@ -44,7 +42,6 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Resume',
   components: {
-    StartNav,
     StartAbout ,
     StartExperience,
     StartEducation,
