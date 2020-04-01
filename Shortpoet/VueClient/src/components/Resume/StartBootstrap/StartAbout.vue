@@ -45,14 +45,21 @@
             </span>
           </a>
         </li>
+        <li class="list-inline-item">
+          <PdfAction />
+        </li>
       </ul>
     </div>
   </section>
 </template>
 
 <script>
+import PdfAction from '@/components/Utils/PdfAction'
 export default {
     name: 'StartAbout',
+    components: {
+      PdfAction
+    },
     props: {
       name: {
         type: String
