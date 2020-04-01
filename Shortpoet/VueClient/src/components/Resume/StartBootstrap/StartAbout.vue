@@ -46,7 +46,9 @@
           </a>
         </li>
         <li class="list-inline-item">
-          <PdfAction />
+          <PdfAction 
+            :target="'resume-anchor'"
+          />
         </li>
       </ul>
     </div>

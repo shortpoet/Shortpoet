@@ -12,6 +12,11 @@ export default {
   name: 'PdfAction',
   components: {
   },
+  props: {
+    target: {
+      type: String
+    }
+  },
   data () {
     return {
     }
@@ -20,8 +25,10 @@ export default {
   },
   methods: {
     toPDF () {
+      // timeout is set to account for loading time i believe
       setTimeout(() => {
-        html2canvas(document.body, {
+        console.log(this.target)
+        html2canvas(document.getElementById(this.target), {
           scale: 3,
           useCORS: true,
           allowTaint: true,

@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper" v-if="getResumeLoaded">
+  <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
     <StartNav />
     <div class="container-fluid p-0">
       <StartAbout
@@ -75,6 +75,7 @@ export default {
   mounted () {
     const $ = this.jquery
     this.$nextTick(() => {
+      // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.
       // our custom jQuery code goes here
       $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
