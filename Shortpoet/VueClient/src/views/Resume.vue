@@ -1,14 +1,15 @@
 <template>
   <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
-    <StartNav />
-    <div class="container-fluid p-0">
-      <StartAbout
-        :name="getResume.name"
-        :surname="getResume.surname"
-        :email="getResume.email"
-        :aboutMe="getResume.aboutMe"
-        :address="getResume.address"
-      />
+    <div class="p-10">
+      <div className="grid grid-cols-4 items-center">
+          <StartAbout
+            :name="getResume.name"
+            :surname="getResume.surname"
+            :email="getResume.email"
+            :aboutMe="getResume.aboutMe"
+            :address="getResume.address"
+          />
+      </div>
       <StartExperience
         :experiences="getResume.experiences"      
       />
@@ -29,7 +30,6 @@
 </template>
 
 <script>
-import StartNav from '@/components/Resume/ResumeRx/RxNav.vue'
 import StartAbout from '@/components/Resume/ResumeRx/RxAbout'
 import StartExperience from '@/components/Resume/ResumeRx/RxExperience'
 import StartEducation from '@/components/Resume/ResumeRx/RxEducation'
@@ -44,7 +44,6 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Resume',
   components: {
-    StartNav,
     StartAbout ,
     StartExperience,
     StartEducation,
@@ -71,30 +70,8 @@ export default {
     ...mapActions('resume', ['loadResume']),
   },
   mounted () {
-    const $ = this.jquery
+    // const $ = this.jquery
     this.$nextTick(() => {
-      // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.
-      // our custom jQuery code goes here
-      $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-          var target = $(this.hash)
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: (target.offset().top)
-            }, 1000, 'easeInOutExpo')
-            return false
-          }
-        }
-      })
-      // Closes responsive menu when a scroll trigger link is clicked
-      $('.js-scroll-trigger').click(function () {
-        $('.navbar-collapse').collapse('hide')
-      })
-      // Activate scrollspy to add active class to navbar items on scroll
-      $('body').scrollspy({
-        target: '#sideNav'
-      })
       this.loadResume()
     })
   }

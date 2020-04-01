@@ -1,17 +1,22 @@
 <template>
-  <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-    <div class="my-auto">
-      <h1 class="mb-0">{{ name }}
-        <span class="text-primary">{{ surname }}</span>
-      </h1>
-      <!-- https://lonewolfonline.net/html-character-codes-ascii-entity-unicode-symbols/ -->
-      <div class="subheading mb-5">{{ address }}
-        <span class="ml-1">&#937;</span> 
-        <span class="mx-2" style="color:#343a40">&#8226;</span> 
-        <a :href="'mailto:' + email">{{ email }}</a>
+  <section class="resume-section" id="about">
+    <div class="col-span-3 flex items-center">
+      <RxPhoto 
+        :pic="require('@/assets/github_profile_pic.png')"
+      />
+      <div>
+        <h1 className="font-bold text-4xl" style="{ color: purple }">
+          {{ name }} {{ surname }}
+        </h1>
+        <h6 className="font-medium text-sm">Software Engineer</h6>
+
+        <div className="flex flex-col mt-4 text-xs">
+          {{ address }}
+          <span class="ml-1">&#937;</span> 
+          <span class="mx-2" style="color:#343a40">&#8226;</span> 
+          <a :href="'mailto:' + email">{{ email }}</a>
+        </div>
       </div>
-      <p class="mb-5">{{ aboutMe1 }}</p>
-      <p class="mb-5">{{ aboutMe2 }}</p>
       <ul class="list-inline list-social-icons mb-0">
         <li class="list-inline-item">
           <a href="https://www.instagram.com/shortpoet/">
@@ -57,10 +62,13 @@
 
 <script>
 import PdfAction from '@/components/Utils/PdfAction'
+import RxPhoto from '@/components/Resume/ResumeRx/RxPhoto'
+
 export default {
     name: 'RxAbout',
     components: {
-      PdfAction
+      PdfAction,
+      RxPhoto
     },
     props: {
       name: {

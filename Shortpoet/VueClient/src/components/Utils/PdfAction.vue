@@ -1,5 +1,6 @@
 <template>
   <div class="pdf-action">
+    <!-- <button class="bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium py-2 px-5 rounded" @click="toPDF">PDF</button> -->
     <span class="badge badge-secondary badge-pill" @click="toPDF">PDF</span>
   </div>
 </template>
