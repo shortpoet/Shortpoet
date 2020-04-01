@@ -58,7 +58,7 @@
 <script>
 import PdfAction from '@/components/Utils/PdfAction'
 export default {
-    name: 'StartAbout',
+    name: 'RxAbout',
     components: {
       PdfAction
     },
