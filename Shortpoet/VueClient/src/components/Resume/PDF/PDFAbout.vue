@@ -56,20 +56,22 @@
 
     </div>
 
-    <PDFBorder class="my-3" :size=".5"/>
+    <PDFBorder class="my-3" :size=".25"/>
 
     <!-- objective rows -->
+    <!-- ml-3 to match pic -->
+    <div class="resume-section ml-3 p-1 p-lg-2">
+      <div class="d-flex align-items-center" id="objective">
+        <h4 class="">
+          Objective
+        </h4>
+      </div>
 
-    <div class="d-flex d-row resume-section p-3 p-lg-5 d-flex align-items-center" id="objective">
-      <h4 className="text-xs font-bold uppercase mt-6 mb-2">
-        Objective
-      </h4>
-    </div>
-
-    <div class="d-flex d-row resume-section p-3 p-lg-5 d-flex align-items-center" id="objective">
-      <div class="col-12 resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-        <p class="text-sm">{{ aboutMe1 }}</p>
-        <p class="text-sm">{{ aboutMe2 }}</p>      
+      <div class="d-flex align-items-center my-1" id="objective">
+        <div class="resume-item d-flex flex-column justify-content-between">
+          <p>{{ aboutMe1 }}</p>
+          <p>{{ aboutMe2 }}</p>
+        </div>
       </div>
     </div>
 
