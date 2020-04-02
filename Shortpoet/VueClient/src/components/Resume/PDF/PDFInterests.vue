@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: 'RxInterests',
+  name: 'PDFInterests',
   props: {
     interests: {
       type: String

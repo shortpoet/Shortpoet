@@ -86,7 +86,7 @@
 
 <script>
 export default {
-  name: 'RxSkills',
+  name: 'PDFSkills',
   props: {
     skills: {
       type: Array,

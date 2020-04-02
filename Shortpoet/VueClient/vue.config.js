@@ -1,8 +1,14 @@
 // const fs = require('fs')
 // const path = require('path')
+// const GoogleFontsPlugin = require('google-fonts-plugin')
+const options = require('./src/assets/fonts.json')
+
 module.exports = {
     configureWebpack: {
-      devtool: 'source-map'
+      devtool: 'source-map',
+      // plugins: [
+      //   new GoogleFontsPlugin('./src/assets/fonts.json')
+      // ],  
     },
     // baseUrl: process.env.NODE_ENV === 'production' ? '/subpath/' : '/',
     // publicPath: process.env.NODE_ENV === 'production'

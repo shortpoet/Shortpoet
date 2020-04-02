@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'RxEducation',
+  name: 'PDFEducation',
   props: {
     educations: {
       type: Array,
@@ -28,7 +28,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -45,7 +45,7 @@
 <script>
 import _recase from '@/utils/recase.js'
 export default {
-  name: 'RxAwards',
+  name: 'PDFAwards',
   props: {
     awards: {
       type: Array,
@@ -59,7 +59,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
