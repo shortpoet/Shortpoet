@@ -2,7 +2,7 @@
   <section class="resume-section" id="about">
 
     <!-- basic info row -->
-    <div class="d-flex flex-row justify-content-between align-items-center mt-0 ml-1" id="basic-info">
+    <div class="d-flex flex-row justify-content-between align-items-center mt-0 ml-3" id="basic-info">
 
       <!-- photo column -->
       <div class="d-flex flex-column align-items-center" id="photo">
@@ -10,12 +10,12 @@
       </div>
 
       <!-- name contact column -->
-      <div class="d-flex flex-column" id="name-contact">
+      <div class="d-flex flex-column mt-1 ml-3" id="name-contact">
         <ul class="list-inline">
           <li>
-            <h3 class="mb-0">{{ name }}
+            <h2 class="mb-0">{{ name }}
               <span class="text-primary">{{ surname }}</span>
-            </h3>
+            </h2>
           </li>
           <li>
             <span class="mx-0" style="color:#343a40">
@@ -56,7 +56,7 @@
 
     </div>
 
-    <hr class="my-6" />
+    <PDFBorder class="my-3" :size=".5"/>
 
     <!-- objective rows -->
 
@@ -77,9 +77,11 @@
 </template>
 
 <script>
+import PDFBorder from '@/components/Resume/PDF/PDFBorder'
 export default {
     name: 'PDFAbout',
     components: {
+      PDFBorder
     },
     props: {
       name: {
