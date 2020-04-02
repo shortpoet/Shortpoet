@@ -2,41 +2,53 @@
   <section class="resume-section" id="about">
 
     <!-- basic info row -->
-    <div class="row align-items-center" id="basic-info">
+    <div class="d-flex flex-row justify-content-between align-items-center mt-0 ml-1" id="basic-info">
 
       <!-- photo column -->
-      <div class="col-3 align-items-center" id="photo">
-        <img class="img-fluid img-profile rounded mx-auto mb-2" :src="pic" alt="profile pic">
+      <div class="d-flex flex-column align-items-center" id="photo">
+        <img class="img-fluid img-profile rounded m-1 mb-2" :src="pic" alt="profile pic" :style="{height: '8rem', width: '7rem'}">
       </div>
 
       <!-- name contact column -->
-      <div class="col-6" id="name-contact">
-        <h3 class="mb-0">{{ name }}
-          <span class="">{{ surname }}</span>
-        </h3>
-        <span>
-          {{ address }}
-        </span>
-        <span class="mx-2" style="color:#343a40">
-          <a :href="'mailto:' + email">
-            {{ email }}
-          </a>
-        </span>
-        <span>Emoji Placeholder</span>
+      <div class="d-flex flex-column" id="name-contact">
+        <ul class="list-inline">
+          <li>
+            <h3 class="mb-0">{{ name }}
+              <span class="text-primary">{{ surname }}</span>
+            </h3>
+          </li>
+          <li>
+            <span class="mx-0" style="color:#343a40">
+              <a :href="'mailto:' + email">
+                {{ email }}
+              </a>
+            </span>
+          </li>
+          <li>
+            <span>
+              {{ address }}
+            </span>
+          </li>
+          <li>
+          <span>Emoji Placeholder</span>
+          </li>
+        </ul>
       </div>
 
       <!-- socials column -->
-      <div class="col-3" id="socials">
+      <div class="d-flex flex-column ml-auto mr-5" id="socials">
         <ul class="list-inline list-social-icons mb-0">
           <li
+            class="social-item"
             v-for="(social, i) in socials"
             :key="i"
           >
             <a :href="social.url">
-              <span class="fa-stack fa-lg">
+              <span class="fa-stack fa-lg mr-1">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i>
               </span>
+              <span>{{social.url}}</span>
             </a>
           </li>
         </ul>
@@ -45,13 +57,17 @@
     </div>
 
     <hr class="my-6" />
-    
-    <!-- objective row -->
-    <div class="row" id="objective">
-      <div class="col-12">
-        <h6 className="text-xs font-bold uppercase mt-6 mb-2">
-          Objective
-        </h6>
+
+    <!-- objective rows -->
+
+    <div class="d-flex d-row resume-section p-3 p-lg-5 d-flex align-items-center" id="objective">
+      <h4 className="text-xs font-bold uppercase mt-6 mb-2">
+        Objective
+      </h4>
+    </div>
+
+    <div class="d-flex d-row resume-section p-3 p-lg-5 d-flex align-items-center" id="objective">
+      <div class="col-12 resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
         <p class="text-sm">{{ aboutMe1 }}</p>
         <p class="text-sm">{{ aboutMe2 }}</p>      
       </div>
@@ -116,5 +132,7 @@ export default {
 }
 </script>
 <style>
-
+.social-item {
+  font-size: .55rem;
+}
 </style>
