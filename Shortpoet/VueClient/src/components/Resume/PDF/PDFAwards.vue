@@ -6,13 +6,21 @@
         <li
           v-for="(lang, i) in awards"
           :key="i"
+          class="mb-1"
         >
-          <font-awesome-icon class="language-icon fa-li" :icon="['fa', 'flag']"></font-awesome-icon>
-          {{ recase(lang.type) }}: {{ lang.languages }}
+          <font-awesome-icon
+            :class="lang.type + ' language-icon fa-li'" 
+            :icon="['fa', 'flag']"
+          ></font-awesome-icon>
+          <span class="mb-5">{{ recase(lang.type) }}: {{ lang.languages }}</span>
           </li>
         <li>
-          <font-awesome-icon class="award-icon fa-li" :icon="['fa', 'trophy']"></font-awesome-icon>
-          Certified Interpreter</li>
+          <font-awesome-icon
+            class="award-icon fa-li"
+            :icon="['fa', 'trophy']"
+          ></font-awesome-icon>
+          Certified Interpreter
+        </li>
       </ul>
     </div>
   </section>

@@ -1,6 +1,17 @@
 <template>
   <div class="pdf-action">
-    <span class="badge badge-secondary badge-pill" @click="toPDF">PDF</span>
+    <!-- <font-awesome-layers
+      class="social-icon-layer fa-lg"
+    >
+      <font-awesome-icon size="2x" icon="circle" />
+      <font-awesome-icon
+        class="social-icon"
+        size="2x"
+        :transform="social.transform"
+        :icon="['fa', social.social]"
+      ></font-awesome-icon>
+    </font-awesome-layers> -->
+    <span class="badge badge-seconda" @click="toPDF">PDF</span>
   </div>
 </template>
 
@@ -9,7 +20,7 @@
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
 export default {
-  name: 'PdfAction',
+  name: 'PDFAction',
   components: {
   },
   props: {

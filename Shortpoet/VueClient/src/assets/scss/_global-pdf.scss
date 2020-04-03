@@ -2,6 +2,14 @@ body {
   @include body-font;
   padding-top: .25rem;
   color: $black;
+  font-size: .75rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.not-name {
+  font-size: .60rem;
+  margin-left: .25rem;
 }
 
 h1,
@@ -27,10 +35,16 @@ h6 {
 }
 
 .resume-section p {
-  font-size: .55rem;
+  font-size: .60rem;
   margin: 0rem 3.5rem 0rem .5rem;
   padding: 0rem 0rem 0rem 0rem;
 }
+
+a:hover {
+  color: $primary;
+}
+
+
 .social-item {
   margin-bottom: 1rem;
   .social-icon-layer {
@@ -40,14 +54,10 @@ h6 {
     // font-size: 1.5rem;
     // line-height: 3.5rem;
     margin-right: 1rem;
-    &:hover {
-      background-color: $primary;
-    }
     .social-icon {
       color: $white;
     }
   }
-  
 }
 
 
@@ -56,7 +66,7 @@ h6 {
   font-size: .5rem;
   color: black;
 }
-.list-icons {
+.list-devicons {
   color: $forest-green;
   font-size: 1.75rem;
 }
@@ -75,4 +85,25 @@ span.skill {
 }
 .skill {
   background-color: $forest-green;
+  color: $white;
+}
+
+.award-icon {
+  color: $yellow;
+}
+
+.native {
+  color: $forest-green;
+}
+
+.fluent {
+  color: lighten($forest-green, 15%)
+}
+
+.proficient {
+  color: lighten($forest-green, 30%)
+}
+
+.workingKnowledge {
+  color: lighten($forest-green, 45%)
 }

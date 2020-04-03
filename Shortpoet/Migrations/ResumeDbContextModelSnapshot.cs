@@ -116,6 +116,9 @@ namespace Shortpoet.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Flags")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Interests")
                         .HasColumnType("nvarchar(max)");
 

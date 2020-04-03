@@ -9,58 +9,55 @@
         <span class="ml-1">&#937;</span> 
         <span class="mx-2" style="color:#343a40">&#8226;</span> 
         <a :href="'mailto:' + email">{{ email }}</a>
+        <span class="mx-2" style="color:#343a40">&#8226;</span> 
+        <span class="not-name">{{ flags.replace(/,/g, '') }}</span>
+        <span class="mx-2" style="color:#343a40">&#8226;</span> 
+        <span class="not-name">Valid Work Visas: {{ visas }}</span>
       </div>
       <p class="mb-5">{{ aboutMe1 }}</p>
       <p class="mb-5">{{ aboutMe2 }}</p>
-      <ul class="list-inline list-social-icons mb-0">
-        <li class="list-inline-item">
-          <a href="https://www.instagram.com/shortpoet/">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-            </span>
+      <ul class="list-inline list-social-icons mb-0 mt-0">
+        <li
+          class="social-item list-inline-item"
+          v-for="(social, i) in socials"
+          :key="i"
+        >
+          <a :href="social.url">
+            <font-awesome-layers
+              class="social-icon-layer fa-lg"
+              v-if="!social.social.includes('pdf')"
+            >
+              <font-awesome-icon size="2x" icon="circle" />
+              <font-awesome-icon
+                class="social-icon"
+                size="2x"
+                :transform="social.transform"
+                :icon="['fab', social.social]"
+              ></font-awesome-icon>
+            </font-awesome-layers>
+            <font-awesome-layers
+              class="social-icon-layer fa-lg"
+              v-else
+            >
+              <font-awesome-icon size="2x" icon="circle" />
+              <font-awesome-icon
+                class="social-icon"
+                size="2x"
+                :transform="social.transform"
+                :icon="['fa', social.social]"
+              ></font-awesome-icon>
+            </font-awesome-layers>
           </a>
         </li>
-        <li class="list-inline-item">
-          <a href="https://twitter.com/shortpoet3">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="https://www.linkedin.com/in/carlos-soriano-49aaa97/">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="https://github.com/shortpoet">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <PdfAction 
-            :target="'resume-anchor'"
-          />
-        </li>
-      </ul>
+    </ul>
     </div>
   </section>
 </template>
 
 <script>
-import PdfAction from '@/components/Utils/PdfAction'
 export default {
     name: 'StartAbout',
     components: {
-      PdfAction
     },
     props: {
       name: {
@@ -77,6 +74,43 @@ export default {
       },
       address: {
         type: String
+      },
+      visas: {
+        type: String
+      },
+      flags: {
+        type: String
+      }
+    },
+    data () {
+      return {
+        socials: [
+          {
+            social: 'github',
+            url: 'https://github.com/shortpoet',
+            transform: 'shrink-5'
+          },
+          {
+            social: 'linkedin',
+            url: 'https://www.linkedin.com/in/carlos-soriano-49aaa97/',
+            transform: 'shrink-6 right-1'
+          },
+          {
+            social: 'instagram',
+            url: 'https://www.instagram.com/shortpoet/',
+            transform: 'shrink-5 right-1'
+          },
+          {
+            social: 'twitter',
+            url: 'https://twitter.com/shortpoet3',
+            transform: 'shrink-6'
+          },
+          {
+            social: 'file-pdf',
+            url: window.location.protocol + '//' + window.location.host + '/pdf',
+            transform: 'shrink-6 right-2.5'
+          }
+        ]
       }
     },
     computed: {

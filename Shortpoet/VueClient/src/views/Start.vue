@@ -8,6 +8,8 @@
         :email="getResume.email"
         :aboutMe="getResume.aboutMe"
         :address="getResume.address"
+        :visas="getResume.visas"
+        :flags="getResume.flags"
       />
       <StartExperience
         :experiences="getResume.experiences"      

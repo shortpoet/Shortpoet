@@ -74,39 +74,30 @@ p.lead {
 .list-social-icons a {
   color: $gray-700;
 }
-.list-social-icons a:hover {
-  color: $primary;
-}
 .list-social-icons a .fa-lg {
   font-size: 1.75rem;
 }
 .list-icons {
   font-size: 3rem;
 }
-.list-icons .list-inline-item i:hover {
-  color: $primary;
-}
 
-// .social-icons {
-//   a {
-//     display: inline-block;
-//     height: 3.5rem;
-//     width: 3.5rem;
-//     background-color: $gray-700;
-//     color: $white !important;
-//     border-radius: 100%;
-//     text-align: center;
-//     font-size: 1.5rem;
-//     line-height: 3.5rem;
-//     margin-right: 1rem;
-//     &:last-child {
-//       margin-right: 0;
-//     }
-//     &:hover {
-//       background-color: $primary;
-//     }
-//   }
-// }
+.social-item {
+  margin-bottom: 1rem;
+  .social-icon-layer {
+    // display: inline-block;
+    // color: $white;
+    // text-align: center;
+    // font-size: 1.5rem;
+    // line-height: 3.5rem;
+    margin-right: 3rem;
+    // &:hover {
+    //   background-color: $primary;
+    // }
+    .social-icon {
+      color: $white;
+    }
+  }
+}
 
 .dev-icons {
   font-size: 3rem;

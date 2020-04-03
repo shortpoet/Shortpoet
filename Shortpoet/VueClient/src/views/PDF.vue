@@ -7,6 +7,8 @@
         :email="getResume.email"
         :aboutMe="getResume.aboutMe"
         :address="getResume.address"
+        :visas="getResume.visas"
+        :flags="getResume.flags"
       />
       <PDFExperience
         :experiences="getResume.experiences"      

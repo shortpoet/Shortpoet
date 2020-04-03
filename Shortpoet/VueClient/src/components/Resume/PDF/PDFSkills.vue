@@ -5,7 +5,7 @@
         <div
           v-for="(item, i) in iconMap"
           :key="i"
-          class="list-icons d-flex flex-row justify-content-between"        
+          class="list-devicons d-flex flex-row justify-content-between"        
         >
           <div>
             <div class="d-flex flex-column justify-content-between align-items-center">
@@ -36,7 +36,7 @@
                   :key="i"
                   class="skill-list d-flex flex-column mx-2 mb-2"
                 >          
-                  <span class="skill badge badge-pill badge-dark">
+                  <span class="skill badge badge-pill">
                     <!-- <i class="skill-icon fa fa-check"></i> -->
                     {{ skill }}
                   </span>

@@ -18,22 +18,22 @@
             </h2>
           </li>
           <li>
-            <span class="mx-0" style="color:#343a40">
+            <span class="not-name">
               <a :href="'mailto:' + email">
                 {{ email }}
               </a>
             </span>
           </li>
           <li>
-            <span>
+            <span class="not-name">
               {{ address }}
             </span>
           </li>
           <li>
-          <span>Visas Placeholder</span>
+            <span class="not-name">{{ flags.replace(/,/g, '') }}</span>
           </li>
           <li>
-          <span>Emoji Placeholder</span>
+            <span class="not-name">Valid Work Visas: {{ visas }}</span>
           </li>
         </ul>
       </div>
@@ -47,7 +47,11 @@
             :key="i"
           >
             <a :href="social.url">
-              <font-awesome-layers class="social-icon-layer fa-lg">
+
+              <font-awesome-layers
+                class="social-icon-layer fa-lg"
+                v-if="!social.social.includes('globe')"
+              >
                 <font-awesome-icon size="2x" icon="circle" />
                 <font-awesome-icon
                   class="social-icon"
@@ -56,9 +60,26 @@
                   :icon="['fab', social.social]"
                 ></font-awesome-icon>
               </font-awesome-layers>
+
+              <font-awesome-layers
+                class="social-icon-layer fa-lg"
+                v-else
+              >
+                <font-awesome-icon size="2x" icon="circle" />
+                <font-awesome-icon
+                  class="social-icon"
+                  size="2x"
+                  :transform="social.transform"
+                  :icon="['fa', social.social]"
+                ></font-awesome-icon>
+              </font-awesome-layers>
+
               <span>{{social.url}}</span>
             </a>
           </li>
+          <PDFAction 
+            :target="'pdf-anchor'"
+          />
         </ul>
       </div>
 
@@ -88,9 +109,12 @@
 
 <script>
 import PDFBorder from '@/components/Resume/PDF/PDFBorder'
+import PDFAction from '@/components/Utils/PDFAction'
+
 export default {
     name: 'PDFAbout',
     components: {
+      PDFAction,
       PDFBorder
     },
     props: {
@@ -108,6 +132,12 @@ export default {
       },
       address: {
         type: String
+      },
+      visas: {
+        type: String
+      },
+      flags: {
+        type: String
       }
     },
     data () {
@@ -122,7 +152,7 @@ export default {
           {
             social: 'linkedin',
             url: 'https://www.linkedin.com/in/carlos-soriano-49aaa97/',
-            transform: 'shrink-5 right-1'
+            transform: 'shrink-6 right-1'
           },
           {
             social: 'instagram',
@@ -132,7 +162,12 @@ export default {
           {
             social: 'twitter',
             url: 'https://twitter.com/shortpoet3',
-            transform: 'shrink-5'
+            transform: 'shrink-6'
+          },
+          {
+            social: 'globe',
+            url: 'https://shortpoet.com',
+            transform: 'shrink-6 right-.25'
           }
         ]
       }

@@ -22,6 +22,7 @@ namespace Shortpoet.Migrations
                     Address = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Visas = table.Column<string>(nullable: true),
+                    Flags = table.Column<string>(nullable: true),
                     AboutMe = table.Column<string>(nullable: true),
                     Interests = table.Column<string>(nullable: true)
                 },
