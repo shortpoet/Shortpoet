@@ -8,14 +8,49 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   @include heading-font;
   font-weight: 700;
   text-transform: uppercase;
   color: $gray-800;
 }
 
-.resume-section p {
+h4 {
+  font-size: 1rem;
+  color: $primary;
+}
+h5 {
+  font-size: .85rem;
+}
+h6 {
   font-size: .65rem;
+}
+
+.resume-section p {
+  font-size: .55rem;
+  margin: 0rem 3.5rem 0rem .5rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.devicon-name {
+  margin: .15rem 0rem 0rem 0rem;
+  font-size: .5rem;
+  color: black;
+}
+.list-icons {
+  color: $forest-green;
+  font-size: 1.75rem;
+}
+
+span.skill {
+  font-size: .5rem;
+}
+
+.skill-icon {
+  color: $primary;
+}
+.skill-type {
+  margin-bottom: .15rem;
+  color: $primary;
+  text-transform: capitalize;
 }

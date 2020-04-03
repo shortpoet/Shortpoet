@@ -1,16 +1,22 @@
 <template>
-  <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+  <section class="resume-section ml-3 mt-2" id="education">
     <div class="my-auto">
-      <h2 class="mb-5">Education</h2>
-      <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="(ed, i) in educations" :key="i">
-        <div class="resume-content mr-auto">
-          <h3 class="mb-0">{{ ed.institution }}</h3>
-          <div class="subheading mb-3">{{ ed.degree }}</div>
-          <div>{{ ed.details }}</div>
-          <!-- <p>GPA: 3.23</p> -->
-        </div>
-        <div class="resume-date text-md-right">
-          <span class="text-primary">{{ ed.focus }}</span>
+      <h4 class="pdf-subheading">Education</h4>
+      <div v-for="(ed, i) in educations" :key="i">
+        <div class="resume-item d-flex flex-column justify-content-between">
+          <div class="d-flex flex-row">
+            <div class="resume-content mr-auto">
+              <h5 class="mb-0">{{ ed.institution }}</h5>
+            </div>
+            <div class="resume-date text-md-right mr-4">
+              <h6 class="text-primary">{{ ed.focus }}</h6>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <h6 class="subheading">{{ ed.degree }}</h6>
+            <p class="resume-content">{{ ed.details }}</p>
+            <!-- <p>GPA: 3.23</p> -->
+          </div>
         </div>
       </div>
     </div>

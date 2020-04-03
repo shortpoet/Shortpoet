@@ -1,21 +1,22 @@
 <template>
-  <section class="resume-section ml-3 p-1 p-lg-2" id="experience">
+  <section class="resume-section mt-2 ml-3" id="experience">
     <div class="my-auto">
-      <div class="resume-item d-flex flex-column" v-for="type in experiences" :key="type.type">
-        <h4 class="">{{ type.type }} Experience</h4>
+      <h4>Work Experience</h4>
+      <div class="d-flex flex-column justify-content-between" v-for="type in experiences" :key="type.type">
+        <!-- <h4 class="pdf-subheading mt-2 mb-0">{{ type.type }} Experience</h4> -->
         <div v-for="job in type.jobs" :key="job.description">
-          <div class="resume-item d-flex flex-column justify-content-between">
+          <div class="d-flex flex-column justify-content-between">
             <div class="d-flex flex-row">
-              <div class="resume-content mr-auto">
-                <h6 class="mb-0">{{ job.position }}</h6>
+              <div class="mr-auto">
+                <h5 class="mb-0">{{ job.position }}</h5>
               </div>
-              <div class="resume-date text-md-right">
-                <span class="text-primary">{{ job.startDate }} - {{ job.endDate }}</span>
+              <div class="resume-date text-md-right mr-4">
+                <h6 class="text-primary">{{ job.startDate }} - {{ job.endDate }}</h6>
               </div>
             </div>
             <div class="d-flex flex-column">
-              <div class="subheading mb-1">{{ job.company }}</div>
-              <p>{{ job.description }}</p>
+              <h6 class="">{{ job.company }}</h6>
+              <p class="mb-2">{{ job.description }}</p>
             </div>
           </div>
         </div>
