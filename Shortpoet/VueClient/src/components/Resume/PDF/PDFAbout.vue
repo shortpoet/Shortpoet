@@ -40,17 +40,22 @@
 
       <!-- socials column -->
       <div class="d-flex flex-column ml-auto mr-5" id="socials">
-        <ul class="list-inline list-social-icons mb-0">
+        <ul class="list-inline list-social-icons mb-0 mt-3">
           <li
             class="social-item"
             v-for="(social, i) in socials"
             :key="i"
           >
             <a :href="social.url">
-              <span class="fa-stack fa-lg mr-1">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i>
-              </span>
+              <font-awesome-layers class="social-icon-layer fa-lg">
+                <font-awesome-icon size="2x" icon="circle" />
+                <font-awesome-icon
+                  class="social-icon"
+                  size="2x"
+                  :transform="social.transform"
+                  :icon="['fab', social.social]"
+                ></font-awesome-icon>
+              </font-awesome-layers>
               <span>{{social.url}}</span>
             </a>
           </li>
@@ -112,18 +117,22 @@ export default {
           {
             social: 'github',
             url: 'https://github.com/shortpoet',
+            transform: 'shrink-5'
           },
           {
             social: 'linkedin',
             url: 'https://www.linkedin.com/in/carlos-soriano-49aaa97/',
+            transform: 'shrink-5 right-1'
           },
           {
             social: 'instagram',
             url: 'https://www.instagram.com/shortpoet/',
+            transform: 'shrink-5 right-1'
           },
           {
             social: 'twitter',
             url: 'https://twitter.com/shortpoet3',
+            transform: 'shrink-5'
           }
         ]
       }

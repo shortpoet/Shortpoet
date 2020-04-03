@@ -1,42 +1,18 @@
 <template>
-  <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+  <section class="resume-section" id="awards">
     <div class="my-auto">
-      <h2 class="mb-5">Spoken Languages &amp; Certifications</h2>
+      <h4 class="mb-3">Spoken Languages &amp; Certifications</h4>
       <ul class="fa-ul mb-0">
         <li
           v-for="(lang, i) in awards"
           :key="i"
         >
-          <i class="fa-li fa fa-trophy text-warning"></i>
+          <font-awesome-icon class="language-icon fa-li" :icon="['fa', 'flag']"></font-awesome-icon>
           {{ recase(lang.type) }}: {{ lang.languages }}
           </li>
         <li>
-          <i class="fa-li fa fa-trophy text-warning"></i>
+          <font-awesome-icon class="award-icon fa-li" :icon="['fa', 'trophy']"></font-awesome-icon>
           Certified Interpreter</li>
-        <!-- <li>
-          <i class="fa-li fa fa-trophy text-warning"></i>
-          Mobile Web Specialist - Google Certification</li>
-        <li>
-          <i class="fa-li fa fa-trophy text-warning"></i>
-          1<sup>st</sup>
-          Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-        <li>
-          <i class="fa-li fa fa-trophy text-warning"></i>
-          1<sup>st</sup>
-          Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-        <li>
-          <i class="fa-li fa fa-trophy text-warning"></i>
-          2<sup>nd</sup>
-          Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-        <li>
-        <li>
-          <i class="fa-li fa fa-trophy text-warning"></i>
-          1<sup>st</sup>
-          Place - James Buchanan High School - Hackathon 2006</li>
-        <li>
-          <i class="fa-li fa fa-trophy text-warning"></i>
-          3<sup>rd</sup>
-          Place - James Buchanan High School - Hackathon 2005</li> -->
       </ul>
     </div>
   </section>

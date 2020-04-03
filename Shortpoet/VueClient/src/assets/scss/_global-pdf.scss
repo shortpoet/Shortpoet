@@ -31,6 +31,25 @@ h6 {
   margin: 0rem 3.5rem 0rem .5rem;
   padding: 0rem 0rem 0rem 0rem;
 }
+.social-item {
+  margin-bottom: 1rem;
+  .social-icon-layer {
+    // display: inline-block;
+    // color: $white;
+    // text-align: center;
+    // font-size: 1.5rem;
+    // line-height: 3.5rem;
+    margin-right: 1rem;
+    &:hover {
+      background-color: $primary;
+    }
+    .social-icon {
+      color: $white;
+    }
+  }
+  
+}
+
 
 .devicon-name {
   margin: .15rem 0rem 0rem 0rem;
@@ -53,4 +72,7 @@ span.skill {
   margin-bottom: .15rem;
   color: $primary;
   text-transform: capitalize;
+}
+.skill {
+  background-color: $forest-green;
 }

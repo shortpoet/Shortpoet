@@ -16,12 +16,8 @@
       />
       <PDFSkills
         :skills="getResume.skills"
-      />
-      <PDFAwards
-        :awards="getResume.spokenLanguages"
-      />
-      <PDFInterests
         :interests="getResume.interests"
+        :awards="getResume.spokenLanguages"
       />
     </div>
   </div>
@@ -32,8 +28,6 @@ import PDFAbout from '@/components/Resume/PDF/PDFAbout'
 import PDFExperience from '@/components/Resume/PDF/PDFExperience'
 import PDFEducation from '@/components/Resume/PDF/PDFEducation'
 import PDFSkills from '@/components/Resume/PDF/PDFSkills'
-import PDFAwards from '@/components/Resume/PDF/PDFAwards'
-import PDFInterests from '@/components/Resume/PDF/PDFInterests'
 import { mapGetters, mapActions } from 'vuex'
 
 // const yaml = require('js-yaml')
@@ -45,9 +39,7 @@ export default {
     PDFAbout ,
     PDFExperience,
     PDFEducation,
-    PDFSkills,
-    PDFInterests,
-    PDFAwards
+    PDFSkills
   },
   data () {
     return {

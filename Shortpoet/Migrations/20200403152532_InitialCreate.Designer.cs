@@ -10,8 +10,8 @@ using Shortpoet.Data;
 namespace Shortpoet.Migrations
 {
     [DbContext(typeof(ResumeDbContext))]
-    [Migration("20200327003631_InitalCreate")]
-    partial class InitalCreate
+    [Migration("20200403152532_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -128,6 +128,9 @@ namespace Shortpoet.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Visas")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ResumeId");

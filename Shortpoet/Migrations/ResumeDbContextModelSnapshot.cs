@@ -128,6 +128,9 @@ namespace Shortpoet.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Visas")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ResumeId");
 
                     b.ToTable("Resumes","Profiles");
