@@ -2,7 +2,7 @@
 
 namespace Shortpoet.Migrations
 {
-    public partial class InitalCreate : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -21,6 +21,8 @@ namespace Shortpoet.Migrations
                     Surname = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
+                    Visas = table.Column<string>(nullable: true),
+                    Flags = table.Column<string>(nullable: true),
                     AboutMe = table.Column<string>(nullable: true),
                     Interests = table.Column<string>(nullable: true)
                 },

@@ -28,7 +28,7 @@
             <div class="subheading mb-3">{{ job.company }}</div>
             <p>{{ job.description }}</p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="resume-date text-md-right mt-1">
             <span class="text-primary">{{ job.startDate }} - {{ job.endDate }}</span>
           </div>
         </div>
@@ -46,7 +46,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-
-</style>

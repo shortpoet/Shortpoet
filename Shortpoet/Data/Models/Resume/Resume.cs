@@ -16,6 +16,8 @@ namespace Shortpoet.Data.Models.Resume
         public string Surname { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
+        public string Visas { get; set; }
+        public string Flags { get; set; }
         public string AboutMe { get; set; }
         public string Interests { get; set; }
         public virtual ICollection<Education> Educations { get; set; } = new List<Education>();

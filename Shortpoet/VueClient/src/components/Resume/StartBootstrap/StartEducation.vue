@@ -9,7 +9,7 @@
           <div>{{ ed.details }}</div>
           <!-- <p>GPA: 3.23</p> -->
         </div>
-        <div class="resume-date text-md-right">
+        <div class="resume-date text-md-right mt-1">
           <span class="text-primary">{{ ed.focus }}</span>
         </div>
       </div>
@@ -28,7 +28,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

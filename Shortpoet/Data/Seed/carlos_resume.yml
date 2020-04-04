@@ -2,14 +2,20 @@
 title: Carlos Resume March 2020
 name: CARLOS
 surname: SORIANO
-address: St. Louis, MO 
+address: Currently in St. Louis, MO
 email: soriano.carlitos@gmail.com
-aboutMe: Language Data Specialist - operate at the intersection of language and data. 
-  Driven to analyze and provide insight from data on modes of speech as they reflect human behavior. 
-  Through experience across hospitality, sales, and freelance language services, 
-  I developed a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty witnessed everywhere from hospitals to courthouses and union halls in between. 
-  The call to bridge the gap between analogue expertise with long-dormant digital dexterity came in the form of my brother, freecodecamp, and finally formal training at 
-  Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - leveraging these for analysis of socio-economic trends across the spectrum of the 
+visas: USA, EU, UK
+flags: 🇪🇸, 🇵🇭, 🇺🇸, 🇨🇳, 🇫🇷, 🇮🇹, 🇩🇪, 🇧🇷
+aboutMe: As a lifelong polyglot, I describe myself as a Language Data Specialist - developing
+  a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty 
+  witnessed everywhere from hospitals to courthouses and union halls in between through 
+  experience across hospitality, sales, and freelance language services. There are many 
+  layers that intersect computer and spoken languages and the cultural data upon which they are built.
+  Driven to analyze and provide insight from data sources as they reflect human behavior - the 
+  call to bridge the gap between analogue expertise with long-dormant digital dexterity 
+  came in the form of my brother’s coaching, freecodecamp, and finally formal training at 
+  Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - 
+  leveraging these for analysis of socio-economic trends across the spectrum of the 
   most widely spoken languages allows my clients a unique perspective on their field of choice.
 experiences:
   - type: software
@@ -30,8 +36,9 @@ experiences:
       company: Various Interpretation Agencies
       description: Medical, dental and media conferences, on-site medical and legal interpretation for depositions, 
         insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, 
-        consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, 
-        and various other language-related assignments, primarily in Spanish and Tagalog, some French
+        consecutive and simultaneous interpretation for training meetings, document translation of many types, 
+        including legal, medical, media localization, and various other language-related assignments, 
+        primarily in Spanish and Tagalog, some French.
       startDate: July 2011
       endDate: Present
     - position: QA Tester
@@ -44,70 +51,78 @@ experiences:
       company: EZI
       description: Manila, Philippines. Managed daily operations in a bilingual office setting, supervised staff, attended developmental meetings, 
         tracked and prepared development projects, made calls to and from suppliers and manufacturers, purchased investment property, 
-        created investment portfolios and marketing and business plans
+        created investment portfolios and marketing and business plans.
       startDate: January 2008
       endDate: December 2008  
     - position: Sinologist
       company: World Eye Reports
       description: Shanghai, PRC. Translator, Interpreter, media Sales, 
-        wrote articles and sold ads for advertorial project based out of Shanghai
+        wrote articles and sold ads for advertorial project based out of Shanghai.
       startDate: August 2003
       endDate: January 2004
   - type: sales
     jobs:
     - position: Product Specialist - Sales
-      company: Toyota of Hollywood
-      description: New and Pre-owned Car Sales; Sales made in English, Spanish, Tagalog, French, and Mandarin, Self-directed marketing efforts
-      startDate: September 2016
-      endDate: February 2017
-    - position: Product Specialist - Sales
-      company: Hollywood Electrics – Electric Cycle Dealership
-      description: New and Pre-owned Electric Cycle Sales; Sales made in English, Spanish, Tagalog, French, and Mandarin, Self-directed marketing efforts
+      company: Toyota of Hollywood & Hollywood Electrics – Electric Cycle Dealership
+      description: New and Pre-owned Conventional and Electric Car and Cycle Sales;
+        Sales made in English, Spanish, Tagalog, French, and Mandarin, 
+        Self-directed marketing efforts
       startDate: July 2010
-      endDate: August 2016
+      endDate: February 2017
   - type: hospitality
     jobs:
     - position: Food delivery logistics
       company: DoorDash and Grubhub
-      description: Operating 2 apps at the same time to maximize earnings, while maintaining customer satisfaction and high ratings
+      description: Operating 2 apps at the same time to maximize earnings, 
+        while maintaining customer satisfaction and high ratings, 
+        experienced first hand the effects of data collection of market and labor fluctuations 
+        and how they determined the logic behind the apps while I was learning to code.
       startDate: April 2017
       endDate: April 2019
     - position: Grill Chef de Partie
-      company: Post Haus Restaurant
-      description: St. Moritz, Switzerland. helped owner plan restaurant concept, designed Grill Station, 
-        assisted in menu planning and execution, provided back-end informational support for owners during the length of the winter season, 
-        offering particular assistance interpreting for members of the multi-cultural staff and management
-      startDate: September 2005
-      endDate: April 2006
+      company: Many Different Restaurants - mostly a cook, sometimes a bartender
+      description: Post Haus Restaurant - St. Moritz, Switzerland stands 
+        out as I ran the gamut from helping plan restaurant concept, 
+        designed Grill Station, assisted in menu planning and execution, 
+        provided back-end data for owners during the length of the contract, 
+        offering particular assistance interpreting for members of the multi-cultural staff and management.
+      startDate: August 1998
+      endDate: August 2018
 educations:
   - institution: Washington University in St. Louis
     degree: Data Analytics Certificate
     focus: Python, Javascript, Tableau
   - institution: University of Pennsylvania
     degree: Bachelor of Arts and Sciences
-    focus:  major in East Asian Languages and Cultures, Chinese Concentration, relevant coursework in linguistics and anthropology
+    focus:  Major in East Asian Languages and Cultures, Chinese Concentration, 
+      relevant coursework in linguistics and anthropology
   - institution: Thacher School
     degree: Private secondary boarding school
-    focus: emphasis on academics, the outdoors, camping, horsemanship, and environmental awareness, Year Abroad in France
+    focus: Emphasis on academics, the outdoors, camping, horsemanship, and environmental awareness, 
+      Year Abroad in France
 skills:
-  - type: dotnet
+  - type: Workflow
+    details: Mobile-First & Responsive Design, Cross Browser Testing & Debugging, 
+      CI/CD, Agile Development & Scrum
+  - type: Dotnet
     details: Framework 4.x, Core, Entity Framework, Razor, MVC
-  - type: javascript
+  - type: Javascript
     details: Vue, d3, Leafly, Plotly, c3
-  - type: python
+  - type: Python
     details: Pandas, Matplotlib, Flask, Selenium, Beautiful Soup, Scipy, Numpy, Sklearn
-  - type: relationalDb
+  - type: Relational Db
     details: msSQL, mySQL, Entity Framework, SQLAlchemy
-  - type: documentDb
+  - type: Document Db
     details: mongoDB, Pymongo
-  - type: markdown
+  - type: Markdown
     details: HTML, CSS, YAML, MD
-  - type: vizualization
+  - type: Data Vizualization
     details: Tableau
-  - type: translation
+  - type: Translation
     details: Trados
-  - type: miscelaneous
-    details: Internet Research, Microsoft Office, Adobe Creative Suite, YogaWorks 200hr Yoga TeacherTraning, Cicerone Beer Server Certification
+  - type: Miscelaneous
+    details: Internet Research, YogaWorks Teacher Traning, 
+      Cicerone Beer Server Certification, Adobe Creative Suite
 spokenLanguages:
   - type: native
     languages: English, Spanish, Tagalog

@@ -14,12 +14,8 @@ const paths = [
     view: 'About'
   },
   {
-    path: '/resume',
-    view: 'Resume'
-  },
-  {
-    path: '/alt',
-    view: 'Start'
+    path: '/pdf',
+    view: 'PDF'
   }
 ]
 

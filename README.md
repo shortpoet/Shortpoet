@@ -174,3 +174,16 @@ https://www.dotnetcurry.com/aspnet/1373/debugging-aspnet-core-using-visual-studi
     - https://github.com/dotnet/aspnetcore/issues/5204
 
     - https://stackoverflow.com/questions/14790910/stop-all-instances-of-node-js-server
+
+# todo
+
+- optimize 
+    - css
+        - single page
+        - vars
+        - purge
+    - fonts
+        - import indiv fonts
+        - [dom.watch](https://fontawesome.com/how-to-use/with-the-api/methods/dom-i2svg)
+
+    - ssr for priamry pages

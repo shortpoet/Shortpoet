@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper" v-if="getResumeLoaded">
+  <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
     <StartNav />
     <div class="container-fluid p-0">
       <StartAbout
@@ -8,6 +8,8 @@
         :email="getResume.email"
         :aboutMe="getResume.aboutMe"
         :address="getResume.address"
+        :visas="getResume.visas"
+        :flags="getResume.flags"
       />
       <StartExperience
         :experiences="getResume.experiences"      
@@ -37,6 +39,7 @@ import StartSkills from '@/components/Resume/StartBootstrap/StartSkills'
 import StartInterests from '@/components/Resume/StartBootstrap/StartInterests'
 import StartAwards from '@/components/Resume/StartBootstrap/StartAwards'
 import { mapGetters, mapActions } from 'vuex'
+// import '@/assets/scss/resume.scss'
 
 // const yaml = require('js-yaml')
 // import * as fs from 'fs'
@@ -75,6 +78,7 @@ export default {
   mounted () {
     const $ = this.jquery
     this.$nextTick(() => {
+      // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.
       // our custom jQuery code goes here
       $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
@@ -102,11 +106,12 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+// why i can't get this font thing to work with the plugin is beyond me for now :shrug
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
+<<<<<<< HEAD
 body {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
@@ -235,3 +240,8 @@ a:hover, a:focus, a:active {
   color: #562088;
 }
 </style>
+=======
+// using @ for import doesn't seem to work only relative path
+@import './../assets/scss/resume.scss';
+</style>
+>>>>>>> pdf
