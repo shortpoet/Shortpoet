@@ -56,4 +56,5 @@ steps:
     azureSubscription: 'ShortpoetServiceConnection'
     appName: 'Shortpoet'
     package: $(System.ArtifactsDirectory)/**/*.zip
-    deploymentMethod: zipDeploy    
+    deploymentMethod: zipDeploy
+    slotName: staging    
