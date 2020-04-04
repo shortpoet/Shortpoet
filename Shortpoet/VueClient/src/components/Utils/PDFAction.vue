@@ -1,7 +1,7 @@
 <template>
   <div type="input" class="pdf-action" data-toggle="tooltip" data-placement="bottom" data-html="true" 
     title=""
-    data-original-title="<b>Save</b> PDF. This does <u>not</u> download a file from any where. It is generated fresh by your browser based on a <em>snapshot</em> of this page as you see it."
+    data-original-title="<b>Save</b> PDF. This does <u>not</u> download a file from any where. It is generated fresh by your browser based on a <em>snapshot</em> of this page as you see it. As such, if not used from a full-sized screen, the rendering will be disproportionate."
   >
     <font-awesome-layers
       class="save-icon-layer fa-lg"

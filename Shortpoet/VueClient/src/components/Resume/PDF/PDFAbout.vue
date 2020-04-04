@@ -186,6 +186,7 @@ export default {
       }
     },
     mounted () {
+      console.log(this)
       console.log(this.flags)
       console.log(this.flags.replace(/,/g, ''))
       console.log(this.visas)
