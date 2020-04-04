@@ -184,6 +184,11 @@ export default {
       aboutMe2 () {
         return this.aboutMe.slice(this.aboutMe.indexOf('Driven'))
       }
+    },
+    mounted () {
+      console.log(this.flags)
+      console.log(this.flags.replace(/,/g, ''))
+      console.log(this.visas)
     }
 }
 </script>
