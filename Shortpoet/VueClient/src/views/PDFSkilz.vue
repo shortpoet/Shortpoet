@@ -10,16 +10,17 @@
         :visas="getResume.visas"
         :flags="getResume.flags"
       />
+      <PDFSkills
+        :skills="getResume.skills"
+        :interests="getResume.interests"
+        :awards="getResume.spokenLanguages"
+      />
+
       <PDFExperience
         :experiences="getResume.experiences"      
       />
       <PDFEducation
         :educations="getResume.educations"
-      />
-      <PDFSkills
-        :skills="getResume.skills"
-        :interests="getResume.interests"
-        :awards="getResume.spokenLanguages"
       />
     </div>
   </div>

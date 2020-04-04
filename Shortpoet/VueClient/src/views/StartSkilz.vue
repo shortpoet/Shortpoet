@@ -1,7 +1,8 @@
 <template>
-  <div class="" v-if="getResumeLoaded" id="pdf-anchor">
-    <div class="p-10">
-      <PDFAbout
+  <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
+    <StartNav />
+    <div class="container-fluid p-0">
+      <StartAbout
         :name="getResume.name"
         :surname="getResume.surname"
         :email="getResume.email"
@@ -10,38 +11,49 @@
         :visas="getResume.visas"
         :flags="getResume.flags"
       />
-      <PDFExperience
+      <StartExperience
         :experiences="getResume.experiences"      
       />
-      <PDFEducation
+      <StartEducation
         :educations="getResume.educations"
       />
-      <PDFSkills
+      <StartSkills
         :skills="getResume.skills"
-        :interests="getResume.interests"
+      />
+      <StartAwards
         :awards="getResume.spokenLanguages"
+      />
+      <StartInterests
+        :interests="getResume.interests"
       />
     </div>
   </div>
 </template>
 
 <script>
-import PDFAbout from '@/components/Resume/PDF/Orig/PDFAbout'
-import PDFExperience from '@/components/Resume/PDF/Orig/PDFExperience'
-import PDFEducation from '@/components/Resume/PDF/Orig/PDFEducation'
-import PDFSkills from '@/components/Resume/PDF/Orig/PDFSkills'
+import StartNav from '@/components/Resume/Start/Skilz/StartNav.vue'
+import StartAbout from '@/components/Resume/Start/Skilz/StartAbout'
+import StartExperience from '@/components/Resume/Start/Skilz/StartExperience'
+import StartEducation from '@/components/Resume/Start/Skilz/StartEducation'
+import StartSkills from '@/components/Resume/Start/Skilz/StartSkills'
+import StartInterests from '@/components/Resume/Start/Skilz/StartInterests'
+import StartAwards from '@/components/Resume/Start/Skilz/StartAwards'
 import { mapGetters, mapActions } from 'vuex'
+// import '@/assets/scss/resume.scss'
 
 // const yaml = require('js-yaml')
 // import * as fs from 'fs'
 
 export default {
-  name: 'Resume',
+  name: 'Start',
   components: {
-    PDFAbout ,
-    PDFExperience,
-    PDFEducation,
-    PDFSkills
+    StartNav,
+    StartAbout ,
+    StartExperience,
+    StartEducation,
+    StartSkills,
+    StartInterests,
+    StartAwards
   },
   data () {
     return {
@@ -50,11 +62,13 @@ export default {
   computed: {
     ...mapGetters('resume', ['getResume', 'getResumeLoaded']),
     resume () {
+
       return this.getResume.skills.forEach(skill => {
         console.log(skill)
         skill.details = skill.details.split(',')
         console.log(skill)
       })
+      
     }
     
   },
@@ -93,15 +107,10 @@ export default {
 </script>
 
 <style lang="scss">
-
+// why i can't get this font thing to work with the plugin is beyond me for now :shrug
 @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
-@import './../assets/scss/pdf.scss';
 
-// // A4 page dimensions supposedly
-// #pdf-anchor {
-//   height: 842px;
-//   width: 595px;
-// }
-
+// using @ for import doesn't seem to work only relative path
+@import './../assets/scss/resume.scss';
 </style>

@@ -31,13 +31,13 @@
 </template>
 
 <script>
-import StartNav from '@/components/Resume/StartBootstrap/StartNav.vue'
-import StartAbout from '@/components/Resume/StartBootstrap/StartAbout'
-import StartExperience from '@/components/Resume/StartBootstrap/StartExperience'
-import StartEducation from '@/components/Resume/StartBootstrap/StartEducation'
-import StartSkills from '@/components/Resume/StartBootstrap/StartSkills'
-import StartInterests from '@/components/Resume/StartBootstrap/StartInterests'
-import StartAwards from '@/components/Resume/StartBootstrap/StartAwards'
+import StartNav from '@/components/Resume/Start/Orig/StartNav'
+import StartAbout from '@/components/Resume/Start/Orig/StartAbout'
+import StartExperience from '@/components/Resume/Start/Orig/StartExperience'
+import StartEducation from '@/components/Resume/Start/Orig/StartEducation'
+import StartSkills from '@/components/Resume/Start/Orig/StartSkills'
+import StartInterests from '@/components/Resume/Start/Orig/StartInterests'
+import StartAwards from '@/components/Resume/Start/Orig/StartAwards'
 import { mapGetters, mapActions } from 'vuex'
 // import '@/assets/scss/resume.scss'
 

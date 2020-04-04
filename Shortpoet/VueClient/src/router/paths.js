@@ -7,7 +7,7 @@
 const paths = [
   {
     path: '/',
-    view: 'Start'
+    view: 'StartOrig'
   },
   {
     path: '/about',
@@ -15,7 +15,11 @@ const paths = [
   },
   {
     path: '/pdf',
-    view: 'PDF'
+    view: 'PDFOrig'
+  },
+  {
+    path: '/skilz',
+    view: 'PDFSkilz'
   }
 ]
 
