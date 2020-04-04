@@ -26,10 +26,10 @@
 </template>
 
 <script>
-import PDFAbout from '@/components/Resume/PDF/Orig/PDFAbout'
-import PDFExperience from '@/components/Resume/PDF/Orig/PDFExperience'
-import PDFEducation from '@/components/Resume/PDF/Orig/PDFEducation'
-import PDFSkills from '@/components/Resume/PDF/Orig/PDFSkills'
+import PDFAbout from '@/components/Resume/PDF/Skilz/PDFAbout'
+import PDFExperience from '@/components/Resume/PDF/Skilz/PDFExperience'
+import PDFEducation from '@/components/Resume/PDF/Skilz/PDFEducation'
+import PDFSkills from '@/components/Resume/PDF/Skilz/PDFSkills'
 import { mapGetters, mapActions } from 'vuex'
 
 // const yaml = require('js-yaml')

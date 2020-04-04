@@ -27,7 +27,7 @@
         And coming soon, a guestbook that will fully illustrate the capabilites of a linked data source! 🤓</p>
       <ul class="list-inline list-social-icons mb-0 mt-0">
         <li
-          class="social-item list-inline-item"
+          class="social-item list-inline-item my-3"
           v-for="(social, i) in socials"
           :key="i"
         >

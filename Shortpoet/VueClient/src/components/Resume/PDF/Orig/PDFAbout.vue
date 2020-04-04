@@ -113,7 +113,7 @@
 </template>
 
 <script>
-import PDFBorder from '@/components/Resume/PDF/PDFBorder'
+import PDFBorder from '@/components/Resume/PDF/Orig/PDFBorder'
 import PDFAction from '@/components/Utils/PDFAction'
 
 export default {

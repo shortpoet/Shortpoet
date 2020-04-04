@@ -65,8 +65,8 @@
 </template>
 
 <script>
-import PDFAwards from '@/components/Resume/PDF/PDFAwards'
-import PDFInterests from '@/components/Resume/PDF/PDFInterests'
+import PDFAwards from '@/components/Resume/PDF/Skilz/PDFAwards'
+import PDFInterests from '@/components/Resume/PDF/Skilz/PDFInterests'
 
 export default {
   name: 'PDFSkills',
