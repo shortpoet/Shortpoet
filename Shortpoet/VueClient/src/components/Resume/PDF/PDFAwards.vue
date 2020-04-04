@@ -1,7 +1,7 @@
 <template>
   <section class="resume-section" id="awards">
     <div class="my-auto">
-      <h4 class="mb-3">Spoken Languages &amp; Certifications</h4>
+      <h4 class="mb-3">Natural Languages &amp; Certifications</h4>
       <ul class="fa-ul mb-0">
         <li
           v-for="(lang, i) in awards"

@@ -1,12 +1,12 @@
 export default {
-  "title": "Carlos Resume April 2020",
-  "name": "Carlos",
-  "surname": "Soriano",
+  "title": "Carlos Resume March 2020",
+  "name": "CARLOS",
+  "surname": "SORIANO",
   "address": "Currently in St. Louis, MO",
   "email": "soriano.carlitos@gmail.com",
   "visas": "USA, EU, UK",
   "flags": "🇪🇸, 🇵🇭, 🇺🇸, 🇨🇳, 🇫🇷, 🇮🇹, 🇩🇪, 🇧🇷",
-  "aboutMe": "Language Data Specialist - operate at the intersection of language and data. Driven to analyze and provide insight from data on modes of speech as they reflect human behavior. Through experience across hospitality, sales, and freelance language services, I developed a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty witnessed everywhere from hospitals to courthouses and union halls in between. The call to bridge the gap between analogue expertise with long-dormant digital dexterity came in the form of my brother, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - leveraging these for analysis of socio-economic trends across the spectrum of the most widely spoken languages allows my clients a unique perspective on their field of choice.",
+  "aboutMe": "As a lifelong polyglot, I describe myself as a Language Data Specialist - developing a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty witnessed everywhere from hospitals to courthouses and union halls in between through experience across hospitality, sales, and freelance language services. There are many layers that intersect computer and spoken languages and the cultural data upon which they are built. Driven to analyze and provide insight from data sources as they reflect human behavior - the call to bridge the gap between analogue expertise with long-dormant digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - leveraging these for analysis of socio-economic trends across the spectrum of the most widely spoken languages allows my clients a unique perspective on their field of choice.",
   "experiences": [
     {
       "type": "software",

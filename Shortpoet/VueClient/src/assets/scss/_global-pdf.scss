@@ -7,11 +7,6 @@ body {
   margin-bottom: 2rem;
 }
 
-.not-name {
-  font-size: .60rem;
-  margin-left: .25rem;
-}
-
 h1,
 h2,
 h3,
@@ -34,6 +29,32 @@ h6 {
   font-size: .65rem;
 }
 
+
+.pdf-action {
+  cursor: pointer;
+  .save-text {
+    color: $primary;
+  }
+  .save-icon {
+    color: $white;
+  }
+  .save-icon-circle {
+    color: $gray-700;
+  }
+}
+// .tooltip-arrow,
+// .pdf-action + .tooltip > .tooltip-inner {background-color: $primary;}
+
+// https://stackoverflow.com/questions/17642447/change-bootstrap-tooltip-color
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: lighten($primary, 15%);
+}
+.tooltip-inner {
+  color: lighten($primary, 15%);
+  background-color: $gray-900;
+}
+
 .resume-section p {
   font-size: .60rem;
   margin: 0rem 3.5rem 0rem .5rem;
@@ -44,6 +65,10 @@ a:hover {
   color: $primary;
 }
 
+.not-name {
+  font-size: .60rem;
+  margin-left: .25rem;
+}
 
 .social-item {
   margin-bottom: 1rem;
@@ -59,7 +84,6 @@ a:hover {
     }
   }
 }
-
 
 .devicon-name {
   margin: .15rem 0rem 0rem 0rem;

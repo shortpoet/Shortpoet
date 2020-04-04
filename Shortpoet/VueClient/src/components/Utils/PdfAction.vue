@@ -1,17 +1,21 @@
 <template>
-  <div class="pdf-action">
-    <!-- <font-awesome-layers
-      class="social-icon-layer fa-lg"
+  <div type="input" class="pdf-action" data-toggle="tooltip" data-placement="bottom" data-html="true" 
+    title=""
+    data-original-title="<b>Save</b> PDF. This does <u>not</u> download a file from any where. It is generated fresh by your browser based on a <em>snapshot</em> of this page as you see it."
+  >
+    <font-awesome-layers
+      class="save-icon-layer fa-lg"
+      @click="toPDF"
     >
-      <font-awesome-icon size="2x" icon="circle" />
-      <font-awesome-icon
-        class="social-icon"
-        size="2x"
-        :transform="social.transform"
-        :icon="['fa', social.social]"
-      ></font-awesome-icon>
-    </font-awesome-layers> -->
-    <span class="badge badge-seconda" @click="toPDF">PDF</span>
+      <font-awesome-icon class="save-icon-circle" size="2x" icon="circle" />
+        <font-awesome-icon
+          class="save-icon"
+          size="2x"
+          :transform="'shrink-5 right-1'"
+          :icon="['fa', 'save']"
+        ></font-awesome-icon>
+    </font-awesome-layers>
+    <span class="save-text ml-3"> PDF</span>
   </div>
 </template>
 
@@ -66,6 +70,10 @@ export default {
     }
   },
   mounted () {
+    const $ = this.jquery
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
   }
 }
 </script>

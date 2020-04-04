@@ -5,11 +5,11 @@
         <div
           v-for="(item, i) in iconMap"
           :key="i"
-          class="list-devicons d-flex flex-row justify-content-between"        
+          class="list-devicons d-flex flex-row justify-content-between"
         >
           <div>
             <div class="d-flex flex-column justify-content-between align-items-center">
-              <font-awesome-icon v-if="!item.icon.includes('devicons')" :icon="['fab', item.icon]"></font-awesome-icon>
+              <font-awesome-icon id="font-awesome-icon" v-if="!item.icon.includes('devicons')" :icon="['fab', item.icon]"></font-awesome-icon>
               <i v-else :class="['devicons', item.icon]"></i>
               <span class="devicon-name">{{ item.name }}</span>
             </div>

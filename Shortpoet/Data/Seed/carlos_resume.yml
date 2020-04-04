@@ -2,16 +2,20 @@
 title: Carlos Resume March 2020
 name: CARLOS
 surname: SORIANO
-address: Currently in St. Louis, MO 
+address: Currently in St. Louis, MO
 email: soriano.carlitos@gmail.com
 visas: USA, EU, UK
 flags: 🇪🇸, 🇵🇭, 🇺🇸, 🇨🇳, 🇫🇷, 🇮🇹, 🇩🇪, 🇧🇷
-aboutMe: Language Data Specialist - operate at the intersection of language and data. 
-  Driven to analyze and provide insight from data on modes of speech as they reflect human behavior. 
-  Through experience across hospitality, sales, and freelance language services, 
-  I developed a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty witnessed everywhere from hospitals to courthouses and union halls in between. 
-  The call to bridge the gap between analogue expertise with long-dormant digital dexterity came in the form of my brother, freecodecamp, and finally formal training at 
-  Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - leveraging these for analysis of socio-economic trends across the spectrum of the 
+aboutMe: As a lifelong polyglot, I describe myself as a Language Data Specialist - developing
+  a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty 
+  witnessed everywhere from hospitals to courthouses and union halls in between through 
+  experience across hospitality, sales, and freelance language services. There are many 
+  layers that intersect computer and spoken languages and the cultural data upon which they are built.
+  Driven to analyze and provide insight from data sources as they reflect human behavior - the 
+  call to bridge the gap between analogue expertise with long-dormant digital dexterity 
+  came in the form of my brother’s coaching, freecodecamp, and finally formal training at 
+  Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - 
+  leveraging these for analysis of socio-economic trends across the spectrum of the 
   most widely spoken languages allows my clients a unique perspective on their field of choice.
 experiences:
   - type: software
@@ -32,8 +36,9 @@ experiences:
       company: Various Interpretation Agencies
       description: Medical, dental and media conferences, on-site medical and legal interpretation for depositions, 
         insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, 
-        consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, 
-        and various other language-related assignments, primarily in Spanish and Tagalog, some French.
+        consecutive and simultaneous interpretation for training meetings, document translation of many types, 
+        including legal, medical, media localization, and various other language-related assignments, 
+        primarily in Spanish and Tagalog, some French.
       startDate: July 2011
       endDate: Present
     - position: QA Tester
@@ -76,8 +81,10 @@ experiences:
       endDate: April 2019
     - position: Grill Chef de Partie
       company: Many Different Restaurants - mostly a cook, sometimes a bartender
-      description: Post Haus Restaurant - St. Moritz, Switzerland stands out as I ran the gamut from helping plan restaurant concept, designed Grill Station, 
-        assisted in menu planning and execution, provided back-end data for owners during the length of the contract, 
+      description: Post Haus Restaurant - St. Moritz, Switzerland stands 
+        out as I ran the gamut from helping plan restaurant concept, 
+        designed Grill Station, assisted in menu planning and execution, 
+        provided back-end data for owners during the length of the contract, 
         offering particular assistance interpreting for members of the multi-cultural staff and management.
       startDate: August 1998
       endDate: August 2018

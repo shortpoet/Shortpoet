@@ -38,6 +38,14 @@
         </ul>
       </div>
 
+      <!-- pdf column -->
+      <div class="d-flex flex-column ml-auto mr-5" id="socials">
+        <PDFAction 
+          :target="'pdf-anchor'"
+        />
+      </div>
+
+
       <!-- socials column -->
       <div class="d-flex flex-column ml-auto mr-5" id="socials">
         <ul class="list-inline list-social-icons mb-0 mt-3">
@@ -77,9 +85,6 @@
               <span>{{social.url}}</span>
             </a>
           </li>
-          <PDFAction 
-            :target="'pdf-anchor'"
-          />
         </ul>
       </div>
 
@@ -174,10 +179,10 @@ export default {
     },
     computed: {
       aboutMe1 () {
-        return this.aboutMe.slice(0, this.aboutMe.indexOf('The call'))
+        return this.aboutMe.slice(0, this.aboutMe.indexOf('Driven'))
       },
       aboutMe2 () {
-        return this.aboutMe.slice(this.aboutMe.indexOf('The call'))
+        return this.aboutMe.slice(this.aboutMe.indexOf('Driven'))
       }
     }
 }
