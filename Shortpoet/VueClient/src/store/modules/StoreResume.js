@@ -33,7 +33,7 @@ export const actions = {
       // console.log(url)
       const response = await axios.get(url)
       
-      // console.log(response)
+      console.log(response)
       commit(SET_RESUME, response.data)
 
       commit(SET_RESUME_LOADED, true)
