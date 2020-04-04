@@ -20,6 +20,38 @@
 </template>
 
 <script>
+
+const svgFunc = () => {
+  const ratio = window.devicePixelRatio || 1;
+  [...document.querySelectorAll("svg.svg-inline--fa")].map(svgElement => {
+    // create a new canvas
+    const canvas = document.createElement("canvas");
+
+    // multiply the dimensions by the ratio (important for retina displays)
+    canvas.width = svgElement.getBoundingClientRect().width * ratio;
+    canvas.height = svgElement.getBoundingClientRect().height * ratio;
+
+    // force the canvas css to have the same width and height as the original svg icon
+    canvas.style.width = svgElement.getBoundingClientRect().width + "px";
+    canvas.style.height = svgElement.getBoundingClientRect().height + "px";
+
+    // hide the original svg icon and append the newly created canvas
+    svgElement.style.display = "none";
+    svgElement.parentNode.appendChild(canvas);
+
+    // draw the original svg icon onto the new canvas
+    var ctx = canvas.getContext("2d");
+    var DOMURL = self.URL || self.webkitURL || self;
+    var svgString = new XMLSerializer().serializeToString(svgElement);
+    var img = new Image();
+    var svg = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+    img.src = DOMURL.createObjectURL(svg);
+    img.onload = function() {
+      ctx.drawImage(img, 0, 0);
+    };
+  });
+}
+
 // import { mapGetters, mapActions } from 'vuex'
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
@@ -43,6 +75,7 @@ export default {
       // timeout is set to account for loading time i believe
       setTimeout(() => {
         console.log(this.target)
+        // svgFunc()
         html2canvas(document.getElementById(this.target), {
           scale: 3,
           useCORS: true,
