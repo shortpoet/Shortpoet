@@ -4,7 +4,7 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 @import "mixins-start.scss";
-@import "global-start.scss";
-@import "nav-start.scss";
-@import "section-start.scss";
+@import "./start/orig/global-start.scss";
+@import "./start/orig/nav-start.scss";
+@import "./start/orig/section-start.scss";
 @import "bootstrap-overrides.scss";

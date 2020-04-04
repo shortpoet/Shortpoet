@@ -10,15 +10,19 @@ const paths = [
     view: 'StartOrig'
   },
   {
+    path: '/startskilz',
+    view: 'StartSkilz'
+  },
+  {
     path: '/about',
     view: 'About'
   },
   {
-    path: '/pdf',
+    path: '/pdforig',
     view: 'PDFOrig'
   },
   {
-    path: '/skilz',
+    path: '/pdfskilz',
     view: 'PDFSkilz'
   }
 ]

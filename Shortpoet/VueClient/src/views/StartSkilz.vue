@@ -6,22 +6,25 @@
         :name="getResume.name"
         :surname="getResume.surname"
         :email="getResume.email"
-        :aboutMe="getResume.aboutMe"
         :address="getResume.address"
         :visas="getResume.visas"
         :flags="getResume.flags"
+      />
+      <StartSocials />
+      <StartSkills
+        :skills="getResume.skills"
+      />
+      <StartObjective
+        :aboutMe="getResume.aboutMe"
+      />
+      <StartAwards
+        :awards="getResume.spokenLanguages"
       />
       <StartExperience
         :experiences="getResume.experiences"      
       />
       <StartEducation
         :educations="getResume.educations"
-      />
-      <StartSkills
-        :skills="getResume.skills"
-      />
-      <StartAwards
-        :awards="getResume.spokenLanguages"
       />
       <StartInterests
         :interests="getResume.interests"
@@ -33,9 +36,11 @@
 <script>
 import StartNav from '@/components/Resume/Start/Skilz/StartNav.vue'
 import StartAbout from '@/components/Resume/Start/Skilz/StartAbout'
+import StartSocials from '@/components/Resume/Start/Skilz/StartSocials'
+import StartSkills from '@/components/Resume/Start/Skilz/StartSkills'
+import StartObjective from '@/components/Resume/Start/Skilz/StartObjective'
 import StartExperience from '@/components/Resume/Start/Skilz/StartExperience'
 import StartEducation from '@/components/Resume/Start/Skilz/StartEducation'
-import StartSkills from '@/components/Resume/Start/Skilz/StartSkills'
 import StartInterests from '@/components/Resume/Start/Skilz/StartInterests'
 import StartAwards from '@/components/Resume/Start/Skilz/StartAwards'
 import { mapGetters, mapActions } from 'vuex'
@@ -48,10 +53,12 @@ export default {
   name: 'Start',
   components: {
     StartNav,
-    StartAbout ,
+    StartAbout,
+    StartSocials,
+    StartSkills,
+    StartObjective,
     StartExperience,
     StartEducation,
-    StartSkills,
     StartInterests,
     StartAwards
   },
@@ -112,5 +119,5 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
 // using @ for import doesn't seem to work only relative path
-@import './../assets/scss/resume.scss';
+@import './../assets/scss/resume-skilz.scss';
 </style>

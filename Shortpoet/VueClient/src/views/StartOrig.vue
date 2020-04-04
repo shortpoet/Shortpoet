@@ -112,5 +112,5 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
 // using @ for import doesn't seem to work only relative path
-@import './../assets/scss/resume.scss';
+@import './../assets/scss/resume-orig.scss';
 </style>
