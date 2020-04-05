@@ -6,9 +6,9 @@
         Programming Languages &amp; Tools
       </h5>
       <!-- <div class="d-flex flex-row justify-content-between mx-5 my-3"> -->
-      <div id="skill-grid-container" class="d-flex flex-row mt-4">
-        <div id="skills-container" class="d-flex flex-column mr-5">
-        </div>
+      <div id="skill-grid-container" class="d-flex flex-row mt-4 justify-content-between">
+        <!-- <div id="skills-container" class="d-flex flex-column mr-5">
+        </div> -->
           <div
             v-for="(type, i) in skills"
             :key="i"
@@ -178,7 +178,7 @@ export default {
           displayName: 'Dotnet'
         },
         {
-          icon: 'devicons devicons-mongo',
+          icon: 'devicons devicons-mongodb',
           name: 'mongo',
           displayName: 'Mongo'
         },
