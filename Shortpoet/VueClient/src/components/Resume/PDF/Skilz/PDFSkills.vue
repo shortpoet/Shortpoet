@@ -1,33 +1,26 @@
 <template>
   <section class="resume-section mt-3 ml-3" id="skills">
     <div class="my-auto">
-      <div class="d-flex flex-row justify-content-between mx-5 my-3">
       <h4>Skills</h4>
       <h5 class="subheading mb-3">
         Programming Languages &amp; Tools
       </h5>
+      <!-- <div class="d-flex flex-row justify-content-between mx-5 my-3"> -->
       <div id="skill-grid-container" class="d-flex flex-row mt-4">
         <div id="skills-container" class="d-flex flex-column mr-5">
-            <div
-              v-for="(item, i) in iconMap"
-              :key="i"
-              class="list-devicons d-flex flex-column justify-content-between"
-            >
-              <div>
-                <div class="d-flex flex-column justify-content-between align-items-center">
-                  <PDFDevIcon :source="item.icon"/>
-                  <!-- <font-awesome-icon id="font-awesome-icon" v-if="!item.icon.includes('devicons')" :icon="['fab', item.icon]"></font-awesome-icon>
-                  <i v-else :class="['devicons', item.icon]"></i> -->
-                  <!-- <span class="devicon-name">{{ item.name }}</span> -->
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
           <div
             v-for="(type, i) in skills"
             :key="i"
             class="skill-grid"
           >
+            <div class="devicon-row d-flex">
+              <PDFDevIcon
+                v-for="(icon, i) in mapIcons(type.type)"
+                :key="i"
+                :source="icon"
+              />
+            </div>
             <div class="skill-type d-flex flex-row">
               {{ type.type }}
             </div>
@@ -46,7 +39,7 @@
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </section>
 </template>
 
@@ -67,55 +60,170 @@ export default {
     return {
       iconMap: [
         {
-          icon: 'devicons-html5',
-          name: 'HTML5'
+          skill: 'Workflow',
+          icons: ['visualstudio', 'git']
         },
         {
-          icon: 'devicons-css3',
-          name: 'CSS3'
+          skill: 'Dotnet',
+          icons: ['dotnet']
         },
         {
-          icon: 'devicons-bootstrap',
-          name: 'Bootstrap'
+          skill: 'Javascript',
+          icons: ['js', 'vue']
         },
         {
-          icon: 'devicons-sass',
-          name: 'SASS'
+          skill: 'Python',
+          icons: ['python']
         },
         {
-          icon: 'devicons-javascript',
-          name: 'Javascript'
+          skill: 'Relational Db',
+          icons: ['mssql', 'mysql', 'sqlite']
+        },
+        {
+          skill: 'Document Db',
+          icons: ['mongo']
+        },
+        {
+          skill: 'Markdown',
+          icons: ['html', 'css', 'bootstrap', 'sass']
+        },
+        {
+          skill: 'Data Vizualization',
+          icons: ['d3']
+        },
+        {
+          skill: 'Miscelaneous',
+          icons: ['beer']
+        },
+        {
+          skill: 'Translation',
+          icons: ['beer']
+        }
+      ],
+      icons: [
+        {
+          icon: 'devicons devicons-html5',
+          name: 'html',
+          displayName: 'HTML5'
+        },
+        {
+          icon: 'devicons devicons-css3',
+          name: 'css',
+          displayName: 'CSS3'
+        },
+        {
+          icon: 'devicons devicons-bootstrap',
+          name: 'bootstrap',
+          displayName: 'Bootstrap'
+        },
+        {
+          icon: 'devicons devicons-sass',
+          name: 'sass',
+          displayName: 'SASS'
+        },
+        {
+          icon: 'devicons devicons-javascript',
+          name: 'js',
+          displayName: 'Javascript'
         },
         {
           icon: require('@/assets/vue_devicon_forest_green.svg'),
-          name: 'VueJs'
+          name: 'vue',
+          displayName: 'VueJs'
         },
         {
-          icon: 'devicons-linux',
-          name: 'Linux'
+          icon: require('@/assets/vue_devicon_forest_green.svg'),
+          name: 'vue',
+          displayName: 'VueJs'
         },
         {
-          icon: 'devicons-database',
-          name: 'database'
+          icon: require('@/assets/d3_devicon_forest_green.svg'),
+          name: 'd3',
+          displayName: 'D3'
+        },
+        // TODO fix this icon
+        {
+          icon: require('@/assets/tableau_logo.svg'),
+          name: 'vue',
+          displayName: 'VueJs'
         },
         {
-          icon: 'devicons-msql_server',
-          name: 'msql_server'
+          icon: 'devicons devicons-linux',
+          name: 'linux',
+          displayName: 'Linux'
         },
         {
-          icon: 'devicons-dotnet',
-          name: 'dotnet'
+          icon: 'devicons devicons-database',
+          name: 'database',
+          displayName: 'Database'
         },
         {
-          icon: 'devicons-visualstudio',
-          name: 'visualstudio'
+          icon: 'devicons devicons-msql_server',
+          name: 'mssql',
+          displayName: 'Micorsoft SQL Server'
+        },
+        {
+          icon: 'devicons devicons-sqlite',
+          name: 'sqlite',
+          displayName: 'SQLite'
+        },
+        {
+          icon: 'devicons devicons-mysql',
+          name: 'mysql',
+          displayName: 'mySQL'
+        },
+        {
+          icon: 'devicons devicons-dotnet',
+          name: 'dotnet',
+          displayName: 'Dotnet'
+        },
+        {
+          icon: 'devicons devicons-mongo',
+          name: 'mongo',
+          displayName: 'Mongo'
+        },
+        {
+          icon: 'devicons devicons-visualstudio',
+          name: 'visualstudio',
+          displayName: 'Visual Studio'
+        },
+        {
+          icon: 'devicons devicons-git',
+          name: 'git',
+          displayName: 'Git'
+        },
+        {
+          icon: 'devicons devicons-python',
+          name: 'python',
+          displayName: 'Python'
+        },
+        {
+          icon: 'devicons devicons-python',
+          name: 'python',
+          displayName: 'Python'
+        },
+        {
+          icon: 'fa fa-beer',
+          name: 'beer',
+          displayName: 'Miscellaneous'
         }
       ]
     }
   },
+  computed: {
+  },
   methods: {
     listSkills(skills) {
       return skills.split(',')
+    },
+    mapIcons(skill) {
+      console.log(skill)
+      console.log(this.iconMap.filter(im => im.skill === skill)[0]['icons'])
+      let iconKeys = this.iconMap.filter(im => im.skill === skill)[0]['icons']
+      return iconKeys.map(ik => {
+        console.log(ik)
+        return this.icons.filter(i => i.name === ik)[0]['icon']
+      }) 
     }
   },
   mounted () {

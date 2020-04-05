@@ -8,8 +8,7 @@ visas: USA, EU, UK
 flags: 🇪🇸, 🇵🇭, 🇺🇸, 🇨🇳, 🇫🇷, 🇮🇹, 🇩🇪, 🇧🇷
 aboutMe: As a lifelong polyglot, I describe myself as a Language Data Specialist - developing
   a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty 
-  witnessed everywhere from hospitals to courthouses and union halls in between through 
-  experience across hospitality, sales, and freelance language services. There are many 
+  witnessed everywhere from hospitals to courthouses and union halls in between. There are many 
   layers that intersect computer and spoken languages and the cultural data upon which they are built.
   Driven to analyze and provide insight from data sources as they reflect human behavior - the 
   call to bridge the gap between analogue expertise with long-dormant digital dexterity 
@@ -103,7 +102,7 @@ educations:
 skills:
   - type: Workflow
     details: Mobile-First & Responsive Design, Cross Browser Testing & Debugging, 
-      CI/CD, Agile Development & Scrum
+      CI/CD, Agile Development & Scrum, Visual Studio, Visual Studio Code
   - type: Dotnet
     details: Framework 4.x, Core, Entity Framework, Razor, MVC
   - type: Javascript
@@ -118,10 +117,8 @@ skills:
     details: HTML, CSS, YAML, MD
   - type: Data Vizualization
     details: Tableau
-  - type: Translation
-    details: Trados
-  - type: Miscelaneous
-    details: Internet Research, YogaWorks Teacher Traning, 
+  - type: Miscellaneous
+    details: Cooking, Gardening, YogaWorks Teacher Traning, 
       Cicerone Beer Server Certification, Adobe Creative Suite
 spokenLanguages:
   - type: native

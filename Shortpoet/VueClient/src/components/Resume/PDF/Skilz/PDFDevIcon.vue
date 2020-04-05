@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <i v-if="!isImage" :class="'devicons ' + source"></i>
+    <i v-if="!isImage" :class="source"></i>
     <img v-else class="vue-devicon" :src="source"/>
     <span v-if="name" :class="devicon-name">{{ name }}</span>
   </div>
@@ -27,6 +27,7 @@ export default {
   },
   computed: {
     isImage () {
+      console.log(this.source)
       console.log(this.source.match(/svg|jpg|png|jpeg/g) !== null)
       return this.source.match(/svg|jpg|png|jpeg/g) !== null
     }
