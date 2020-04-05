@@ -20,7 +20,7 @@
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
     <div class="my-auto">
       <h2 class="mb-5">Experience</h2>
-      <div class="resume-item d-flex flex-column mb-5" v-for="type in experiences" :key="type.type">
+      <div class="resume-item d-flex flex-column mb-2" v-for="type in experiences" :key="type.type">
         <h2 class="mb-3">{{ type.type }}</h2>
         <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="job in type.jobs" :key="job.description">
           <div class="resume-content mr-auto">

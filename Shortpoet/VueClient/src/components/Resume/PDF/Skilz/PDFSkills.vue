@@ -44,29 +44,12 @@
             </div>
           </div>
         </div>
-        <div id="interests-container" class="d-flex flex-column ml-5">
-          <div id="poem-awards-row" class="d-flex flex-row">
-            <div id="poem-container" class="mt-5 mr-1">
-              <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="{height: '16rem', width: '16rem'}">
-            </div>
-            <div id="awards-container" class="mt-5 ml-5">
-              <PDFAwards :awards="awards"/>
-            </div>
-          </div>
-          <div id="interests-row" class="mt-4 mr-5">
-            <PDFInterests
-              :interests="interests"
-            />
-          </div>
-        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import PDFAwards from '@/components/Resume/PDF/Skilz/PDFAwards'
-import PDFInterests from '@/components/Resume/PDF/Skilz/PDFInterests'
 
 export default {
   name: 'PDFSkills',
@@ -74,22 +57,12 @@ export default {
     skills: {
       type: Array,
       default: () => []
-    },
-    awards: {
-      type: Array,
-      default: () => []
-    },
-    interests: {
-      type: String
     }
   },
   components: {
-    PDFAwards,
-    PDFInterests
   },
   data () {
     return {
-      pic: require('@/assets/poem.jpg'),
       iconMap: [
         {
           icon: 'html5',

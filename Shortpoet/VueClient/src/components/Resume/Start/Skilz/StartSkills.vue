@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+  <section class="resume-section pl-3 p-lg-5 d-flex flex-column" id="skills">
     <div class="my-auto">
       <h2 class="mb-5">Skills</h2>
       <div class="subheading mb-3">
@@ -103,7 +103,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .vue-devicon {
   /* height: 48px;
   width: 48px;
@@ -115,7 +115,12 @@ export default {
   line-height: 1;
   padding: .25rem;
   margin-bottom: .8rem;
+  color: red;
+  
 }
+.vue-devicon:hover {
+    color: red;
+  }
 .skill-grid {
   /* display: flex; */
   /* flex-wrap: wrap; */

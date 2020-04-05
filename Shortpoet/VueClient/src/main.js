@@ -9,9 +9,9 @@ require('bootstrap')
 require('jquery.easing')
 
 require('bootstrap/dist/css/bootstrap.css')
-require('popper.js')
 
 require('devicons/css/devicons.css')
+require('font-awesome/css/font-awesome.css')
 
 // Font Awesome Vue
 import { library } from '@fortawesome/fontawesome-svg-core'

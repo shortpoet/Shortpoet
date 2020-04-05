@@ -14,11 +14,11 @@
       <StartSkills
         :skills="getResume.skills"
       />
-      <StartObjective
-        :aboutMe="getResume.aboutMe"
-      />
       <StartAwards
         :awards="getResume.spokenLanguages"
+      />
+      <StartObjective
+        :aboutMe="getResume.aboutMe"
       />
       <StartExperience
         :experiences="getResume.experiences"      

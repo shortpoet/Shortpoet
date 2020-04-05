@@ -48,79 +48,24 @@
 
       <!-- socials column -->
       <div class="d-flex flex-column ml-auto mr-5" id="socials">
-        <ul class="list-inline list-social-icons mb-0 mt-3">
-          <li
-            class="social-item"
-            v-for="(social, i) in socials"
-            :key="i"
-          >
-            <a :href="social.url">
-
-              <font-awesome-layers
-                class="social-icon-layer fa-lg"
-                v-if="!social.social.includes('globe')"
-              >
-                <font-awesome-icon size="2x" icon="circle" />
-                <font-awesome-icon
-                  class="social-icon"
-                  size="2x"
-                  :transform="social.transform"
-                  :icon="['fab', social.social]"
-                ></font-awesome-icon>
-              </font-awesome-layers>
-
-              <font-awesome-layers
-                class="social-icon-layer fa-lg"
-                v-else
-              >
-                <font-awesome-icon size="2x" icon="circle" />
-                <font-awesome-icon
-                  class="social-icon"
-                  size="2x"
-                  :transform="social.transform"
-                  :icon="['fa', social.social]"
-                ></font-awesome-icon>
-              </font-awesome-layers>
-
-              <span>{{social.url}}</span>
-            </a>
-          </li>
-        </ul>
+        <PDFSocials />
       </div>
 
     </div>
 
-    <PDFBorder class="my-2" :size=".25"/>
-
-    <!-- objective rows -->
-    <!-- ml-3 to match pic -->
-    <div class="resume-section ml-3">
-      <div class="d-flex align-items-center" id="objective">
-        <h4 class="">
-          Objective
-        </h4>
-      </div>
-
-      <div class="d-flex align-items-center" id="objective">
-        <div class="resume-item d-flex flex-column justify-content-between">
-          <p class="mb-1">{{ aboutMe1 }}</p>
-          <p>{{ aboutMe2 }}</p>
-        </div>
-      </div>
-    </div>
 
   </section>
 </template>
 
 <script>
-import PDFBorder from '@/components/Resume/PDF/Skilz/PDFBorder'
 import PDFAction from '@/components/Utils/PDFAction'
+import PDFSocials from '@/components/Resume/PDF/Skilz/PDFSocials'
 
 export default {
     name: 'PDFAbout',
     components: {
       PDFAction,
-      PDFBorder
+      PDFSocials
     },
     props: {
       name: {

@@ -13,8 +13,8 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: $start-highlight;
-    // color: darken($primary, 15%);
+    // color: $start-highlight;
+    color: darken($primary, 15%);
   }
 }
 
@@ -52,6 +52,7 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
+  color: $primary;
 }
 
 h3 {
@@ -101,14 +102,15 @@ p.lead {
 
 .dev-icons {
   font-size: 3rem;
+  :hover {
+    color: $primary;
+  }
   .list-inline-item {
     &:not(:last-child) {
       margin-right: 1rem;
     }
-    svg {
-      &:hover {
-        color: $primary;
-      }
-    }
   }
+}
+.list-icons .list-inline-item:hover {
+  color: #BD5D38;
 }

@@ -71,7 +71,8 @@ a:hover {
 }
 
 .social-item {
-  margin-bottom: 1rem;
+  // css fa vs import fa have different sizes hence the margin not needed
+  // margin-bottom: 1rem;
   .social-icon-layer {
     // display: inline-block;
     // color: $white;

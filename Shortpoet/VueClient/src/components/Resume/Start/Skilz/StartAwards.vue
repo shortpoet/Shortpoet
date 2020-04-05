@@ -1,17 +1,17 @@
 <template>
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
     <div class="my-auto">
-      <h2 class="mb-5">Natural Languages &amp; Certifications</h2>
+      <h2 class="mb-5">Natural Languages</h2>
       <ul class="fa-ul mb-0">
         <li
           v-for="(lang, i) in awards"
           :key="i"
         >
-          <i class="fa-li fa fa-trophy text-warning"></i>
+          <i :class=" lang.type + 'language-icon fa-li fa fa-flag'"></i>
           {{ recase(lang.type) }}: {{ lang.languages }}
           </li>
         <li>
-          <i class="fa-li fa fa-trophy text-warning"></i>
+          <i class="award icon fa-li fa fa-trophy"></i>
           Certified Interpreter</li>
       </ul>
     </div>

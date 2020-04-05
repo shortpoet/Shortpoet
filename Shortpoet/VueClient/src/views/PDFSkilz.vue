@@ -5,16 +5,20 @@
         :name="getResume.name"
         :surname="getResume.surname"
         :email="getResume.email"
-        :aboutMe="getResume.aboutMe"
         :address="getResume.address"
         :visas="getResume.visas"
         :flags="getResume.flags"
       />
+      <PDFBorder class="my-2" :size=".25"/>
       <PDFSkills
         :skills="getResume.skills"
-        :interests="getResume.interests"
-        :awards="getResume.spokenLanguages"
       />
+
+      <!-- objective rows -->
+      <!-- ml-3 to match pic -->
+      <div class="resume-section ml-3">
+        <PDFObjective :aboutMe="getResume.aboutMe" />
+      </div>
 
       <PDFExperience
         :experiences="getResume.experiences"      
@@ -22,15 +26,35 @@
       <PDFEducation
         :educations="getResume.educations"
       />
+      <div id="interests-container" class="d-flex flex-column ml-5">
+        <div id="poem-awards-row" class="d-flex flex-row">
+          <div id="poem-container" class="mt-5 mr-1">
+            <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="{height: '16rem', width: '16rem'}">
+          </div>
+          <div id="awards-container" class="mt-5 ml-5">
+            <PDFAwards :awards="getResume.spokenLanguages"/>
+          </div>
+        </div>
+        <div id="interests-row" class="mt-4 mr-5">
+          <PDFInterests
+            :interests="getResume.interests"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import PDFAbout from '@/components/Resume/PDF/Skilz/PDFAbout'
+import PDFBorder from '@/components/Resume/PDF/Skilz/PDFBorder'
+import PDFSkills from '@/components/Resume/PDF/Skilz/PDFSkills'
+import PDFAwards from '@/components/Resume/PDF/Skilz/PDFAwards'
+import PDFObjective from '@/components/Resume/PDF/Skilz/PDFObjective'
 import PDFExperience from '@/components/Resume/PDF/Skilz/PDFExperience'
 import PDFEducation from '@/components/Resume/PDF/Skilz/PDFEducation'
-import PDFSkills from '@/components/Resume/PDF/Skilz/PDFSkills'
+import PDFInterests from '@/components/Resume/PDF/Skilz/PDFInterests'
+
 import { mapGetters, mapActions } from 'vuex'
 
 // const yaml = require('js-yaml')
@@ -40,13 +64,18 @@ export default {
   name: 'Resume',
   components: {
     PDFAbout ,
+    PDFBorder,
+    PDFSkills,
+    PDFAwards,
+    PDFObjective,
     PDFExperience,
     PDFEducation,
-    PDFSkills
+    PDFInterests
   },
   data () {
     return {
-    }
+      pic: require('@/assets/poem.jpg'),
+}
   },
   computed: {
     ...mapGetters('resume', ['getResume', 'getResumeLoaded']),

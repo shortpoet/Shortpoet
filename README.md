@@ -165,6 +165,12 @@ https://www.entityframeworktutorial.net/efcore/cli-commands-for-ef-core-migratio
 
 https://www.red-gate.com/simple-talk/sql/database-administration/using-migration-scripts-in-database-deployments/
 
+https://codeburst.io/how-i-created-seo-friendly-portfolio-cv-website-and-hosted-it-on-github-d5c4da43cf2f
+
+https://github.com/webdevsuperfast/startbootstrap-resume-vue
+
+https://dev.to/amruthpillai/ever-dreamed-of-a-free-and-open-source-resume-builder-that-doesn-t-store-your-data-meet-reactive-resume-1dpl
+
 # debug 
 
 https://www.dotnetcurry.com/aspnet/1373/debugging-aspnet-core-using-visual-studio-code

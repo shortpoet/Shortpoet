@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+  <section class="resume-section p-3 p-lg-5 d-flex d-column" id="start-objective">
     <div>
       <p class="mb-5">{{ aboutMe1 }}</p>
       <p class="mb-5">{{ aboutMe2 }}</p>
