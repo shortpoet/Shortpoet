@@ -96,6 +96,25 @@ a:hover {
   font-size: 1.75rem;
 }
 
+.vue-devicon {
+  /* height: 48px;
+  width: 48px;
+  line-height: 1;
+  padding: 4px;
+  margin-bottom: 12px; */
+  height: 3rem;
+  width: 3rem;
+  line-height: 1;
+  padding: .25rem;
+  margin-bottom: .8rem;
+  color: red;
+  
+}
+.vue-devicon:hover {
+    color: red;
+  }
+
+
 span.skill {
   font-size: .5rem;
 }

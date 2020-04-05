@@ -22,7 +22,10 @@
 <script>
 // import { mapGetters, mapActions } from 'vuex'
 import jsPDF from 'jspdf'
-import html2canvas from 'html2canvas'
+// using fork for now to solve this issue
+// the changes i made with the icons as the deployed version still works
+// https://github.com/niklasvh/html2canvas/issues/1868#issuecomment-599217709
+import html2canvas from '@trainiac/html2canvas'
 export default {
   name: 'PDFAction',
   components: {
