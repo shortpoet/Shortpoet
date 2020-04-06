@@ -38,7 +38,7 @@ export default {
     border: .25rem solid;
     border-radius: .25rem;
     color: $primary;
-    margin: 0rem 2rem 0rem 2rem;
+    margin: 0rem 1rem 0rem 1rem;
   }
 
   // // this apparently makes a box

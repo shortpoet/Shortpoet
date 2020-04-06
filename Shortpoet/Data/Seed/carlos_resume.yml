@@ -106,9 +106,9 @@ skills:
   - type: Dotnet
     details: Framework 4.x, Core, Entity Framework, Razor, MVC
   - type: Javascript
-    details: Vue, d3, Leafly, Plotly, c3
+    details: Vue, Leafly, Plotly, c3
   - type: Python
-    details: Pandas, Matplotlib, Flask, Selenium, Beautiful Soup, Scipy, Numpy, Sklearn
+    details: Pandas, Matplotlib, Flask, Selenium, Sklearn
   - type: Relational Db
     details: msSQL, mySQL, Entity Framework, SQLAlchemy
   - type: Document Db
@@ -116,7 +116,7 @@ skills:
   - type: Markdown
     details: HTML, CSS, YAML, MD
   - type: Data Vizualization
-    details: Tableau
+    details: D3, Tableau
   - type: Miscellaneous
     details: Cooking, Gardening, YogaWorks Teacher Traning, 
       Cicerone Beer Server Certification, Adobe Creative Suite

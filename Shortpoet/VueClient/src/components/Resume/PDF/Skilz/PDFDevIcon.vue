@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <i v-if="!isImage" :class="source"></i>
-    <img v-else class="vue-devicon" :src="source"/>
+    <img v-else :class="imgClass" :src="source"/>
     <span v-if="name" :class="devicon-name">{{ name }}</span>
   </div>
 </template>
@@ -30,6 +30,9 @@ export default {
       console.log(this.source)
       console.log(this.source.match(/svg|jpg|png|jpeg/g) !== null)
       return this.source.match(/svg|jpg|png|jpeg/g) !== null
+    },
+    imgClass () {
+      return this.source.includes('vue') ? 'vue-devicon' : 'd3-devicon'
     }
   },
   methods: {

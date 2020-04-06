@@ -14,16 +14,19 @@
             :key="i"
             class="skill-grid"
           >
-            <div class="devicon-row d-flex">
+            <div class="list-devicons devicon-row d-flex justify-content-around">
               <PDFDevIcon
                 v-for="(icon, i) in mapIcons(type.type)"
                 :key="i"
                 :source="icon"
               />
             </div>
-            <div class="skill-type d-flex flex-row">
-              {{ type.type }}
+            <div class="skill-type d-flex flex-row align-items-center justify-content-around">
+              <div>
+                  <div>{{ type.type }}</div>
+              </div>
             </div>
+            <PDFBorder class="my-2" :size=".25"/>
             <div class="skill-list-container d-flex flex-column ">
                 <div
                   v-for="(skill, i) in listSkills(type.details)"
@@ -45,6 +48,8 @@
 
 <script>
 import PDFDevIcon from '@/components/Resume/PDF/Skilz/PDFDevIcon'
+import PDFBorder from '@/components/Resume/PDF/Skilz/PDFBorder'
+
 export default {
   name: 'PDFSkills',
   props: {
@@ -54,14 +59,15 @@ export default {
     }
   },
   components: {
-    PDFDevIcon
+    PDFDevIcon,
+    PDFBorder
   },
   data () {
     return {
       iconMap: [
         {
           skill: 'Workflow',
-          icons: ['visualstudio', 'git']
+          icons: ['visualstudio', 'git', 'cogs']
         },
         {
           skill: 'Dotnet',
@@ -89,7 +95,7 @@ export default {
         },
         {
           skill: 'Data Vizualization',
-          icons: ['d3']
+          icons: ['d3', 'magic']
         },
         {
           skill: 'Miscelaneous',
@@ -125,11 +131,6 @@ export default {
           icon: 'devicons devicons-javascript',
           name: 'js',
           displayName: 'Javascript'
-        },
-        {
-          icon: require('@/assets/vue_devicon_forest_green.svg'),
-          name: 'vue',
-          displayName: 'VueJs'
         },
         {
           icon: require('@/assets/vue_devicon_forest_green.svg'),
@@ -203,6 +204,21 @@ export default {
           displayName: 'Python'
         },
         {
+          icon: 'fa fa-cogs',
+          name: 'cogs',
+          displayName: 'CI/CD'
+        },
+        {
+          icon: 'fa fa-magic',
+          name: 'magic',
+          displayName: 'Tableau'
+        },
+        {
+          icon: 'fa fa-user-ninja',
+          name: 'ninja',
+          displayName: 'ninja'
+        },
+        {
           icon: 'fa fa-beer',
           name: 'beer',
           displayName: 'Miscellaneous'
@@ -230,3 +246,9 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.fa-user-ninja:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f504"; 
+  }
+</style>
