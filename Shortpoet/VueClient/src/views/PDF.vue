@@ -34,12 +34,12 @@
         :educations="getResume.educations"
       />
       <div id="interests-poem-container" class="row">
-        <div id="interests-container" class="col-12 col-md-9">
+        <div id="interests-container" class="col-12 col-md-8">
           <PDFInterests
             :interests="getResume.interests"
           />
         </div>
-        <div id="poem-container" class="col-12 col-md-3 mt-3 mt-md-0 text-center">
+        <div id="poem-container" class="col-12 col-md-4 mt-3 mt-md-0 mr-0 text-center">
           <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="{height: '16rem', width: '16rem'}">
         </div>
       </div>

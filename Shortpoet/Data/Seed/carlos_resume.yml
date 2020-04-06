@@ -102,7 +102,7 @@ educations:
 skills:
   - type: Workflow
     details: Mobile-First & Responsive Design, Cross Browser Testing & Debugging, 
-      CI/CD, Agile Development & Scrum, Visual Studio, Visual Studio Code
+      CI/CD, Agile Development & Scrum, Visual Studio / VSCode
   - type: Dotnet
     details: Framework 4.x, Core, Entity Framework, Razor, MVC
   - type: Javascript

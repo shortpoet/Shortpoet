@@ -84,6 +84,12 @@ a:hover {
       color: $white;
     }
   }
+  .social-url {
+    font-size: .60rem;
+    font-weight: 400;
+    // needs to have diff font than icon
+    @include body-font;
+  }
 }
 
 .devicon-name {

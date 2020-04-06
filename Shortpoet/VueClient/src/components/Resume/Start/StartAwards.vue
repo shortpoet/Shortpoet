@@ -7,12 +7,19 @@
           v-for="(lang, i) in awards"
           :key="i"
         >
-          <i :class=" lang.type + 'language-icon fa-li fa fa-flag'"></i>
-          {{ recase(lang.type) }}: {{ lang.languages }}
+          <font-awesome-icon
+            :class="lang.type + ' language-icon fa-li'" 
+            :icon="['fa', 'flag']"
+          ></font-awesome-icon>
+          <span class="mb-5">{{ `${lang.languages} (${recase(lang.type)})` }} </span>
           </li>
         <li>
-          <i class="award icon fa-li fa fa-trophy"></i>
-          Certified Interpreter</li>
+          <font-awesome-icon
+            class="award-icon fa-li"
+            :icon="['fa', 'trophy']"
+          ></font-awesome-icon>
+          Certified Interpreter
+        </li>
       </ul>
     </div>
   </section>

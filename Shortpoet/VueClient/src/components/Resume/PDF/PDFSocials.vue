@@ -13,7 +13,7 @@
             <!-- <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i> -->
             <i :class="'social-icon ' + social.icon + ' fa-stack-1x fa-inverse'"></i>
           </span>
-          <span class="d-none d-md-inline">{{social.url}}</span>
+          <span class="social-url d-none d-md-inline">{{social.url}}</span>
         </a>
       </li>
     </ul>

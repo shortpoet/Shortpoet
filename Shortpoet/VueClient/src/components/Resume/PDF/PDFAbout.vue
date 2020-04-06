@@ -47,7 +47,7 @@
 
 
       <!-- socials column -->
-      <div class="d-flex flex-column ml-auto mr-1 mr-md-5" id="socials">
+      <div class="d-flex flex-column ml-auto mr-1 mr-md-3" id="socials">
         <PDFSocials />
       </div>
 
