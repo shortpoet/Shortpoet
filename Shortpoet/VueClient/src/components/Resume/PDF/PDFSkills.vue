@@ -98,11 +98,7 @@ export default {
           icons: ['d3', 'magic']
         },
         {
-          skill: 'Miscelaneous',
-          icons: ['beer']
-        },
-        {
-          skill: 'Translation',
+          skill: 'Miscellaneous',
           icons: ['beer']
         }
       ],
@@ -235,6 +231,7 @@ export default {
     mapIcons(skill) {
       let iconKeys = this.iconMap.filter(im => im.skill === skill)[0]['icons']
       return iconKeys.map(ik => {
+        console.log(ik)
         return this.icons.filter(i => i.name === ik)[0]['icon']
       }) 
     }

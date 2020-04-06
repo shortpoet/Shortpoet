@@ -6,7 +6,7 @@
   "email": "soriano.carlitos@gmail.com",
   "visas": "USA, EU, UK",
   "flags": "🇪🇸, 🇵🇭, 🇺🇸, 🇨🇳, 🇫🇷, 🇮🇹, 🇩🇪, 🇧🇷",
-  "aboutMe": "As a lifelong polyglot, I describe myself as a Language Data Specialist - developing a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty witnessed everywhere from hospitals to courthouses and union halls in between through experience across hospitality, sales, and freelance language services. There are many layers that intersect computer and spoken languages and the cultural data upon which they are built. Driven to analyze and provide insight from data sources as they reflect human behavior - the call to bridge the gap between analogue expertise with long-dormant digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - leveraging these for analysis of socio-economic trends across the spectrum of the most widely spoken languages allows my clients a unique perspective on their field of choice.",
+  "aboutMe": "As a lifelong polyglot, I describe myself as a Language Data Specialist - developing a varied and keen insight into human interaction, motivation, and the sheer nitty-gritty witnessed everywhere from hospitals to courthouses and union halls in between. There are many layers that intersect computer and spoken languages and the cultural data upon which they are built. Driven to analyze and provide insight from data sources as they reflect human behavior - the call to bridge the gap between analogue expertise with long-dormant digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp, gaining essential tech skills - leveraging these for analysis of socio-economic trends across the spectrum of the most widely spoken languages allows my clients a unique perspective on their field of choice.",
   "experiences": [
     {
       "type": "software",
@@ -105,7 +105,7 @@
   "skills": [
     {
       "type": "Workflow",
-      "details": "Mobile-First & Responsive Design, Cross Browser Testing & Debugging, CI/CD, Agile Development & Scrum"
+      "details": "Mobile-First & Responsive Design, Cross Browser Testing & Debugging, CI/CD, Agile Development & Scrum, Visual Studio, Visual Studio Code"
     },
     {
       "type": "Dotnet",
@@ -113,11 +113,11 @@
     },
     {
       "type": "Javascript",
-      "details": "Vue, d3, Leafly, Plotly, c3"
+      "details": "Vue, Leafly, Plotly, c3"
     },
     {
       "type": "Python",
-      "details": "Pandas, Matplotlib, Flask, Selenium, Beautiful Soup, Scipy, Numpy, Sklearn"
+      "details": "Pandas, Matplotlib, Flask, Selenium, Sklearn"
     },
     {
       "type": "Relational Db",
@@ -133,15 +133,11 @@
     },
     {
       "type": "Data Vizualization",
-      "details": "Tableau"
+      "details": "D3, Tableau"
     },
     {
-      "type": "Translation",
-      "details": "Trados"
-    },
-    {
-      "type": "Miscelaneous",
-      "details": "Internet Research, YogaWorks Teacher Traning, Cicerone Beer Server Certification, Adobe Creative Suite"
+      "type": "Miscellaneous",
+      "details": "Cooking, Gardening, YogaWorks Teacher Traning, Cicerone Beer Server Certification, Adobe Creative Suite"
     }
   ],
   "spokenLanguages": [

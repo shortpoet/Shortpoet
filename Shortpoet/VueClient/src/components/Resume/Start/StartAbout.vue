@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section p-3 px-lg-5 d-flex d-column" id="about-section">
+  <section class="resume-section p-3 px-lg-5 d-flex d-column" id="about">
     <div class="my-auto">
       <h1 class="mb-0">{{ name }}
         <span class="text-primary">{{ surname }}</span>
