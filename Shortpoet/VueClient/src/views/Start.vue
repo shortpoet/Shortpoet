@@ -34,15 +34,15 @@
 </template>
 
 <script>
-import StartNav from '@/components/Resume/Start/Skilz/StartNav.vue'
-import StartAbout from '@/components/Resume/Start/Skilz/StartAbout'
-import StartSocials from '@/components/Resume/Start/Skilz/StartSocials'
-import StartSkills from '@/components/Resume/Start/Skilz/StartSkills'
-import StartObjective from '@/components/Resume/Start/Skilz/StartObjective'
-import StartExperience from '@/components/Resume/Start/Skilz/StartExperience'
-import StartEducation from '@/components/Resume/Start/Skilz/StartEducation'
-import StartInterests from '@/components/Resume/Start/Skilz/StartInterests'
-import StartAwards from '@/components/Resume/Start/Skilz/StartAwards'
+import StartNav from '@/components/Resume/Start/StartNav.vue'
+import StartAbout from '@/components/Resume/Start/StartAbout'
+import StartSocials from '@/components/Resume/Start/StartSocials'
+import StartSkills from '@/components/Resume/Start/StartSkills'
+import StartObjective from '@/components/Resume/Start/StartObjective'
+import StartExperience from '@/components/Resume/Start/StartExperience'
+import StartEducation from '@/components/Resume/Start/StartEducation'
+import StartInterests from '@/components/Resume/Start/StartInterests'
+import StartAwards from '@/components/Resume/Start/StartAwards'
 import { mapGetters, mapActions } from 'vuex'
 // import '@/assets/scss/resume.scss'
 
@@ -119,5 +119,5 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
 // using @ for import doesn't seem to work only relative path
-@import './../assets/scss/resume-skilz.scss';
+@import './../assets/scss/start.scss';
 </style>

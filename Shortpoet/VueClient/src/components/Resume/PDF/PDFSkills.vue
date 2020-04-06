@@ -47,8 +47,8 @@
 </template>
 
 <script>
-import PDFDevIcon from '@/components/Resume/PDF/Skilz/PDFDevIcon'
-import PDFBorder from '@/components/Resume/PDF/Skilz/PDFBorder'
+import PDFDevIcon from '@/components/Resume/PDF/PDFDevIcon'
+import PDFBorder from '@/components/Resume/PDF/PDFBorder'
 
 export default {
   name: 'PDFSkills',

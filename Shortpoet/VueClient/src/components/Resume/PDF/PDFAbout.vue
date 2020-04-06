@@ -59,7 +59,7 @@
 
 <script>
 // import PDFAction from '@/components/Utils/PDFAction'
-import PDFSocials from '@/components/Resume/PDF/Skilz/PDFSocials'
+import PDFSocials from '@/components/Resume/PDF/PDFSocials'
 
 export default {
     name: 'PDFAbout',

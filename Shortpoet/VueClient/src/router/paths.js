@@ -7,23 +7,15 @@
 const paths = [
   {
     path: '/',
-    view: 'StartOrig'
-  },
-  {
-    path: '/startskilz',
-    view: 'StartSkilz'
+    view: 'Start'
   },
   {
     path: '/about',
     view: 'About'
   },
   {
-    path: '/pdforig',
-    view: 'PDFOrig'
-  },
-  {
-    path: '/pdfskilz',
-    view: 'PDFSkilz'
+    path: '/pdf',
+    view: 'PDF'
   }
 ]
 
