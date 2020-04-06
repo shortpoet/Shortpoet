@@ -5,7 +5,7 @@
       <div v-for="(ed, i) in educations" :key="i">
         <div class="resume-item d-flex flex-column justify-content-between">
           <div class="d-flex flex-row">
-            <div class="resume-content mr-auto">
+            <div class="resume-content mr-5 mr-md-auto">
               <h5 class="mb-0">{{ ed.institution }}</h5>
             </div>
             <div class="resume-date text-md-right mr-4">

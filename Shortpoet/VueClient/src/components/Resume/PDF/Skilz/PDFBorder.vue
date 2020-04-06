@@ -12,21 +12,29 @@ export default {
       type: Number,
       default: 1
     },
+    marginX: {
+      type: Number,
+      default: 2
+    },
     color: {
       type: String,
       default: null
-    },
+    }
   },
   computed: {
     styleObject () {
-      if (this.color ) {
+      let s = this.size
+      let m = this.marginX
+      if (this.color) {
         return {
-          borderWidth: .25*(this.size) + 'rem',
+          borderWidth: `${.25*(s)}rem`,
+          margin: `0rem ${ (m)}rem 0rem ${ (m)}rem`,
           color: this.color
         }
       } else {
         return {
-          borderWidth: .25*(this.size) + 'rem'
+          borderWidth: `${.25*(s)}rem`,
+          margin: `${.25*(m)}rem`,
         }
       }
     }
@@ -38,7 +46,7 @@ export default {
     border: .25rem solid;
     border-radius: .25rem;
     color: $primary;
-    margin: 0rem 1rem 0rem 1rem;
+    margin: 0rem 2rem 0rem 2rem;
   }
 
   // // this apparently makes a box

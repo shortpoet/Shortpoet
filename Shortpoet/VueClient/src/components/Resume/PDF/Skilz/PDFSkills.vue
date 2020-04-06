@@ -2,11 +2,11 @@
   <section class="resume-section mt-3 ml-3" id="skills">
     <div class="my-auto">
       <h4>Skills</h4>
-      <h5 class="subheading mb-3">
+      <h5 class="subheading mb-4 mb-md-3">
         Programming Languages &amp; Tools
       </h5>
       <!-- <div class="d-flex flex-row justify-content-between mx-5 my-3"> -->
-      <div id="skill-grid-container" class="d-flex flex-row mt-4 justify-content-between">
+      <div id="skill-grid-container" class="d-flex flex-column flex-md-row mt-4 justify-content-between">
         <!-- <div id="skills-container" class="d-flex flex-column mr-5">
         </div> -->
           <div
@@ -21,24 +21,29 @@
                 :source="icon"
               />
             </div>
-            <div class="skill-type d-flex flex-row align-items-center justify-content-around">
+            <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
               <div>
                   <div>{{ type.type }}</div>
               </div>
             </div>
-            <PDFBorder class="my-2" :size=".25"/>
-            <div class="skill-list-container d-flex flex-column ">
+            <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
+            <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
                 <div
                   v-for="(skill, i) in listSkills(type.details)"
                   :key="i"
                   class="skill-list d-flex flex-column mx-2 mb-2"
-                >          
-                  <span class="skill badge badge-pill">
-                    <!-- <i class="skill-icon fa fa-check"></i> -->
-                    {{ skill }}
-                  </span>
+                >
+                  <div class="skill-pill-container d-flex justify-content-around">
+                    <!-- adding extra spans to create grid -->
+                    <span></span>
+                    <span class="skill badge badge-pill">
+                      {{ skill }}
+                    </span>
+                    <span></span>
+                  </div>          
                 </div>
             </div>
+            <PDFBorder class="d-md-none d-block my-3 my-md-2" :marginX="15" :size=".25"/>
           </div>
         </div>
       </div>
