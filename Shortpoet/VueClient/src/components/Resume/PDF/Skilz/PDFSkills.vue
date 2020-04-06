@@ -1,53 +1,48 @@
 <template>
-  <section class="resume-section mt-3 ml-3" id="skills">
+  <section class="resume-section mt-3 ml-0 ml-md-3 ml-md-1" id="skills">
     <div class="my-auto">
-      <h4>Skills</h4>
-      <h5 class="subheading mb-4 mb-md-3">
+      <h4 class="subheading mb-4 mb-md-3 ml-3 ml-md-0">
         Programming Languages &amp; Tools
-      </h5>
-      <!-- <div class="d-flex flex-row justify-content-between mx-5 my-3"> -->
+      </h4>
       <div id="skill-grid-container" class="d-flex flex-column flex-md-row mt-4 justify-content-between">
-        <!-- <div id="skills-container" class="d-flex flex-column mr-5">
-        </div> -->
-          <div
-            v-for="(type, i) in skills"
-            :key="i"
-            class="skill-grid"
-          >
-            <div class="list-devicons devicon-row d-flex justify-content-around">
-              <PDFDevIcon
-                v-for="(icon, i) in mapIcons(type.type)"
-                :key="i"
-                :source="icon"
-              />
-            </div>
-            <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
-              <div>
-                  <div>{{ type.type }}</div>
-              </div>
-            </div>
-            <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
-            <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
-                <div
-                  v-for="(skill, i) in listSkills(type.details)"
-                  :key="i"
-                  class="skill-list d-flex flex-column mx-2 mb-2"
-                >
-                  <div class="skill-pill-container d-flex justify-content-around">
-                    <!-- adding extra spans to create grid -->
-                    <span></span>
-                    <span class="skill badge badge-pill">
-                      {{ skill }}
-                    </span>
-                    <span></span>
-                  </div>          
-                </div>
-            </div>
-            <PDFBorder class="d-md-none d-block my-3 my-md-2" :marginX="15" :size=".25"/>
+        <div
+          v-for="(type, i) in skills"
+          :key="i"
+          class="skill-grid"
+        >
+          <div class="list-devicons devicon-row d-flex justify-content-around">
+            <PDFDevIcon
+              v-for="(icon, i) in mapIcons(type.type)"
+              :key="i"
+              :source="icon"
+            />
           </div>
+          <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+            <div>
+                <div>{{ type.type }}</div>
+            </div>
+          </div>
+          <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
+          <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+              <div
+                v-for="(skill, i) in listSkills(type.details)"
+                :key="i"
+                class="skill-list d-flex flex-column mx-2 mb-2"
+              >
+                <div class="skill-pill-container d-flex justify-content-around">
+                  <!-- adding extra spans to create grid -->
+                  <span></span>
+                  <span class="skill badge badge-pill">
+                    {{ skill }}
+                  </span>
+                  <span></span>
+                </div>          
+              </div>
+          </div>
+          <PDFBorder v-if="i !== (skills.length - 1)" class="d-md-none d-block my-3 my-md-2" :marginX="25" :size=".25"/>
         </div>
       </div>
-    <!-- </div> -->
+    </div>
   </section>
 </template>
 
@@ -238,11 +233,8 @@ export default {
       return skills.split(',')
     },
     mapIcons(skill) {
-      console.log(skill)
-      console.log(this.iconMap.filter(im => im.skill === skill)[0]['icons'])
       let iconKeys = this.iconMap.filter(im => im.skill === skill)[0]['icons']
       return iconKeys.map(ik => {
-        console.log(ik)
         return this.icons.filter(i => i.name === ik)[0]['icon']
       }) 
     }

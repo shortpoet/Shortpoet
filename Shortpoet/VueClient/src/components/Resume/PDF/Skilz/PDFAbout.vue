@@ -2,7 +2,7 @@
   <section class="resume-section" id="about">
 
     <!-- basic info row -->
-    <div class="d-flex flex-row justify-content-between align-items-center mt-0 ml-3" id="basic-info">
+    <div class="d-flex flex-row justify-content-between align-items-center mt-1 ml-3" id="basic-info">
 
       <!-- photo column -->
       <div class="d-flex flex-column align-items-center" id="photo">
@@ -10,7 +10,7 @@
       </div>
 
       <!-- name contact column -->
-      <div class="d-flex flex-column mt-1 ml-3" id="name-contact">
+      <div class="d-flex flex-column mt-1 mt-md-2 ml-2" id="name-contact">
         <ul class="list-inline">
           <li>
             <h2 class="mb-0">{{ name }}
@@ -39,15 +39,15 @@
       </div>
 
       <!-- pdf column pdf action fixed-->
-      <div class="d-flex flex-column ml-auto mr-5" id="socials">
+      <!-- <div class="d-flex flex-column ml-auto mr-5" id="socials">
         <PDFAction 
           :target="'pdf-anchor'"
         />
-      </div>
+      </div> -->
 
 
       <!-- socials column -->
-      <div class="d-flex flex-column ml-auto mr-5" id="socials">
+      <div class="d-flex flex-column ml-auto mr-1 mr-md-5" id="socials">
         <PDFSocials />
       </div>
 
@@ -58,13 +58,13 @@
 </template>
 
 <script>
-import PDFAction from '@/components/Utils/PDFAction'
+// import PDFAction from '@/components/Utils/PDFAction'
 import PDFSocials from '@/components/Resume/PDF/Skilz/PDFSocials'
 
 export default {
     name: 'PDFAbout',
     components: {
-      PDFAction,
+      // PDFAction,
       PDFSocials
     },
     props: {
@@ -131,10 +131,6 @@ export default {
       }
     },
     mounted () {
-      console.log(this)
-      console.log(this.flags)
-      console.log(this.flags.replace(/,/g, ''))
-      console.log(this.visas)
     }
 }
 </script>

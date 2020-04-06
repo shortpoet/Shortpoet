@@ -27,8 +27,6 @@ export default {
   },
   computed: {
     isImage () {
-      console.log(this.source)
-      console.log(this.source.match(/svg|jpg|png|jpeg/g) !== null)
       return this.source.match(/svg|jpg|png|jpeg/g) !== null
     },
     imgClass () {

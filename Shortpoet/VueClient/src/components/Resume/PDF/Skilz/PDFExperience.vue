@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section mt-2 ml-3" id="experience">
+  <section class="resume-section mt-2 ml-3 mb-3" id="experience">
     <div class="my-auto">
       <h4>Work Experience</h4>
       <div class="d-flex flex-column justify-content-between" v-for="type in experiences" :key="type.type">

@@ -10,9 +10,16 @@
         :flags="getResume.flags"
       />
       <PDFBorder class="my-2" :size=".25"/>
-      <PDFSkills
-        :skills="getResume.skills"
-      />
+      <div class="skills-awards-container row">
+        <div class="awards-col col-12 col-md-2">
+          <PDFAwards :awards="getResume.spokenLanguages"/>
+        </div>
+        <div class="skills-col col-12 col-md-10">
+          <PDFSkills
+            :skills="getResume.skills"
+          />
+        </div>
+      </div>
 
       <!-- objective rows -->
       <!-- ml-3 to match pic -->
@@ -26,19 +33,14 @@
       <PDFEducation
         :educations="getResume.educations"
       />
-      <div id="interests-container" class="d-flex flex-column ml-5">
-        <div id="poem-awards-row" class="d-flex flex-row">
-          <div id="poem-container" class="mt-5 mr-1">
-            <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="{height: '16rem', width: '16rem'}">
-          </div>
-          <div id="awards-container" class="mt-5 ml-5">
-            <PDFAwards :awards="getResume.spokenLanguages"/>
-          </div>
-        </div>
-        <div id="interests-row" class="mt-4 mr-5">
+      <div id="interests-poem-container" class="row">
+        <div id="interests-container" class="col-12 col-md-9">
           <PDFInterests
             :interests="getResume.interests"
           />
+        </div>
+        <div id="poem-container" class="col-12 col-md-3 mt-3 mt-md-0 text-center">
+          <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="{height: '16rem', width: '16rem'}">
         </div>
       </div>
     </div>

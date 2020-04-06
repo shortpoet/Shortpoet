@@ -1,6 +1,6 @@
 <template>
   <section class="" id="pdf-socials">
-    <ul class="list-inline list-social-icons mb-0 mt-3">
+    <ul class="list-inline list-social-icons mb-0 mt-0">
       <li
         :style="{fontFamily: 'FontAwesome'}"
         class="social-item"
@@ -13,7 +13,7 @@
             <!-- <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i> -->
             <i :class="'social-icon ' + social.icon + ' fa-stack-1x fa-inverse'"></i>
           </span>
-          <span>{{social.url}}</span>
+          <span class="d-none d-md-inline">{{social.url}}</span>
         </a>
       </li>
     </ul>

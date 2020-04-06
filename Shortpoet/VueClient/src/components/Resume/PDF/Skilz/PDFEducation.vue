@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section ml-3 mt-2" id="education">
+  <section class="resume-section ml-3 mt-2 mb-3" id="education">
     <div class="my-auto">
       <h4 class="pdf-subheading">Education</h4>
       <div v-for="(ed, i) in educations" :key="i">

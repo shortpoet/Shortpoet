@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section" id="awards">
+  <section class="resume-section mt-3 ml-3" id="awards">
     <div class="my-auto">
       <h4 class="mb-3">Natural Languages &amp; Certifications</h4>
       <ul class="fa-ul mb-0">
@@ -12,7 +12,7 @@
             :class="lang.type + ' language-icon fa-li'" 
             :icon="['fa', 'flag']"
           ></font-awesome-icon>
-          <span class="mb-5">{{ recase(lang.type) }}: {{ lang.languages }}</span>
+          <span class="mb-5">{{ `${lang.languages} (${recase(lang.type)})` }} </span>
           </li>
         <li>
           <font-awesome-icon
