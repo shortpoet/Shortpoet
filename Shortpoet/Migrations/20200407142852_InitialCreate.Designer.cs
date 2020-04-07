@@ -10,7 +10,7 @@ using Shortpoet.Data;
 namespace Shortpoet.Migrations
 {
     [DbContext(typeof(ResumeDbContext))]
-    [Migration("20200406200947_InitialCreate")]
+    [Migration("20200407142852_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,7 +23,7 @@ namespace Shortpoet.Migrations
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Education", b =>
                 {
-                    b.Property<int>("EducationId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -40,7 +40,7 @@ namespace Shortpoet.Migrations
                     b.Property<int?>("ResumeId")
                         .HasColumnType("int");
 
-                    b.HasKey("EducationId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ResumeId");
 
@@ -49,7 +49,7 @@ namespace Shortpoet.Migrations
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Experience", b =>
                 {
-                    b.Property<int>("ExperienceId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -60,7 +60,7 @@ namespace Shortpoet.Migrations
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ExperienceId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ResumeId");
 
@@ -69,7 +69,7 @@ namespace Shortpoet.Migrations
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Job", b =>
                 {
-                    b.Property<int>("JobId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -95,7 +95,7 @@ namespace Shortpoet.Migrations
                     b.Property<string>("StartDate")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("JobId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ExperienceId");
 
@@ -104,7 +104,7 @@ namespace Shortpoet.Migrations
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Resume", b =>
                 {
-                    b.Property<int>("ResumeId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -113,6 +113,9 @@ namespace Shortpoet.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Brief")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -136,14 +139,14 @@ namespace Shortpoet.Migrations
                     b.Property<string>("Visas")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ResumeId");
+                    b.HasKey("Id");
 
                     b.ToTable("Resumes","Profiles");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Skill", b =>
                 {
-                    b.Property<int>("SkillId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -157,7 +160,7 @@ namespace Shortpoet.Migrations
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("SkillId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ResumeId");
 
@@ -166,7 +169,7 @@ namespace Shortpoet.Migrations
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.SpokenLanguages", b =>
                 {
-                    b.Property<int>("SpokenLanguagesId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -183,7 +186,7 @@ namespace Shortpoet.Migrations
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("SpokenLanguagesId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ResumeId");
 

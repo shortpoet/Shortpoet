@@ -14,7 +14,7 @@ namespace Shortpoet.Migrations
                 schema: "Profiles",
                 columns: table => new
                 {
-                    ResumeId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
@@ -23,12 +23,13 @@ namespace Shortpoet.Migrations
                     Email = table.Column<string>(nullable: true),
                     Visas = table.Column<string>(nullable: true),
                     Flags = table.Column<string>(nullable: true),
+                    Brief = table.Column<string>(nullable: true),
                     AboutMe = table.Column<string>(nullable: true),
                     Interests = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Resumes", x => x.ResumeId);
+                    table.PrimaryKey("PK_Resumes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -36,7 +37,7 @@ namespace Shortpoet.Migrations
                 schema: "Profiles",
                 columns: table => new
                 {
-                    EducationId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ResumeId = table.Column<int>(nullable: true),
                     Institution = table.Column<string>(nullable: true),
@@ -45,13 +46,13 @@ namespace Shortpoet.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Educations", x => x.EducationId);
+                    table.PrimaryKey("PK_Educations", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Educations_Resumes_ResumeId",
                         column: x => x.ResumeId,
                         principalSchema: "Profiles",
                         principalTable: "Resumes",
-                        principalColumn: "ResumeId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -60,20 +61,20 @@ namespace Shortpoet.Migrations
                 schema: "Profiles",
                 columns: table => new
                 {
-                    ExperienceId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ResumeId = table.Column<int>(nullable: true),
                     Type = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Experiences", x => x.ExperienceId);
+                    table.PrimaryKey("PK_Experiences", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Experiences_Resumes_ResumeId",
                         column: x => x.ResumeId,
                         principalSchema: "Profiles",
                         principalTable: "Resumes",
-                        principalColumn: "ResumeId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -82,7 +83,7 @@ namespace Shortpoet.Migrations
                 schema: "Profiles",
                 columns: table => new
                 {
-                    SkillId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ResumeId = table.Column<int>(nullable: true),
                     Type = table.Column<string>(nullable: true),
@@ -90,13 +91,13 @@ namespace Shortpoet.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Skills", x => x.SkillId);
+                    table.PrimaryKey("PK_Skills", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Skills_Resumes_ResumeId",
                         column: x => x.ResumeId,
                         principalSchema: "Profiles",
                         principalTable: "Resumes",
-                        principalColumn: "ResumeId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -105,7 +106,7 @@ namespace Shortpoet.Migrations
                 schema: "Profiles",
                 columns: table => new
                 {
-                    SpokenLanguagesId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ResumeId = table.Column<int>(nullable: true),
                     Type = table.Column<string>(nullable: true),
@@ -114,13 +115,13 @@ namespace Shortpoet.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SpokenLanguages", x => x.SpokenLanguagesId);
+                    table.PrimaryKey("PK_SpokenLanguages", x => x.Id);
                     table.ForeignKey(
                         name: "FK_SpokenLanguages_Resumes_ResumeId",
                         column: x => x.ResumeId,
                         principalSchema: "Profiles",
                         principalTable: "Resumes",
-                        principalColumn: "ResumeId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -129,7 +130,7 @@ namespace Shortpoet.Migrations
                 schema: "Profiles",
                 columns: table => new
                 {
-                    JobId = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ResumeId = table.Column<int>(nullable: true),
                     ExperienceId = table.Column<int>(nullable: true),
@@ -141,13 +142,13 @@ namespace Shortpoet.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Jobs", x => x.JobId);
+                    table.PrimaryKey("PK_Jobs", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Jobs_Experiences_ExperienceId",
                         column: x => x.ExperienceId,
                         principalSchema: "Profiles",
                         principalTable: "Experiences",
-                        principalColumn: "ExperienceId");
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(

@@ -3,7 +3,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#about">
       <span class="d-block d-lg-none">Carlos Soriano - Resume</span>
       <span id="pic" class="d-none d-lg-block" @mouseenter="cyclePics" @mouseleave="revertPic">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" :src="pic" alt="profile pic">
+        <img class="img-fluid img-profile mx-auto mb-2" :src="pic" alt="profile pic">
         <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="@/assets/profile_pic.jpg" alt=""> -->
       </span>
     </a>

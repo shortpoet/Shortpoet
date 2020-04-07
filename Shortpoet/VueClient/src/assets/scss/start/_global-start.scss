@@ -101,16 +101,16 @@ p.lead {
 }
 
 .dev-icons {
-  font-size: 3rem;
+  // font-size: 3rem;
   :hover {
-    color: $primary;
+    // color: $primary;
   }
   .list-inline-item {
     &:not(:last-child) {
-      margin-right: 1rem;
+      // margin-right: 1rem;
     }
   }
 }
 .list-icons .list-inline-item:hover {
-  color: #BD5D38;
+  // color: $primary;
 }

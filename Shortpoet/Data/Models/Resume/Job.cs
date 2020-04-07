@@ -8,7 +8,7 @@ namespace Shortpoet.Data.Models.Resume
 {
     public class Job
     {
-        public int JobId { get; set; }
+        public int Id { get; set; }
         public int? ResumeId { get; set; }
         public virtual Experience Experience { get; set; }
         public int? ExperienceId { get; set; }

@@ -24,7 +24,7 @@
       <!-- objective rows -->
       <!-- ml-3 to match pic -->
       <div class="resume-section ml-3">
-        <PDFObjective :aboutMe="getResume.aboutMe" />
+        <PDFObjective :aboutMe="getResume.brief" />
       </div>
 
       <PDFExperience

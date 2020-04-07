@@ -8,8 +8,17 @@
 
     <div class="d-flex align-items-center" id="objective">
       <div class="resume-item d-flex flex-column justify-content-between">
-        <p class="mb-1">{{ aboutMe1 }}</p>
-        <p>{{ aboutMe2 }}</p>
+        <div
+          v-for="(text, i) in aboutMe.split('\\n\\r')"
+          :key="i"
+          class="aboutme-paragraph mb-2 mb-md-1"
+        >
+        <!-- if text contains markup -->
+        <p v-if="!text.match(/\<.+\/\>|\<\/.+\>/g)">
+          {{ text }}
+        </p>
+        <p v-else v-html="text"></p>
+        </div>
       </div>
     </div>
   </section>

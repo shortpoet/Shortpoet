@@ -8,7 +8,7 @@ namespace Shortpoet.Data.Models.Resume
 {
     public class Experience
     {
-        public int ExperienceId { get; set; }
+        public int Id { get; set; }
         // need to explicitly add foreign key id so that .Include() works when querying
         public int? ResumeId { get; set; }
         public virtual Resume Resume { get; set; }

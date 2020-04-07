@@ -34,15 +34,15 @@ namespace Shortpoet.Data
         // .HasKey(ed => ed.EducationId)
         ;
       modelBuilder.Entity<Skill>().ToTable("Skills", "Profiles")
-        .HasKey(sk => sk.SkillId)
+        .HasKey(sk => sk.Id)
         ;
       modelBuilder.Entity<SpokenLanguages>().ToTable("SpokenLanguages", "Profiles")
-        .HasKey(sl => sl.SpokenLanguagesId)
+        .HasKey(sl => sl.Id)
         ;
 
       modelBuilder.Entity<Experience>(builder => {
         builder.ToTable("Experiences", "Profiles");
-        builder.HasKey(ex => ex.ExperienceId);
+        builder.HasKey(ex => ex.Id);
         // builder.HasKey(ex => new { ex.ResumeId, ex.ExperienceId });
         builder.HasOne(ex => ex.Resume)
           // must have value in WithMany call or duplicate foreign key is made on the navigation property ResumeId
@@ -57,7 +57,7 @@ namespace Shortpoet.Data
       });
       modelBuilder.Entity<Job>(builder => {
         builder.ToTable("Jobs", "Profiles");
-        builder.HasKey(j => j.JobId);
+        builder.HasKey(j => j.Id);
         builder.HasOne(j => j.Experience)
           .WithMany(ex => ex.Jobs)
           .HasForeignKey(j => new { j.ResumeId })

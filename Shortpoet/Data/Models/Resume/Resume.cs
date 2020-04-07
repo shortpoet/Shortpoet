@@ -10,7 +10,7 @@ namespace Shortpoet.Data.Models.Resume
 {
     public class Resume
     {
-        public int ResumeId { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -18,6 +18,7 @@ namespace Shortpoet.Data.Models.Resume
         public string Email { get; set; }
         public string Visas { get; set; }
         public string Flags { get; set; }
+        public string Brief { get; set; }
         public string AboutMe { get; set; }
         public string Interests { get; set; }
         public virtual ICollection<Education> Educations { get; set; } = new List<Education>();

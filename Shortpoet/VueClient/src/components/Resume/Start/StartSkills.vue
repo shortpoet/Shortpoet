@@ -43,23 +43,6 @@
           <i class="devicons devicons-visualstudio"></i>
         </li>
       </ul>
-      <div class="subheading mb-3">
-        Workflow
-      </div>
-      <ul class="fa-ul mb-3 skill-list">
-      <li>
-          <i class="fa fa-check"></i>
-          Mobile-First, Responsive Design</li>
-      <li>
-          <i class="fa fa-check"></i>
-          Cross Browser Testing &amp; Debugging</li>
-      <li>
-          <i class="fa fa-check"></i>
-          CI/CD</li>
-      <li>
-          <i class="fa fa-check"></i>
-          Agile Development &amp; Scrum</li>
-      </ul>
       <div
         v-for="(type, i) in skills"
         :key="i"
