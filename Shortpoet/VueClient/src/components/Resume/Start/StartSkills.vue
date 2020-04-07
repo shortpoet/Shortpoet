@@ -6,7 +6,7 @@
         Programming Languages &amp; Tools
       </div>
       <ul class="list-devicons list-inline list-icons">
-        <FlexList 
+        <!-- <FlexList 
           v-slot:default="slotProps"
           :items="icons"
           :display-rows="3"
@@ -14,7 +14,14 @@
           <li class="list-inline-item">
             <StartDevIcon :source="slotProps.item.icon"/>
           </li>
-        </FlexList>
+        </FlexList> -->
+        <li 
+          class="list-inline-item"
+          v-for="(icon, i) in icons"
+          :key="i"
+        >
+          <StartDevIcon :source="icon.icon"/>
+        </li>
       </ul>
       <div
         v-for="(type, i) in skills"
@@ -41,7 +48,7 @@
 </template>
 
 <script>
-import FlexList from '@/components/Utils/FlexList'
+// import FlexList from '@/components/Utils/FlexList'
 import StartDevIcon from '@/components/Resume/Start/StartDevIcon'
 import icons from '@/assets/icons.js'
 
@@ -54,8 +61,8 @@ export default {
     }
   },
   components: {
-    StartDevIcon,
-    FlexList
+    StartDevIcon
+    // FlexList
   },
   data () {
     return {

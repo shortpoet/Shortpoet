@@ -105,6 +105,8 @@ p.lead {
 
 .list-devicons {
   color: $forest-green;
+  // all that flexlist template was achieved with this line XD
+  max-width: 30rem;
   // font-size: 3rem;
   :hover {
     // color: $primary;
