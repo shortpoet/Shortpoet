@@ -17,7 +17,7 @@
           <span v-else class="social-url d-none d-md-inline">https://shortpoet.com</span>
         </a>
       </li>
-      <li>
+      <!-- <li>
         <button
           type="button"
           class="btn"
@@ -30,7 +30,7 @@
           v-show="isModalVisible"
           @close="closeModal"
         >
-          <!-- <template v-slot:header>
+          <template v-slot:header>
             <h1>Test Header</h1>
           </template>
           <template v-slot:body>
@@ -38,19 +38,19 @@
           </template>
           <template v-slot:footer>
             <h1>Test Footer</h1>
-          </template> -->
+          </template>
         </Modal>
-      </li>        
+      </li>         -->
     </ul>
   </section>
 </template>
 
 <script>
-import Modal from '@/components/Utils/Modal'
+// import Modal from '@/components/Utils/Modal'
 export default {
   name: 'PDFSocials',
   components: {
-    Modal
+    // Modal
   },
   props: {
   },
