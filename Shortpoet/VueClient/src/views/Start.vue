@@ -2,6 +2,7 @@
   <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
     <StartNav />
     <div class="container-fluid p-0">
+      <portal-target name="pdf-button-float" />
       <StartAbout
         :name="getResume.name"
         :surname="getResume.surname"
@@ -29,6 +30,7 @@
       <StartInterests
         :interests="getResume.interests"
       />
+      <ButtonFloat />
     </div>
   </div>
 </template>
@@ -43,6 +45,7 @@ import StartExperience from '@/components/Resume/Start/StartExperience'
 import StartEducation from '@/components/Resume/Start/StartEducation'
 import StartInterests from '@/components/Resume/Start/StartInterests'
 import StartAwards from '@/components/Resume/Start/StartAwards'
+import ButtonFloat from '@/components/Utils/ButtonFloat'
 import { mapGetters, mapActions } from 'vuex'
 // import '@/assets/scss/resume.scss'
 
@@ -60,7 +63,8 @@ export default {
     StartExperience,
     StartEducation,
     StartInterests,
-    StartAwards
+    StartAwards,
+    ButtonFloat
   },
   data () {
     return {

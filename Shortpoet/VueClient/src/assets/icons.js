@@ -30,11 +30,11 @@
       },
       {
         skill: 'Data Vizualization',
-        icons: ['d3', 'magic', 'tableau']
+        icons: ['d3', 'tableau']
       },
       {
         skill: 'Miscellaneous',
-        icons: ['beer']
+        icons: ['beer', 'magic']
       }
     ],
     icons: [

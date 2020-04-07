@@ -5,6 +5,9 @@ import store from './store'
 
 import jquery from 'jquery'
 
+import PortalVue from 'portal-vue'
+Vue.use(PortalVue)
+
 require('bootstrap')
 require('jquery.easing')
 
