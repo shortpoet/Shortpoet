@@ -29,6 +29,18 @@ h6 {
   font-size: .65rem;
 }
 
+// ###
+// ## PDF View Layout
+// ###
+
+// override bootstrap row, col class settings
+.awards-col,
+.skills-awards-container,  
+.skills-col {
+  padding: 0rem !important;
+}
+
+
 
 .pdf-action {
   cursor: pointer;

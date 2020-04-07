@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section mt-3 ml-3" id="awards">
+  <section class="resume-section mt-3" id="awards">
     <div class="my-auto">
       <h4 class="mb-3">Natural Languages &amp; Certifications</h4>
       <ul class="fa-ul mb-0">

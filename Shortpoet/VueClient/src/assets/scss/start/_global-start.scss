@@ -14,7 +14,7 @@ a {
   &:focus,
   &:active {
     // color: $start-highlight;
-    color: darken($primary, 15%);
+    color: $primary;
   }
 }
 
@@ -98,19 +98,63 @@ p.lead {
       color: $white;
     }
   }
-}
+} 
 
-.dev-icons {
+// span.flex-list-row:nth-child(1) > span:nth-child(1) > li:nth-child(1)
+// .list-devicons flex-list-grid flex-list-row .d-flex span.flex-list-item li.list-inline-item
+
+.list-devicons {
+  color: $forest-green;
   // font-size: 3rem;
   :hover {
     // color: $primary;
   }
-  .list-inline-item {
-    &:not(:last-child) {
-      // margin-right: 1rem;
+  .flex-list-grid {
+    .flex-list-row {
+      .flex-list-item {
+        .list-inline-item {
+          // $:not(:last-child) was not working here for some reason
+          margin-right: 1rem;
+        }      
+      }
     }
   }
 }
 .list-icons .list-inline-item:hover {
   // color: $primary;
+}
+
+.list-inline-item {
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.skill-icon {
+  color: $forest-green;
+}
+
+.d3-devicon {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0rem .25rem .75rem .25rem;
+}
+
+.vue-devicon {
+  /* height: 48px;
+  width: 48px;
+  line-height: 1;
+  padding: 4px;
+  margin-bottom: 12px; */
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0rem .25rem .75rem .25rem;
+  // padding: .25rem;
+  // margin-bottom: .8rem;
+}
+
+.tableau-devicon {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0rem .25rem .75rem .25rem;
 }

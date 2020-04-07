@@ -1,10 +1,10 @@
 <template>
   <section class="resume-section p-3 p-lg-5 d-flex d-column" id="start-objective">
-    <div class="aboutme-container mb-5">
+    <div class="aboutme-container mb-4 mb-md-3">
       <div
         v-for="(text, i) in aboutMe.split('\\n\\r')"
         :key="i"
-        class="aboutme-paragraph"
+        class="aboutme-paragraph lead"
       >
       <!-- if text contains markup -->
       <p v-if="!text.match(/\<.+\/\>|\<\/.+\>/g)">

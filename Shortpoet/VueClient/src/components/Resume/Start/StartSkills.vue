@@ -1,47 +1,20 @@
 <template>
   <section class="resume-section pl-3 p-lg-5 d-flex flex-column" id="skills">
     <div class="my-auto">
-      <h2 class="mb-5">Skills</h2>
+      <h2 class="mb-4 mb-md-3">Skills</h2>
       <div class="subheading mb-3">
         Programming Languages &amp; Tools
       </div>
-      <ul class="list-inline list-icons">
-        <li class="list-inline-item">
-          <i class="devicons devicons-html5"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-css3"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-bootstrap"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-sass"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-javascript"></i>
-        </li>
-        <li class="list-inline-item">
-          <img class="vue-devicon" src="@/assets/vue_devicon.svg"/>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-git"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-linux"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-database"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-msql_server"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-dotnet"></i>
-        </li>
-        <li class="list-inline-item">
-          <i class="devicons devicons-visualstudio"></i>
-        </li>
+      <ul class="list-devicons list-inline list-icons">
+        <FlexList 
+          v-slot:default="slotProps"
+          :items="icons"
+          :display-rows="3"
+        >
+          <li class="list-inline-item">
+            <StartDevIcon :source="slotProps.item.icon"/>
+          </li>
+        </FlexList>
       </ul>
       <div
         v-for="(type, i) in skills"
@@ -57,7 +30,7 @@
               :key="i"
             >          
               <span class="skill">
-                <i class="fa fa-check"></i>
+                <i class="skill-icon fa fa-check"></i>
                 {{ skill }}
               </span>
             </li>
@@ -68,6 +41,10 @@
 </template>
 
 <script>
+import FlexList from '@/components/Utils/FlexList'
+import StartDevIcon from '@/components/Resume/Start/StartDevIcon'
+import icons from '@/assets/icons.js'
+
 export default {
   name: 'StartSkills',
   props: {
@@ -76,12 +53,22 @@ export default {
       default: () => []
     }
   },
+  components: {
+    StartDevIcon,
+    FlexList
+  },
+  data () {
+    return {
+      icons: icons.icons
+    }
+  },
   methods: {
     listSkills(skills) {
       return skills.split(',')
     }
   },
   mounted () {
+    console.log(icons)
   }
 }
 </script>

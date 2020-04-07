@@ -13,7 +13,8 @@
             <!-- <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i> -->
             <i :class="'social-icon ' + social.icon + ' fa-stack-1x fa-inverse'"></i>
           </span>
-          <span class="social-url d-none d-md-inline">{{social.url}}</span>
+          <span v-if="!social.social.includes('website')" class="social-url d-none d-md-inline">{{social.url}}</span>
+          <span v-else class="social-url d-none d-md-inline">https://shortpoet.com</span>
         </a>
       </li>
     </ul>
@@ -57,7 +58,7 @@ export default {
           {
             social: 'website',
             icon: 'fa fa-globe',
-            url: 'https://shortpoet.com',
+            url: '/',
             transform: 'shrink-6 right-2.5'
           }
         ]

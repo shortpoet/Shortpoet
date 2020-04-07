@@ -10,11 +10,11 @@
         :flags="getResume.flags"
       />
       <PDFBorder class="my-2" :size=".25"/>
-      <div class="skills-awards-container row">
-        <div class="awards-col col-12 col-md-2">
+      <div class="skills-awards-container row ml-3">
+        <div class="awards-col col-12 col-lg-2">
           <PDFAwards :awards="getResume.spokenLanguages"/>
         </div>
-        <div class="skills-col col-12 col-md-10">
+        <div class="skills-col col-12 col-lg-10">
           <PDFSkills
             :skills="getResume.skills"
           />
