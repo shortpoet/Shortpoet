@@ -28,7 +28,7 @@ export default {
       "type": "language",
       "jobs": [
         {
-          "id": 1,
+          "id": 2,
           "position": "Freelance Translator / Interpreter",
           "company": "Various Interpretation Agencies",
           "description": "Medical, dental and media conferences, on-site medical and legal interpretation for depositions, insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, and various other language-related assignments, primarily in Spanish and Tagalog, some French.",
@@ -36,7 +36,7 @@ export default {
           "endDate": "Present"
         },
         {
-          "id": 2,
+          "id": 3,
           "position": "QA Tester",
           "company": "GTL Media",
           "description": "Translator, linguistic tester, translated texts for various media including video games, film, and legal, checked video games for linguistic bugs and translation errors, translation of .xml databases for in-game script",
@@ -44,15 +44,15 @@ export default {
           "endDate": "August 2014"
         },
         {
-          "id": 3,
+          "id": 4,
           "position": "Executive Assistant to the CEO",
           "company": "EZI",
-          "description": "Manila, Philippines. Managed daily operations in a bilingual office setting, supervised staff, attended developmental meetings, tracked and prepared development projects, made calls to and from suppliers and manufacturers, purchased investment property, created investment portfolios and marketing and business plans.",
+          "description": "Manila, Philippines. Participated in managing daily operations in a bilingual office setting, supervised staff, attended developmental meetings, tracked and prepared development projects, made calls to and from suppliers and manufacturers, purchased investment property, created investment portfolios and marketing and business plans, gaining insights into the world of Big Business.",
           "startDate": "January 2008",
           "endDate": "December 2008"
         },
         {
-          "id": 4,
+          "id": 5,
           "position": "Sinologist",
           "company": "World Eye Reports",
           "description": "Shanghai, PRC. Translator, Interpreter, media Sales, wrote articles and sold ads for advertorial project based out of Shanghai.",
@@ -66,7 +66,7 @@ export default {
       "type": "sales",
       "jobs": [
         {
-          "id": 1,
+          "id": 6,
           "position": "Product Specialist - Sales",
           "company": "Toyota of Hollywood & Hollywood Electrics – Electric Cycle Dealership",
           "description": "New and Pre-owned Conventional and Electric Car and Cycle Sales; Sales made in English, Spanish, Tagalog, French, and Mandarin, Self-directed marketing efforts",
@@ -80,7 +80,7 @@ export default {
       "type": "hospitality",
       "jobs": [
         {
-          "id": 1,
+          "id": 7,
           "position": "Food delivery logistics",
           "company": "DoorDash and Grubhub",
           "description": "Operating 2 apps at the same time to maximize earnings, while maintaining customer satisfaction and high ratings, experienced first hand the effects of data collection of market and labor fluctuations and how they determined the logic behind the apps while I was learning to code.",
@@ -88,7 +88,7 @@ export default {
           "endDate": "April 2019"
         },
         {
-          "id": 2,
+          "id": 8,
           "position": "Grill Chef de Partie",
           "company": "Many Different Restaurants - mostly a cook, sometimes a bartender",
           "description": "Post Haus Restaurant - St. Moritz, Switzerland stands out as I ran the gamut from helping plan restaurant concept, designed Grill Station, assisted in menu planning and execution, provided back-end data for owners during the length of the contract, offering particular assistance interpreting for members of the multi-cultural staff and management.",

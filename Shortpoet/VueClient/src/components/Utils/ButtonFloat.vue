@@ -15,7 +15,7 @@
         </font-awesome-layers>
       </a>
     </div>
-    <div v-if="pdfTarget" type="input" :class="classObject" @click="toPDF">
+    <div v-if="pdfTarget" type="input" :class="classObject" @click="showModal">
       <font-awesome-layers
         class="button-float-icon-layer fa-lg"
       >
@@ -28,10 +28,28 @@
         ></font-awesome-icon>
       </font-awesome-layers>
     </div>
+    <div class="modal-slot">
+      <Modal
+        v-show="isModalVisible"
+        @close="closeModal"
+      >
+        <!-- <template v-slot:header>
+          <h1>Test Header</h1>
+        </template>
+        <template v-slot:body>
+          <h1>Test Body</h1>
+        </template>
+        <template v-slot:footer>
+          <h1>Test Footer</h1>
+        </template> -->
+      </Modal>
+    </div>
   </portal>
 </template>
 
 <script>
+import Modal from '@/components/Utils/Modal'
+
 import jsPDF from 'jspdf'
 // using fork for now to solve this issue
 // the changes i made with the icons as the deployed version still works
@@ -41,6 +59,7 @@ import html2canvas from '@trainiac/html2canvas'
 export default {
   name: 'ButtonFloat',
   components: {
+    Modal
   },
   props: {
     target: {
@@ -72,7 +91,8 @@ export default {
           icon: 'save',
           transform: 'shrink-5 right-1'
         }
-      }
+      },
+      isModalVisible: false,
     }
   },
   computed: {
@@ -90,6 +110,15 @@ export default {
     }
   },
   methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },
+    onClose () {
+      this.$emit('close')
+    },
     toPDF () {
       // timeout is set to account for loading time i believe
       setTimeout(() => {
@@ -127,6 +156,7 @@ export default {
 
 <style lang="scss">
 .button-float {
+  cursor: pointer;
   z-index: 1;
   position: fixed;
   right: 4rem;

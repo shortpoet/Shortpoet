@@ -38,14 +38,6 @@
         </ul>
       </div>
 
-      <!-- pdf column pdf action fixed-->
-      <!-- <div class="d-flex flex-column ml-auto mr-5" id="socials">
-        <PDFAction 
-          :target="'pdf-anchor'"
-        />
-      </div> -->
-
-
       <!-- socials column -->
       <div class="d-flex flex-column ml-auto mr-1 mr-md-3" id="socials">
         <PDFSocials />
