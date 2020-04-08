@@ -9,6 +9,9 @@
       },
       toPDF() {
         this.$emit('toPDF');
+      },
+      toCanvas() {
+        this.$emit('toCanvas');
       }
     },
   };
@@ -60,6 +63,16 @@
                   aria-label="Close modal"
                 >
                   Save me!
+                </button>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  class="btn-save"
+                  @click="toCanvas"
+                  aria-label="Close modal"
+                >
+                  Canvas me!
                 </button>
               </div>
               <div>

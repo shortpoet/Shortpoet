@@ -33,6 +33,7 @@
         v-show="isModalVisible"
         @close="closeModal"
         @toPDF="toPDF"
+        @toCanvas="toCanvas"
       >
         <!-- <template v-slot:header>
           <h1>Test Header</h1>
@@ -117,6 +118,17 @@ export default {
     },
     closeModal() {
       this.isModalVisible = false
+    },
+    toCanvas () {
+      html2canvas(document.getElementById(this.pdfTarget), {
+          // scale: 5,
+          // useCORS: true,
+          allowTaint: true,
+        }).then(canvas => {
+          console.log(canvas)
+          // var _canvas = document.createElement('canvas');
+          document.body.appendChild(canvas);
+        })
     },
     toPDF() {
       // close modal first

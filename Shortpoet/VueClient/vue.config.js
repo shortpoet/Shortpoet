@@ -8,8 +8,8 @@ module.exports = {
     // fixed css loader issue for npm from bash 
     extract: false,
     loaderOptions: {
-      sass: {
-        prependData: `@import "@/assets/scss/_variables.scss";`
+      scss: {
+        prependData: `@import "~@/assets/scss/_variables.scss";`
       }
     }
   },
@@ -18,11 +18,11 @@ module.exports = {
     // plugins: [
     //   new GoogleFontsPlugin('./src/assets/fonts.json')
     // ],  
-  },
-  // baseUrl: process.env.NODE_ENV === 'production' ? '/subpath/' : '/',
-  // publicPath: process.env.NODE_ENV === 'production'
-  //   ? '/production-sub-path/'
-  //   : '/',
+    },
+    // baseUrl: process.env.NODE_ENV === 'production' ? '/subpath/' : '/',
+    // publicPath: process.env.NODE_ENV === 'production'
+    //   ? '/production-sub-path/'
+    //   : '/',
   devServer: {
     // proxy: 'https://localhost:8080',
     // adding public seemed to do the same as
