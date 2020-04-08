@@ -30,7 +30,7 @@
       <StartInterests
         :interests="getResume.interests"
       />
-      <ButtonFloat />
+      <ButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" />
     </div>
   </div>
 </template>

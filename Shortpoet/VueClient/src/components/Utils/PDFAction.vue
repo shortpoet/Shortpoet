@@ -1,26 +1,7 @@
-<template>
-  <div type="input" class="pdf-action" data-toggle="tooltip" data-placement="bottom" data-html="true" 
-    title=""
-    data-original-title="<b>Save</b> PDF. This does <u>not</u> download a file from any where. It is generated fresh by your browser based on a <em>snapshot</em> of this page as you see it. As such, if not used from a full-sized screen, the rendering will be disproportionate."
-  >
-    <font-awesome-layers
-      class="save-icon-layer fa-lg"
-      @click="toPDF"
-    >
-      <font-awesome-icon class="save-icon-circle" size="2x" icon="circle" />
-        <font-awesome-icon
-          class="save-icon"
-          size="2x"
-          :transform="'shrink-5 right-1'"
-          :icon="['fa', 'save']"
-        ></font-awesome-icon>
-    </font-awesome-layers>
-    <span class="save-text ml-3"> PDF</span>
-  </div>
+<template functional>
 </template>
 
 <script>
-// import { mapGetters, mapActions } from 'vuex'
 import jsPDF from 'jspdf'
 // using fork for now to solve this issue
 // the changes i made with the icons as the deployed version still works
@@ -28,6 +9,7 @@ import jsPDF from 'jspdf'
 import html2canvas from '@trainiac/html2canvas'
 export default {
   name: 'PDFAction',
+  functional: true,
   components: {
   },
   props: {
@@ -73,10 +55,6 @@ export default {
     }
   },
   mounted () {
-    const $ = this.jquery
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
   }
 }
 </script>

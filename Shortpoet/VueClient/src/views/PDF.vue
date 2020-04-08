@@ -1,6 +1,7 @@
 <template>
   <div class="" v-if="getResumeLoaded" id="pdf-anchor">
     <div class="p-10">
+      <portal-target name="save-button-float" />
       <PDFAbout
         :name="getResume.name"
         :surname="getResume.surname"
@@ -43,6 +44,9 @@
           <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="{height: '16rem', width: '16rem'}">
         </div>
       </div>
+
+      <ButtonFloat :target="'save-button-float'" :icon="'save'" :on-click="toPDF(target)"/>
+
     </div>
   </div>
 </template>
@@ -56,11 +60,9 @@ import PDFObjective from '@/components/Resume/PDF/PDFObjective'
 import PDFExperience from '@/components/Resume/PDF/PDFExperience'
 import PDFEducation from '@/components/Resume/PDF/PDFEducation'
 import PDFInterests from '@/components/Resume/PDF/PDFInterests'
-
+import ButtonFloat from '@/components/Utils/ButtonFloat'
 import { mapGetters, mapActions } from 'vuex'
-
-// const yaml = require('js-yaml')
-// import * as fs from 'fs'
+import toPDF from '@/utils/toPDF'
 
 export default {
   name: 'PDF',
@@ -72,12 +74,14 @@ export default {
     PDFObjective,
     PDFExperience,
     PDFEducation,
-    PDFInterests
+    PDFInterests,
+    ButtonFloat
   },
   data () {
     return {
       pic: require('@/assets/poem.jpg'),
-}
+      target: 'pdf-anchor'
+    }
   },
   computed: {
     ...mapGetters('resume', ['getResume', 'getResumeLoaded']),
@@ -88,38 +92,13 @@ export default {
         console.log(skill)
       })
     }
-    
   },
   methods: {
     ...mapActions('resume', ['loadResume']),
+    toPDF: toPDF
   },
   mounted () {
-    const $ = this.jquery
-    this.$nextTick(() => {
-      // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.
-      // our custom jQuery code goes here
-      $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-          var target = $(this.hash)
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: (target.offset().top)
-            }, 1000, 'easeInOutExpo')
-            return false
-          }
-        }
-      })
-      // Closes responsive menu when a scroll trigger link is clicked
-      $('.js-scroll-trigger').click(function () {
-        $('.navbar-collapse').collapse('hide')
-      })
-      // Activate scrollspy to add active class to navbar items on scroll
-      $('body').scrollspy({
-        target: '#sideNav'
-      })
-      this.loadResume()
-    })
+    this.loadResume()
   }
 }
 </script>

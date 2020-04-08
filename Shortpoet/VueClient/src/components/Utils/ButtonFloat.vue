@@ -1,20 +1,32 @@
 <template>
-  <portal to="pdf-button-float">
-    <div type="input" class="button-float">
-      <a href="/pdf">
+  <portal :to="target">
+    <div v-if="href" type="input" :class="classObject" @click="onClick">
+      <a :href="href">
         <font-awesome-layers
           class="button-float-icon-layer fa-lg"
-          @click="toPDF"
         >
           <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
           <font-awesome-icon
             class="button-float-icon"
             size="2x"
-            transform="shrink-5 right-2.5"
-            icon="file-pdf"
+            :transform="_icon.transform"
+            :icon="_icon.icon"
           ></font-awesome-icon>
         </font-awesome-layers>
       </a>
+    </div>
+    <div v-else type="input" :class="classObject" @click="onClick">
+      <font-awesome-layers
+        class="button-float-icon-layer fa-lg"
+      >
+        <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
+        <font-awesome-icon
+          class="button-float-icon"
+          size="2x"
+          :transform="_icon.transform"
+          :icon="_icon.icon"
+        ></font-awesome-icon>
+      </font-awesome-layers>
     </div>
   </portal>
 </template>
@@ -27,13 +39,47 @@ export default {
   props: {
     target: {
       type: String
+    },
+    href: {
+      type: String,
+      required: false
+    },
+    icon: {
+      type: String
+    },
+    onClick: {
+      type: Function,
+      required: false,
+      default: () => {}
     }
   },
   data () {
     return {
+      iconMap: {
+        pdf: {
+          icon: 'file-pdf',
+          transform: 'shrink-5 right-2.3'
+        },
+        save: {
+          icon: 'save',
+          transform: 'shrink-5 right-1'
+        }
+      }
     }
   },
   computed: {
+    mobile () {
+      return window.innerWidth < 768
+    },
+    classObject () {
+      return {
+        'button-float': true,
+        'mobile': this.mobile
+      }
+    },
+    _icon () {
+      return this.iconMap[`${this.icon}`]
+    }
   },
   methods: {
   },
@@ -58,6 +104,12 @@ export default {
   .button-float-icon {
     color: $white;
   }
+}
+
+.mobile {
+  font-size: 1rem;
+  right: 2rem;
+  bottom: 2rem;
 }
 
 
