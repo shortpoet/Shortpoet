@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper" v-if="getResumeLoaded">
+  <div class="main-wrapper" v-if="getResumeLoaded" id="pdf-anchor">
     <StartNav />
     <div class="container-fluid p-0">
       <StartAbout
@@ -24,6 +24,7 @@
       <StartInterests
         :interests="getResume.interests"
       />
+      <ButtonFloat :icon="'save'" :pdf-target="'pdf-anchor'" />
     </div>
   </div>
 </template>
@@ -36,6 +37,7 @@ import StartEducation from '@/components/Resume/StartBootstrap/StartEducation'
 import StartSkills from '@/components/Resume/StartBootstrap/StartSkills'
 import StartInterests from '@/components/Resume/StartBootstrap/StartInterests'
 import StartAwards from '@/components/Resume/StartBootstrap/StartAwards'
+import ButtonFloat from '@/components/Resume/StartBootstrap/ButtonFloat'
 import { mapGetters, mapActions } from 'vuex'
 
 // const yaml = require('js-yaml')
@@ -50,7 +52,8 @@ export default {
     StartEducation,
     StartSkills,
     StartInterests,
-    StartAwards
+    StartAwards,
+    ButtonFloat
   },
   data () {
     return {
