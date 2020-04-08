@@ -18,18 +18,22 @@ require('font-awesome/css/font-awesome.css')
 
 // Font Awesome Vue
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faLinkedin, faGithub, faTwitter, faInstagram, faCss3, faJs, faVuejs, faHtml5, faBootstrap, faNodeJs, faLinux, faSass, faNpm, faFontAwesomeFlag } from '@fortawesome/free-brands-svg-icons'
-import { faTrophy, faCheck, faFlag, faCircle, faFilePdf, faSave, faGlobe, faTimes} from '@fortawesome/free-solid-svg-icons'
+// import { faLinkedin, faGithub, faTwitter, faInstagram, faCss3, faJs, faVuejs, faHtml5, faBootstrap, faNodeJs, faLinux, faSass, faNpm, faFontAwesomeFlag } from '@fortawesome/free-brands-svg-icons'
+// import { faTrophy, faCheck, faFlag, faCircle, faFilePdf, faSave, faGlobe, faTimes} from '@fortawesome/free-solid-svg-icons'
+import { faCircle, faFilePdf, faSave, faTimes} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 // import { dom } from '@fortawesome/fontawesome-svg-core'
 
 // dom.watch()
 
+// library.add(
+//   faLinkedin, faGithub, faTwitter, faInstagram, faCss3, faJs, faVuejs, 
+//   faHtml5, faBootstrap, faNodeJs, faLinux, faSass, faNpm, 
+//   faTrophy, faCheck, faFlag, faFontAwesomeFlag, 
+//   faCircle, faFilePdf, faSave, faGlobe, faTimes
+//   )
 library.add(
-  faLinkedin, faGithub, faTwitter, faInstagram, faCss3, faJs, faVuejs, 
-  faHtml5, faBootstrap, faNodeJs, faLinux, faSass, faNpm, 
-  faTrophy, faCheck, faFlag, faFontAwesomeFlag, 
-  faCircle, faFilePdf, faSave, faGlobe, faTimes
+  faCircle, faFilePdf, faSave, faTimes
   )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)

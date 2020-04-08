@@ -8,17 +8,11 @@
           :key="i"
           class="mb-1"
         >
-          <font-awesome-icon
-            :class="lang.type + ' language-icon fa-li'" 
-            :icon="['fa', 'flag']"
-          ></font-awesome-icon>
+          <i :class="lang.type + ' language-icon fa fa-flag fa-li'"></i>
           <span class="mb-5">{{ `${lang.languages} (${recase(lang.type)})` }} </span>
-          </li>
+        </li>
         <li>
-          <font-awesome-icon
-            class="award-icon fa-li"
-            :icon="['fa', 'trophy']"
-          ></font-awesome-icon>
+          <i class="award-icon fa fa-trophy fa-li"></i>
           Certified Interpreter
         </li>
       </ul>
