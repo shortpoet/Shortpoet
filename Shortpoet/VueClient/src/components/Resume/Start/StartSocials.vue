@@ -59,8 +59,8 @@ export default {
           {
             social: 'file-pdf',
             icon: 'far fa-file-pdf-o',
-            url: window.location.protocol + '//' + window.location.host + '/pdf',
-            // url: '/pdf',
+            // url: window.location.protocol + '//' + window.location.host + '/pdf',
+            url: '/pdf',
             transform: 'shrink-6 right-2.5'
           }
         ]

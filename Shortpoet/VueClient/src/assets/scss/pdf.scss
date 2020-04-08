@@ -3,8 +3,8 @@
 // Bootstrap SCSS
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-@import "bootstrap-overrides.scss";
 @import "mixins-start.scss";
+@import "bootstrap-overrides.scss";
 @import "button-float.scss";
 @import "modal.scss";
 // @import "./pdf/awards-pdf.scss";
