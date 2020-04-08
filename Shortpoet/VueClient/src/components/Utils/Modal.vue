@@ -1,10 +1,15 @@
 <script>
+//https://alligator.io/vuejs/vue-modal-component/
+
   export default {
     name: 'Modal',
     methods: {
       close() {
         this.$emit('close');
       },
+      toPDF() {
+        this.$emit('toPDF');
+      }
     },
   };
 </script>
@@ -21,15 +26,14 @@
           id="modalTitle"
         >
           <slot name="header">
-            This is the default tile!
-
+            <h4 class="mr-auto">Save to PDF</h4>
             <button
               type="button"
-              class="btn-close"
+              class="btn-ex"
               @click="close"
               aria-label="Close modal"
             >
-              x
+              <font-awesome-icon icon="times" />
             </button>
           </slot>
         </header>
@@ -38,28 +42,44 @@
           id="modalDescription"
         >
           <slot name="body">
-            I'm the default body!
+            <p>
+              This does not <em>download</em> a file in the traditional sense where it is retrieved from a data server. 
+              It is generated fresh by your browser based on a <b>snapshot</b> of this page as you see it. 
+              As such, if not used from a full-sized screen, the rendering will not be in A4 page size format.
+            </p>          
           </slot>
         </section>
         <footer class="custom-modal-footer">
           <slot name="footer">
-            I'm the default footer!
-
-            <button
-              type="button"
-              class="btn-green"
-              @click="close"
-              aria-label="Close modal"
-            >
-              Close me!
-            </button>
+            <div class="button-drawer d-flex flex-row justify-content-around">
+              <div>
+                <button
+                  type="button"
+                  class="btn-save"
+                  @click="toPDF"
+                  aria-label="Close modal"
+                >
+                  Save me!
+                </button>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  @click="close"
+                  aria-label="Close modal"
+                >
+                  Close me!
+                </button>
+              </div>
+            </div>
           </slot>
         </footer>
       </div>
     </div>
   </transition>
 </template>
-<style>
+<style lang="scss">
   .custom-modal-backdrop {
     position: fixed;
     top: 0;
@@ -76,47 +96,59 @@
   .custom-modal {
     background: #FFFFFF;
     box-shadow: 2px 2px 20px 1px;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     display: flex;
     flex-direction: column;
-  }
-
-  .custom-modal-header,
-  .custom-modal-footer {
-    padding: 15px;
-    display: flex;
+    max-width: 15rem;
   }
 
   .custom-modal-header {
-    border-bottom: 1px solid #eeeeee;
-    color: #4AAE9B;
-    justify-content: space-between;
-  }
-
-  .custom-modal-footer {
-    border-top: 1px solid #eeeeee;
-    justify-content: flex-end;
+    margin: 1.5rem 1.5rem 0rem 1.5rem;
+    display: flex;
+      border-bottom: 1px solid #eeeeee;
+    /* justify-content: space-between; */
   }
 
   .custom-modal-body {
-    position: relative;
-    padding: 20px 10px;
+    /* position: relative; */
+    margin: 1.5rem 1.5rem 1.5rem 1.5rem;
   }
 
-  .btn-close {
+  .custom-modal-footer {
+    margin: 0rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.5rem 0rem 0rem 0rem;
+    border-top: 1px solid #eeeeee;
+    /* display: flex; */
+    /* justify-content: flex-end; */
+  }
+
+
+  .button-drawer {
+    display: flex;
+    /* justify-content: space-around; */
+  }
+
+  .btn-ex {
     border: none;
-    font-size: 20px;
-    padding: 20px;
+    font-size: 1rem;
+    padding: 0rem 0rem 0rem 0rem;
+    margin: 0rem 0rem .5rem 0rem;
     cursor: pointer;
     font-weight: bold;
     color: #4AAE9B;
     background: transparent;
   }
 
-  .btn-green {
+  .btn-save {
     color: white;
-    background: #4AAE9B;
-    border: 1px solid #4AAE9B;
+    background: $forest-green;
+    border: 1px solid $forest-green;
+    border-radius: 2px;
+  }
+  .btn-close {
+    color: white;
+    background: $primary;
+    border: 1px solid $primary;
     border-radius: 2px;
   }
 </style>

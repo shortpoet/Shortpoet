@@ -32,6 +32,7 @@
       <Modal
         v-show="isModalVisible"
         @close="closeModal"
+        @toPDF="toPDF"
       >
         <!-- <template v-slot:header>
           <h1>Test Header</h1>
@@ -111,15 +112,14 @@ export default {
   },
   methods: {
     showModal() {
-      this.isModalVisible = true;
+      this.isModalVisible = true
     },
     closeModal() {
-      this.isModalVisible = false;
+      this.isModalVisible = false
     },
-    onClose () {
-      this.$emit('close')
-    },
-    toPDF () {
+    toPDF() {
+      // close modal first
+      this.isModalVisible = false
       // timeout is set to account for loading time i believe
       setTimeout(() => {
         console.log(this.target)

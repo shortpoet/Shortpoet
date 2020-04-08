@@ -21,7 +21,7 @@ https://github.com/oleg-agapov/my-portfolio
 https://codeburst.io/how-i-created-seo-friendly-portfolio-cv-website-and-hosted-it-on-github-d5c4da43cf2f
 https://gauger.io/fonticon/
 https://blog.emojipedia.org/emoji-flags-explained/
-
+https://alligator.io/vuejs/vue-modal-component/
 # Azure
 
 https://github.com/Azure-Samples
