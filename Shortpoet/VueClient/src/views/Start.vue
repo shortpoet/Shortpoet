@@ -2,7 +2,6 @@
   <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
     <StartNav />
     <div class="container-fluid p-0">
-      <portal-target name="pdf-button-float" />
       <StartAbout
         :name="getResume.name"
         :surname="getResume.surname"
@@ -30,6 +29,7 @@
       <StartInterests
         :interests="getResume.interests"
       />
+      <portal-target name="pdf-button-float" />
       <ButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" />
     </div>
   </div>
@@ -119,8 +119,8 @@ export default {
 
 <style lang="scss">
 // why i can't get this font thing to work with the plugin is beyond me for now :shrug
-@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+// @import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 
 // using @ for import doesn't seem to work only relative path
 @import './../assets/scss/start.scss';

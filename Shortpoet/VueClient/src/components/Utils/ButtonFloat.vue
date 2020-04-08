@@ -56,6 +56,7 @@ import jsPDF from 'jspdf'
 // the changes i made with the icons as the deployed version still works
 // https://github.com/niklasvh/html2canvas/issues/1868#issuecomment-599217709
 import html2canvas from '@trainiac/html2canvas'
+// import html2canvas from 'html2canvas'
 
 export default {
   name: 'ButtonFloat',
@@ -124,7 +125,7 @@ export default {
       setTimeout(() => {
         console.log(this.target)
         html2canvas(document.getElementById(this.pdfTarget), {
-          scale: 3,
+          scale: 5,
           useCORS: true,
           allowTaint: true,
         }).then(canvas => {
@@ -155,29 +156,5 @@ export default {
 </script>
 
 <style lang="scss">
-.button-float {
-  cursor: pointer;
-  z-index: 1;
-  position: fixed;
-  right: 4rem;
-  bottom: 3rem;
-  opacity: 50%;
-  .button-float-icon-circle {
-    color: $gray-500;
-  }
-  font-size: 1.5rem;
-  .button-float-icon-layer {
-  }
-  .button-float-icon {
-    color: $white;
-  }
-}
-
-.mobile {
-  font-size: 1rem;
-  right: 2rem;
-  bottom: 2rem;
-}
-
 
 </style>

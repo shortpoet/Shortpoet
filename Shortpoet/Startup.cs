@@ -107,24 +107,26 @@ namespace Shortpoet
 
             app.UseCors("default");
 
-            // app.UseEndpoints(endpoints =>
-            // {
-            //     endpoints.MapControllerRoute(
-            //         name: "default",
-            //         // pattern: "api/{area:exists}/{controller}/{action=Index}/{id?}");
-            //         pattern: "api/{controller}/{action=Index}/{id?}");
-            //     endpoints.MapRazorPages();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    // pattern: "api/{area:exists}/{controller}/{action=Index}/{id?}");
+                    pattern: "api/{controller}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
 
-            //     // if (env.IsDevelopment())
-            //     // {
-            //     //     endpoints.MapToVueCliProxy("{*path}", new SpaOptions { SourcePath = "VueClient" }, "serve", regex: "running at");
-            //     // }
-            //     // else
-            //     // {
-            //     //     endpoints.MapFallbackToFile("VueClient/dist/index.html");
-            //     // }
+                // endpoints.MapFallbackToFile("VueClient/dist/index.html");
 
-            // });
+                // if (env.IsDevelopment())
+                // {
+                //     endpoints.MapToVueCliProxy("{*path}", new SpaOptions { SourcePath = "VueClient" }, "serve", regex: "running at");
+                // }
+                // else
+                // {
+                //     endpoints.MapFallbackToFile("VueClient/dist/index.html");
+                // }
+
+            });
 
             app.UseMvc(routes =>
             {

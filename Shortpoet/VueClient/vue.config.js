@@ -5,6 +5,8 @@ const options = require('./src/assets/fonts.json')
 
 module.exports = {
   css: {
+    // fixed css loader issue for npm from bash 
+    extract: false,
     loaderOptions: {
       sass: {
         prependData: `@import "@/assets/scss/_variables.scss";`

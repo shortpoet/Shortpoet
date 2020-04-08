@@ -25,6 +25,7 @@
     "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
     "google-fonts-plugin": "^5.0.2",
+    "html2canvas": "^1.0.0-rc.5",
     "jquery": "^3.4.1",
     "jquery.easing": "^1.4.1",
     "js-yaml": "^3.13.1",
@@ -50,8 +51,5 @@
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  },
-  "resolutions": {
-    "@vue/cli-service/mini-css-extract-plugin": "0.8.0"
   }
 }
