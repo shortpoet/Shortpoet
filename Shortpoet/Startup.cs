@@ -32,7 +32,8 @@ namespace Shortpoet
             services.AddDbContext<ResumeDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection"))
-                    .EnableSensitiveDataLogging());
+                    // .EnableSensitiveDataLogging()
+                    );
 
             // services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
             //     .AddEntityFrameworkStores<ApplicationDbContext>();
