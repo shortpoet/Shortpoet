@@ -111,6 +111,10 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
 @import './../assets/scss/pdf.scss';
 
+// page {
+//   size: A4 
+// }
+
 // // A4 page dimensions supposedly
 // #pdf-anchor {
 //   height: 842px;

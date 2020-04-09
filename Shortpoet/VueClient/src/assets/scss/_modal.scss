@@ -25,17 +25,20 @@
   display: flex;
     border-bottom: 1px solid #eeeeee;
   /* justify-content: space-between; */
+  font-family: 'Saira Extra Condensed';
 }
 
 .custom-modal-body {
   /* position: relative; */
   margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  font-family: 'Open Sans';
 }
 
 .custom-modal-footer {
   margin: 0rem 1.5rem 1.5rem 1.5rem;
   padding: 1.5rem 0rem 0rem 0rem;
   border-top: 1px solid #eeeeee;
+  font-family: 'Saira Extra Condensed';
   /* display: flex; */
   /* justify-content: flex-end; */
 }
@@ -53,7 +56,7 @@
   margin: 0rem 0rem .5rem 0rem;
   cursor: pointer;
   font-weight: bold;
-  color: #4AAE9B;
+  color: $forest-green;
   background: transparent;
 }
 

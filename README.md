@@ -1,7 +1,7 @@
 [![Build Status](https://dev.azure.com/sorianocarlitos/Shortpoet/_apis/build/status/shortpoet.Shortpoet?branchName=master)](https://dev.azure.com/sorianocarlitos/Shortpoet/_build/latest?definitionId=1&branchName=dev)
 
 # Shortpoet
-https://shortpoet.scm.azurewebsites.net/DebugConsole
+https://shortpoet.scm.azurewebsites.net/DebugConsole=
 https://dev.azure.com/sorianocarlitos/Shortpoet/_apis/serviceendpoint/endpoints?api-version=5.0-preview.2
 
 - Setting ASPNETCORE_ENVIRONMENT to "Production" enabled app to read from build "dist" and deployed correctly.  
@@ -22,6 +22,7 @@ https://codeburst.io/how-i-created-seo-friendly-portfolio-cv-website-and-hosted-
 https://gauger.io/fonticon/
 https://blog.emojipedia.org/emoji-flags-explained/
 https://alligator.io/vuejs/vue-modal-component/
+http://vorillaz.github.io/devicons/#/main
 # Azure
 
 https://github.com/Azure-Samples

@@ -48,7 +48,7 @@
             <p>
               This does not <em>download</em> a file in the traditional sense where it is retrieved from a data server. 
               It is generated fresh by your browser based on a <b>snapshot</b> of this page as you see it. 
-              As such, if not used from a full-sized screen, the rendering will not be in A4 page size format.
+              As such, if not used from a full-sized screen, the rendering will not be in full page size format.
             </p>          
           </slot>
         </section>
@@ -65,7 +65,7 @@
                   Save me!
                 </button>
               </div>
-              <div>
+              <!-- <div>
                 <button
                   type="button"
                   class="btn-save"
@@ -74,7 +74,7 @@
                 >
                   Canvas me!
                 </button>
-              </div>
+              </div> -->
               <div>
                 <button
                   type="button"
