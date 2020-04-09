@@ -2,19 +2,18 @@
   <section class="" id="pdf-socials">
     <ul class="list-inline list-social-icons mb-0 mt-0">
       <li
-        :style="{fontFamily: 'FontAwesome'}"
         class="social-item"
         v-for="(social, i) in socials"
         :key="i"
       >
         <a :href="social.url">
-            <span class="social-icon-layer fa-stack fa-lg">
+          <span :style="{fontFamily: 'FontAwesome'}" class="social-icon-layer fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <!-- <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i> -->
             <i :class="'social-icon ' + social.icon + ' fa-stack-1x fa-inverse'"></i>
           </span>
-          <span v-if="!social.social.includes('website')" class="social-url d-none d-md-inline">{{social.url}}</span>
-          <span v-else class="social-url d-none d-md-inline">https://shortpoet.com</span>
+          <span style="font-family: 'Open Sans';" v-if="!social.social.includes('website')" class="social-url d-none d-md-inline">{{social.url}}</span>
+          <span style="font-family: 'Open Sans';" v-else class="social-url d-none d-md-inline">https://shortpoet.com</span>
         </a>
       </li>
     </ul>

@@ -19,7 +19,7 @@
           </div>
           <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
             <div>
-                <div>{{ type.type }}</div>
+                <div style="font-family: 'Open Sans';">{{ type.type }}</div>
             </div>
           </div>
           <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
@@ -32,7 +32,7 @@
                 <div class="skill-pill-container d-flex justify-content-around">
                   <!-- adding extra spans to create grid -->
                   <span></span>
-                  <span class="skill badge badge-pill">
+                  <span style="font-family: 'Open Sans';" class="skill badge badge-pill">
                     {{ skill }}
                   </span>
                   <span></span>

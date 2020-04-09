@@ -16,7 +16,7 @@
             </div>
             <div class="d-flex flex-column">
               <h6 style="font-family: 'Saira Extra Condensed';" class="">{{ job.company }}</h6>
-              <p class="mb-2">{{ job.description }}</p>
+              <p style="font-family: 'Open Sans';" class="mb-2">{{ job.description }}</p>
             </div>
           </div>
         </div>

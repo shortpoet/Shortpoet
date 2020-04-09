@@ -9,11 +9,11 @@
           class="mb-1"
         >
           <i :class="lang.type + ' language-icon fa fa-flag fa-li'"></i>
-          <span class="mb-5">{{ `${lang.languages} (${recase(lang.type)})` }} </span>
+          <span style="font-family: 'Open Sans';" class="mb-5">{{ `${lang.languages} (${recase(lang.type)})` }} </span>
         </li>
         <li>
           <i class="award-icon fa fa-trophy fa-li"></i>
-          Certified Interpreter
+          <span  style="font-family: 'Open Sans';">Certified Interpreter</span>
         </li>
       </ul>
     </div>

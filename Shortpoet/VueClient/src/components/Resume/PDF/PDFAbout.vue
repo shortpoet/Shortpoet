@@ -19,7 +19,7 @@
           </li>
           <li>
             <span class="not-name">
-              <a :href="'mailto:' + email">
+              <a style="font-family: 'Open Sans';" :href="'mailto:' + email">
                 {{ email }}
               </a>
             </span>

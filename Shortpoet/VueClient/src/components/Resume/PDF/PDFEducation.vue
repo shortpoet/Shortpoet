@@ -14,7 +14,7 @@
           </div>
           <div class="d-flex flex-column">
             <h6 style="font-family: 'Saira Extra Condensed';" class="">{{ ed.degree }}</h6>
-            <p class="resume-content">{{ ed.details }}</p>
+            <p style="font-family: 'Open Sans';" class="resume-content">{{ ed.details }}</p>
             <!-- <p>GPA: 3.23</p> -->
           </div>
         </div>

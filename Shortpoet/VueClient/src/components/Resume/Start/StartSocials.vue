@@ -9,13 +9,13 @@
           v-for="(social, i) in socials"
           :key="i"
         >
-          <router-link :to="social.url">
+          <a :href="social.url">
              <span class="fa-stack fa-lg">
               <i class="fa fa-circle fa-stack-2x"></i>
               <!-- <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i> -->
               <i :class="social.icon + ' fa-stack-1x fa-inverse'"></i>
             </span>
-          </router-link>
+          </a>
         </li>
       </ul>
     </div>
@@ -60,6 +60,7 @@ export default {
             social: 'file-pdf',
             icon: 'far fa-file-pdf-o',
             url: window.location.protocol + '//' + window.location.host + '/pdf',
+            // for router-link version to test built dist
             // url: '/pdf',
             transform: 'shrink-6 right-2.5'
           }
