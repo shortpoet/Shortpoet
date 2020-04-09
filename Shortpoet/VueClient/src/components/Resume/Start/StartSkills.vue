@@ -20,7 +20,7 @@
           v-for="(icon, i) in icons"
           :key="i"
         >
-          <StartDevIcon :source="icon.icon"/>
+          <!-- <StartDevIcon :source="icon.icon"/> -->
         </li>
       </ul>
       <div
@@ -49,7 +49,7 @@
 
 <script>
 // import FlexList from '@/components/Utils/FlexList'
-import StartDevIcon from '@/components/Resume/Start/StartDevIcon'
+// import StartDevIcon from '@/components/Resume/Start/StartDevIcon'
 import icons from '@/assets/icons.js'
 
 export default {
@@ -61,7 +61,7 @@ export default {
     }
   },
   components: {
-    StartDevIcon
+    // StartDevIcon
     // FlexList
   },
   data () {

@@ -11,11 +11,11 @@
           class="skill-grid"
         >
           <div class="list-devicons devicon-row d-flex justify-content-around">
-            <PDFDevIcon
+            <!-- <PDFDevIcon
               v-for="(icon, i) in mapIcons(type.type)"
               :key="i"
               :source="icon"
-            />
+            /> -->
           </div>
           <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
             <div>
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import PDFDevIcon from '@/components/Resume/PDF/PDFDevIcon'
+// import PDFDevIcon from '@/components/Resume/PDF/PDFDevIcon'
 import PDFBorder from '@/components/Resume/PDF/PDFBorder'
 import icons from '@/assets/icons.js'
 
@@ -60,7 +60,7 @@ export default {
     }
   },
   components: {
-    PDFDevIcon,
+    // PDFDevIcon,
     PDFBorder
   },
   data () {

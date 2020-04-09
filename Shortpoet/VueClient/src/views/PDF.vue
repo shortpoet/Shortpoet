@@ -119,6 +119,9 @@ export default {
 // #pdf-anchor {
 //   height: 842px;
 //   width: 595px;
+//   /* to centre page on screen*/
+//   margin-left: auto;
+//   margin-right: auto;
 // }
 
 </style>
