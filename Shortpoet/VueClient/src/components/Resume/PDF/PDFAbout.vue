@@ -13,8 +13,8 @@
       <div class="d-flex flex-column mt-1 mt-md-2 ml-2" id="name-contact">
         <ul class="list-inline">
           <li>
-            <h2 class="mb-0">{{ name }}
-              <span class="text-primary">{{ surname }}</span>
+            <h2 style="font-family: 'Saira Extra Condensed';" class="mb-0">{{ name }}
+              <span style="font-family: 'Saira Extra Condensed';" class="text-primary">{{ surname }}</span>
             </h2>
           </li>
           <li>
@@ -25,7 +25,7 @@
             </span>
           </li>
           <li>
-            <span class="not-name">
+            <span style="font-family: 'Saira Extra Condensed';" class="not-name">
               {{ address }}
             </span>
           </li>
@@ -33,7 +33,7 @@
             <span class="not-name">{{ flags.replace(/,/g, '') }}</span>
           </li>
           <li>
-            <span class="not-name">Valid Work Visas: {{ visas }}</span>
+            <span style="font-family: 'Saira Extra Condensed';" class="not-name">Valid Work Visas: {{ visas }}</span>
           </li>
         </ul>
       </div>

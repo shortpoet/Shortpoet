@@ -1,19 +1,19 @@
 <template>
   <section class="resume-section ml-3 mt-2 mb-3" id="education">
     <div class="my-auto">
-      <h4 class="pdf-subheading">Education</h4>
+      <h4 style="font-family: 'Saira Extra Condensed';" class="pdf-subheading">Education</h4>
       <div v-for="(ed, i) in educations" :key="i">
         <div class="resume-item d-flex flex-column justify-content-between">
           <div class="d-flex flex-row">
             <div class="resume-content mr-5 mr-md-auto">
-              <h5 class="mb-0">{{ ed.institution }}</h5>
+              <h5 style="font-family: 'Saira Extra Condensed';" class="mb-0">{{ ed.institution }}</h5>
             </div>
             <div class="resume-date text-md-right mr-4">
-              <h6 class="text-primary">{{ ed.focus }}</h6>
+              <h6 style="font-family: 'Saira Extra Condensed';" class="text-primary">{{ ed.focus }}</h6>
             </div>
           </div>
           <div class="d-flex flex-column">
-            <h6 class="subheading">{{ ed.degree }}</h6>
+            <h6 style="font-family: 'Saira Extra Condensed';" class="">{{ ed.degree }}</h6>
             <p class="resume-content">{{ ed.details }}</p>
             <!-- <p>GPA: 3.23</p> -->
           </div>

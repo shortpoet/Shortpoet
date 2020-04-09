@@ -1,7 +1,7 @@
 <template>
   <section class="mb-3" id="pdf-objective">
     <div class="d-flex align-items-center" id="objective">
-      <h4 class="">
+      <h4 style="font-family: 'Saira Extra Condensed';" class="">
         Objective
       </h4>
     </div>

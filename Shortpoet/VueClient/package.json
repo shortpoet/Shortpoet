@@ -23,6 +23,7 @@
     "core-js": "^3.6.4",
     "devicons": "^1.8.0",
     "font-awesome": "^4.7.0",
+    "fontfaceobserver": "^2.1.0",
     "fs": "0.0.1-security",
     "google-fonts-plugin": "^5.0.2",
     "html2canvas": "^1.0.0-rc.5",

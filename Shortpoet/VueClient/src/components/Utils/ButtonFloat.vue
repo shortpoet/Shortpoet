@@ -58,7 +58,7 @@ import jsPDF from 'jspdf'
 // https://github.com/niklasvh/html2canvas/issues/1868#issuecomment-599217709
 import html2canvas from '@trainiac/html2canvas'
 // import html2canvas from 'html2canvas'
-
+var FontFaceObserver = require('fontfaceobserver');
 export default {
   name: 'ButtonFloat',
   components: {
@@ -131,35 +131,41 @@ export default {
         })
     },
     toPDF() {
+      const vm = this
       // close modal first
-      this.isModalVisible = false
+      vm.isModalVisible = false
       // timeout is set to account for loading time i believe
-      setTimeout(() => {
-        console.log(this.target)
-        html2canvas(document.getElementById(this.pdfTarget), {
-          scale: 5,
-          useCORS: true,
-          allowTaint: true,
-        }).then(canvas => {
-          const image = canvas.toDataURL('image/jpeg', 1.0);
-          const doc = new jsPDF('p', 'mm', 'a4');
-          const pageWidth = doc.internal.pageSize.getWidth();
-          const pageHeight = doc.internal.pageSize.getHeight();
+      var fontA = new FontFaceObserver('Open Sans');
+      var fontB = new FontFaceObserver('Saira Extra Condensed');
+      Promise.all([fontA.load(), fontB.load()]).then(function () {
+        console.log('Family A & B have loaded');
+        setTimeout(() => {
+          console.log(vm.target)
+          html2canvas(document.getElementById(vm.pdfTarget), {
+            scale: 5,
+            useCORS: true,
+            allowTaint: true,
+          }).then(canvas => {
+            const image = canvas.toDataURL('image/jpeg', 1.0);
+            const doc = new jsPDF('p', 'mm', 'a4');
+            const pageWidth = doc.internal.pageSize.getWidth();
+            const pageHeight = doc.internal.pageSize.getHeight();
 
-          const widthRatio = pageWidth / canvas.width;
-          const heightRatio = pageHeight / canvas.height;
-          const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
+            const widthRatio = pageWidth / canvas.width;
+            const heightRatio = pageHeight / canvas.height;
+            const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
 
-          const canvasWidth = canvas.width * ratio;
-          const canvasHeight = canvas.height * ratio;
+            const canvasWidth = canvas.width * ratio;
+            const canvasHeight = canvas.height * ratio;
 
-          const marginX = (pageWidth - canvasWidth) / 2;
-          const marginY = (pageHeight - canvasHeight) / 2;
+            const marginX = (pageWidth - canvasWidth) / 2;
+            const marginY = (pageHeight - canvasHeight) / 2;
 
-          doc.addImage(image, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');
-          doc.save(`Carlos_Soriano_${Date.now()}.pdf`);
-        });
-      }, 250);
+            doc.addImage(image, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');
+            doc.save(`Carlos_Soriano_${Date.now()}.pdf`);
+          });
+        }, 250);
+      });      
     }
   },
   mounted () {
