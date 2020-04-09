@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-3" id="pdf-objective">
+  <section :class="sectionClass" id="pdf-objective">
     <div class="d-flex align-items-center" id="objective">
       <h4 style="font-family: 'Saira Extra Condensed';" class="">
         Objective
@@ -27,26 +27,36 @@
 
 <script>
 export default {
-    name: 'PDFObjective',
-    components: {
+  name: 'PDFObjective',
+  components: {
+  },
+  props: {
+    aboutMe: {
+      type: String
     },
-    props: {
-      aboutMe: {
-        type: String
-      }
-    },
-    data () {
-      return {
-        pdfUrl: window.location.protocol + '//' + window.location.host + '/pdf',
-      }
-    },
-    computed: {
-      aboutMe1 () {
-        return this.aboutMe.slice(0, this.aboutMe.indexOf('Driven'))
-      },
-      aboutMe2 () {
-        return this.aboutMe.slice(this.aboutMe.indexOf('Driven'))
-      }
+    renderPDF: {
+      type: Boolean,
+      default: false
     }
+  },
+  data () {
+    return {
+      pdfUrl: window.location.protocol + '//' + window.location.host + '/pdf',
+    }
+  },
+  computed: {
+    aboutMe1 () {
+      return this.aboutMe.slice(0, this.aboutMe.indexOf('Driven'))
+    },
+    aboutMe2 () {
+      return this.aboutMe.slice(this.aboutMe.indexOf('Driven'))
+    },
+    sectionClass () {
+      return this.renderPDF ?
+        'resume-section-render mb-3'
+        :
+        'resume-section mb-3'
+    }
+  }
 }
 </script>

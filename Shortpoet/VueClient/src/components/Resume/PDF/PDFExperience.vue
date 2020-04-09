@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section mt-2 ml-3 mb-3" id="experience">
+  <section :class="sectionClass" id="experience">
     <div class="my-auto">
       <h4 style="font-family: 'Saira Extra Condensed';">Work Experience</h4>
       <div class="d-flex flex-column justify-content-between" v-for="type in experiences" :key="type.type">
@@ -10,7 +10,7 @@
               <div class="mr-auto">
                 <h5 style="font-family: 'Saira Extra Condensed';" class="mb-0">{{ job.position }}</h5>
               </div>
-              <div class="resume-date text-md-right mr-4">
+              <div :class="textRightClass">
                 <h6 style="font-family: 'Saira Extra Condensed';" class="text-primary">{{ job.startDate }} - {{ job.endDate }}</h6>
               </div>
             </div>
@@ -26,11 +26,29 @@
 </template>
 <script>
 export default {
-    name: 'PDFExperience',
-    props: {
-      experiences: {
-        type: Array
-      }
+  name: 'PDFExperience',
+  props: {
+    experiences: {
+      type: Array
+    },
+    renderPDF: {
+      type: Boolean,
+      default: false
     }
+  },
+  computed: {
+    sectionClass () {
+      return this.renderPDF ?
+        'resume-section-render ml-3 mt-2 mb-3'
+        :
+        'resume-section ml-3 mt-2 mb-3'
+    },
+    textRightClass () {
+      return this.renderPDF ?
+        'resume-date text-md-right mr-1'
+        :
+        'resume-date text-md-right mr-4'
+    }
+  }
 }
 </script>

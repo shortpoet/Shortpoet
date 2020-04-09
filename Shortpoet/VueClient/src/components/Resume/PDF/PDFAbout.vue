@@ -40,7 +40,7 @@
 
       <!-- socials column -->
       <div class="d-flex flex-column ml-auto mr-1 mr-md-3" id="socials">
-        <PDFSocials />
+        <PDFSocials :renderPDF="renderPDF" />
       </div>
 
     </div>
@@ -80,6 +80,10 @@ export default {
       },
       flags: {
         type: String
+      },
+      renderPDF: {
+        type: Boolean,
+        default: false
       }
     },
     data () {

@@ -1,16 +1,16 @@
 <template>
-  <section class="resume-section mt-3 ml-0 ml-md-0" id="skills">
+  <section class="resume-section mt-2 ml-0" id="skills">
     <div class="my-auto">
-      <h4  style="font-family: 'Saira Extra Condensed';" class="subheading mb-4 mb-md-3 ml-3 ml-md-0">
+      <h4  style="font-family: 'Saira Extra Condensed';" class="subheading mb-4 mb-md-3 ml-3">
         Programming Languages &amp; Tools
       </h4>
-      <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-4 mr-0 mr-md-3">
+      <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mr-0 mr-md-3">
         <div
           v-for="(type, i) in skills"
           :key="i"
           class="skill-grid"
         >
-          <div class="list-devicons devicon-row d-flex justify-content-around">
+          <div class="list-devicons devicon-row d-flex justify-content-around my-0">
             <PDFDevIcon
               v-for="(icon, i) in mapIcons(type.type)"
               :key="i"
@@ -19,7 +19,7 @@
           </div>
           <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
             <div>
-                <div style="font-family: 'Open Sans';">{{ type.type }}</div>
+              <div style="font-family: 'Open Sans';">{{ type.type }}</div>
             </div>
           </div>
           <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>

@@ -1,5 +1,5 @@
 <template>
-  <div class="pdf-container" v-if="getResumeLoaded"  style="font-family: 'Saira Extra Condensed, Open Sans';">
+  <div class="pdf-container" v-if="getResumeLoaded"  :style="styleObject">
     <div class="p-10" id="pdf-anchor">
       <portal-target name="save-button-float" />
       <PDFAbout
@@ -9,39 +9,68 @@
         :address="getResume.address"
         :visas="getResume.visas"
         :flags="getResume.flags"
+        :renderPDF="renderPDF"
       />
       <PDFBorder class="my-2" :size=".25"/>
-      <div class="skills-awards-container row ml-3">
-        <div class="awards-col col-12 col-lg-2">
-          <PDFAwards :awards="getResume.spokenLanguages"/>
+      
+      <div class="skills-awards-container">
+
+        <!-- this is regular -->
+        <div v-if="!renderPDF" class="row">
+          <div class="awards-col col-12 col-lg-2">
+            <PDFAwards
+              :awards="getResume.spokenLanguages"
+              :renderPDF="renderPDF"
+            />
+          </div>
+          <div class="skills-col col-12 col-lg-10">
+            <component
+              :is="skillComp"
+              :skills="getResume.skills"
+            />
+          </div>
         </div>
-        <div class="skills-col col-12 col-lg-10">
-          <PDFSkills
+        
+        <!-- this is RENDER -->
+        <div v-else class="skills-awards-container">
+          <PDFAwards
+            :renderPDF="renderPDF"
+            :awards="getResume.spokenLanguages"
+          />
+          <component
+            :is="skillComp"
             :skills="getResume.skills"
           />
         </div>
+
       </div>
 
       <!-- objective rows -->
       <!-- ml-3 to match pic -->
       <div class="resume-section ml-3">
-        <PDFObjective :aboutMe="getResume.brief" />
+        <PDFObjective
+          :renderPDF="renderPDF"
+          :aboutMe="getResume.brief" 
+        />
       </div>
 
       <PDFExperience
+        :renderPDF="renderPDF"
         :experiences="getResume.experiences"      
       />
       <PDFEducation
+        :renderPDF="renderPDF"
         :educations="getResume.educations"
       />
-      <div id="interests-poem-container" class="row">
+      <div id="interests-poem-container" class="row mb-5">
         <div id="interests-container" class="col-12 col-md-8">
           <PDFInterests
             :interests="getResume.interests"
+            :renderPDF="renderPDF"
           />
         </div>
         <div id="poem-container" class="col-12 col-md-4 mt-3 mt-md-0 mr-0 text-center">
-          <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="{height: '16rem', width: '16rem'}">
+          <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="poemStyle">
         </div>
       </div>
 
@@ -59,6 +88,7 @@
 import PDFAbout from '@/components/Resume/PDF/PDFAbout'
 import PDFBorder from '@/components/Resume/PDF/PDFBorder'
 import PDFSkills from '@/components/Resume/PDF/PDFSkills'
+import PDFSkillsRender from '@/components/Resume/PDF/PDFSkillsRender'
 import PDFAwards from '@/components/Resume/PDF/PDFAwards'
 import PDFObjective from '@/components/Resume/PDF/PDFObjective'
 import PDFExperience from '@/components/Resume/PDF/PDFExperience'
@@ -73,6 +103,7 @@ export default {
     PDFAbout ,
     PDFBorder,
     PDFSkills,
+    PDFSkillsRender,
     PDFAwards,
     PDFObjective,
     PDFExperience,
@@ -83,7 +114,8 @@ export default {
   data () {
     return {
       pic: require('@/assets/poem.jpg'),
-      target: 'pdf-anchor'
+      target: 'pdf-anchor',
+      renderPDF: true
     }
   },
   computed: {
@@ -94,10 +126,44 @@ export default {
         skill.details = skill.details.split(',')
         console.log(skill)
       })
-    }
+    },
+    styleObject () {
+      return this.renderPDF ?
+      {
+        fontFamily: 'Saira Extra Condensed, Open Sans',
+        height: '842px',
+        width: '595px',
+        /* to centre page on screen*/
+        marginLeft: 'auto',
+        marginRight: 'auto'
+
+      }
+      :
+      {
+        fontFamily: 'Saira Extra Condensed, Open Sans',
+      }
+    },
+    poemStyle () {
+      return this.renderPDF ?
+      {
+        height: '10rem',
+        width: '10rem',
+      }
+      :
+      {
+        height: '16rem',
+        width: '16rem',
+      }
+    },
+    skillComp () {
+      return this.renderPDF ? 'PDFSkillsRender' : 'PDFSkills'
+    },
   },
   methods: {
-    ...mapActions('resume', ['loadResume'])
+    ...mapActions('resume', ['loadResume']),
+    onToPDF () {
+      this.renderPDF = true
+    }
   },
   mounted () {
     this.loadResume()

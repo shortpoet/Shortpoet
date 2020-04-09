@@ -7,13 +7,13 @@
         :key="i"
       >
         <a :href="social.url">
-          <span :style="{fontFamily: 'FontAwesome'}" class="social-icon-layer fa-stack fa-lg">
+          <span :style="iconStyleObject" class="social-icon-layer fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <!-- <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i> -->
             <i :class="'social-icon ' + social.icon + ' fa-stack-1x fa-inverse'"></i>
           </span>
-          <span style="font-family: 'Open Sans';" v-if="!social.social.includes('website')" class="social-url d-none d-md-inline">{{social.url}}</span>
-          <span style="font-family: 'Open Sans';" v-else class="social-url d-none d-md-inline">https://shortpoet.com</span>
+          <span :style="urlStyleObject" v-if="!social.social.includes('website')" class="social-url d-none d-md-inline">{{social.url}}</span>
+          <span :style="urlStyleObject" v-else class="social-url d-none d-md-inline">https://shortpoet.com</span>
         </a>
       </li>
     </ul>
@@ -26,7 +26,11 @@ export default {
   components: {
   },
   props: {
-  },
+  renderPDF: {
+    type: Boolean,
+    default: false
+  }
+},
   data () {
     return {
       socials: [
@@ -64,6 +68,30 @@ export default {
     }
   },
   computed: {
+    urlStyleObject () {
+      return this.renderPDF ?
+      {
+        fontFamily: 'Open Sans',
+        fontSize: '.45rem'
+      }
+      :
+      {
+        fontFamily: 'Open Sans',
+        fontSize: '.55rem'
+      }
+    },
+    iconStyleObject () {
+      return this.renderPDF ?
+      {
+        fontFamily: 'fontFamily: FontAwesome',
+        fontSize: '.65rem'
+      }
+      :
+      {
+        fontFamily: 'fontFamily: FontAwesome',
+        fontSize: '.85rem'
+      }
+    },
   },
   methods: {
   }

@@ -1,5 +1,5 @@
 <template>
-  <section class="resume-section ml-3 mt-2 mb-3" id="education">
+  <section :class="sectionClass" id="education">
     <div class="my-auto">
       <h4 style="font-family: 'Saira Extra Condensed';" class="pdf-subheading">Education</h4>
       <div v-for="(ed, i) in educations" :key="i">
@@ -30,6 +30,18 @@ export default {
     educations: {
       type: Array,
       default: () => []
+    },
+    renderPDF: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    sectionClass () {
+      return this.renderPDF ?
+        'resume-section-render ml-3 mt-2 mb-3'
+        :
+        'resume-section ml-3 mt-2 mb-3'
     }
   }
 }
