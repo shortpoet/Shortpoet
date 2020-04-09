@@ -2,7 +2,7 @@
   <div class="">
     <i v-if="!isImage" :class="source"></i>
     <img v-else :class="imgClass" :src="source"/>
-    <span v-if="name" :class="devicon-name">{{ name }}</span>
+    <span v-if="showName" :class="devicon-name">{{ name }}</span>
   </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
     name: {
       type: String,
       default: null
+    },
+    showName: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
@@ -30,7 +34,20 @@ export default {
       return this.source.match(/svg|jpg|png|jpeg/g) !== null
     },
     imgClass () {
-      return this.source.includes('vue') ? 'vue-devicon' : 'd3-devicon'
+      let imgClass = '';
+      console.log(this.source)
+      switch(this.name) {
+        case 'vue':
+          imgClass = 'vue-devicon'
+          break;
+        case 'tableau':
+          imgClass = 'tableau-devicon'
+          break;
+        case 'd3':
+          imgClass = 'd3-devicon'
+          break;
+      }
+      return imgClass;
     }
   },
   methods: {

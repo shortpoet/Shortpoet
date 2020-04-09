@@ -6,12 +6,12 @@
         <span
           v-for="(lang, i) in awards"
           :key="i"
-          class="d-flex"        
+          :class="typeClass"        
         > 
           <i :class="lang.type + ' language-icon fa fa-flag mb-auto mr-2'"></i>
           <span style="font-family: 'Open Sans';" class="">{{ `${lang.languages} (${recase(lang.type)})` }} </span>
         </span>
-        <span class="d-flex">
+        <span class="language-type-render d-flex">
           <i class="award-icon fa fa-trophy mb-auto mr-2"></i>
           <span  style="font-family: 'Open Sans';">Certified Interpreter</span>          
         </span>
@@ -43,7 +43,7 @@ export default {
     },
     gridClass () {
       return this.renderPDF ?
-        'd-flex flex-row ml-2'
+        'd-flex flex-row ml-2 justify-content-around'
         :
         'd-flex flex-column ml-3'
     },
@@ -52,6 +52,12 @@ export default {
         'mb-2'
         :
         'mb-4 ml-1'
+    },
+    typeClass () {
+      return this.renderPDF ?
+        'language-type-render d-flex'
+        :
+        'd-flex'
     }
   },
   methods: {

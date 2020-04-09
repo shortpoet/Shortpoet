@@ -10,6 +10,9 @@
       toPDF() {
         this.$emit('toPDF');
       },
+      toPage() {
+        this.$emit('toPage');
+      },
       toCanvas() {
         this.$emit('toCanvas');
       }
@@ -65,16 +68,16 @@
                   Save me!
                 </button>
               </div>
-              <!-- <div>
+              <div>
                 <button
                   type="button"
                   class="btn-save"
-                  @click="toCanvas"
+                  @click="toPage"
                   aria-label="Close modal"
                 >
-                  Canvas me!
+                  Page me!
                 </button>
-              </div> -->
+              </div>
               <div>
                 <button
                   type="button"

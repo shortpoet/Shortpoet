@@ -33,6 +33,7 @@
         v-show="isModalVisible"
         @close="closeModal"
         @toPDF="toPDF"
+        @toPage="toPage"
         @toCanvas="toCanvas"
       >
         <!-- <template v-slot:header>
@@ -130,6 +131,62 @@ export default {
           document.body.appendChild(canvas);
         })
     },
+    toPage () {
+      var vm = this;
+      setTimeout(()=>{
+        html2canvas(document.getElementById(vm.pdfTarget), {
+          // width: '210mm',
+          // height: '297mm',        
+          // width: '595px',
+          // height: '842px',
+            useCORS: true,
+            allowTaint: true,
+        }).then(function(canvas) {
+          var pdf = new jsPDF('p', 'pt', 'a4');
+
+          for (var i = 0; i <= vm.pdfTarget.clientHeight/842; i++) {
+              //! This is all just html2canvas stuff
+              var srcImg  = canvas;
+              var sX      = 0;
+              var sY      = 842*i; // start 980 pixels down for every new page
+              var sWidth  = 595;
+              var sHeight = 842;
+              var dX      = 0;
+              var dY      = 0;
+              var dWidth  = 595;
+              var dHeight = 842;
+
+              var onePageCanvas = document.createElement("canvas");
+              onePageCanvas.setAttribute('width', 595);
+              onePageCanvas.setAttribute('height', 842);
+              var ctx = onePageCanvas.getContext('2d');
+              // details on this usage of this function: 
+              // https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#Slicing
+              ctx.drawImage(srcImg,sX,sY,sWidth,sHeight,dX,dY,dWidth,dHeight);
+
+              // document.body.appendChild(canvas);
+              var canvasDataURL = onePageCanvas.toDataURL("image/jpeg", 1.0);
+
+              var width         = onePageCanvas.width;
+              var height        = onePageCanvas.clientHeight;
+
+              //! If we're on anything other than the first page,
+              // add another page
+              if (i > 0) {
+                pdf.addPage(595, 842); //8.5" x 11" in pts (in*72)
+              }
+              //! now we declare that we're working on that page
+              pdf.setPage(i+1);
+              //! now we add content to that page!
+              pdf.addImage(canvasDataURL, 'JPEG', 0, 0, (width*.72), (height*.71), null, 'SLOW');
+              // pdf.addImage(canvasDataURL, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');
+
+          }
+          //! after the for loop is finished running, we save the pdf.
+          pdf.save(`Carlos_Soriano_${Date.now()}.pdf`);
+        });
+      }, 250);
+    },
     toPDF() {
       const vm = this
       // close modal first
@@ -142,6 +199,8 @@ export default {
         setTimeout(() => {
           console.log(vm.target)
           html2canvas(document.getElementById(vm.pdfTarget), {
+            width: 810,
+            height: 1100,
             scale: 5,
             useCORS: true,
             allowTaint: true,
@@ -151,15 +210,33 @@ export default {
             const pageWidth = doc.internal.pageSize.getWidth();
             const pageHeight = doc.internal.pageSize.getHeight();
 
+            console.log(pageWidth)
+            console.log(pageHeight)
+
             const widthRatio = pageWidth / canvas.width;
             const heightRatio = pageHeight / canvas.height;
             const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
 
+            console.log(canvas.width)
+            console.log(canvas.height)
+
+            console.log(widthRatio)
+            console.log(widthRatio)
+            
+
             const canvasWidth = canvas.width * ratio;
             const canvasHeight = canvas.height * ratio;
 
-            const marginX = (pageWidth - canvasWidth) / 2;
-            const marginY = (pageHeight - canvasHeight) / 2;
+            console.log(canvasWidth)
+            console.log(canvasHeight)
+
+            const marginX = 0 //(pageWidth - canvasWidth) / 2;
+            const marginY = 0 //(pageHeight - canvasHeight) / 2;
+            
+            console.log(marginX)
+            console.log(marginY)
+
+            console.log(image)
 
             doc.addImage(image, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');
             doc.save(`Carlos_Soriano_${Date.now()}.pdf`);

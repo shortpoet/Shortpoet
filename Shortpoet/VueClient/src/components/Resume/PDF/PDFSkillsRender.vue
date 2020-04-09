@@ -7,20 +7,21 @@
       <div id="skill-grid-container" class="d-flex flex-column justify-content-between mt-4 mr-0 mr-md-3">
         <div class="skill-grid-row-1 d-flex flex-row justify-content-between">
           <div
-            v-for="(type, i) in skills.slice(0,5)"
+            v-for="(type, i) in skills"
             :key="i"
-            class="skill-grid"
+            class="skill-grid-render"
           >
             <div class="list-devicons devicon-row d-flex justify-content-around">
               <PDFDevIcon
                 v-for="(icon, i) in mapIcons(type.type)"
                 :key="i"
-                :source="icon"
+                :source="icon.icon"
+                :name="icon.name"
               />
             </div>
-            <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+            <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
               <div>
-                  <div style="font-family: 'Open Sans';">{{ type.type }}</div>
+                  <div class="" style="font-family: 'Open Sans';">{{ typeFilter(type.type) }}</div>
               </div>
             </div>
             <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
@@ -33,46 +34,7 @@
                   <div class="skill-pill-container d-flex justify-content-around">
                     <!-- adding extra spans to create grid -->
                     <span></span>
-                    <span style="font-family: 'Open Sans';" class="skill badge badge-pill">
-                      {{ skill }}
-                    </span>
-                    <span></span>
-                  </div>          
-                </div>
-            </div>
-            <PDFBorder v-if="i !== (skills.length - 1)" class="d-md-none d-block my-3 my-md-2" :marginX="25" :size=".25"/>
-          </div>
-        </div>
-        <PDFBorder class="my-3 my-md-2" :marginX="50" :size=".25"/>
-        <div class="skill-grid-row-2 d-flex flex-row justify-content-between mt-3">
-          <div
-            v-for="(type, i) in skills.slice(5)"
-            :key="i"
-            class="skill-grid"
-          >
-            <div class="list-devicons devicon-row d-flex justify-content-around">
-              <PDFDevIcon
-                v-for="(icon, i) in mapIcons(type.type)"
-                :key="i"
-                :source="icon"
-              />
-            </div>
-            <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
-              <div>
-                  <div style="font-family: 'Open Sans';">{{ type.type }}</div>
-              </div>
-            </div>
-            <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
-            <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
-                <div
-                  v-for="(skill, i) in listSkills(type.details)"
-                  :key="i"
-                  class="skill-list d-flex flex-column mx-2 mb-2"
-                >
-                  <div class="skill-pill-container d-flex justify-content-around">
-                    <!-- adding extra spans to create grid -->
-                    <span></span>
-                    <span style="font-family: 'Open Sans';" class="skill badge badge-pill">
+                    <span style="font-family: 'Open Sans';" class="skill-render">
                       {{ skill }}
                     </span>
                     <span></span>
@@ -126,7 +88,7 @@ export default {
     mapIcons(skill) {
       let iconKeys = this.iconMap.filter(im => im.skill === skill)[0]['icons']
       return iconKeys.map(ik => {
-        return this.icons.filter(i => i.name === ik)[0]['icon']
+        return this.icons.filter(i => i.name === ik)[0]
       }) 
     },
     _screenCheck () {
@@ -139,6 +101,14 @@ export default {
       if(768 < windowWidth && windowWidth > 985) {
         console.log('the grid should be medium-large')
       }
+    },
+    typeFilter (type) {
+      if (type === 'Document Db') {
+        type = 'Doc Db'
+      } else if (type === 'Data Vizualization') {
+        type = 'Data Viz'
+      }
+      return type
     }
   },
   mounted () {

@@ -131,8 +131,12 @@ export default {
       return this.renderPDF ?
       {
         fontFamily: 'Saira Extra Condensed, Open Sans',
-        height: '842px',
-        width: '595px',
+        // 310mm is maxing out one-page layout with tiny text
+        // width: '310mm',
+        width: '210mm',
+        height: '297mm',
+        // height: '842px',
+        // width: '595px',
         /* to centre page on screen*/
         marginLeft: 'auto',
         marginRight: 'auto'
