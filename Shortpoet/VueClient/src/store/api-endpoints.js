@@ -3,7 +3,13 @@ export const index = {
   // TODO
   // let clientRoot = window.location.protocol + '//' + window.location.host
   // BACKEND_PREFIX_PROD: 'https://' + window.location.hostname,
-  BACKEND_PREFIX_PROD: window.location.protocol + '//' + window.location.host,
+  // hardcode prod url for github pages
+  // TODO set env var to detect this 
+  // maybe also env var to detect git branch
+
+  BACKEND_PREFIX_PROD: 'https://shortpoet.azurewebsites.net',
+
+  // BACKEND_PREFIX_PROD: window.location.protocol + '//' + window.location.host,
   // BACKEND_PREFIX_PROD: 'https://localhost:5001',
   BACKEND_PREFIX_DEV: 'https://localhost:5001'
 }
