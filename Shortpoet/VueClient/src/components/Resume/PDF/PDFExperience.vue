@@ -8,7 +8,7 @@
           <div class="d-flex flex-column justify-content-between">
             <div class="d-flex flex-row">
               <div class="mr-auto">
-                <h5 style="font-family: 'Saira Extra Condensed';" class="mb-0">{{ job.position }}</h5>
+                <h5 id="job-position" style="font-family: 'Saira Extra Condensed';" class="mb-0">{{ job.position }}</h5>
               </div>
               <div :class="textRightClass">
                 <h6 style="font-family: 'Saira Extra Condensed';" class="text-primary">{{ job.startDate }} - {{ job.endDate }}</h6>
