@@ -90,7 +90,7 @@ namespace Shortpoet.Data.Seed
       }
 
       // context.Entry(resume).State = EntityState.Modified;
-      // context.SaveChanges();
+      context.SaveChanges();
       Console.WriteLine("#######################");
       Console.WriteLine("Seed Data Context Changes Saved");
     }

@@ -90,19 +90,19 @@ export default {
       }) 
     },
     _screenCheck () {
-      let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
-      let windowWidth = this.windowWidth
-      console.log('checking screen')
-      console.log(skillGridWidth)
-      console.log(windowWidth)
+      // let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
+      // let windowWidth = this.windowWidth
+      // console.log('checking screen')
+      // console.log(skillGridWidth)
+      // console.log(windowWidth)
       // for medium-large screens
-      if(768 < windowWidth && windowWidth > 985) {
-        console.log('the grid should be medium-large')
-      }
+      // if(768 < windowWidth && windowWidth > 985) {
+      //   // console.log('the grid should be medium-large')
+      // }
     }
   },
   mounted () {
-    this._screenCheck()
+    // this._screenCheck()
   }
 }
 </script>
