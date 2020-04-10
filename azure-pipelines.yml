@@ -51,8 +51,17 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: AzureWebApp@1
+- task: AzureWebApp@1.p
   inputs:
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+    azureSubscription: 'ShortpoetServiceConnection'
+    appName: 'Shortpoet'
+    package: $(System.ArtifactsDirectory)/**/*.zip
+    deploymentMethod: zipDeploy
+
+- task: AzureWebApp@1.s
+  inputs:
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/test'))
     azureSubscription: 'ShortpoetServiceConnection'
     appName: 'Shortpoet'
     package: $(System.ArtifactsDirectory)/**/*.zip
