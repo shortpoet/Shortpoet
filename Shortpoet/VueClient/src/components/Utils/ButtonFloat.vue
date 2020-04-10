@@ -154,7 +154,7 @@ export default {
           }).then(function(canvas) {
             var pdf = new jsPDF('p', 'pt', 'a4');
             console.log(target.clientHeight);
-
+            console.log(canvas, pdf)
             // https://stackoverflow.com/questions/24069124/how-to-save-a-image-in-multiple-pages-of-pdf-using-jspdf
             // https://stackoverflow.com/questions/19272933/jspdf-multi-page-pdf-with-html-renderer/34934497#34934497
 

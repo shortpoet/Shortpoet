@@ -12,8 +12,8 @@
             <!-- <i :class="'fa fa-' + social.social + ' fa-stack-1x fa-inverse'"></i> -->
             <i :class="'social-icon ' + social.icon + ' fa-stack-1x fa-inverse'"></i>
           </span>
-          <span :style="urlStyleObject" v-if="!social.social.includes('website')" class="social-url d-none d-md-inline">{{social.url}}</span>
-          <span :style="urlStyleObject" v-else class="social-url d-none d-md-inline">https://shortpoet.com</span>
+          <span style="font-family: 'Open Sans'; font-size: .55rem" v-if="!social.social.includes('website')" :class="urlClass">{{social.url}}</span>
+          <span style="font-family: 'Open Sans'; font-size: .55rem" v-else :class="urlClass">https://shortpoet.com</span>
         </a>
       </li>
     </ul>
@@ -68,27 +68,21 @@ export default {
     }
   },
   computed: {
-    urlStyleObject () {
+    urlClass () {
       return this.renderPDF ?
-      {
-        fontFamily: 'fontFamily: Open Sans',
-        fontSize: '.55rem'
-      }
+      'social-url d-inline'
       :
-      {
-        fontFamily: 'fontFamily: Open Sans',
-        fontSize: '.55rem'
-      }
+      'social-url d-none d-md-inline'
     },
     iconStyleObject () {
       return this.renderPDF ?
       {
-        fontFamily: 'fontFamily: FontAwesome',
+        fontFamily: 'FontAwesome',
         fontSize: '.65rem'
       }
       :
       {
-        fontFamily: 'fontFamily: FontAwesome',
+        fontFamily: 'FontAwesome',
         fontSize: '.85rem'
       }
     },

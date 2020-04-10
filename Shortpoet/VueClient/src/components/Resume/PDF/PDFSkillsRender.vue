@@ -1,10 +1,10 @@
 <template>
   <section class="resume-section mt-3 ml-3" id="skills">
     <div class="my-auto">
-      <h4  style="font-family: 'Saira Extra Condensed';" class="subheading mb-4 mb-md-3 ml-3 ml-md-0">
+      <h4  style="font-family: 'Saira Extra Condensed';" class="subheading mb-3 ml-0">
         Programming Languages &amp; Tools
       </h4>
-      <div id="skill-grid-container" class="d-flex flex-column justify-content-between mt-4 mr-0 mr-md-3">
+      <div id="skill-grid-container" class="d-flex flex-column justify-content-between mt-4 mr-3">
         <div class="skill-grid-row-1 d-flex flex-row justify-content-between">
           <div
             v-for="(type, i) in skills"
@@ -19,13 +19,13 @@
                 :name="icon.name"
               />
             </div>
-            <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+            <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
               <div>
                   <div class="" style="font-family: 'Open Sans';">{{ typeFilter(type.type) }}</div>
               </div>
             </div>
-            <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
-            <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+            <PDFBorder class="d-block my-2" :size=".25"/>
+            <div class="skill-list-container d-flex flex-column mb-2">
                 <div
                   v-for="(skill, i) in listSkills(type.details)"
                   :key="i"
@@ -41,7 +41,6 @@
                   </div>          
                 </div>
             </div>
-            <PDFBorder v-if="i !== (skills.length - 1)" class="d-md-none d-block my-3 my-md-2" :marginX="25" :size=".25"/>
           </div>
         </div>
       </div>
