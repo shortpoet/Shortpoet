@@ -189,33 +189,33 @@ export default {
             const pageWidth = doc.internal.pageSize.getWidth();
             const pageHeight = doc.internal.pageSize.getHeight();
 
-            console.log(pageWidth)
-            console.log(pageHeight)
+            // console.log(pageWidth)
+            // console.log(pageHeight)
 
             const widthRatio = pageWidth / canvas.width;
             const heightRatio = pageHeight / canvas.height;
             const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
 
-            console.log(canvas.width)
-            console.log(canvas.height)
+            // console.log(canvas.width)
+            // console.log(canvas.height)
 
-            console.log(widthRatio)
-            console.log(widthRatio)
+            // console.log(widthRatio)
+            // console.log(widthRatio)
             
 
             const canvasWidth = canvas.width * ratio;
             const canvasHeight = canvas.height * ratio;
 
-            console.log(canvasWidth)
-            console.log(canvasHeight)
+            // console.log(canvasWidth)
+            // console.log(canvasHeight)
 
             const marginX = 0 //(pageWidth - canvasWidth) / 2;
             const marginY = 0 //(pageHeight - canvasHeight) / 2;
             
-            console.log(marginX)
-            console.log(marginY)
+            // console.log(marginX)
+            // console.log(marginY)
 
-            console.log(image)
+            // console.log(image)
 
             doc.addImage(image, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');
             doc.save(`Carlos_Soriano_${Date.now()}.pdf`);
@@ -338,14 +338,14 @@ export default {
       var pageHeight = 842;  
       var imgHeight = canvas.height * imgWidth / canvas.width;
       var heightLeft = imgHeight;
-      console.log(heightLeft)
+      // console.log(heightLeft)
       // var secondHalf = imgHeight - firstHalf;
 
       pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, null, 'SLOW');
       heightLeft -= pageHeight;
-      console.log(heightLeft)
+      // console.log(heightLeft)
       var secondHalf = heightLeft - imgHeight
-      console.log(secondHalf)
+      // console.log(secondHalf)
       pdf.addPage();
       pdf.addImage(imgData, 'PNG', 0, secondHalf, imgWidth, imgHeight, null, 'SLOW');
       return pdf;
