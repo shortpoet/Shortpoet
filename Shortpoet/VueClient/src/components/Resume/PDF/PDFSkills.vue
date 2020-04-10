@@ -14,7 +14,8 @@
             <PDFDevIcon
               v-for="(icon, i) in mapIcons(type.type)"
               :key="i"
-              :source="icon"
+              :source="icon.icon"
+              :name="icon.name"
             />
           </div>
           <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
@@ -85,7 +86,7 @@ export default {
     mapIcons(skill) {
       let iconKeys = this.iconMap.filter(im => im.skill === skill)[0]['icons']
       return iconKeys.map(ik => {
-        return this.icons.filter(i => i.name === ik)[0]['icon']
+        return this.icons.filter(i => i.name === ik)[0]
       }) 
     },
     _screenCheck () {

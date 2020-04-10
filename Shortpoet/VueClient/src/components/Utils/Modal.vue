@@ -51,8 +51,13 @@
             <p>
               This does not <em>download</em> a file in the traditional sense where it is retrieved from a data server. 
               It is generated fresh by your browser based on a <b>snapshot</b> of this page as you see it. 
-              As such, if not used from a full-sized screen, the rendering will not be in full page size format.
-            </p>          
+            </p>
+            <p>
+              <span class="saveme-text">Save Me!</span> - actual aspect ratio.
+            </p>
+            <p>
+              <span class="pageme-text">Page Me!</span> - A4 format and pagination.
+            </p>
           </slot>
         </section>
         <footer class="custom-modal-footer">
@@ -71,7 +76,7 @@
               <div>
                 <button
                   type="button"
-                  class="btn-save"
+                  class="btn-page"
                   @click="toPage"
                   aria-label="Close modal"
                 >

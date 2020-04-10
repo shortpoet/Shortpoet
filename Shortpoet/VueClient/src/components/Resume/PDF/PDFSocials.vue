@@ -1,6 +1,6 @@
 <template>
   <section class="" id="pdf-socials">
-    <ul class="list-inline list-social-icons mb-0 mt-0">
+    <ul class="list-inline list-social-icons mb-0 mt-0 mr-lg-2">
       <li
         class="social-item"
         v-for="(social, i) in socials"
@@ -71,12 +71,12 @@ export default {
     urlStyleObject () {
       return this.renderPDF ?
       {
-        fontFamily: 'Open Sans',
-        fontSize: '.45rem'
+        fontFamily: 'fontFamily: Open Sans',
+        fontSize: '.55rem'
       }
       :
       {
-        fontFamily: 'Open Sans',
+        fontFamily: 'fontFamily: Open Sans',
         fontSize: '.55rem'
       }
     },

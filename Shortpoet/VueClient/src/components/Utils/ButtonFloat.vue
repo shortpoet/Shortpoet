@@ -133,34 +133,42 @@ export default {
     },
     toPage () {
       const vm = this;
-      let target = document.getElementById(vm.pdfTarget)
-      setTimeout(()=>{
-        html2canvas(target, {
-          // width: '210mm',
-          // height: '297mm',        
-          // width: '595px',
-          // height: '842px',
-          width: 810,
-          // height: 1100,
-          scale: 5,
-          useCORS: true,
-          allowTaint: true,
-        }).then(function(canvas) {
-          var pdf = new jsPDF('p', 'pt', 'a4');
-          console.log(target.clientHeight);
+      vm.isModalVisible = false;
+      let target = document.getElementById(vm.pdfTarget);
+      var fontA = new FontFaceObserver('Open Sans');
+      var fontB = new FontFaceObserver('Saira Extra Condensed');
+      vm.$emit('toPDF', true);
+      Promise.all([fontA.load(), fontB.load()]).then(function () {
+        console.log('Family A & B have loaded');
+        setTimeout(()=>{
+          html2canvas(target, {
+            // width: '210mm',
+            // height: '297mm',        
+            // width: '595px',
+            // height: '842px',
+            width: 810,
+            // height: 1100,
+            scale: 5,
+            useCORS: true,
+            allowTaint: true,
+          }).then(function(canvas) {
+            var pdf = new jsPDF('p', 'pt', 'a4');
+            console.log(target.clientHeight);
 
-          // https://stackoverflow.com/questions/24069124/how-to-save-a-image-in-multiple-pages-of-pdf-using-jspdf
-          // https://stackoverflow.com/questions/19272933/jspdf-multi-page-pdf-with-html-renderer/34934497#34934497
+            // https://stackoverflow.com/questions/24069124/how-to-save-a-image-in-multiple-pages-of-pdf-using-jspdf
+            // https://stackoverflow.com/questions/19272933/jspdf-multi-page-pdf-with-html-renderer/34934497#34934497
 
-          vm.paginate(target, canvas, pdf);
-          pdf.save(`Carlos_Soriano_${Date.now()}.pdf`);
-        });
-      }, 250);
+            vm.paginate(target, canvas, pdf);
+            pdf.save(`Carlos_Soriano_${Date.now()}.pdf`);
+            vm.$emit('toPDF', false);
+          });
+        }, 250);
+      });
     },
     toPDF() {
-      const vm = this
+      const vm = this;
       // close modal first
-      vm.isModalVisible = false
+      vm.isModalVisible = false;
       // timeout is set to account for loading time i believe
       var fontA = new FontFaceObserver('Open Sans');
       var fontB = new FontFaceObserver('Saira Extra Condensed');
@@ -169,8 +177,9 @@ export default {
         setTimeout(() => {
           console.log(vm.target)
           html2canvas(document.getElementById(vm.pdfTarget), {
-            width: 810,
-            height: 1100,
+            // setting width and height cuts it off at the "one page mark"
+            // width: 810,
+            // height: 1100,
             scale: 5,
             useCORS: true,
             allowTaint: true,
@@ -332,13 +341,13 @@ export default {
       console.log(heightLeft)
       // var secondHalf = imgHeight - firstHalf;
 
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, null, 'SLOW');
       heightLeft -= pageHeight;
       console.log(heightLeft)
       var secondHalf = heightLeft - imgHeight
       console.log(secondHalf)
       pdf.addPage();
-      pdf.addImage(imgData, 'PNG', 0, secondHalf, imgWidth, imgHeight);
+      pdf.addImage(imgData, 'PNG', 0, secondHalf, imgWidth, imgHeight, null, 'SLOW');
       return pdf;
     },
   },

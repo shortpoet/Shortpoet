@@ -56,7 +56,7 @@
   margin: 0rem 0rem .5rem 0rem;
   cursor: pointer;
   font-weight: bold;
-  color: $forest-green;
+  color: $primary;
   background: transparent;
 }
 
@@ -64,11 +64,27 @@
   color: white;
   background: $forest-green;
   border: 1px solid $forest-green;
-  border-radius: 2px;
+  border-radius: .25rem;
+  font-family: 'Saira Extra Condensed';
 }
 .btn-close {
   color: white;
   background: $primary;
   border: 1px solid $primary;
-  border-radius: 2px;
+  border-radius: .25rem;
+  font-family: 'Saira Extra Condensed';
+}
+.btn-page {
+  color: white;
+  background: $orange;
+  border: 1px solid $orange;
+  border-radius: .25rem;
+  font-family: 'Saira Extra Condensed';
+}
+
+.saveme-text {
+  color: $forest-green 
+}
+.pageme-text {
+  color: $orange
 }

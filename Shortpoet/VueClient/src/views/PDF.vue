@@ -24,8 +24,7 @@
             />
           </div>
           <div class="skills-col col-12 col-lg-10">
-            <component
-              :is="skillComp"
+            <PDFSkills
               :skills="getResume.skills"
             />
           </div>
@@ -37,8 +36,7 @@
             :renderPDF="renderPDF"
             :awards="getResume.spokenLanguages"
           />
-          <component
-            :is="skillComp"
+          <PDFSkillsRender
             :skills="getResume.skills"
           />
         </div>
@@ -76,7 +74,7 @@
 
       <!-- for some reason adding this handler makes the function run on load -->
       <!-- <ButtonFloat :target="'save-button-float'" :icon="'save'" :handler="toPDF(target)"/> -->
-      <ButtonFloat :target="'save-button-float'" :icon="'save'" :pdf-target="'pdf-anchor'">
+      <ButtonFloat :target="'save-button-float'" :icon="'save'" :pdf-target="'pdf-anchor'" @toPDF="toPDF">
       </ButtonFloat>
 
 
@@ -115,7 +113,7 @@ export default {
     return {
       pic: require('@/assets/poem.jpg'),
       target: 'pdf-anchor',
-      renderPDF: true
+      renderPDF: false
     }
   },
   computed: {
@@ -165,8 +163,9 @@ export default {
   },
   methods: {
     ...mapActions('resume', ['loadResume']),
-    onToPDF () {
-      this.renderPDF = true
+    toPDF (event) {
+      console.log('toPDF from pDF')
+      this.renderPDF = event
     }
   },
   mounted () {
