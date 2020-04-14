@@ -1,33 +1,36 @@
 <template>
   <portal :to="target">
-    <!-- <div class="expanded-button" :style="expandedStyle" @click="''"> -->
-    <div class="expanded-button" :style="expandedStyle" @click="isExpanded = !isExpanded">
-      <div class="circe-thingy" :style="circleThing">
-      </div>
-      <!-- <div :class="classObject"> -->
-      <div class="button-float2 icon-container" :style="iconContainer">
-        <font-awesome-layers
-          class="button-float-icon-layer fa-lg"
-        >
-          <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" :style="{color: 'gray'}" />
-          <font-awesome-icon
-            class="button-float-icon"
-            size="2x"
-            :transform="_icon.transform"
-            :icon="_icon.icon"
-            :style="{color: 'white'}"
-          ></font-awesome-icon>
-        </font-awesome-layers>
-      </div>
-      <div class="other-thingy" :style="otherThing">
-        <div class="other-interior" :style="otherInterior">
-          <span>Test Content</span>
-          <div class="test-button" :style="testButton">
-            Button
+    <!-- no style root so children unaffected -->
+    <!-- <div class="root-container"> -->
+      <!-- div containing all elements hidden at first -->
+      <div class="button-float-container" @click="toggleVisibility('button-float-container')">
+        <div :class="iconHalo">
+        </div>
+        <!-- <div :class="classObject"> -->
+        <div class="icon-container">
+          <font-awesome-layers
+            class="button-float-icon-layer fa-lg"
+          >
+            <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" :style="{color: 'gray'}" />
+            <font-awesome-icon
+              class="button-float-icon"
+              size="2x"
+              :transform="_icon.transform"
+              :icon="_icon.icon"
+              :style="{color: 'white'}"
+            ></font-awesome-icon>
+          </font-awesome-layers>
+        </div>
+        <div class="other-thingy" :style="otherThing">
+          <div class="other-interior" :style="otherInterior">
+            <span>Test Content</span>
+            <div class="test-button" :style="testButton">
+              Button
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </portal>
 </template>
 
@@ -76,14 +79,14 @@ export default {
         }
       },
       isModalVisible: false,
-      isExpanded: true,
+      isExpanded: false,
     }
   },
   computed: {
     mobile () {
       return window.innerWidth < 768
     },
-    classObject () {
+    classObject () { //([^\s|]'),
       return {
         'button-float2': true,
         'mobile': this.mobile
@@ -103,21 +106,6 @@ export default {
     },
     iconContainer () {
       return {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '56px',
-        height: '56px',
-        backgroundColor: '#33691e',
-        position: 'absolute',
-        left: '50%',
-        top: '50%',
-        cursor: 'pointer',
-        transform: 'translate(-50%, -50%)',
-        borderRadius: '50%',
-        visibility: 'visible',
-        boxShadow:
-          '0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)'      
       }
     },
     otherThing () {
@@ -156,35 +144,50 @@ export default {
         cursor: 'pointer'      
       }
     },
-    circleThing () {
-      const style = `{
+    dep () {
+      return `
+      {
         position: absolute;
+        color: red;
         top: 344px;
         left: 344px;
         width: 112px;
         height: 112px;
-        borderRadius: 50%;
-        zIndex: 100001;
-        :before: {
+        border-radius: 20%;
+        z-index: 100001;
+        ':before:' {
             content: ' ';
-            backgroundColor: #fff;
-            borderRadius: 50%;
+            background-color: #fff;
+            border-radius: 20%;
             position: absolute;
             width: 100%;
             height: 100%;
-            opacity: ${this.isExpanded ? 1 : 0};
+            opacity: 0;
             transition:
-              transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),
-              transform: ${this.isExpanded ? 'scale(1)' : 'scale(0)'};
-        }`
-      console.log(style)
-      return style
+              transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+              transform: scale(0);
+  }
+}
+      `
+    },
+    iconHalo () {
+      return this.isExpanded ? 'icon-halo-show' : 'icon-halo-hide'
     },
     _icon () {
       return this.iconMap[`${this.icon}`]
     }
   },
   methods: {
+    toggleVisibility (el) {
+      this.isExpanded = !this.isExpanded
+      console.log(document.getElementsByClassName(el)[0])
+      let v = document.getElementsByClassName(el)[0].style.visibility
+      if (v === 'hidden') {
+        v = 'visible'
+      } else {
+        v = 'hidden'
+      }
+    },
     showModal() {
       this.isModalVisible = true
     },
