@@ -32,7 +32,7 @@
       <portal-target class="" name="pdf-button-float" />
       <portal-target name="pdf-button-float2" />
       <ButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" />
-      <ButtonFloat2 :target="'pdf-button-float2'" :icon="'pdf'" :href="'/pdf'" />
+      <ButtonFloat3 :target="'pdf-button-float2'" :icon="'pdf'" :href="'/pdf'" />
     </div>
   </div>
 </template>
@@ -48,7 +48,7 @@ import StartEducation from '@/components/Resume/Start/StartEducation'
 import StartInterests from '@/components/Resume/Start/StartInterests'
 import StartAwards from '@/components/Resume/Start/StartAwards'
 import ButtonFloat from '@/components/Utils/ButtonFloat'
-import ButtonFloat2 from '@/components/Utils/ButtonFloat2'
+import ButtonFloat3 from '@/components/Utils/ButtonFloat3'
 import { mapGetters, mapActions } from 'vuex'
 // import '@/assets/scss/resume.scss'
 
@@ -68,7 +68,7 @@ export default {
     StartInterests,
     StartAwards,
     ButtonFloat,
-    ButtonFloat2
+    ButtonFloat3
   },
   data () {
     return {

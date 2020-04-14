@@ -3,27 +3,27 @@
       <!-- div containing all elements hidden at first -->
       <div class="button-float-container">
         <div :class="iconHalo">
-        <div class="icon-container">
-          <font-awesome-layers
-            class="button-float-icon-layer fa-lg"
-            @click="toggleVisibility('button-float-container')"            
-          >
-            <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
-            <font-awesome-icon
-              class="button-float-icon"
-              size="2x"
-              :transform="_icon.transform"
-              :icon="_icon.icon"
-              :style="{color: 'white'}"
-            ></font-awesome-icon>
-          </font-awesome-layers>
+          <div class="icon-container">
+            <font-awesome-layers
+              class="button-float-icon-layer fa-lg"
+              @click="toggleVisibility('button-float-container')"            
+            >
+              <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
+              <font-awesome-icon
+                class="button-float-icon"
+                size="2x"
+                :transform="_icon.transform"
+                :icon="_icon.icon"
+                :style="{color: 'white'}"
+              ></font-awesome-icon>
+            </font-awesome-layers>
+          </div>
         </div>
         <div :class="haloMask" >
           <div class="halo-content">
             <span>Test Content</span>
           </div>
         </div>
-      </div>
       </div>
   </portal>
 </template>
@@ -349,6 +349,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import './../../assets/scss/button-float.scss';
-
+@import './../../assets/scss/_button-float3.scss';
 </style>

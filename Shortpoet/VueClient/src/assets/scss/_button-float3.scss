@@ -4,7 +4,7 @@
   position: fixed;
   right: 9rem;
   bottom: 3rem;
-  // using percect here seemed to be a problem
+  // using percect here seemed to be a problem for the css compiler regex i think
   opacity: .5;
   font-size: 1.5rem;  
   .button-float-icon-circle {
@@ -17,12 +17,12 @@
   }
 }
 .button-float-container {
-  width: 800px;
-  height: 800px;
+  width: 30rem;
+  height: 30rem;
   position: fixed;
   z-index: 1000;
-  right: -348.4px;
-  bottom: -327.2px;
+  left: 20rem;
+  bottom: 0rem;
   // must be set to visible inititally so we have access to div on load then we set to hidden immediately 
   // on load with data property in component
   visibility: visible;
@@ -31,39 +31,41 @@
 
 .icon-container {
   display: flex;
+  opacity: .5;
   justify-content: center;
   align-items: center;
-  width: 56px;
-  height: 56px;
-  background-color: #33691e;
+  width: 3rem;
+  height: 3rem;
+  background-color: $olive-green;
   position: absolute;
   left: 50%;
   top: 50%;
   cursor: pointer;
-  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
   border-radius: 50%;
   visibility: visible;
   z-index: 100001;
   box-shadow:
     0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-  > .button-float-icon-circle {
-    color: $gray-500;
-  }
-  > .button-float-icon-layer {
+  .button-float-icon-layer {
     flex: 1;
-  }
-  > .button-float-icon {
-    color: $white;
+    .button-float-icon-circle {
+      color: $forest-green;
+    }
+    .button-float-icon {
+      flex: 1;
+      color: $white;
+    }
   }
 }
 
 .icon-halo-hide {
   position: absolute;
   color: $white;
-  top: 344px;
-  left: 344px;
-  width: 112px;
-  height: 112px;
+  left: 50%;
+  top: 50%;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   &:before {
       content: ' ';
@@ -81,10 +83,10 @@
 .icon-halo-show {
   position: absolute;
   color: $white;
-  top: 344px;
-  left: 344px;
-  width: 112px;
-  height: 112px;
+  left: 50%;
+  top: 50%;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   z-index: 100001;
   &:before {
@@ -102,9 +104,9 @@
 }
 
 .halo-mask-show {
-  background-color: #33691e;
+  background-color: $forest-green;
   border-radius: 50%;
-  opacity: 0;
+  opacity: .95;
   transition:
       transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transform: scale(1);
@@ -113,10 +115,11 @@
   height: 100%;
   z-index: 100000;
 }
+
 .halo-mask-hide {
-  background-color: #33691e;
+  background-color: $forest-green;
   border-radius: 50%;
-  opacity: .95;
+  opacity: .0;
   transition:
       transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   transform: scale(0);
@@ -124,6 +127,17 @@
   width: 100%;
   height: 100%;
   z-index: 100000;
+}
+
+.halo-content {
+  // width: 456px;
+  // height: 600px;
+  // right: 56px;
+  // bottom: 56px;
+  // padding: 56px;
+  // position: fixed;
+  // left: 0;
+  // color: #fff; 
 }
 
 .mobile {
