@@ -1,7 +1,14 @@
 <template>
   <portal :to="target">
-      <!-- div containing all elements hidden at first -->
-      <div :class="rippleContainer">
+      <!-- 
+        * div containing all elements hidden at first 
+        * blur to close
+        * https://forum.vuejs.org/t/how-to-implement-a-click-outside-event-like-vue-multiselect/24148
+        * https://github.com/shentao/vue-multiselect/blob/master/src/Multiselect.vue#L5
+        * alternative using event listeners
+        * https://forum.vuejs.org/t/best-way-to-blur-close-a-contextmenu/27524
+      -->
+      <div :class="rippleContainer" >
         <div :class="rippleMask">
           <div class="ripple-content">
             <slot name="ripple-content">
@@ -10,7 +17,7 @@
           </div>
         </div>
         <div :class="iconHalo">
-          <div class="icon-circle">
+          <div @blur="close" tabindex="-1" class="icon-circle">
             <font-awesome-icon
               v-if="!isExpanded"
               class="button-float-icon"
@@ -96,7 +103,12 @@ export default {
   },
   methods: {
     open () {
-      this.$emit('ripple')
+      this.$emit('ripple-open')
+    },
+    close () {
+      if (this.isExpanded) {
+        this.$emit('ripple-close')
+      }
     }
   },
   mounted () {

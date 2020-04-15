@@ -29,11 +29,20 @@
       <StartInterests
         :interests="getResume.interests"
       />
-      <portal-target class="start target" name="pdf-button-float" />
-      <div v-if="rippleExpanded" class="ripple-closer" @click="toggleVisibility(false)">
+
+      <!-- <portal-target class="start target" name="pdf-button-float" />
+      <div v-if="rippleExpanded" class="ripple-closer" v-on:click.capture="toggleVisibility(false)">
+        <StartButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" :isExpanded="rippleExpanded" />
       </div>
-      <StartButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" :isExpanded="rippleExpanded" @ripple="toggleVisibility(true)"/>
+      <StartButtonFloat v-else :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" :isExpanded="rippleExpanded" @ripple="toggleVisibility(true)"/>      
+ -->
+      <portal-target class="start target" name="pdf-button-float"/>
+      <StartButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" :isExpanded="rippleExpanded"  @ripple-open="toggleVisibility(true)" @ripple-close="toggleVisibility(false)" />      
+
+
     </div>
+
+
   </div>
 </template>
 
@@ -76,7 +85,6 @@ export default {
   computed: {
     ...mapGetters('resume', ['getResume', 'getResumeLoaded']),
     resume () {
-
       return this.getResume.skills.forEach(skill => {
         console.log(skill)
         skill.details = skill.details.split(',')
@@ -89,9 +97,7 @@ export default {
   methods: {
     ...mapActions('resume', ['loadResume']),
     toggleVisibility (args) {
-      console.log(this.rippleExpanded)
       if (args) {
-        console.log(args)
         this.rippleExpanded = !this.rippleExpanded
       } else {
         this.rippleExpanded = args
@@ -99,6 +105,7 @@ export default {
     }
   },
   mounted () {
+
     const $ = this.jquery
     this.$nextTick(() => {
       // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.
