@@ -29,10 +29,10 @@
       <StartInterests
         :interests="getResume.interests"
       />
-      <portal-target class="" name="pdf-button-float" />
-      <portal-target name="pdf-button-float2" />
-      <ButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" />
-      <ButtonFloat3 :target="'pdf-button-float2'" :icon="'pdf'" :href="'/pdf'" />
+      <portal-target class="start target" name="pdf-button-float" />
+      <div v-if="rippleExpanded" class="ripple-closer" @click="toggleVisibility(false)">
+      </div>
+      <StartButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" :isExpanded="rippleExpanded" @ripple="toggleVisibility(true)"/>
     </div>
   </div>
 </template>
@@ -47,8 +47,7 @@ import StartExperience from '@/components/Resume/Start/StartExperience'
 import StartEducation from '@/components/Resume/Start/StartEducation'
 import StartInterests from '@/components/Resume/Start/StartInterests'
 import StartAwards from '@/components/Resume/Start/StartAwards'
-import ButtonFloat from '@/components/Utils/ButtonFloat'
-import ButtonFloat3 from '@/components/Utils/ButtonFloat3'
+import StartButtonFloat from '@/components/Resume/Start/StartButtonFloat'
 import { mapGetters, mapActions } from 'vuex'
 // import '@/assets/scss/resume.scss'
 
@@ -67,11 +66,11 @@ export default {
     StartEducation,
     StartInterests,
     StartAwards,
-    ButtonFloat,
-    ButtonFloat3
+    StartButtonFloat
   },
   data () {
     return {
+      rippleExpanded: false
     }
   },
   computed: {
@@ -89,6 +88,15 @@ export default {
   },
   methods: {
     ...mapActions('resume', ['loadResume']),
+    toggleVisibility (args) {
+      console.log(this.rippleExpanded)
+      if (args) {
+        console.log(args)
+        this.rippleExpanded = !this.rippleExpanded
+      } else {
+        this.rippleExpanded = args
+      }
+    }
   },
   mounted () {
     const $ = this.jquery

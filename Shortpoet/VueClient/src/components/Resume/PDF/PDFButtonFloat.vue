@@ -1,34 +1,47 @@
 <template>
   <portal :to="target">
-      <!-- div containing all elements hidden at first -->
-      <div class="button-float-container">
-        <div :class="iconHalo">
-        <div class="icon-container">
-          <font-awesome-layers
-            class="button-float-icon-layer fa-lg"
-            @click="toggleVisibility('button-float-container')"            
-          >
-            <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
-            <font-awesome-icon
-              class="button-float-icon"
-              size="2x"
-              :transform="_icon.transform"
-              :icon="_icon.icon"
-              :style="{color: 'white'}"
-            ></font-awesome-icon>
-          </font-awesome-layers>
-        </div>
-        <div :class="haloMask" >
-          <div class="halo-content">
-            <span>Test Content</span>
-          </div>
-        </div>
-      </div>
-      </div>
+    <!-- 
+      * previously had this selector to unify the components - split after styling diverged
+      * v-if="href" 
+      * v-if="pdfTarget"
+    </div> -->
+    <div type="input" :class="classObject" @click="showModal">
+      <font-awesome-layers
+        class="button-float-icon-layer fa-lg"
+      >
+        <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
+        <font-awesome-icon
+          class="button-float-icon"
+          size="2x"
+          :transform="_icon.transform"
+          :icon="_icon.icon"
+        ></font-awesome-icon>
+      </font-awesome-layers>
+    </div>
+    <div class="modal-slot">
+      <Modal
+        v-show="isModalVisible"
+        @close="closeModal"
+        @toPDF="toPDF"
+        @toPage="toPage"
+        @toCanvas="toCanvas"
+      >
+        <!-- <template v-slot:header>
+          <h1>Test Header</h1>
+        </template>
+        <template v-slot:body>
+          <h1>Test Body</h1>
+        </template>
+        <template v-slot:footer>
+          <h1>Test Footer</h1>
+        </template> -->
+      </Modal>
+    </div>
   </portal>
 </template>
 
 <script>
+import Modal from '@/components/Utils/Modal'
 
 import jsPDF from 'jspdf'
 // using fork for now to solve this issue
@@ -38,16 +51,13 @@ import html2canvas from '@trainiac/html2canvas'
 // import html2canvas from 'html2canvas'
 var FontFaceObserver = require('fontfaceobserver');
 export default {
-  name: 'ButtonFloat',
+  name: 'PDFButtonFloat',
   components: {
+    Modal
   },
   props: {
     target: {
       type: String
-    },
-    href: {
-      type: String,
-      required: false
     },
     icon: {
       type: String
@@ -65,7 +75,7 @@ export default {
       iconMap: {
         pdf: {
           icon: 'file-pdf',
-          transform: 'shrink-5 right-.3'
+          transform: 'shrink-5 right-2.3'
         },
         save: {
           icon: 'save',
@@ -73,39 +83,23 @@ export default {
         }
       },
       isModalVisible: false,
-      isExpanded: false,
     }
   },
   computed: {
     mobile () {
       return window.innerWidth < 768
     },
-    classObject () { //([^\s|]'),
+    classObject () {
       return {
-        'button-float2': true,
+        'button-float': true,
         'mobile': this.mobile
       }
-    },
-    iconHalo () {
-      return this.isExpanded ? 'icon-halo-show' : 'icon-halo-hide'
-    },
-    haloMask () {
-      return this.isExpanded ? 'halo-mask-show' : 'halo-mask-hide'
     },
     _icon () {
       return this.iconMap[`${this.icon}`]
     }
   },
   methods: {
-    toggleVisibility (el) {
-      this.isExpanded = !this.isExpanded
-      let v = document.getElementsByClassName(el)[0].style.visibility
-      if (v === 'hidden') {
-        v = 'visible'
-      } else {
-        v = 'hidden'
-      }
-    },
     showModal() {
       this.isModalVisible = true
     },
@@ -349,6 +343,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import './../../assets/scss/button-float.scss';
 
 </style>
