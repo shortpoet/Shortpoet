@@ -5,8 +5,8 @@
         <span class="text-primary">{{ surname }}</span>
       </h1>
       <!-- https://lonewolfonline.net/html-character-codes-ascii-entity-unicode-symbols/ -->
-      <div class="ml-2 d-flex flex-column subheading">
-        <div class="d-flex flex-column">
+      <div class="ml-2 d-inline-flex flex-column subheading">
+        <div class="d-inline-flex flex-column">
           <span class="not-name">{{ flags.replace(/,/g, '') }}</span>
           <a :href="'mailto:' + email">{{ email }}</a>
           <!-- <span class="mx-2" style="color:#343a40">&#8226;</span>  -->

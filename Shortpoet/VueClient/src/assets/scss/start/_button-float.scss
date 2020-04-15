@@ -34,28 +34,28 @@
     height: 100%;
     z-index: 1000;
     -webkit-transition:
-      background-color .3s ease-out,
+      background-color .3s $ease-primary,
       transform .3s $ease-primary,
       opacity .3s $ease-primary,
       width .3s $ease-primary,
       height .3s $ease-primary,
       ;
     -moz-transition:
-      background-color .3s ease-out,
+      background-color .3s $ease-primary,
       transform .3s $ease-primary,
       opacity .3s $ease-primary,
       width .3s $ease-primary,
       height .3s $ease-primary,
       ;
     -o-transition:
-      background-color .3s ease-out,
+      background-color .3s $ease-primary,
       transform .3s $ease-primary,
       opacity .3s $ease-primary,
       width .3s $ease-primary,
       height .3s $ease-primary,
       ;
     transition:
-      background-color .3s ease-out,
+      background-color .3s $ease-primary,
       transform .3s $ease-primary,
       opacity .3s $ease-primary,
       width .3s $ease-primary,
@@ -108,6 +108,7 @@
       height: 100%;
       opacity: 0;
       transform: scale(1);
+      transition: 'transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1)',
     }
   }
 
@@ -128,6 +129,7 @@
       width: 100%;
       height: 100%;
       transform: scale(0);
+      transition: 'transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1)';
     }
   }
 
@@ -143,22 +145,50 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: 'transform, height, width, 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1)';
+    transform: scale(1);
     -webkit-transition:
-      background-color .3s ease-out,
-      opacity .3s $ease-primary,
+      // background-color $halo-time $ease-primary,
+      transform $halo-time $ease-primary,
+      // opacity $halo-time $ease-primary,
+      width $halo-time $ease-primary,
+      height $halo-time $ease-primary,
       ;
     -moz-transition:
-      background-color .3s ease-out,
-      opacity .3s $ease-primary,
+      // background-color $halo-time $ease-primary,
+      transform $halo-time $ease-primary,
+      // opacity $halo-time $ease-primary,
+      width $halo-time $ease-primary,
+      height $halo-time $ease-primary,
       ;
     -o-transition:
-      background-color .3s ease-out,
-      opacity .3s $ease-primary,
+      // background-color $halo-time $ease-primary,
+      transform $halo-time $ease-primary,
+      // opacity $halo-time $ease-primary,
+      width $halo-time $ease-primary,
+      height $halo-time $ease-primary,
       ;
     transition:
-      background-color .3s ease-out,
-      opacity .3s $ease-primary,
+      // background-color $halo-time $ease-primary,
+      transform $halo-time $ease-primary,
+      // opacity $halo-time $ease-primary,
+      width $halo-time $ease-primary,
+      height $halo-time $ease-primary,
       ;
+    &:before {
+      content: '';
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 50%;
+      position: absolute;
+      // setting bottom and right to 0  bec it seems that it is relative to parent
+      bottom: 0em;
+      right: 0em;
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+      transition: 'transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1)';
+    }
+
     .icon-circle {
       background-color: $forest-green;
       opacity: 25%;
@@ -187,22 +217,33 @@
   }
   .icon-halo-hide {
     background-color: rgba(255, 255, 255, 0);
-    -webkit-transition:
-      background-color .3s ease-out,
-      opacity .3s $ease-primary,
-      ;
-    -moz-transition:
-      background-color .3s ease-out,
-      opacity .3s $ease-primary,
-      ;
-    -o-transition:
-      background-color .3s ease-out,
-      opacity .3s $ease-primary,
-      ;
-    transition:
-      background-color .3s ease-out,
-      opacity .3s $ease-primary,
-      ;
+    // height: 0em;
+    // width: 0em;
+    // -webkit-transition:
+    //   all $halo-time $ease-primary,
+    //   ;
+    // -moz-transition:
+    //   all $halo-time $ease-primary,
+    //   ;
+    // -o-transition:
+    //   all $halo-time $ease-primary,
+    //   ;
+    // transition:
+    //   all $halo-time $ease-primary,
+    //   ;
+    &:before {
+      content: '';
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 50%;
+      position: absolute;
+      // setting bottom and right to 0  bec it seems that it is relative to parent
+      bottom: 0em;
+      right: 0em;
+      width: 100%;
+      height: 100%;
+      transform: scale(0);
+      transition: 'transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1)';
+    }
   }
 }
 

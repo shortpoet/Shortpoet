@@ -3,13 +3,14 @@
       <!-- 
         * div containing all elements hidden at first 
         * blur to close
+        * has to be on root else have to click in the element where it's placed or use js to .blur()
         * https://forum.vuejs.org/t/how-to-implement-a-click-outside-event-like-vue-multiselect/24148
         * https://github.com/shentao/vue-multiselect/blob/master/src/Multiselect.vue#L5
         * alternative using event listeners
         * https://forum.vuejs.org/t/best-way-to-blur-close-a-contextmenu/27524
       -->
-      <div :class="rippleContainer" >
-        <div :class="rippleMask">
+      <div @blur="close" tabindex="-1" :class="rippleContainer" >
+        <div  :class="rippleMask">
           <div class="ripple-content">
             <slot name="ripple-content">
               Check out the other layout by clicking the pdf icon.
@@ -17,7 +18,7 @@
           </div>
         </div>
         <div :class="iconHalo">
-          <div @blur="close" tabindex="-1" class="icon-circle">
+          <div class="icon-circle">
             <font-awesome-icon
               v-if="!isExpanded"
               class="button-float-icon"
