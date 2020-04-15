@@ -1,27 +1,46 @@
 <template>
   <portal :to="target">
       <!-- div containing all elements hidden at first -->
-      <div class="button-float-container">
-        <div :class="iconHalo">
-          <div class="icon-container">
-            <font-awesome-layers
-              class="button-float-icon-layer fa-lg"
-              @click="toggleVisibility('button-float-container')"            
-            >
-              <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
-              <font-awesome-icon
-                class="button-float-icon"
-                size="2x"
-                :transform="_icon.transform"
-                :icon="_icon.icon"
-                :style="{color: 'white'}"
-              ></font-awesome-icon>
-            </font-awesome-layers>
-          </div>
-        </div>
+      <!-- <div class="button-float-container">
         <div :class="haloMask" >
           <div class="halo-content">
             <span>Test Content</span>
+          </div>
+          <div class=""></div>
+          <div :class="iconHalo">
+            <div class="icon-container">
+              <font-awesome-layers
+                class="button-float-icon-layer fa-lg"
+                @click="toggleVisibility('button-float-container')"            
+              >
+                <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
+                <font-awesome-icon
+                  class="button-float-icon"
+                  size="2x"
+                  :transform="_icon.transform"
+                  :icon="_icon.icon"
+                  :style="{color: 'white'}"
+                ></font-awesome-icon>
+              </font-awesome-layers>
+            </div>
+          </div>  
+          <div class=""></div>
+                  
+        </div>
+      </div> -->
+      <div class="ripple-container">
+        <div :class="rippleMask">
+          <div></div>
+        </div>
+        <div :class="iconHalo">
+          <div class="icon-circle">
+            <font-awesome-icon
+              class="button-float-icon"
+              size="2x"
+              :transform="_icon.transform"
+              :icon="_icon.icon"
+              @click="toggleVisibility('ripple-mask')"            
+            ></font-awesome-icon>
           </div>
         </div>
       </div>
@@ -65,7 +84,7 @@ export default {
       iconMap: {
         pdf: {
           icon: 'file-pdf',
-          transform: 'shrink-5 right-.3'
+          transform: ''
         },
         save: {
           icon: 'save',
@@ -87,10 +106,10 @@ export default {
       }
     },
     iconHalo () {
-      return this.isExpanded ? 'icon-halo-show' : 'icon-halo-hide'
+      return this.isExpanded ? 'icon-halo icon-halo-show' : 'icon-halo icon-halo-hide'
     },
-    haloMask () {
-      return this.isExpanded ? 'halo-mask-show' : 'halo-mask-hide'
+    rippleMask () {
+      return this.isExpanded ? 'ripple-mask ripple-mask-show' : 'ripple-mask ripple-mask-hide'
     },
     _icon () {
       return this.iconMap[`${this.icon}`]
@@ -99,12 +118,16 @@ export default {
   methods: {
     toggleVisibility (el) {
       this.isExpanded = !this.isExpanded
-      let v = document.getElementsByClassName(el)[0].style.visibility
-      if (v === 'hidden') {
-        v = 'visible'
-      } else {
-        v = 'hidden'
-      }
+      console.log(document.getElementsByClassName(el))
+      // let v = document.getElementsByClassName(el)[0].style.visibility
+      // console.log(v)
+      // if (v === 'hidden') {
+      //   v = 'visible'
+      //   console.log(v)
+      // } else if (v === 'visible'){
+      //   v = 'hidden'
+      //   console.log(v)
+      // }
     },
     showModal() {
       this.isModalVisible = true
@@ -344,10 +367,12 @@ export default {
     },
   },
   mounted () {
+    this.toggleVisibility('ripple-mask')
   }
 }
 </script>
 
 <style lang="scss">
-@import './../../assets/scss/_button-float3.scss';
+// @import './../../assets/scss/_button-float3.scss';
+@import './../../assets/scss/_button-float4.scss';
 </style>
