@@ -90,9 +90,7 @@ export default {
         skill.details = skill.details.split(',')
         console.log(skill)
       })
-      
     }
-    
   },
   methods: {
     ...mapActions('resume', ['loadResume']),
@@ -105,7 +103,8 @@ export default {
     }
   },
   mounted () {
-
+    console.log('mounted from start')
+    console.log(this.rippleExpanded)
     const $ = this.jquery
     this.$nextTick(() => {
       // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.

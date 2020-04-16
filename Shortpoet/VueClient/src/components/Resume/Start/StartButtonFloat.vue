@@ -9,7 +9,7 @@
         * alternative using event listeners
         * https://forum.vuejs.org/t/best-way-to-blur-close-a-contextmenu/27524
       -->
-      <div @blur="close" tabindex="-1" :class="rippleContainer" >
+      <div :class="rippleContainer" >
         <div  :class="rippleMask">
           <div class="ripple-content">
             <slot name="ripple-content">
@@ -19,7 +19,8 @@
         </div>
         <div :class="iconHalo">
           <div class="icon-circle">
-            <font-awesome-icon
+
+            <!-- <font-awesome-icon
               v-if="!isExpanded"
               class="button-float-icon"
               size="2x"
@@ -34,7 +35,27 @@
                 :transform="_icon.transform"
                 :icon="_icon.icon"
               ></font-awesome-icon>
+            </a> -->
+
+            <font-awesome-icon
+              ref="float-icon-rocket"
+              v-if="!isExpanded"
+              class="button-float-icon"
+              size="2x"
+              :transform="iconMap['rocket'].transform"
+              :icon="iconMap['rocket'].icon"
+              @click="open"
+            ></font-awesome-icon>
+            <a v-else href="/pdf">
+              <font-awesome-icon
+                ref="float-icon-pdf"
+                class="button-float-icon"
+                size="2x"
+                :transform="iconMap['pdf'].transform"
+                :icon="iconMap['pdf'].icon"
+              ></font-awesome-icon>
             </a>
+
           </div>
         </div>
       </div>
@@ -77,6 +98,10 @@ export default {
         save: {
           icon: 'save',
           transform: 'shrink-5 right-1'
+        },
+        rocket: {
+          icon: 'rocket',
+          transform: 'down-1 left-1'
         }
       },
       // isExpanded: false,
@@ -110,9 +135,24 @@ export default {
       if (this.isExpanded) {
         this.$emit('ripple-close')
       }
-    }
+    },
+    handleClickOutside (evt) {
+      if (this.isExpanded === true) {
+        if (evt.target.tagName !== 'path') {
+          this.$emit('ripple-close')
+        }
+      }
+    },
+  },
+  destroyed () {
+    document.removeEventListener('click', this.handleClickOutside)
   },
   mounted () {
+    console.log('mounted from sbutton')
+    console.log(this.isExpanded)
+    setTimeout(() => {
+      document.addEventListener('click', this.handleClickOutside)
+    }, 250)
   }
 }
 </script>
