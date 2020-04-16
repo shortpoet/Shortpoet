@@ -145,14 +145,14 @@ export default {
     },
   },
   destroyed () {
-    document.removeEventListener('click', this.handleClickOutside)
+    var events = ['click', 'touchstart', 'touchcancel', 'touchmove', 'touchend']
+    events.map(x => document.addEventListener(x, this.handleClickOutside))
   },
   mounted () {
-    console.log('mounted from sbutton')
-    console.log(this.isExpanded)
+      var events = ['click', 'touchstart', 'touchcancel', 'touchmove', 'touchend']
     setTimeout(() => {
-      document.addEventListener('click', this.handleClickOutside)
-    }, 250)
+      events.map(x => document.addEventListener(x, this.handleClickOutside))
+    }, 1000)
   }
 }
 </script>
