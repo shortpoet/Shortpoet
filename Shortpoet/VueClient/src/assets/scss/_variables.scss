@@ -25,6 +25,7 @@ $yellow:  #ffc107 !default;
 $kelly-green:   #4CBB17 !default;
 $green:   #28a745 !default;
 $forest-green:   #0B6623 !default;
+$olive-green:   #33691e !default;
 $sacramento-green:   #043927 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
@@ -44,3 +45,12 @@ $sidebar-base-width: 17rem;
 
 // Start Nav Variables
 $start-highlight: #824027; 
+
+// transitions
+
+$ease-orig:       cubic-bezier(0.42, 0, 0.58, 1);
+$ease-quad:       cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+$ease-primary:    $ease-orig;
+
+$halo-time:       3s;

@@ -1,21 +1,11 @@
 <template>
   <portal :to="target">
-    <div v-if="href" type="input" :class="classObject">
-      <a :href="href">
-        <font-awesome-layers
-          class="button-float-icon-layer fa-lg"
-        >
-          <font-awesome-icon class="button-float-icon-circle" size="2x" icon="circle" />
-          <font-awesome-icon
-            class="button-float-icon"
-            size="2x"
-            :transform="_icon.transform"
-            :icon="_icon.icon"
-          ></font-awesome-icon>
-        </font-awesome-layers>
-      </a>
-    </div>
-    <div v-if="pdfTarget" type="input" :class="classObject" @click="showModal">
+    <!-- 
+      * previously had this selector to unify the components - split after styling diverged
+      * v-if="href" 
+      * v-if="pdfTarget"
+    </div> -->
+    <div type="input" :class="classObject" @click="showModal">
       <font-awesome-layers
         class="button-float-icon-layer fa-lg"
       >
@@ -61,17 +51,13 @@ import html2canvas from '@trainiac/html2canvas'
 // import html2canvas from 'html2canvas'
 var FontFaceObserver = require('fontfaceobserver');
 export default {
-  name: 'ButtonFloat',
+  name: 'PDFButtonFloat',
   components: {
     Modal
   },
   props: {
     target: {
       type: String
-    },
-    href: {
-      type: String,
-      required: false
     },
     icon: {
       type: String

@@ -29,9 +29,20 @@
       <StartInterests
         :interests="getResume.interests"
       />
-      <portal-target name="pdf-button-float" />
-      <ButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" />
+
+      <!-- <portal-target class="start target" name="pdf-button-float" />
+      <div v-if="rippleExpanded" class="ripple-closer" v-on:click.capture="toggleVisibility(false)">
+        <StartButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" :isExpanded="rippleExpanded" />
+      </div>
+      <StartButtonFloat v-else :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" :isExpanded="rippleExpanded" @ripple="toggleVisibility(true)"/>      
+ -->
+      <portal-target class="start target" name="pdf-button-float"/>
+      <StartButtonFloat :target="'pdf-button-float'" :icon="'pdf'" :href="'/pdf'" :isExpanded="rippleExpanded"  @ripple-open="toggleVisibility(true)" @ripple-close="toggleVisibility(false)" />      
+
+
     </div>
+
+
   </div>
 </template>
 
@@ -45,7 +56,7 @@ import StartExperience from '@/components/Resume/Start/StartExperience'
 import StartEducation from '@/components/Resume/Start/StartEducation'
 import StartInterests from '@/components/Resume/Start/StartInterests'
 import StartAwards from '@/components/Resume/Start/StartAwards'
-import ButtonFloat from '@/components/Utils/ButtonFloat'
+import StartButtonFloat from '@/components/Resume/Start/StartButtonFloat'
 import { mapGetters, mapActions } from 'vuex'
 // import '@/assets/scss/resume.scss'
 
@@ -64,27 +75,32 @@ export default {
     StartEducation,
     StartInterests,
     StartAwards,
-    ButtonFloat
+    StartButtonFloat
   },
   data () {
     return {
+      rippleExpanded: false
     }
   },
   computed: {
     ...mapGetters('resume', ['getResume', 'getResumeLoaded']),
     resume () {
-
       return this.getResume.skills.forEach(skill => {
         console.log(skill)
         skill.details = skill.details.split(',')
         console.log(skill)
       })
-      
     }
-    
   },
   methods: {
     ...mapActions('resume', ['loadResume']),
+    toggleVisibility (args) {
+      if (args) {
+        this.rippleExpanded = !this.rippleExpanded
+      } else {
+        this.rippleExpanded = args
+      }
+    }
   },
   mounted () {
     const $ = this.jquery

@@ -74,8 +74,7 @@
 
       <!-- for some reason adding this handler makes the function run on load -->
       <!-- <ButtonFloat :target="'save-button-float'" :icon="'save'" :handler="toPDF(target)"/> -->
-      <ButtonFloat :target="'save-button-float'" :icon="'save'" :pdf-target="'pdf-anchor'" @toPDF="toPDF">
-      </ButtonFloat>
+      <PDFButtonFloat :target="'save-button-float'" :icon="'save'" :pdf-target="'pdf-anchor'" @toPDF="toPDF" />
 
 
     </div>
@@ -92,7 +91,7 @@ import PDFObjective from '@/components/Resume/PDF/PDFObjective'
 import PDFExperience from '@/components/Resume/PDF/PDFExperience'
 import PDFEducation from '@/components/Resume/PDF/PDFEducation'
 import PDFInterests from '@/components/Resume/PDF/PDFInterests'
-import ButtonFloat from '@/components/Utils/ButtonFloat'
+import PDFButtonFloat from '@/components/Resume/PDF/PDFButtonFloat'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
@@ -107,7 +106,7 @@ export default {
     PDFExperience,
     PDFEducation,
     PDFInterests,
-    ButtonFloat
+    PDFButtonFloat
   },
   data () {
     return {

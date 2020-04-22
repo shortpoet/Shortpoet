@@ -42,6 +42,19 @@ aboutMe: As a lifelong polyglot and software developer,
   with a linked database to dynamically populate different resume formats. 
   Please check out the <a href="/pdf">PDF-friendly</a> version. And coming soon, 
   a guestbook that will fully illustrate the capabilities of a linked data source! 🤓
+socials:
+  - social: github
+    url: https://github.com/shortpoet
+  - social: linkedin
+    url: https://www.linkedin.com/in/carlos-soriano-49aaa97/
+  - social: instagram
+    url: https://www.instagram.com/shortpoet/
+  - social: twitter
+    url: https://twitter.com/shortpoet3
+  - social: website
+    url: https://www.shortpoet.com
+  - social: website hosted
+    url: https://shortpoet.azurewebsites.net
 experiences:
   - id: 1
     type: software
@@ -138,8 +151,8 @@ educations:
       relevant coursework in linguistics and anthropology
   - id: 3
     institution: Thacher School
-    degree: Private secondary boarding school
-    focus: Emphasis on academics, the outdoors, camping, horsemanship, and environmental awareness, 
+    degree: High School
+    focus: Boarding, emphasis on academics, the outdoors, camping, horsemanship, and environmental awareness, 
       Year Abroad in France
 skills:
   - id: 1

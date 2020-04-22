@@ -21,7 +21,7 @@
 </script>
 <template>
   <transition name="modal-fade">
-    <div class="custom-modal-backdrop">
+    <div class="custom-modal-backdrop" @click="close">
       <div class="custom-modal"
         role="dialog"
         aria-labelledby="modalTitle"
@@ -84,14 +84,16 @@
                 </button>
               </div>
               <div>
+                <a href="/">
                 <button
                   type="button"
                   class="btn-close"
                   @click="close"
                   aria-label="Close modal"
                 >
-                  Close me!
+                  Home Page 
                 </button>
+                </a>
               </div>
             </div>
           </slot>
