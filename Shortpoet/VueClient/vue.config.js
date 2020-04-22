@@ -28,7 +28,7 @@ module.exports = {
     // adding public seemed to do the same as
     // adding the below cmd to package.json
     // "servelocal": "vue-cli-service serve --host localhost",
-    // public: 'https://localhost:8080/',
+    public: 'https://localhost:8080/',
     // port: 8080, // CHANGE YOUR PORT HERE!
     https: true,
     // hotOnly: false,
