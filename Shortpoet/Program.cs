@@ -17,13 +17,13 @@ namespace Shortpoet
     {
         public static void Main(string[] args)
         {
-      var host = CreateHostBuilder(args)
-        .Build();
+          var host = CreateHostBuilder(args)
+            .Build();
 
-      CreateDbIfNotExists(host);
+          CreateDbIfNotExists(host);
 
-      host.Run();
-    }
+          host.Run();
+        }
     // adding this method to init db
     private static void CreateDbIfNotExists(IHost host)
     {
@@ -38,6 +38,13 @@ namespace Shortpoet
           // run this code first before DBInit is written to test the rest of the setup
           // context.Database.EnsureCreated();
           DbInitializer.InitializeDb(context, hostingEnvironment);
+          //
+          // TODO 
+          // this is a temporary hack to add new resumes
+          string path = "Data/Resumes/carlos_resume_2020_04_22.yml";
+          Boolean writeJson = true;
+          AddResume.Add(context, path, writeJson);
+
           context.Database.Migrate();
         }
         catch (Exception ex)

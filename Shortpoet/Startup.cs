@@ -136,19 +136,19 @@ namespace Shortpoet
                     template: "api/{controller=Home}/{action=Index}/{id?}");
             });
 
-            app.UseSpa(spa =>
-            {
-                //spa.Options.SourcePath = "ClientApp";
-                spa.Options.SourcePath = "VueClient";
+            // app.UseSpa(spa =>
+            // {
+            //     //spa.Options.SourcePath = "ClientApp";
+            //     spa.Options.SourcePath = "VueClient";
 
-                if (env.IsDevelopment())
-                {
-                    //spa.UseReactDevelopmentServer(npmScript: "start");
-                    spa.UseVueCli(npmScript: "serve");
-                    // spa.UseVueCli(npmScript: "servelocal");
-                    // spa.UseVueCli(npmScript: "serve", port: 8080);
-                }
-            });
+            //     if (env.IsDevelopment())
+            //     {
+            //         //spa.UseReactDevelopmentServer(npmScript: "start");
+            //         spa.UseVueCli(npmScript: "serve");
+            //         // spa.UseVueCli(npmScript: "servelocal");
+            //         // spa.UseVueCli(npmScript: "serve", port: 8080);
+            //     }
+            // });
         }
     }
 }

@@ -58,7 +58,7 @@ steps:
     appName: 'Shortpoet'
     package: $(System.ArtifactsDirectory)/**/*.zip
     deploymentMethod: zipDeploy
-    slotName: staging    
+    # slotName: staging    
 
 # - task: AzureWebApp@2
 #   inputs:
