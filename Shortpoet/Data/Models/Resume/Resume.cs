@@ -12,6 +12,10 @@ namespace Shortpoet.Data.Models.Resume
     public class Resume
     {
         public int Id { get; set; }
+        // https://stackoverflow.com/questions/691035/setting-the-default-value-of-a-datetime-property-to-datetime-now-inside-the-syst
+
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+
         public string Title { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -74,6 +78,7 @@ namespace Shortpoet.Data.Models.Resume
 		        var yamlObject = deserializer.Deserialize(r);
                 
                 var serializer = new Newtonsoft.Json.JsonSerializer();
+                serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
 
                 string json;
                 using (StringWriter w = new StringWriter()) 
@@ -86,6 +91,7 @@ namespace Shortpoet.Data.Models.Resume
                     string jsonPath = path.Replace("yml", "json");
                     using (StreamWriter w2 = new StreamWriter(jsonPath)) 
                     {
+
                         w2.Write(json);
                     }
                 }

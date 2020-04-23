@@ -41,11 +41,8 @@ namespace Shortpoet
           //
           // TODO 
           // this is a temporary hack to add new resumes
-          // string path = "Data/Resumes/carlos_resume_2020_04_22.yml";
-          // Boolean writeJson = true;
-          // AddResume.Add(context, path, writeJson);
-
-          // AddResume.Seed(context);
+          // string dateFolder = "20200423";
+          // AddResume.Add(context, dateFolder);
 
           context.Database.Migrate();
         }

@@ -19,6 +19,7 @@ namespace Shortpoet.Data.Models.Resume
 		        var yamlObject = deserializer.Deserialize(r);
                 
                 var serializer = new Newtonsoft.Json.JsonSerializer();
+                serializer.Formatting = Newtonsoft.Json.Formatting.Indented;
 
                 string json;
                 using (StringWriter w = new StringWriter()) 

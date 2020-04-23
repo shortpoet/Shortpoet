@@ -1,0 +1,36 @@
+{
+  "resumeJobs": [
+    {
+      "resumeId": "2",
+      "jobId": "1"
+    },
+    {
+      "resumeId": "2",
+      "jobId": "2"
+    },
+    {
+      "resumeId": "2",
+      "jobId": "3"
+    },
+    {
+      "resumeId": "2",
+      "jobId": "4"
+    },
+    {
+      "resumeId": "2",
+      "jobId": "5"
+    },
+    {
+      "resumeId": "2",
+      "jobId": "6"
+    },
+    {
+      "resumeId": "2",
+      "jobId": "7"
+    },
+    {
+      "resumeId": "2",
+      "jobId": "8"
+    }
+  ]
+}

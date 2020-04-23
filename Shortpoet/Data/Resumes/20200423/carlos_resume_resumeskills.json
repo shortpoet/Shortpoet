@@ -1,0 +1,40 @@
+{
+  "resumeSkills": [
+    {
+      "resumeId": "2",
+      "skillId": "1"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "2"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "3"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "4"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "5"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "6"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "7"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "8"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "9"
+    }
+  ]
+}

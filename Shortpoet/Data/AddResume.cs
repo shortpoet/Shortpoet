@@ -40,6 +40,22 @@ namespace Shortpoet.Data
       context.SaveChanges();
       
     }
+    public static void Add(ResumeDbContext context, string dateFolder)
+    {
+
+      Boolean writeJson = true;
+
+      context.Add(Resume.LoadResume($"Data/Resumes/{dateFolder}/carlos_resume_about.yml", writeJson));
+      context.SaveChanges();
+      
+      AddItems(context, ResumeEducationsJson.LoadResumeEducations($"Data/Resumes/{dateFolder}/carlos_resume_resumeeducations.yml", writeJson).ResumeEducations);
+      AddItems(context, ResumeJobsJson.LoadResumeJobs($"Data/Resumes/{dateFolder}/carlos_resume_resumejobs.yml", writeJson).ResumeJobs);
+      AddItems(context, ResumeSkillsJson.LoadResumeSkills($"Data/Resumes/{dateFolder}/carlos_resume_resumeskills.yml", writeJson).ResumeSkills);
+      AddItems(context, ResumeSocialsJson.LoadResumeSocials($"Data/Resumes/{dateFolder}/carlos_resume_resumesocials.yml", writeJson).ResumeSocials);
+      AddItems(context, ResumeSpokenLanguagesJson.LoadResumeSpokenLanguages($"Data/Resumes/{dateFolder}/carlos_resume_resumespokenlanguages.yml", writeJson).ResumeSpokenLanguages);
+      context.SaveChanges();
+      
+    }
 
     public static void AddItems<T> (ResumeDbContext context, IList<T> list)
     {

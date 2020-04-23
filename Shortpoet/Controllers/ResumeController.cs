@@ -53,5 +53,24 @@ namespace Shortpoet.Controllers
           .FirstOrDefault();
         return new JsonResult(resume);
       }
+      public async Task<IActionResult> FetchLatest()
+      {
+        await _context.Resumes.LoadAsync();
+        var resume = _context.Resumes
+          .Include(r => r.ResumeEducations)
+            .ThenInclude(r => r.Education)
+          .Include(r => r.ResumeJobs)
+            .ThenInclude(r => r.Job)
+          .Include(r => r.ResumeSkills)
+            .ThenInclude(r => r.Skill)
+          .Include(r => r.ResumeSocials)
+            .ThenInclude(r => r.Social)
+          .Include(r => r.ResumeSpokenLanguages)
+            .ThenInclude(r => r.SpokenLanguages)
+          .AsNoTracking()
+          .OrderByDescending(r => r.DateCreated)
+          .FirstOrDefault();
+        return new JsonResult(resume);
+      }
     }
 }
