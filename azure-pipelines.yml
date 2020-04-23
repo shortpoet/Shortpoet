@@ -5,7 +5,7 @@
 
 trigger:
 - dev
-- test
+# - test
 
 pool:
   vmImage: 'windows-latest'
@@ -58,7 +58,7 @@ steps:
     appName: 'Shortpoet'
     package: $(System.ArtifactsDirectory)/**/*.zip
     deploymentMethod: zipDeploy
-    slotName: staging    
+    # slotName: staging    
 
 # - task: AzureWebApp@2
 #   inputs:
