@@ -22,10 +22,11 @@ namespace Shortpoet.Data.Models.Resume
         public string Brief { get; set; }
         public string AboutMe { get; set; }
         public string Interests { get; set; }
-        public virtual ICollection<Education> Educations { get; set; } = new List<Education>();
-        public virtual ICollection<Experience> Experiences { get; set; } = new List<Experience>();
-        public virtual ICollection<Skill> Skills { get; set; } = new List<Skill>();
-        public virtual ICollection<SpokenLanguages> SpokenLanguages { get; set; } = new List<SpokenLanguages>();
+        public virtual ICollection<ResumeEducations> ResumeEducations { get; set; } = new List<ResumeEducations>();
+        public virtual ICollection<ResumeJobs> ResumeJobs { get; set; } = new List<ResumeJobs>();
+        public virtual ICollection<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; } = new List<ResumeSpokenLanguages>();
+        public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
+        public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
 
         public static Resume LoadJson(string path)
         {

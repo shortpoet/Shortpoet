@@ -1,17 +1,16 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-
 namespace Shortpoet.Data.Models.Resume
 {
-    public class SkillJson
+    public class ResumeEducationsJson
     {
-        [JsonProperty("skills")]
-        public IList<Skill> Skills { get; set; }
-        public static SkillJson LoadSkills(string path, Boolean writeJson)
+        [JsonProperty("resumeEducations")]
+        public IList<ResumeEducations> ResumeEducations { get; set; }
+        public static ResumeEducationsJson LoadResumeEducations(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,20 +36,20 @@ namespace Shortpoet.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                SkillJson skills = JsonConvert.DeserializeObject<SkillJson>(json);
+                ResumeEducationsJson resumeEducations = JsonConvert.DeserializeObject<ResumeEducationsJson>(json);
 
-                return skills;
+                return resumeEducations;
             }
         }
 
     }
 
-    public class Skill
+    public class ResumeEducations
     {
-        public int Id { get; set; }
-        public string Type { get; set; }
-        public string Details { get; set; }
-        public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
+        public int ResumeId { get; set; }
+        public virtual Resume Resume { get; set; }
+        public int EducationId { get; set; }
+        public virtual Education Education { get; set; }
 
     }
 }

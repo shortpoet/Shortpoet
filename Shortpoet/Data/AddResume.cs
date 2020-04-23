@@ -12,91 +12,52 @@ namespace Shortpoet.Data
 {
   public class AddResume
   {
-    public static void Seed(ResumeDbContext context , string path, Boolean writeJson)
+    public static void Seed(ResumeDbContext context)
     {
 
-      Resume resume = new Resume();
-      // resume = Resume.LoadJson(path);
-      resume = Resume.LoadResume(path, writeJson);
-      // resume = Resume.YmlToResume(path);
+      Boolean writeJson = false;
 
-      context.Database.OpenConnection();
-      foreach (var x in resume.SpokenLanguages.Reverse()) { 
-        context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.SpokenLanguages ON");
-        context.SpokenLanguages.Add(x); 
-        context.SaveChanges();
-        context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.SpokenLanguages OFF");
-        }
-      foreach (var x in resume.Skills.Reverse()) { 
-        context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.Skills ON");
-        context.Skills.Add(x); 
-        context.SaveChanges();
-        context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.Skills OFF");
-        }
-      foreach (var x in resume.Educations.Reverse()) { 
-        context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.Educations ON");
-        context.Educations.Add(x); 
-        context.SaveChanges();
-        context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.Educations OFF");
-        }
-      foreach (var x in resume.Experiences.Reverse()){
-        foreach (var y in x.Jobs.Reverse()) {
-          context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.Jobs ON");
-          context.Jobs.Add(y);
-          context.SaveChanges();
-          context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.Jobs OFF");
-        }
-        context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.Experiences ON");
-        context.Experiences.Add(x);
-        context.SaveChanges();
-        context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Profiles.Experiences OFF");
-      }
-      context.Database.CloseConnection();
-      context.Add(resume);
+      // string path = "Data/Seed/carlos_resume.yml";
+      // Resume resume = new Resume();
+      // // resume = Resume.LoadJson(path);
+      // resume = Resume.LoadResume(path, writeJson);
+      // // resume = Resume.YmlToResume(path);
+      // context.Add(resume);
+      
+      AddItems(context, EducationJson.LoadEducations("Data/Seed/carlos_resume_educations.yml", writeJson).Educations);
+      AddItems(context, JobJson.LoadJobs("Data/Seed/carlos_resume_jobs.yml", writeJson).Jobs);
+      context.Add(Resume.LoadResume("Data/Seed/carlos_resume_about.yml", writeJson));
+      AddItems(context, SkillJson.LoadSkills("Data/Seed/carlos_resume_skills.yml", writeJson).Skills);
+      AddItems(context, SocialJson.LoadSocials("Data/Seed/carlos_resume_socials.yml", writeJson).Socials);
+      AddItems(context, LanguageJson.LoadLanguages("Data/Seed/carlos_resume_languages.yml", writeJson).SpokenLanguages);
       context.SaveChanges();
-
-      // writing this to be able to load the jobs before the resume and avoid null entry
-      foreach (var experience in resume.Experiences)
-      {
-        foreach (var job in experience.Jobs)
-        {
-          // ####
-          // ## try this
-          // ## https://stackoverflow.com/questions/5212751/how-can-i-get-id-of-inserted-entity-in-entity-framework
-          // ####
-          context.Entry(job).Property("ResumeId").CurrentValue = context.Resumes.Where(r => r.Title == resume.Title).First().Id;
-        }
-      }
-
-      // context.Entry(resume).State = EntityState.Modified;
+      
+      AddItems(context, ResumeEducationsJson.LoadResumeEducations("Data/Seed/carlos_resume_resumeeducations.yml", writeJson).ResumeEducations);
+      AddItems(context, ResumeJobsJson.LoadResumeJobs("Data/Seed/carlos_resume_resumejobs.yml", writeJson).ResumeJobs);
+      AddItems(context, ResumeSkillsJson.LoadResumeSkills("Data/Seed/carlos_resume_resumeskills.yml", writeJson).ResumeSkills);
+      AddItems(context, ResumeSocialsJson.LoadResumeSocials("Data/Seed/carlos_resume_resumesocials.yml", writeJson).ResumeSocials);
+      AddItems(context, ResumeSpokenLanguagesJson.LoadResumeSpokenLanguages("Data/Seed/carlos_resume_resumespokenlanguages.yml", writeJson).ResumeSpokenLanguages);
       context.SaveChanges();
+      
     }
-    public static void Add(ResumeDbContext context , string path, Boolean writeJson)
+
+    public static void AddItems<T> (ResumeDbContext context, IList<T> list)
     {
-
-      Resume resume = new Resume();
-      // resume = Resume.LoadJson(path);
-      resume = Resume.LoadResume(path, writeJson);
-      // resume = Resume.YmlToResume(path);
-
-      context.Add(resume);
-      context.SaveChanges();
-
-      // writing this to be able to load the jobs before the resume and avoid null entry
-      foreach (var experience in resume.Experiences)
+      foreach (var item in list)
       {
-        foreach (var job in experience.Jobs)
-        {
-          // ####
-          // ## try this
-          // ## https://stackoverflow.com/questions/5212751/how-can-i-get-id-of-inserted-entity-in-entity-framework
-          // ####
-          context.Entry(job).Property("ResumeId").CurrentValue = context.Resumes.Where(r => r.Title == resume.Title).First().Id;
-        }
+        context.Add(item);
       }
-
-      // context.Entry(resume).State = EntityState.Modified;
-      context.SaveChanges();
     }
+
+    // public static void LoadEducation(ResumeDbContext context , string path, Boolean writeJson)
+    // {
+
+    //   // resume = Resume.YmlToResume(path);
+    //   context.Add(resume);
+    //   context.SaveChanges();
+      
+    // }
+
+    
   }
 }

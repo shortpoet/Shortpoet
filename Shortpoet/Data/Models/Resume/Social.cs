@@ -7,11 +7,11 @@ using YamlDotNet.Serialization;
 
 namespace Shortpoet.Data.Models.Resume
 {
-    public class SkillJson
+    public class SocialJson
     {
-        [JsonProperty("skills")]
-        public IList<Skill> Skills { get; set; }
-        public static SkillJson LoadSkills(string path, Boolean writeJson)
+        [JsonProperty("socials")]
+        public IList<Social> Socials { get; set; }
+        public static SocialJson LoadSocials(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,20 +37,20 @@ namespace Shortpoet.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                SkillJson skills = JsonConvert.DeserializeObject<SkillJson>(json);
+                SocialJson socials = JsonConvert.DeserializeObject<SocialJson>(json);
 
-                return skills;
+                return socials;
             }
         }
 
     }
 
-    public class Skill
+    public class Social
     {
         public int Id { get; set; }
-        public string Type { get; set; }
-        public string Details { get; set; }
-        public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
+        public string Provider { get; set; }
+        public string Url { get; set; }
+        public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
 
     }
 }

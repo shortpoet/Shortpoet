@@ -34,6 +34,11 @@ export const actions = {
       const response = await axios.get(url)
       
       // console.log(response)
+
+      response.data = response.data.forEach(d => {
+        
+      })
+
       commit(SET_RESUME, response.data)
 
       commit(SET_RESUME_LOADED, true)

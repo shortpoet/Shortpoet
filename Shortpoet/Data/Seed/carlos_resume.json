@@ -10,27 +10,27 @@
   "aboutMe": "As a lifelong polyglot and software developer, I have come to describe myself as a Language Data Specialist. \\n\\r Through living, studying and working internationally, I developed keen and varied insight into human interaction, motivation, and the sheer nitty-gritty of life - witnessed everywhere from hospitals to courthouses and union halls in between. \\n\\r Over time, considering where spoken languages and behavior intersect with data got me interested in programming. The call to bridge the gap between my linguistic expertise and (long-dormant) digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp. \\n\\r Today, I apply my advanced tech skills to analyses that consider where the cultural and the computational collide. This, combined with my fluency for the most widely spoken languages, allows my clients a unique perspective on their field of choice. \\n\\r Showcasing the evolution of these skills in this - <em>work-in-progress</em> - resume site has been a learning process of its own. This site is hosted on <a href=\"https://shortpoet.azurewebsites.net\">Azure</a> with a linked database to dynamically populate different resume formats. Please check out the <a href=\"/pdf\">PDF-friendly</a> version. And coming soon, a guestbook that will fully illustrate the capabilities of a linked data source! 🤓",
   "socials": [
     {
-      "social": "github",
+      "provider": "github",
       "url": "https://github.com/shortpoet"
     },
     {
-      "social": "linkedin",
+      "provider": "linkedin",
       "url": "https://www.linkedin.com/in/carlos-soriano-49aaa97/"
     },
     {
-      "social": "instagram",
+      "provider": "instagram",
       "url": "https://www.instagram.com/shortpoet/"
     },
     {
-      "social": "twitter",
+      "provider": "twitter",
       "url": "https://twitter.com/shortpoet3"
     },
     {
-      "social": "website",
+      "provider": "website",
       "url": "https://www.shortpoet.com"
     },
     {
-      "social": "website hosted",
+      "provider": "website hosted",
       "url": "https://shortpoet.azurewebsites.net"
     }
   ],

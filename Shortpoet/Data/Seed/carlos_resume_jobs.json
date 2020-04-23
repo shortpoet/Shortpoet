@@ -1,0 +1,68 @@
+{
+  "jobs": [
+    {
+      "experienceType": "software",
+      "position": "Software Engineer",
+      "company": "Boeing",
+      "description": "Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with some python and R. Reconstructed legacy Angular data viz products using dotnet and vue. Developed new ETL and frontend architectures and components for reusable data analytics pipeline. Deployment of products using Cloud Foundry, Gitlab CI/CD and other enterprise hosting systems. Liaising with other teams/departments to collaborate in data flow and analytics.  Collaborated with a diverse and distributed team and delivered results in a remote-work environment.",
+      "startDate": "April 2019",
+      "endDate": "April 2020"
+    },
+    {
+      "experienceType": "language",
+      "position": "Freelance Translator / Interpreter",
+      "company": "Various Interpretation Agencies",
+      "description": "Medical, dental and media conferences, on-site medical and legal interpretation for depositions, insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, and various other language-related assignments, primarily in Spanish and Tagalog, some French.",
+      "startDate": "July 2011",
+      "endDate": "Present"
+    },
+    {
+      "experienceType": "language",
+      "position": "QA Tester",
+      "company": "GTL Media",
+      "description": "Translator, linguistic tester, translated texts for various media including video games, film, and legal, checked video games for linguistic bugs and translation errors, translation of .xml databases for in-game script",
+      "startDate": "December 2011",
+      "endDate": "August 2014"
+    },
+    {
+      "experienceType": "language",
+      "position": "Executive Assistant to the CEO",
+      "company": "EZI",
+      "description": "Manila, Philippines. Participated in managing daily operations in a bilingual office setting, supervised staff, attended developmental meetings, tracked and prepared development projects, made calls to and from suppliers and manufacturers, purchased investment property, created investment portfolios and marketing and business plans, gaining insights into the world of Big Business.",
+      "startDate": "January 2008",
+      "endDate": "December 2008"
+    },
+    {
+      "experienceType": "language",
+      "position": "Sinologist",
+      "company": "World Eye Reports",
+      "description": "Shanghai, PRC. Translator, Interpreter, media Sales, wrote articles and sold ads for advertorial project based out of Shanghai.",
+      "startDate": "August 2003",
+      "endDate": "January 2004"
+    },
+    {
+      "experienceType": "sales",
+      "position": "Product Specialist - Sales",
+      "company": "Toyota of Hollywood & Hollywood Electrics – Electric Cycle Dealership",
+      "description": "New and Pre-owned Conventional and Electric Car and Cycle Sales; Sales made in English, Spanish, Tagalog, French, and Mandarin, Self-directed marketing efforts",
+      "startDate": "July 2010",
+      "endDate": "February 2017"
+    },
+    {
+      "experienceType": "hospitality",
+      "position": "Food delivery logistics",
+      "company": "DoorDash and Grubhub",
+      "description": "Operating 2 apps at the same time to maximize earnings, while maintaining customer satisfaction and high ratings, experienced first hand the effects of data collection of market and labor fluctuations and how they determined the logic behind the apps while I was learning to code.",
+      "startDate": "April 2017",
+      "endDate": "April 2019"
+    },
+    {
+      "experienceType": "hospitality",
+      "position": "Grill Chef de Partie",
+      "company": "Many Different Restaurants - mostly a cook, sometimes a bartender",
+      "description": "Post Haus Restaurant - St. Moritz, Switzerland stands out as I ran the gamut from helping plan restaurant concept, designed Grill Station, assisted in menu planning and execution, provided back-end data for owners during the length of the contract, offering particular assistance interpreting for members of the multi-cultural staff and management.",
+      "startDate": "August 1998",
+      "endDate": "August 2018"
+    }
+  ]
+}

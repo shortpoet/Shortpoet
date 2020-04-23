@@ -18,55 +18,59 @@ namespace Shortpoet.Data
     {
     }
 
-    public DbSet<Resume> Resumes { get; set; }
     public DbSet<Education> Educations { get; set; }
-    public DbSet<Experience> Experiences { get; set; }
     public DbSet<Job> Jobs { get; set; }
+    public DbSet<Resume> Resumes { get; set; }
+    public DbSet<ResumeEducations> ResumeEducations { get; set; }
+    public DbSet<ResumeJobs> ResumeJobs { get; set; }
+    public DbSet<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; }
+    public DbSet<ResumeSkills> ResumeSkills { get; set; }
+    public DbSet<ResumeSocials> ResumeSocials { get; set; }
     public DbSet<Skill> Skills { get; set; }
+    public DbSet<Social> Socials { get; set; }
     public DbSet<SpokenLanguages> SpokenLanguages { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<Resume>().ToTable("Resumes", "Profiles")
-        // .HasKey(r => r.ResumeId)
-        ;
       modelBuilder.Entity<Education>().ToTable("Educations", "Profiles")
-        // .HasKey(ed => ed.EducationId)
+        .HasKey(ed => ed.Id)
         ;
+      modelBuilder.Entity<Job>(builder => {
+        builder.ToTable("Jobs", "Profiles");
+        builder.HasKey(j => j.Id);
+      });
+      modelBuilder.Entity<Resume>().ToTable("Resumes", "Profiles")
+        .HasKey(r => r.Id)
+        ;
+      modelBuilder.Entity<ResumeEducations>(builder => {
+        builder.ToTable("ResumeEducations", "Profiles");
+        builder.HasKey(red => new {red.ResumeId, red.EducationId});
+      });
+      modelBuilder.Entity<ResumeJobs>(builder => {
+        builder.ToTable("ResumeJobs", "Profiles");
+        builder.HasKey(rej => new {rej.ResumeId, rej.JobId});
+      });
+      modelBuilder.Entity<ResumeSpokenLanguages>(builder => {
+        builder.ToTable("ResumeSpokenLanguages", "Profiles");
+        builder.HasKey(rel => new {rel.ResumeId, rel.SpokenLanguagesId});
+      });
+      modelBuilder.Entity<ResumeSkills>(builder => {
+        builder.ToTable("ResumeSkills", "Profiles");
+        builder.HasKey(resk => new {resk.ResumeId, resk.SkillId});
+      });
+      modelBuilder.Entity<ResumeSocials>(builder => {
+        builder.ToTable("ResumeSocials", "Profiles");
+        builder.HasKey(reso => new {reso.ResumeId, reso.SocialId});
+      });
       modelBuilder.Entity<Skill>().ToTable("Skills", "Profiles")
         .HasKey(sk => sk.Id)
+        ;
+      modelBuilder.Entity<Social>().ToTable("Socials", "Profiles")
+        .HasKey(so => so.Id)
         ;
       modelBuilder.Entity<SpokenLanguages>().ToTable("SpokenLanguages", "Profiles")
         .HasKey(sl => sl.Id)
         ;
-
-      modelBuilder.Entity<Experience>(builder => {
-        builder.ToTable("Experiences", "Profiles");
-        builder.HasKey(ex => ex.Id);
-        // builder.HasKey(ex => new { ex.ResumeId, ex.ExperienceId });
-        builder.HasOne(ex => ex.Resume)
-          // must have value in WithMany call or duplicate foreign key is made on the navigation property ResumeId
-          // adding nullable to foreign key props in data models avoided merge conflict on insert in dbInit bec it was trying to insert the jobs before the resume was created
-          // but then it just inserts null values
-          .WithMany(ex => ex.Experiences)
-          .HasForeignKey(ex => ex.ResumeId)
-        ;
-        builder.HasMany(ex => ex.Jobs)
-          .WithOne(ex => ex.Experience)
-        ;
-      });
-      modelBuilder.Entity<Job>(builder => {
-        builder.ToTable("Jobs", "Profiles");
-        builder.HasKey(j => j.Id);
-        builder.HasOne(j => j.Experience)
-          .WithMany(ex => ex.Jobs)
-          .HasForeignKey(j => new { j.ResumeId })
-            .OnDelete(DeleteBehavior.NoAction)
-          .HasForeignKey(j => new { j.ExperienceId })
-          // .HasForeignKey(j => new { j.ExperienceId, j.ResumeId })
-            .OnDelete(DeleteBehavior.NoAction)
-        ;
-      });
     }
   }
 }

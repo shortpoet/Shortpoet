@@ -43,18 +43,18 @@ aboutMe: As a lifelong polyglot and software developer,
   Please check out the <a href="/pdf">PDF-friendly</a> version. And coming soon, 
   a guestbook that will fully illustrate the capabilities of a linked data source! 🤓
 socials:
-  - social: github
-    url: https://github.com/shortpoet
-  - social: linkedin
-    url: https://www.linkedin.com/in/carlos-soriano-49aaa97/
-  - social: instagram
-    url: https://www.instagram.com/shortpoet/
-  - social: twitter
-    url: https://twitter.com/shortpoet3
-  - social: website
-    url: https://www.shortpoet.com
-  - social: website hosted
-    url: https://shortpoet.azurewebsites.net
+- provider: github
+  url: https://github.com/shortpoet
+- provider: linkedin
+  url: https://www.linkedin.com/in/carlos-soriano-49aaa97/
+- provider: instagram
+  url: https://www.instagram.com/shortpoet/
+- provider: twitter
+  url: https://twitter.com/shortpoet3
+- provider: website
+  url: https://www.shortpoet.com
+- provider: website hosted
+  url: https://shortpoet.azurewebsites.net
 experiences:
   - id: 1
     type: software

@@ -1,0 +1,10 @@
+---
+resumeSpokenLanguages:
+  - resumeId: 1
+    spokenLanguagesId: 1
+  - resumeId: 1
+    spokenLanguagesId: 2
+  - resumeId: 1
+    spokenLanguagesId: 3
+  - resumeId: 1
+    spokenLanguagesId: 4

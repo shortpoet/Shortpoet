@@ -31,9 +31,7 @@ namespace Shortpoet.Data.Seed
       }
 
       // string path = "Data/Seed/carlos_resume.json";
-      string path = "Data/Seed/carlos_resume.yml";
-      Boolean writeJson = false;
-      AddResume.Seed(context, path, writeJson);
+      AddResume.Seed(context);
 
       Console.WriteLine("#######################");
       Console.WriteLine("Seed Data Context Changes Saved");
