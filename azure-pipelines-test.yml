@@ -54,7 +54,7 @@ steps:
   inputs:
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/test'))
     azureSubscription: 'ShortpoetServiceConnection'
-    appName: 'Shortpoet'
+    appName: 'shortpoet-test'
     package: $(System.ArtifactsDirectory)/**/*.zip
     deploymentMethod: zipDeploy
     # slotName: staging    
