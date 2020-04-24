@@ -10,6 +10,19 @@
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
   </PropertyGroup>
 
+  <Choose>
+    <When Condition=" '$(ASPNETCORE_ENVIRONMENT)'=='Production' ">
+      <PropertyGroup>
+        <NpmCommand>npm run build</NpmCommand>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ASPNETCORE_ENVIRONMENT)'=='Staging' ">
+      <PropertyGroup>
+        <NpmCommand>npm run buildtest</NpmCommand>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.1" />
@@ -59,14 +72,7 @@
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
-    <Choose>
-      <When Condition=" '$(ASPNETCORE_ENVIRONMENT)'=='Production' ">
-        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
-      </When>
-      <When Condition=" '$(ASPNETCORE_ENVIRONMENT)'=='Staging' ">
-        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run buildtest" />
-      </When>
-    </Choose>
+    <Exec WorkingDirectory="$(SpaRoot)" Command="$(NpmCommand)" />
 
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
