@@ -33,7 +33,8 @@ export const actions = {
       const url = rootGetters.getUrlPrefix + resPoint
       // console.log(url)
       const response = await axios.get(url)
-      const experienceTypes = response.data.resumeJobs.map(j => j.job.experienceType).filter((v, i, a) => a.indexOf(v) === i && v !== null)
+      // const experienceTypes = response.data.resumeJobs.map(j => j.job.experienceType).filter((v, i, a) => a.indexOf(v) === i && v !== null)
+      const experienceTypes = ['software', 'language', 'sales', 'hospitality']
       const resume = {
         aboutMe: response.data.aboutMe,
         address: response.data.address,

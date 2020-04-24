@@ -8,7 +8,7 @@
           <div class="resume-content mr-auto">
             <h3 class="mb-0">{{ job.position }}</h3>
             <div class="subheading mb-3">{{ job.company }}</div>
-            <p>{{ job.description }}</p>
+            <p v-html="job.description"></p>
           </div>
           <div class="resume-date text-md-right mt-1">
             <span class="text-primary">{{ job.startDate }} - {{ job.endDate }}</span>
