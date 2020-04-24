@@ -14,9 +14,11 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   testvar: 'testvar'
+  ASPNETCORE_ENVIRONMENT: 'Staging'
 
 steps:
-- script: echo hello from Windows
+- script: echo setting env var
+
 
 - task: UseDotNet@2
   displayName: 'Install .NET Core sdk'
