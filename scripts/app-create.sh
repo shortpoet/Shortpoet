@@ -11,11 +11,12 @@ echo = Creating Resource group $rg
 echo =================================================================================
 az group create --location northcentralus --name $rg
 
-# Create an App Service plan in STANDARD tier (minimum required by deployment slots).
+# Create an App Service plan in FREE tier
+# or S1 STANDARD tier (minimum required by deployment slots).
 echo =================================================================================
 echo = Creating App Service Plan
 echo =================================================================================
-az appservice plan create --name $webappname --resource-group $rg --sku S1
+az appservice plan create --name $webappname --resource-group $rg --sku FREE
 
 # Create a web app.
 echo =================================================================================
