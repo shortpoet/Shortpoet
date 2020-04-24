@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "servelocal": "vue-cli-service serve --host localhost",
     "build": "vue-cli-service build",
+    "buildtest": "cross-env VUE_APP_BACKEND_PREFIX_PROD=https://shortpoet-test.azurewebsites.net vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },

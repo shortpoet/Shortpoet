@@ -1,18 +1,14 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Shortpoet.Migrations
+namespace Shortpoet.MigrationsTest
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialCreateTest : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.EnsureSchema(
-                name: "Profiles");
-
             migrationBuilder.CreateTable(
                 name: "Educations",
-                schema: "Profiles",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -28,7 +24,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Jobs",
-                schema: "Profiles",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -47,7 +42,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Resumes",
-                schema: "Profiles",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -71,7 +65,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Skills",
-                schema: "Profiles",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -86,7 +79,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Socials",
-                schema: "Profiles",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -101,7 +93,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "SpokenLanguages",
-                schema: "Profiles",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -117,7 +108,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "ResumeEducations",
-                schema: "Profiles",
                 columns: table => new
                 {
                     ResumeId = table.Column<int>(nullable: false),
@@ -129,14 +119,12 @@ namespace Shortpoet.Migrations
                     table.ForeignKey(
                         name: "FK_ResumeEducations_Educations_EducationId",
                         column: x => x.EducationId,
-                        principalSchema: "Profiles",
                         principalTable: "Educations",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ResumeEducations_Resumes_ResumeId",
                         column: x => x.ResumeId,
-                        principalSchema: "Profiles",
                         principalTable: "Resumes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -144,7 +132,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "ResumeJobs",
-                schema: "Profiles",
                 columns: table => new
                 {
                     ResumeId = table.Column<int>(nullable: false),
@@ -156,14 +143,12 @@ namespace Shortpoet.Migrations
                     table.ForeignKey(
                         name: "FK_ResumeJobs_Jobs_JobId",
                         column: x => x.JobId,
-                        principalSchema: "Profiles",
                         principalTable: "Jobs",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ResumeJobs_Resumes_ResumeId",
                         column: x => x.ResumeId,
-                        principalSchema: "Profiles",
                         principalTable: "Resumes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -171,7 +156,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "ResumeSkills",
-                schema: "Profiles",
                 columns: table => new
                 {
                     ResumeId = table.Column<int>(nullable: false),
@@ -183,14 +167,12 @@ namespace Shortpoet.Migrations
                     table.ForeignKey(
                         name: "FK_ResumeSkills_Resumes_ResumeId",
                         column: x => x.ResumeId,
-                        principalSchema: "Profiles",
                         principalTable: "Resumes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ResumeSkills_Skills_SkillId",
                         column: x => x.SkillId,
-                        principalSchema: "Profiles",
                         principalTable: "Skills",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -198,7 +180,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "ResumeSocials",
-                schema: "Profiles",
                 columns: table => new
                 {
                     ResumeId = table.Column<int>(nullable: false),
@@ -210,14 +191,12 @@ namespace Shortpoet.Migrations
                     table.ForeignKey(
                         name: "FK_ResumeSocials_Resumes_ResumeId",
                         column: x => x.ResumeId,
-                        principalSchema: "Profiles",
                         principalTable: "Resumes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ResumeSocials_Socials_SocialId",
                         column: x => x.SocialId,
-                        principalSchema: "Profiles",
                         principalTable: "Socials",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -225,7 +204,6 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateTable(
                 name: "ResumeSpokenLanguages",
-                schema: "Profiles",
                 columns: table => new
                 {
                     ResumeId = table.Column<int>(nullable: false),
@@ -237,14 +215,12 @@ namespace Shortpoet.Migrations
                     table.ForeignKey(
                         name: "FK_ResumeSpokenLanguages_Resumes_ResumeId",
                         column: x => x.ResumeId,
-                        principalSchema: "Profiles",
                         principalTable: "Resumes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ResumeSpokenLanguages_SpokenLanguages_SpokenLanguagesId",
                         column: x => x.SpokenLanguagesId,
-                        principalSchema: "Profiles",
                         principalTable: "SpokenLanguages",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -252,31 +228,26 @@ namespace Shortpoet.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResumeEducations_EducationId",
-                schema: "Profiles",
                 table: "ResumeEducations",
                 column: "EducationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResumeJobs_JobId",
-                schema: "Profiles",
                 table: "ResumeJobs",
                 column: "JobId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResumeSkills_SkillId",
-                schema: "Profiles",
                 table: "ResumeSkills",
                 column: "SkillId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResumeSocials_SocialId",
-                schema: "Profiles",
                 table: "ResumeSocials",
                 column: "SocialId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResumeSpokenLanguages_SpokenLanguagesId",
-                schema: "Profiles",
                 table: "ResumeSpokenLanguages",
                 column: "SpokenLanguagesId");
         }
@@ -284,48 +255,37 @@ namespace Shortpoet.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ResumeEducations",
-                schema: "Profiles");
+                name: "ResumeEducations");
 
             migrationBuilder.DropTable(
-                name: "ResumeJobs",
-                schema: "Profiles");
+                name: "ResumeJobs");
 
             migrationBuilder.DropTable(
-                name: "ResumeSkills",
-                schema: "Profiles");
+                name: "ResumeSkills");
 
             migrationBuilder.DropTable(
-                name: "ResumeSocials",
-                schema: "Profiles");
+                name: "ResumeSocials");
 
             migrationBuilder.DropTable(
-                name: "ResumeSpokenLanguages",
-                schema: "Profiles");
+                name: "ResumeSpokenLanguages");
 
             migrationBuilder.DropTable(
-                name: "Educations",
-                schema: "Profiles");
+                name: "Educations");
 
             migrationBuilder.DropTable(
-                name: "Jobs",
-                schema: "Profiles");
+                name: "Jobs");
 
             migrationBuilder.DropTable(
-                name: "Skills",
-                schema: "Profiles");
+                name: "Skills");
 
             migrationBuilder.DropTable(
-                name: "Socials",
-                schema: "Profiles");
+                name: "Socials");
 
             migrationBuilder.DropTable(
-                name: "Resumes",
-                schema: "Profiles");
+                name: "Resumes");
 
             migrationBuilder.DropTable(
-                name: "SpokenLanguages",
-                schema: "Profiles");
+                name: "SpokenLanguages");
         }
     }
 }

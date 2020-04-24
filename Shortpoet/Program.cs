@@ -17,6 +17,13 @@ namespace Shortpoet
     {
         public static void Main(string[] args)
         {
+          // https://andrewlock.net/how-to-set-the-hosting-environment-in-asp-net-core/
+
+          // var config = new ConfigurationBuilder()
+          //   .AddCommandLine(args)
+          //   .Build();
+
+          // var host = CreateHostBuilder(args, config)
           var host = CreateHostBuilder(args)
             .Build();
 
@@ -41,8 +48,8 @@ namespace Shortpoet
           //
           // TODO 
           // this is a temporary hack to add new resumes
-          string dateFolder = "20200423";
-          AddResume.Add(context, dateFolder);
+          // string dateFolder = "20200423";
+          // AddResume.Add(context, dateFolder);
 
           context.Database.Migrate();
         }
@@ -54,11 +61,14 @@ namespace Shortpoet
       }
     }
 
+        // public static IHostBuilder CreateHostBuilder(string[] args, IConfiguration config) =>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                      // .UseConfiguration(config)
+                      .UseStartup<Startup>();
                 });
     }
 }

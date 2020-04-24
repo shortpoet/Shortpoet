@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shortpoet.Data;
 
-namespace Shortpoet.Migrations
+namespace Shortpoet.MigrationsTest
 {
     [DbContext(typeof(ResumeDbContext))]
     partial class ResumeDbContextModelSnapshot : ModelSnapshot

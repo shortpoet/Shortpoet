@@ -10,7 +10,7 @@ using Shortpoet.Data;
 namespace Shortpoet.Migrations
 {
     [DbContext(typeof(ResumeDbContext))]
-    [Migration("20200424031038_InitialCreate")]
+    [Migration("20200424191426_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace Shortpoet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Educations","Profiles");
+                    b.ToTable("Educations");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Job", b =>
@@ -69,7 +69,7 @@ namespace Shortpoet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Jobs","Profiles");
+                    b.ToTable("Jobs");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Resume", b =>
@@ -114,7 +114,7 @@ namespace Shortpoet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Resumes","Profiles");
+                    b.ToTable("Resumes");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeEducations", b =>
@@ -129,7 +129,7 @@ namespace Shortpoet.Migrations
 
                     b.HasIndex("EducationId");
 
-                    b.ToTable("ResumeEducations","Profiles");
+                    b.ToTable("ResumeEducations");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeJobs", b =>
@@ -144,7 +144,7 @@ namespace Shortpoet.Migrations
 
                     b.HasIndex("JobId");
 
-                    b.ToTable("ResumeJobs","Profiles");
+                    b.ToTable("ResumeJobs");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSkills", b =>
@@ -159,7 +159,7 @@ namespace Shortpoet.Migrations
 
                     b.HasIndex("SkillId");
 
-                    b.ToTable("ResumeSkills","Profiles");
+                    b.ToTable("ResumeSkills");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSocials", b =>
@@ -174,7 +174,7 @@ namespace Shortpoet.Migrations
 
                     b.HasIndex("SocialId");
 
-                    b.ToTable("ResumeSocials","Profiles");
+                    b.ToTable("ResumeSocials");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSpokenLanguages", b =>
@@ -189,7 +189,7 @@ namespace Shortpoet.Migrations
 
                     b.HasIndex("SpokenLanguagesId");
 
-                    b.ToTable("ResumeSpokenLanguages","Profiles");
+                    b.ToTable("ResumeSpokenLanguages");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Skill", b =>
@@ -207,7 +207,7 @@ namespace Shortpoet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Skills","Profiles");
+                    b.ToTable("Skills");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.Social", b =>
@@ -225,7 +225,7 @@ namespace Shortpoet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Socials","Profiles");
+                    b.ToTable("Socials");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.SpokenLanguages", b =>
@@ -246,7 +246,7 @@ namespace Shortpoet.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SpokenLanguages","Profiles");
+                    b.ToTable("SpokenLanguages");
                 });
 
             modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeEducations", b =>

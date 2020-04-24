@@ -59,7 +59,14 @@
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+    <Choose>
+      <When Condition=" '$(ASPNETCORE_ENVIRONMENT)'=='Production' ">
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
+      </When>
+      <When Condition=" '$(ASPNETCORE_ENVIRONMENT)'=='Staging' ">
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run buildtest" />
+      </When>
+    </Choose>
 
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
