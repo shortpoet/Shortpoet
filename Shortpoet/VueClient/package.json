@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "servelocal": "vue-cli-service serve --host localhost",
     "build": "vue-cli-service build",
-    "buildtest": "cross-env VUE_APP_BACKEND_PREFIX_PROD=https://shortpoet-test.azurewebsites.net vue-cli-service build",
+    "buildtest": "cross-env VUE_APP_BACKEND_PREFIX_PROD=\"https://shortpoet-test.azurewebsites.net\" vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -48,6 +48,7 @@
     "@vue/cli-service": "~4.2.0",
     "@vue/test-utils": "1.0.0-beta.31",
     "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
     "sass": "^1.26.3",
