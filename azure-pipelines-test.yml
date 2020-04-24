@@ -13,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  testvar: 'testvar'
 
 steps:
 - script: echo hello from Windows
