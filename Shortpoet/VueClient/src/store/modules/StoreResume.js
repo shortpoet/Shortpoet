@@ -31,8 +31,9 @@ export const actions = {
     try {
       const resPoint = rootGetters.getEnv === 'production' ? endpoints.resume.RESUME_FETCH_LATEST_API : endpoints.resume.RESUME_FETCH_LATEST_API
       const url = rootGetters.getUrlPrefix + resPoint
-      console.log(url)
+      // console.log(url)
       const response = await axios.get(url)
+      // console.log(response)
       // const experienceTypes = response.data.resumeJobs.map(j => j.job.experienceType).filter((v, i, a) => a.indexOf(v) === i && v !== null)
       const experienceTypes = ['software', 'language', 'sales', 'hospitality']
       const resume = {
@@ -62,7 +63,7 @@ export const actions = {
 
       // TODO move this copy function to server-side when updating to update hardResume
       // copy(JSON.parse(JSON.stringify(resume)))
-      console.log(resume)
+      // console.log(resume)
 
       commit(SET_RESUME, resume)
 

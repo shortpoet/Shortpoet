@@ -17,13 +17,7 @@ namespace Shortpoet.Data
 
     // https://stackoverflow.com/questions/41420957/how-can-i-get-ihostingenvironment-from-dbcontext-in-asp-net-core
     // https://stackoverflow.com/questions/39499470/dynamically-changing-schema-in-entity-framework-core/50529432#50529432
-    private readonly IWebHostEnvironment _env;
-    // public ResumeDbContext (IWebHostEnvironment env, DbContextOptions<ResumeDbContext> options)
-    //     : base(options)
-    // {
-    //   _env = env;
-    // }
-
+    // ended up setting this using db login and roles default schema which are triggered by env vars
     public ResumeDbContext (DbContextOptions<ResumeDbContext> options)
         : base(options)
     {
@@ -40,24 +34,6 @@ namespace Shortpoet.Data
     public DbSet<Skill> Skills { get; set; }
     public DbSet<Social> Socials { get; set; }
     public DbSet<SpokenLanguages> SpokenLanguages { get; set; }
-    private string dynamicSchema;
-    public void GetSchemaName() {
-      if(_env.EnvironmentName == "Production")
-      {
-        Console.WriteLine("######################");
-        Console.WriteLine("## Get Schema Name");
-        Console.WriteLine(_env.EnvironmentName);
-        dynamicSchema =  "Profiles";
-      } else {
-        Console.WriteLine("######################");
-        Console.WriteLine("## Get Schema Name");
-        Console.WriteLine(_env.EnvironmentName);
-        dynamicSchema = "TestProfiles";
-      }
-    }
-    // private string schemaName = dynamicSchema;
-    // private string schemaName = "Profiles";
-    // private string schemaName = "TestProfiles";
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

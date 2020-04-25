@@ -9,8 +9,6 @@ export const index = {
 
   BACKEND_PREFIX_PROD: process.env.VUE_APP_BACKEND_PREFIX_PROD,
 
-  // BACKEND_PREFIX_PROD: window.location.protocol + '//' + window.location.host,
-  // BACKEND_PREFIX_PROD: 'https://localhost:5001',
   BACKEND_PREFIX_DEV: process.env.VUE_APP_BACKEND_PREFIX_LOCAL
 }
 export const resume = {

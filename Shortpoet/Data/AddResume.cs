@@ -59,7 +59,7 @@ namespace Shortpoet.Data
 
     public static void AddItems<T> (ResumeDbContext context, IList<T> list)
     {
-      foreach (var item in list)
+      foreach (var item in list.Reverse())
       {
         context.Add(item);
       }

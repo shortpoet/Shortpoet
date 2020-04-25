@@ -16,7 +16,14 @@
             </div>
             <div class="d-flex flex-column">
               <h6 style="font-family: 'Saira Extra Condensed';" class="">{{ job.company }}</h6>
-              <p style="font-family: 'Open Sans';" class="mb-2" v-html="job.description"></p>
+              <div
+                v-for="(text, i) in job.description.split('\\n\\r')"
+                :key="i"
+                class="mb-2"
+              >
+                <p style="font-family: 'Open Sans';" v-html="text"></p>
+              </div>
+
             </div>
           </div>
         </div>

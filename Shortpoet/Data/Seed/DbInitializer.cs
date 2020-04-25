@@ -30,7 +30,6 @@ namespace Shortpoet.Data.Seed
         return;   // DB has been seeded
       }
 
-      // string path = "Data/Seed/carlos_resume.json";
       AddResume.Seed(context);
 
       Console.WriteLine("#######################");

@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shortpoet.Data;
 
-namespace Shortpoet.Migrations
+namespace Shortpoet.MigrationsTest
 {
     [DbContext(typeof(ResumeDbContext))]
-    [Migration("20200424191426_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200424225822_InitialCreateTest")]
+    partial class InitialCreateTest
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
