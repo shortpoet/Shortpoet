@@ -31,6 +31,18 @@
     {
       "resumeId": 1,
       "jobId": 8
+    },
+    {
+      "resumeId": 1,
+      "jobId": 9
+    },
+    {
+      "resumeId": 1,
+      "jobId": 10
+    },
+    {
+      "resumeId": 1,
+      "jobId": 11
     }
   ]
 }
