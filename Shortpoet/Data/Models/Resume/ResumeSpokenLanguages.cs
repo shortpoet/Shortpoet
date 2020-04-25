@@ -42,6 +42,15 @@ namespace Shortpoet.Data.Models.Resume
                 return resumeSpokenLanguages;
             }
         }
+        public static ResumeSpokenLanguagesJson LoadJson(string path)
+        {
+            using (StreamReader r = new StreamReader(path))
+            {
+                string json = r.ReadToEnd();
+                ResumeSpokenLanguagesJson resume = JsonConvert.DeserializeObject<ResumeSpokenLanguagesJson>(json);
+                return resume;
+            }
+        }
 
     }
     public class ResumeSpokenLanguages

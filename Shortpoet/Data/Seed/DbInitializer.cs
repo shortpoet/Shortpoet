@@ -30,7 +30,7 @@ namespace Shortpoet.Data.Seed
         return;   // DB has been seeded
       }
 
-      AddResume.Seed(context);
+      AddResume.Seed(context, environment);
 
       Console.WriteLine("#######################");
       Console.WriteLine("Seed Data Context Changes Saved");

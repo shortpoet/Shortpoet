@@ -42,6 +42,15 @@ namespace Shortpoet.Data.Models.Resume
                 return educations;
             }
         }
+        public static EducationJson LoadJson(string path)
+        {
+            using (StreamReader r = new StreamReader(path))
+            {
+                string json = r.ReadToEnd();
+                EducationJson resume = JsonConvert.DeserializeObject<EducationJson>(json);
+                return resume;
+            }
+        }
 
     }
     public class Education

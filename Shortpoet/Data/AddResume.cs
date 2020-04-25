@@ -12,7 +12,7 @@ namespace Shortpoet.Data
 {
   public class AddResume
   {
-    public static void Seed(ResumeDbContext context)
+    public static void Seed(ResumeDbContext context, IWebHostEnvironment environment)
     {
 
       Boolean writeJson = false;
@@ -24,20 +24,43 @@ namespace Shortpoet.Data
       // // resume = Resume.YmlToResume(path);
       // context.Add(resume);
       
-      AddItems(context, EducationJson.LoadEducations("Data/Seed/carlos_resume_educations.yml", writeJson).Educations);
-      AddItems(context, JobJson.LoadJobs("Data/Seed/carlos_resume_jobs.yml", writeJson).Jobs);
-      context.Add(Resume.LoadResume("Data/Seed/carlos_resume_about.yml", writeJson));
-      AddItems(context, SkillJson.LoadSkills("Data/Seed/carlos_resume_skills.yml", writeJson).Skills);
-      AddItems(context, SocialJson.LoadSocials("Data/Seed/carlos_resume_socials.yml", writeJson).Socials);
-      AddItems(context, LanguageJson.LoadLanguages("Data/Seed/carlos_resume_languages.yml", writeJson).SpokenLanguages);
-      context.SaveChanges();
-      
-      AddItems(context, ResumeEducationsJson.LoadResumeEducations("Data/Seed/carlos_resume_resumeeducations.yml", writeJson).ResumeEducations);
-      AddItems(context, ResumeJobsJson.LoadResumeJobs("Data/Seed/carlos_resume_resumejobs.yml", writeJson).ResumeJobs);
-      AddItems(context, ResumeSkillsJson.LoadResumeSkills("Data/Seed/carlos_resume_resumeskills.yml", writeJson).ResumeSkills);
-      AddItems(context, ResumeSocialsJson.LoadResumeSocials("Data/Seed/carlos_resume_resumesocials.yml", writeJson).ResumeSocials);
-      AddItems(context, ResumeSpokenLanguagesJson.LoadResumeSpokenLanguages("Data/Seed/carlos_resume_resumespokenlanguages.yml", writeJson).ResumeSpokenLanguages);
-      context.SaveChanges();
+      if (environment.EnvironmentName == "Development")
+      {
+        AddItems(context, EducationJson.LoadEducations("Data/Seed/carlos_resume_educations.yml", writeJson).Educations);
+        AddItems(context, JobJson.LoadJobs("Data/Seed/carlos_resume_jobs.yml", writeJson).Jobs);
+        context.Add(Resume.LoadResume("Data/Seed/carlos_resume_about.yml", writeJson));
+        AddItems(context, SkillJson.LoadSkills("Data/Seed/carlos_resume_skills.yml", writeJson).Skills);
+        AddItems(context, SocialJson.LoadSocials("Data/Seed/carlos_resume_socials.yml", writeJson).Socials);
+        AddItems(context, LanguageJson.LoadLanguages("Data/Seed/carlos_resume_languages.yml", writeJson).SpokenLanguages);
+        context.SaveChanges();
+        
+        AddItems(context, ResumeEducationsJson.LoadResumeEducations("Data/Seed/carlos_resume_resumeeducations.yml", writeJson).ResumeEducations);
+        AddItems(context, ResumeJobsJson.LoadResumeJobs("Data/Seed/carlos_resume_resumejobs.yml", writeJson).ResumeJobs);
+        AddItems(context, ResumeSkillsJson.LoadResumeSkills("Data/Seed/carlos_resume_resumeskills.yml", writeJson).ResumeSkills);
+        AddItems(context, ResumeSocialsJson.LoadResumeSocials("Data/Seed/carlos_resume_resumesocials.yml", writeJson).ResumeSocials);
+        AddItems(context, ResumeSpokenLanguagesJson.LoadResumeSpokenLanguages("Data/Seed/carlos_resume_resumespokenlanguages.yml", writeJson).ResumeSpokenLanguages);
+        context.SaveChanges();
+
+      }
+      else 
+      {
+        AddItems(context, EducationJson.LoadJson("Data/Seed/carlos_resume_educations.yml").Educations);
+        AddItems(context, JobJson.LoadJson("Data/Seed/carlos_resume_jobs.yml").Jobs);
+        context.Add(Resume.LoadJson("Data/Seed/carlos_resume_about.yml"));
+        AddItems(context, SkillJson.LoadJson("Data/Seed/carlos_resume_skills.yml").Skills);
+        AddItems(context, SocialJson.LoadJson("Data/Seed/carlos_resume_socials.yml").Socials);
+        AddItems(context, LanguageJson.LoadJson("Data/Seed/carlos_resume_languages.yml").SpokenLanguages);
+        context.SaveChanges();
+        
+        AddItems(context, ResumeEducationsJson.LoadJson("Data/Seed/carlos_resume_resumeeducations.yml").ResumeEducations);
+        AddItems(context, ResumeJobsJson.LoadJson("Data/Seed/carlos_resume_resumejobs.yml").ResumeJobs);
+        AddItems(context, ResumeSkillsJson.LoadJson("Data/Seed/carlos_resume_resumeskills.yml").ResumeSkills);
+        AddItems(context, ResumeSocialsJson.LoadJson("Data/Seed/carlos_resume_resumesocials.yml").ResumeSocials);
+        AddItems(context, ResumeSpokenLanguagesJson.LoadJson("Data/Seed/carlos_resume_resumespokenlanguages.yml").ResumeSpokenLanguages);
+        context.SaveChanges();
+
+      }
+
       
     }
     public static void Add(ResumeDbContext context, string dateFolder)
