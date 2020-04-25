@@ -16,6 +16,7 @@ Vue.use(Vuex)
 
 export const rootGetters = {
   getUrlPrefix (state) {
+    // console.log(process.env)
     return state.environment === 'production' ? endpoints.index.BACKEND_PREFIX_PROD : endpoints.index.BACKEND_PREFIX_DEV
   },
   getEnv (state) {

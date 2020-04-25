@@ -1,0 +1,71 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- test
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  testvar: 'testvar'
+  ASPNETCORE_ENVIRONMENT: 'Staging'
+
+steps:
+- script: echo setting env var
+
+
+- task: UseDotNet@2
+  displayName: 'Install .NET Core sdk'
+  inputs:
+    packageType: sdk
+    version: 3.1.100
+    installationPath: $(Agent.ToolsDirectory)/dotnet
+
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:publishUrl="$(System.DefaultWorkingDirectory)\WebAppContent"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)\WebAppContent'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: VSTest@2
+  inputs:
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: AzureWebApp@1
+  inputs:
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/test'))
+    azureSubscription: 'ShortpoetTestServiceConnection'
+    appName: 'shortpoet-test'
+    package: $(System.ArtifactsDirectory)/**/*.zip
+    deploymentMethod: zipDeploy
+    # slotName: staging    
+
+# - task: AzureWebApp@2
+#   inputs:
+#     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+#     azureSubscription: 'ShortpoetServiceConnection'
+#     appName: 'Shortpoet'
+#     package: $(System.ArtifactsDirectory)/**/*.zip
+#     deploymentMethod: zipDeploy

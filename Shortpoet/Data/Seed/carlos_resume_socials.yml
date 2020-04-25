@@ -1,0 +1,14 @@
+---
+socials:
+- provider: github
+  url: https://github.com/shortpoet
+- provider: linkedin
+  url: https://www.linkedin.com/in/carlos-soriano-49aaa97/
+- provider: instagram
+  url: https://www.instagram.com/shortpoet/
+- provider: twitter
+  url: https://twitter.com/shortpoet3
+- provider: website
+  url: https://www.shortpoet.com
+- provider: website hosted
+  url: https://shortpoet.azurewebsites.net

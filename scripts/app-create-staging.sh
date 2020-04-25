@@ -59,3 +59,7 @@ echo = Browse to Deployment Slot \"Staging\"
 echo =================================================================================
 echo http://$webappname.azurewebsites.net
 } > ./logs/$webappname$DateToday
+
+# TODO
+#
+# Add service connection to pipeline.  Think this has to be done through GUI because I had to reauth to see the resource groups but maybe not 

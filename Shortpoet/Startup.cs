@@ -19,21 +19,45 @@ namespace Shortpoet
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
+            Environment = environment;
         }
-
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment Environment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            if (Environment.IsDevelopment())
+            {
+                services.AddDbContext<ResumeDbContext>(options =>
+                    options
+                        .UseSqlServer(
+                            Configuration.GetConnectionString("DefaultConnectionTest"))
+                        .EnableSensitiveDataLogging()
+                        );
+
+            }
+            else if (Environment.IsStaging()) 
+            {
+                services.AddDbContext<ResumeDbContext>(options =>
+                    options
+                        .UseSqlServer(
+                            Configuration.GetConnectionString("DefaultConnectionTest"))
+                        .EnableSensitiveDataLogging()
+                        );    
+            } 
+            else if (Environment.IsProduction())
+            {
             services.AddDbContext<ResumeDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection"))
-                    // .EnableSensitiveDataLogging()
+                options
+                    .UseSqlServer(
+                        Configuration.GetConnectionString("DefaultConnection"))
+                    .EnableSensitiveDataLogging()
                     );
+            }
 
             // services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
             //     .AddEntityFrameworkStores<ApplicationDbContext>();

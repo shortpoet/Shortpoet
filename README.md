@@ -24,7 +24,14 @@ https://blog.emojipedia.org/emoji-flags-explained/
 https://alligator.io/vuejs/vue-modal-component/
 http://vorillaz.github.io/devicons/#/main
 https://github.com/feathericons/feather
+
 # Azure
+
+- when setting up test app aspnetcore_environment staging variable didn't seem to get set in kudu so when/choose in csproj was failing
+- set it in pipelines also ensured cross-env is npm installed so that backend_prefix can be set in package.json
+- also need to enable new ip
+
+# azure links
 
 https://github.com/Azure-Samples
 

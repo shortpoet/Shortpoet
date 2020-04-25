@@ -17,13 +17,20 @@ namespace Shortpoet
     {
         public static void Main(string[] args)
         {
-      var host = CreateHostBuilder(args)
-        .Build();
+          // https://andrewlock.net/how-to-set-the-hosting-environment-in-asp-net-core/
 
-      CreateDbIfNotExists(host);
+          // var config = new ConfigurationBuilder()
+          //   .AddCommandLine(args)
+          //   .Build();
 
-      host.Run();
-    }
+          // var host = CreateHostBuilder(args, config)
+          var host = CreateHostBuilder(args)
+            .Build();
+
+          CreateDbIfNotExists(host);
+
+          host.Run();
+        }
     // adding this method to init db
     private static void CreateDbIfNotExists(IHost host)
     {
@@ -38,6 +45,12 @@ namespace Shortpoet
           // run this code first before DBInit is written to test the rest of the setup
           // context.Database.EnsureCreated();
           DbInitializer.InitializeDb(context, hostingEnvironment);
+          //
+          // TODO 
+          // this is a temporary hack to add new resumes
+          // string dateFolder = "20200423";
+          // AddResume.Add(context, dateFolder);
+
           context.Database.Migrate();
         }
         catch (Exception ex)
@@ -48,11 +61,14 @@ namespace Shortpoet
       }
     }
 
+        // public static IHostBuilder CreateHostBuilder(string[] args, IConfiguration config) =>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                      // .UseConfiguration(config)
+                      .UseStartup<Startup>();
                 });
     }
 }

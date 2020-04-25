@@ -5,7 +5,6 @@
 
 trigger:
 - dev
-# - test
 
 pool:
   vmImage: 'windows-latest'
@@ -14,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  ASPNETCORE_ENVIRONMENT: 'Production'
 
 steps:
 - script: echo hello from Windows
