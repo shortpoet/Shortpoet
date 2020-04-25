@@ -47,8 +47,8 @@ namespace Shortpoet.Data.Models.Resume
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                ResumeSocialsJson resume = JsonConvert.DeserializeObject<ResumeSocialsJson>(json);
-                return resume;
+                ResumeSocialsJson resumeSocials = JsonConvert.DeserializeObject<ResumeSocialsJson>(json);
+                return resumeSocials;
             }
         }
 
