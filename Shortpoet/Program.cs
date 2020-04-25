@@ -48,8 +48,8 @@ namespace Shortpoet
           //
           // TODO 
           // this is a temporary hack to add new resumes
-          string dateFolder = "20200423";
-          AddResume.Add(context, dateFolder, hostingEnvironment);
+          // string dateFolder = "20200423";
+          // AddResume.Add(context, dateFolder, hostingEnvironment);
 
           context.Database.Migrate();
         }

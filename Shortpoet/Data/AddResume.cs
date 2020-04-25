@@ -15,7 +15,7 @@ namespace Shortpoet.Data
     public static void Seed(ResumeDbContext context, IWebHostEnvironment environment)
     {
 
-      Boolean writeJson = false;
+      Boolean writeJson = true;
 
       // string path = "Data/Seed/carlos_resume.yml";
       // Resume resume = new Resume();
