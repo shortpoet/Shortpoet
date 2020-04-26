@@ -30,41 +30,41 @@ namespace Shortpoet
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // if (Environment.IsDevelopment())
-            // {
-            //     services.AddDbContext<ResumeDbContext>(options =>
-            //         options
-            //             .UseSqlServer(
-            //                 Configuration.GetConnectionString("DefaultConnectionTest"))
-            //             .EnableSensitiveDataLogging()
-            //             );
+            if (Environment.IsDevelopment())
+            {
+                services.AddDbContext<ResumeDbContext>(options =>
+                    options
+                        .UseSqlServer(
+                            Configuration.GetConnectionString("DefaultConnectionTest"))
+                        .EnableSensitiveDataLogging()
+                        );
 
-            // }
-            // else if (Environment.IsStaging()) 
-            // {
-            //     services.AddDbContext<ResumeDbContext>(options =>
-            //         options
-            //             .UseSqlServer(
-            //                 Configuration.GetConnectionString("DefaultConnectionTest"))
-            //             .EnableSensitiveDataLogging()
-            //             );    
-            // } 
-            // else if (Environment.IsProduction())
-            // {
-            // services.AddDbContext<ResumeDbContext>(options =>
-            //     options
-            //         .UseSqlServer(
-            //             Configuration.GetConnectionString("DefaultConnection"))
-            //         .EnableSensitiveDataLogging()
-            //         );
-            // }
-
+            }
+            else if (Environment.IsStaging()) 
+            {
+                services.AddDbContext<ResumeDbContext>(options =>
+                    options
+                        .UseSqlServer(
+                            Configuration.GetConnectionString("DefaultConnectionTest"))
+                        .EnableSensitiveDataLogging()
+                        );    
+            } 
+            else if (Environment.IsProduction())
+            {
             services.AddDbContext<ResumeDbContext>(options =>
                 options
                     .UseSqlServer(
-                        Configuration.GetConnectionString("DefaultConnectionTest"))
+                        Configuration.GetConnectionString("DefaultConnection"))
                     .EnableSensitiveDataLogging()
                     );
+            }
+
+            // services.AddDbContext<ResumeDbContext>(options =>
+            //     options
+            //         .UseSqlServer(
+            //             Configuration.GetConnectionString("DefaultConnectionTest"))
+            //         .EnableSensitiveDataLogging()
+            //         );
 
             // services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
             //     .AddEntityFrameworkStores<ApplicationDbContext>();

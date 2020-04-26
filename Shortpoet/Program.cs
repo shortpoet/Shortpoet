@@ -44,6 +44,15 @@ namespace Shortpoet
           var hostingEnvironment = services.GetService<IWebHostEnvironment>();
           // run this code first before DBInit is written to test the rest of the setup
           // context.Database.EnsureCreated();
+
+
+          Console.WriteLine("############################");
+          Console.WriteLine("About to run CreateDbifNot Exists");
+          Console.WriteLine("############################");
+          Console.WriteLine("Here is connection string");
+          Console.WriteLine(context.Database.GetDbConnection().ConnectionString);
+
+
           DbInitializer.InitializeDb(context, hostingEnvironment);
           //
           // TODO 

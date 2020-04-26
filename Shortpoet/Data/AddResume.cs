@@ -23,7 +23,7 @@ namespace Shortpoet.Data
       AddItems(context, SkillJson.LoadJson("Data/Seed/carlos_resume_skills.json").Skills);
       AddItems(context, SocialJson.LoadJson("Data/Seed/carlos_resume_socials.json").Socials);
       AddItems(context, LanguageJson.LoadJson("Data/Seed/carlos_resume_languages.json").SpokenLanguages);
-      // context.SaveChanges();
+      context.SaveChanges();
       
       AddItems(context, ResumeEducationsJson.LoadJson("Data/Seed/carlos_resume_resumeeducations.json").ResumeEducations);
       AddItems(context, ResumeJobsJson.LoadJson("Data/Seed/carlos_resume_resumejobs.json").ResumeJobs);
