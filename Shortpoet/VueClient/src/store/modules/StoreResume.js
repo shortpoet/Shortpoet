@@ -32,7 +32,10 @@ export const actions = {
       const resPoint = rootGetters.getEnv === 'production' ? endpoints.resume.RESUME_FETCH_LATEST_API : endpoints.resume.RESUME_FETCH_LATEST_API
       const url = rootGetters.getUrlPrefix + resPoint
       // console.log(url)
-      const response = await axios.get(url)
+      const config = {
+        headers: {'Access-Control-Allow-Origin': '*'}
+      };
+      const response = await axios.get(url, config)
       // console.log(response)
       // const experienceTypes = response.data.resumeJobs.map(j => j.job.experienceType).filter((v, i, a) => a.indexOf(v) === i && v !== null)
       const experienceTypes = ['software', 'language', 'sales', 'hospitality']
