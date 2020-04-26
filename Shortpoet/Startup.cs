@@ -33,7 +33,7 @@ namespace Shortpoet
         {
             if (Environment.IsDevelopment())
             {
-                services.AddDbContext<ResumeDbContext>(options =>
+                services.AddDbContext<ResumeTestDbContext>(options =>
                     options
                         .UseSqlServer(
                             Configuration.GetConnectionString("DefaultConnectionTest"))
@@ -43,7 +43,7 @@ namespace Shortpoet
             }
             else if (Environment.IsStaging()) 
             {
-                services.AddDbContext<ResumeDbContext>(options =>
+                services.AddDbContext<ResumeTestDbContext>(options =>
                     options
                         .UseSqlServer(
                             Configuration.GetConnectionString("DefaultConnectionTest"))
