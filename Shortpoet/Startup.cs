@@ -105,7 +105,8 @@ namespace Shortpoet
                 // for some reason it won't recognize the urls if not allow all
                 policy.AllowAnyOrigin()
                     .AllowAnyHeader()
-                    .AllowAnyMethod();
+                    .AllowAnyMethod()
+                    .Build();
                 });
             });
 
