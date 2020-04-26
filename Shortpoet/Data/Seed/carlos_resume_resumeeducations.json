@@ -1,0 +1,16 @@
+{
+  "resumeEducations": [
+    {
+      "resumeId": "1",
+      "educationId": "1"
+    },
+    {
+      "resumeId": "1",
+      "educationId": "2"
+    },
+    {
+      "resumeId": "1",
+      "educationId": "3"
+    }
+  ]
+}

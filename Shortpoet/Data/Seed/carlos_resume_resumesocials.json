@@ -1,0 +1,28 @@
+{
+  "resumeSocials": [
+    {
+      "resumeId": "1",
+      "socialId": "1"
+    },
+    {
+      "resumeId": "1",
+      "socialId": "2"
+    },
+    {
+      "resumeId": "1",
+      "socialId": "3"
+    },
+    {
+      "resumeId": "1",
+      "socialId": "4"
+    },
+    {
+      "resumeId": "1",
+      "socialId": "5"
+    },
+    {
+      "resumeId": "1",
+      "socialId": "6"
+    }
+  ]
+}

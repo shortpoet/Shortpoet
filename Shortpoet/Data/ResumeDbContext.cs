@@ -38,15 +38,30 @@ namespace Shortpoet.Data
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       
-      modelBuilder.Entity<Education>().ToTable("Educations")
-        .HasKey(ed => ed.Id)
-        ;
+      modelBuilder.Entity<Education>(builder => {
+        builder.ToTable("Educations");
+        // .HasKey(ed => ed.Id)
+      });
       modelBuilder.Entity<Job>(builder => {
         builder.ToTable("Jobs");
-        builder.HasKey(j => j.Id);
+        // builder.HasKey(j => j.Id);
       });
-      modelBuilder.Entity<Resume>().ToTable("Resumes")
-        .HasKey(r => r.Id)
+      modelBuilder.Entity<Resume>(builder => {
+        builder.ToTable("Resumes")
+          // .HasKey(r => r.Id)
+        ;
+      });
+      modelBuilder.Entity<Skill>()
+        .ToTable("Skills")
+        // .HasKey(sk => sk.Id)
+        ;
+      modelBuilder.Entity<Social>()
+        .ToTable("Socials")
+        // .HasKey(so => so.Id)
+        ;
+      modelBuilder.Entity<SpokenLanguages>()
+        .ToTable("SpokenLanguages")
+        // .HasKey(sl => sl.Id)
         ;
       modelBuilder.Entity<ResumeEducations>(builder => {
         builder.ToTable("ResumeEducations");
@@ -68,15 +83,6 @@ namespace Shortpoet.Data
         builder.ToTable("ResumeSocials");
         builder.HasKey(reso => new {reso.ResumeId, reso.SocialId});
       });
-      modelBuilder.Entity<Skill>().ToTable("Skills")
-        .HasKey(sk => sk.Id)
-        ;
-      modelBuilder.Entity<Social>().ToTable("Socials")
-        .HasKey(so => so.Id)
-        ;
-      modelBuilder.Entity<SpokenLanguages>().ToTable("SpokenLanguages")
-        .HasKey(sl => sl.Id)
-        ;
     }
   }
 }

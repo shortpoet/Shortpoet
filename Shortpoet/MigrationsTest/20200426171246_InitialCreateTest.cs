@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Shortpoet.Migrations
+namespace Shortpoet.MigrationsTest
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialCreateTest : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
