@@ -9,7 +9,11 @@ select * from Profiles.Experiences
 select * from Profiles.Resumes
 select * from dbo.__EFMigrationsHistory
 
-drop table Profiles.Educations
+
+delete from Profiles.SpokenLanguages
+delete from Profiles.Skills
+delete from Profiles.Jobs
+delete from Profiles.Resumes
 
 drop table Profiles.ResumeSpokenLanguages
 drop table Profiles.ResumeSkills
@@ -24,15 +28,35 @@ drop table Profiles.Socials
 drop table Profiles.Resumes
 drop table Profiles.__EFMigrationsHistory
 
-drop table ProfilesTest.ResumeSpokenLanguages
-drop table ProfilesTest.ResumeSkills
-drop table ProfilesTest.ResumeJobs
-drop table ProfilesTest.ResumeEducations
-drop table ProfilesTest.ResumeSocials
-drop table ProfilesTest.Educations
-drop table ProfilesTest.SpokenLanguages
-drop table ProfilesTest.Skills
-drop table ProfilesTest.Jobs
-drop table ProfilesTest.Socials
-drop table ProfilesTest.Resumes
-drop table ProfilesTest.__EFMigrationsHistory
+select * from Profiles.Resumes
+select * from Profiles.ResumeSkills
+select * from Profiles.Resumes
+select * from Profiles.ResumeSkills
+
+select * from Profiles.Resumes
+select * from Profiles.ResumeSkills
+select * from Profiles.Resumes
+select * from Profiles.ResumeSkills
+
+
+DELETE FROM Profiles.Resumes
+delete from Profiles.SpokenLanguages
+delete from Profiles.Skills
+delete from Profiles.Jobs
+delete from Profiles.Educations
+WHERE Id = 1
+
+TRUNCATE TABLE Profiles.Resumes
+GO
+DBCC CHECKIDENT ('Profiles.Resumes', RESEED, 0)
+DBCC CHECKIDENT ('Profiles.SpokenLanguages')
+DBCC CHECKIDENT ('Profiles.Skills')
+DBCC CHECKIDENT ('Profiles.Jobs')
+DBCC CHECKIDENT ('Profiles.Resumes')
+DBCC CHECKIDENT ('Profiles.Educations')
+
+DBCC CHECKIDENT ('Profiles.SpokenLanguages', RESEED, 0)
+DBCC CHECKIDENT ('Profiles.Skills', RESEED, 0)
+DBCC CHECKIDENT ('Profiles.Jobs', RESEED, 0)
+DBCC CHECKIDENT ('Profiles.Resumes', RESEED, 0)
+DBCC CHECKIDENT ('Profiles.Educations', RESEED, 0)
