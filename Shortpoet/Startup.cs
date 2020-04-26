@@ -26,6 +26,7 @@ namespace Shortpoet
         }
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment Environment { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -97,17 +98,12 @@ namespace Shortpoet
 
             services.AddCors(options =>
             {
-              // this defines a CORS policy called "default"
-                options.AddPolicy("default", policy =>
-                {
-                // policy.WithOrigins("http://localhost:8080;https://localhost:5004;https://localhost:5003")
-                // policy.WithOrigins("https://localhost:5004")
-                // for some reason it won't recognize the urls if not allow all
-                policy.AllowAnyOrigin()
-                    .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .Build();
-                });
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("https://www.shortpoet.com",
+                                            "");
+                    });
             });
 
         }
@@ -138,7 +134,7 @@ namespace Shortpoet
             // app.UseIdentityServer();
             // app.UseAuthorization();
 
-            app.UseCors("default");
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {
