@@ -102,7 +102,10 @@ namespace Shortpoet
                     builder =>
                     {
                         builder.WithOrigins("https://www.shortpoet.com",
-                                            "");
+                                            "http://www.shortpoet.com",
+                                            "http://shortpoet.github.io",
+                                            "https://shortpoet.github.io"
+                                            );
                     });
             });
 
