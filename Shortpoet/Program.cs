@@ -42,6 +42,7 @@ namespace Shortpoet
         {
           var context = services.GetRequiredService<ResumeDbContext>();
           var hostingEnvironment = services.GetService<IWebHostEnvironment>();
+          
           // run this code first before DBInit is written to test the rest of the setup
           // context.Database.EnsureCreated();
 
@@ -52,13 +53,7 @@ namespace Shortpoet
           Console.WriteLine("Here is connection string");
           Console.WriteLine(context.Database.GetDbConnection().ConnectionString);
 
-
           DbInitializer.InitializeDb(context, hostingEnvironment);
-          //
-          // TODO 
-          // this is a temporary hack to add new resumes
-          // string dateFolder = "20200423";
-          // AddResume.Add(context, dateFolder, hostingEnvironment);
 
           context.Database.Migrate();
         }

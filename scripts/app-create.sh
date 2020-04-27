@@ -2,7 +2,11 @@
 
 # source config
 
-. test.conf
+# test version of app
+# . test.conf
+
+# dev version of app
+. dev.conf
 
 {
 # Create a resource group.

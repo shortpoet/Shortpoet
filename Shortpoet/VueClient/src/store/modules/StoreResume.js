@@ -31,11 +31,9 @@ export const actions = {
     try {
       const resPoint = rootGetters.getEnv === 'production' ? endpoints.resume.RESUME_FETCH_LATEST_API : endpoints.resume.RESUME_FETCH_LATEST_API
       const url = rootGetters.getUrlPrefix + resPoint
+      // const url2 = "https://shortpoet-test.azurewebsites.net/api/Resume/FetchLatest"
       // console.log(url)
-      const config = {
-        headers: {'Access-Control-Allow-Origin': '*'}
-      };
-      const response = await axios.get(url, config)
+      const response = await axios.get(url)
       // console.log(response)
       // const experienceTypes = response.data.resumeJobs.map(j => j.job.experienceType).filter((v, i, a) => a.indexOf(v) === i && v !== null)
       const experienceTypes = ['software', 'language', 'sales', 'hospitality']
