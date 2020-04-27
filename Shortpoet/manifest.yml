@@ -1,0 +1,12 @@
+applications:
+- name: shortpoet
+  memory: 256M
+  instances: 1
+  random-route: false
+  stack: cflinuxfs3
+  buildpacks: 
+    - https://github.com/cloudfoundry/dotnet-core-buildpack.git
+  # path: ./bin/Release/netcoreapp3.1/win-x64/publish
+  #path: ../publish/pcf
+  env: 
+    ASPNETCORE_ENVIRONMENT: Production
