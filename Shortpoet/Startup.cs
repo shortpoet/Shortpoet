@@ -36,7 +36,7 @@ namespace Shortpoet
                 services.AddDbContext<ResumeDbContext>(options =>
                     options
                         .UseSqlServer(
-                            Configuration.GetConnectionString("DefaultConnection"))
+                            Configuration.GetConnectionString("DefaultConnectionTest"))
                         .EnableSensitiveDataLogging()
                         );
 
