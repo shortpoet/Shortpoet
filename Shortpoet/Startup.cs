@@ -33,7 +33,7 @@ namespace Shortpoet
         {
             if (Environment.IsDevelopment())
             {
-                services.AddDbContext<ResumeTestDbContext>(options =>
+                services.AddDbContext<ResumeDbContext>(options =>
                     options
                         .UseSqlServer(
                             Configuration.GetConnectionString("DefaultConnectionTest"))
@@ -43,7 +43,7 @@ namespace Shortpoet
             }
             else if (Environment.IsStaging()) 
             {
-                services.AddDbContext<ResumeTestDbContext>(options =>
+                services.AddDbContext<ResumeDbContext>(options =>
                     options
                         .UseSqlServer(
                             Configuration.GetConnectionString("DefaultConnectionTest"))
@@ -101,11 +101,14 @@ namespace Shortpoet
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.WithOrigins("https://www.shortpoet.com",
-                                            "http://www.shortpoet.com",
-                                            "http://shortpoet.github.io",
-                                            "https://shortpoet.github.io"
-                                            );
+                        // builder.WithOrigins("https://www.shortpoet.com",
+                        //                     "http://www.shortpoet.com",
+                        //                     "http://shortpoet.github.io",
+                        //                     "https://shortpoet.github.io",
+                        //                     "https:/localhost"
+                        //                     );
+                        builder.AllowAnyOrigin();
+                        builder.AllowAnyHeader();
                     });
             });
 

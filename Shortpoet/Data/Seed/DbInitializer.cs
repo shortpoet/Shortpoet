@@ -22,8 +22,10 @@ namespace Shortpoet.Data.Seed
       Console.WriteLine("############################");
       Console.WriteLine(environment.WebRootPath);
       Console.WriteLine("############################");
-
+      Console.WriteLine("Number of resumes in context");
+      Console.WriteLine(context.Resumes.Count());
       context.Database.EnsureCreated();
+      
       // Look for any dashboards.
       if (context.Resumes.Any())
       {
