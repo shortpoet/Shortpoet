@@ -1,7 +1,8 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import createStore from './store'
 
 import jquery from 'jquery'
 
@@ -32,15 +33,21 @@ import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome
 //   faTrophy, faCheck, faFlag, faFontAwesomeFlag, 
 //   faCircle, faFilePdf, faSave, faGlobe, faTimes
 //   )
+
 library.add(
   faCircle, faFilePdf, faSave, faTimes, faRocket
   )
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
+
 Vue.config.devtools=false
 Vue.prototype.jquery = jquery
-
 Vue.config.productionTip = false
+
+const storeConfig = createStore()
+Vue.use(Vuex)
+const store = new Vuex.Store(storeConfig)
 
 new Vue({
   router,

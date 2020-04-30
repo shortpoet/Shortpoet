@@ -49,6 +49,7 @@ describe('Resume Store Actions', () => {
       await actions.loadResume({rootGetters, dispatch})
 
       expect(dispatch).toHaveBeenCalledWith('loadHardResume')
+
       console.error = originalError
     })    
   })
@@ -63,11 +64,11 @@ describe('Resume Store Actions', () => {
       axios.get.mockImplementation(mockError)
       await actions.loadResume({rootGetters, dispatch})
 
-      console.error = originalError
-
       expect(commit).toHaveBeenCalledWith("SET_RESUME_RAW", response.data)
       const hasResume = !!hardResume.title
       expect(commit).toHaveBeenCalledWith("SET_RESUME_LOADED", hasResume)
+
+      console.error = originalError
     })
   })
 })
