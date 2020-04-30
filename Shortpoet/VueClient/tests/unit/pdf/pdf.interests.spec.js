@@ -1,6 +1,5 @@
 import { factoryShallow } from './../test.utils'
 import PDFInterests from '@/components/Resume/PDF/PDFInterests'
-console.log(factoryShallow)
 describe('PDFInterests.vue', () => {
   it('renders interests h4', () => {
     const wrapper = factoryShallow(PDFInterests)
@@ -20,5 +19,15 @@ describe('PDFInterests.vue', () => {
     // p set by prop
     expect(wrapper.find("p").text()).toMatch(sampleInterests)
 
+  })
+  it('matches snapshot', () => {
+    const sampleInterests = "sample interests"
+    const propsData = { 
+      interests: sampleInterests 
+    }
+    
+    const wrapper = factoryShallow(PDFInterests, propsData)
+
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

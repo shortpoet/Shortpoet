@@ -6,6 +6,7 @@ export const ERASE_COOKIE = 'ERASE_COOKIE'
 // TABLEAUX @/store/modules/StoreTableaus.js
 export const SET_RESUME_LOADED = 'SET_RESUME_LOADED'
 export const SET_RESUME = 'SET_RESUME'
+export const SET_RESUME_RAW = 'SET_RESUME_RAW'
 
 // AUTH @/store/modules/StoreAuth.js
 export const LOAD_HEADERS = 'LOAD_HEADERS'

@@ -1,6 +1,5 @@
 import { factoryShallow } from '../test.utils'
 import StartInterests from '@/components/Resume/Start/StartInterests'
-console.log(factoryShallow)
 describe('StartInterests.vue', () => {
   it('renders interests h2', () => {
 
@@ -28,5 +27,13 @@ describe('StartInterests.vue', () => {
 
     expect(wrapper.find("img").exists()).toBe(true)
 
+  })
+  it('matches snapshot', () => {
+    const sampleInterests = "sample interests"
+    const propsData = { 
+      interests: sampleInterests 
+    }
+    const wrapper = factoryShallow(StartInterests, propsData)
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

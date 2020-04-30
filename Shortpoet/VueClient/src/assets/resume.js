@@ -7,7 +7,7 @@ export default {
   "interests": "When I'm not knuckle-deep in code, I like to knead bread, dig gardens, vermicompost and cook tasty meals.   I do some yoga and pilates to work on the code-bod.   I have been known to be insipired by the dramatic muses.  Ask for an accent sometime! Being a big fan of perspective, when I started going underwater at age 11, what once was a world of fear turned into a world of wonder.  When I can, SCUBA is pretty sweet stuff.  Speaking of perspective, here's some shortpoetry...\n",
   "name": "CARLOS",
   "surname": "SORIANO",
-  "title": "Carlos Resume 2020 04 23",
+  "title": "Carlos Resume 2020 04 23 HardCoded",
   "visas": "USA, EU, UK",
   "educations": [
     {
