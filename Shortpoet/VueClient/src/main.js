@@ -46,7 +46,6 @@ Vue.prototype.$ = jquery
 Vue.config.productionTip = false
 
 const storeConfig = createStore.createStore()
-console.log(storeConfig)
 Vue.use(Vuex)
 const store = new Vuex.Store(storeConfig)
 
