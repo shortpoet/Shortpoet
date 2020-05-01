@@ -75,8 +75,6 @@ export const actions = {
       console.info('resume loaded')
     } catch (err) {
       console.error(err)
-      // adding hardcoded resume in case server call fails on static served version
-      // TODO add test for this
       dispatch('loadHardResume')
     }
   },
@@ -101,6 +99,7 @@ const createStoreResume = () => {
 
 const createStoreResumeMocks = (custom = { getters: {}, mutations: {}, actions: {}, state: {} }) => {
   // console.log(custom)
+  // console.log(custom.getters.getResumeLoaded)
   const mockState = Object.assign({}, state, custom.state);
   const mockGetters = Object.assign({}, getters, custom.getters);
   const mockMutations = Object.assign({}, mutations, custom.mutations);
