@@ -1,11 +1,18 @@
 import { createWrapper } from '../test.utils'
 import Start from '@/views/Start'
 import hardResume from '@/assets/resume.js'
+import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCircle, faFilePdf, faSave, faTimes, faRocket} from '@fortawesome/free-solid-svg-icons'
 
 describe('Start.vue', () => {
   let wrapper
   beforeEach(async () => {
 
+    library.add(
+      faCircle, faFilePdf, faSave, faTimes, faRocket
+      )
+    
     const getResumeLoaded = true
 
     const propsData = { 
@@ -14,6 +21,11 @@ describe('Start.vue', () => {
 
     const computed = {
       // getResumeLoaded: () => true
+    }
+
+    const stubs = {
+      FontAwesomeIcon,
+      FontAwesomeLayers
     }
 
     const mocks = {
@@ -31,7 +43,7 @@ describe('Start.vue', () => {
       mutations: { 'SET_RESUME_RAW': jest.fn() } 
     }
 
-    const wrapperOptions = { propsData, mocks, computed }
+    const wrapperOptions = { propsData, mocks, computed, stubs }
 
     wrapper = createWrapper(Start, wrapperOptions, resumeStoreOptions)
     jest.resetModules()
