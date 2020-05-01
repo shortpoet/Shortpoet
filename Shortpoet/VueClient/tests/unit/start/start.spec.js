@@ -4,20 +4,22 @@ import { mount, shallowMount, createLocalVue } from '@vue/test-utils'
 import Start from '@/views/Start'
 import createStore from '@/store'
 
+import Vue from 'vue'
 import Vuex from 'vuex'
 import PortalVue from 'portal-vue'
 
 const localVue = createLocalVue()
-localVue.use(Vuex)
-localVue.use(PortalVue)
 
 describe('Start.vue', () => {
-  it('matches snapshot', () => {
+  let wrapper
+  beforeEach(async () => {
+    localVue.use(Vuex)
+    localVue.use(PortalVue)
     const getResumeLoaded = true
 
-    // const propsData = { 
-    //   interests: sampleInterests 
-    // }
+    const propsData = { 
+      // name: 'test name' 
+    }
 
     const computed = {
       // getResumeLoaded: () => true
@@ -30,9 +32,8 @@ describe('Start.vue', () => {
           scrollspy: jest.fn()
         }
       }),
-      dispatch: jest.fn(),
+      dispatch: jest.fn()
 
-      // getResumeLoaded: jest.fn(() => getResumeLoaded)
     }
 
     // const wrapper = factoryShallow(Start, {mocks: mocks})
@@ -40,11 +41,22 @@ describe('Start.vue', () => {
     // const wrapper = mount(Start, {mocks: mocks})
     // jest.mock('$')
 
-    const mockStoreResume = createStore.createMocks().createStoreResumeMocks({ mutations: { 'SET_RESUME_RAW': jest.fn() } })
-    console.log(mockStoreResume.mutations['SET_RESUME_RAW']())
+    const mockStoreResume = createStore.createMocks().createStoreResumeMocks({ 
+      getters: { getResumeLoaded: jest.fn(), getResume: jest.fn() }, 
+      mutations: { 'SET_RESUME_RAW': jest.fn() } 
+    })
+
+    // console.log(mockStoreResume.mutations['SET_RESUME_RAW']())
+
     const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
     const store = new Vuex.Store(storeConfig)
-    const wrapper = shallowMount(Start, {localVue, mocks, store, computed})
+    await Vue.nextTick()
+    wrapper = shallowMount(Start, {localVue, propsData, mocks, store, computed})
+
+  })
+
+  it('matches snapshot', () => {
+
     expect(wrapper.html()).toMatchSnapshot()
   })
 })
