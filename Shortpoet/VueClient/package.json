@@ -18,19 +18,19 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
-    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
     "@trainiac/html2canvas": "^1.0.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "core-js": "^3.6.4",
+    "core-js": "^3.6.5",
     "devicons": "^1.8.0",
     "font-awesome": "^4.7.0",
     "fontfaceobserver": "^2.1.0",
     "fs": "0.0.1-security",
     "google-fonts-plugin": "^5.0.2",
     "html2canvas": "^1.0.0-rc.5",
-    "jest": "^25.5.1",
-    "jquery": "^3.4.1",
+    "jest": "^25.5.3",
+    "jquery": "^3.5.0",
     "jquery.easing": "^1.4.1",
     "js-yaml": "^3.13.1",
     "jspdf": "^1.5.3",
@@ -39,7 +39,7 @@
     "postcss-preset-env": "^6.7.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
-    "vuex": "^3.1.2"
+    "vuex": "^3.3.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
@@ -53,7 +53,7 @@
     "cross-env": "^7.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
-    "sass": "^1.26.3",
+    "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   }
