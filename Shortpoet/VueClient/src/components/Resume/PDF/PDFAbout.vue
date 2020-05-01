@@ -14,7 +14,7 @@
         <ul class="list-inline">
           <li>
             <h2 style="font-family: 'Saira Extra Condensed';" class="mb-0">{{ name }}
-              <span style="font-family: 'Saira Extra Condensed';" class="text-primary">{{ surname }}</span>
+              <span id="pdf-surname" style="font-family: 'Saira Extra Condensed';" class="text-primary">{{ surname }}</span>
             </h2>
           </li>
           <li>
@@ -25,15 +25,15 @@
             </span>
           </li>
           <li>
-            <span style="font-family: 'Saira Extra Condensed';" class="not-name">
+            <span id="pdf-address" style="font-family: 'Saira Extra Condensed';" class="not-name">
               {{ address }}
             </span>
           </li>
           <li>
-            <span class="not-name">{{ flags.replace(/,/g, '') }}</span>
+            <span id="pdf-flags" class="not-name">{{ flags.replace(/,/g, '') }}</span>
           </li>
           <li>
-            <span style="font-family: 'Saira Extra Condensed';" class="not-name">Valid Work Visas: {{ visas }}</span>
+            <span id="pdf-visas" style="font-family: 'Saira Extra Condensed';" class="not-name">Valid Work Visas: {{ visas }}</span>
           </li>
         </ul>
       </div>

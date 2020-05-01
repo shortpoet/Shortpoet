@@ -15,7 +15,7 @@
         :skills="getResume.skills"
       />
       <StartAwards
-        :awards="getResume.spokenLanguages"
+        :spokenLanguages="getResume.spokenLanguages"
       />
       <StartObjective
         :aboutMe="getResume.aboutMe"

@@ -4,7 +4,7 @@
       <h2 class="mb-4 mb-md-3">Natural Languages</h2>
       <ul class="fa-ul mb-0">
         <li
-          v-for="(lang, i) in awards"
+          v-for="(lang, i) in spokenLanguages"
           :key="i"
         >
           <i :class="lang.type + ' language-icon fa fa-flag fa-li'"></i>
@@ -24,7 +24,7 @@ import _recase from '@/utils/recase.js'
 export default {
   name: 'StartAwards',
   props: {
-    awards: {
+    spokenLanguages: {
       type: Array,
       default: () => []
     }

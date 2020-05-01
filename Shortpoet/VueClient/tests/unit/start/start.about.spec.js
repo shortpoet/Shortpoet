@@ -11,10 +11,10 @@ describe('StartAbout.vue', () => {
   const propDicts = [
     {prop: 'name', selector: 'h1'},
     {prop: 'surname', selector: 'span'},
-    {prop: 'flags', selector: '#resume-flags'},
+    {prop: 'flags', selector: '#start-flags'},
     {prop: 'email', selector: 'a'},
-    {prop: 'address', selector: '#resume-address'},
-    {prop: 'visas', selector: '#resume-visas'},
+    {prop: 'address', selector: '#start-address'},
+    {prop: 'visas', selector: '#start-visas'},
   ]
   let mockProp = true
   

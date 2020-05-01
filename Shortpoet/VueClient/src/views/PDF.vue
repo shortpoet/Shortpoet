@@ -19,7 +19,7 @@
         <div v-if="!renderPDF" class="row">
           <div class="awards-col col-12 col-lg-2">
             <PDFAwards
-              :awards="getResume.spokenLanguages"
+              :spokenLanguages="getResume.spokenLanguages"
               :renderPDF="renderPDF"
             />
           </div>
@@ -34,7 +34,7 @@
         <div v-else class="skills-awards-container">
           <PDFAwards
             :renderPDF="renderPDF"
-            :awards="getResume.spokenLanguages"
+            :spokenLanguages="getResume.spokenLanguages"
           />
           <PDFSkillsRender
             :skills="getResume.skills"

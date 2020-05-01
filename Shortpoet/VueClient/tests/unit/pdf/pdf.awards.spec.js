@@ -1,0 +1,48 @@
+import { createWrapper, propsFinder } from '../test.utils'
+import PDFAwards from '@/components/Resume/PDF/PDFAwards'
+import recase from '@/utils/recase.js'
+
+describe('StartAwards.vue', () => {
+
+  const component = PDFAwards
+  const props = Object.keys(component.props)
+  let prop
+  let selector
+  let mockProp = false
+  const wrapper = createWrapper(component, propsFinder(props))
+
+  beforeEach(() => {
+
+  })
+
+  it('renders awards h4', () => {
+
+    // hard coded header
+    expect(wrapper.find("h4").text()).toMatch("Natural Languages")
+
+  })
+  
+  const {propsData} = propsFinder(props)
+  const languageTypes = propsData.spokenLanguages.map(l => l.type)
+
+  let iconClass
+  let spanText
+
+  
+  languageTypes.forEach(type => {
+    it(`renders language icons that match spoken languages - ${type} - types/levels prop`, () => {
+      // match first word and recase camel to capitalize and add space
+      iconClass = recase(wrapper.find(`i.${type}`).attributes().class.match(/^\w+/)[0])
+      // match wordSSS .+ vs \w+ within parentheses
+      spanText = wrapper.find(`i.${type} ~ span`).text().match(/\((.+)\)/)[1]
+      expect(iconClass).toContain(spanText)
+    })  
+  })
+
+  it('matches snapshot', () => {
+    
+    expect(wrapper.html()).toMatchSnapshot()
+
+  })
+
+})

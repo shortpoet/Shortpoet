@@ -6,15 +6,15 @@ describe('StartAbout.vue', () => {
     jest.resetModules()
     jest.clearAllMocks()
   })
-  const component = StartAbout
+  const component = PDFAbout
   // const props = Object.keys(component.props)
   const propDicts = [
-    {prop: 'name', selector: 'h1'},
-    {prop: 'surname', selector: 'span'},
-    {prop: 'flags', selector: '#resume-flags'},
+    {prop: 'name', selector: 'h2'},
+    {prop: 'surname', selector: '#pdf-surname'},
+    {prop: 'flags', selector: '#pdf-flags'},
     {prop: 'email', selector: 'a'},
-    {prop: 'address', selector: '#resume-address'},
-    {prop: 'visas', selector: '#resume-visas'},
+    {prop: 'address', selector: '#pdf-address'},
+    {prop: 'visas', selector: '#pdf-visas'},
   ]
   let mockProp = true
   
@@ -27,10 +27,19 @@ describe('StartAbout.vue', () => {
   textMatcherFactory(component, propDicts)
 
   it('email href matches email prop', () => {
+    // interesting that althouhg snapshot includes deeply mounted child (pdfsocials)
+    // the wrapper doesn't find those elements
     const prop = 'email'
     const propDict = propDicts.filter(d => d.prop === prop)[0]
     expect(wrapper.find(`${propDict.selector}`).attributes().href).toMatch(propMocker(`${prop}`).propsData[`${prop}`])
   })
+
+  it('renders photo', () => {
+
+    expect(wrapper.find("img").exists()).toBe(true)
+
+  })
+
   it('matches snapshot', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })

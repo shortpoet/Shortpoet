@@ -4,7 +4,7 @@
       <h4 style="font-family: 'Saira Extra Condensed';" :class="headingClass">Natural Languages</h4>
       <div :class="gridClass">
         <span
-          v-for="(lang, i) in awards"
+          v-for="(lang, i) in spokenLanguages"
           :key="i"
           :class="typeClass"        
         > 
@@ -25,7 +25,7 @@ import _recase from '@/utils/recase.js'
 export default {
   name: 'PDFAwards',
   props: {
-    awards: {
+    spokenLanguages: {
       type: Array,
       default: () => []
     },

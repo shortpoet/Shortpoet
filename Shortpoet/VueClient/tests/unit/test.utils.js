@@ -14,7 +14,7 @@ export const textMatcherFactory = (component, propDicts) => {
   })
 }
 
-export const textMatcher = (component, props, prop, selector, mock = true) => {
+export const textMatcher = (component, props, prop, selector, mock = true, isShallow = false) => {
   let wrapper
   if (mock) {
     wrapper = createWrapper(component, propsMocker(props))
@@ -45,6 +45,7 @@ export const propsFinder = (props) => {
   props.map(prop => {
     propsData[`${prop}`] = hardResume[`${prop}`]
   })
+  // console.log(propsData)
   return {
     propsData
   }
