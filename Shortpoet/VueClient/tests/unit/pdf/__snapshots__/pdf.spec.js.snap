@@ -1,0 +1,830 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Start.vue matches hard resume snapshot 1`] = `
+<div class="pdf-container" style="font-family: Saira Extra Condensed, Open Sans;">
+  <div id="pdf-anchor" class="p-10">
+    <div class="vue-portal-target">
+      <div type="input" class="button-float">
+        <div class="button-float-icon-layer fa-lg fa-layers"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="button-float-icon-circle svg-inline--fa fa-circle fa-w-16 fa-2x">
+            <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" class=""></path>
+          </svg> <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="save" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="button-float-icon svg-inline--fa fa-save fa-w-14 fa-2x" style="transform-origin: 0.5em 0.5em;">
+            <g transform="translate(224 256)" class="">
+              <g transform="translate(32, 0)  scale(0.6875, 0.6875)  rotate(0 0 0)" class="">
+                <path fill="currentColor" d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 11.996 0 0 1 320 111.48z" transform="translate(-224 -256)" class=""></path>
+              </g>
+            </g>
+          </svg></div>
+      </div>
+      <div class="modal-slot">
+        <div class="custom-modal-backdrop" style="display: none;">
+          <div role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" class="custom-modal">
+            <header id="modalTitle" class="custom-modal-header">
+              <h4 class="mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
+                  <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path>
+                </svg></button>
+            </header>
+            <section id="modalDescription" class="custom-modal-body">
+              <p>
+                This does not <em>download</em> a file in the traditional sense where it is retrieved from a data server.
+                It is generated fresh by your browser based on a <b>snapshot</b> of this page as you see it.
+              </p>
+              <p><span class="saveme-text">Save Me!</span> - actual aspect ratio.
+              </p>
+              <p><span class="pageme-text">Page Me!</span> - A4 format and pagination.
+              </p>
+            </section>
+            <footer class="custom-modal-footer">
+              <div class="button-drawer d-flex flex-row justify-content-around">
+                <div><button type="button" aria-label="Close modal" class="btn-save">
+                    Save me!
+                  </button></div>
+                <div><button type="button" aria-label="Close modal" class="btn-page">
+                    Page me!
+                  </button></div>
+                <div><a href="/"><button type="button" aria-label="Close modal" class="btn-close">
+                      Home Page
+                    </button></a></div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="about" class="resume-section">
+      <div id="basic-info" class="d-flex flex-row justify-content-between align-items-center mt-1 ml-3">
+        <div id="photo" class="d-flex flex-column align-items-center"><img src="" alt="profile pic" class="img-fluid img-profile rounded m-1 mb-2" style="height: 8rem; width: 7rem;"></div>
+        <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
+          <ul class="list-inline">
+            <li>
+              <h2 class="mb-0" style="font-family: 'Saira Extra Condensed';">CARLOS
+                <span class="text-primary" style="font-family: 'Saira Extra Condensed';">SORIANO</span></h2>
+            </li>
+            <li><span class="not-name"><a href="mailto:soriano.carlitos@gmail.com" style="font-family: 'Open Sans';">
+              soriano.carlitos@gmail.com
+            </a></span></li>
+            <li><span class="not-name" style="font-family: 'Saira Extra Condensed';">
+            Currently in St. Louis, MO
+          </span></li>
+            <li><span class="not-name">🇪🇸 🇵🇭 🇺🇸 🇨🇳 🇫🇷 🇮🇹 🇩🇪 🇧🇷</span></li>
+            <li><span class="not-name" style="font-family: 'Saira Extra Condensed';">Valid Work Visas: USA, EU, UK</span></li>
+          </ul>
+        </div>
+        <div id="socials" class="d-flex flex-column ml-auto mr-1 mr-md-3">
+          <section id="pdf-socials">
+            <ul class="list-inline list-social-icons mb-0 mt-0 mr-lg-2">
+              <li class="social-item"><a href="https://github.com/shortpoet"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-github fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://github.com/shortpoet</span></a></li>
+              <li class="social-item"><a href="https://www.linkedin.com/in/carlos-soriano-49aaa97/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-linkedin fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.linkedin.com/in/carlos-soriano-49aaa97/</span></a></li>
+              <li class="social-item"><a href="https://www.instagram.com/shortpoet/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-instagram fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.instagram.com/shortpoet/</span></a></li>
+              <li class="social-item"><a href="https://twitter.com/shortpoet3"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-twitter fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://twitter.com/shortpoet3</span></a></li>
+              <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-globe fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+    <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="my-2">
+    <div class="skills-awards-container">
+      <div class="row">
+        <div class="awards-col col-12 col-lg-2">
+          <section id="awards" class="resume-section ml-4 mt-2">
+            <div class="my-auto">
+              <h4 class="mb-4 ml-1" style="font-family: 'Saira Extra Condensed';">Natural Languages</h4>
+              <div class="d-flex flex-column ml-3"><span class="d-flex"><i class="proficient language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Italian (Proficient) </span></span><span class="d-flex"><i class="native language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">English, Spanish, Tagalog (Native) </span></span><span class="d-flex"><i class="fluent language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Mandarin Chinese, French (Fluent) </span></span><span class="d-flex"><i class="workingKnowledge language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">German, Portuguese (Working Knowledge) </span></span> <span class="language-type-render d-flex"><i class="award-icon fa fa-trophy mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Certified Interpreter</span></span></div>
+            </div>
+          </section>
+        </div>
+        <div class="skills-col col-12 col-lg-10">
+          <section id="skills" class="resume-section mt-2 ml-0">
+            <div class="my-auto">
+              <h4 class="subheading mb-4 mb-md-3 ml-4" style="font-family: 'Saira Extra Condensed';">
+                Programming Languages &amp; Tools
+              </h4>
+              <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mr-0 mr-md-3">
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-html5"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-css3"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-bootstrap"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-sass"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Markdown</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  HTML
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   CSS
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   YAML
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   MD
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   SCSS
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="fa fa-beer"></i>
+                      <!---->
+                    </div>
+                    <div><i class="fa fa-magic"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Miscellaneous</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Cooking
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Gardening
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   YogaWorks Teacher Traning
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Cicerone Beer Server Certification
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Adobe Creative Suite
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Data Vizualization</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  D3
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Tableau
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-mongodb"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Document Db</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  mongoDB
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Pymongo
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-dotnet"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Dotnet</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Framework 4.x
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Core
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Entity Framework
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Razor
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   MVC
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-python"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Python</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Pandas
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Matplotlib
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Flask
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Selenium
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Sklearn
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-javascript"></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Javascript</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Vue
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Leafly
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Plotly
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   c3
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-visualstudio"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-git"></i>
+                      <!---->
+                    </div>
+                    <div><i class="fa fa-cogs"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-linux"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Workflow</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Mobile-First &amp; Responsive Design
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Cross Browser Testing &amp; Debugging
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   CI/CD
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Agile Development &amp; Scrum
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Visual Studio / VSCode
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-msql_server"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-mysql"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-sqllite"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div style="font-family: 'Open Sans';">Relational Db</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  msSQL
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   mySQL
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Entity Framework
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   SQLAlchemy
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="resume-section ml-3">
+      <section id="pdf-objective" class="resume-section mb-3">
+        <div id="objective" class="d-flex align-items-center">
+          <h4 style="font-family: 'Saira Extra Condensed';">
+            Objective
+          </h4>
+        </div>
+        <div id="objective" class="d-flex align-items-center">
+          <div class="resume-item d-flex flex-column justify-content-between">
+            <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
+              <p>
+                As a lifelong polyglot turned software developer, I have come to describe myself as a Language Data Specialist. A fascination with where human interaction, behaviour and spoken language meets the many layers of data and programming has driven me to provide insight from data sources as they reflect human behavior.
+              </p>
+            </div>
+            <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
+              <p>
+                In this sense, my route into programming was atypical. The call to bridge the gap between my linguistic expertise and (long-dormant) digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp.
+              </p>
+            </div>
+            <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
+              <p>
+                Today, my advanced tech skills combined with my fluency for the most widely spoken languages, allows my clients a unique perspective on their field of choice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section id="experience" class="resume-section ml-3 mt-2 mb-3">
+      <div class="my-auto">
+        <h4 style="font-family: 'Saira Extra Condensed';">Work Experience</h4>
+        <div class="d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">October 2019 - ongoing</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">• Escoba Card Game App </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • c#, vuejs </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Game manager handles game logic in dotnet backend server. Game sessions and game state managed by backend. UI state managed by vuex store. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Future... Drag/Drop swipeable UI - Machine learning to create AI </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • In collaboration with Ignacio Soriano
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">• Poet University </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • c#, vuejs, IdentityServer </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • An extension of Contoso University in microsoft docs. Randomly generated data from lists and some basic logic I coded before learning about the faker library hehe. Has a working implementation of an IdentityServer auth provider. Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Future... More variety with the faker library. Better auth. Cleaner UI. Complete the university environment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">• Web App and Social Integration Dashboard </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • c#, node.js, vuejs, Auth0, Gapi, REST APIs </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc), LinkedIn, Facebook and access to my account's data and programattic access to APIs. User jwt for authentication. Use cases include mass unsubscribe, sending emails that are programatically created, integrating Linkedin searches with gmail messages for job search, and many others. Also a way to explore the intricacies of authentication through the use of Auth0 and Google as identity providers. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Future... More integrations and built-in functionality. Using headless browser to unsubscribe from senders that don't provide a 'mailto' but rather a url.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">April 2019 - April 2020</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">Boeing</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">• Built an application to assess the validity of employee timesheet entries. Managers asked for functionality to parse different types of copy/pasted input of time data. A SQL databse function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams ans systems. Collaborated with deparatments across the company to pull and collate relevant data enabling wider-reaching analytics. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Centralized data vizualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. Use of recursive components to display org structure drilldown. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with some python and R developing new ETL architecture for reusable data analytics pipeline. As new data sources come from increased collaboration, creating a workflow enabled efficient operations. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Team devops guy - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine. Things break and someone has to fix them. </p>
+                </div>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';"> • Liaising with other teams/departments to collaborate in data flow and analytics. Collaborated with a diverse and distributed team working with a 12-hour time difference with India and delivered results tracking contributions through Gitlab and Jira in a remote-work environment. Being able to communicate changes and action items needed across teams allows for smoother workflow.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Sinologist</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">August 2003 - January 2004</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">World Eye Reports</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">Shanghai, PRC. Translator, Interpreter, media Sales, wrote articles and sold ads for advertorial project based out of Shanghai.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">QA Tester</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">December 2011 - August 2014</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">GTL Media</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">Translator, linguistic tester, translated texts for various media including video games, film, and legal, checked video games for linguistic bugs and translation errors, translation of .xml databases for in-game script</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Executive Assistant to the CEO</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">January 2008 - December 2008</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">EZI</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">Manila, Philippines. Participated in managing daily operations in a bilingual office setting, supervised staff, attended developmental meetings, tracked and prepared development projects, made calls to and from suppliers and manufacturers, purchased investment property, created investment portfolios and marketing and business plans, gaining insights into the world of Big Business.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Freelance Translator / Interpreter</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">July 2011 - Present</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">Various Interpretation Agencies</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">Medical, dental and media conferences, on-site medical and legal interpretation for depositions, insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, and various other language-related assignments, primarily in Spanish and Tagalog, some French.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Product Specialist - Sales</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">July 2010 - February 2017</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">Toyota of Hollywood &amp; Hollywood Electrics – Electric Cycle Dealership</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">New and Pre-owned Conventional and Electric Car and Cycle Sales; Sales made in English, Spanish, Tagalog, French, and Mandarin, Self-directed marketing efforts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Grill Chef de Partie</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">August 1998 - August 2018</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">Many Different Restaurants - mostly a cook, sometimes a bartender</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">Post Haus Restaurant - St. Moritz, Switzerland stands out as I ran the gamut from helping plan restaurant concept, designed Grill Station, assisted in menu planning and execution, provided back-end data for owners during the length of the contract, offering particular assistance interpreting for members of the multi-cultural staff and management.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Food delivery logistics</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">April 2017 - April 2019</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 style="font-family: 'Saira Extra Condensed';">DoorDash and Grubhub</h6>
+                <div class="mb-2">
+                  <p style="font-family: 'Open Sans';">Operating 2 apps at the same time to maximize earnings, while maintaining customer satisfaction and high ratings, experienced first hand the effects of data collection of market and labor fluctuations and how they determined the logic behind the apps while I was learning to code.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="education" class="resume-section ml-3 mt-2 mb-3">
+      <div class="my-auto">
+        <h4 class="pdf-subheading" style="font-family: 'Saira Extra Condensed';">Education</h4>
+        <div>
+          <div class="resume-item d-flex flex-column justify-content-between">
+            <div class="d-flex flex-row">
+              <div class="resume-content mr-5 mr-md-auto">
+                <h5 class="mb-0" style="font-family: 'Saira Extra Condensed';">Washington University in St. Louis</h5>
+              </div>
+              <div class="resume-date text-md-right mr-4">
+                <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">Python, Javascript, Tableau</h6>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <h6 style="font-family: 'Saira Extra Condensed';">Data Analytics Certificate</h6>
+              <p class="resume-content" style="font-family: 'Open Sans';"></p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="resume-item d-flex flex-column justify-content-between">
+            <div class="d-flex flex-row">
+              <div class="resume-content mr-5 mr-md-auto">
+                <h5 class="mb-0" style="font-family: 'Saira Extra Condensed';">University of Pennsylvania</h5>
+              </div>
+              <div class="resume-date text-md-right mr-4">
+                <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">Major in East Asian Languages and Cultures, Chinese Concentration, relevant coursework in linguistics and anthropology</h6>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <h6 style="font-family: 'Saira Extra Condensed';">Bachelor of Arts and Sciences</h6>
+              <p class="resume-content" style="font-family: 'Open Sans';"></p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="resume-item d-flex flex-column justify-content-between">
+            <div class="d-flex flex-row">
+              <div class="resume-content mr-5 mr-md-auto">
+                <h5 class="mb-0" style="font-family: 'Saira Extra Condensed';">Thacher School</h5>
+              </div>
+              <div class="resume-date text-md-right mr-4">
+                <h6 class="text-primary" style="font-family: 'Saira Extra Condensed';">Boarding, emphasis on academics, the outdoors, camping, horsemanship, and environmental awareness, Year Abroad in France</h6>
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <h6 style="font-family: 'Saira Extra Condensed';">High School</h6>
+              <p class="resume-content" style="font-family: 'Open Sans';"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="interests-poem-container" class="row mb-5">
+      <div id="interests-container" class="col-12 col-md-8">
+        <section id="interests" class="resume-section mt-2 ml-3">
+          <div class="my-auto">
+            <h4 class="mb-3" style="font-family: 'Saira Extra Condensed';">Interests</h4>
+            <p class="mb-0" style="font-family: 'Open Sans';">When I'm not knuckle-deep in code, I like to knead bread, dig gardens, vermicompost and cook tasty meals. I do some yoga and pilates to work on the code-bod. I have been known to be insipired by the dramatic muses. Ask for an accent sometime! Being a big fan of perspective, when I started going underwater at age 11, what once was a world of fear turned into a world of wonder. When I can, SCUBA is pretty sweet stuff. Speaking of perspective, here's some shortpoetry...
+            </p>
+          </div>
+        </section>
+      </div>
+      <div id="poem-container" class="col-12 col-md-4 mt-3 mt-md-0 mr-0 text-center"><img src="" alt="poem" class="img-fluid img-profile rounded" style="height: 16rem; width: 16rem;"></div>
+    </div>
+    <div class="v-portal" style="display: none;"></div>
+  </div>
+</div>
+`;
