@@ -4,6 +4,7 @@ import StartInterests from '@/components/Resume/Start/StartInterests'
 describe('StartInterests.vue', () => {
 
   const component = StartInterests
+  const props = Object.keys(component.props)
   let prop
   let element
   let mockProp = true
@@ -24,7 +25,7 @@ describe('StartInterests.vue', () => {
 
     prop = 'interests'
     element = 'p'
-    textMatcher(component, prop, element)
+    textMatcher(component, props, prop, element)
 
   })
   it('renders photo', () => {

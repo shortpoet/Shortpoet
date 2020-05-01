@@ -1,9 +1,10 @@
-import { textMatcher, propMocker, createWrapper } from '../test.utils'
+import { textMatcher } from '../test.utils'
 import StartAbout from '@/components/Resume/Start/StartAbout'
 
 describe('StartAbout.vue', () => {
 
   const component = StartAbout
+  const props = Object.keys(component.props)
   let prop
   let element
   let mockProp = true
@@ -12,7 +13,7 @@ describe('StartAbout.vue', () => {
 
     prop = 'name'
     element = 'h1'
-    textMatcher(component, prop, element)
+    textMatcher(component, props, prop, element)
 
   })
   it('matches snapshot', () => {

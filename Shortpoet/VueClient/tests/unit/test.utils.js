@@ -5,13 +5,13 @@ import createStore from '@/store'
 import PortalVue from 'portal-vue'
 import hardResume from '@/assets/resume.js'
 
-export const textMatcher = (component, prop, element, mock = true) => {
+export const textMatcher = (component, props, prop, element, mock = true) => {
   let wrapper
   if (mock) {
-    wrapper = createWrapper(component, propMocker(`${prop}`))
+    wrapper = createWrapper(component, propsMocker(props))
     expect(wrapper.find(`${element}`).text()).toMatch(propMocker(`${prop}`).propsData[`${prop}`])
   } else {
-    wrapper = createWrapper(component, propFinder(`${prop}`))
+    wrapper = createWrapper(component, propsFinder(props))
     expect(wrapper.find(`${element}`).text()).toMatch(propFinder(`${prop}`).propsData[`${prop}`])
   }
 }

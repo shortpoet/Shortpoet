@@ -3,6 +3,7 @@ import PDFInterests from '@/components/Resume/PDF/PDFInterests'
 describe('PDFInterests.vue', () => {
 
   const component = PDFInterests
+  const props = Object.keys(component.props)
   let prop
   let element
   let mockProp = true
@@ -18,7 +19,7 @@ describe('PDFInterests.vue', () => {
 
     prop = 'interests'
     element = 'p'
-    textMatcher(component, prop, element)
+    textMatcher(component, props, prop, element)
 
   })
   it('matches snapshot', () => {
