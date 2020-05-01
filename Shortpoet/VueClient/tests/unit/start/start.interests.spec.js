@@ -3,7 +3,7 @@ import StartInterests from '@/components/Resume/Start/StartInterests'
 describe('StartInterests.vue', () => {
   it('renders interests h2', () => {
 
-    const wrapper = factoryShallow(StartInterests)
+    const wrapper = factoryShallow(StartInterests, {})
     
     // hard coded header
     expect(wrapper.find("h2").text()).toMatch("Interests")
@@ -15,7 +15,7 @@ describe('StartInterests.vue', () => {
     const propsData = { 
       interests: sampleInterests 
     }
-    const wrapper = factoryShallow(StartInterests, propsData)
+    const wrapper = factoryShallow(StartInterests, {propsData: propsData})
 
     // p set by prop
     expect(wrapper.find("p").text()).toMatch(sampleInterests)
@@ -23,7 +23,7 @@ describe('StartInterests.vue', () => {
   })
   it('renders photo', () => {
 
-    const wrapper = factoryShallow(StartInterests)
+    const wrapper = factoryShallow(StartInterests, {})
 
     expect(wrapper.find("img").exists()).toBe(true)
 
@@ -33,7 +33,7 @@ describe('StartInterests.vue', () => {
     const propsData = { 
       interests: sampleInterests 
     }
-    const wrapper = factoryShallow(StartInterests, propsData)
+    const wrapper = factoryShallow(StartInterests, {propsData: propsData})
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

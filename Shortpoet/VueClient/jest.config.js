@@ -7,7 +7,7 @@ module.exports = {
   moduleFileExtensions: ['js', 'jsx', 'json', 'vue'],
   transform: {
     '^.+\\.vue$': 'vue-jest',
-    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
+    '.+\\.(css|styl|less|sass|scss|png|jpg|svg|ttf|woff|woff2)$':
       'jest-transform-stub',
     '^.+\\.(js|jsx)?$': 'babel-jest'
   },
@@ -26,5 +26,10 @@ module.exports = {
 
     '<rootDir>/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
   ],
-  // transformIgnorePatterns: ['<rootDir>/node_modules/']
+  transformIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/node_modules/(?!jquery/)'
+  ],
+  // setupTestFrameworkScriptFile: "<rootDir>/tests/setupJest"
+  setupFiles: ["<rootDir>/tests/setupJest"]
 }

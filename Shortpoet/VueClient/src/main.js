@@ -42,10 +42,11 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 
 Vue.config.devtools=false
-Vue.prototype.jquery = jquery
+Vue.prototype.$ = jquery
 Vue.config.productionTip = false
 
-const storeConfig = createStore()
+const storeConfig = createStore.createStore()
+console.log(storeConfig)
 Vue.use(Vuex)
 const store = new Vuex.Store(storeConfig)
 
