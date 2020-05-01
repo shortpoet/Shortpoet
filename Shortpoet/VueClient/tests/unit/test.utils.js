@@ -31,6 +31,26 @@ export const propMocker = (prop) => {
   }
 }
 
+export const propsFinder = (props) => {
+  let propsData = {}
+  props.map(prop => {
+    propsData[`${prop}`] = hardResume[`${prop}`]
+  })
+  return {
+    propsData
+  }
+}
+export const propsMocker = (props) => {
+  let propsData = {}
+  props.map(prop => {
+    propsData[`${prop}`] = `sample ${prop}`
+  })
+  return {
+    propsData
+  }
+}
+
+
 export const createWrapper  = (
   component,
   options = {},

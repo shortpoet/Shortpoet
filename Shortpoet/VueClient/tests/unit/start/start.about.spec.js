@@ -1,39 +1,23 @@
-import { createWrapper } from '../test.utils'
+import { textMatcher, propMocker, createWrapper } from '../test.utils'
 import StartAbout from '@/components/Resume/Start/StartAbout'
-describe('StartInterests.vue', () => {
-  it('renders interests h2', () => {
 
-    // const wrapper = createWrapper(StartAbout)
-    
-    // // hard coded header
-    // expect(wrapper.find("h2").text()).toMatch("Interests")
+describe('StartAbout.vue', () => {
 
-  })
-  it('renders interests p that matches prop value', () => {
+  const component = StartAbout
+  let prop
+  let element
+  let mockProp = true
 
-    // const sampleInterests = "sample interests"
-    // const propsData = { 
-    //   interests: sampleInterests 
-    // }
-    // const wrapper = factoryShallow(StartAbout, {propsData: propsData})
+  it('renders interests h1 that matches name prop', () => {
 
-    // // p set by prop
-    // expect(wrapper.find("p").text()).toMatch(sampleInterests)
-
-  })
-  it('renders photo', () => {
-
-    // const wrapper = factoryShallow(StartAbout, {})
-
-    // expect(wrapper.find("img").exists()).toBe(true)
+    prop = 'name'
+    element = 'h1'
+    textMatcher(component, prop, element)
 
   })
   it('matches snapshot', () => {
-    // const sampleInterests = "sample interests"
-    // const propsData = { 
-    //   interests: sampleInterests 
-    // }
-    // const wrapper = factoryShallow(StartAbout, {propsData: propsData})
+    // prop = 'interests'
+    // const wrapper = createWrapper(component, propMocker(prop))
     // expect(wrapper.html()).toMatchSnapshot()
   })
 })
