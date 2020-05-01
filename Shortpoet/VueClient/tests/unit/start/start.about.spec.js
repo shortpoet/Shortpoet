@@ -1,21 +1,24 @@
-import { textMatcher } from '../test.utils'
+import { textMatcherFactory } from '../test.utils'
 import StartAbout from '@/components/Resume/Start/StartAbout'
 
 describe('StartAbout.vue', () => {
-
-  const component = StartAbout
-  const props = Object.keys(component.props)
-  let prop
-  let element
-  let mockProp = true
-
-  it('renders interests h1 that matches name prop', () => {
-
-    prop = 'name'
-    element = 'h1'
-    textMatcher(component, props, prop, element)
-
+  beforeEach(() => {
+    jest.resetModules()
+    jest.clearAllMocks()
   })
+  const component = StartAbout
+  // const props = Object.keys(component.props)
+  const propDicts = [
+    {prop: 'name', element: 'h1'},
+    {prop: 'surname', element: 'span'},
+    {prop: 'flags', element: 'span'},
+    {prop: 'email', element: 'a'},
+    {prop: 'address', element: 'span'},
+    {prop: 'visas', element: 'span'},
+  ]
+  let mockProp = true
+  textMatcherFactory(component, propDicts)
+
   it('matches snapshot', () => {
     // prop = 'interests'
     // const wrapper = createWrapper(component, propMocker(prop))
