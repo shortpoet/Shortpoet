@@ -3,6 +3,33 @@ import { mount, shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import createStore from '@/store'
 import PortalVue from 'portal-vue'
+import hardResume from '@/assets/resume.js'
+
+export const textMatcher = (component, prop, element, mock = true) => {
+  let wrapper
+  if (mock) {
+    wrapper = createWrapper(component, propMocker(`${prop}`))
+    expect(wrapper.find(`${element}`).text()).toMatch(propMocker(`${prop}`).propsData[`${prop}`])
+  } else {
+    wrapper = createWrapper(component, propFinder(`${prop}`))
+    expect(wrapper.find(`${element}`).text()).toMatch(propFinder(`${prop}`).propsData[`${prop}`])
+  }
+}
+
+export const propFinder = (prop) => {
+  return {
+    propsData: {
+      [`${prop}`]: hardResume[`${prop}`]
+    }
+  }
+}
+export const propMocker = (prop) => {
+  return {
+    propsData: {
+      [`${prop}`]: `sample ${prop}`
+    }
+  }
+}
 
 export const createWrapper  = (
   component,

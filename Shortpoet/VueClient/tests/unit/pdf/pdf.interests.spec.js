@@ -1,32 +1,30 @@
-import { createWrapper } from './../test.utils'
+import { textMatcher, propMocker, createWrapper } from './../test.utils'
 import PDFInterests from '@/components/Resume/PDF/PDFInterests'
 describe('PDFInterests.vue', () => {
+
+  const component = PDFInterests
+  let prop
+  let element
+  let mockProp = true
+
   it('renders interests h4', () => {
-    const wrapper = createWrapper(PDFInterests, {})
+    const wrapper = createWrapper(component, {})
+
     // hard coded header
     expect(wrapper.find("h4").text()).toMatch("Interests")
 
   })
   it('renders interests p that matches prop value', () => {
 
-    const sampleInterests = "sample interests"
-    const propsData = { 
-      interests: sampleInterests 
-    }
-
-    const wrapper = createWrapper(PDFInterests, {propsData: propsData})
-
-    // p set by prop
-    expect(wrapper.find("p").text()).toMatch(sampleInterests)
+    prop = 'interests'
+    element = 'p'
+    textMatcher(component, prop, element)
 
   })
   it('matches snapshot', () => {
-    const sampleInterests = "sample interests"
-    const propsData = { 
-      interests: sampleInterests 
-    }
-    
-    const wrapper = createWrapper(PDFInterests, {propsData: propsData})
+
+    prop = 'interests'
+    const wrapper = createWrapper(component, propMocker(prop))
 
     expect(wrapper.html()).toMatchSnapshot()
   })

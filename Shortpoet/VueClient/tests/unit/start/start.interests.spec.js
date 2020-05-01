@@ -1,6 +1,16 @@
-import { createWrapper } from '../test.utils'
+import { textMatcher, propMocker, createWrapper } from '../test.utils'
 import StartInterests from '@/components/Resume/Start/StartInterests'
 describe('StartInterests.vue', () => {
+
+  const component = StartInterests
+  let prop
+  let element
+  let mockProp = true
+
+  beforeEach(() => {
+
+  })
+
   it('renders interests h2', () => {
 
     const wrapper = createWrapper(StartInterests)
@@ -11,14 +21,9 @@ describe('StartInterests.vue', () => {
   })
   it('renders interests p that matches prop value', () => {
 
-    const sampleInterests = "sample interests"
-    const propsData = { 
-      interests: sampleInterests 
-    }
-    const wrapper = createWrapper(StartInterests, {propsData: propsData})
-
-    // p set by prop
-    expect(wrapper.find("p").text()).toMatch(sampleInterests)
+    prop = 'interests'
+    element = 'p'
+    textMatcher(component, prop, element)
 
   })
   it('renders photo', () => {
@@ -29,11 +34,8 @@ describe('StartInterests.vue', () => {
 
   })
   it('matches snapshot', () => {
-    const sampleInterests = "sample interests"
-    const propsData = { 
-      interests: sampleInterests 
-    }
-    const wrapper = createWrapper(StartInterests, {propsData: propsData})
+    prop = 'interests'
+    const wrapper = createWrapper(StartInterests, propMocker(prop))
     expect(wrapper.html()).toMatchSnapshot()
   })
 })
