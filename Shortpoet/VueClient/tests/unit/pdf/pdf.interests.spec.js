@@ -1,8 +1,8 @@
-import { factoryShallow } from './../test.utils'
+import { createWrapper } from './../test.utils'
 import PDFInterests from '@/components/Resume/PDF/PDFInterests'
 describe('PDFInterests.vue', () => {
   it('renders interests h4', () => {
-    const wrapper = factoryShallow(PDFInterests, {})
+    const wrapper = createWrapper(PDFInterests, {})
     // hard coded header
     expect(wrapper.find("h4").text()).toMatch("Interests")
 
@@ -14,7 +14,7 @@ describe('PDFInterests.vue', () => {
       interests: sampleInterests 
     }
 
-    const wrapper = factoryShallow(PDFInterests, {propsData: propsData})
+    const wrapper = createWrapper(PDFInterests, {propsData: propsData})
 
     // p set by prop
     expect(wrapper.find("p").text()).toMatch(sampleInterests)
@@ -26,7 +26,7 @@ describe('PDFInterests.vue', () => {
       interests: sampleInterests 
     }
     
-    const wrapper = factoryShallow(PDFInterests, {propsData: propsData})
+    const wrapper = createWrapper(PDFInterests, {propsData: propsData})
 
     expect(wrapper.html()).toMatchSnapshot()
   })
