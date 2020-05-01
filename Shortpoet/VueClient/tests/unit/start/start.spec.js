@@ -1,5 +1,6 @@
 import { createWrapper } from '../test.utils'
 import Start from '@/views/Start'
+import hardResume from '@/assets/resume.js'
 
 describe('Start.vue', () => {
   let wrapper
@@ -26,18 +27,22 @@ describe('Start.vue', () => {
     }
 
     const resumeStoreOptions = { 
-      getters: { getResumeLoaded: jest.fn(), getResume: jest.fn() }, 
+      getters: { getResumeLoaded: jest.fn(() => true), getResume: jest.fn(() => hardResume) }, 
       mutations: { 'SET_RESUME_RAW': jest.fn() } 
     }
 
     const wrapperOptions = { propsData, mocks, computed }
 
     wrapper = createWrapper(Start, wrapperOptions, resumeStoreOptions)
-
+    jest.resetModules()
+    jest.clearAllMocks()
   })
 
-  it('matches snapshot', () => {
-
+  // TODO somehow test for latest resume
+  // perhaps that's a backend test
+  // would like to match hardresume file to 
+  // chosen 'latest' version 
+  it('matches hard resume snapshot', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 })
