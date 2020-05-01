@@ -5,7 +5,7 @@ describe('PDFInterests.vue', () => {
   const component = PDFInterests
   const props = Object.keys(component.props)
   let prop
-  let element
+  let selector
   let mockProp = true
 
   it('renders interests h4', () => {
@@ -18,8 +18,8 @@ describe('PDFInterests.vue', () => {
   it('renders interests p that matches prop value', () => {
 
     prop = 'interests'
-    element = 'p'
-    textMatcher(component, props, prop, element)
+    selector = 'p'
+    textMatcher(component, props, prop, selector)
 
   })
   it('matches snapshot', () => {

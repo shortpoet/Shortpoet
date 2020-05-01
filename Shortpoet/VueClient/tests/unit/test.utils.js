@@ -7,28 +7,21 @@ import hardResume from '@/assets/resume.js'
 
 export const textMatcherFactory = (component, propDicts) => {
   const props = propDicts.map(d => d.prop)
-  console.log(props)
   propDicts.forEach(dict => {
-    it(`renders interests ${dict.element} that matches ${dict.prop} prop`, () => {
-      console.log(dict.prop)
-      console.log(dict.element)
-      textMatcher(component, props, dict.prop, dict.element)
-  
+    it(`renders interests ${dict.selector} that matches ${dict.prop} prop`, () => {
+      textMatcher(component, props, dict.prop, dict.selector)
     })  
   })
 }
 
-export const textMatcher = (component, props, prop, element, mock = true) => {
+export const textMatcher = (component, props, prop, selector, mock = true) => {
   let wrapper
   if (mock) {
-    console.log(prop)
-    console.log(element)
-    console.log(propMocker(`${prop}`).propsData[`${prop}`])
     wrapper = createWrapper(component, propsMocker(props))
-    expect(wrapper.find(`${element}`).text()).toMatch(propMocker(`${prop}`).propsData[`${prop}`])
+    expect(wrapper.find(`${selector}`).text()).toMatch(propMocker(`${prop}`).propsData[`${prop}`])
   } else {
     wrapper = createWrapper(component, propsFinder(props))
-    expect(wrapper.find(`${element}`).text()).toMatch(propFinder(`${prop}`).propsData[`${prop}`])
+    expect(wrapper.find(`${selector}`).text()).toMatch(propFinder(`${prop}`).propsData[`${prop}`])
   }
 }
 

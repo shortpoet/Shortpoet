@@ -6,7 +6,7 @@ describe('StartInterests.vue', () => {
   const component = StartInterests
   const props = Object.keys(component.props)
   let prop
-  let element
+  let selector
   let mockProp = true
 
   beforeEach(() => {
@@ -24,8 +24,8 @@ describe('StartInterests.vue', () => {
   it('renders interests p that matches interests prop', () => {
 
     prop = 'interests'
-    element = 'p'
-    textMatcher(component, props, prop, element)
+    selector = 'p'
+    textMatcher(component, props, prop, selector)
 
   })
   it('renders photo', () => {

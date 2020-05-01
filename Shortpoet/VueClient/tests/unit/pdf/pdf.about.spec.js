@@ -1,5 +1,5 @@
 import { textMatcherFactory, createWrapper, propsMocker, propMocker } from '../test.utils'
-import StartAbout from '@/components/Resume/Start/StartAbout'
+import PDFAbout from '@/components/Resume/PDF/PDFAbout'
 
 describe('StartAbout.vue', () => {
   beforeEach(() => {
