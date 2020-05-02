@@ -97,7 +97,7 @@ export const factory = (
     parentComponent: {},
     provide: {}
   }) => {
-    // console.log(options.store)
+    // console.log(options.propsData)
     return mount(component, options)
   }
 export const factoryShallow = (

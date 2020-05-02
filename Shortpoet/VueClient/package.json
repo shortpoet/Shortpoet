@@ -34,6 +34,7 @@
     "jquery.easing": "^1.4.1",
     "js-yaml": "^3.13.1",
     "jspdf": "^1.5.3",
+    "lodash": "^4.17.15",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
     "postcss-preset-env": "^6.7.0",

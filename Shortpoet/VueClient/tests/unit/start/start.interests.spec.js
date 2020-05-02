@@ -12,7 +12,8 @@ describe('StartInterests.vue', () => {
   let mockProp = true
 
   beforeEach(() => {
-
+    jest.resetModules()
+    jest.clearAllMocks()
   })
 
   it('renders interests h2', () => {

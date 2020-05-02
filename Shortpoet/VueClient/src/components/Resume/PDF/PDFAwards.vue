@@ -64,6 +64,9 @@ export default {
     recase(input) {
       return _recase(input)
     }
+  },
+  mounted () {
+    // console.log(this)
   }
 }
 </script>

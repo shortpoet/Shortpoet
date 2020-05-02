@@ -1,6 +1,8 @@
+import { enableAutoDestroy } from '@vue/test-utils'
 import { createWrapper, propsFinder } from '../test.utils'
 import PDFAwards from '@/components/Resume/PDF/PDFAwards'
 import recase from '@/utils/recase.js'
+import { cloneDeep } from 'lodash'
 
 describe('StartAwards.vue', () => {
 
@@ -9,10 +11,20 @@ describe('StartAwards.vue', () => {
   let prop
   let selector
   let mockProp = false
-  const wrapper = createWrapper(component, propsFinder(props))
+  // using real props to test icon class names and nested // computed values
+  // by transforming it to the shape the component expects, it renders the values in 
+  // snapshot. 
+  const propsObject = propsFinder(props)
+  const {propsData} = propsObject
+  // console.log(propsObject)
+  // console.log(propsData)
+  const languageTypes = propsData.spokenLanguages.map(l => l.type)
+
+  let wrapper = createWrapper(component, {propsData})
 
   beforeEach(() => {
-
+    jest.resetModules()
+    jest.clearAllMocks()
   })
 
   it('renders awards h4', () => {
@@ -21,14 +33,10 @@ describe('StartAwards.vue', () => {
     expect(wrapper.find("h4").text()).toMatch("Natural Languages")
 
   })
-  
-  const {propsData} = propsFinder(props)
-  const languageTypes = propsData.spokenLanguages.map(l => l.type)
 
   let iconClass
   let spanText
 
-  
   languageTypes.forEach(type => {
     it(`renders language icons that match spoken languages - ${type} - types/levels prop`, () => {
       // match first word and recase camel to capitalize and add space
@@ -40,7 +48,23 @@ describe('StartAwards.vue', () => {
   })
 
   it('matches snapshot', () => {
-    
+
+    let _propsObject = cloneDeep(propsObject)
+    _propsObject.propsData.renderPDF = false
+
+    wrapper = createWrapper(component, _propsObject)
+
+    expect(wrapper.html()).toMatchSnapshot()
+
+  })
+
+  it('matches renderPDF snapshot', () => {
+
+    let _propsObject = cloneDeep(propsObject)
+    _propsObject.propsData.renderPDF = true
+
+    wrapper = createWrapper(component, _propsObject)
+
     expect(wrapper.html()).toMatchSnapshot()
 
   })

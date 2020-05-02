@@ -109,6 +109,7 @@ export default {
         target: '#sideNav'
       })
       this.loadResume()
+      // console.log(this)
     })
   }
 }
