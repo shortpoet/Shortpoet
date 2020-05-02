@@ -5,8 +5,8 @@
       <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="(ed, i) in educations" :key="i">
         <div class="resume-content mr-auto">
           <h3 class="mb-0">{{ ed.institution }}</h3>
-          <div class="subheading mb-3">{{ ed.degree }}</div>
-          <div>{{ ed.details }}</div>
+          <div class="start-degree subheading mb-3">{{ ed.degree }}</div>
+          <div class="start-education-details">{{ ed.details }}</div>
           <!-- <p>GPA: 3.23</p> -->
         </div>
         <div class="resume-date text-md-right mt-1">

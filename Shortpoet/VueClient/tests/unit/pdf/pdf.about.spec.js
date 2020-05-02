@@ -1,7 +1,8 @@
 import { textMatcherFactory, createWrapper, propsMocker, propMocker } from '../test.utils'
 import PDFAbout from '@/components/Resume/PDF/PDFAbout'
+import { cloneDeep } from 'lodash'
 
-describe('StartAbout.vue', () => {
+describe('PDFAbout.vue', () => {
   beforeEach(() => {
     jest.resetModules()
     jest.clearAllMocks()
@@ -19,7 +20,9 @@ describe('StartAbout.vue', () => {
   let mockProp = true
   
   const props = propDicts.map(d => d.prop)
-  const wrapper = createWrapper(component, propsMocker(props))
+  let wrapper = createWrapper(component, propsMocker(props))
+  
+  const propsObject = propsMocker(props)
 
   // this function creates an it/test:
   // 'renders interests ${dict.selector} that matches ${dict.prop} prop'
@@ -41,6 +44,23 @@ describe('StartAbout.vue', () => {
   })
 
   it('matches snapshot', () => {
+
+    let _propsObject = cloneDeep(propsObject)
+    _propsObject.propsData.renderPDF = false
+
+    wrapper = createWrapper(component, _propsObject)
+
+    expect(wrapper.html()).toMatchSnapshot()
+    
+  })
+
+  it('matches renderPDF snapshot', () => {
+
+    let _propsObject = cloneDeep(propsObject)
+    _propsObject.propsData.renderPDF = true
+
+    wrapper = createWrapper(component, _propsObject)
+
     expect(wrapper.html()).toMatchSnapshot()
   })
 })
