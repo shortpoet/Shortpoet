@@ -1,12 +1,6 @@
-import {createWrapper} from '../../../src/utils/myTest/test.utils.createWrapper'
-// console.log(createWrapper)
-// const _createWrapper = createWrapper
-
-// import { createLocalVue } from '../../../src/utils/myTest/__mocks__/@vue/test-utils'
+import {createWrapper} from '@/utils/myTest/test.utils.createWrapper'
 import { createLocalVue } from '@vue/test-utils'
-
 import {cloneDeep} from 'lodash'
-
 import Vuex from 'vuex'
 import PortalVue from 'portal-vue'
 import createStore from '@/store'
@@ -15,9 +9,6 @@ import factory from '@/utils/myTest/test.utils.factory'
 
 jest.mock('@/utils/myTest/test.utils.factory')
 
-// const factory = jest.fn('factory', () => {
-//   console.log("hello from factory mock")
-// })
 
 describe('test.utils.createWrapper', () => {
   // let factory
@@ -51,25 +42,23 @@ describe('test.utils.createWrapper', () => {
     actions: {} 
   }
 
-  // calls createWrapper from factory a component and options object
-
   // calling jest -t factory calls this test as well
   // didn't know that it matches it/test blocks as well
-  it("calls createWrapper f@ctory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
+  it("calls createWrapper factory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
+
     const _mountOptions = cloneDeep(mountOptions)
-    // console.log(createLocalVue)
+
     const localVue = createLocalVue()
-    // console.log(localVue)
-    // console.log(localVue.use)
     localVue.use(Vuex)
     localVue.use(PortalVue)
+
     const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
     const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
-    const store = new Vuex.Store(storeConfig)
     _mountOptions.localVue = localVue
+
+    const store = new Vuex.Store(storeConfig)
     _mountOptions.store = store
 
-    console.log(factory)
     createWrapper(component, _mountOptions)
 
     expect(factory).toHaveBeenCalledWith(component, _mountOptions)
