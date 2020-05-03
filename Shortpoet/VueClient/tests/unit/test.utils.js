@@ -146,6 +146,21 @@ export const factoryShallow = (
     return shallowMount(component, options)
   }
 
+  // const tu = {}
+
+  // tu.factory = factory
+  // tu.factoryShallow = factoryShallow
+  // tu.createWrapper = createWrapper
+  // tu.propFinder = propFinder
+  // tu.propMocker = propMocker
+  // tu.propsFinder = propsFinder
+  // tu.propsMocker = propsMocker
+  // tu.textMatcher = textMatcher
+  // tu.textMatcherFactory = textMatcherFactory
+  
+  // module.exports = tu
+  
+
 // this is incomplete
 // maybe try and develop using TDD  
   

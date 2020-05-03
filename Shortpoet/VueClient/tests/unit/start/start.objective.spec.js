@@ -6,6 +6,7 @@ describe('StartObjective.vue', () => {
   const component = StartObjective
   const props = Object.keys(component.props)
   const wrapper = createWrapper(component, propsMocker(props))
+  console.log(wrapper)
 
   let prop
   let selector

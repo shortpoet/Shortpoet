@@ -1,20 +1,13 @@
 import {propMocker, propFinder, propsMocker, propsFinder, factory, createWrapper} from '../test.utils.js'
-import { createLocalVue } from '@vue/test-utils'
+import { mount, createLocalVue } from '@vue/test-utils'
 import {cloneDeep} from 'lodash'
 import hardResume from '@/assets/resume.js'
 import Start from '@/views/Start'
 import Vue from 'vue'
-import {mount} from '@vue/test-utils'
+import Vuex from 'vuex'
 
 describe('test.utils', () => {
 
-  // jest.mock('vue-test-utils', () => {
-    //   mount = jest.fn()
-    // })
-    // const mountShallow = jest.fn()
-    // const Vue = fest.fn()
-    // const component = Start
-    // const component = new Vue({name: 'Test'})
     const component = {}
     const mountOptions = {
       propsData: {},
@@ -34,14 +27,6 @@ describe('test.utils', () => {
     parentComponent: {},
     provide: {}
   }
-  // const mount = jest.fn(() => {
-  //   return {
-  //     component,
-  //     mountOptions
-  //   }
-  // })
-
-  // const mount = jest.fn()
 
   describe('propMocker', () => {
     it("returns a propsData object mocked in the format prop: sample prop", () => {
@@ -109,7 +94,6 @@ describe('test.utils', () => {
 
   describe('factory', () => {
     it("calls vue-test-utils mount with a component and options object", () => {
-      console.log('factory test')
       const _mountOptions = cloneDeep(mountOptions)
       // const localVue = createLocalVue()
       // _mountOptions.localVue = localVue
@@ -124,16 +108,24 @@ describe('test.utils', () => {
     })
   })
 
-  describe('createWrapper', () => {
-    it("calls factory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
-      // console.log('createWrapper test')
-      // createWrapper(component, mountOptions)
-      // const _mountOptions = cloneDeep(mountOptions)
-      // const localVue = createLocalVue()
-      // console.log(localVue)
-      // _mountOptions.localVue = localVue
-      // expect(mount).toHaveBeenCalledWith(component, _mountOptions)
-    })
-  })
+  // describe('createWrapper', () => {
+  //   it("calls factory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
+  //     const _mountOptions = cloneDeep(mountOptions)
+  //     jest.unmock('@vue/test-utils')
+  //     const localVue = createLocalVue()
+  //     console.log(localVue)
+  //     localVue.use(Vuex)
+  //     localVue.use(PortalVue)
+  //     const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
+  //     const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
+  //     const store = new Vuex.Store(storeConfig)
+  //     _mountOptions.localVue = localVue
+  //     _mountOptions.store = store
+
+  //     createWrapper(component, mountOptions)
+
+  //     expect(mount).toHaveBeenCalledWith(component, _mountOptions)
+  //   })
+  // })
 
 })

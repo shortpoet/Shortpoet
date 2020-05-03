@@ -3,9 +3,13 @@
 //     console.log("mount mock")
 //   })
 // }
+import {createLocalVue} from '@vue/test-utils'
 
 const test = jest.genMockFromModule('@vue/test-utils')
 const component = {}
+const localVue = {
+  use: jest.fn()
+}
 const mountOptions = {
   propsData: {},
   localVue: {},
@@ -31,5 +35,10 @@ test.mount = jest.fn(() => {
     mountOptions
   }
 })
+
+// test.createLocalVue = jest.fn(() => {
+//   return localVue
+// })
+test.createLocalVue = createLocalVue
 
 module.exports = test
