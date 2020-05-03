@@ -44,7 +44,9 @@ describe('createWrapper', () => {
     actions: {} 
   }
 
-  it("calls factory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
+  // calling jest -t factory calls this test as well
+  // didn't know that it matches it/test blocks as well
+  it("calls createWrapper f@ctory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
     const _mountOptions = cloneDeep(mountOptions)
     // console.log(createLocalVue)
     const localVue = createLocalVue()

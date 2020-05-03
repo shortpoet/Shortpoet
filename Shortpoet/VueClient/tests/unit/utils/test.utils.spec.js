@@ -92,40 +92,5 @@ describe('test.utils', () => {
     })
   })
 
-  describe('factory', () => {
-    it("calls vue-test-utils mount with a component and options object", () => {
-      const _mountOptions = cloneDeep(mountOptions)
-      // const localVue = createLocalVue()
-      // _mountOptions.localVue = localVue
-      // throws  mount.context can only be used when mounting a functional component
-      // unless
-      // delete _mountOptions.context
-      // console.log(localVue)
-      
-      console.log(mount)
-      factory(component, _mountOptions)
-      expect(mount).toHaveBeenCalledWith(component, _mountOptions)
-    })
-  })
-
-  // describe('createWrapper', () => {
-  //   it("calls factory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
-  //     const _mountOptions = cloneDeep(mountOptions)
-  //     jest.unmock('@vue/test-utils')
-  //     const localVue = createLocalVue()
-  //     console.log(localVue)
-  //     localVue.use(Vuex)
-  //     localVue.use(PortalVue)
-  //     const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
-  //     const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
-  //     const store = new Vuex.Store(storeConfig)
-  //     _mountOptions.localVue = localVue
-  //     _mountOptions.store = store
-
-  //     createWrapper(component, mountOptions)
-
-  //     expect(mount).toHaveBeenCalledWith(component, _mountOptions)
-  //   })
-  // })
 
 })

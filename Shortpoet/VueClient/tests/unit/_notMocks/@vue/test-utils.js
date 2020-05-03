@@ -5,6 +5,8 @@
 // }
 import {createLocalVue} from '@vue/test-utils'
 
+console.log('hello from test-utils mocks')
+
 const test = jest.genMockFromModule('@vue/test-utils')
 const component = {}
 const localVue = {
@@ -40,5 +42,6 @@ test.mount = jest.fn(() => {
 //   return localVue
 // })
 test.createLocalVue = createLocalVue
-
 module.exports = test
+
+// export default test
