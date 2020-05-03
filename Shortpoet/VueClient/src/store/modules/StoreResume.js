@@ -49,6 +49,7 @@ export const mutations = {
         jobs: resume.jobs.filter(j => j.experienceType === et)
       })
     })
+    // console.log(resume)
     state.resume = resume
   },
   [SET_RESUME] (state, newResume) { state.resume = newResume },

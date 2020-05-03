@@ -1,6 +1,6 @@
 import { mutations } from '@/store/modules/StoreResume'
 
-const { SET_RESUME, SET_RESUME_LOADED } = mutations
+const { SET_RESUME_RAW, SET_RESUME, SET_RESUME_LOADED } = mutations
 
 describe('Resume Store Mutations', () => {
   let state
@@ -43,16 +43,16 @@ describe('Resume Store Mutations', () => {
         surname: 'Test surname',
         title: 'Test title',
         visas: 'Test visas',
-        educations: [{education: {institution: 'test education'}}],
+        educations: [{institution: 'test education'}],
         jobs: [
-          {job: {company: 'test job', experienceType: 'software'}},
-          {job: {company: 'test job', experienceType: 'language'}},
-          {job: {company: 'test job', experienceType: 'sales'}},
-          {job: {company: 'test job', experienceType: 'hospitality'}}
+          {company: 'test job', experienceType: 'software'},
+          {company: 'test job', experienceType: 'language'},
+          {company: 'test job', experienceType: 'sales'},
+          {company: 'test job', experienceType: 'hospitality'}
         ],
-        skills: [{skill: {details: 'test skill'}}],
-        socials: [{social: {social: 'test skill'}}],
-        spokenLanguages: [{spokenLanguages: {language: 'test skill'}}],
+        skills: [{details: 'test skill'}],
+        socials: [{social: 'test skill'}],
+        spokenLanguages: [{language: 'test skill'}],
         experiences: [
           {type: 'software', jobs: [{company: 'test job', experienceType: 'software'}]},
           {type: 'language', jobs: [{company: 'test job', experienceType: 'language'}]},
@@ -61,7 +61,7 @@ describe('Resume Store Mutations', () => {
         ]
       }
       
-      SET_RESUME(state, newResume)
+      SET_RESUME_RAW(state, data)
       expect(state.resume).toEqual(newResume)
     })    
   })

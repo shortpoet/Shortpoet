@@ -99,31 +99,22 @@ describe('PDFExperience.vue', () => {
     // same wrapper object from previous tests adds the split descriptions
     // bec a new wrapper was not instantiated
 
-
-    // let _propsObject = cloneDeep(propsObject)
-    // _propsObject.propsData.renderPDF = false
-
-    // wrapper = createWrapper(component, _propsObject)
-
     expect(wrapper.html()).toMatchSnapshot()
 
 
   })
   it('matches renderPDF experience snapshot', () => {
     
-    // same wrapper object from previous tests adds the split descriptions
-    // bec a new wrapper was not instantiated
+    // new wrapper bec need to modify propsData to add renderPDF boolean
     
     let _propsObject = cloneDeep(propsObject)
-
     _propsObject.propsData.experiences.map(e => {
       e.jobs.map(j => {
         j.description = `description part 1\\n\\rdescription part 2\\n\\rdescription part 3`
       })
     })    
-
     _propsObject.propsData.renderPDF = true
-    console.log(_propsObject)
+
     wrapper = createWrapper(component, _propsObject)
 
     expect(wrapper.html()).toMatchSnapshot()
