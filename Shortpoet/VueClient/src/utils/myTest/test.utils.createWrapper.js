@@ -7,11 +7,12 @@ import Vuex from 'vuex'
 import createStore from '@/store'
 import PortalVue from 'portal-vue'
 
-
 export const createWrapper  = (
   component,
   /* istanbul ignore next */
   options = {},
+  // but why don't i have to ignore the empty  or even unprovided resumeStoreOtions
+  // might need to figure this out but setting params to ignore for now
   resumeStoreOptions = {},
   isShallow = false,
   ) => {
@@ -22,7 +23,7 @@ export const createWrapper  = (
     const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
     const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
     const store = new Vuex.Store(storeConfig)
-    console.log(options)
+    // console.log(options)
     return isShallow? factoryShallow(component, {localVue, store, ...options}) : factory(component, {localVue, store, ...options})
 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1588549118405" clover="3.2.0">
-  <project timestamp="1588549118405" name="All files">
-    <metrics statements="234" coveredstatements="192" conditionals="67" coveredconditionals="37" methods="99" coveredmethods="73" elements="400" coveredelements="302" complexity="0" loc="234" ncloc="234" packages="8" files="39" classes="39"/>
+<coverage generated="1588549442108" clover="3.2.0">
+  <project timestamp="1588549442108" name="All files">
+    <metrics statements="233" coveredstatements="191" conditionals="65" coveredconditionals="37" methods="99" coveredmethods="73" elements="397" coveredelements="301" complexity="0" loc="233" ncloc="233" packages="8" files="39" classes="39"/>
     <package name="assets">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="d3_devicon_forest_green.svg" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\assets\d3_devicon_forest_green.svg">
@@ -253,33 +253,32 @@
       </file>
     </package>
     <package name="utils.myTest">
-      <metrics statements="59" coveredstatements="57" conditionals="14" coveredconditionals="10" methods="15" coveredmethods="15"/>
+      <metrics statements="58" coveredstatements="56" conditionals="12" coveredconditionals="10" methods="15" coveredmethods="15"/>
       <file name="index.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="test.utils.createWrapper.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.createWrapper.js">
-        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="11" count="16" type="stmt"/>
-        <line num="18" count="53" type="stmt"/>
-        <line num="20" count="53" type="stmt"/>
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="19" count="53" type="stmt"/>
         <line num="21" count="53" type="stmt"/>
         <line num="22" count="53" type="stmt"/>
         <line num="23" count="53" type="stmt"/>
         <line num="24" count="53" type="stmt"/>
         <line num="25" count="53" type="stmt"/>
-        <line num="26" count="53" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="53" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="test.utils.factory.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.factory.js">
-        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="17" type="stmt"/>
-        <line num="29" count="48" type="stmt"/>
-        <line num="32" count="17" type="stmt"/>
+        <line num="30" count="48" type="stmt"/>
+        <line num="33" count="17" type="stmt"/>
       </file>
       <file name="test.utils.factoryShallow.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.factoryShallow.js">
-        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="17" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="26" count="17" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="17" type="stmt"/>
       </file>
       <file name="test.utils.propFinder.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.propFinder.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -307,7 +306,7 @@
         <line num="2" count="38" type="cond" truecount="2" falsecount="0"/>
         <line num="3" count="27" type="stmt"/>
         <line num="4" count="27" type="stmt"/>
-        <line num="5" count="112" type="stmt"/>
+        <line num="5" count="114" type="stmt"/>
         <line num="7" count="27" type="stmt"/>
         <line num="10" count="11" type="cond" truecount="1" falsecount="1"/>
         <line num="11" count="11" type="stmt"/>

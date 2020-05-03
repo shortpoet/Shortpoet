@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils'
 
 export const factory = (
   component, 
+  /* istanbul ignore next */
   options = {
     propsData: {},
     localVue: {},

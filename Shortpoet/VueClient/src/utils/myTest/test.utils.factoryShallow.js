@@ -2,6 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 
 export const factoryShallow = (
   component, 
+  /* istanbul ignore next */
   options = {
     propsData: {},
     localVue: {},

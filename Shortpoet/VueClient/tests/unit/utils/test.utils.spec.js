@@ -68,7 +68,7 @@ describe('test.utils', () => {
       expect(output).toMatchObject(propsData)
     })
     it("returns multiple propsData object mocked in the format prop: sample prop from object input", () => {
-      const testProps = ['testProp', 'sampleProp']
+      const testProps = ['propsData', 'testProp', 'sampleProp', '1']
       const output = propsMocker(testProps)
       const propsData = {
         propsData: {
