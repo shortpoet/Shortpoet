@@ -2,8 +2,8 @@ import {createWrapper} from '../../../src/utils/myTest/test.utils.createWrapper'
 // console.log(createWrapper)
 // const _createWrapper = createWrapper
 
-import { createLocalVue } from '../../../src/utils/myTest/__mocks__/@vue/test-utils'
-// import { createLocalVue } from '@vue/test-utils'
+// import { createLocalVue } from '../../../src/utils/myTest/__mocks__/@vue/test-utils'
+import { createLocalVue } from '@vue/test-utils'
 
 import {cloneDeep} from 'lodash'
 

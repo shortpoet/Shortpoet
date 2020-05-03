@@ -3,7 +3,7 @@
 //     console.log("mount mock")
 //   })
 // }
-import {createLocalVue} from '@vue/test-utils'
+// import {createLocalVue} from '@vue/test-utils'
 
 console.log('hello from test-utils mocks')
 
@@ -41,7 +41,7 @@ test.mount = jest.fn(() => {
 // test.createLocalVue = jest.fn(() => {
 //   return localVue
 // })
-test.createLocalVue = createLocalVue
+// test.createLocalVue = createLocalVue
 module.exports = test
 
 // export default test
