@@ -1,21 +1,34 @@
 // import {propMocker, propFinder, propsMocker, propsFinder, factory, createWrapper} from '../test.utils.js'
-import {createWrapper} from '../test.utils.js'
+import {createWrapper} from '../../../src/utils/myTest/test.utils.createWrapper'
 
-import { mount, createLocalVue } from '@vue/test-utils'
+// const _createWrapper = createWrapper
+
+import { mount } from '@vue/test-utils'
+
+import { createLocalVue } from '../../../src/utils/myTest/__mocks__/@vue/test-utils'
+
+
 import {cloneDeep} from 'lodash'
-import hardResume from '@/assets/resume.js'
-import Start from '@/views/Start'
-import Vue from 'vue'
+
+
+// import hardResume from '@/assets/resume.js'
+// import Start from '@/views/Start'
+// import Vue from 'vue'
+
 import Vuex from 'vuex'
 import PortalVue from 'portal-vue'
 import createStore from '@/store'
-const utilsMock = jest.mock('../test.utils')
-// console.log(utilsMock)
+
+// jest.mock('@vue/test-utils')
+
+// const factory = jest.fn('factory', () => {
+//   console.log("hello from factory mock")
+// })
 
 describe('createWrapper', () => {
-
+  let factory
   beforeEach(() => {
-    require('../test.utils')
+    factory = require('../../../src/utils/myTest/__mocks__/test.utils.factory')
   })
 
   const component = {}

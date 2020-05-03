@@ -123,29 +123,29 @@ export const factory = (
     // console.log(mount)
     return mount(component, options)
   }
-export const factoryShallow = (
-  component, 
-  options = {
-    propsData: {},
-    localVue: {},
-    mocks: {},
-    store: {},
-    context: {}, // only for functional components
-    router: {},
-    computed: {},
-    stubs: {},
-    slots: {},
-    scopedSlots: {},
-    attrs: {},
-    attachToDocument: false,
-    attachTo: null, //HTML Element or String
-    listeners: {},
-    parentComponent: {},
-    provide: {}
-  }) => {
-    return shallowMount(component, options)
-  }
-
+  export const factoryShallow = (
+    component, 
+    options = {
+      propsData: {},
+      localVue: {},
+      mocks: {},
+      store: {},
+      context: {}, // only for functional components
+      router: {},
+      computed: {},
+      stubs: {},
+      slots: {},
+      scopedSlots: {},
+      attrs: {},
+      attachToDocument: false,
+      attachTo: null, //HTML Element or String
+      listeners: {},
+      parentComponent: {},
+      provide: {}
+    }) => {
+      return shallowMount(component, options)
+    }
+  
   // const tu = {}
 
   // tu.factory = factory
