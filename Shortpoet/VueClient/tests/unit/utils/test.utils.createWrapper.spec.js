@@ -6,8 +6,10 @@ import PortalVue from 'portal-vue'
 import createStore from '@/store'
 
 import factory from '@/utils/myTest/test.utils.factory'
+import factoryShallow from '@/utils/myTest/test.utils.factoryShallow'
 
 jest.mock('@/utils/myTest/test.utils.factory')
+jest.mock('@/utils/myTest/test.utils.factoryShallow')
 
 
 describe('test.utils.createWrapper', () => {
@@ -17,12 +19,13 @@ describe('test.utils.createWrapper', () => {
   })
 
   const component = {}
-  const mountOptions = {
+
+  const options = {
     propsData: {},
     localVue: {},
     mocks: {},
     store: {},
-    // context: {}, // only for functional components
+    context: {}, // only for functional components
     router: {},
     computed: {},
     stubs: {},
@@ -35,34 +38,81 @@ describe('test.utils.createWrapper', () => {
     parentComponent: {},
     provide: {}
   }
-  const resumeStoreOptions = { 
+
+  let resumeStoreOptions = { 
     state: {}, 
     getters: {}, 
     mutations: {}, 
     actions: {} 
   }
 
+  let isShallow
+
   // calling jest -t factory calls this test as well
   // didn't know that it matches it/test blocks as well
-  it("calls createWrapper factory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
+  it("calls createWrapper factory with a component and empty options and isShallow default to false", () => {
 
-    const _mountOptions = cloneDeep(mountOptions)
+    createWrapper(component, options)
 
-    const localVue = createLocalVue()
-    localVue.use(Vuex)
-    localVue.use(PortalVue)
+    expect(factory).toHaveBeenCalledWith(component, options)
 
-    const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
-    const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
-    _mountOptions.localVue = localVue
-
-    const store = new Vuex.Store(storeConfig)
-    _mountOptions.store = store
-
-    createWrapper(component, _mountOptions)
-
-    expect(factory).toHaveBeenCalledWith(component, _mountOptions)
   })
+  it("calls createWrapper factory with a component and non-empty options and isShallow default to false", () => {
+    const _options = cloneDeep(options)
+    _options.propsData = {
+      sampleProp: 'sample prop'
+    }
+    createWrapper(component, _options)
+
+    expect(factory).toHaveBeenCalledWith(component, _options)
+
+  })
+
+  it("calls createWrapper factory with a component and empty options and empty resumeStoreOptions", () => {
+
+    const _options = cloneDeep(options)
+    let _resumeStoreOptions = cloneDeep(resumeStoreOptions)
+    _resumeStoreOptions = {}
+    isShallow = false
+
+    createWrapper(component, _options, _resumeStoreOptions, isShallow)
+
+    expect(factory).toHaveBeenCalledWith(component, _options)
+
+  })
+  it("calls createWrapper factory with a component and empty options and non-empty resumeStoreOptions", () => {
+
+    const _options = cloneDeep(options)
+    isShallow = false
+
+    createWrapper(component, _options, resumeStoreOptions, isShallow)
+
+    expect(factory).toHaveBeenCalledWith(component, _options)
+
+  })
+  it("calls createWrapper factoryShallow with a component and empty options and empty resumeStoreOptions", () => {
+
+    const _options = cloneDeep(options)
+    let _resumeStoreOptions = cloneDeep(resumeStoreOptions)
+    _resumeStoreOptions = {}
+    isShallow = true
+
+    createWrapper(component, _options, _resumeStoreOptions, isShallow)
+
+    expect(factoryShallow).toHaveBeenCalledWith(component, _options)
+
+  })
+  it("calls createWrapper factoryShallow with a component and empty options and non-empty resumeStoreOptions", () => {
+
+    const _options = cloneDeep(options)
+    isShallow = true
+
+    createWrapper(component, _options, resumeStoreOptions, isShallow)
+
+    expect(factoryShallow).toHaveBeenCalledWith(component, _options)
+
+  })
+
 })
 
 

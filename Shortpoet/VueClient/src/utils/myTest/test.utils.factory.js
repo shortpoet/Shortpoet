@@ -1,6 +1,5 @@
 import { mount } from '@vue/test-utils'
 
-
 export const factory = (
   component, 
   options = {
@@ -8,7 +7,9 @@ export const factory = (
     localVue: {},
     mocks: {},
     store: {},
-    context: {}, // only for functional components
+    // context: {}, // only for functional components
+    // this only breaks when testing
+    // probably should comment out of real func (which this is (now) hehe)
     router: {},
     computed: {},
     stubs: {},
@@ -24,7 +25,7 @@ export const factory = (
     // console.log(options)
     // console.log(options.localVue)
     // console.log(options.propsData.experiences[0].jobs)
-    console.log(mount)
+    // console.log(mount)
     return mount(component, options)
   }
 

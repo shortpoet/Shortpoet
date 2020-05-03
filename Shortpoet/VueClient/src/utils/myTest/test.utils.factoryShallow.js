@@ -7,7 +7,7 @@ export const factoryShallow = (
     localVue: {},
     mocks: {},
     store: {},
-    context: {}, // only for functional components
+    // context: {}, // only for functional components
     router: {},
     computed: {},
     stubs: {},

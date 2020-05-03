@@ -10,6 +10,7 @@ import PortalVue from 'portal-vue'
 
 export const createWrapper  = (
   component,
+  /* istanbul ignore next */
   options = {},
   resumeStoreOptions = {},
   isShallow = false,
@@ -21,6 +22,7 @@ export const createWrapper  = (
     const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
     const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
     const store = new Vuex.Store(storeConfig)
+    console.log(options)
     return isShallow? factoryShallow(component, {localVue, store, ...options}) : factory(component, {localVue, store, ...options})
 }
 

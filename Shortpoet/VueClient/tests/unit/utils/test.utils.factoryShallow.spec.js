@@ -1,11 +1,11 @@
-import { mount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 
 jest.mock('@vue/test-utils')
 
-describe('test.utils.factory', () => {
-  let factory
+describe('test.utils.factoryShallow', () => {
+  let factoryShallow
   beforeEach(() => {
-    factory = require('@/utils/myTest/test.utils.factory')
+    factoryShallow = require('@/utils/myTest/test.utils.factoryShallow')
   })
 
   const component = {}
@@ -28,11 +28,11 @@ describe('test.utils.factory', () => {
     provide: {}
   }
 
-  it("calls vue-test-utils mount with a component and options object", () => {
+  it("calls vue-test-utils shallowMount with a component and options object", () => {
 
-    factory(component, mountOptions)
+    factoryShallow(component, mountOptions)
 
-    expect(mount).toHaveBeenCalledWith(component, mountOptions)
+    expect(shallowMount).toHaveBeenCalledWith(component, mountOptions)
 
   })
 })
