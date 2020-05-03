@@ -1,34 +1,28 @@
-// import {propMocker, propFinder, propsMocker, propsFinder, factory, createWrapper} from '../test.utils.js'
 import {createWrapper} from '../../../src/utils/myTest/test.utils.createWrapper'
-
+// console.log(createWrapper)
 // const _createWrapper = createWrapper
 
-import { mount } from '@vue/test-utils'
-
-import { createLocalVue } from '../../../src/utils/myTest/_myMocks/@vue/test-utils'
-
+import { createLocalVue } from '../../../src/utils/myTest/__mocks__/@vue/test-utils'
+// import { createLocalVue } from '@vue/test-utils'
 
 import {cloneDeep} from 'lodash'
-
-
-// import hardResume from '@/assets/resume.js'
-// import Start from '@/views/Start'
-// import Vue from 'vue'
 
 import Vuex from 'vuex'
 import PortalVue from 'portal-vue'
 import createStore from '@/store'
 
-// jest.mock('@vue/test-utils')
+import factory from '@/utils/myTest/test.utils.factory'
+
+jest.mock('@/utils/myTest/test.utils.factory')
 
 // const factory = jest.fn('factory', () => {
 //   console.log("hello from factory mock")
 // })
 
-describe('createWrapper', () => {
-  let factory
+describe('test.utils.createWrapper', () => {
+  // let factory
   beforeEach(() => {
-    factory = require('../../../src/utils/myTest/_myMocks/test.utils.factory')
+    // factory = require('../../../src/utils/myTest/__mocks__/test.utils.factory').default
   })
 
   const component = {}
@@ -37,7 +31,7 @@ describe('createWrapper', () => {
     localVue: {},
     mocks: {},
     store: {},
-    context: {}, // only for functional components
+    // context: {}, // only for functional components
     router: {},
     computed: {},
     stubs: {},
@@ -57,6 +51,8 @@ describe('createWrapper', () => {
     actions: {} 
   }
 
+  // calls createWrapper from factory a component and options object
+
   // calling jest -t factory calls this test as well
   // didn't know that it matches it/test blocks as well
   it("calls createWrapper f@ctory with a component, and options, resumeStoreOptions objects and isShallow boolean", () => {
@@ -74,7 +70,7 @@ describe('createWrapper', () => {
     _mountOptions.store = store
 
     console.log(factory)
-    createWrapper(component, mountOptions)
+    createWrapper(component, _mountOptions)
 
     expect(factory).toHaveBeenCalledWith(component, _mountOptions)
   })

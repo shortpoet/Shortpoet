@@ -22,9 +22,12 @@ export const factory = (
     provide: {}
   }) => {
     // console.log(options)
+    // console.log(options.localVue)
     // console.log(options.propsData.experiences[0].jobs)
-    // console.log(mount)
+    console.log(mount)
     return mount(component, options)
   }
 
 module.exports = factory
+
+// export default factory

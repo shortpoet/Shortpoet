@@ -1,12 +1,11 @@
-// import {propMocker, propFinder, propsMocker, propsFinder, factory, createWrapper} from '../test.utils.js'
-import { factory } from '@/utils/myTest/test.utils.factory'
 import { mount } from '@vue/test-utils'
-// jest.mock('@vue/test-utils')
 
-describe('factory', () => {
+jest.mock('@vue/test-utils')
 
+describe('test.utils.factory', () => {
+  let factory
   beforeEach(() => {
-    // require('../test.utils')
+    factory = require('@/utils/myTest/test.utils.factory')
   })
 
   const component = {}
@@ -36,8 +35,11 @@ describe('factory', () => {
   }
 
   it("calls vue-test-utils mount with a component and options object", () => {
-    // factory(component, mountOptions)
-    // expect(mount).toHaveBeenCalledWith(component, mountOptions)
+
+    factory(component, mountOptions)
+
+    expect(mount).toHaveBeenCalledWith(component, mountOptions)
+
   })
 })
 

@@ -24,4 +24,4 @@ export const createWrapper  = (
     return isShallow? factoryShallow(component, {localVue, store, ...options}) : factory(component, {localVue, store, ...options})
 }
 
-module.exports = createWrapper
+export default createWrapper
