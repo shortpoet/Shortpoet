@@ -1,4 +1,5 @@
-import { createWrapper, propsFinder } from '../test.utils'
+import * as myTest from '@/utils/myTest'
+const { propsFinder, createWrapper } = myTest.default
 import StartAwards from '@/components/Resume/Start/StartAwards'
 import recase from '@/utils/recase.js'
 

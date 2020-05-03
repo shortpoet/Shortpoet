@@ -1,4 +1,6 @@
-import { createWrapper } from '../test.utils'
+import * as myTest from '@/utils/myTest'
+const { createWrapper } = myTest.default
+
 // even just importing throws the error
 // import PDF from '@/views/PDF'
 import hardResume from '@/assets/resume.js'

@@ -1,4 +1,5 @@
-import { propsMocker, createWrapper } from '../test.utils'
+import * as myTest from '@/utils/myTest'
+const { createWrapper, propsMocker } = myTest.default
 import PDFExperience from '@/components/Resume/PDF/PDFExperience'
 import {cloneDeep} from 'lodash'
 

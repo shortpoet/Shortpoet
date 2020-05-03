@@ -1,4 +1,5 @@
-import { createWrapper } from '../test.utils'
+import * as myTest from '@/utils/myTest'
+const { createWrapper } = myTest.default
 import Start from '@/views/Start'
 import hardResume from '@/assets/resume.js'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'

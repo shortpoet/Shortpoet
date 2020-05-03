@@ -1,4 +1,5 @@
-import { textMatcher, propsMocker, createWrapper } from './../test.utils'
+import * as myTest from '@/utils/myTest'
+const { textMatcher, propsMocker, createWrapper } = myTest.default
 import PDFInterests from '@/components/Resume/PDF/PDFInterests'
 
 describe('PDFInterests.vue', () => {

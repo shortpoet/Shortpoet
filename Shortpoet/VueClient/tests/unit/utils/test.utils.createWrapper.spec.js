@@ -5,7 +5,7 @@ import {createWrapper} from '../../../src/utils/myTest/test.utils.createWrapper'
 
 import { mount } from '@vue/test-utils'
 
-import { createLocalVue } from '../../../src/utils/myTest/__mocks__/@vue/test-utils'
+import { createLocalVue } from '../../../src/utils/myTest/_myMocks/@vue/test-utils'
 
 
 import {cloneDeep} from 'lodash'
@@ -28,7 +28,7 @@ import createStore from '@/store'
 describe('createWrapper', () => {
   let factory
   beforeEach(() => {
-    factory = require('../../../src/utils/myTest/__mocks__/test.utils.factory')
+    factory = require('../../../src/utils/myTest/_myMocks/test.utils.factory')
   })
 
   const component = {}

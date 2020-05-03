@@ -1,4 +1,6 @@
-import {propMocker, propFinder, propsMocker, propsFinder, factory, createWrapper} from '../test.utils.js'
+import * as myTest from '@/utils/myTest'
+const {propMocker, propFinder, propsMocker, propsFinder, factory, createWrapper} = myTest.default
+
 import { mount, createLocalVue } from '@vue/test-utils'
 import {cloneDeep} from 'lodash'
 import hardResume from '@/assets/resume.js'

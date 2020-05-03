@@ -1,4 +1,5 @@
-import { textMatcherFactory, createWrapper, propsMocker, propMocker } from '../test.utils'
+import * as myTest from '@/utils/myTest'
+const { textMatcherFactory, createWrapper, propsMocker, propMocker } = myTest.default
 import StartAbout from '@/components/Resume/Start/StartAbout'
 
 describe('StartAbout.vue', () => {

@@ -1,5 +1,6 @@
 import { enableAutoDestroy } from '@vue/test-utils'
-import { createWrapper, propsFinder } from '../test.utils'
+import * as myTest from '@/utils/myTest'
+const { createWrapper, propsFinder } = myTest.default
 import PDFAwards from '@/components/Resume/PDF/PDFAwards'
 import recase from '@/utils/recase.js'
 import { cloneDeep } from 'lodash'

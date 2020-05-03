@@ -1,5 +1,5 @@
 // import {propMocker, propFinder, propsMocker, propsFinder, factory, createWrapper} from '../test.utils.js'
-import { factory } from '../test.utils.js'
+import { factory } from '@/utils/myTest/test.utils.factory'
 import { mount } from '@vue/test-utils'
 // jest.mock('@vue/test-utils')
 
