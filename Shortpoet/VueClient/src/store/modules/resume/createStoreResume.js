@@ -12,8 +12,6 @@ export const createStoreResume = () => {
 
 /* istanbul ignore next */
 export const createStoreResumeMocks = (custom = { getters: {}, mutations: {}, actions: {}, state: {} }) => {
-  // console.log(custom)
-  // console.log(custom.getters.getResumeLoaded)
   const mockState = Object.assign({}, state, custom.state);
   const mockGetters = Object.assign({}, getters, custom.getters);
   const mockMutations = Object.assign({}, mutations, custom.mutations);

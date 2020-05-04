@@ -1,4 +1,5 @@
-import { createWrapper } from '@/utils/myTest/test.utils.createWrapper'
+import * as myTest from '@/utils/myTest'
+const { createWrapper } = myTest.default
 import { cloneDeep } from 'lodash'
 
 import factory from '@/utils/myTest/test.utils.factory'

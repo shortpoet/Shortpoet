@@ -16,8 +16,6 @@ const funcs = {
   propFinder: propFinder
 }
 
-console.log(createWrapper)
-
 export const textMatcher = (component, props, prop, selector, mock = true, isShallow = false) => {
   let wrapper
   const doMatch = (funcName) => {

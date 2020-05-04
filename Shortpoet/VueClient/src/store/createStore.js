@@ -1,7 +1,4 @@
-// import VueCookies from 'vue-cookies'
 import { state, getters, mutations, actions, modules } from './index'
-
-// import StoreResume from '@/store/modules/StoreResume'
 
 import { createStoreResumeMocks } from '@/store/modules/resume/createStoreResume'
 
@@ -21,11 +18,6 @@ const createMocks = (custom = {  state: {}, getters: {}, mutations: {}, actions:
   const mockMutations = Object.assign({}, mutations, custom.mutations)
   const mockActions = Object.assign({}, actions, custom.actions)
   const mockModules = Object.assign({}, modules, custom.modules)
-
-  /* istanbul ignore next */
-  // const createStoreResumeMocks = (custom = { getters: {}, mutations: {}, actions: {}, state: {} }) => {
-  //   return StoreResume.createStoreResumeMocks(custom)
-  // } 
 
   return  {  
     state: mockState,

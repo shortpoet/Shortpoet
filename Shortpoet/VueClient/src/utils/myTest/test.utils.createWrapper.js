@@ -27,4 +27,7 @@ export const createWrapper  = (
     return isShallow? factoryShallow(component, {localVue, store, ...options}) : factory(component, {localVue, store, ...options})
 }
 
-export default createWrapper
+// export default createWrapper
+// when this was set to export default a console log(createWrapper) that was in
+// test.utils.textMatcher line 19 was being executed from every module that called createWrapper
+module.exports = createWrapper

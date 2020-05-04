@@ -56,7 +56,6 @@ describe('Resume Store Actions', () => {
       await actions.loadResume({rootGetters, dispatch})
 
       expect(dispatch).toHaveBeenCalledWith('loadHardResume')
-      console.log(dispatch.mock)
 
       console.error = originalError
     })    

@@ -6,6 +6,6 @@ export const propMocker = (prop) => {
   }
 }
 
-export default propMocker
+// export default propMocker
 
-// module.exports = propMocker
+module.exports = propMocker

@@ -28,7 +28,7 @@ export default {
       if (this.color) {
         return {
           borderWidth: `${.25*(s)}rem`,
-          margin: `0rem ${ (m)}rem 0rem ${ (m)}rem`,
+          margin: `${.25*(m)}rem`,
           color: this.color
         }
       } else {

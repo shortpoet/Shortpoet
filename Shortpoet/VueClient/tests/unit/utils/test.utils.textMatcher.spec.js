@@ -6,8 +6,6 @@ import propMocker from '@/utils/myTest/test.utils.propMocker'
 import propsMocker from '@/utils/myTest/test.utils.propsMocker'
 import createWrapper from '@/utils/myTest/test.utils.createWrapper'
 
-console.log(createWrapper)
-
 // jest.mock('@/utils/myTest/test.utils.createWrapper')
 jest.mock('@/utils/myTest/test.utils.propsFinder')
 jest.mock('@/utils/myTest/test.utils.propFinder')

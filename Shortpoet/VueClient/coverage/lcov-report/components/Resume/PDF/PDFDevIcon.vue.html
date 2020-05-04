@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -143,28 +143,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">62x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">62x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">60x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">60x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">60x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -200,34 +200,34 @@ export default {
   },
   components: {
   },
-<span class="fstat-no" title="function not covered" >  data () {</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  data () {
+    return {
     }
   },
   computed: {
-<span class="fstat-no" title="function not covered" >    isImage () {</span>
-<span class="cstat-no" title="statement not covered" >      return this.source.match(/svg|jpg|png|jpeg/g) !== null</span>
+    isImage () {
+      return this.source.match(/svg|jpg|png|jpeg/g) !== null
     },
-<span class="fstat-no" title="function not covered" >    imgClass () {</span>
-<span class="cstat-no" title="statement not covered" >      let imgClass = '';</span>
+    imgClass () {
+      let imgClass = '';
       // console.log(this.source)
-<span class="cstat-no" title="statement not covered" >      switch(this.name) {</span>
+      switch(this.name) {
         case 'vue':
-<span class="cstat-no" title="statement not covered" >          imgClass = 'vue-devicon'</span>
-<span class="cstat-no" title="statement not covered" >          break;</span>
+          imgClass = 'vue-devicon'
+          break;
         case 'tableau':
-<span class="cstat-no" title="statement not covered" >          imgClass = 'tableau-devicon'</span>
-<span class="cstat-no" title="statement not covered" >          break;</span>
+          imgClass = 'tableau-devicon'
+          break;
         case 'd3':
-<span class="cstat-no" title="statement not covered" >          imgClass = 'd3-devicon'</span>
-<span class="cstat-no" title="statement not covered" >          break;</span>
+          imgClass = 'd3-devicon'
+          break;
       }
-<span class="cstat-no" title="statement not covered" >      return imgClass;</span>
+      return imgClass;
     }
   },
   methods: {
   },
-<span class="fstat-no" title="function not covered" >  mounted () {</span>
+  mounted () {
   }
 }
 &lt;/script&gt;
@@ -238,7 +238,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 04 2020 16:38:58 GMT-0500 (Central Daylight Time)
+                at Mon May 04 2020 18:46:08 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../../../prettify.js"></script>
