@@ -56,8 +56,7 @@ export default {
   name: 'StartSkills',
   props: {
     skills: {
-      type: Array,
-      default: () => []
+      type: Array
     }
   },
   components: {

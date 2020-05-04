@@ -6,4 +6,4 @@ console.log('hello from factory mock module')
 
 // factory.createWrapper = createWrapper
 
-export default factory
+module.exports = factory

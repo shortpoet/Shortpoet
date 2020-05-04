@@ -69,9 +69,6 @@ export default {
       email: {
         type: String
       },
-      aboutMe: {
-        type: String
-      },
       address: {
         type: String
       },
@@ -119,12 +116,6 @@ export default {
       }
     },
     computed: {
-      aboutMe1 () {
-        return this.aboutMe.slice(0, this.aboutMe.indexOf('Driven'))
-      },
-      aboutMe2 () {
-        return this.aboutMe.slice(this.aboutMe.indexOf('Driven'))
-      }
     },
     mounted () {
     }

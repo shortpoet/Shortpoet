@@ -7,7 +7,7 @@ export const propsMocker = (props) => {
     return {
       propsData
     }
-  } else if (typeof(props) === 'object') {
+  } else {
     let propsData = {}
     const key = Object.keys(props)[0]
     // spread to clone so the splice works on subsequent tests

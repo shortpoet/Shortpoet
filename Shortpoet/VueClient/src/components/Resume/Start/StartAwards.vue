@@ -25,8 +25,7 @@ export default {
   name: 'StartAwards',
   props: {
     spokenLanguages: {
-      type: Array,
-      default: () => []
+      type: Array
     }
   },
   methods: {

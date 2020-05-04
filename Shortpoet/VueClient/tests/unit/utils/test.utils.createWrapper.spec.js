@@ -1,9 +1,5 @@
-import {createWrapper} from '@/utils/myTest/test.utils.createWrapper'
-import { createLocalVue } from '@vue/test-utils'
-import {cloneDeep} from 'lodash'
-import Vuex from 'vuex'
-import PortalVue from 'portal-vue'
-import createStore from '@/store'
+import { createWrapper } from '@/utils/myTest/test.utils.createWrapper'
+import { cloneDeep } from 'lodash'
 
 import factory from '@/utils/myTest/test.utils.factory'
 import factoryShallow from '@/utils/myTest/test.utils.factoryShallow'

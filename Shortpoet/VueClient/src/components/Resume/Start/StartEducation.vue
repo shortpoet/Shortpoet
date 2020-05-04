@@ -22,8 +22,7 @@ export default {
   name: 'StartEducation',
   props: {
     educations: {
-      type: Array,
-      default: () => []
+      type: Array
     }
   }
 }

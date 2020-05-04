@@ -44,10 +44,12 @@ export default {
     }
   },
   methods: {
+    /* istanbul ignore next */
     revertPic () {
       // this.pic = require('@/assets/profile_pic.jpg')
       // clearInterval()
     },
+    /* istanbul ignore next */
     cyclePics () {
       // let i = 0
       // let pics = [require('@/assets/profile_pic1.jpg'), require('@/assets/profile_pic2.jpg')]

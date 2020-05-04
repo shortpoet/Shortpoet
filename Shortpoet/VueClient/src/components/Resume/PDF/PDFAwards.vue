@@ -26,8 +26,7 @@ export default {
   name: 'PDFAwards',
   props: {
     spokenLanguages: {
-      type: Array,
-      default: () => []
+      type: Array
     },
     renderPDF: {
       type: Boolean,

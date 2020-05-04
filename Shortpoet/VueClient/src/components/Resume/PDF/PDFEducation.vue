@@ -28,8 +28,7 @@ export default {
   name: 'PDFEducation',
   props: {
     educations: {
-      type: Array,
-      default: () => []
+      type: Array
     },
     renderPDF: {
       type: Boolean,

@@ -2,7 +2,24 @@ module.exports = {
   // preset: '@vue/cli-plugin-unit-jest',
   // https://github.com/Swrve/create-react-app/commit/ddf46bd89431b9ea60d2b93b7112b15c7c324b23
   // roots: ['<rootDir>/src', '<rootDir>/__mocks__'],
-  // collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
+
+  // https://github.com/facebook/jest/issues/1211
+  // collectCoverageFrom: [
+  //   'src/**/*.{js,jsx,ts,tsx,vue}',
+  //   '!src/**/*.d.ts'
+  //   // '!**/node_modules/**',
+  //   // '!**/vendor/**'
+  // ],
+
+  // https://github.com/vuejs/vue-jest/issues/62
+  collectCoverageFrom: [
+    'src/**/*.{js,vue}',
+    '!src/**/*.spec.js',
+    '!src/main.js',
+    // '!src/router/index.js',
+    '!**/node_modules/**',
+  ],
+
   // https://github.com/vuejs/vue-cli/issues/1584
   moduleFileExtensions: ['js', 'jsx', 'json', 'vue'],
   transform: {
