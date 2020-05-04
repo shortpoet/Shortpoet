@@ -161,6 +161,7 @@ export default {
     },
   },
   methods: {
+    ...mapActions(['loadEnv']),
     ...mapActions('resume', ['loadResume']),
     toPDF (event) {
       console.log('toPDF from pDF')
@@ -168,6 +169,7 @@ export default {
     }
   },
   mounted () {
+    this.loadEnv()
     this.loadResume()
   }
 }

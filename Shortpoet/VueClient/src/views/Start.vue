@@ -74,6 +74,7 @@ export default {
     ...mapGetters('resume', ['getResume', 'getResumeLoaded']),
   },
   methods: {
+    ...mapActions(['loadEnv']),
     ...mapActions('resume', ['loadResume']),
     toggleVisibility (args) {
       if (args) {
@@ -85,6 +86,7 @@ export default {
   },
   mounted () {
     // const $ = this.jquery
+    this.loadEnv()
     this.$nextTick(() => {
       // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.
       // our custom jQuery code goes here

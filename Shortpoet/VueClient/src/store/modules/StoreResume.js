@@ -68,7 +68,7 @@ export const actions = {
       // const url2 = "https://shortpoet-test.azurewebsites.net/api/Resume/FetchLatest"
       // console.log(url)
       const response = await axios.get(url)
-      // console.log(response)
+      // console.log(response.data)
 
       commit(SET_RESUME_RAW, response.data)
       const hasResume = !!response.data
@@ -76,7 +76,8 @@ export const actions = {
       console.info('resume loaded')
     } catch (err) {
       console.error(err)
-      dispatch('loadHardResume')
+      console.log(dispatch)
+      // dispatch('loadHardResume')
     }
   },
   async loadHardResume ({ commit }) {
@@ -98,6 +99,7 @@ const createStoreResume = () => {
   }
 }
 
+/* istanbul ignore next */
 const createStoreResumeMocks = (custom = { getters: {}, mutations: {}, actions: {}, state: {} }) => {
   // console.log(custom)
   // console.log(custom.getters.getResumeLoaded)
