@@ -1,7 +1,6 @@
 // import VueCookies from 'vue-cookies'
 
 import StoreResume from '@/store/modules/StoreResume'
-// import StoreAuth from '@/store/modules/StoreAuth'
 
 import {
 } from '@/store/mutation-types'
@@ -29,7 +28,6 @@ const mutations = {}
 const actions = {}
 
 const modules =  {
-  // auth: StoreAuth,
   resume: StoreResume.createStoreResume()
 }
 

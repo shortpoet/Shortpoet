@@ -17,15 +17,9 @@ export const resume = {
   RESUME_FETCH_API: '/api/Resume/Fetch/1',
   RESUME_FETCH_LATEST_API: '/api/Resume/FetchLatest'
 }
-export const auth = {
-  // AUTH @/store/modules/StoreAuth.js
-  ROLES_API: '/api/Roles',
-  HEADERS_API: '/api/Idy/Get'
-}
 export const endpoints = {
   index: index,
-  resume: resume,
-  auth: auth
+  resume: resume
 }
 
 export default endpoints
