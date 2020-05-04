@@ -60,13 +60,8 @@ export const mutations = {
 export const actions = {
   async loadResume ({ commit, rootGetters, dispatch }) {
     try {
-      // TODO add url resolution test
-      // maybe urlGetter is one consice function
-      // or just a test for rootGetters
-      const resPoint = rootGetters.getEnv === 'production' ? endpoints.resume.RESUME_FETCH_LATEST_API : endpoints.resume.RESUME_FETCH_LATEST_API
+      const resPoint = endpoints.resume.RESUME_FETCH_LATEST_API
       const url = rootGetters.getUrlPrefix + resPoint
-      // const url2 = "https://shortpoet-test.azurewebsites.net/api/Resume/FetchLatest"
-      // console.log(url)
       const response = await axios.get(url)
       // console.log(response.data)
 
@@ -76,8 +71,7 @@ export const actions = {
       console.info('resume loaded')
     } catch (err) {
       console.error(err)
-      console.log(dispatch)
-      // dispatch('loadHardResume')
+      dispatch('loadHardResume')
     }
   },
   async loadHardResume ({ commit }) {
@@ -87,36 +81,9 @@ export const actions = {
     }
 }
 
-
-
-const createStoreResume = () => {
-  return  {  
-    namespaced: true,
-    state: state,
-    getters: getters,
-    mutations: mutations,
-    actions: actions
-  }
-}
-
-/* istanbul ignore next */
-const createStoreResumeMocks = (custom = { getters: {}, mutations: {}, actions: {}, state: {} }) => {
-  // console.log(custom)
-  // console.log(custom.getters.getResumeLoaded)
-  const mockState = Object.assign({}, state, custom.state);
-  const mockGetters = Object.assign({}, getters, custom.getters);
-  const mockMutations = Object.assign({}, mutations, custom.mutations);
-  const mockActions = Object.assign({}, actions, custom.actions);
-  return  {  
-    namespaced: true,
-    state: mockState,
-    getters: mockGetters,
-    mutations: mockMutations,
-    actions: mockActions
-  }
-}
-
 export default {
-  createStoreResume,
-  createStoreResumeMocks
+  state,
+  getters,
+  mutations,
+  actions
 }

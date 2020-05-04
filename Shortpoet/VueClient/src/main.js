@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './App.vue'
 import router from './router'
-import createStore from './store'
+import createStore from './store/createStore'
 
 import jquery from 'jquery'
 

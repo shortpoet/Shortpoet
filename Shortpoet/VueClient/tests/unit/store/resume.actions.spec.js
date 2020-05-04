@@ -1,6 +1,12 @@
-import { actions } from '@/store/modules/StoreResume'
+import { actions } from '@/store/modules/resume/StoreResume'
 import hardResume from '@/assets/resume.js'
 import axios from 'axios'
+
+import {
+  SET_RESUME_RAW,
+  SET_RESUME,
+  SET_RESUME_LOADED
+} from '@/store/mutation-types'
 
 describe('Resume Store Actions', () => {
   let state
@@ -31,9 +37,9 @@ describe('Resume Store Actions', () => {
 
       await actions.loadResume({commit, rootGetters})
 
-      expect(commit).toHaveBeenCalledWith("SET_RESUME_RAW", response.data)
+      expect(commit).toHaveBeenCalledWith(SET_RESUME_RAW, response.data)
       const hasResume = !!response.data
-      expect(commit).toHaveBeenCalledWith("SET_RESUME_LOADED", hasResume)
+      expect(commit).toHaveBeenCalledWith(SET_RESUME_LOADED, hasResume)
 
 
     })
@@ -61,11 +67,11 @@ describe('Resume Store Actions', () => {
       
       await actions.loadHardResume({ commit })
 
-      expect(commit).toHaveBeenCalledWith("SET_RESUME", hardResume)
+      expect(commit).toHaveBeenCalledWith(SET_RESUME, hardResume)
 
       const hasResume = !!hardResume.title
 
-      expect(commit).toHaveBeenCalledWith("SET_RESUME_LOADED", hasResume)
+      expect(commit).toHaveBeenCalledWith(SET_RESUME_LOADED, hasResume)
 
     })
   })

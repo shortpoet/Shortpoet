@@ -86,7 +86,8 @@ export default {
   },
   mounted () {
     // const $ = this.jquery
-    this.loadEnv()
+    const env = process.env.NODE_ENV
+    this.loadEnv(env)
     this.$nextTick(() => {
       // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.
       // our custom jQuery code goes here

@@ -4,7 +4,7 @@ import factoryShallow from './test.utils.factoryShallow'
 
 // import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-import createStore from '@/store'
+import createStore from '@/store/createStore'
 import PortalVue from 'portal-vue'
 
 export const createWrapper  = (

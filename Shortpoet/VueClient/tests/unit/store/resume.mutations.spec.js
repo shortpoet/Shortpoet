@@ -1,4 +1,4 @@
-import { mutations } from '@/store/modules/StoreResume'
+import { mutations } from '@/store/modules/resume/StoreResume'
 
 const { SET_RESUME_RAW, SET_RESUME, SET_RESUME_LOADED } = mutations
 
