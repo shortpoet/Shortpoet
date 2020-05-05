@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1588635968791" clover="3.2.0">
-  <project timestamp="1588635968792" name="All files">
-    <metrics statements="484" coveredstatements="201" conditionals="104" coveredconditionals="41" methods="166" coveredmethods="80" elements="754" coveredelements="322" complexity="0" loc="484" ncloc="484" packages="10" files="49" classes="49"/>
+<coverage generated="1588691876716" clover="3.2.0">
+  <project timestamp="1588691876716" name="All files">
+    <metrics statements="488" coveredstatements="210" conditionals="103" coveredconditionals="44" methods="166" coveredmethods="81" elements="757" coveredelements="335" complexity="0" loc="488" ncloc="488" packages="10" files="49" classes="49"/>
     <package name="assets">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="icons.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\assets\icons.js">
@@ -237,7 +237,7 @@
       </file>
     </package>
     <package name="components.Resume.Start">
-      <metrics statements="35" coveredstatements="20" conditionals="14" coveredconditionals="2" methods="27" coveredmethods="18"/>
+      <metrics statements="39" coveredstatements="29" conditionals="13" coveredconditionals="5" methods="27" coveredmethods="19"/>
       <file name="StartAbout.vue" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\components\Resume\Start\StartAbout.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="51" count="8" type="stmt"/>
@@ -268,14 +268,18 @@
         <line num="154" count="0" type="stmt"/>
       </file>
       <file name="StartDevIcon.vue" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\components\Resume\Start\StartDevIcon.vue">
-        <metrics statements="7" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="3"/>
-        <line num="25" count="22" type="stmt"/>
-        <line num="30" count="22" type="stmt"/>
-        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
+        <line num="29" count="84" type="stmt"/>
+        <line num="34" count="84" type="stmt"/>
+        <line num="37" count="60" type="stmt"/>
+        <line num="39" count="60" type="stmt"/>
+        <line num="41" count="20" type="stmt"/>
+        <line num="42" count="20" type="stmt"/>
+        <line num="44" count="20" type="stmt"/>
+        <line num="45" count="20" type="stmt"/>
+        <line num="47" count="20" type="stmt"/>
+        <line num="48" count="20" type="stmt"/>
+        <line num="50" count="60" type="stmt"/>
       </file>
       <file name="StartInterests.vue" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\components\Resume\Start\StartInterests.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -376,58 +380,58 @@
       <metrics statements="32" coveredstatements="30" conditionals="5" coveredconditionals="5" methods="7" coveredmethods="5"/>
       <file name="api-endpoints.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\store\api-endpoints.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="25" type="stmt"/>
-        <line num="3" count="25" type="stmt"/>
-        <line num="9" count="25" type="stmt"/>
+        <line num="1" count="26" type="stmt"/>
+        <line num="3" count="26" type="stmt"/>
+        <line num="9" count="26" type="stmt"/>
       </file>
       <file name="createStore.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\store\createStore.js">
         <metrics statements="9" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
-        <line num="5" count="19" type="stmt"/>
+        <line num="5" count="20" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="15" count="19" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="238" type="stmt"/>
-        <line num="17" count="238" type="stmt"/>
-        <line num="18" count="238" type="stmt"/>
-        <line num="19" count="238" type="stmt"/>
-        <line num="20" count="238" type="stmt"/>
-        <line num="22" count="238" type="stmt"/>
+        <line num="15" count="20" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="362" type="stmt"/>
+        <line num="17" count="362" type="stmt"/>
+        <line num="18" count="362" type="stmt"/>
+        <line num="19" count="362" type="stmt"/>
+        <line num="20" count="362" type="stmt"/>
+        <line num="22" count="362" type="stmt"/>
       </file>
       <file name="index.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\store\index.js">
         <metrics statements="15" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="4"/>
-        <line num="13" count="22" type="stmt"/>
-        <line num="21" count="22" type="stmt"/>
+        <line num="13" count="23" type="stmt"/>
+        <line num="21" count="23" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="30" count="22" type="stmt"/>
+        <line num="30" count="23" type="stmt"/>
         <line num="31" count="2" type="stmt"/>
         <line num="33" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="34" count="1" type="stmt"/>
         <line num="35" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="36" count="1" type="stmt"/>
         <line num="38" count="2" type="stmt"/>
-        <line num="43" count="22" type="stmt"/>
+        <line num="43" count="23" type="stmt"/>
         <line num="45" count="3" type="stmt"/>
         <line num="46" count="3" type="stmt"/>
-        <line num="50" count="22" type="stmt"/>
+        <line num="50" count="23" type="stmt"/>
       </file>
       <file name="mutation-types.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\store\mutation-types.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="5" count="25" type="stmt"/>
-        <line num="6" count="25" type="stmt"/>
-        <line num="9" count="25" type="stmt"/>
-        <line num="10" count="25" type="stmt"/>
-        <line num="11" count="25" type="stmt"/>
+        <line num="5" count="26" type="stmt"/>
+        <line num="6" count="26" type="stmt"/>
+        <line num="9" count="26" type="stmt"/>
+        <line num="10" count="26" type="stmt"/>
+        <line num="11" count="26" type="stmt"/>
       </file>
     </package>
     <package name="store.modules.resume">
       <metrics statements="34" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="15"/>
       <file name="StoreResume.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\store\modules\resume\StoreResume.js">
         <metrics statements="32" coveredstatements="32" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="14"/>
-        <line num="14" count="25" type="stmt"/>
-        <line num="19" count="25" type="stmt"/>
+        <line num="14" count="26" type="stmt"/>
+        <line num="19" count="26" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="2" type="stmt"/>
-        <line num="24" count="25" type="stmt"/>
+        <line num="24" count="26" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
@@ -441,7 +445,7 @@
         <line num="53" count="1" type="stmt"/>
         <line num="55" count="1" type="stmt"/>
         <line num="56" count="2" type="stmt"/>
-        <line num="60" count="25" type="stmt"/>
+        <line num="60" count="26" type="stmt"/>
         <line num="62" count="3" type="stmt"/>
         <line num="63" count="3" type="stmt"/>
         <line num="64" count="3" type="stmt"/>
@@ -458,8 +462,8 @@
       </file>
       <file name="createStoreResume.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\store\modules\resume\createStoreResume.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="22" type="stmt"/>
-        <line num="4" count="22" type="stmt"/>
+        <line num="3" count="23" type="stmt"/>
+        <line num="4" count="23" type="stmt"/>
       </file>
     </package>
     <package name="utils">
@@ -509,55 +513,55 @@
       </file>
       <file name="test.utils.createWrapper.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.createWrapper.js">
         <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="10" count="19" type="stmt"/>
-        <line num="19" count="119" type="stmt"/>
-        <line num="21" count="119" type="stmt"/>
-        <line num="22" count="119" type="stmt"/>
-        <line num="23" count="119" type="stmt"/>
-        <line num="24" count="119" type="stmt"/>
-        <line num="25" count="119" type="stmt"/>
-        <line num="27" count="119" type="cond" truecount="2" falsecount="0"/>
-        <line num="33" count="19" type="stmt"/>
+        <line num="10" count="20" type="stmt"/>
+        <line num="19" count="181" type="stmt"/>
+        <line num="21" count="181" type="stmt"/>
+        <line num="22" count="181" type="stmt"/>
+        <line num="23" count="181" type="stmt"/>
+        <line num="24" count="181" type="stmt"/>
+        <line num="25" count="181" type="stmt"/>
+        <line num="27" count="181" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="20" type="stmt"/>
       </file>
       <file name="test.utils.factory.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.factory.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="20" type="stmt"/>
-        <line num="30" count="114" type="stmt"/>
-        <line num="33" count="20" type="stmt"/>
+        <line num="3" count="21" type="stmt"/>
+        <line num="30" count="176" type="stmt"/>
+        <line num="33" count="21" type="stmt"/>
       </file>
       <file name="test.utils.factoryShallow.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.factoryShallow.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="20" type="stmt"/>
+        <line num="3" count="21" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
-        <line num="27" count="20" type="stmt"/>
+        <line num="27" count="21" type="stmt"/>
       </file>
       <file name="test.utils.nestedPropsMocker.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.nestedPropsMocker.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
       <file name="test.utils.propFinder.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.propFinder.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="19" type="stmt"/>
+        <line num="3" count="20" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="11" count="19" type="stmt"/>
+        <line num="11" count="20" type="stmt"/>
       </file>
       <file name="test.utils.propMocker.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.propMocker.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="19" type="stmt"/>
+        <line num="1" count="20" type="stmt"/>
         <line num="2" count="27" type="stmt"/>
-        <line num="11" count="19" type="stmt"/>
+        <line num="11" count="20" type="stmt"/>
       </file>
       <file name="test.utils.propsFinder.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.propsFinder.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="19" type="stmt"/>
+        <line num="3" count="20" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
         <line num="9" count="4" type="stmt"/>
-        <line num="14" count="19" type="stmt"/>
+        <line num="14" count="20" type="stmt"/>
       </file>
       <file name="test.utils.propsMocker.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.propsMocker.js">
         <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="1" count="19" type="stmt"/>
+        <line num="1" count="20" type="stmt"/>
         <line num="2" count="38" type="cond" truecount="2" falsecount="0"/>
         <line num="3" count="26" type="stmt"/>
         <line num="4" count="26" type="stmt"/>
@@ -575,12 +579,12 @@
         <line num="22" count="136" type="stmt"/>
         <line num="24" count="35" type="stmt"/>
         <line num="26" count="12" type="stmt"/>
-        <line num="32" count="19" type="stmt"/>
+        <line num="32" count="20" type="stmt"/>
       </file>
       <file name="test.utils.textMatcher.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.textMatcher.js">
         <metrics statements="11" coveredstatements="9" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
-        <line num="14" count="19" type="stmt"/>
-        <line num="19" count="19" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="20" type="stmt"/>
+        <line num="19" count="20" type="cond" truecount="2" falsecount="0"/>
         <line num="21" count="24" type="stmt"/>
         <line num="22" count="24" type="stmt"/>
         <line num="23" count="24" type="stmt"/>
@@ -589,16 +593,16 @@
         <line num="27" count="24" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="37" count="19" type="stmt"/>
+        <line num="37" count="20" type="stmt"/>
       </file>
       <file name="test.utils.textMatcherFactory.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\myTest\test.utils.textMatcherFactory.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="3" count="18" type="stmt"/>
+        <line num="3" count="19" type="stmt"/>
         <line num="4" count="12" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="12" type="stmt"/>
         <line num="7" count="12" type="stmt"/>
-        <line num="12" count="18" type="stmt"/>
+        <line num="12" count="19" type="stmt"/>
       </file>
     </package>
     <package name="views">

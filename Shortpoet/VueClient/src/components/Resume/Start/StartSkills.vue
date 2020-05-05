@@ -20,7 +20,7 @@
           v-for="(icon, i) in icons"
           :key="i"
         >
-          <StartDevIcon :source="icon.icon"/>
+          <StartDevIcon :source="icon.icon" :name="icon.name"/>
         </li>
       </ul>
       <div

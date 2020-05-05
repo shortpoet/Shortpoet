@@ -20,7 +20,7 @@
           </div>
           <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
             <div>
-              <div style="font-family: 'Open Sans';">{{ type.type }}</div>
+              <div class="pdf-skill-type" style="font-family: 'Open Sans';">{{ type.type }}</div>
             </div>
           </div>
           <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
@@ -56,8 +56,7 @@ export default {
   name: 'PDFSkills',
   props: {
     skills: {
-      type: Array,
-      default: () => []
+      type: Array
     }
   },
   components: {

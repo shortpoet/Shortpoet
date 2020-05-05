@@ -1,11 +1,11 @@
 import * as myTest from '@/utils/myTest'
 const { createWrapper } = myTest.default
-import PDFDevIcon from '@/components/Resume/PDF/PDFDevIcon'
+import StartDevIcon from '@/components/Resume/Start/StartDevIcon'
 import { cloneDeep } from 'lodash'
 
-describe('PDFDevIcon.vue', () => {
+describe('StartDevIcon.vue', () => {
 
-  const component = PDFDevIcon
+  const component = StartDevIcon
   const mountOptions = {
     propsData: {
       source: 'sample_source',
