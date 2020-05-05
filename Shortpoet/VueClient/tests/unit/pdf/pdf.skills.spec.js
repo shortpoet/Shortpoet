@@ -7,11 +7,6 @@ import { cloneDeep } from 'lodash'
 describe('PDFSkills.vue', () => {
 
   const component = PDFSkills
-  // const mountOptions = {
-  //   propsData: {
-  //     skills: [],
-  //   }
-  // }
 
   let wrapper
   const mountOptions = propsFinder(['skills'])
@@ -25,10 +20,6 @@ describe('PDFSkills.vue', () => {
 
   describe('element and class checks', () => {
 
-    // const _mountOptions = cloneDeep(mountOptions)
-    // _mountOptions.propsData.source += ``
-    // expected += ``
-
     it('renders .pdf-skill-type div for each type of skill', () => {
       
       expected += `pdf-skill-type`
@@ -40,9 +31,9 @@ describe('PDFSkills.vue', () => {
 
     it('matches snapshot', () => {
 
-      // wrapper = createWrapper(component, _mountOptions)
+      wrapper = createWrapper(component, mountOptions)
   
-      // expect(wrapper.html()).toMatchSnapshot()
+      expect(wrapper.html()).toMatchSnapshot()
   
     })
 

@@ -71,12 +71,6 @@ export default {
     }
   },
   computed: {
-    mediumScreen () {
-      // let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
-      let windowWidth = window.innerWidth
-      // for medium screens
-      return 768 < windowWidth && windowWidth > 985
-    }
   },
   methods: {
     listSkills(skills) {
@@ -87,21 +81,9 @@ export default {
       return iconKeys.map(ik => {
         return this.icons.filter(i => i.name === ik)[0]
       }) 
-    },
-    _screenCheck () {
-      // let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
-      // let windowWidth = this.windowWidth
-      // console.log('checking screen')
-      // console.log(skillGridWidth)
-      // console.log(windowWidth)
-      // for medium-large screens
-      // if(768 < windowWidth && windowWidth > 985) {
-      //   // console.log('the grid should be medium-large')
-      // }
     }
   },
   mounted () {
-    // this._screenCheck()
   }
 }
 </script>

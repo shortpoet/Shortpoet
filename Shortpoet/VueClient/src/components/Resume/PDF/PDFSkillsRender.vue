@@ -7,28 +7,28 @@
       <div id="skill-grid-container" class="d-flex flex-column justify-content-between mt-4 mr-3">
         <div class="skill-grid-row-1 d-flex flex-row justify-content-between">
           <div
-            v-for="(type, i) in skills"
-            :key="i"
+            v-for="(type, it) in skills"
+            :key="it"
             class="skill-grid-render"
           >
             <div class="list-devicons devicon-row d-flex justify-content-around">
               <PDFDevIcon
-                v-for="(icon, i) in mapIcons(type.type)"
-                :key="i"
+                v-for="(icon, ii) in mapIcons(type.type)"
+                :key="ii"
                 :source="icon.icon"
                 :name="icon.name"
               />
             </div>
             <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
               <div>
-                  <div class="" style="font-family: 'Open Sans';">{{ typeFilter(type.type) }}</div>
+                  <div :class="'pdf-skill-type-' + (it + 1)" style="font-family: 'Open Sans';">{{ typeFilter(type.type) }}</div>
               </div>
             </div>
             <PDFBorder class="d-block my-2" :size=".25"/>
             <div class="skill-list-container d-flex flex-column mb-2">
                 <div
-                  v-for="(skill, i) in listSkills(type.details)"
-                  :key="i"
+                  v-for="(skill, is) in listSkills(type.details)"
+                  :key="is"
                   class="skill-list d-flex flex-column mx-2 mb-2"
                 >
                   <div class="skill-pill-container d-flex justify-content-around">
@@ -57,8 +57,7 @@ export default {
   name: 'PDFSkillsRender',
   props: {
     skills: {
-      type: Array,
-      default: () => []
+      type: Array
     }
   },
   components: {
@@ -69,16 +68,11 @@ export default {
     return {
       icons: icons.icons,
       iconMap: icons.iconMap,
-      windowWidth: window.innerWidth 
+      windowWidth: window.innerWidth,
+      isMediumLarge: false 
     }
   },
   computed: {
-    mediumScreen () {
-      // let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
-      let windowWidth = window.innerWidth
-      // for medium screens
-      return 768 < windowWidth && windowWidth > 985
-    }
   },
   methods: {
     listSkills(skills) {
@@ -90,15 +84,16 @@ export default {
         return this.icons.filter(i => i.name === ik)[0]
       }) 
     },
-    _screenCheck () {
+    screenCheck () {
+      // console.log(document)
       let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
       let windowWidth = this.windowWidth
-      console.log('checking screen')
-      console.log(skillGridWidth)
-      console.log(windowWidth)
       // for medium-large screens
-      if(768 < windowWidth && windowWidth > 985) {
+      if(768 < windowWidth && windowWidth < 985) {
         console.log('the grid should be medium-large')
+        this.isMediumLarge = true
+      } else {
+        this.isMediumLarge = false
       }
     },
     typeFilter (type) {
@@ -111,7 +106,7 @@ export default {
     }
   },
   mounted () {
-    this._screenCheck()
+    this.screenCheck()
   }
 }
 </script>

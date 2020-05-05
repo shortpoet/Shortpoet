@@ -35,7 +35,6 @@ export default {
     },
     imgClass () {
       let imgClass = '';
-      // console.log(this.source)
       switch(this.name) {
         case 'vue':
           imgClass = 'vue-devicon'
