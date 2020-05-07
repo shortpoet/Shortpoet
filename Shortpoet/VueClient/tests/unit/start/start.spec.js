@@ -5,10 +5,52 @@ import hardResume from '@/assets/resume.js'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCircle, faFilePdf, faSave, faTimes, faRocket} from '@fortawesome/free-solid-svg-icons'
+import Vue from 'vue'
+import StartButtonFloat from '@/components/Resume/Start/StartButtonFloat'
+
+jest.useFakeTimers()
 
 describe('Start.vue', () => {
+  const component = Start
+
+  let propsData
+  let computed
+  let stubs
+  let mocks
+  const events =  ['click', 'touchstart', 'touchcancel', 'touchmove', 'touchend']
+
+  let methods = {}
+  
+  events.forEach(e => {
+    methods[e] = jest.fn()
+    // Object.defineProperty(methods, e, {
+    //   value: jest.fn()
+    // })
+  })
+
+  // console.log(methods)
+
+  let resumeStoreOptions
+  let ignoredElements
+
+  let mountOptions
   let wrapper
+  let emmitted
+  const mockEvents = [
+    { target: {tagName: 'path',}, expected: false}, 
+    { target: {tagName: 'div',}, expected: true}, 
+    { target: {tagName: 'span',}, expected: true}, 
+  ]
+
+
+  // const map = {}
+  // document.addEventListener = jest.fn((event, cb) => {
+  //   map[event] = cb
+  // })
+
   beforeEach(async () => {
+    jest.resetModules()
+    jest.clearAllMocks()
 
     library.add(
       faCircle, faFilePdf, faSave, faTimes, faRocket
@@ -16,20 +58,20 @@ describe('Start.vue', () => {
     
     const getResumeLoaded = true
 
-    const propsData = { 
+    propsData = { 
       // name: 'test name' 
     }
 
-    const computed = {
+    computed = {
       // getResumeLoaded: () => true
     }
 
-    const stubs = {
+    stubs = {
       FontAwesomeIcon,
       FontAwesomeLayers
     }
 
-    const mocks = {
+    mocks = {
       $: jest.fn(() => {
         return {
           click: jest.fn(),
@@ -39,16 +81,21 @@ describe('Start.vue', () => {
       dispatch: jest.fn()
     }
 
-    const resumeStoreOptions = { 
+    resumeStoreOptions = { 
       getters: { getResumeLoaded: jest.fn(() => true), getResume: jest.fn(() => hardResume) }, 
       mutations: { 'SET_RESUME_RAW': jest.fn() } 
     }
 
-    const wrapperOptions = { propsData, mocks, computed, stubs }
+    ignoredElements = [
+      // 'portal'
+    ]
 
-    wrapper = createWrapper(Start, wrapperOptions, resumeStoreOptions)
-    jest.resetModules()
-    jest.clearAllMocks()
+    mountOptions = { propsData, mocks, computed, stubs, ignoredElements }
+
+    // mountOptions.attachToDocument = true
+
+    wrapper = createWrapper(component, mountOptions, resumeStoreOptions)
+
   })
 
   // TODO somehow test for latest resume
@@ -58,4 +105,130 @@ describe('Start.vue', () => {
   it('matches hard resume snapshot', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
+
+  describe('StartButtonFloat.vue', () => {
+
+    it('renders correct icon - rocket when rippleExpanded is false', () => {
+
+      // expect(wrapper.find('.button-float-icon').attributes().class).toContain('rocket')
+
+    })
+    it('renders correct icon - pdf when rippleExpanded is true', async () => {
+
+      // this coverage is resolved by below test
+      // leaving here for reference
+      // wrapper.setData({ rippleExpanded: true })
+      
+      // // option 1
+      // await Vue.nextTick()
+      // expect(wrapper.find('.button-float-icon').attributes().class).toContain('pdf')
+
+      // option 2
+      // Vue.nextTick(() => {
+      //   expect(wrapper.find('.button-float-icon').attributes().class).toContain('pdf')
+      // })
+
+    })
+
+    it('toggles rippleExpanded to true when StartButtonFloat method open() is called and emits ripple-open and sets icon to pdf', async () => {
+
+      // wrapper.find(StartButtonFloat).vm.$emit('ripple-open')
+      wrapper.find(StartButtonFloat).vm.open()
+      emmitted = wrapper.find(StartButtonFloat).emitted()
+      await Vue.nextTick()
+
+      expect(wrapper.vm.rippleExpanded).toBe(true)
+      expect(emmitted).toMatchObject( {'ripple-open': [ [] ]} )
+      expect(wrapper.find('.button-float-icon').attributes().class).toContain('pdf')
+  
+    })
+
+    it('toggles rippleExpanded to false when StartButtonFloat method close() is called and emits ripple-close and sets icon to rocket', async () => {
+      
+      wrapper.setData({ rippleExpanded: true })
+      await Vue.nextTick()
+      wrapper.find(StartButtonFloat).vm.close()
+      emmitted = wrapper.find(StartButtonFloat).emitted()
+      await Vue.nextTick()
+      
+      expect(wrapper.vm.rippleExpanded).toBe(false)
+      expect(emmitted).toMatchObject( {'ripple-close': [ [] ]} )
+      expect(wrapper.find('.button-float-icon').attributes().class).toContain('rocket')
+  
+    })
+
+    mockEvents.forEach(event => {
+
+      it('emits ripple close when event target is not path aka not the icon', async () => {
+        
+        wrapper.setData({ rippleExpanded: true })
+        await Vue.nextTick()
+        wrapper.find(StartButtonFloat).vm.handleClickOutside(event)
+        emmitted = wrapper.find(StartButtonFloat).emitted()
+        await Vue.nextTick()
+        if (event.expected === true) {
+          expect(wrapper.vm.rippleExpanded).toBe(false)
+          expect(emmitted).toMatchObject( {'ripple-close': [ [] ]} )
+          expect(wrapper.find('.button-float-icon').attributes().class).toContain('rocket')
+        } 
+      })
+
+    })
+
+    it('adds events to the dom using addEvents method after one second wait', async () => {
+      
+      // let touchstart = jest.fn()
+
+      // option 1
+      // https://stackoverflow.com/questions/54648402/how-to-mock-eventlistener-when-set-in-componentdidmount
+      jest.spyOn(document, 'addEventListener').mockImplementation(() => jest.fn());
+
+      // option 2
+      // https://stackoverflow.com/questions/58951689/mocking-window-document-in-jest-and-vue-test-utils
+      // const document = window.document
+      // Object.defineProperty(document, 'addEventListener', {
+      //   value: jest.fn()
+      // })
+
+      let data = () => {
+        return {
+          rippleExpanded: true
+        }
+      }
+      
+      // let _mountOptions = { propsData, mocks, computed, stubs, ignoredElements, methods, data }
+      let _mountOptions = { propsData, mocks, computed, stubs, ignoredElements }
+
+      mountOptions.attachToDocument = true
+  
+      let _wrapper = createWrapper(component, _mountOptions, resumeStoreOptions)
+
+      // _wrapper.setData({ rippleExpanded: true })
+
+      // await Vue.nextTick()
+
+      jest.advanceTimersByTime(999)
+
+      // let event = 'touchstart'
+
+      // document.dispatchEvent(new Event(event))
+
+      // _wrapper.find('.container-fluid').trigger('touchstart')
+
+      console.log(_wrapper.vm.rippleExpanded)
+
+
+      // option 1
+      expect(document.addEventListener).toHaveBeenCalled()
+
+
+      // option 2
+      // expect(elementMock.addEventListener).toHaveBeenCalled()
+
+
+
+    })
+
+  })
+
 })

@@ -86,7 +86,7 @@ export default {
     },
     screenCheck () {
       // console.log(document)
-      let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
+      // let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
       let windowWidth = this.windowWidth
       // for medium-large screens
       if(768 < windowWidth && windowWidth < 985) {

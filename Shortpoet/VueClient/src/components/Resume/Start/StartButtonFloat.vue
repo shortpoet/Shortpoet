@@ -19,24 +19,6 @@
         </div>
         <div :class="iconHalo">
           <div class="icon-circle">
-
-            <!-- <font-awesome-icon
-              v-if="!isExpanded"
-              class="button-float-icon"
-              size="2x"
-              :transform="_icon.transform"
-              :icon="_icon.icon"
-              @click="open"
-            ></font-awesome-icon>
-            <a v-else href="/pdf">
-              <font-awesome-icon
-                class="button-float-icon"
-                size="2x"
-                :transform="_icon.transform"
-                :icon="_icon.icon"
-              ></font-awesome-icon>
-            </a> -->
-
             <font-awesome-icon
               ref="float-icon-rocket"
               v-if="!isExpanded"
@@ -55,7 +37,6 @@
                 :icon="iconMap['pdf'].icon"
               ></font-awesome-icon>
             </a>
-
           </div>
         </div>
       </div>
@@ -76,17 +57,10 @@ export default {
       type: String,
       required: false
     },
-    icon: {
-      type: String
-    },
     isExpanded: {
       type: Boolean,
       default: false
     }
-    // handler: {
-    //   type: Function,
-    //   required: false
-    // }
   },
   data () {
     return {
@@ -104,14 +78,14 @@ export default {
           transform: 'down-1 left-1'
         }
       },
-      // isExpanded: false,
+      events: ['click', 'touchstart', 'touchcancel', 'touchmove', 'touchend']
     }
   },
   computed: {
     mobile () {
       return window.innerWidth < 768
     },
-    rippleContainer () { //([^\s|]'),
+    rippleContainer () {
       return {
         'ripple-container': true,
         'mobile': this.mobile
@@ -122,9 +96,6 @@ export default {
     },
     rippleMask () {
       return this.isExpanded ? 'ripple-mask ripple-mask-show' : 'ripple-mask ripple-mask-hide'
-    },
-    _icon () {
-      return this.iconMap[`${this.icon}`]
     }
   },
   methods: {
@@ -143,16 +114,20 @@ export default {
         }
       }
     },
+    addEvents() {
+      setTimeout(() => {
+        this.events.map(x => { /* console.log(document); */ document.addEventListener(x, this.handleClickOutside)})
+      }, 1000)
+    },
+    removeEvents() {
+      this.events.map(x => document.removeEventListener(x, this.handleClickOutside))
+    }
   },
   destroyed () {
-    var events = ['click', 'touchstart', 'touchcancel', 'touchmove', 'touchend']
-    events.map(x => document.addEventListener(x, this.handleClickOutside))
+    // this.removeEvents()
   },
   mounted () {
-      var events = ['click', 'touchstart', 'touchcancel', 'touchmove', 'touchend']
-    setTimeout(() => {
-      events.map(x => document.addEventListener(x, this.handleClickOutside))
-    }, 1000)
+    this.addEvents()
   }
 }
 </script>
