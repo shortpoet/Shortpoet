@@ -12,7 +12,8 @@ jest.useFakeTimers()
 
 describe('Start.vue', () => {
   const component = Start
-
+  console.log(Object.keys(component))
+  console.log(component.methods)
   let propsData
   let computed
   let stubs
@@ -156,9 +157,9 @@ describe('Start.vue', () => {
       expect(wrapper.find('.button-float-icon').attributes().class).toContain('rocket')
   
     })
-
+    
     mockEvents.forEach(event => {
-
+      
       it('emits ripple close when event target is not path aka not the icon', async () => {
         
         wrapper.setData({ rippleExpanded: true })
@@ -172,63 +173,93 @@ describe('Start.vue', () => {
           expect(wrapper.find('.button-float-icon').attributes().class).toContain('rocket')
         } 
       })
-
-    })
-
-    it('adds events to the dom using addEvents method after one second wait', async () => {
       
-      // let touchstart = jest.fn()
+    })
+    describe('startbuttonfloat.document.eventlisteners', () => {
+      
 
-      // option 1
-      // https://stackoverflow.com/questions/54648402/how-to-mock-eventlistener-when-set-in-componentdidmount
-      jest.spyOn(document, 'addEventListener').mockImplementation(() => jest.fn());
+      it('adds events to the dom after one second wait', async () => {
+        
+        // let touchstart = jest.fn()
+        
+        // option 1
+        // https://stackoverflow.com/questions/54648402/how-to-mock-eventlistener-when-set-in-componentdidmount
+        jest.spyOn(document, 'addEventListener').mockImplementation(() => jest.fn());
 
-      // option 2
-      // https://stackoverflow.com/questions/58951689/mocking-window-document-in-jest-and-vue-test-utils
-      // const document = window.document
-      // Object.defineProperty(document, 'addEventListener', {
-      //   value: jest.fn()
-      // })
+        // option 2
+        // https://stackoverflow.com/questions/58951689/mocking-window-document-in-jest-and-vue-test-utils
+        // const document = window.document
+        // Object.defineProperty(document, 'addEventListener', {
+        //   value: jest.fn()
+        // })
 
-      let data = () => {
-        return {
-          rippleExpanded: true
+        let data = () => {
+          return {
+            rippleExpanded: true
+          }
         }
-      }
-      
-      // let _mountOptions = { propsData, mocks, computed, stubs, ignoredElements, methods, data }
-      let _mountOptions = { propsData, mocks, computed, stubs, ignoredElements }
+        
+        // let _mountOptions = { propsData, mocks, computed, stubs, ignoredElements, methods, data }
+        let _mountOptions = { propsData, mocks, computed, stubs, ignoredElements }
 
-      mountOptions.attachToDocument = true
+        _mountOptions.attachToDocument = true
+    
+        let _wrapper = createWrapper(component, _mountOptions, resumeStoreOptions)
+
+        // _wrapper.setData({ rippleExpanded: true })
+
+        // await Vue.nextTick()
+
+        jest.advanceTimersByTime(999)
+
+        // let event = 'touchstart'
+
+        // document.dispatchEvent(new Event(event))
+
+        // _wrapper.find('.container-fluid').trigger('touchstart')
+
+        console.log(_wrapper.vm.rippleExpanded)
+
+
+        // option 1
+        expect(document.addEventListener).not.toHaveBeenCalled()
+
+        // option 2
+        // expect(elementMock.addEventListener).toHaveBeenCalled()
+
+        jest.advanceTimersByTime(1)
+        expect(document.addEventListener).toHaveBeenCalled()
+
+        _wrapper.destroy()
+
+
+      })
+      it('removes events from the dom when wrapper is destroyed', async () => {
+        
+        let removeEventListener =  jest.spyOn(document, 'removeEventListener').mockImplementation(() => jest.fn());
+            
+        let _mountOptions = { propsData, mocks, computed, stubs, ignoredElements }
   
-      let _wrapper = createWrapper(component, _mountOptions, resumeStoreOptions)
+        _mountOptions.attachToDocument = true
+    
+        let _wrapper = createWrapper(component, _mountOptions, resumeStoreOptions)
+        
+        _wrapper.destroy()
+        let handleClickOutside = () => {}
+        handleClickOutside =  handleClickOutside.bind(document)
 
-      // _wrapper.setData({ rippleExpanded: true })
+        expect(document.removeEventListener).toHaveBeenCalled()
 
-      // await Vue.nextTick()
-
-      jest.advanceTimersByTime(999)
-
-      // let event = 'touchstart'
-
-      // document.dispatchEvent(new Event(event))
-
-      // _wrapper.find('.container-fluid').trigger('touchstart')
-
-      console.log(_wrapper.vm.rippleExpanded)
-
-
-      // option 1
-      expect(document.addEventListener).toHaveBeenCalled()
-
-
-      // option 2
-      // expect(elementMock.addEventListener).toHaveBeenCalled()
-
-
-
-    })
+        let calls = events.map(e => {
+          return [e, handleClickOutside]
+        })
+        console.log(removeEventListener)
+        console.log(removeEventListener.mock)
+        expect(removeEventListener.mock.calls).toMatchObject(calls)
+    
+      })
 
   })
+})
 
 })

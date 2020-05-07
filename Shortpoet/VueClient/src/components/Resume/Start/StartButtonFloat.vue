@@ -123,11 +123,11 @@ export default {
       this.events.map(x => document.removeEventListener(x, this.handleClickOutside))
     }
   },
-  destroyed () {
-    // this.removeEvents()
-  },
   mounted () {
     this.addEvents()
+  },
+  destroyed () {
+    this.removeEvents()
   }
 }
 </script>
