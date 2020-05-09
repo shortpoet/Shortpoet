@@ -2,7 +2,7 @@
 //https://alligator.io/vuejs/vue-modal-component/
 
   export default {
-    name: 'Modal',
+    name: 'PDFModal',
     methods: {
       close() {
         this.$emit('close');

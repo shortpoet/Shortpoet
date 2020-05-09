@@ -68,7 +68,7 @@ export const actions = {
       commit(SET_RESUME_RAW, response.data)
       const hasResume = !!response.data
       commit(SET_RESUME_LOADED, hasResume)
-      console.info('resume loaded')
+      // console.info('resume loaded')
     } catch (err) {
       console.error(err)
       dispatch('loadHardResume')

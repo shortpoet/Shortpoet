@@ -153,38 +153,6 @@ describe('start.startButtonFloat', () => {
       
     })
 
-    it('removes events from the dom when wrapper is destroyed', async () => {
-        
-      let removeEventListener =  jest.spyOn(document, 'removeEventListener').mockImplementation(() => jest.fn());
-      let handleClickOutside = jest.fn()
-      methods.addEvents = jest.fn(() => {
-        events.map(x => document.addEventListener(x, handleClickOutside))
-      })
-    
-      let _mountOptions = { propsData, mocks, computed, stubs, ignoredElements, methods }
-
-      _mountOptions.attachToDocument = true
-  
-      let _wrapper = createWrapper(component, _mountOptions, resumeStoreOptions)
-      
-      _wrapper.destroy()
-
-      // let handleClickOutside = () => {}
-      // handleClickOutside =  handleClickOutside.bind(document)
-
-
-      expect(document.removeEventListener).toHaveBeenCalled()
-
-      let calls = events.map(e => {
-        return [e, handleClickOutside]
-      })
-      console.log(removeEventListener)
-      console.log(removeEventListener.mock)
-      expect(removeEventListener.mock.calls).toEqual(calls)
-  
-    })
-
-
   })
   
 })

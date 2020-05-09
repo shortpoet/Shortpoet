@@ -1,10 +1,14 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+  <nav
+    class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" 
+    id="sideNav"
+  @click="collapse($event)"  
+  >
+  <!-- $event apparently helps make sure jest sees the event -->
     <a class="navbar-brand js-scroll-trigger" href="#about">
       <span class="d-block d-lg-none">Carlos Soriano - Resume</span>
-      <span id="pic" class="d-none d-lg-block" @mouseenter="cyclePics" @mouseleave="revertPic">
+      <span id="pic" class="d-none d-lg-block">
         <img class="img-fluid img-profile mx-auto mb-2" :src="pic" alt="profile pic">
-        <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="@/assets/profile_pic.jpg" alt=""> -->
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,23 +16,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        <li  class="nav-item">
+          <a class="nav-link js-scroll-trigger"  href="#about">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        <li  class="nav-item">
+          <a class="nav-link js-scroll-trigger"  href="#skills">Skills</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Natural Languages</a>
+        <li  class="nav-item">
+          <a class="nav-link js-scroll-trigger"  href="#awards">Natural Languages</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+        <li  class="nav-item">
+          <a class="nav-link js-scroll-trigger"  href="#experience">Experience</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+        <li  class="nav-item">
+          <a class="nav-link js-scroll-trigger"  href="#education">Education</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+        <li  class="nav-item">
+          <a class="nav-link js-scroll-trigger"  href="#interests">Interests</a>
         </li>
       </ul>
     </div>
@@ -40,12 +44,23 @@ export default {
   name: 'StartNav',
   data () {
     return {
-      pic: require('@/assets/github_profile_pic.png')
+      pic: require('@/assets/github_profile_pic.png'),
+      isCollapse: false
     }
   },
   methods: {
+    collapse() {
+      console.log('collapse is called')
+      // Closes responsive menu when a scroll trigger link is clicked
+      // moving this here to be able to test
+      // added local boolean that creates coverage
+      // also makes it so the 
+      this.$('.navbar-collapse').collapse('hide')
+      this.isCollapse = true
+    },    
     /* istanbul ignore next */
     revertPic () {
+      // @mouseenter="cyclePics" @mouseleave="revertPic"
       // this.pic = require('@/assets/profile_pic.jpg')
       // clearInterval()
     },

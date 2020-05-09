@@ -82,39 +82,20 @@ export default {
       } else {
         this.rippleExpanded = args
       }
-    }
+    },
   },
   mounted () {
-    // const $ = this.jquery
     const env = process.env.NODE_ENV
     this.loadEnv(env)
     this.$nextTick(() => {
-      // possibly move this into utils?  check if global vue jquery $ variable is still needed in that case.  or at all for that matter.
-      // our custom jQuery code goes here
-      this.$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-          var target = this.$(this.hash)
-          target = target.length ? target : this.$('[name=' + this.hash.slice(1) + ']')
-          if (target.length) {
-            this.$('html, body').animate({
-              scrollTop: (target.offset().top)
-            }, 1000, 'easeInOutExpo')
-            return false
-          }
-        }
-      })
-      // Closes responsive menu when a scroll trigger link is clicked
-      this.$('.js-scroll-trigger').click(function () {
-        this.$('.navbar-collapse').collapse('hide')
-      })
       // Activate scrollspy to add active class to navbar items on scroll
       this.$('body').scrollspy({
         target: '#sideNav'
       })
       this.loadResume()
-      // console.log(this)
     })
   }
+
 }
 </script>
 

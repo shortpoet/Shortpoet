@@ -1,4 +1,5 @@
 // for document
+// https://stackoverflow.com/questions/58951689/mocking-window-document-in-jest-and-vue-test-utilss
 import { JSDOM } from "jsdom"
 
 // for jquery
@@ -27,8 +28,6 @@ window.Proxy = _proxy
 // import Vue from 'vue'
 
 Vue.config.productionTip = false
-
-
 
 
 // Object.defineProperty(window, '$', {value: $});

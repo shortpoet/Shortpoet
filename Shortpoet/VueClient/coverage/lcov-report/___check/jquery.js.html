@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for utils/parse-tabs.js</title>
+    <title>Code coverage report for ___check/jquery.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">utils</a> parse-tabs.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">___check</a> jquery.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>0/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/13</span>
             </div>
         
             
@@ -68,28 +68,52 @@
 <a name='L9'></a><a href='#L9'>9</a>
 <a name='L10'></a><a href='#L10'>10</a>
 <a name='L11'></a><a href='#L11'>11</a>
-<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const parseTabs = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fu</span>nction (tabs) {</span>
-<span class="cstat-no" title="statement not covered" >  if (tabs.includes(',')) {</span>
-<span class="cstat-no" title="statement not covered" >    return tabs.split(',').map(<span class="fstat-no" title="function not covered" >x </span>=&gt; <span class="cstat-no" title="statement not covered" >x.replace(/\s+/g, ''))</span></span>
-  } else {
-    var _tabs = <span class="cstat-no" title="statement not covered" >[]</span>
-<span class="cstat-no" title="statement not covered" >    _tabs.push(tabs)</span>
-<span class="cstat-no" title="statement not covered" >    return _tabs</span>
-  }
-}
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const $ = <span class="cstat-no" title="statement not covered" >jest.fn(<span class="fstat-no" title="function not covered" >(.</span>..params) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  console.log('hello from jquery mock')</span>
+<span class="cstat-no" title="statement not covered" >  console.log(params)</span>
+<span class="cstat-no" title="statement not covered" >  return this</span>
+})
 &nbsp;
-export default parseTabs
+<span class="cstat-no" title="statement not covered" >$.click = jest.fn(<span class="fstat-no" title="function not covered" >(.</span>..params) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  console.log('hello from jquery mock')</span>
+<span class="cstat-no" title="statement not covered" >  console.log(params)</span>
+<span class="cstat-no" title="statement not covered" >  return this</span>
+})
+<span class="cstat-no" title="statement not covered" >$.fn = {}</span>
+<span class="cstat-no" title="statement not covered" >$.fn.collapse = jest.fn(<span class="fstat-no" title="function not covered" >(.</span>..params) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  console.log('hello from jquery mock')</span>
+<span class="cstat-no" title="statement not covered" >  console.log(params)</span>
+<span class="cstat-no" title="statement not covered" >  return this</span>
+})
+&nbsp;
+&nbsp;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -97,7 +121,7 @@ export default parseTabs
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu May 07 2020 09:16:47 GMT-0500 (Central Daylight Time)
+                at Sat May 09 2020 16:47:13 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

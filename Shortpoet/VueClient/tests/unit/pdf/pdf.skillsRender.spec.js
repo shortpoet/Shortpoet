@@ -59,18 +59,19 @@ describe('PDFSkillsRender.vue', () => {
   })
 
   describe('screen check', () => {
-    testWidths.forEach(tw => {
-      console.log(tw)
-      window.innerWidth = tw
-      wrapper = createWrapper(component, mountOptions)
-      if(768 < tw && tw < 985) {
-        expect(wrapper.vm.isMediumLarge).toBe(true)
-      } else {
+    it('correctly calculates medum sized screens', () => {
+      testWidths.forEach(tw => {
         console.log(tw)
-        expect(wrapper.vm.isMediumLarge).toBe(false)
-      }
+        window.innerWidth = tw
+        wrapper = createWrapper(component, mountOptions)
+        if(768 < tw && tw < 985) {
+          expect(wrapper.vm.isMediumLarge).toBe(true)
+        } else {
+          console.log(tw)
+          expect(wrapper.vm.isMediumLarge).toBe(false)
+        }
+      })
     })
-
   })
-  
+
 })

@@ -19,7 +19,7 @@
       </font-awesome-layers>
     </div>
     <div class="modal-slot">
-      <Modal
+      <PDFModal
         v-show="isModalVisible"
         @close="closeModal"
         @toPDF="toPDF"
@@ -35,13 +35,13 @@
         <template v-slot:footer>
           <h1>Test Footer</h1>
         </template> -->
-      </Modal>
+      </PDFModal>
     </div>
   </portal>
 </template>
 
 <script>
-import Modal from '@/components/Utils/Modal'
+import PDFModal from '@/components/Resume/PDF/PDFModal'
 
 import jsPDF from 'jspdf'
 // using fork for now to solve this issue
@@ -53,7 +53,7 @@ var FontFaceObserver = require('fontfaceobserver');
 export default {
   name: 'PDFButtonFloat',
   components: {
-    Modal
+    PDFModal
   },
   props: {
     target: {

@@ -1,4 +1,9 @@
 <template>
+  <!-- 
+    moving #about to higher up in dom so collapsed menu doesn't overlap on navigate 
+    alas this didn't work
+    TODO
+  -->
   <section class="resume-section p-3 px-lg-5 d-flex d-column" id="about">
     <div class="my-auto">
       <h1 class="mb-0">{{ name }}
