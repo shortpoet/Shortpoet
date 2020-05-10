@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`start.startButtonFloat element and class checks matches snapshot 1`] = `<div class="v-portal" style="display: none;"></div>`;

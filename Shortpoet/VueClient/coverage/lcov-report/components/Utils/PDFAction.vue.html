@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
@@ -121,7 +121,8 @@
 <a name='L62'></a><a href='#L62'>62</a>
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,30 +150,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,32 +213,33 @@ export default {
   computed: {
   },
   methods: {
-<span class="fstat-no" title="function not covered" >    toPDF () {</span>
+  /* istanbul ignore next */
+    toPDF () {
       // timeout is set to account for loading time i believe
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      setTimeout(() =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >        console.log(this.target)</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        html2canvas(document.getElementById(this.target), {</span></span>
+      setTimeout(() =&gt; {
+        console.log(this.target)
+        html2canvas(document.getElementById(this.target), {
           scale: 3,
           useCORS: true,
           allowTaint: true,
         }).then(canvas =&gt; {
-<span class="cstat-no" title="statement not covered" >          const image = canvas.toDataURL('image/jpeg', 1.0);</span>
-<span class="cstat-no" title="statement not covered" >          const doc = new jsPDF('p', 'mm', 'a4');</span>
-<span class="cstat-no" title="statement not covered" >          const pageWidth = doc.internal.pageSize.getWidth();</span>
-<span class="cstat-no" title="statement not covered" >          const pageHeight = doc.internal.pageSize.getHeight();</span>
+          const image = canvas.toDataURL('image/jpeg', 1.0);
+          const doc = new jsPDF('p', 'mm', 'a4');
+          const pageWidth = doc.internal.pageSize.getWidth();
+          const pageHeight = doc.internal.pageSize.getHeight();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          const widthRatio = pageWidth / canvas.width;</span>
-<span class="cstat-no" title="statement not covered" >          const heightRatio = pageHeight / canvas.height;</span>
-<span class="cstat-no" title="statement not covered" >          const ratio = widthRatio &gt; heightRatio ? heightRatio : widthRatio;</span>
+          const widthRatio = pageWidth / canvas.width;
+          const heightRatio = pageHeight / canvas.height;
+          const ratio = widthRatio &gt; heightRatio ? heightRatio : widthRatio;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          const canvasWidth = canvas.width * ratio;</span>
-<span class="cstat-no" title="statement not covered" >          const canvasHeight = canvas.height * ratio;</span>
+          const canvasWidth = canvas.width * ratio;
+          const canvasHeight = canvas.height * ratio;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          const marginX = (pageWidth - canvasWidth) / 2;</span>
-<span class="cstat-no" title="statement not covered" >          const marginY = (pageHeight - canvasHeight) / 2;</span>
+          const marginX = (pageWidth - canvasWidth) / 2;
+          const marginY = (pageHeight - canvasHeight) / 2;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          doc.addImage(image, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');</span>
-<span class="cstat-no" title="statement not covered" >          doc.save(`Carlos_Soriano_${Date.now()}.pdf`);</span>
+          doc.addImage(image, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');
+          doc.save(`Carlos_Soriano_${Date.now()}.pdf`);
         });
       }, 250);
     }
@@ -256,7 +259,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat May 09 2020 20:18:54 GMT-0500 (Central Daylight Time)
+                at Sat May 09 2020 23:08:03 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

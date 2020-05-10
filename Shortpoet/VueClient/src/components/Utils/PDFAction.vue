@@ -24,6 +24,7 @@ export default {
   computed: {
   },
   methods: {
+  /* istanbul ignore next */
     toPDF () {
       // timeout is set to account for loading time i believe
       setTimeout(() => {

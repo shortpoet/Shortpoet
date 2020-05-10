@@ -13,6 +13,7 @@
       toPage() {
         this.$emit('to-page');
       },
+      /* istanbul ignore next */
       toCanvas() {
         this.$emit('to-canvas');
       }
