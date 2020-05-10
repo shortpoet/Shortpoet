@@ -69,7 +69,7 @@
                   type="button"
                   class="btn-save"
                   @click="toPDF"
-                  aria-label="Close modal"
+                  aria-label="resume to screenshot pdf"
                 >
                   Save me!
                 </button>
@@ -79,7 +79,7 @@
                   type="button"
                   class="btn-page"
                   @click="toPage"
-                  aria-label="Close modal"
+                  aria-label="resume to paginated pdf"
                 >
                   Page me!
                 </button>

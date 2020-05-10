@@ -34,7 +34,6 @@ describe('PDFModal.vue', () => {
       
       const wrapper = createWrapper(component, mountOptions)
       wrapper.find('.btn-close').trigger('click')
-      console.log(wrapper.emitted())
       expect(wrapper.emitted()).toMatchObject( {'close': [ [], [] ]} )
 
     })
@@ -42,7 +41,6 @@ describe('PDFModal.vue', () => {
       
       const wrapper = createWrapper(component, mountOptions)
       wrapper.find('.btn-save').trigger('click')
-      console.log(wrapper.emitted())
       expect(wrapper.emitted()).toMatchObject( { 'to-pdf': [ [] ], 'close': [ [] ] } )
 
     })
@@ -50,7 +48,6 @@ describe('PDFModal.vue', () => {
       
       const wrapper = createWrapper(component, mountOptions)
       wrapper.find('.btn-page').trigger('click')
-      console.log(wrapper.emitted())
       expect(wrapper.emitted()).toMatchObject( { 'to-page': [ [] ], 'close': [ [] ] } )
 
     })

@@ -121,9 +121,11 @@ describe('PDF.vue', () => {
 
     })
     it('renders PDFSkills dynamic component :is using skillComp computed prop', () => {
+      const localThis = { renderPDF: false }
+      expect(wrapper.find('.skill-grid')).toBeTruthy()
+      expect(component.computed.skillComp.call(localThis)).toBe('PDFSkills')
       expect(wrapper.find(PDFSkills).exists()).toBe(true)
     })
-
   })
 
   describe('pdf.renderPDF', () => {

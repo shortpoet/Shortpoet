@@ -1,8 +1,8 @@
 const chalk = require('chalk')
 import {inspect} from 'util'
-const log = (color, message) => console.log(chalk[`${color}`](`${inspect(message)}`))
+export const log = (color, message) => console.log(chalk[`${color}`](`${inspect(message)}`))
 
-const colorLog = (message, color, background) => {
+export const colorLog = (message, color, background) => {
   color = color || "black";
   if (background) {
     console.log(`%c` + `${message}`, `color:` + `${color};background:${background}`)
@@ -11,7 +11,7 @@ const colorLog = (message, color, background) => {
   }
 }
 
-module.exports =  {
-  log,
-  colorLog
-}
+// module.exports =  {
+//   log,
+//   colorLog
+// }

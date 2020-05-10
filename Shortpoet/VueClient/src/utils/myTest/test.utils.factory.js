@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-
+import { log } from '@/utils/colorLog'
 export const factory = (
   component, 
   /* istanbul ignore next */
@@ -27,7 +27,8 @@ export const factory = (
     // console.log(options.mocks)
     // console.log(options.store)
     // console.log(options.localVue)
-    // console.log(options.propsData.experiences[0].jobs)
+    // log('blue', options.stubs)
+    // log('green', options.propsData)
     // console.log(mount)
     return mount(component, options)
   }

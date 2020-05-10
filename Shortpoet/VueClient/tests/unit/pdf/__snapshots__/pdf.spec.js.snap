@@ -809,10 +809,10 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             </section>
             <footer class="custom-modal-footer">
               <div class="button-drawer d-flex flex-row justify-content-around">
-                <div><button type="button" aria-label="Close modal" class="btn-save">
+                <div><button type="button" aria-label="resume to screenshot pdf" class="btn-save">
                     Save me!
                   </button></div>
-                <div><button type="button" aria-label="Close modal" class="btn-page">
+                <div><button type="button" aria-label="resume to paginated pdf" class="btn-page">
                     Page me!
                   </button></div>
                 <div><a href="/"><button type="button" aria-label="Close modal" class="btn-close">
@@ -1627,10 +1627,10 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             </section>
             <footer class="custom-modal-footer">
               <div class="button-drawer d-flex flex-row justify-content-around">
-                <div><button type="button" aria-label="Close modal" class="btn-save">
+                <div><button type="button" aria-label="resume to screenshot pdf" class="btn-save">
                     Save me!
                   </button></div>
-                <div><button type="button" aria-label="Close modal" class="btn-page">
+                <div><button type="button" aria-label="resume to paginated pdf" class="btn-page">
                     Page me!
                   </button></div>
                 <div><a href="/"><button type="button" aria-label="Close modal" class="btn-close">
@@ -1659,10 +1659,10 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             </section>
             <footer class="custom-modal-footer">
               <div class="button-drawer d-flex flex-row justify-content-around">
-                <div><button type="button" aria-label="Close modal" class="btn-save">
+                <div><button type="button" aria-label="resume to screenshot pdf" class="btn-save">
                     Save me!
                   </button></div>
-                <div><button type="button" aria-label="Close modal" class="btn-page">
+                <div><button type="button" aria-label="resume to paginated pdf" class="btn-page">
                     Page me!
                   </button></div>
                 <div><a href="/"><button type="button" aria-label="Close modal" class="btn-close">
@@ -1691,10 +1691,10 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             </section>
             <footer class="custom-modal-footer">
               <div class="button-drawer d-flex flex-row justify-content-around">
-                <div><button type="button" aria-label="Close modal" class="btn-save">
+                <div><button type="button" aria-label="resume to screenshot pdf" class="btn-save">
                     Save me!
                   </button></div>
-                <div><button type="button" aria-label="Close modal" class="btn-page">
+                <div><button type="button" aria-label="resume to paginated pdf" class="btn-page">
                     Page me!
                   </button></div>
                 <div><a href="/"><button type="button" aria-label="Close modal" class="btn-close">

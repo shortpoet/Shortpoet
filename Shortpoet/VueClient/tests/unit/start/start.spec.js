@@ -64,10 +64,13 @@ describe('Start.vue', () => {
 
     library.add(
       faCircle, faFilePdf, faSave, faTimes, faRocket
-      )
-    
-    const getResumeLoaded = true
+    )
 
+    stubs = {
+      FontAwesomeIcon,
+      FontAwesomeLayers
+    }
+  
     propsData = { 
       // name: 'test name' 
     }
@@ -76,10 +79,6 @@ describe('Start.vue', () => {
       // getResumeLoaded: () => true
     }
 
-    stubs = {
-      FontAwesomeIcon,
-      FontAwesomeLayers
-    }
 
     mocks = {
       $: jest.fn(() => {
@@ -91,6 +90,8 @@ describe('Start.vue', () => {
       }),
       dispatch: jest.fn()
     }
+
+    const getResumeLoaded = true
 
     resumeStoreOptions = { 
       getters: { getResumeLoaded: jest.fn(() => getResumeLoaded), getResume: jest.fn(() => hardResume) }, 
