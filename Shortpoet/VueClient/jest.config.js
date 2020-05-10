@@ -48,5 +48,5 @@ module.exports = {
     '<rootDir>/node_modules/(?!jquery/)'
   ],
   // setupTestFrameworkScriptFile: "<rootDir>/tests/setupJest"
-  setupFiles: ["<rootDir>/tests/setupJest"]
+  setupFiles: ["<rootDir>/tests/setupJest", "jest-canvas-mock"]
 }

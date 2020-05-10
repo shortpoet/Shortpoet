@@ -64,7 +64,6 @@ export const actions = {
       const url = rootGetters.getUrlPrefix + resPoint
       const response = await axios.get(url)
       // console.log(response.data)
-
       commit(SET_RESUME_RAW, response.data)
       const hasResume = !!response.data
       commit(SET_RESUME_LOADED, hasResume)

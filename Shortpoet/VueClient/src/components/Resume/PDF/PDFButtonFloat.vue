@@ -22,9 +22,9 @@
       <PDFModal
         v-show="isModalVisible"
         @close="closeModal"
-        @toPDF="toPDF"
-        @toPage="toPage"
-        @toCanvas="toCanvas"
+        @to-pdf="toPDF"
+        @to-page="toPage"
+        @to-canvas="toCanvas"
       >
         <!-- <template v-slot:header>
           <h1>Test Header</h1>
@@ -123,7 +123,7 @@ export default {
       let target = document.getElementById(vm.pdfTarget);
       var fontA = new FontFaceObserver('Open Sans');
       var fontB = new FontFaceObserver('Saira Extra Condensed');
-      vm.$emit('toPDF', true);
+      vm.$emit('to-pdf', true);
       Promise.all([fontA.load(), fontB.load()]).then(function () {
         console.log('Family A & B have loaded');
         setTimeout(()=>{

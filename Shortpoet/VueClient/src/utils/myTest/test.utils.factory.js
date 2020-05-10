@@ -25,6 +25,7 @@ export const factory = (
   }) => {
     // console.log(options)
     // console.log(options.mocks)
+    // console.log(options.store)
     // console.log(options.localVue)
     // console.log(options.propsData.experiences[0].jobs)
     // console.log(mount)

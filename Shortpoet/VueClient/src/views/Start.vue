@@ -30,7 +30,7 @@
         :interests="getResume.interests"
       />
 
-      <portal-target class="start target" name="pdf-button-float"/>
+      <portal-target class="start-target" name="pdf-button-float"/>
       <StartButtonFloat :target="'pdf-button-float'" :href="'/pdf'" :isExpanded="rippleExpanded"  @ripple-open="toggleVisibility(true)" @ripple-close="toggleVisibility(false)" />      
 
     </div>

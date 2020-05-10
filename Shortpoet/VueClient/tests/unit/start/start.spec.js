@@ -93,7 +93,7 @@ describe('Start.vue', () => {
     }
 
     resumeStoreOptions = { 
-      getters: { getResumeLoaded: jest.fn(() => true), getResume: jest.fn(() => hardResume) }, 
+      getters: { getResumeLoaded: jest.fn(() => getResumeLoaded), getResume: jest.fn(() => hardResume) }, 
       mutations: { 'SET_RESUME_RAW': jest.fn() } 
     }
 
@@ -108,7 +108,11 @@ describe('Start.vue', () => {
     wrapper = createWrapper(component, mountOptions, resumeStoreOptions)
 
   })
-  
+  describe('start.snapshots', () => {
+    it('matches snapshot', () => {
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+  })
   // fs.writeFile('window.json', inspect(window), (err) => {})
   // fs.writeFile('window.matchMedia.json', inspect(window.matchMedia), (err) => {})
 

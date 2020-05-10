@@ -7,6 +7,8 @@ import Vuex from 'vuex'
 import createStore from '@/store/createStore'
 import PortalVue from 'portal-vue'
 
+import { log } from '@/utils/colorLog'
+
 export const createWrapper  = (
   component,
   /* istanbul ignore next */
@@ -22,7 +24,11 @@ export const createWrapper  = (
     localVue.use(PortalVue)
     const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
     const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
+    // log('green', mockStoreResume)
+    // log('yellow', storeConfig.modules.resume)
     const store = new Vuex.Store(storeConfig)
+    // log('red', store)
+    // log('blue', store._mutations['resume/SET_RESUME_RAW'][0]())
     // console.log(options)
     return isShallow? factoryShallow(component, {localVue, store, ...options}) : factory(component, {localVue, store, ...options})
 }

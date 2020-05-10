@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">6.45% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/124</span>
+                <span class='fraction'>8/124</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">23.81% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>5/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">6.56% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/122</span>
+                <span class='fraction'>8/122</span>
             </div>
         
             
@@ -446,17 +446,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -476,7 +474,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -492,16 +492,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -773,9 +773,9 @@
       &lt;PDFModal
         v-show="isModalVisible"
         @close="closeModal"
-        @toPDF="toPDF"
-        @toPage="toPage"
-        @toCanvas="toCanvas"
+        @to-pdf="toPDF"
+        @to-page="toPage"
+        @to-canvas="toCanvas"
       &gt;
         &lt;!-- &lt;template v-slot:header&gt;
           &lt;h1&gt;Test Header&lt;/h1&gt;
@@ -792,15 +792,15 @@
 &lt;/template&gt;
 &nbsp;
 &lt;script&gt;
-<span class="cstat-no" title="statement not covered" >import PDFModal from '@/components/Resume/PDF/PDFModal'</span>
+import PDFModal from '@/components/Resume/PDF/PDFModal'
 &nbsp;
-<span class="cstat-no" title="statement not covered" >import jsPDF from 'jspdf'</span>
+import jsPDF from 'jspdf'
 // using fork for now to solve this issue
 // the changes i made with the icons as the deployed version still works
 // https://github.com/niklasvh/html2canvas/issues/1868#issuecomment-599217709
-<span class="cstat-no" title="statement not covered" >import html2canvas from '@trainiac/html2canvas'</span>
+import html2canvas from '@trainiac/html2canvas'
 // import html2canvas from 'html2canvas'
-<span class="cstat-no" title="statement not covered" >var FontFaceObserver = require('fontfaceobserver');</span>
+var FontFaceObserver = require('fontfaceobserver');
 export default {
   name: 'PDFButtonFloat',
   components: {
@@ -821,8 +821,8 @@ export default {
     //   required: false
     // }
   },
-<span class="fstat-no" title="function not covered" >  data () {</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  data () {
+    return {
       iconMap: {
         pdf: {
           icon: 'file-pdf',
@@ -837,17 +837,17 @@ export default {
     }
   },
   computed: {
-<span class="fstat-no" title="function not covered" >    mobile () {</span>
-<span class="cstat-no" title="statement not covered" >      return window.innerWidth &lt; 768</span>
+    mobile () {
+      return window.innerWidth &lt; 768
     },
-<span class="fstat-no" title="function not covered" >    classObject () {</span>
-<span class="cstat-no" title="statement not covered" >      return {</span>
+    classObject () {
+      return {
         'button-float': true,
         'mobile': this.mobile
       }
     },
-<span class="fstat-no" title="function not covered" >    _icon () {</span>
-<span class="cstat-no" title="statement not covered" >      return this.iconMap[`${this.icon}`]</span>
+    _icon () {
+      return this.iconMap[`${this.icon}`]
     }
   },
   methods: {
@@ -874,7 +874,7 @@ export default {
 <span class="cstat-no" title="statement not covered" >      let target = document.getElementById(vm.pdfTarget);</span>
 <span class="cstat-no" title="statement not covered" >      var fontA = new FontFaceObserver('Open Sans');</span>
 <span class="cstat-no" title="statement not covered" >      var fontB = new FontFaceObserver('Saira Extra Condensed');</span>
-<span class="cstat-no" title="statement not covered" >      vm.$emit('toPDF', true);</span>
+<span class="cstat-no" title="statement not covered" >      vm.$emit('to-pdf', true);</span>
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      Promise.all([fontA.load(), fontB.load()]).then(function () {</span></span>
 <span class="cstat-no" title="statement not covered" >        console.log('Family A &amp; B have loaded');</span>
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        setTimeout(()=&gt;{</span></span>
@@ -1088,7 +1088,7 @@ export default {
 <span class="cstat-no" title="statement not covered" >      return pdf;</span>
     },
   },
-<span class="fstat-no" title="function not covered" >  mounted () {</span>
+  mounted () {
   }
 }
 &lt;/script&gt;
@@ -1102,7 +1102,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat May 09 2020 16:47:13 GMT-0500 (Central Daylight Time)
+                at Sat May 09 2020 20:18:54 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

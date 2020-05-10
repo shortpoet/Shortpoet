@@ -8,13 +8,13 @@
         this.$emit('close');
       },
       toPDF() {
-        this.$emit('toPDF');
+        this.$emit('to-pdf');
       },
       toPage() {
-        this.$emit('toPage');
+        this.$emit('to-page');
       },
       toCanvas() {
-        this.$emit('toCanvas');
+        this.$emit('to-canvas');
       }
     },
   };
