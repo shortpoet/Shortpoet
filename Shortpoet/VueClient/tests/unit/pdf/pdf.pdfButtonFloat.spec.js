@@ -90,7 +90,6 @@ describe("pdf.pdfButtonFloat", () => {
     jest.clearAllMocks();
 
     jspdf.mockClear();
-    addImage.mockClear();
 
     jest.useFakeTimers();
 

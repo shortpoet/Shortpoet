@@ -2,7 +2,8 @@ import { createLocalVue } from '@vue/test-utils'
 import factory from './test.utils.factory'
 import factoryShallow from './test.utils.factoryShallow'
 
-// import VueRouter from 'vue-router'
+import VueRouter from 'vue-router'
+
 import Vuex from 'vuex'
 import createStore from '@/store/createStore'
 import PortalVue from 'portal-vue'
@@ -19,7 +20,7 @@ export const createWrapper  = (
   isShallow = false,
   ) => {
     const localVue = createLocalVue()
-    // localVue.use(VueRouter)
+    localVue.use(VueRouter)
     localVue.use(Vuex)
     localVue.use(PortalVue)
     const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
@@ -30,7 +31,7 @@ export const createWrapper  = (
     // log('red', store)
     // log('blue', store._mutations['resume/SET_RESUME_RAW'][0]())
     // console.log(options)
-    return isShallow? factoryShallow(component, {localVue, store, ...options}) : factory(component, {localVue, store, ...options})
+    return isShallow? factoryShallow(component, {localVue, store, router, ...options}) : factory(component, {localVue, store, router, ...options})
 }
 
 // export default createWrapper

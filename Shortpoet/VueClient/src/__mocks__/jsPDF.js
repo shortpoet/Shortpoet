@@ -1,5 +1,5 @@
 // these modules' names must match exactly.  i had jsPDF at first and it didn't work
-
+// git renamed this file on a merge BUG OPPORTUNITY
 
 /* gotta watch out for how return values are nested
 previously 

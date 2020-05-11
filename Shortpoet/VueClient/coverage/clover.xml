@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589226042906" clover="3.2.0">
-  <project timestamp="1589226042906" name="All files">
-    <metrics statements="376" coveredstatements="363" conditionals="79" coveredconditionals="71" methods="141" coveredmethods="137" elements="596" coveredelements="571" complexity="0" loc="376" ncloc="376" packages="9" files="47" classes="47"/>
+<coverage generated="1589237506778" clover="3.2.0">
+  <project timestamp="1589237506778" name="All files">
+    <metrics statements="363" coveredstatements="350" conditionals="79" coveredconditionals="71" methods="141" coveredmethods="137" elements="583" coveredelements="558" complexity="0" loc="363" ncloc="363" packages="9" files="49" classes="49"/>
     <package name="assets">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="icons.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\assets\icons.js">
@@ -12,7 +12,7 @@
       </file>
     </package>
     <package name="components.Resume.PDF">
-      <metrics statements="147" coveredstatements="147" conditionals="35" coveredconditionals="35" methods="56" coveredmethods="56"/>
+      <metrics statements="135" coveredstatements="135" conditionals="35" coveredconditionals="35" methods="56" coveredmethods="56"/>
       <file name="PDFAbout.vue" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\components\Resume\PDF\PDFAbout.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="54" count="3" type="stmt"/>
@@ -36,7 +36,7 @@
         <line num="35" count="254" type="stmt"/>
       </file>
       <file name="PDFButtonFloat.vue" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\components\Resume\PDF\PDFButtonFloat.vue">
-        <metrics statements="85" coveredstatements="85" conditionals="2" coveredconditionals="2" methods="16" coveredmethods="16"/>
+        <metrics statements="73" coveredstatements="73" conditionals="2" coveredconditionals="2" methods="16" coveredmethods="16"/>
         <line num="42" count="2" type="stmt"/>
         <line num="43" count="2" type="stmt"/>
         <line num="46" count="2" type="stmt"/>
@@ -58,8 +58,8 @@
         <line num="139" count="3" type="stmt"/>
         <line num="140" count="3" type="stmt"/>
         <line num="141" count="3" type="stmt"/>
-        <line num="142" count="3" type="stmt"/>
-        <line num="145" count="3" type="stmt"/>
+        <line num="144" count="3" type="stmt"/>
+        <line num="164" count="1" type="stmt"/>
         <line num="165" count="1" type="stmt"/>
         <line num="166" count="1" type="stmt"/>
         <line num="167" count="1" type="stmt"/>
@@ -67,61 +67,49 @@
         <line num="169" count="1" type="stmt"/>
         <line num="170" count="1" type="stmt"/>
         <line num="171" count="1" type="stmt"/>
-        <line num="172" count="1" type="stmt"/>
-        <line num="173" count="1" type="stmt"/>
-        <line num="174" count="1" type="stmt"/>
-        <line num="175" count="1" type="stmt"/>
-        <line num="176" count="1" type="stmt"/>
-        <line num="177" count="1" type="stmt"/>
-        <line num="178" count="1" type="stmt"/>
-        <line num="184" count="1" type="stmt"/>
+        <line num="193" count="5" type="stmt"/>
+        <line num="194" count="5" type="stmt"/>
+        <line num="195" count="5" type="stmt"/>
+        <line num="196" count="5" type="stmt"/>
+        <line num="198" count="5" type="stmt"/>
+        <line num="199" count="5" type="stmt"/>
         <line num="201" count="5" type="stmt"/>
         <line num="202" count="5" type="stmt"/>
         <line num="203" count="5" type="stmt"/>
         <line num="204" count="5" type="stmt"/>
+        <line num="205" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="206" count="5" type="stmt"/>
         <line num="207" count="5" type="stmt"/>
         <line num="209" count="5" type="stmt"/>
         <line num="210" count="5" type="stmt"/>
-        <line num="211" count="5" type="stmt"/>
-        <line num="212" count="5" type="stmt"/>
-        <line num="213" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="214" count="5" type="stmt"/>
-        <line num="215" count="5" type="stmt"/>
-        <line num="217" count="5" type="stmt"/>
-        <line num="218" count="5" type="stmt"/>
-        <line num="229" count="5" type="stmt"/>
-        <line num="232" count="5" type="stmt"/>
-        <line num="233" count="5" type="stmt"/>
-        <line num="236" count="1" type="stmt"/>
-        <line num="237" count="1" type="stmt"/>
-        <line num="239" count="1" type="stmt"/>
-        <line num="245" count="1" type="stmt"/>
-        <line num="246" count="1" type="stmt"/>
-        <line num="256" count="1" type="stmt"/>
-        <line num="257" count="1" type="stmt"/>
-        <line num="263" count="1" type="stmt"/>
-        <line num="264" count="1" type="stmt"/>
-        <line num="267" count="3" type="stmt"/>
-        <line num="268" count="3" type="stmt"/>
-        <line num="269" count="3" type="stmt"/>
-        <line num="270" count="3" type="stmt"/>
-        <line num="272" count="3" type="stmt"/>
-        <line num="273" count="3" type="stmt"/>
-        <line num="275" count="3" type="stmt"/>
-        <line num="276" count="3" type="stmt"/>
+        <line num="221" count="5" type="stmt"/>
+        <line num="224" count="5" type="stmt"/>
+        <line num="227" count="1" type="stmt"/>
+        <line num="228" count="1" type="stmt"/>
+        <line num="233" count="1" type="stmt"/>
+        <line num="243" count="1" type="stmt"/>
+        <line num="244" count="1" type="stmt"/>
+        <line num="250" count="1" type="stmt"/>
+        <line num="251" count="1" type="stmt"/>
+        <line num="254" count="3" type="stmt"/>
+        <line num="255" count="3" type="stmt"/>
+        <line num="256" count="3" type="stmt"/>
+        <line num="257" count="3" type="stmt"/>
+        <line num="259" count="3" type="stmt"/>
+        <line num="260" count="3" type="stmt"/>
+        <line num="262" count="3" type="stmt"/>
+        <line num="263" count="3" type="stmt"/>
+        <line num="264" count="3" type="stmt"/>
+        <line num="265" count="3" type="stmt"/>
+        <line num="266" count="3" type="stmt"/>
         <line num="277" count="3" type="stmt"/>
         <line num="278" count="3" type="stmt"/>
-        <line num="279" count="3" type="stmt"/>
-        <line num="290" count="3" type="stmt"/>
-        <line num="291" count="3" type="stmt"/>
-        <line num="293" count="3" type="stmt"/>
+        <line num="282" count="3" type="stmt"/>
+        <line num="285" count="3" type="stmt"/>
         <line num="295" count="3" type="stmt"/>
-        <line num="298" count="3" type="stmt"/>
-        <line num="308" count="3" type="stmt"/>
-        <line num="312" count="3" type="stmt"/>
-        <line num="314" count="3" type="stmt"/>
-        <line num="315" count="3" type="stmt"/>
+        <line num="299" count="3" type="stmt"/>
+        <line num="301" count="3" type="stmt"/>
+        <line num="302" count="3" type="stmt"/>
       </file>
       <file name="PDFDevIcon.vue" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\components\Resume\PDF\PDFDevIcon.vue">
         <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
@@ -271,23 +259,29 @@
     <package name="router">
       <metrics statements="13" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
       <file name="index.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\router\index.js">
-        <metrics statements="12" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
       </file>
       <file name="paths.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\router\paths.js">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
+      </file>
+      <file name="routeMapper.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\router\routeMapper.js">
+        <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+      <file name="scrollBehavior.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\router\scrollBehavior.js">
+        <metrics statements="6" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
       </file>
     </package>
     <package name="store">
@@ -383,13 +377,13 @@
       <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <file name="colorLog.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\colorLog.js">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="1" count="28" type="stmt"/>
-        <line num="6" count="28" type="stmt"/>
-        <line num="8" count="28" type="stmt"/>
-        <line num="9" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="1" count="29" type="stmt"/>
+        <line num="6" count="29" type="stmt"/>
+        <line num="8" count="29" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
       </file>
       <file name="recase.js" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\utils\recase.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -498,9 +492,9 @@
       </file>
     </package>
     <package name="views">
-      <metrics statements="40" coveredstatements="40" conditionals="8" coveredconditionals="8" methods="10" coveredmethods="10"/>
+      <metrics statements="39" coveredstatements="39" conditionals="8" coveredconditionals="8" methods="10" coveredmethods="10"/>
       <file name="PDF.vue" path="H:\source\repos\Shortpoet\Shortpoet\VueClient\src\views\PDF.vue">
-        <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+        <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
         <line num="85" count="2" type="stmt"/>
         <line num="86" count="2" type="stmt"/>
         <line num="87" count="2" type="stmt"/>
@@ -516,7 +510,6 @@
         <line num="121" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="141" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="153" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="160" count="2" type="stmt"/>
         <line num="161" count="2" type="stmt"/>
         <line num="165" count="8" type="stmt"/>
         <line num="166" count="8" type="stmt"/>
