@@ -157,7 +157,7 @@ export default {
     ...mapActions(['loadEnv']),
     ...mapActions('resume', ['loadResume']),
     toRenderPDF (event) {
-      console.log('toRenderPDF from pDF')
+      // console.log('toRenderPDF from pDF')
       this.renderPDF = event
     }
   },

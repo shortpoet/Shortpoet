@@ -21,15 +21,21 @@ export const textMatcher = (component, props, prop, selector, mock = true, isSha
   const doMatch = (funcName) => {
     const func = funcs[`${funcName}`]
     expect(wrapper.find(`${selector}`).text()).toMatch(func(`${prop}`).propsData[`${prop}`])
-  } 
+  }  
+  /* istanbul ignore next */
   if (mock) {
     wrapper = createWrapper(component, propsMocker(props))
     doMatch('propMocker')
     // expect(wrapper.find(`${selector}`).text()).toMatch(propMocker(`${prop}`).propsData[`${prop}`])
   } else {
-    // console.log(propsFinder)
+    /* istanbul ignore next */
     wrapper = createWrapper(component, propsFinder(props))
+    /* istanbul ignore next */
     doMatch('propFinder')
+    // this is unused so ignoring for now
+    // test if uses
+    // TODO UNTESTED CODE
+    // console.log(propsFinder)
     // expect(wrapper.find(`${selector}`).text()).toMatch(propFinder(`${prop}`).propsData[`${prop}`])
   }
 }

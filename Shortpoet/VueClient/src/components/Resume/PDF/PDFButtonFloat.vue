@@ -135,7 +135,6 @@ export default {
       }
     },
     async getCanvas(options) {
-      log("green", "about to getCanvas");
       const vm = this;
       const target = document.getElementById(vm.pdfTarget);
       try {
@@ -162,26 +161,19 @@ export default {
     },
     // https://stackoverflow.com/questions/19626680/is-settimeout-a-good-solution-to-do-async-functions-with-javascript
     async setCanvas(options, callback) {
-      log("green", "about to start setCanvas");
       const vm = this;
       await vm.checkFonts();
       colorLog("fonts have been checked", "violet");
-      log("blue", "fonts have been checked");
       setTimeout(async () => {
         try {
           const canvas = await vm.getCanvas(options);
-          log("red", "canvas");
-          log("yellow", "after timeout");
-          console.log(canvas);
           vm.canvas = canvas;
-          log("cyan", vm.canvas);
           callback();
         } catch (err) {
         /* istanbul ignore next */
           console.log(err);
         }
       }, 250);
-      log("red", "last line of setCanvas");
     },
     // close modal first
     // [Vue warn]: Method "isModalVisible" has type "boolean" in the component definition. Did you reference the function correctly?      this.closeModal()
@@ -229,20 +221,15 @@ export default {
       const fileName = `Carlos_Soriano_${moment().format(
         "YYYY_MM_DD_HH_mm"
       )}.pdf`;
-      console.log(fileName);
       this.jspdf.save(fileName);
     },
     async savePDF() {
       const vm = this;
-      log("blue", "savePDF from Button Float");
-
       const options = {
         scale: 5,
         useCORS: true,
         allowTaint: true
       };
-
-      log("cyan", "about to do callback");
       vm.setCanvas(options, vm.toPDF);
     },
     // https://stackoverflow.com/questions/24069124/how-to-save-a-image-in-multiple-pages-of-pdf-using-jspdf
@@ -290,7 +277,7 @@ export default {
       heightLeft -= pageHeight;
       let secondHalf = heightLeft - imgHeight;
 
-      colorLog(`secondHalf: ${secondHalf}`, "violet");
+      // colorLog(`secondHalf: ${secondHalf}`, "violet");
 
       this.jspdf.addPage();
       // TODO
