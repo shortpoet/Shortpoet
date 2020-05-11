@@ -22,7 +22,7 @@
       <PDFModal
         v-show="isModalVisible"
         @close="closeModal"
-        @to-pdf="toPDF"
+        @to-pdf="savePDF"
         @to-page="toPage"
         @to-canvas="toCanvas"
       >
@@ -43,7 +43,7 @@
 <script>
 import PDFModal from '@/components/Resume/PDF/PDFModal'
 import { colorLog } from '@/utils/colorLog'
-// import { log } from '@/utils/colorLog'
+import { log } from '@/utils/colorLog'
 // log('blue', 'test')
 import jsPDF from 'jspdf'
 // using fork for now to solve this issue
@@ -121,16 +121,27 @@ export default {
       var fontA = new FontFaceObserver('Open Sans')
       var fontB = new FontFaceObserver('Saira Extra Condensed')
       // must return otherwise load order is not correct
-      return Promise.all([fontA.load(), fontB.load()]).then(function () {
-        console.log('Family A & B have loaded')
-      })
+      try {
+        return Promise.all([fontA.load(), fontB.load()]).then(function () {
+          console.log('Family A & B have loaded')
+        })
+      }
+      catch {err => console.log(err)}
     },
     async getCanvas (options) {
+      log('green', 'about to getCanvas')
       const vm = this
       const target = document.getElementById(vm.pdfTarget)
-      return html2canvas(target, {
-        ...options
-      })
+      try {
+        let canvas = html2canvas(target, {
+          ...options
+        })
+        return canvas
+      }
+      catch {err => console.log(err)}
+    },
+    getDataURL (canvas) {
+      return canvas.toDataURL('image/jpeg', 1.0);
     },
     // close modal first
     // [Vue warn]: Method "isModalVisible" has type "boolean" in the component definition. Did you reference the function correctly?      this.closeModal()
@@ -145,32 +156,71 @@ export default {
     //
     // setting width and height cuts it off at the "one page mark"
     // width: 810,
-    // height: 1100,      
-    async toPDF() {
+    // height: 1100,
+    createDoc (canvas) {
+      const doc = new jsPDF('p', 'mm', 'a4');
+      // log('green', doc.internal)
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      // log('cyan', pageWidth, pageHeight)
+      // log('cyan', pageHeight)
+      const widthRatio = pageWidth / canvas.width;
+      const heightRatio = pageHeight / canvas.height;
+      const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
+      // log('blue', ratio)
+      const canvasWidth = canvas.width * ratio;
+      const canvasHeight = canvas.height * ratio;
+      const marginX = 0 //(pageWidth - canvasWidth) / 2;
+      const marginY = 0 //(pageHeight - canvasHeight) / 2;
+      // log('red', doc)
+      return {
+        doc,
+        marginX,
+        marginY,
+        canvasWidth,
+        canvasHeight
+      }
+    },
+    async toPDF(canvas) {
       const vm = this
-      colorLog('toPDF from Button Float', 'blue')
+      try {
+        const image = vm.getDataURL(canvas)
+        const { doc, marginX, marginY, canvasWidth, canvasHeight } = vm.createDoc(canvas)
+        doc.addImage(image, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');
+        return doc
+      }
+      catch(err) {
+        console.log(err)
+      }
+    },
+    async savePDF() {
+      const vm = this
+      log('blue', 'toPDF from Button Float')
       await vm.checkFonts()
       colorLog('fonts have been checked', 'violet')
       setTimeout(async () => {
-        const canvas = await vm.getCanvas({
-          scale: 5,
-          useCORS: true,
-          allowTaint: true,
-        })
-        const image = canvas.toDataURL('image/jpeg', 1.0);
-        const doc = new jsPDF('p', 'mm', 'a4');
-        const pageWidth = doc.internal.pageSize.getWidth();
-        const pageHeight = doc.internal.pageSize.getHeight();
-        const widthRatio = pageWidth / canvas.width;
-        const heightRatio = pageHeight / canvas.height;
-        const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
-        const canvasWidth = canvas.width * ratio;
-        const canvasHeight = canvas.height * ratio;
-        const marginX = 0 //(pageWidth - canvasWidth) / 2;
-        const marginY = 0 //(pageHeight - canvasHeight) / 2;
-        doc.addImage(image, 'JPEG', marginX, marginY, canvasWidth, canvasHeight, null, 'SLOW');
-        doc.save(`Carlos_Soriano_${Date.now()}.pdf`);
+        log('green', 'about to start getCanvas')
+        try {
+          const canvas = await vm.getCanvas({
+            scale: 5,
+            useCORS: true,
+            allowTaint: true,
+          })
+          const doc = await vm.toPDF(canvas)
+          log('green', 'before save')
+          // log('green', doc)
+          const fileName = `Carlos_Soriano_${Date.now()}.pdf`
+          doc.save(fileName);
+          return Promise.resolve({
+            doc,
+            fileName
+          })
+        }
+        catch(err) {
+          console.log(err)
+        }
       }, 250);
+      log('red', 'last line of getCanvas')
     },
     // https://stackoverflow.com/questions/24069124/how-to-save-a-image-in-multiple-pages-of-pdf-using-jspdf
     // https://stackoverflow.com/questions/19272933/jspdf-multi-page-pdf-with-html-renderer/34934497#34934497

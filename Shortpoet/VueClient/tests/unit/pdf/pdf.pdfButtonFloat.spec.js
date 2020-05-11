@@ -8,6 +8,7 @@ import { createLocalVue } from '@vue/test-utils'
 // utils
 import { cloneDeep } from 'lodash'
 import Vue from 'vue'
+import { log } from '@/utils/colorLog'
 
 // plugins
 import PortalVue from 'portal-vue'
@@ -21,15 +22,25 @@ import PDF from '@/views/PDF'
 import hardResume from '@/assets/resume.js'
 
 // mocks
-import jsPDF from '@/__mocks__/jspdf'
+// the first way wasn't being 'called'
+// it was loggin as a mock function but not the one being used in 
+// wrapper
+// import jspdf from '@/__mocks__/jspdf'
+import jspdf, {addImage} from 'jspdf'
+jest.mock('jspdf')
 // similar to mocking @vue/testutils
 // folders had to be nested just like source module for mock to work
-import html2canvas from '@/__mocks__/@trainiac/html2canvas'
-import fontfaceobserver from '@/__mocks__/fontfaceobserver'
+
+import html2canvas from '@trainiac/html2canvas'
+// import html2canvas from '@/__mocks__/@trainiac/html2canvas'
+import fontfaceobserver from 'fontfaceobserver'
+// import fontfaceobserver from '@/__mocks__/fontfaceobserver'
+
+jest.useFakeTimers()
 
 let wrapper
 
-describe('start.pdfButtonFloat', () => {
+describe('pdf.pdfButtonFloat', () => {
 
   const component = PDFButtonFloat
 
@@ -59,6 +70,10 @@ describe('start.pdfButtonFloat', () => {
   beforeEach(() => {
     jest.resetModules()
     jest.clearAllMocks()
+    
+    jspdf.mockClear()
+    addImage.mockClear()
+
     expected = ``
 
     library.add(
@@ -199,6 +214,170 @@ describe('start.pdfButtonFloat', () => {
       
       expect(html2canvas).toHaveBeenCalledWith(target, options)
     
+    })
+  })
+
+  describe('pdf.pdfButtonFloat.createDoc', () => {
+    it('should return doc with dimensions', async () => {
+
+      mocks = {
+        dispatch: jest.fn()
+      }
+
+      mountOptions = {
+        propsData: propsData,
+        mocks: mocks,
+        stubs: stubs,
+        attachToDocument: true
+      }
+
+      // had to create wrapper from parent component because using vue portal
+      wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
+
+      const options = {
+        scale: 5,
+        useCORS: true,
+        allowTaint: true,
+      }
+
+      // this wasy doesn't load the context needed for method to run correctly
+      // await methods.getCanvas(options)
+
+      const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+      
+      wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
+
+      const canvas = await wrapper.find(PDFButtonFloat).vm.getCanvas(options)
+
+      const createDoc = await wrapper.find(PDFButtonFloat).vm.createDoc(canvas)
+      const doc = new jspdf('p', 'mm', 'a4');
+
+      expect(createDoc).toMatchObject({
+        doc: doc,
+        marginX: 0,
+        marginY: 0,
+        canvasWidth: 888,
+        canvasHeight: 888
+      })
+
+    })
+
+  })
+
+  describe('pdf.pdfButtonFloat.toPDF', () => {
+    it('should call jsPDF with options', async () => {
+
+      mocks = {
+        dispatch: jest.fn()
+      }
+
+      mountOptions = {
+        propsData: propsData,
+        mocks: mocks,
+        stubs: stubs,
+        attachToDocument: true
+      }
+
+      // had to create wrapper from parent component because using vue portal
+      wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
+
+      const options = {
+        scale: 5,
+        useCORS: true,
+        allowTaint: true,
+      }
+
+      // this wasy doesn't load the context needed for method to run correctly
+      // await methods.getCanvas(options)
+
+      const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+      wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
+
+      const doc = new jspdf('p', 'mm', 'a4');
+
+      expect(jspdf).toHaveBeenCalledTimes(1)
+
+      const canvas = await wrapper.find(PDFButtonFloat).vm.getCanvas(options)
+
+      const toPDF = await wrapper.find(PDFButtonFloat).vm.toPDF(canvas)
+
+      expect(toPDF).toMatchObject(doc)
+    
+    })
+  })
+  describe('pdf.pdfButtonFloat.savePDF', () => {
+    it('should call jsPDF with options', async () => {
+
+      mocks = {
+        dispatch: jest.fn()
+      }
+
+      mountOptions = {
+        propsData: propsData,
+        mocks: mocks,
+        stubs: stubs,
+        attachToDocument: true
+      }
+
+      // had to create wrapper from parent component because using vue portal
+      wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
+
+      const options = {
+        scale: 5,
+        useCORS: true,
+        allowTaint: true,
+      }
+
+      // this wasy doesn't load the context needed for method to run correctly
+      // await methods.getCanvas(options)
+
+      // const getCanvas = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+      const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+      wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
+
+      // let savePDF = await wrapper.find(PDFButtonFloat).vm.savePDF()
+      // console.log(savePDF)
+      // const doc = new jspdf('p', 'mm', 'a4');
+      // expect(savePDF).toBeUndefined()
+
+      // expect(jspdf).toHaveBeenCalledTimes(1)
+      
+      // jest.advanceTimersByTime(250)
+      // await Promise.resolve()
+      // jest.advanceTimersByTime(250)
+      // await Promise.resolve()
+      // jest.advanceTimersByTime(250)
+      // await Promise.resolve()
+      
+      // console.log(savePDF)
+      
+      // const fileName = `Carlos_Soriano_${Date.now()}.pdf`
+      
+      // // jest.advanceTimersByTime(250)
+      // // await Promise.resolve()
+      // console.log(savePDF)
+      // savePDF = await wrapper.find(PDFButtonFloat).vm.savePDF()
+      // expect(jspdf).toHaveBeenCalledTimes(2)
+      // jest.advanceTimersByTime(250)
+      // await Promise.resolve()
+      // expect(jspdf).toHaveBeenCalledTimes(3)
+      // jest.runAllTimers()
+      // console.log(savePDF)
+      // expect(savePDF).toMatchObject({doc, fileName})
+
+
+      jest.advanceTimersByTime(250)
+
+      return wrapper.find(PDFButtonFloat).vm.savePDF().then( async (prom) => {
+        jest.advanceTimersByTime(250)
+        await Promise.resolve()
+        console.log(prom)
+      }).then((next) => {
+        console.log(next)
+      })
+
+
+
     })
   })
   describe('pdf.pdfButtonFloat.snapshot', () => {
