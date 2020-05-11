@@ -53,6 +53,9 @@ import html2canvas from '@trainiac/html2canvas'
 // import html2canvas from 'html2canvas'
 const FontFaceObserver = require('fontfaceobserver');
 
+// https://stackoverflow.com/questions/38975138/is-using-async-in-settimeout-valid
+// let wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 export default {
   name: 'PDFButtonFloat',
   components: {
@@ -86,6 +89,7 @@ export default {
         }
       },
       isModalVisible: false,
+      canvas: null
     }
   },
   computed: {
@@ -193,7 +197,7 @@ export default {
         console.log(err)
       }
     },
-    async savePDF() {
+    async setCanvas(callback) {
       const vm = this
       log('blue', 'toPDF from Button Float')
       await vm.checkFonts()
@@ -206,7 +210,21 @@ export default {
             useCORS: true,
             allowTaint: true,
           })
-          const doc = await vm.toPDF(canvas)
+          this.canvas = canvas
+          callback()
+        }
+        catch(err) {
+          console.log(err)
+        }
+      }, 250);
+      log('red', 'last line of getCanvas')
+    },
+    async savePDF() {
+      const vm = this
+      log('blue', 'toPDF from Button Float')
+      try {
+        vm.setCanvas(async () => {
+          const doc = await vm.toPDF(this.canvas)
           log('green', 'before save')
           // log('green', doc)
           const fileName = `Carlos_Soriano_${Date.now()}.pdf`
@@ -215,12 +233,11 @@ export default {
             doc,
             fileName
           })
-        }
-        catch(err) {
-          console.log(err)
-        }
-      }, 250);
-      log('red', 'last line of getCanvas')
+        })
+      }
+      catch(err) {
+        console.log(err)
+      }
     },
     // https://stackoverflow.com/questions/24069124/how-to-save-a-image-in-multiple-pages-of-pdf-using-jspdf
     // https://stackoverflow.com/questions/19272933/jspdf-multi-page-pdf-with-html-renderer/34934497#34934497

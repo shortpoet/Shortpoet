@@ -335,46 +335,33 @@ describe('pdf.pdfButtonFloat', () => {
       const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
       wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
 
-      // let savePDF = await wrapper.find(PDFButtonFloat).vm.savePDF()
-      // console.log(savePDF)
-      // const doc = new jspdf('p', 'mm', 'a4');
-      // expect(savePDF).toBeUndefined()
+      let savePDF = await wrapper.find(PDFButtonFloat).vm.savePDF()
+      console.log(savePDF)
+      const doc = new jspdf('p', 'mm', 'a4');
+      expect(savePDF).toBeUndefined()
 
-      // expect(jspdf).toHaveBeenCalledTimes(1)
+      expect(jspdf).toHaveBeenCalledTimes(1)
       
-      // jest.advanceTimersByTime(250)
-      // await Promise.resolve()
-      // jest.advanceTimersByTime(250)
-      // await Promise.resolve()
-      // jest.advanceTimersByTime(250)
-      // await Promise.resolve()
-      
-      // console.log(savePDF)
-      
-      // const fileName = `Carlos_Soriano_${Date.now()}.pdf`
-      
-      // // jest.advanceTimersByTime(250)
-      // // await Promise.resolve()
-      // console.log(savePDF)
-      // savePDF = await wrapper.find(PDFButtonFloat).vm.savePDF()
-      // expect(jspdf).toHaveBeenCalledTimes(2)
-      // jest.advanceTimersByTime(250)
-      // await Promise.resolve()
-      // expect(jspdf).toHaveBeenCalledTimes(3)
-      // jest.runAllTimers()
-      // console.log(savePDF)
-      // expect(savePDF).toMatchObject({doc, fileName})
-
-
       jest.advanceTimersByTime(250)
+      await Promise.resolve()
+      
+      console.log(savePDF)
+      
+      const fileName = `Carlos_Soriano_${Date.now()}.pdf`
+      
+      expect(jspdf).toHaveBeenCalledTimes(2)
+      expect(savePDF).toMatchObject({doc, fileName})
 
-      return wrapper.find(PDFButtonFloat).vm.savePDF().then( async (prom) => {
-        jest.advanceTimersByTime(250)
-        await Promise.resolve()
-        console.log(prom)
-      }).then((next) => {
-        console.log(next)
-      })
+
+      // jest.advanceTimersByTime(250)
+
+      // return wrapper.find(PDFButtonFloat).vm.savePDF().then( async (prom) => {
+      //   jest.advanceTimersByTime(250)
+      //   await Promise.resolve()
+      //   console.log(prom)
+      // }).then((next) => {
+      //   console.log(next)
+      // })
 
 
 
