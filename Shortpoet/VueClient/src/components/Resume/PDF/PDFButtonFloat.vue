@@ -190,15 +190,16 @@ export default {
       }
     },
     async setCanvas(options, callback) {
+      log('green', 'about to start setCanvas')
       const vm = this
-      log('blue', 'toPDF from Button Float')
       await vm.checkFonts()
       colorLog('fonts have been checked', 'violet')
+      log('blue', 'fonts have been checked')
       setTimeout(async () => {
-        log('green', 'about to start setCanvas')
         try {
           const canvas = await vm.getCanvas(options)
           log('red', 'canvas')
+          log('yellow', 'after timeout')
           console.log(canvas)
           this.canvas = canvas
           callback()
@@ -207,7 +208,7 @@ export default {
           console.log(err)
         }
       }, 250);
-      log('red', 'last line of getCanvas')
+      log('red', 'last line of setCanvas')
     },
     async toPDF(canvas) {
       const vm = this
@@ -223,7 +224,7 @@ export default {
     },
     async savePDF() {
       const vm = this
-      log('blue', 'toPDF from Button Float')
+      log('blue', 'savePDF from Button Float')
       const options = {
         scale: 5,
         useCORS: true,
@@ -236,11 +237,16 @@ export default {
           // log('green', doc)
           const fileName = `Carlos_Soriano_${Date.now()}.pdf`
           doc.save(fileName);
-          return Promise.resolve({
+          return {
             doc,
             fileName
-          })
+          }
+          // return Promise.resolve({
+          //   doc,
+          //   fileName
+          // })
         }
+        log('cyan', 'about to do callback')
         vm.setCanvas(options, callback)
       }
       catch(err) {
