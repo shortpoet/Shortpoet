@@ -38,6 +38,7 @@
     "jsdom": "^16.2.2",
     "jspdf": "^1.5.3",
     "lodash": "^4.17.15",
+    "moment": "^2.25.3",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
     "postcss-preset-env": "^6.7.0",

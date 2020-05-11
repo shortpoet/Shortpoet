@@ -20,6 +20,7 @@ export const fs = jest.mock('file-saver', ()=>({saveAs: jest.fn()}))
 const getWidth = jest.fn(() => 888)
 const getHeight = jest.fn(() => 888)
 export const addImage = jest.fn(() => 'Test Image')
+export const addPage = jest.fn(() => 'Test Page')
 export const save = jest.fn(() => fs)
 const doc = {
   internal: {
@@ -29,6 +30,7 @@ const doc = {
     }
   },
   addImage: addImage,
+  addPage: addPage,
   save: save
   // addImage: jest.fn(() => Promise.resolve(true)),
   // save: jest.fn(() => Promise.resolve(true))
