@@ -305,6 +305,65 @@ describe('pdf.pdfButtonFloat', () => {
     
     })
   })
+  describe('pdf.pdfButtonFloat.setCanvas', () => {
+    it('calls getCanvas assigning returned value to component data', async () => {
+
+      mocks = {
+        dispatch: jest.fn()
+      }
+
+      mountOptions = {
+        propsData: propsData,
+        mocks: mocks,
+        stubs: stubs,
+        attachToDocument: true
+      }
+
+      // had to create wrapper from parent component because using vue portal
+      wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
+
+      const options = {
+        scale: 5,
+        useCORS: true,
+        allowTaint: true,
+      }
+
+      // this wasy doesn't load the context needed for method to run correctly
+      // await methods.getCanvas(options)
+
+      // const getCanvas = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+      const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+      wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
+
+      const callback = async () => {
+        const doc = await vm.toPDF(this.canvas)
+        log('green', 'before save')
+        // log('green', doc)
+        const fileName = `Carlos_Soriano_${Date.now()}.pdf`
+        doc.save(fileName);
+        return Promise.resolve({
+          doc,
+          fileName
+        })
+      }
+
+      const setCanvas = await wrapper.find(PDFButtonFloat).vm.setCanvas(options, callback)
+
+      // const canvas = await wrapper.find(PDFButtonFloat).vm.getCanvas(options)
+      const canvas = { width: 888, height: 888 }
+
+      expect(wrapper.find(PDFButtonFloat).vm.canvas).toBeNull()
+
+      jest.advanceTimersByTime(250)
+      await Promise.resolve()
+
+      console.log(wrapper.find(PDFButtonFloat).vm.canvas)
+      console.log(wrapper.find(PDFButtonFloat).vm.isModalVisible)
+
+      expect(wrapper.find(PDFButtonFloat).vm.canvas).toMatchObject(canvas)
+
+    })
+  })
   describe('pdf.pdfButtonFloat.savePDF', () => {
     it('should call jsPDF with options', async () => {
 

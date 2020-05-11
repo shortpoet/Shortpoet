@@ -145,7 +145,11 @@ export default {
       catch {err => console.log(err)}
     },
     getDataURL (canvas) {
+      // first one is significantly faster
+      // second makes mage unresponsive for like 3 secs
+      // go unit tests!
       return canvas.toDataURL('image/jpeg', 1.0);
+      // return canvas.toDataURL('image/png');
     },
     // close modal first
     // [Vue warn]: Method "isModalVisible" has type "boolean" in the component definition. Did you reference the function correctly?      this.closeModal()
@@ -185,6 +189,26 @@ export default {
         canvasHeight
       }
     },
+    async setCanvas(options, callback) {
+      const vm = this
+      log('blue', 'toPDF from Button Float')
+      await vm.checkFonts()
+      colorLog('fonts have been checked', 'violet')
+      setTimeout(async () => {
+        log('green', 'about to start setCanvas')
+        try {
+          const canvas = await vm.getCanvas(options)
+          log('red', 'canvas')
+          console.log(canvas)
+          this.canvas = canvas
+          callback()
+        }
+        catch(err) {
+          console.log(err)
+        }
+      }, 250);
+      log('red', 'last line of getCanvas')
+    },
     async toPDF(canvas) {
       const vm = this
       try {
@@ -197,33 +221,16 @@ export default {
         console.log(err)
       }
     },
-    async setCanvas(callback) {
-      const vm = this
-      log('blue', 'toPDF from Button Float')
-      await vm.checkFonts()
-      colorLog('fonts have been checked', 'violet')
-      setTimeout(async () => {
-        log('green', 'about to start getCanvas')
-        try {
-          const canvas = await vm.getCanvas({
-            scale: 5,
-            useCORS: true,
-            allowTaint: true,
-          })
-          this.canvas = canvas
-          callback()
-        }
-        catch(err) {
-          console.log(err)
-        }
-      }, 250);
-      log('red', 'last line of getCanvas')
-    },
     async savePDF() {
       const vm = this
       log('blue', 'toPDF from Button Float')
+      const options = {
+        scale: 5,
+        useCORS: true,
+        allowTaint: true,
+      }
       try {
-        vm.setCanvas(async () => {
+        const callback = async () => {
           const doc = await vm.toPDF(this.canvas)
           log('green', 'before save')
           // log('green', doc)
@@ -233,7 +240,8 @@ export default {
             doc,
             fileName
           })
-        })
+        }
+        vm.setCanvas(options, callback)
       }
       catch(err) {
         console.log(err)
@@ -248,25 +256,27 @@ export default {
     // vm.$emit('toPDF', false);
     async toPage () {
       const vm = this
+      const options = {
+        width: 810,
+        scale: 5,
+        useCORS: true,
+        allowTaint: true,
+      }
       vm.$emit('to-pdf', true)
       const target = document.getElementById(vm.pdfTarget)
       await vm.checkFonts()
       colorLog('fonts have been checked', 'violet')
-      setTimeout(async ()=>{
-        const canvas = await vm.getCanvas({
-          width: 810,
-          scale: 5,
-          useCORS: true,
-          allowTaint: true
-        })
+      const callback = async () => {
         var pdf = new jsPDF('p', 'pt', 'a4');
-        const paginated = vm.paginate(target, canvas, pdf);
+        const paginated = vm.paginate(target, this.canvas, pdf);
         paginated.save(`Carlos_Soriano_${Date.now()}.pdf`);
         vm.$emit('toPDF', false);
-      }, 250);
+      }
+      vm.setCanvas(options, callback)
     },
     paginate (target, canvas, pdf) {
-      const imgData = canvas.toDataURL('image/png')
+      const vm = this
+      const imgData = vm.getDataURL(canvas)
       const imgWidth = 595
       const pageHeight = 842
       let imgHeight = canvas.height * imgWidth / canvas.width;
