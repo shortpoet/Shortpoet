@@ -268,19 +268,16 @@ export default {
         useCORS: true,
         allowTaint: true,
       }
-      vm.$emit('to-pdf', true)
-      const target = document.getElementById(vm.pdfTarget)
-      await vm.checkFonts()
-      colorLog('fonts have been checked', 'violet')
+      vm.$emit('to-render-pdf', true)
       const callback = async () => {
         var pdf = new jsPDF('p', 'pt', 'a4');
-        const paginated = vm.paginate(target, this.canvas, pdf);
+        const paginated = vm.paginate(this.canvas, pdf);
         paginated.save(`Carlos_Soriano_${Date.now()}.pdf`);
-        vm.$emit('toPDF', false);
+        vm.$emit('to-render-pdf', false)
       }
       vm.setCanvas(options, callback)
     },
-    paginate (target, canvas, pdf) {
+    paginate (canvas, pdf) {
       const vm = this
       const imgData = vm.getDataURL(canvas)
       const imgWidth = 595
@@ -291,6 +288,8 @@ export default {
       heightLeft -= pageHeight
       let secondHalf = heightLeft - imgHeight
       pdf.addPage()
+      // TODO
+      // add multiple page logic
       pdf.addImage(imgData, 'PNG', 0, secondHalf, imgWidth, imgHeight, null, 'SLOW')
       return pdf
     }

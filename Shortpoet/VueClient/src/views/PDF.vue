@@ -74,7 +74,7 @@
       <!-- for some reason adding this handler makes the function run on load -->
       <!-- <ButtonFloat :target="'save-button-float'" :icon="'save'" :handler="toPDF(target)"/> -->
       <portal-target class="pdf-target" name="save-button-float" />
-      <PDFButtonFloat :target="'save-button-float'" :icon="'save'" :pdf-target="'pdf-anchor'" @to-pdf="toPDF" />
+      <PDFButtonFloat :target="'save-button-float'" :icon="'save'" :pdf-target="'pdf-anchor'" @to-render-pdf="toRenderPDF" />
 
 
     </div>
@@ -156,8 +156,8 @@ export default {
   methods: {
     ...mapActions(['loadEnv']),
     ...mapActions('resume', ['loadResume']),
-    toPDF (event) {
-      console.log('toPDF from pDF')
+    toRenderPDF (event) {
+      console.log('toRenderPDF from pDF')
       this.renderPDF = event
     }
   },
