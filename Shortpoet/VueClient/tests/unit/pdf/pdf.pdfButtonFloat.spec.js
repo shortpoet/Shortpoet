@@ -314,6 +314,8 @@ describe("pdf.pdfButtonFloat", () => {
     const canvas = { width: 888, height: 888 };
 
     const doc = new jspdf("p", "mm", "a4");
+    
+    const canvases = [ { width: 555, height: 888 }, { width: 888, height: 888 }, { width: 888, height: 555 } ]
 
     beforeEach(() => {
       // need before each else the stubs don't get reset (props among other things)
@@ -351,39 +353,57 @@ describe("pdf.pdfButtonFloat", () => {
       expect(wrapper.vm.jspdf).toMatchObject(doc);
     });
 
-    it("should add image with correct dimensions", async () => {
-      await wrapper.vm.toPDF();
+    canvases.forEach(canvas => {
+      it(`should add image with correct dimensions w: ${canvas.width} & h: ${canvas.height}`, async () => {
+        
+        // must have fresh data object here so loaded SUT matches expected
+        const data = () => {
+          return {
+            canvas: canvas,
+          };
+        };
+  
+        mountOptions = {
+          propsData: propsData,
+          data: data,
+          stubs: stubs,
+        };
+  
+        wrapper = createWrapper(component, mountOptions, resumeStoreOptions);
+  
+        wrapper.setMethods({ getDataURL: getDataURL });
+          await wrapper.vm.toPDF();
+  
+        const addImageSpy = jest
+          .spyOn(wrapper.vm.jspdf, "addImage")
+          .mockImplementation(() => jest.fn());
+  
+        const marginX = 0; //(pageWidth - canvasWidth) / 2;
+        const marginY = 0; //(pageHeight - canvasHeight) / 2;
+  
+        const pageWidth = doc.internal.pageSize.getWidth();
+        const pageHeight = doc.internal.pageSize.getHeight();
+        const widthRatio = pageWidth / canvas.width;
+        const heightRatio = pageHeight / canvas.height;
+        const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
+        const canvasWidth = canvas.width * ratio;
+        const canvasHeight = canvas.height * ratio;
+  
+        const image = getDataURL();
+    
+        expect(addImageSpy).toHaveBeenCalledWith(
+          image,
+          "JPEG",
+          marginX,
+          marginY,
+          canvasWidth,
+          canvasHeight,
+          null,
+          "SLOW"
+        );
+      });
+    })
 
-      const addImageSpy = jest
-        .spyOn(wrapper.vm.jspdf, "addImage")
-        .mockImplementation(() => jest.fn());
-
-      const marginX = 0; //(pageWidth - canvasWidth) / 2;
-      const marginY = 0; //(pageHeight - canvasHeight) / 2;
-
-      const pageWidth = doc.internal.pageSize.getWidth();
-      const pageHeight = doc.internal.pageSize.getHeight();
-      const widthRatio = pageWidth / canvas.width;
-      const heightRatio = pageHeight / canvas.height;
-      const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
-      const canvasWidth = canvas.width * ratio;
-      const canvasHeight = canvas.height * ratio;
-
-      const image = getDataURL();
-
-      //       colorLog(`secondHalf: ${secondHalf}`, 'violet')
-
-      expect(addImageSpy).toHaveBeenCalledWith(
-        image,
-        "JPEG",
-        marginX,
-        marginY,
-        canvasWidth,
-        canvasHeight,
-        null,
-        "SLOW"
-      );
-    });
 
     it("should save pdf with correct filename", async () => {
       await wrapper.vm.toPDF();

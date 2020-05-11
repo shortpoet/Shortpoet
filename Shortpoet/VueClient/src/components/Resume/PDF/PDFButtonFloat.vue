@@ -130,6 +130,7 @@ export default {
           console.log("Family A & B have loaded");
         });
       } catch {
+      /* istanbul ignore next */
         err => console.log(err);
       }
     },
@@ -143,13 +144,19 @@ export default {
         });
         return canvas;
       } catch {
+      /* istanbul ignore next */
         err => console.log(err);
       }
     },
+    // first one is significantly faster
+    // second makes mage unresponsive for like 3 secs
+    // go unit tests!
+
+    // TODO maybe add the functionality to provide filetype here
+    // and then in addImage
+    // then would need to actually test this function
+    /* istanbul ignore next */
     getDataURL(canvas) {
-      // first one is significantly faster
-      // second makes mage unresponsive for like 3 secs
-      // go unit tests!
       return canvas.toDataURL("image/jpeg", 1.0);
       // return canvas.toDataURL('image/png');
     },
@@ -170,6 +177,7 @@ export default {
           log("cyan", vm.canvas);
           callback();
         } catch (err) {
+        /* istanbul ignore next */
           console.log(err);
         }
       }, 250);
@@ -309,20 +317,15 @@ export default {
     /* istanbul ignore next */
     createDoc(canvas) {
       const doc = new jsPDF("p", "mm", "a4");
-      // log('green', doc.internal)
       const pageWidth = doc.internal.pageSize.getWidth();
       const pageHeight = doc.internal.pageSize.getHeight();
-      // log('cyan', pageWidth, pageHeight)
-      // log('cyan', pageHeight)
       const widthRatio = pageWidth / canvas.width;
       const heightRatio = pageHeight / canvas.height;
       const ratio = widthRatio > heightRatio ? heightRatio : widthRatio;
-      // log('blue', ratio)
       const canvasWidth = canvas.width * ratio;
       const canvasHeight = canvas.height * ratio;
       const marginX = 0; //(pageWidth - canvasWidth) / 2;
       const marginY = 0; //(pageHeight - canvasHeight) / 2;
-      // log('red', doc)
       return {
         doc,
         marginX,
@@ -363,7 +366,6 @@ export default {
         const callback = async () => {
           const doc = await vm.toPDF(this.canvas);
           log("green", "before save");
-          // log('green', doc)
           const fileName = `Carlos_Soriano_${Date.now()}.pdf`;
           doc.save(fileName);
           return {
