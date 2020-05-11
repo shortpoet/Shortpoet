@@ -75,7 +75,7 @@ describe('PDF.vue', () => {
       expect(wrapper.vm.renderPDF).toBeFalsy()
 
       // method 1
-      wrapper.find(PDFButtonFloat).vm.$emit('to-pdf', true)
+      wrapper.find(PDFButtonFloat).vm.$emit('to-render-pdf', true)
       
       // method 2
       // doesn't seem to chain down this way

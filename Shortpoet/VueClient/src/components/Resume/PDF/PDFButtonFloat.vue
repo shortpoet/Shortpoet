@@ -89,7 +89,8 @@ export default {
         }
       },
       isModalVisible: false,
-      canvas: null
+      canvas: null,
+      jspdf: null
     }
   },
   computed: {
@@ -269,29 +270,27 @@ export default {
         allowTaint: true,
       }
       vm.$emit('to-render-pdf', true)
-      const callback = async () => {
-        var pdf = new jsPDF('p', 'pt', 'a4');
-        const paginated = vm.paginate(this.canvas, pdf);
-        paginated.save(`Carlos_Soriano_${Date.now()}.pdf`);
-        vm.$emit('to-render-pdf', false)
-      }
-      vm.setCanvas(options, callback)
+      vm.setCanvas(options, vm.paginate)
     },
-    paginate (canvas, pdf) {
+    paginate () {
+      const canvas = this.canvas
+      this.jspdf = new jsPDF('p', 'pt', 'a4')
       const vm = this
       const imgData = vm.getDataURL(canvas)
       const imgWidth = 595
       const pageHeight = 842
       let imgHeight = canvas.height * imgWidth / canvas.width;
       let heightLeft = imgHeight
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, null, 'SLOW')
+      this.jspdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, null, 'SLOW')
       heightLeft -= pageHeight
       let secondHalf = heightLeft - imgHeight
-      pdf.addPage()
+      this.jspdf.addPage()
       // TODO
       // add multiple page logic
-      pdf.addImage(imgData, 'PNG', 0, secondHalf, imgWidth, imgHeight, null, 'SLOW')
-      return pdf
+      this.jspdf.addImage(imgData, 'PNG', 0, secondHalf, imgWidth, imgHeight, null, 'SLOW')
+      this.jspdf.save(`Carlos_Soriano_${Date.now()}.pdf`);
+      vm.$emit('to-render-pdf', false)
+      return this.jspdf
     }
   },
   mounted () {

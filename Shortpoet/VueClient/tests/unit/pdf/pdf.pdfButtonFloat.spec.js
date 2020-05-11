@@ -417,6 +417,7 @@ describe('pdf.pdfButtonFloat', () => {
     })
   })
   describe('pdf.pdfButtonFloat.toPage', () => {
+
     it('rerenders the page after emitting to-render-pdf', async () => {
 
       mocks = {
@@ -434,94 +435,109 @@ describe('pdf.pdfButtonFloat', () => {
       wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
 
       const options = {
+        width: 810,
         scale: 5,
         useCORS: true,
         allowTaint: true,
       }
 
       const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
-            
-      wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
 
-      // let savePDF = await wrapper.find(PDFButtonFloat).vm.savePDF()
+      const setCanvas = jest.fn()
+
+      const paginate = jest.fn()
+            
+      wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL, setCanvas: setCanvas, paginate: paginate})
+
+      await wrapper.find(PDFButtonFloat).vm.toPage()
+
+      expect(wrapper.find(PDFButtonFloat).emitted()).toMatchObject({'to-render-pdf': [[true]]})
+
+      expect(setCanvas).toHaveBeenCalledWith(options, paginate)
 
     })
-    it('### does something ###', async () => {
 
-    //   mocks = {
-    //     dispatch: jest.fn()
-    //   }
-
-    //   mountOptions = {
-    //     propsData: propsData,
-    //     mocks: mocks,
-    //     stubs: stubs,
-    //     attachToDocument: true
-    //   }
-
-    //   // had to create wrapper from parent component because using vue portal
-    //   wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
-
-    //   const options = {
-    //     scale: 5,
-    //     useCORS: true,
-    //     allowTaint: true,
-    //   }
-
-    //   // this wasy doesn't load the context needed for method to run correctly
-    //   // await methods.getCanvas(options)
-
-    //   // const getCanvas = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
-    //   const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
-      
-
-      
-    //   wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
-
-    //   // let savePDF = await wrapper.find(PDFButtonFloat).vm.savePDF()
-    //   // console.log(savePDF)
-    //   // const doc = new jspdf('p', 'mm', 'a4');
-    //   // expect(savePDF).toBeUndefined()
-
-    //   // expect(jspdf).toHaveBeenCalledTimes(1)
-      
-    //   // // jest.advanceTimersByTime(250)
-    //   // // await Promise.resolve()
-      
-    //   // console.log(savePDF)
-      
-    //   // const fileName = `Carlos_Soriano_${Date.now()}.pdf`
-      
-    //   // expect(savePDF).toMatchObject({doc, fileName})
-
-
-    //   // jest.advanceTimersByTime(250)
-
-    //   return wrapper.find(PDFButtonFloat).vm.savePDF().then( async (first) => {
-    //     jest.advanceTimersByTime(250)
-    //     await Promise.resolve()
-    //     console.log(first)
-    //   }).then(async (next) => {
-    //     jest.advanceTimersByTime(250)
-    //     await Promise.resolve()
-    //     // this gets called right after timeout
-    //     // and before callback
-    //     console.log(next)
-    //   }).then(async (next2) => {
-    //     jest.advanceTimersByTime(250)
-    //     await Promise.resolve()
-    //     // by now doc has been logged from callback
-    //     console.log(next2)
-    //   }).then(async (next3) => {
-    //     jest.advanceTimersByTime(250)
-    //     await Promise.resolve()
-    //     console.log(next3)
-    //   })
-
-
-
-    // })
   })
+
+
+  describe('pdf.pdfButtonFloat.paginate', () => {
+    it('divides up the page into chunks that fit an a4', async () => {
+
+      //   mocks = {
+      //     dispatch: jest.fn()
+      //   }
+  
+      //   mountOptions = {
+      //     propsData: propsData,
+      //     mocks: mocks,
+      //     stubs: stubs,
+      //     attachToDocument: true
+      //   }
+  
+      //   // had to create wrapper from parent component because using vue portal
+      //   wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
+  
+      //   const options = {
+      //     scale: 5,
+      //     useCORS: true,
+      //     allowTaint: true,
+      //   }
+  
+      //   // this wasy doesn't load the context needed for method to run correctly
+      //   // await methods.getCanvas(options)
+  
+      //   // const getCanvas = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+      //   const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+        
+  
+        
+      //   wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
+  
+      //   // let savePDF = await wrapper.find(PDFButtonFloat).vm.savePDF()
+      //   // console.log(savePDF)
+      //   // const doc = new jspdf('p', 'mm', 'a4');
+      //   // expect(savePDF).toBeUndefined()
+  
+      //   // expect(jspdf).toHaveBeenCalledTimes(1)
+        
+      //   // // jest.advanceTimersByTime(250)
+      //   // // await Promise.resolve()
+        
+      //   // console.log(savePDF)
+        
+      //   // const fileName = `Carlos_Soriano_${Date.now()}.pdf`
+        
+      //   // expect(savePDF).toMatchObject({doc, fileName})
+  
+  
+      //   // jest.advanceTimersByTime(250)
+  
+      //   return wrapper.find(PDFButtonFloat).vm.savePDF().then( async (first) => {
+      //     jest.advanceTimersByTime(250)
+      //     await Promise.resolve()
+      //     console.log(first)
+      //   }).then(async (next) => {
+      //     jest.advanceTimersByTime(250)
+      //     await Promise.resolve()
+      //     // this gets called right after timeout
+      //     // and before callback
+      //     console.log(next)
+      //   }).then(async (next2) => {
+      //     jest.advanceTimersByTime(250)
+      //     await Promise.resolve()
+      //     // by now doc has been logged from callback
+      //     console.log(next2)
+      //   }).then(async (next3) => {
+      //     jest.advanceTimersByTime(250)
+      //     await Promise.resolve()
+      //     console.log(next3)
+      //   })
+  
+  
+  
+      })
+    })
+
   describe('pdf.pdfButtonFloat.snapshot', () => {
     it('should match snapshot', () => {
       wrapper = createWrapper(component, mountOptions, resumeStoreOptions)
