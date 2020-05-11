@@ -41,6 +41,9 @@ jest.mock("jspdf");
 // similar to mocking @vue/testutils
 // folders had to be nested just like source module for mock to work
 
+// importing the mocks directly didn't seem to work
+// but could have been due to other error
+// consider checking
 import html2canvas from "@trainiac/html2canvas";
 // import html2canvas from '@/__mocks__/@trainiac/html2canvas'
 import fontfaceobserver from "fontfaceobserver";
@@ -119,8 +122,6 @@ describe("pdf.pdfButtonFloat", () => {
       stubs: stubs,
     };
 
-    // mountOptions.attachToDocument = true
-
     const getResumeLoaded = true;
 
     resumeStoreOptions = {
@@ -131,7 +132,6 @@ describe("pdf.pdfButtonFloat", () => {
       mutations: { SET_RESUME_RAW: jest.fn() },
     };
 
-    // wrapper = createWrapper(component, mountOptions, resumeStoreOptions)
   });
 
   describe("pdf.pdfButtonFloat.snapshot", () => {
@@ -139,25 +139,6 @@ describe("pdf.pdfButtonFloat", () => {
       wrapper = createWrapper(component, mountOptions, resumeStoreOptions);
 
       expect(wrapper.html()).toMatchSnapshot();
-    });
-  });
-
-  describe("pdf.pdfButtonFloat.toPDF", () => {
-    it("modal should already be closed by bubbled emit event and by default", () => {
-      // methods.toPDF()
-      // expect(wrapper.vm.isModalVisible).toBe(false)
-    });
-
-    it("canvas context should match snapshot", async () => {
-      /**
-       * In order to see which functions and properties were used for the test, you can use `__getEvents`
-       * to gather this information.
-       */
-      // const events = ctx.__getEvents()
-      // expect(events).toMatchSnapshot()
-      // const canvas = await methods.toPDF()
-      // console.log(canvas)
-      // expect(html2canvas).toHaveBeenCalled()
     });
   });
 
@@ -390,6 +371,8 @@ describe("pdf.pdfButtonFloat", () => {
 
       const image = getDataURL();
 
+      //       colorLog(`secondHalf: ${secondHalf}`, 'violet')
+
       expect(addImageSpy).toHaveBeenCalledWith(
         image,
         "JPEG",
@@ -401,7 +384,6 @@ describe("pdf.pdfButtonFloat", () => {
         "SLOW"
       );
     });
-    //       colorLog(`secondHalf: ${secondHalf}`, 'violet')
 
     it("should save pdf with correct filename", async () => {
       await wrapper.vm.toPDF();
@@ -526,8 +508,6 @@ describe("pdf.pdfButtonFloat", () => {
 
       wrapper.setMethods({ getDataURL: getDataURL });
   
-      // need to mock canvas because this function expects it
-      // to already be set by setcanvas which calls this as callback
       const canvas = { width: 888, height: 888 };
     
       await wrapper.vm.paginate();
@@ -571,7 +551,6 @@ describe("pdf.pdfButtonFloat", () => {
       wrapper = createWrapper(component, mountOptions, resumeStoreOptions);
 
       wrapper.setMethods({ getDataURL: getDataURL });
-
         
       await wrapper.vm.paginate();
 
@@ -637,7 +616,7 @@ describe("pdf.pdfButtonFloat", () => {
     });
   });
 
-  // describe('pdf.pdfButtonFloat._toPDF', () => {
+  describe('#### _toPDF ####', () => {
     it("#### was a crazy test for some spaghetti functions ####", async () => {
       //   mocks = {
       //     dispatch: jest.fn()
@@ -693,40 +672,40 @@ describe("pdf.pdfButtonFloat", () => {
       //   })
     });
 
-  //   it('should call jsPDF with options', async () => {
+    it('#### should call jsPDF with options ####', async () => {
 
-  //     mocks = {
-  //       dispatch: jest.fn()
-  //     }
+      // mocks = {
+      //   dispatch: jest.fn()
+      // }
 
-  //     mountOptions = {
-  //       propsData: propsData,
-  //       mocks: mocks,
-  //       stubs: stubs,
-  //       attachToDocument: true
-  //     }
+      // mountOptions = {
+      //   propsData: propsData,
+      //   mocks: mocks,
+      //   stubs: stubs,
+      //   attachToDocument: true
+      // }
 
-  //     wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
+      // wrapper = createWrapper(PDF, mountOptions, resumeStoreOptions)
 
-  //     const options = {
-  //       scale: 5,
-  //       useCORS: true,
-  //       allowTaint: true,
-  //     }
+      // const options = {
+      //   scale: 5,
+      //   useCORS: true,
+      //   allowTaint: true,
+      // }
 
-  //     const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
-  //     wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
+      // const getDataURL = jest.fn(() => 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+      // wrapper.find(PDFButtonFloat).setMethods({getDataURL: getDataURL})
 
-  //     const doc = new jspdf('p', 'mm', 'a4');
+      // const doc = new jspdf('p', 'mm', 'a4');
 
-  //     expect(jspdf).toHaveBeenCalledTimes(1)
+      // expect(jspdf).toHaveBeenCalledTimes(1)
 
-  //     const canvas = await wrapper.find(PDFButtonFloat).vm.getCanvas(options)
+      // const canvas = await wrapper.find(PDFButtonFloat).vm.getCanvas(options)
 
-  //     const toPDF = await wrapper.find(PDFButtonFloat).vm.toPDF(canvas)
+      // const toPDF = await wrapper.find(PDFButtonFloat).vm.toPDF(canvas)
 
-  //     expect(toPDF).toMatchObject(doc)
+      // expect(toPDF).toMatchObject(doc)
 
-  //   })
-  // })
+    })
+  })
 });
