@@ -17,8 +17,42 @@ variables:
   ASPNETCORE_ENVIRONMENT: 'Staging'
 
 steps:
-- script: echo setting env var
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
 
+- script: dir
+  workingDirectory: $(Agent.BuildDirectory)
+  displayName: List contents of Agent.BuildDirectory
+
+- script: |
+    dir
+    cd Shortpoet\VueClient
+    dir
+    type package.json
+  workingDirectory: $(System.DefaultWorkingDirectory)
+  displayName: List contents of System.DefaultWorkingDirectory\Shortpoet\VueClient and type package.json
+  
+- script: |
+    cd Shortpoet\VueClient
+    echo about to npm install
+    npm install
+  displayName: 'npm install '
+
+- script: |
+    cd Shortpoet\VueClient
+    echo about to run coverage
+    npm run coverage
+    cd coverage
+    dir
+  displayName: 'output coverage and show contents of coverage directory'
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
 
 - task: UseDotNet@2
   displayName: 'Install .NET Core sdk'
@@ -60,7 +94,15 @@ steps:
     appName: 'shortpoet-test'
     package: $(System.ArtifactsDirectory)/**/*.zip
     deploymentMethod: zipDeploy
-    # slotName: staging    
+
+# - task: AzureWebApp@1
+#   inputs:
+#     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/test'))
+#     azureSubscription: 'ShortpoetTestServiceConnection'
+#     appName: 'shortpoet-test'
+#     package: $(System.ArtifactsDirectory)/**/*.zip
+#     deploymentMethod: zipDeploy
+#     slotName: staging    
 
 # - task: AzureWebApp@2
 #   inputs:
