@@ -23,6 +23,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    cd VueClient
     npm install
     npm run coverage
   displayName: 'npm install and output coverage'
@@ -30,7 +31,8 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: Cobertura
-    summaryFileLocation: $(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
 
 - task: UseDotNet@2
   displayName: 'Install .NET Core sdk'
