@@ -196,6 +196,9 @@ https://www.dotnetcurry.com/aspnet/1373/debugging-aspnet-core-using-visual-studi
 https://codewithhugo.com/a-simple-real-world-vue.js-directive/
 https://github.com/vuejs/vue-test-utils/issues/230#issuecomment-350457377
 https://focusedlabs.io/blog/global-keyboard-shortcuts-in-vue-with-tests
+
+https://medium.com/@dzeyelid/check-code-coverage-with-jest-on-azure-devops-548b80d29d3
+
 // always make sure to destroy when using attachToDocument
     wrapper.destroy();
 Once we attach our component to a document, we can use wrapper.trigger to simulate our keypresses.
