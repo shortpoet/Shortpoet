@@ -30,16 +30,17 @@ steps:
   workingDirectory: $(System.DefaultWorkingDirectory)
   displayName: List contents of System.DefaultWorkingDirectory
   
-# - script: |
-#     npm install
-#     npm run coverage
-#   displayName: 'npm install and output coverage'
+- script: |
+    cd Shortpoet\VueClient
+    npm install
+    npm run coverage
+  displayName: 'npm install and output coverage'
 
-# - task: PublishCodeCoverageResults@1
-#   inputs:
-#     codeCoverageTool: Cobertura
-#     summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
-#     reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
 
 # - task: UseDotNet@2
 #   displayName: 'Install .NET Core sdk'
@@ -81,7 +82,7 @@ steps:
 #     appName: 'shortpoet-test'
 #     package: $(System.ArtifactsDirectory)/**/*.zip
 #     deploymentMethod: zipDeploy
-    # slotName: staging    
+#     slotName: staging    
 
 # - task: AzureWebApp@2
 #   inputs:
