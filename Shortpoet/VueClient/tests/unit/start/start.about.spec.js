@@ -1,4 +1,5 @@
-import { textMatcherFactory } from '../test.utils'
+import * as myTest from '@/utils/myTest'
+const { textMatcherFactory, createWrapper, propsMocker, propMocker } = myTest.default
 import StartAbout from '@/components/Resume/Start/StartAbout'
 
 describe('StartAbout.vue', () => {
@@ -9,19 +10,29 @@ describe('StartAbout.vue', () => {
   const component = StartAbout
   // const props = Object.keys(component.props)
   const propDicts = [
-    {prop: 'name', element: 'h1'},
-    {prop: 'surname', element: 'span'},
-    {prop: 'flags', element: 'span'},
-    {prop: 'email', element: 'a'},
-    {prop: 'address', element: 'span'},
-    {prop: 'visas', element: 'span'},
+    {prop: 'name', selector: 'h1'},
+    {prop: 'surname', selector: 'span'},
+    {prop: 'flags', selector: '#start-flags'},
+    {prop: 'email', selector: 'a'},
+    {prop: 'address', selector: '#start-address'},
+    {prop: 'visas', selector: '#start-visas'},
   ]
   let mockProp = true
+  
+  const props = propDicts.map(d => d.prop)
+  const wrapper = createWrapper(component, propsMocker(props))
+
+  // this function creates an it/test:
+  // 'renders interests ${dict.selector} that matches ${dict.prop} prop'
+  // for each prop in prop dict
   textMatcherFactory(component, propDicts)
 
+  it('email href matches email prop', () => {
+    const prop = 'email'
+    const propDict = propDicts.filter(d => d.prop === prop)[0]
+    expect(wrapper.find(`${propDict.selector}`).attributes().href).toMatch(propMocker(`${prop}`).propsData[`${prop}`])
+  })
   it('matches snapshot', () => {
-    // prop = 'interests'
-    // const wrapper = createWrapper(component, propMocker(prop))
-    // expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

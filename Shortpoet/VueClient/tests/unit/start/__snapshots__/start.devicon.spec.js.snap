@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartDevIcon.vue renders i if not isImage with class containing source matches snapshot 1`] = `
+<div><i class="sample_source"></i>
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpeg and name d3 matches snapshot 1`] = `
+<div><img src="sample_source.jpeg" class="d3-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpeg and name d3 matches snapshot with showname 1`] = `<div><img src="sample_source.jpeg" class="d3-devicon"> <span class="">d3</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpeg and name tableau matches snapshot 1`] = `
+<div><img src="sample_source.jpeg" class="tableau-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpeg and name tableau matches snapshot with showname 1`] = `<div><img src="sample_source.jpeg" class="tableau-devicon"> <span class="">tableau</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpeg and name vue matches snapshot 1`] = `
+<div><img src="sample_source.jpeg" class="vue-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpeg and name vue matches snapshot with showname 1`] = `<div><img src="sample_source.jpeg" class="vue-devicon"> <span class="">vue</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpg and name d3 matches snapshot 1`] = `
+<div><img src="sample_source.jpg" class="d3-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpg and name d3 matches snapshot with showname 1`] = `<div><img src="sample_source.jpg" class="d3-devicon"> <span class="">d3</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpg and name tableau matches snapshot 1`] = `
+<div><img src="sample_source.jpg" class="tableau-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpg and name tableau matches snapshot with showname 1`] = `<div><img src="sample_source.jpg" class="tableau-devicon"> <span class="">tableau</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpg and name vue matches snapshot 1`] = `
+<div><img src="sample_source.jpg" class="vue-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .jpg and name vue matches snapshot with showname 1`] = `<div><img src="sample_source.jpg" class="vue-devicon"> <span class="">vue</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .png and name d3 matches snapshot 1`] = `
+<div><img src="sample_source.png" class="d3-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .png and name d3 matches snapshot with showname 1`] = `<div><img src="sample_source.png" class="d3-devicon"> <span class="">d3</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .png and name tableau matches snapshot 1`] = `
+<div><img src="sample_source.png" class="tableau-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .png and name tableau matches snapshot with showname 1`] = `<div><img src="sample_source.png" class="tableau-devicon"> <span class="">tableau</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .png and name vue matches snapshot 1`] = `
+<div><img src="sample_source.png" class="vue-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .png and name vue matches snapshot with showname 1`] = `<div><img src="sample_source.png" class="vue-devicon"> <span class="">vue</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .svg and name d3 matches snapshot 1`] = `
+<div><img src="sample_source.svg" class="d3-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .svg and name d3 matches snapshot with showname 1`] = `<div><img src="sample_source.svg" class="d3-devicon"> <span class="">d3</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .svg and name tableau matches snapshot 1`] = `
+<div><img src="sample_source.svg" class="tableau-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .svg and name tableau matches snapshot with showname 1`] = `<div><img src="sample_source.svg" class="tableau-devicon"> <span class="">tableau</span></div>`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .svg and name vue matches snapshot 1`] = `
+<div><img src="sample_source.svg" class="vue-devicon">
+  <!---->
+</div>
+`;
+
+exports[`StartDevIcon.vue renders img if isImage with class containing source .svg and name vue matches snapshot with showname 1`] = `<div><img src="sample_source.svg" class="vue-devicon"> <span class="">vue</span></div>`;

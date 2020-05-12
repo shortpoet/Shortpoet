@@ -1,6 +1,12 @@
-import { actions } from '@/store/modules/StoreResume'
+import { actions } from '@/store/modules/resume/StoreResume'
 import hardResume from '@/assets/resume.js'
 import axios from 'axios'
+
+import {
+  SET_RESUME_RAW,
+  SET_RESUME,
+  SET_RESUME_LOADED
+} from '@/store/mutation-types'
 
 describe('Resume Store Actions', () => {
   let state
@@ -31,9 +37,10 @@ describe('Resume Store Actions', () => {
 
       await actions.loadResume({commit, rootGetters})
 
-      expect(commit).toHaveBeenCalledWith("SET_RESUME_RAW", response.data)
+      expect(commit).toHaveBeenCalledWith(SET_RESUME_RAW, response.data)
       const hasResume = !!response.data
-      expect(commit).toHaveBeenCalledWith("SET_RESUME_LOADED", hasResume)
+      expect(commit).toHaveBeenCalledWith(SET_RESUME_LOADED, hasResume)
+
 
     })
     it('dispatches loadHardResume action in case of loadResume error', async () => {
@@ -57,18 +64,14 @@ describe('Resume Store Actions', () => {
   describe('loadHardResume', () => {
     it('loads hard coded resume from js file in assets in case of loadResume error', async () => {
       
-      mockError = () => {throw Error('Mock Axios Error')}
-      const originalError = console.error
-      console.error = jest.fn()
+      await actions.loadHardResume({ commit })
 
-      axios.get.mockImplementation(mockError)
-      await actions.loadResume({rootGetters, dispatch})
+      expect(commit).toHaveBeenCalledWith(SET_RESUME, hardResume)
 
-      expect(commit).toHaveBeenCalledWith("SET_RESUME_RAW", response.data)
       const hasResume = !!hardResume.title
-      expect(commit).toHaveBeenCalledWith("SET_RESUME_LOADED", hasResume)
 
-      console.error = originalError
+      expect(commit).toHaveBeenCalledWith(SET_RESUME_LOADED, hasResume)
+
     })
   })
 })

@@ -20,7 +20,7 @@
           </div>
           <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
             <div>
-              <div style="font-family: 'Open Sans';">{{ type.type }}</div>
+              <div class="pdf-skill-type" style="font-family: 'Open Sans';">{{ type.type }}</div>
             </div>
           </div>
           <PDFBorder class="d-none d-md-block my-3 my-md-2" :size=".25"/>
@@ -56,8 +56,7 @@ export default {
   name: 'PDFSkills',
   props: {
     skills: {
-      type: Array,
-      default: () => []
+      type: Array
     }
   },
   components: {
@@ -72,12 +71,6 @@ export default {
     }
   },
   computed: {
-    mediumScreen () {
-      // let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
-      let windowWidth = window.innerWidth
-      // for medium screens
-      return 768 < windowWidth && windowWidth > 985
-    }
   },
   methods: {
     listSkills(skills) {
@@ -88,21 +81,9 @@ export default {
       return iconKeys.map(ik => {
         return this.icons.filter(i => i.name === ik)[0]
       }) 
-    },
-    _screenCheck () {
-      // let skillGridWidth = document.getElementById('skill-grid-container').scrollWidth
-      // let windowWidth = this.windowWidth
-      // console.log('checking screen')
-      // console.log(skillGridWidth)
-      // console.log(windowWidth)
-      // for medium-large screens
-      // if(768 < windowWidth && windowWidth > 985) {
-      //   // console.log('the grid should be medium-large')
-      // }
     }
   },
   mounted () {
-    // this._screenCheck()
   }
 }
 </script>

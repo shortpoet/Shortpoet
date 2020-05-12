@@ -1,8 +1,19 @@
-// const $ = {
-//   click: jest.fn((...params) => {
-//     // console.log(params)
-//     return this
-//   })
-// }
+export const $ = jest.fn((...params) => {
+  console.log('hello from jquery mock')
+  console.log(params)
+  return this
+})
 
-// export default $
+$.click = jest.fn((...params) => {
+  console.log('hello from jquery mock')
+  console.log(params)
+  return this
+})
+$.fn = {}
+$.fn.collapse = jest.fn((...params) => {
+  console.log('hello from jquery mock')
+  console.log(params)
+  return this
+})
+
+

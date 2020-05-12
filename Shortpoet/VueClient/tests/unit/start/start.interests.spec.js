@@ -1,22 +1,24 @@
-import { textMatcher, propMocker, createWrapper } from '../test.utils'
+import * as myTest from '@/utils/myTest'
+const { textMatcher, propsMocker, createWrapper } = myTest.default
 import StartInterests from '@/components/Resume/Start/StartInterests'
 
 describe('StartInterests.vue', () => {
 
   const component = StartInterests
   const props = Object.keys(component.props)
+  const wrapper = createWrapper(component, propsMocker(props))
+
   let prop
-  let element
+  let selector
   let mockProp = true
 
   beforeEach(() => {
-
+    jest.resetModules()
+    jest.clearAllMocks()
   })
 
   it('renders interests h2', () => {
 
-    const wrapper = createWrapper(component)
-    
     // hard coded header
     expect(wrapper.find("h2").text()).toMatch("Interests")
 
@@ -24,22 +26,18 @@ describe('StartInterests.vue', () => {
   it('renders interests p that matches interests prop', () => {
 
     prop = 'interests'
-    element = 'p'
-    textMatcher(component, props, prop, element)
+    selector = 'p'
+    textMatcher(component, props, prop, selector)
 
   })
   it('renders photo', () => {
-
-    const wrapper = createWrapper(component, {})
 
     expect(wrapper.find("img").exists()).toBe(true)
 
   })
   it('matches snapshot', () => {
-
-    prop = 'interests'
-    const wrapper = createWrapper(component, propMocker(prop))
     
     expect(wrapper.html()).toMatchSnapshot()
+
   })
 })

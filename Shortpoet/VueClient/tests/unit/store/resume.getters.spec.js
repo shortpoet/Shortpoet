@@ -1,4 +1,4 @@
-import { getters } from '@/store/modules/StoreResume'
+import { getters } from '@/store/modules/resume/StoreResume'
 
 describe('Resume Store Getters', () => {
   let state

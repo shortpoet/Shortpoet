@@ -24,7 +24,6 @@ https://blog.emojipedia.org/emoji-flags-explained/
 https://alligator.io/vuejs/vue-modal-component/
 http://vorillaz.github.io/devicons/#/main
 https://github.com/feathericons/feather
-
 # Azure
 
 - when setting up test app aspnetcore_environment staging variable didn't seem to get set in kudu so when/choose in csproj was failing
@@ -192,6 +191,14 @@ https://www.dotnetcurry.com/aspnet/1373/debugging-aspnet-core-using-visual-studi
 
     - https://stackoverflow.com/questions/14790910/stop-all-instances-of-node-js-server
 
+# Testing
+
+https://codewithhugo.com/a-simple-real-world-vue.js-directive/
+https://github.com/vuejs/vue-test-utils/issues/230#issuecomment-350457377
+https://focusedlabs.io/blog/global-keyboard-shortcuts-in-vue-with-tests
+// always make sure to destroy when using attachToDocument
+    wrapper.destroy();
+Once we attach our component to a document, we can use wrapper.trigger to simulate our keypresses.
 # todo
 
 - optimize 

@@ -18,24 +18,23 @@
 
 <script>
 export default {
-    name: 'StartObjective',
-    components: {
-    },
-    props: {
-      aboutMe: {
-        type: String
-      }
-    },
-    data () {
-      return {
-      }
-    },
-    computed: {
-      breakMe () {
-        console.log(this.aboutMe.replace('\\n\\r', '<br />'))
-        return this.name.replace('\\n\\r', '<br />')
-      }
-
+  name: 'StartObjective',
+  components: {
+  },
+  props: {
+    aboutMe: {
+      type: String
     }
+  },
+  data () {
+    return {
+    }
+  },
+  computed: {
+    // breakMe () {
+    //   console.log(this.aboutMe.replace('\\n\\r', '<br />'))
+    //   return this.name.replace('\\n\\r', '<br />')
+    // }
+  }
 }
 </script>

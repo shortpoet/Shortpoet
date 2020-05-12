@@ -45,12 +45,6 @@ export default {
     }
   },
   computed: {
-    aboutMe1 () {
-      return this.aboutMe.slice(0, this.aboutMe.indexOf('Driven'))
-    },
-    aboutMe2 () {
-      return this.aboutMe.slice(this.aboutMe.indexOf('Driven'))
-    },
     sectionClass () {
       return this.renderPDF ?
         'resume-section-render mb-3'

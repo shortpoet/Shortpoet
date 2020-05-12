@@ -1,20 +1,13 @@
 // ROOT STORE @/store/index.js
-export const CHANGE_COOKIE = 'CHANGE_COOKIE'
-export const CHANGE_COOKIE_BOOLEAN = 'CHANGE_COOKIE_BOOLEAN'
-export const ERASE_COOKIE = 'ERASE_COOKIE'
+// export const CHANGE_COOKIE = 'CHANGE_COOKIE'
+// export const CHANGE_COOKIE_BOOLEAN = 'CHANGE_COOKIE_BOOLEAN'
+// export const ERASE_COOKIE = 'ERASE_COOKIE'
+export const SET_ENV = 'SET_ENV'
+export const SET_URL_PREFIX = 'SET_URL_PREFIX'
 
-// TABLEAUX @/store/modules/StoreTableaus.js
+// RESUME @/store/modules/StoreResume.js
 export const SET_RESUME_LOADED = 'SET_RESUME_LOADED'
 export const SET_RESUME = 'SET_RESUME'
 export const SET_RESUME_RAW = 'SET_RESUME_RAW'
 
-// AUTH @/store/modules/StoreAuth.js
-export const LOAD_HEADERS = 'LOAD_HEADERS'
-export const CHANGE_HEADERS_LOADED_STATE = 'CHANGE_HEADERS_LOADED_STATE'
-export const CHANGE_HEADERS_ERRORED_STATE = 'CHANGE_HEADERS_ERRORED_STATE'
-export const SET_USER = 'SET_USER'
-export const SET_AUTH_STATE = 'SET_AUTH_STATE'
-export const RESET_USER = 'RESET_USER'
-export const CHANGE_USER_LOADED_STATE = 'CHANGE_USER_LOADED_STATE'
-export const CHANGE_USER_ERRORED_STATE = 'CHANGE_USER_ERRORED_STATE'
 

@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VueRouter from 'vue-router'
+
 import App from './App.vue'
-import router from './router'
-import createStore from './store'
+// import { router } from './router'
+import createRouterConfig from './router/createRouterConfig'
+import createStore from './store/createStore'
+
 
 import jquery from 'jquery'
 
@@ -46,9 +50,12 @@ Vue.prototype.$ = jquery
 Vue.config.productionTip = false
 
 const storeConfig = createStore.createStore()
+const routerConfig = createRouterConfig.createRouterConfig()
+// console.log(storeConfig)
 Vue.use(Vuex)
 const store = new Vuex.Store(storeConfig)
-
+Vue.use(VueRouter)
+const router = new VueRouter(routerConfig)
 new Vue({
   router,
   store,

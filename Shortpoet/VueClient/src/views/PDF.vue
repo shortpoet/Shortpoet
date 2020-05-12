@@ -1,7 +1,6 @@
 <template>
   <div class="pdf-container" v-if="getResumeLoaded"  :style="styleObject">
     <div class="p-10" id="pdf-anchor">
-      <portal-target name="save-button-float" />
       <PDFAbout
         :name="getResume.name"
         :surname="getResume.surname"
@@ -19,7 +18,7 @@
         <div v-if="!renderPDF" class="row">
           <div class="awards-col col-12 col-lg-2">
             <PDFAwards
-              :awards="getResume.spokenLanguages"
+              :spokenLanguages="getResume.spokenLanguages"
               :renderPDF="renderPDF"
             />
           </div>
@@ -34,7 +33,7 @@
         <div v-else class="skills-awards-container">
           <PDFAwards
             :renderPDF="renderPDF"
-            :awards="getResume.spokenLanguages"
+            :spokenLanguages="getResume.spokenLanguages"
           />
           <PDFSkillsRender
             :skills="getResume.skills"
@@ -68,13 +67,14 @@
           />
         </div>
         <div id="poem-container" class="col-12 col-md-4 mt-3 mt-md-0 mr-0 text-center">
-          <img class="img-fluid img-profile rounded" :src="pic" alt="poem" :style="poemStyle">
+          <img class="img-fluid img-poem rounded" :src="pic" alt="poem" :style="poemStyle">
         </div>
       </div>
 
       <!-- for some reason adding this handler makes the function run on load -->
       <!-- <ButtonFloat :target="'save-button-float'" :icon="'save'" :handler="toPDF(target)"/> -->
-      <PDFButtonFloat :target="'save-button-float'" :icon="'save'" :pdf-target="'pdf-anchor'" @toPDF="toPDF" />
+      <portal-target class="pdf-target" name="save-button-float" />
+      <PDFButtonFloat :target="'save-button-float'" :icon="'save'" :pdf-target="'pdf-anchor'" @to-render-pdf="toRenderPDF" />
 
 
     </div>
@@ -117,13 +117,6 @@ export default {
   },
   computed: {
     ...mapGetters('resume', ['getResume', 'getResumeLoaded']),
-    resume () {
-      return this.getResume.skills.forEach(skill => {
-        console.log(skill)
-        skill.details = skill.details.split(',')
-        console.log(skill)
-      })
-    },
     styleObject () {
       return this.renderPDF ?
       {
@@ -161,13 +154,16 @@ export default {
     },
   },
   methods: {
+    ...mapActions(['loadEnv']),
     ...mapActions('resume', ['loadResume']),
-    toPDF (event) {
-      console.log('toPDF from pDF')
+    toRenderPDF (event) {
+      // console.log('toRenderPDF from pDF')
       this.renderPDF = event
     }
   },
   mounted () {
+    const env = process.env.NODE_ENV
+    this.loadEnv(env)
     this.loadResume()
   }
 }

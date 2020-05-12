@@ -9,11 +9,11 @@
               <h5 style="font-family: 'Saira Extra Condensed';" class="mb-0">{{ ed.institution }}</h5>
             </div>
             <div class="resume-date text-md-right mr-4">
-              <h6 style="font-family: 'Saira Extra Condensed';" class="text-primary">{{ ed.focus }}</h6>
+              <h6 style="font-family: 'Saira Extra Condensed';" class="pdf-education-focus text-primary">{{ ed.focus }}</h6>
             </div>
           </div>
           <div class="d-flex flex-column">
-            <h6 style="font-family: 'Saira Extra Condensed';" class="">{{ ed.degree }}</h6>
+            <h6 style="font-family: 'Saira Extra Condensed';" class="pdf-degree">{{ ed.degree }}</h6>
             <p style="font-family: 'Open Sans';" class="resume-content">{{ ed.details }}</p>
             <!-- <p>GPA: 3.23</p> -->
           </div>
@@ -28,8 +28,7 @@ export default {
   name: 'PDFEducation',
   props: {
     educations: {
-      type: Array,
-      default: () => []
+      type: Array
     },
     renderPDF: {
       type: Boolean,
