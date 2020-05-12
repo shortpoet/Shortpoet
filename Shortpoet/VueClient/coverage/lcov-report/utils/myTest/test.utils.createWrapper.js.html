@@ -95,7 +95,30 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,12 +138,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">255x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">255x</span>
 <span class="cline-any cline-yes">255x</span>
 <span class="cline-any cline-yes">255x</span>
 <span class="cline-any cline-yes">255x</span>
+<span class="cline-any cline-yes">255x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">255x</span>
@@ -128,6 +158,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">255x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,11 +181,13 @@ import factoryShallow from './test.utils.factoryShallow'
 &nbsp;
 // import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-import createStore from '@/store/createStore'
 import PortalVue from 'portal-vue'
 &nbsp;
-import { log } from '@/utils/colorLog'
+import createStore from '@/store/createStore'
+// import createMockRouterConfig from '@/router/createMockRouterConfig'
+// import paths from '@/router/paths.js'
 &nbsp;
+import { log } from '@/utils/colorLog'
 export const createWrapper  = (
   component,
   /* istanbul ignore next */
@@ -151,21 +195,40 @@ export const createWrapper  = (
   // but why don't i have to ignore the empty  or even unprovided resumeStoreOtions
   // might need to figure this out but setting params to ignore for now
   resumeStoreOptions = {},
+  // routerOptions = {},
   isShallow = false,
   ) =&gt; {
     const localVue = createLocalVue()
-    // localVue.use(VueRouter)
     localVue.use(Vuex)
     localVue.use(PortalVue)
     const mockStoreResume = createStore.createMocks().createStoreResumeMocks(resumeStoreOptions)
     const storeConfig = createStore.createMocks({modules: {resume: mockStoreResume}})
+&nbsp;
+    // Using router is untested makes tests fail
+    // and just doesn't work for now
+    // localVue.use(VueRouter)
+    // const routerConfig = createMockRouterConfig.createMockRouterConfig(routerOptions)
+    // const router = new VueRouter(routerConfig)
+&nbsp;
     // log('green', mockStoreResume)
     // log('yellow', storeConfig.modules.resume)
     const store = new Vuex.Store(storeConfig)
     // log('red', store)
     // log('blue', store._mutations['resume/SET_RESUME_RAW'][0]())
     // console.log(options)
-    return isShallow? factoryShallow(component, {localVue, store, ...options}) : factory(component, {localVue, store, ...options})
+    return isShallow ? 
+    factoryShallow(component, {
+      localVue,
+      store,
+      // router,
+      ...options
+    }) : 
+    factory(component, {
+      localVue,
+      store,
+      // router,
+      ...options
+    })
 }
 &nbsp;
 // export default createWrapper
@@ -178,7 +241,7 @@ module.exports = createWrapper</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 11 2020 17:51:46 GMT-0500 (Central Daylight Time)
+                at Mon May 11 2020 21:38:45 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

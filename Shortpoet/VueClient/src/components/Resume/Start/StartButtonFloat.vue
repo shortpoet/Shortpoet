@@ -103,15 +103,11 @@ export default {
       this.$emit('ripple-open')
     },
     close () {
-      if (this.isExpanded) {
-        this.$emit('ripple-close')
-      }
+      this.$emit('ripple-close')
     },
     handleClickOutside (evt) {
-      if (this.isExpanded === true) {
-        if (evt.target.tagName !== 'path') {
-          this.$emit('ripple-close')
-        }
+      if (evt.target.tagName !== 'path') {
+        this.$emit('ripple-close')
       }
     },
     addEvents() {

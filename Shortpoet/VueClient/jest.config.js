@@ -16,7 +16,7 @@ module.exports = {
     'src/**/*.{js,vue}',
     '!src/**/*.spec.js',
     '!src/main.js',
-    // '!src/router/index.js',
+    '!src/router/**',
     '!**/node_modules/**',
     '!src/___check/**'
   ],

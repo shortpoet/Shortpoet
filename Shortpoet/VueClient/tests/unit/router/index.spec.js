@@ -3,9 +3,21 @@
 
 import routeMapper from '@/router/routeMapper'
 import scrollBehavior from '@/router/scrollBehavior'
+log('red', routeMapper)
 import { log } from '@/utils/colorLog'
 jest.mock('@/router/routeMapper')
 jest.mock('@/router/scrollBehavior')
+
+// import VueRouter from 'vue-router'
+// import createMockRouterConfig from '@/router/createMockRouterConfig'
+// import mockRouteMapper from '@/router/__mocks__/routeMapper'
+// import mockScrollBehavior from '@/router/__mocks__/scrollBehavior'
+// import paths from '@/router/paths.js'
+
+// import App from '@/App'
+// import Start from '@/views/Start'
+// import PDF from '@/views/PDF'
+
 
 // set up these tests before incorporating into mount to ensure mocks are set up correctly
 
@@ -70,9 +82,30 @@ describe('router.index', () => {
       })
     })
   })
+
   describe('router.navigation', () => {
-    it('renders component after navigation', () => {
-      
-    })
+
+    // // const routerConfig = createMockRouterConfig.createMockRouterConfig({
+    // //   routes: routeMapper(paths),
+    // //   scrollBehavior: scrollBehavior
+    // // })
+    // // const router = new VueRouter(routerConfig)
+
+    // const routerOptions = {
+    //   routes: routeMapper(paths),
+    //   scrollBehavior: scrollBehavior
+    // }
+
+    // it('renders component after navigation', async () => {
+    //   let wrapper = createWrapper(App, {routerOptions})
+
+    //   // expect(wrapper.find(Start).exists()).toBe(true)
+    //   // console.log(wrapper.vm.$router)
+    //   wrapper.vm.$router.push('/pdf')
+
+    //   await wrapper.vm.$nextTick()
+
+    //   expect(wrapper.find(PDF).exists()).toBe(true)
+    // })
   })
 })
