@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="348" lines-covered="330" line-rate="0.9483" branches-valid="69" branches-covered="67" branch-rate="0.971" timestamp="1589303150536" complexity="0" version="0.1">
+<coverage lines-valid="348" lines-covered="348" line-rate="1" branches-valid="69" branches-covered="69" branch-rate="1" timestamp="1589303388530" complexity="0" version="0.1">
   <sources>
     <source>H:\source\repos\shortpoet\Shortpoet\VueClient</source>
   </sources>
@@ -21,7 +21,7 @@
         </class>
       </classes>
     </package>
-    <package name="components.Resume.PDF" line-rate="0.8667" branch-rate="0.9429000000000001">
+    <package name="components.Resume.PDF" line-rate="1" branch-rate="1">
       <classes>
         <class name="PDFAbout.vue" filename="src\components\Resume\PDF\PDFAbout.vue" line-rate="1" branch-rate="1">
           <methods>
@@ -99,7 +99,7 @@
             <line number="35" hits="254" branch="false"/>
           </lines>
         </class>
-        <class name="PDFButtonFloat.vue" filename="src\components\Resume\PDF\PDFButtonFloat.vue" line-rate="0.7534000000000001" branch-rate="0">
+        <class name="PDFButtonFloat.vue" filename="src\components\Resume\PDF\PDFButtonFloat.vue" line-rate="1" branch-rate="1">
           <methods>
             <method name="(anonymous_1)" hits="23" signature="()V">
               <lines>
@@ -220,16 +220,16 @@
             <line number="198" hits="5" branch="false"/>
             <line number="199" hits="5" branch="false"/>
             <line number="201" hits="5" branch="false"/>
-            <line number="202" hits="0" branch="false"/>
-            <line number="203" hits="0" branch="false"/>
-            <line number="204" hits="0" branch="false"/>
-            <line number="205" hits="0" branch="true" condition-coverage="0% (0/2)"/>
-            <line number="206" hits="0" branch="false"/>
-            <line number="207" hits="0" branch="false"/>
-            <line number="209" hits="0" branch="false"/>
-            <line number="210" hits="0" branch="false"/>
-            <line number="221" hits="0" branch="false"/>
-            <line number="224" hits="0" branch="false"/>
+            <line number="202" hits="5" branch="false"/>
+            <line number="203" hits="5" branch="false"/>
+            <line number="204" hits="5" branch="false"/>
+            <line number="205" hits="5" branch="true" condition-coverage="100% (2/2)"/>
+            <line number="206" hits="5" branch="false"/>
+            <line number="207" hits="5" branch="false"/>
+            <line number="209" hits="5" branch="false"/>
+            <line number="210" hits="5" branch="false"/>
+            <line number="221" hits="5" branch="false"/>
+            <line number="224" hits="5" branch="false"/>
             <line number="227" hits="1" branch="false"/>
             <line number="228" hits="1" branch="false"/>
             <line number="233" hits="1" branch="false"/>
@@ -248,14 +248,14 @@
             <line number="264" hits="3" branch="false"/>
             <line number="265" hits="3" branch="false"/>
             <line number="266" hits="3" branch="false"/>
-            <line number="277" hits="0" branch="false"/>
-            <line number="278" hits="0" branch="false"/>
-            <line number="282" hits="0" branch="false"/>
-            <line number="285" hits="0" branch="false"/>
-            <line number="295" hits="0" branch="false"/>
-            <line number="299" hits="0" branch="false"/>
-            <line number="301" hits="0" branch="false"/>
-            <line number="302" hits="0" branch="false"/>
+            <line number="277" hits="3" branch="false"/>
+            <line number="278" hits="3" branch="false"/>
+            <line number="282" hits="3" branch="false"/>
+            <line number="285" hits="3" branch="false"/>
+            <line number="295" hits="3" branch="false"/>
+            <line number="299" hits="3" branch="false"/>
+            <line number="301" hits="3" branch="false"/>
+            <line number="302" hits="3" branch="false"/>
           </lines>
         </class>
         <class name="PDFDevIcon.vue" filename="src\components\Resume\PDF\PDFDevIcon.vue" line-rate="1" branch-rate="1">
@@ -977,9 +977,9 @@
       <classes>
         <class name="colorLog.js" filename="src\utils\colorLog.js" line-rate="1" branch-rate="1">
           <methods>
-            <method name="(anonymous_0)" hits="2" signature="()V">
+            <method name="(anonymous_0)" hits="6" signature="()V">
               <lines>
-                <line number="6" hits="2"/>
+                <line number="6" hits="6"/>
               </lines>
             </method>
             <method name="(anonymous_1)" hits="4" signature="()V">
