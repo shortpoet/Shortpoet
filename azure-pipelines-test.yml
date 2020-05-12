@@ -26,13 +26,18 @@ steps:
   workingDirectory: $(Agent.BuildDirectory)
   displayName: List contents of Agent.BuildDirectory
 
-- script: dir
+- script: |
+    dir
+    cd Shortpoet\VueClient
+    dir
+    type package.json
   workingDirectory: $(System.DefaultWorkingDirectory)
-  displayName: List contents of System.DefaultWorkingDirectory
+  displayName: List contents of System.DefaultWorkingDirectory\Shortpoet\VueClient and type package.json
   
 - script: |
     cd Shortpoet\VueClient
     npm install
+    echo "about to run coverage"
     npm run coverage
   displayName: 'npm install and output coverage'
 
