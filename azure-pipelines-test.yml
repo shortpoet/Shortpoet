@@ -22,58 +22,65 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    cd VueClient
-    npm install
-    npm run coverage
-  displayName: 'npm install and output coverage'
+- script: dir
+  workingDirectory: $(Agent.BuildDirectory)
+  displayName: List contents of Agent.BuildDirectory
 
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: Cobertura
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+- script: dir
+  workingDirectory: $(System.DefaultWorkingDirectory)
+  displayName: List contents of System.DefaultWorkingDirectory
+  
+# - script: |
+#     npm install
+#     npm run coverage
+#   displayName: 'npm install and output coverage'
 
-- task: UseDotNet@2
-  displayName: 'Install .NET Core sdk'
-  inputs:
-    packageType: sdk
-    version: 3.1.100
-    installationPath: $(Agent.ToolsDirectory)/dotnet
+# - task: PublishCodeCoverageResults@1
+#   inputs:
+#     codeCoverageTool: Cobertura
+#     summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+#     reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
 
-- task: NuGetToolInstaller@1
+# - task: UseDotNet@2
+#   displayName: 'Install .NET Core sdk'
+#   inputs:
+#     packageType: sdk
+#     version: 3.1.100
+#     installationPath: $(Agent.ToolsDirectory)/dotnet
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+# - task: NuGetToolInstaller@1
 
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:publishUrl="$(System.DefaultWorkingDirectory)\WebAppContent"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+# - task: NuGetCommand@2
+#   inputs:
+#     restoreSolution: '$(solution)'
 
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)\WebAppContent'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+# - task: VSBuild@1
+#   inputs:
+#     solution: '$(solution)'
+#     msbuildArgs: '/p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:publishUrl="$(System.DefaultWorkingDirectory)\WebAppContent"'
+#     platform: '$(buildPlatform)'
+#     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+# - task: ArchiveFiles@2
+#   inputs:
+#     rootFolderOrFile: '$(System.DefaultWorkingDirectory)\WebAppContent'
+#     includeRootFolder: false
+#     archiveType: 'zip'
+#     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+#     replaceExistingArchive: true
 
-- task: AzureWebApp@1
-  inputs:
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/test'))
-    azureSubscription: 'ShortpoetTestServiceConnection'
-    appName: 'shortpoet-test'
-    package: $(System.ArtifactsDirectory)/**/*.zip
-    deploymentMethod: zipDeploy
+# - task: VSTest@2
+#   inputs:
+#     platform: '$(buildPlatform)'
+#     configuration: '$(buildConfiguration)'
+
+# - task: AzureWebApp@1
+#   inputs:
+#     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/test'))
+#     azureSubscription: 'ShortpoetTestServiceConnection'
+#     appName: 'shortpoet-test'
+#     package: $(System.ArtifactsDirectory)/**/*.zip
+#     deploymentMethod: zipDeploy
     # slotName: staging    
 
 # - task: AzureWebApp@2
