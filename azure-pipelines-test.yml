@@ -36,12 +36,17 @@ steps:
   
 - script: |
     cd Shortpoet\VueClient
+    echo about to npm install
     npm install
-    echo "about to run coverage"
+  displayName: 'npm install '
+
+- script: |
+    cd Shortpoet\VueClient
+    echo about to run coverage
     npm run coverage
     cd coverage
     dir
-  displayName: 'npm install and output coverage and show contents of coverage directory'
+  displayName: 'output coverage and show contents of coverage directory'
 
 - task: PublishCodeCoverageResults@1
   inputs:
