@@ -94,7 +94,15 @@ steps:
     appName: 'shortpoet-test'
     package: $(System.ArtifactsDirectory)/**/*.zip
     deploymentMethod: zipDeploy
-    slotName: staging    
+
+# - task: AzureWebApp@1
+#   inputs:
+#     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/test'))
+#     azureSubscription: 'ShortpoetTestServiceConnection'
+#     appName: 'shortpoet-test'
+#     package: $(System.ArtifactsDirectory)/**/*.zip
+#     deploymentMethod: zipDeploy
+#     slotName: staging    
 
 # - task: AzureWebApp@2
 #   inputs:
