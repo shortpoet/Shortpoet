@@ -39,7 +39,9 @@ steps:
     npm install
     echo "about to run coverage"
     npm run coverage
-  displayName: 'npm install and output coverage'
+    cd coverage
+    dir
+  displayName: 'npm install and output coverage and show contents of coverage directory'
 
 - task: PublishCodeCoverageResults@1
   inputs:
