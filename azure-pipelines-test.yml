@@ -17,9 +17,6 @@ variables:
   ASPNETCORE_ENVIRONMENT: 'Staging'
 
 steps:
-- script: echo setting env var
-
-steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
