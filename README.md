@@ -181,6 +181,8 @@ https://github.com/webdevsuperfast/startbootstrap-resume-vue
 
 https://dev.to/amruthpillai/ever-dreamed-of-a-free-and-open-source-resume-builder-that-doesn-t-store-your-data-meet-reactive-resume-1dpl
 
+https://github.com/jerriep/dotnet-outdated
+
 # debug 
 
 https://www.dotnetcurry.com/aspnet/1373/debugging-aspnet-core-using-visual-studio-code
@@ -197,7 +199,6 @@ https://codewithhugo.com/a-simple-real-world-vue.js-directive/
 https://github.com/vuejs/vue-test-utils/issues/230#issuecomment-350457377
 https://focusedlabs.io/blog/global-keyboard-shortcuts-in-vue-with-tests
 
-https://medium.com/@dzeyelid/check-code-coverage-with-jest-on-azure-devops-548b80d29d3
 
 // always make sure to destroy when using attachToDocument
     wrapper.destroy();
@@ -213,6 +214,8 @@ modifications
     https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&tabs=yaml
     separated npm install and coverage tasks
     
+https://stackoverflow.com/questions/17683458/how-do-i-commit-case-sensitive-only-filename-changes-in-git
+
 # todo
 
 - optimize 
