@@ -216,6 +216,20 @@ modifications
     
 https://stackoverflow.com/questions/17683458/how-do-i-commit-case-sensitive-only-filename-changes-in-git
 
+- steps
+
+```dotnetcli
+dotnet new xunit Shortpoet.Tests
+```
+
+```dotnetcli
+dotnet sln add ./Shortpoet.Tests/Shortpoet.Tests.csproj
+```
+
+```dotnetcli
+dotnet add ./Shortpoet.Tests/Shortpoet.Tests.csproj reference Shortpoet/Shortpoet.csproj
+```
+
 # todo
 
 - optimize 
