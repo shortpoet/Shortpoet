@@ -18,9 +18,9 @@ namespace Shortpoet.Controllers
     {
         private readonly ResumeDbContext _context;
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<ResumeController> _logger;
 
-        public _ResumeController(ILogger<WeatherForecastController> logger, ResumeDbContext context)
+        public _ResumeController(ILogger<ResumeController> logger, ResumeDbContext context)
         {
             _logger = logger;
             _context = context;
