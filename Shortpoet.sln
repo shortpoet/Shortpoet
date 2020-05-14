@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shortpoet", "Shortpoet\Shortpoet.csproj", "{F556681C-474D-46D2-83D6-30D2397B5FDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shortpoet.Tests", "Shortpoet.Tests\Shortpoet.Tests.csproj", "{3220E410-0A0D-4505-B120-265CFF54F1F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F556681C-474D-46D2-83D6-30D2397B5FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F556681C-474D-46D2-83D6-30D2397B5FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F556681C-474D-46D2-83D6-30D2397B5FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3220E410-0A0D-4505-B120-265CFF54F1F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3220E410-0A0D-4505-B120-265CFF54F1F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3220E410-0A0D-4505-B120-265CFF54F1F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3220E410-0A0D-4505-B120-265CFF54F1F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
