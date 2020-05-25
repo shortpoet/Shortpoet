@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace Shortpoet.Data.Models.Resume
+namespace Shortpoet.Data.Models.ResumeData
 {
     public class ResumeJobsJson
     {

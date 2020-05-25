@@ -1,17 +1,16 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-
-namespace Shortpoet.Data.Models.Resume
+namespace Shortpoet.Data.Models.ResumeData
 {
-    public class SocialJson
+    public class JobJson
     {
-        [JsonProperty("socials")]
-        public IList<Social> Socials { get; set; }
-        public static SocialJson LoadSocials(string path, Boolean writeJson)
+        [JsonProperty("jobs")]
+        public IList<Job> Jobs { get; set; }
+        public static JobJson LoadJobs(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -38,29 +37,32 @@ namespace Shortpoet.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                SocialJson socials = JsonConvert.DeserializeObject<SocialJson>(json);
+                JobJson jobs = JsonConvert.DeserializeObject<JobJson>(json);
 
-                return socials;
+                return jobs;
             }
         }
-        public static SocialJson LoadJson(string path)
+        public static JobJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                SocialJson resume = JsonConvert.DeserializeObject<SocialJson>(json);
+                JobJson resume = JsonConvert.DeserializeObject<JobJson>(json);
                 return resume;
             }
         }
 
     }
 
-    public class Social
+    public class Job
     {
         public int Id { get; set; }
-        public string Provider { get; set; }
-        public string Url { get; set; }
-        public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
+        public string ExperienceType { get; set; }
+        public string Position { get; set; }
+        public string Company { get; set; }
+        public string Description { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
 
     }
 }

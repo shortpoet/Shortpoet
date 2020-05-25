@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace Shortpoet.Data.Models.Resume
+namespace Shortpoet.Data.Models.ResumeData
 {
-    public class ResumeSkillsJson
+    public class ResumeSpokenLanguagesJson
     {
-        [JsonProperty("resumeSkills")]
-        public IList<ResumeSkills> ResumeSkills { get; set; }
-        public static ResumeSkillsJson LoadResumeSkills(string path, Boolean writeJson)
+        [JsonProperty("resumeSpokenLanguages")]
+        public IList<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; }
+        public static ResumeSpokenLanguagesJson LoadResumeSpokenLanguages(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,28 +37,28 @@ namespace Shortpoet.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                ResumeSkillsJson resumeSkills = JsonConvert.DeserializeObject<ResumeSkillsJson>(json);
+                ResumeSpokenLanguagesJson resumeSpokenLanguages = JsonConvert.DeserializeObject<ResumeSpokenLanguagesJson>(json);
 
-                return resumeSkills;
+                return resumeSpokenLanguages;
             }
         }
-        public static ResumeSkillsJson LoadJson(string path)
+        public static ResumeSpokenLanguagesJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                ResumeSkillsJson resumeSkills = JsonConvert.DeserializeObject<ResumeSkillsJson>(json);
-                return resumeSkills;
+                ResumeSpokenLanguagesJson resumeSpokenLanguages = JsonConvert.DeserializeObject<ResumeSpokenLanguagesJson>(json);
+                return resumeSpokenLanguages;
             }
         }
 
     }
-    public class ResumeSkills
+    public class ResumeSpokenLanguages
     {
         public int ResumeId { get; set; }
         public virtual Resume Resume { get; set; }
-        public int SkillId { get; set; }
-        public virtual Skill Skill { get; set; }
+        public int SpokenLanguagesId { get; set; }
+        public virtual SpokenLanguages SpokenLanguages { get; set; }
 
     }
 }

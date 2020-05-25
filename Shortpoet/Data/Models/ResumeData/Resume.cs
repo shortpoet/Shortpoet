@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using YamlDotNet.Serialization;
 
-namespace Shortpoet.Data.Models.Resume
+namespace Shortpoet.Data.Models.ResumeData
 {
     public class Resume
     {

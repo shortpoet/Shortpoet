@@ -1,15 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using Shortpoet.Data;
-using Shortpoet.Data.Seed;
-using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Shortpoet.Data.Models.ResumeData;
+using Shortpoet.Data.ResumeData.Seed;
 
 namespace Shortpoet
 {

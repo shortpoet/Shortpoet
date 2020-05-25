@@ -3,12 +3,12 @@ using System.Data;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Shortpoet.Data.Models.Resume;
+using Shortpoet.Data.Models.ResumeData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using YamlDotNet.Serialization;
 
-namespace Shortpoet.Data
+namespace Shortpoet.Data.Models.ResumeData
 {
   public class AddResume
   {

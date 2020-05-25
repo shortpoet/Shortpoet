@@ -1,16 +1,17 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace Shortpoet.Data.Models.Resume
+
+namespace Shortpoet.Data.Models.ResumeData
 {
-    public class ResumeSpokenLanguagesJson
+    public class SocialJson
     {
-        [JsonProperty("resumeSpokenLanguages")]
-        public IList<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; }
-        public static ResumeSpokenLanguagesJson LoadResumeSpokenLanguages(string path, Boolean writeJson)
+        [JsonProperty("socials")]
+        public IList<Social> Socials { get; set; }
+        public static SocialJson LoadSocials(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,28 +38,29 @@ namespace Shortpoet.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                ResumeSpokenLanguagesJson resumeSpokenLanguages = JsonConvert.DeserializeObject<ResumeSpokenLanguagesJson>(json);
+                SocialJson socials = JsonConvert.DeserializeObject<SocialJson>(json);
 
-                return resumeSpokenLanguages;
+                return socials;
             }
         }
-        public static ResumeSpokenLanguagesJson LoadJson(string path)
+        public static SocialJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                ResumeSpokenLanguagesJson resumeSpokenLanguages = JsonConvert.DeserializeObject<ResumeSpokenLanguagesJson>(json);
-                return resumeSpokenLanguages;
+                SocialJson resume = JsonConvert.DeserializeObject<SocialJson>(json);
+                return resume;
             }
         }
 
     }
-    public class ResumeSpokenLanguages
+
+    public class Social
     {
-        public int ResumeId { get; set; }
-        public virtual Resume Resume { get; set; }
-        public int SpokenLanguagesId { get; set; }
-        public virtual SpokenLanguages SpokenLanguages { get; set; }
+        public int Id { get; set; }
+        public string Provider { get; set; }
+        public string Url { get; set; }
+        public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
 
     }
 }

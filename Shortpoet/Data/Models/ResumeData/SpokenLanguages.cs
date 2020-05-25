@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace Shortpoet.Data.Models.Resume
+namespace Shortpoet.Data.Models.ResumeData
 {
-    public class JobJson
+    public class LanguageJson
     {
-        [JsonProperty("jobs")]
-        public IList<Job> Jobs { get; set; }
-        public static JobJson LoadJobs(string path, Boolean writeJson)
+        [JsonProperty("spokenLanguages")]
+        public IList<SpokenLanguages> SpokenLanguages { get; set; }
+        public static LanguageJson LoadLanguages(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,32 +37,30 @@ namespace Shortpoet.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                JobJson jobs = JsonConvert.DeserializeObject<JobJson>(json);
+                LanguageJson languages = JsonConvert.DeserializeObject<LanguageJson>(json);
 
-                return jobs;
+                return languages;
             }
         }
-        public static JobJson LoadJson(string path)
+        public static LanguageJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                JobJson resume = JsonConvert.DeserializeObject<JobJson>(json);
+                LanguageJson resume = JsonConvert.DeserializeObject<LanguageJson>(json);
                 return resume;
             }
         }
 
     }
 
-    public class Job
+    public class SpokenLanguages
     {
         public int Id { get; set; }
-        public string ExperienceType { get; set; }
-        public string Position { get; set; }
-        public string Company { get; set; }
-        public string Description { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
+        public string Type { get; set; }
+        public string Languages { get; set; }
+        public bool TranslationInterpretationProfessional { get; set; }
+        public virtual ICollection<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; } = new List<ResumeSpokenLanguages>();
 
     }
 }

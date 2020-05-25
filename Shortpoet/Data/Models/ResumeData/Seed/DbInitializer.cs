@@ -3,13 +3,13 @@ using System.Data;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Shortpoet.Data.Models.Resume;
+using Shortpoet.Data.Models.ResumeData;
 using Shortpoet.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 
 
-namespace Shortpoet.Data.Seed
+namespace Shortpoet.Data.ResumeData.Seed
 {
   public class DbInitializer
   {

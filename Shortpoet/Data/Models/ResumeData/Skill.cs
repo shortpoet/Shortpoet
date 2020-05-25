@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace Shortpoet.Data.Models.Resume
+
+namespace Shortpoet.Data.Models.ResumeData
 {
-    public class EducationJson
+    public class SkillJson
     {
-        [JsonProperty("educations")]
-        public IList<Education> Educations { get; set; }
-        public static EducationJson LoadEducations(string path, Boolean writeJson)
+        [JsonProperty("skills")]
+        public IList<Skill> Skills { get; set; }
+        public static SkillJson LoadSkills(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,29 +38,30 @@ namespace Shortpoet.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                EducationJson educations = JsonConvert.DeserializeObject<EducationJson>(json);
+                SkillJson skills = JsonConvert.DeserializeObject<SkillJson>(json);
 
-                return educations;
+                return skills;
             }
         }
-        public static EducationJson LoadJson(string path)
+        public static SkillJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                EducationJson resume = JsonConvert.DeserializeObject<EducationJson>(json);
+                SkillJson resume = JsonConvert.DeserializeObject<SkillJson>(json);
                 return resume;
             }
         }
 
+
     }
-    public class Education
+
+    public class Skill
     {
         public int Id { get; set; }
-        public string Institution { get; set; }
-        public string Degree { get; set; }
-        public string Focus { get; set; }
-        public virtual ICollection<ResumeEducations> ResumeEducations { get; set; } = new List<ResumeEducations>();
+        public string Type { get; set; }
+        public string Details { get; set; }
+        public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
 
     }
 }

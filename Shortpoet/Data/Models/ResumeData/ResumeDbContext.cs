@@ -7,10 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Shortpoet.Data.Models.Resume;
+using Shortpoet.Data.Models.ResumeData;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Shortpoet.Data
+namespace Shortpoet.Data.Models.ResumeData
 {
   public class ResumeDbContext : DbContext
   {
