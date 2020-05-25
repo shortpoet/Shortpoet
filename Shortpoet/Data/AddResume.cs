@@ -12,7 +12,7 @@ namespace Shortpoet.Data
 {
   public class AddResume
   {
-    public static void Seed(ResumeDbContext context, IWebHostEnvironment environment)
+    public static void Seed(ResumeDbContext context)
     {
 
       AddItems(context, EducationJson.LoadJson("Data/Seed/carlos_resume_educations.json").Educations);

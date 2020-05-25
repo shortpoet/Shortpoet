@@ -13,14 +13,8 @@ namespace Shortpoet.Data.Seed
 {
   public class DbInitializer
   {
-    public static void InitializeDb(ResumeDbContext context, IWebHostEnvironment environment)
+    public static void InitializeDb(ResumeDbContext context)
     {
-      Console.WriteLine("############################");
-      Console.WriteLine(environment.EnvironmentName);
-      Console.WriteLine("############################");
-      Console.WriteLine(environment.ContentRootPath);
-      Console.WriteLine("############################");
-      Console.WriteLine(environment.WebRootPath);
       Console.WriteLine("############################");
       Console.WriteLine("Number of resumes in context");
       Console.WriteLine(context.Resumes.Count());
@@ -32,7 +26,7 @@ namespace Shortpoet.Data.Seed
         return;   // DB has been seeded
       }
 
-      AddResume.Seed(context, environment);
+      AddResume.Seed(context);
 
       Console.WriteLine("#######################");
       Console.WriteLine("Seed Data Context Changes Saved");

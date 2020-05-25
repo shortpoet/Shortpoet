@@ -46,14 +46,21 @@ namespace Shortpoet
           // run this code first before DBInit is written to test the rest of the setup
           // context.Database.EnsureCreated();
 
+          Console.WriteLine("############################");
+          Console.WriteLine(hostingEnvironment.EnvironmentName);
+          Console.WriteLine("############################");
+          Console.WriteLine(hostingEnvironment.ContentRootPath);
+          Console.WriteLine("############################");
+          Console.WriteLine(hostingEnvironment.WebRootPath);
+
 
           Console.WriteLine("############################");
-          Console.WriteLine("About to run CreateDbifNot Exists");
+          Console.WriteLine("About to run CreateDbIfNot Exists");
           Console.WriteLine("############################");
           Console.WriteLine("Here is connection string");
           Console.WriteLine(context.Database.GetDbConnection().ConnectionString);
 
-          DbInitializer.InitializeDb(context, hostingEnvironment);
+          DbInitializer.InitializeDb(context);
 
           context.Database.Migrate();
         }
