@@ -17,7 +17,7 @@ using System.Data;
 using Newtonsoft.Json;
 
 using DbConnect.Data;
-using DbConnect.Data.Models.Resume;
+using DbConnect.Data.Models.ResumeData;
 
 namespace DbConnect
 {

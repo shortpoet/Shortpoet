@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using System.Data;
-using DbConnect.Data.Models.Resume;
+using DbConnect.Data.Models.ResumeData;
 
 using System.Collections.Generic;
 using System.Linq;

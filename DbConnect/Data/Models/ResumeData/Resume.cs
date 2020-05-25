@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using YamlDotNet.Serialization;
 
-namespace DbConnect.Data.Models.Resume
+namespace DbConnect.Data.Models.ResumeData
 {
     public class Resume
     {

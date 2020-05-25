@@ -1,16 +1,15 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
-
-namespace DbConnect.Data.Models.Resume
+namespace DbConnect.Data.Models.ResumeData
 {
-    public class ResumeSkillsJson
+    public class LanguageJson
     {
-        [JsonProperty("resumeSkills")]
-        public IList<ResumeSkills> ResumeSkills { get; set; }
-        public static ResumeSkillsJson LoadResumeSkills(string path, Boolean writeJson)
+        [JsonProperty("spokenLanguages")]
+        public IList<SpokenLanguages> SpokenLanguages { get; set; }
+        public static LanguageJson LoadLanguages(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,28 +36,30 @@ namespace DbConnect.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                ResumeSkillsJson resumeSkills = JsonConvert.DeserializeObject<ResumeSkillsJson>(json);
+                LanguageJson languages = JsonConvert.DeserializeObject<LanguageJson>(json);
 
-                return resumeSkills;
+                return languages;
             }
         }
-        public static ResumeSkillsJson LoadJson(string path)
+        public static LanguageJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                ResumeSkillsJson resumeSkills = JsonConvert.DeserializeObject<ResumeSkillsJson>(json);
-                return resumeSkills;
+                LanguageJson resume = JsonConvert.DeserializeObject<LanguageJson>(json);
+                return resume;
             }
         }
 
     }
-    public class ResumeSkills
+
+    public class SpokenLanguages
     {
-        public int ResumeId { get; set; }
-        public virtual Resume Resume { get; set; }
-        public int SkillId { get; set; }
-        public virtual Skill Skill { get; set; }
+        public int Id { get; set; }
+        public string Type { get; set; }
+        public string Languages { get; set; }
+        public bool TranslationInterpretationProfessional { get; set; }
+        public virtual ICollection<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; } = new List<ResumeSpokenLanguages>();
 
     }
 }

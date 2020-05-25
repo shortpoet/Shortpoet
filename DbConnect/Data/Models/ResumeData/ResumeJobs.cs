@@ -1,17 +1,16 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-
-namespace DbConnect.Data.Models.Resume
+namespace DbConnect.Data.Models.ResumeData
 {
-    public class SocialJson
+    public class ResumeJobsJson
     {
-        [JsonProperty("socials")]
-        public IList<Social> Socials { get; set; }
-        public static SocialJson LoadSocials(string path, Boolean writeJson)
+        [JsonProperty("resumeJobs")]
+        public IList<ResumeJobs> ResumeJobs { get; set; }
+        public static ResumeJobsJson LoadResumeJobs(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -38,29 +37,29 @@ namespace DbConnect.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                SocialJson socials = JsonConvert.DeserializeObject<SocialJson>(json);
+                ResumeJobsJson resumeJobs = JsonConvert.DeserializeObject<ResumeJobsJson>(json);
 
-                return socials;
+                return resumeJobs;
             }
         }
-        public static SocialJson LoadJson(string path)
+        public static ResumeJobsJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                SocialJson resume = JsonConvert.DeserializeObject<SocialJson>(json);
-                return resume;
+                ResumeJobsJson resumeJobs = JsonConvert.DeserializeObject<ResumeJobsJson>(json);
+                return resumeJobs;
             }
         }
 
-    }
 
-    public class Social
+    }
+    public class ResumeJobs
     {
-        public int Id { get; set; }
-        public string Provider { get; set; }
-        public string Url { get; set; }
-        public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
+        public int ResumeId { get; set; }
+        public virtual Resume Resume { get; set; }
+        public int JobId { get; set; }
+        public virtual Job Job { get; set; }
 
     }
 }

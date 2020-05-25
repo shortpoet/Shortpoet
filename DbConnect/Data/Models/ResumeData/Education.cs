@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-
-namespace DbConnect.Data.Models.Resume
+namespace DbConnect.Data.Models.ResumeData
 {
-    public class SkillJson
+    public class EducationJson
     {
-        [JsonProperty("skills")]
-        public IList<Skill> Skills { get; set; }
-        public static SkillJson LoadSkills(string path, Boolean writeJson)
+        [JsonProperty("educations")]
+        public IList<Education> Educations { get; set; }
+        public static EducationJson LoadEducations(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -38,30 +37,29 @@ namespace DbConnect.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                SkillJson skills = JsonConvert.DeserializeObject<SkillJson>(json);
+                EducationJson educations = JsonConvert.DeserializeObject<EducationJson>(json);
 
-                return skills;
+                return educations;
             }
         }
-        public static SkillJson LoadJson(string path)
+        public static EducationJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                SkillJson resume = JsonConvert.DeserializeObject<SkillJson>(json);
+                EducationJson resume = JsonConvert.DeserializeObject<EducationJson>(json);
                 return resume;
             }
         }
 
-
     }
-
-    public class Skill
+    public class Education
     {
         public int Id { get; set; }
-        public string Type { get; set; }
-        public string Details { get; set; }
-        public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
+        public string Institution { get; set; }
+        public string Degree { get; set; }
+        public string Focus { get; set; }
+        public virtual ICollection<ResumeEducations> ResumeEducations { get; set; } = new List<ResumeEducations>();
 
     }
 }

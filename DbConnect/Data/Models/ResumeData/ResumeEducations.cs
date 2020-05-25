@@ -1,16 +1,16 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace DbConnect.Data.Models.Resume
+namespace DbConnect.Data.Models.ResumeData
 {
-    public class EducationJson
+    public class ResumeEducationsJson
     {
-        [JsonProperty("educations")]
-        public IList<Education> Educations { get; set; }
-        public static EducationJson LoadEducations(string path, Boolean writeJson)
+        [JsonProperty("resumeEducations")]
+        public IList<ResumeEducations> ResumeEducations { get; set; }
+        public static ResumeEducationsJson LoadResumeEducations(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,29 +37,29 @@ namespace DbConnect.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                EducationJson educations = JsonConvert.DeserializeObject<EducationJson>(json);
+                ResumeEducationsJson resumeEducations = JsonConvert.DeserializeObject<ResumeEducationsJson>(json);
 
-                return educations;
+                return resumeEducations;
             }
         }
-        public static EducationJson LoadJson(string path)
+        public static ResumeEducationsJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                EducationJson resume = JsonConvert.DeserializeObject<EducationJson>(json);
-                return resume;
+                ResumeEducationsJson resumeEducations = JsonConvert.DeserializeObject<ResumeEducationsJson>(json);
+                return resumeEducations;
             }
         }
 
     }
-    public class Education
+
+    public class ResumeEducations
     {
-        public int Id { get; set; }
-        public string Institution { get; set; }
-        public string Degree { get; set; }
-        public string Focus { get; set; }
-        public virtual ICollection<ResumeEducations> ResumeEducations { get; set; } = new List<ResumeEducations>();
+        public int ResumeId { get; set; }
+        public virtual Resume Resume { get; set; }
+        public int EducationId { get; set; }
+        public virtual Education Education { get; set; }
 
     }
 }

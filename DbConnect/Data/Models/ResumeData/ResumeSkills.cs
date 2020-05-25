@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace DbConnect.Data.Models.Resume
+namespace DbConnect.Data.Models.ResumeData
 {
-    public class ResumeJobsJson
+    public class ResumeSkillsJson
     {
-        [JsonProperty("resumeJobs")]
-        public IList<ResumeJobs> ResumeJobs { get; set; }
-        public static ResumeJobsJson LoadResumeJobs(string path, Boolean writeJson)
+        [JsonProperty("resumeSkills")]
+        public IList<ResumeSkills> ResumeSkills { get; set; }
+        public static ResumeSkillsJson LoadResumeSkills(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,29 +37,28 @@ namespace DbConnect.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                ResumeJobsJson resumeJobs = JsonConvert.DeserializeObject<ResumeJobsJson>(json);
+                ResumeSkillsJson resumeSkills = JsonConvert.DeserializeObject<ResumeSkillsJson>(json);
 
-                return resumeJobs;
+                return resumeSkills;
             }
         }
-        public static ResumeJobsJson LoadJson(string path)
+        public static ResumeSkillsJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                ResumeJobsJson resumeJobs = JsonConvert.DeserializeObject<ResumeJobsJson>(json);
-                return resumeJobs;
+                ResumeSkillsJson resumeSkills = JsonConvert.DeserializeObject<ResumeSkillsJson>(json);
+                return resumeSkills;
             }
         }
 
-
     }
-    public class ResumeJobs
+    public class ResumeSkills
     {
         public int ResumeId { get; set; }
         public virtual Resume Resume { get; set; }
-        public int JobId { get; set; }
-        public virtual Job Job { get; set; }
+        public int SkillId { get; set; }
+        public virtual Skill Skill { get; set; }
 
     }
 }

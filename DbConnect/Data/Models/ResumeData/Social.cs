@@ -1,16 +1,17 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace DbConnect.Data.Models.Resume
+
+namespace DbConnect.Data.Models.ResumeData
 {
-    public class ResumeEducationsJson
+    public class SocialJson
     {
-        [JsonProperty("resumeEducations")]
-        public IList<ResumeEducations> ResumeEducations { get; set; }
-        public static ResumeEducationsJson LoadResumeEducations(string path, Boolean writeJson)
+        [JsonProperty("socials")]
+        public IList<Social> Socials { get; set; }
+        public static SocialJson LoadSocials(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,29 +38,29 @@ namespace DbConnect.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                ResumeEducationsJson resumeEducations = JsonConvert.DeserializeObject<ResumeEducationsJson>(json);
+                SocialJson socials = JsonConvert.DeserializeObject<SocialJson>(json);
 
-                return resumeEducations;
+                return socials;
             }
         }
-        public static ResumeEducationsJson LoadJson(string path)
+        public static SocialJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                ResumeEducationsJson resumeEducations = JsonConvert.DeserializeObject<ResumeEducationsJson>(json);
-                return resumeEducations;
+                SocialJson resume = JsonConvert.DeserializeObject<SocialJson>(json);
+                return resume;
             }
         }
 
     }
 
-    public class ResumeEducations
+    public class Social
     {
-        public int ResumeId { get; set; }
-        public virtual Resume Resume { get; set; }
-        public int EducationId { get; set; }
-        public virtual Education Education { get; set; }
+        public int Id { get; set; }
+        public string Provider { get; set; }
+        public string Url { get; set; }
+        public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
 
     }
 }

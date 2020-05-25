@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 
-namespace DbConnect.Data.Models.Resume
+namespace DbConnect.Data.Models.ResumeData
 {
-    public class ResumeSpokenLanguagesJson
+    public class ResumeSocialsJson
     {
-        [JsonProperty("resumeSpokenLanguages")]
-        public IList<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; }
-        public static ResumeSpokenLanguagesJson LoadResumeSpokenLanguages(string path, Boolean writeJson)
+        [JsonProperty("resumeSocials")]
+        public IList<ResumeSocials> ResumeSocials { get; set; }
+        public static ResumeSocialsJson LoadResumeSocials(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -37,28 +37,28 @@ namespace DbConnect.Data.Models.Resume
 
                 // string json = r.ReadToEnd();
 
-                ResumeSpokenLanguagesJson resumeSpokenLanguages = JsonConvert.DeserializeObject<ResumeSpokenLanguagesJson>(json);
+                ResumeSocialsJson resumeSocials = JsonConvert.DeserializeObject<ResumeSocialsJson>(json);
 
-                return resumeSpokenLanguages;
+                return resumeSocials;
             }
         }
-        public static ResumeSpokenLanguagesJson LoadJson(string path)
+        public static ResumeSocialsJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                ResumeSpokenLanguagesJson resumeSpokenLanguages = JsonConvert.DeserializeObject<ResumeSpokenLanguagesJson>(json);
-                return resumeSpokenLanguages;
+                ResumeSocialsJson resumeSocials = JsonConvert.DeserializeObject<ResumeSocialsJson>(json);
+                return resumeSocials;
             }
         }
 
     }
-    public class ResumeSpokenLanguages
+    public class ResumeSocials
     {
         public int ResumeId { get; set; }
         public virtual Resume Resume { get; set; }
-        public int SpokenLanguagesId { get; set; }
-        public virtual SpokenLanguages SpokenLanguages { get; set; }
+        public int SocialId { get; set; }
+        public virtual Social Social { get; set; }
 
     }
 }

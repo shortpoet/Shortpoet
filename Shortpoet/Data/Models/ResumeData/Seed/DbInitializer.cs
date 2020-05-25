@@ -24,7 +24,9 @@ namespace Shortpoet.Data.ResumeData.Seed
       Console.WriteLine("############################");
       Console.WriteLine("Number of resumes in context");
       Console.WriteLine(context.Resumes.Count());
-      context.Database.EnsureCreated();
+      
+      // COMMENT THIS IS PRODUCTION OR EVEN REMOVE
+      // context.Database.EnsureCreated();
       
       // Look for any dashboards.
       if (context.Resumes.Any())
