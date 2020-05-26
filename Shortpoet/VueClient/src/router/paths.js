@@ -20,6 +20,10 @@ const paths = [
   {
     path: '/pdf',
     view: 'PDF'
+  },
+  {
+    path: '/blog',
+    view: 'Blog'
   }
 ]
 

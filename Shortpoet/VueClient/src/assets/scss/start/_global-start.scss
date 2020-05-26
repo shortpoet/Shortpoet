@@ -1,5 +1,18 @@
 // Bootstrap Overrides
 
+a {
+  color: $primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary;
+  }
+}
+
+body {
+  margin-bottom: 2rem;
+}
+
 .bg-primary {
   background-color: $primary !important;
 }

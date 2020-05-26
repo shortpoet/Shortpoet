@@ -1,3 +1,20 @@
+// bootstrap overrides
+
+a {
+  color: $primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary;
+  }
+}
+
+body {
+  margin-bottom: 2rem;
+}
+
+// 
+
 body {
   @include body-font;
   padding-top: .25rem;
