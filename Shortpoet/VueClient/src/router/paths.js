@@ -7,6 +7,10 @@
 const paths = [
   {
     path: '/',
+    view: 'Landing'
+  },
+  {
+    path: '/resume',
     view: 'Start'
   },
   {
