@@ -2,32 +2,32 @@
   <div class="blog-wrapper">
     <BlogNav />
     <div class="blog-container">
-      <UnitTestArticle />
+      <!-- <BlogArticle 
+        :title="'test title'"
+      /> -->
+      <ul>
+        <li>
+          <router-link to="/blog/learning-to-unit-test-en">Learning To Unit Test</router-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-import articles from '@/assets/articles.js'
 import BlogNav from '@/components/Blog/BlogNav'
-import UnitTestArticle from '@/components/Blog/Articles/learning-to-unit-test.md'
-const md = require('markdown-it')({
-  html: true,
-  linkify: true,
-  typographer: true
-})
+// import BlogArticle from '@/components/Blog/BlogArticle'
+
 export default {
   name: 'Blog',
   components: {
-    UnitTestArticle,
-    BlogNav
+    BlogNav,
+    // BlogArticle
   },
   computed: {
-    title: () => articles[0].title,
-    body: () => articles[0].body,
-    _body: () => md.render(articles[0].body)
   },
-  updated() {
+  mounted() {
+    console.log(this)
     // this.$forceUpdate()
   }
 }

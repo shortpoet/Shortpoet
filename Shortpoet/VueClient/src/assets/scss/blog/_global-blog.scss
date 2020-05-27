@@ -10,7 +10,17 @@ $border-radius: .7rem;
     ul {
       justify-content: end;
       flex-direction: row-reverse;
-
+      .dropdown {
+        line-height: .5rem;
+        padding: 1rem 0rem 0rem 0rem;
+      }
+      .dropdown-menu {
+        // margin: 1rem 0rem 0rem 0rem;
+        .dropdown-item {
+          line-height: .5rem;
+          padding: 1rem;
+        }
+      }
       li {
         padding: 1rem;
         a {
@@ -21,7 +31,11 @@ $border-radius: .7rem;
   }
 }
 
-
+.article-wrapper {
+  nav {
+    border-bottom: 0rem;
+  }
+}
 
 .blog-container {
   // @include code-font;

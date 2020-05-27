@@ -23,7 +23,28 @@ const paths = [
   },
   {
     path: '/blog',
-    view: 'Blog'
+    view: 'Blog',
+    children: [
+      // {
+      //   path: '/blog/:title',
+      //   name: 'BlogArticle',
+      //   props: (route) => ({ title: route.query.q })
+      // },
+      {
+        path: '/blog/learning-to-unit-test-en',
+        name: 'learning-to-unit-test-en',
+        props: {
+          language: 'english'
+        }
+      },
+      {
+        path: '/blog/learning-to-unit-test-es',
+        name: 'learning-to-unit-test-es',
+        props: {
+          language: 'spanish'
+        }
+      }
+    ]
   }
 ]
 
