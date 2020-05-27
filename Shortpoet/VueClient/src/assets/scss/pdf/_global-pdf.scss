@@ -9,13 +9,13 @@ a {
   }
 }
 
-body {
+.pdf-container {
   margin-bottom: 2rem;
 }
 
 // 
 
-body {
+.pdf-container {
   @include body-font;
   padding-top: .25rem;
   color: $black;

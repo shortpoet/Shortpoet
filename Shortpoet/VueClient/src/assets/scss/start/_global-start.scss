@@ -9,7 +9,7 @@ a {
   }
 }
 
-body {
+.main-wrapper {
   margin-bottom: 2rem;
 }
 
@@ -33,13 +33,13 @@ a {
 
 // Global styling for this template
 
-body {
+.main-wrapper {
   @include body-font;
   padding-top: 54px;
   color: $gray-600;
 }
 @media (min-width: 992px) {
-  body {
+  .main-wrapper {
     padding-top: 0;
     // this is echoed in _global-nav @media{#sideNav:width}
     padding-left: $sidebar-base-width;

@@ -1,0 +1,38 @@
+$border-radius: .7rem;
+
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  nav {
+    flex-direction: column;
+    border-bottom: .05rem solid black;
+    margin: 0rem 1rem 0rem 1rem;
+    ul {
+      justify-content: end;
+      flex-direction: row-reverse;
+
+      li {
+        padding: 1rem;
+        a {
+          color: $green
+        }
+      }
+    }
+  }
+}
+
+
+
+.blog-container {
+  // @include code-font;
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  // display: grid;
+  // place-items: center;
+  margin: 1rem;
+  background-color: $white;
+  a {
+    color: $green
+  }
+}
+

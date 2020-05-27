@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <div class="landing-container">
+  <div class="landing-container">
+    <div class="terminal-container">
 
       <div class="title-bar">carlos@shortpoet: ~</div>
 
@@ -18,27 +18,35 @@
           <p>></p>
         </div>
       </div>
+
+      <pre>
+        <code>
+          *cd => change directory / navigate
+        </code>
+      </pre>
+
     </div>
 
-    <pre>
-      <code>
-        *cd => change directory / navigate
-      </code>
-    </pre>
 
-  </main>
+  </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
   name: 'Landing',
   components: {
     
   },
   methods: {
+    ...mapActions(['loadEnv']),
     navigate(route) {
-      this.$router.push(route)
+      console.log(route)
+    this.$router.push(route)
     }
+  },
+  mounted () {
+    // this.loadEnv()
   }
 }
 </script>
