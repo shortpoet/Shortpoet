@@ -20,8 +20,6 @@ export default {
   computed: {
   },
   mounted() {
-    console.log('mounted from bloglist')
-    console.log(this.$route)
   }
 }
 </script>

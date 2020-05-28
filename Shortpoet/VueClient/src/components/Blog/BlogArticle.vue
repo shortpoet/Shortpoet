@@ -31,15 +31,15 @@ export default {
     // selectedArticle: () => import('./../../components/Blog/Articles/')
     // correct
     selectedArticle: function () {
-      console.log(this.language)
       const english = () => import('./../../components/Blog/Articles/learning-to-unit-test-en.md')
       const spanish = () => import('./../../components/Blog/Articles/learning-to-unit-test-es.md')
       return this.language === 'en' ? english : spanish
     }
   },
   mounted() {
-    console.log('mounted from blogarticle')
-    console.log(this.$route)
+    // possible future option 
+    // https://stackoverflow.com/questions/50053556/dynamic-imported-vue-component-failed-to-resolve
+    // https://stackoverflow.com/questions/53630683/webpack-dependency-management-and-vue-js-async-component-loading
   }
 }
 </script>

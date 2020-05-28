@@ -60,7 +60,7 @@ export default {
         },
         {
           social: 'website',
-          icon: 'fa fa-globe',
+          icon: 'fa fa-home',
           url: '/',
           transform: 'shrink-6 right-2.5'
         }

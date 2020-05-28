@@ -41,8 +41,7 @@ export default {
   methods: {
     ...mapActions(['loadEnv']),
     navigate(route) {
-      console.log(route)
-    this.$router.push(route)
+      this.$router.push(route)
     }
   },
   mounted () {
