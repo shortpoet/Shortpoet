@@ -16,7 +16,7 @@ using System.Data.SqlClient;
 using System.Data;
 using Microsoft.EntityFrameworkCore;
 
-using DbConnect.Data.Models.Resume;
+using DbConnect.Data.Models.ResumeData;
 using DbConnect.Data;
 
 namespace DbConnect

@@ -1,12 +1,12 @@
 <template>
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
     <div class="my-auto">
-      <h2 class="start-experience-header mb-4 mb-md-3">Experience</h2>
+      <h2 class="heading heading-2 start-experience-header mb-4 mb-md-3">Experience</h2>
       <div class="resume-item d-flex flex-column mb-2" v-for="type in experiences" :key="type.type">
-        <h2 class="start-experience-type mb-3">{{ type.type }}</h2>
+        <h2 class="heading heading-2 start-experience-type mb-3">{{ type.type }}</h2>
         <div class="resume-item d-flex flex-column flex-md-row mb-5" v-for="(job, ji) in type.jobs" :key="ji">
           <div class="resume-content mr-auto">
-            <h3 class="mb-0">{{ job.position }}</h3>
+            <h3 class="heading heading-3 mb-0">{{ job.position }}</h3>
             <div class="start-company subheading mb-3">{{ job.company }}</div>
               <div
                 v-for="(text, di) in job.description.split('\\n\\r')"

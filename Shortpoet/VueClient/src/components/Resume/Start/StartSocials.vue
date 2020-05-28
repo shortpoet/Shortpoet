@@ -58,11 +58,10 @@ export default {
           },
           {
             social: 'file-pdf',
-            icon: 'far fa-file-pdf-o',
-            url: window.location.protocol + '//' + window.location.host + '/pdf',
+            icon: 'fa fa-home',
+            url: '/',
             // for router-link version to test built dist
             // url: '/pdf',
-            transform: 'shrink-6 right-2.5'
           }
         ]
       }

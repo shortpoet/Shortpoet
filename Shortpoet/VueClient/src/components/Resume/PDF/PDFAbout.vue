@@ -13,7 +13,7 @@
       <div class="d-flex flex-column mt-1 mt-md-2 ml-2" id="name-contact">
         <ul class="list-inline">
           <li>
-            <h2 style="font-family: 'Saira Extra Condensed';" class="mb-0">{{ name }}
+            <h2 style="font-family: 'Saira Extra Condensed';" class="heading heading-2 mb-0">{{ name }}
               <span id="pdf-surname" style="font-family: 'Saira Extra Condensed';" class="text-primary">{{ surname }}</span>
             </h2>
           </li>

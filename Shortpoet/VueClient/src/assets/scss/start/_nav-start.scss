@@ -41,7 +41,7 @@
     display: flex;
     flex-direction: column;
 
-    // this is echoed in _global-start @media{body:padding-left}
+    // this is echoed in _global-start @media{.main-wrappers:padding-left}
     width: $sidebar-base-width;
     height: 100vh;
     .navbar-brand {

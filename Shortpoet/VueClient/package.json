@@ -39,7 +39,8 @@
     "jsdom": "^16.2.2",
     "jspdf": "^1.5.3",
     "lodash": "^4.17.15",
-    "moment": "^2.25.3",
+    "markdown-it": "^11.0.0",
+    "moment": "^2.26.0",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
     "postcss-preset-env": "^6.7.0",
@@ -63,6 +64,7 @@
     "matchmedia-polyfill": "^0.3.2",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue-markdown-loader": "^2.4.1",
     "vue-template-compiler": "^2.6.11"
   }
 }

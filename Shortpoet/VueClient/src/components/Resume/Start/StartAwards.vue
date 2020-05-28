@@ -1,7 +1,7 @@
 <template>
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
     <div class="my-auto">
-      <h2 class="mb-4 mb-md-3">Natural Languages</h2>
+      <h2 class="heading heading-2 mb-4 mb-md-3">Natural Languages</h2>
       <ul class="fa-ul mb-0">
         <li
           v-for="(lang, i) in spokenLanguages"

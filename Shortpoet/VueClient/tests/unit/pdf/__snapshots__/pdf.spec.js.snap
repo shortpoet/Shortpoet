@@ -9,7 +9,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
         <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
           <ul class="list-inline">
             <li>
-              <h2 class="mb-0" style="font-family: 'Saira Extra Condensed';">CARLOS
+              <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">CARLOS
                 <span id="pdf-surname" class="text-primary" style="font-family: 'Saira Extra Condensed';">SORIANO</span></h2>
             </li>
             <li><span class="not-name"><a href="mailto:soriano.carlitos@gmail.com" style="font-family: 'Open Sans';">
@@ -29,7 +29,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
               <li class="social-item"><a href="https://www.linkedin.com/in/carlos-soriano-49aaa97/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-linkedin fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.linkedin.com/in/carlos-soriano-49aaa97/</span></a></li>
               <li class="social-item"><a href="https://www.instagram.com/shortpoet/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-instagram fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.instagram.com/shortpoet/</span></a></li>
               <li class="social-item"><a href="https://twitter.com/shortpoet3"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-twitter fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://twitter.com/shortpoet3</span></a></li>
-              <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-globe fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
+              <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-home fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
             </ul>
           </section>
         </div>
@@ -41,7 +41,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
         <div class="awards-col col-12 col-lg-2">
           <section id="awards" class="resume-section ml-4 mt-2">
             <div class="my-auto">
-              <h4 class="mb-4 ml-1" style="font-family: 'Saira Extra Condensed';">Natural Languages</h4>
+              <h4 class="heading heading-4 mb-4 ml-1" style="font-family: 'Saira Extra Condensed';">Natural Languages</h4>
               <div class="d-flex flex-column ml-3"><span class="d-flex"><i class="proficient language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Italian (Proficient) </span></span><span class="d-flex"><i class="native language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">English, Spanish, Tagalog (Native) </span></span><span class="d-flex"><i class="fluent language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Mandarin Chinese, French (Fluent) </span></span><span class="d-flex"><i class="workingKnowledge language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">German, Portuguese (Working Knowledge) </span></span> <span class="language-type-render d-flex"><i class="award-icon fa fa-trophy mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Certified Interpreter</span></span></div>
             </div>
           </section>
@@ -49,7 +49,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
         <div class="skills-col col-12 col-lg-10">
           <section id="skills" class="resume-section mt-2 ml-0">
             <div class="my-auto">
-              <h4 class="subheading mb-4 mb-md-3 ml-4" style="font-family: 'Saira Extra Condensed';">
+              <h4 class="heading heading-4 subheading mb-4 mb-md-3 ml-4" style="font-family: 'Saira Extra Condensed';">
                 Programming Languages &amp; Tools
               </h4>
               <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mr-0 mr-md-3">
@@ -424,7 +424,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
     <div class="resume-section ml-3">
       <section id="pdf-objective" class="resume-section mb-3">
         <div id="objective" class="d-flex align-items-center">
-          <h4 style="font-family: 'Saira Extra Condensed';">
+          <h4 class="heading heading-4" style="font-family: 'Saira Extra Condensed';">
             Objective
           </h4>
         </div>
@@ -451,20 +451,20 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
     </div>
     <section id="experience" class="resume-section ml-3 mt-2 mb-3">
       <div class="my-auto">
-        <h4 style="font-family: 'Saira Extra Condensed';">Experience</h4>
+        <h4 class="heading heading-4" style="font-family: 'Saira Extra Condensed';">Experience</h4>
         <div class="d-flex flex-column justify-content-between">
           <div>
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">October 2019 - ongoing</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">October 2019 - ongoing</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';">• Escoba Card Game App </p>
                 </div>
@@ -488,14 +488,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
                 <div class="mb-2">
                   <p class="job-2-description-1" style="font-family: 'Open Sans';">• Poet University </p>
                 </div>
@@ -516,14 +516,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
                 <div class="mb-2">
                   <p class="job-3-description-1" style="font-family: 'Open Sans';">• Web App and Social Integration Dashboard </p>
                 </div>
@@ -544,14 +544,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">April 2019 - April 2020</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">April 2019 - April 2020</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing</h6>
                 <div class="mb-2">
                   <p class="job-4-description-1" style="font-family: 'Open Sans';">• Built an application to assess the validity of employee timesheet entries. Managers asked for functionality to parse different types of copy/pasted input of time data. A SQL databse function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
                 </div>
@@ -583,14 +583,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Sinologist</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Sinologist</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">August 2003 - January 2004</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">August 2003 - January 2004</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">World Eye Reports</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">World Eye Reports</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';">Shanghai, PRC. Translator, Interpreter, media Sales, wrote articles and sold ads for advertorial project based out of Shanghai.</p>
                 </div>
@@ -601,14 +601,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">QA Tester</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">QA Tester</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">December 2011 - August 2014</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">December 2011 - August 2014</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">GTL Media</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">GTL Media</h6>
                 <div class="mb-2">
                   <p class="job-2-description-1" style="font-family: 'Open Sans';">Translator, linguistic tester, translated texts for various media including video games, film, and legal, checked video games for linguistic bugs and translation errors, translation of .xml databases for in-game script</p>
                 </div>
@@ -619,14 +619,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Executive Assistant to the CEO</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Executive Assistant to the CEO</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">January 2008 - December 2008</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">January 2008 - December 2008</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">EZI</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">EZI</h6>
                 <div class="mb-2">
                   <p class="job-3-description-1" style="font-family: 'Open Sans';">Manila, Philippines. Participated in managing daily operations in a bilingual office setting, supervised staff, attended developmental meetings, tracked and prepared development projects, made calls to and from suppliers and manufacturers, purchased investment property, created investment portfolios and marketing and business plans, gaining insights into the world of Big Business.</p>
                 </div>
@@ -637,14 +637,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Freelance Translator / Interpreter</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Freelance Translator / Interpreter</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">July 2011 - Present</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">July 2011 - Present</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Various Interpretation Agencies</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Various Interpretation Agencies</h6>
                 <div class="mb-2">
                   <p class="job-4-description-1" style="font-family: 'Open Sans';">Medical, dental and media conferences, on-site medical and legal interpretation for depositions, insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, and various other language-related assignments, primarily in Spanish and Tagalog, some French.</p>
                 </div>
@@ -657,14 +657,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Product Specialist - Sales</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Product Specialist - Sales</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">July 2010 - February 2017</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">July 2010 - February 2017</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Toyota of Hollywood &amp; Hollywood Electrics – Electric Cycle Dealership</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Toyota of Hollywood &amp; Hollywood Electrics – Electric Cycle Dealership</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';">New and Pre-owned Conventional and Electric Car and Cycle Sales; Sales made in English, Spanish, Tagalog, French, and Mandarin, Self-directed marketing efforts</p>
                 </div>
@@ -677,14 +677,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Grill Chef de Partie</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Grill Chef de Partie</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">August 1998 - August 2018</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">August 1998 - August 2018</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Many Different Restaurants - mostly a cook, sometimes a bartender</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Many Different Restaurants - mostly a cook, sometimes a bartender</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';">Post Haus Restaurant - St. Moritz, Switzerland stands out as I ran the gamut from helping plan restaurant concept, designed Grill Station, assisted in menu planning and execution, provided back-end data for owners during the length of the contract, offering particular assistance interpreting for members of the multi-cultural staff and management.</p>
                 </div>
@@ -695,14 +695,14 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Food delivery logistics</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Food delivery logistics</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">April 2017 - April 2019</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">April 2017 - April 2019</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">DoorDash and Grubhub</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">DoorDash and Grubhub</h6>
                 <div class="mb-2">
                   <p class="job-2-description-1" style="font-family: 'Open Sans';">Operating 2 apps at the same time to maximize earnings, while maintaining customer satisfaction and high ratings, experienced first hand the effects of data collection of market and labor fluctuations and how they determined the logic behind the apps while I was learning to code.</p>
                 </div>
@@ -714,7 +714,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
     </section>
     <section id="education" class="resume-section ml-3 mt-2 mb-3">
       <div class="my-auto">
-        <h4 class="pdf-subheading" style="font-family: 'Saira Extra Condensed';">Education</h4>
+        <h4 class="heading heading-4 pdf-subheading" style="font-family: 'Saira Extra Condensed';">Education</h4>
         <div>
           <div class="resume-item d-flex flex-column justify-content-between">
             <div class="d-flex flex-row">
@@ -726,7 +726,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
               </div>
             </div>
             <div class="d-flex flex-column">
-              <h6 class="pdf-degree" style="font-family: 'Saira Extra Condensed';">Data Analytics Certificate</h6>
+              <h6 class="heading heading-6 pdf-degree" style="font-family: 'Saira Extra Condensed';">Data Analytics Certificate</h6>
               <p class="resume-content" style="font-family: 'Open Sans';"></p>
             </div>
           </div>
@@ -742,7 +742,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
               </div>
             </div>
             <div class="d-flex flex-column">
-              <h6 class="pdf-degree" style="font-family: 'Saira Extra Condensed';">Bachelor of Arts and Sciences</h6>
+              <h6 class="heading heading-6 pdf-degree" style="font-family: 'Saira Extra Condensed';">Bachelor of Arts and Sciences</h6>
               <p class="resume-content" style="font-family: 'Open Sans';"></p>
             </div>
           </div>
@@ -758,7 +758,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
               </div>
             </div>
             <div class="d-flex flex-column">
-              <h6 class="pdf-degree" style="font-family: 'Saira Extra Condensed';">High School</h6>
+              <h6 class="heading heading-6 pdf-degree" style="font-family: 'Saira Extra Condensed';">High School</h6>
               <p class="resume-content" style="font-family: 'Open Sans';"></p>
             </div>
           </div>
@@ -769,7 +769,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
       <div id="interests-container" class="col-12 col-md-8">
         <section id="interests" class="resume-section mt-2 ml-3">
           <div class="my-auto">
-            <h4 class="mb-3" style="font-family: 'Saira Extra Condensed';">Interests</h4>
+            <h4 class="heading heading-4 mb-3" style="font-family: 'Saira Extra Condensed';">Interests</h4>
             <p class="mb-0" style="font-family: 'Open Sans';">When I'm not knuckle-deep in code, I like to knead bread, dig gardens, vermicompost and cook tasty meals. I do some yoga and pilates to work on the code-bod. I have been known to be insipired by the dramatic muses. Ask for an accent sometime! Being a big fan of perspective, when I started going underwater at age 11, what once was a world of fear turned into a world of wonder. When I can, SCUBA is pretty sweet stuff. Speaking of perspective, here's some shortpoetry...
             </p>
           </div>
@@ -793,7 +793,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
         <div class="custom-modal-backdrop" style="display: none;">
           <div role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" class="custom-modal">
             <header id="modalTitle" class="custom-modal-header">
-              <h4 class="mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
+              <h4 class="heading heading-4 mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
                   <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path>
                 </svg></button>
             </header>
@@ -838,7 +838,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
         <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
           <ul class="list-inline">
             <li>
-              <h2 class="mb-0" style="font-family: 'Saira Extra Condensed';">CARLOS
+              <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">CARLOS
                 <span id="pdf-surname" class="text-primary" style="font-family: 'Saira Extra Condensed';">SORIANO</span></h2>
             </li>
             <li><span class="not-name"><a href="mailto:soriano.carlitos@gmail.com" style="font-family: 'Open Sans';">
@@ -858,7 +858,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
               <li class="social-item"><a href="https://www.linkedin.com/in/carlos-soriano-49aaa97/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-linkedin fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.linkedin.com/in/carlos-soriano-49aaa97/</span></a></li>
               <li class="social-item"><a href="https://www.instagram.com/shortpoet/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-instagram fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.instagram.com/shortpoet/</span></a></li>
               <li class="social-item"><a href="https://twitter.com/shortpoet3"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-twitter fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://twitter.com/shortpoet3</span></a></li>
-              <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-globe fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
+              <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-home fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
             </ul>
           </section>
         </div>
@@ -869,13 +869,13 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
       <div class="skills-awards-container">
         <section id="awards" class="resume-section-render ml-3 mx-2 mt-2">
           <div class="my-auto">
-            <h4 class="mb-2" style="font-family: 'Saira Extra Condensed';">Natural Languages</h4>
+            <h4 class="heading heading-4 mb-2" style="font-family: 'Saira Extra Condensed';">Natural Languages</h4>
             <div class="d-flex flex-row ml-2 justify-content-around"><span class="language-type-render d-flex"><i class="proficient language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Italian (Proficient) </span></span><span class="language-type-render d-flex"><i class="native language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">English, Spanish, Tagalog (Native) </span></span><span class="language-type-render d-flex"><i class="fluent language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Mandarin Chinese, French (Fluent) </span></span><span class="language-type-render d-flex"><i class="workingKnowledge language-icon fa fa-flag mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">German, Portuguese (Working Knowledge) </span></span> <span class="language-type-render d-flex"><i class="award-icon fa fa-trophy mb-auto mr-2"></i> <span style="font-family: 'Open Sans';">Certified Interpreter</span></span></div>
           </div>
         </section>
         <section id="skills" class="resume-section mt-3 ml-3">
           <div class="my-auto">
-            <h4 class="subheading mb-3 ml-0" style="font-family: 'Saira Extra Condensed';">
+            <h4 class="heading heading-4 subheading mb-3 ml-0" style="font-family: 'Saira Extra Condensed';">
               Programming Languages &amp; Tools
             </h4>
             <div id="skill-grid-container" class="d-flex flex-column justify-content-between mt-4 mr-3">
@@ -1242,7 +1242,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
     <div class="resume-section ml-3">
       <section id="pdf-objective" class="resume-section-render mb-3">
         <div id="objective" class="d-flex align-items-center">
-          <h4 style="font-family: 'Saira Extra Condensed';">
+          <h4 class="heading heading-4" style="font-family: 'Saira Extra Condensed';">
             Objective
           </h4>
         </div>
@@ -1269,20 +1269,20 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
     </div>
     <section id="experience" class="resume-section-render ml-3 mt-2 mb-3">
       <div class="my-auto">
-        <h4 style="font-family: 'Saira Extra Condensed';">Experience</h4>
+        <h4 class="heading heading-4" style="font-family: 'Saira Extra Condensed';">Experience</h4>
         <div class="d-flex flex-column justify-content-between">
           <div>
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">October 2019 - ongoing</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">October 2019 - ongoing</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';">• Escoba Card Game App </p>
                 </div>
@@ -1306,14 +1306,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
                 <div class="mb-2">
                   <p class="job-2-description-1" style="font-family: 'Open Sans';">• Poet University </p>
                 </div>
@@ -1334,14 +1334,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">March 2020 - ongoing</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Personal Project</h6>
                 <div class="mb-2">
                   <p class="job-3-description-1" style="font-family: 'Open Sans';">• Web App and Social Integration Dashboard </p>
                 </div>
@@ -1362,14 +1362,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">April 2019 - April 2020</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">April 2019 - April 2020</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing</h6>
                 <div class="mb-2">
                   <p class="job-4-description-1" style="font-family: 'Open Sans';">• Built an application to assess the validity of employee timesheet entries. Managers asked for functionality to parse different types of copy/pasted input of time data. A SQL databse function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
                 </div>
@@ -1401,14 +1401,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Sinologist</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Sinologist</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">August 2003 - January 2004</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">August 2003 - January 2004</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">World Eye Reports</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">World Eye Reports</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';">Shanghai, PRC. Translator, Interpreter, media Sales, wrote articles and sold ads for advertorial project based out of Shanghai.</p>
                 </div>
@@ -1419,14 +1419,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">QA Tester</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">QA Tester</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">December 2011 - August 2014</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">December 2011 - August 2014</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">GTL Media</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">GTL Media</h6>
                 <div class="mb-2">
                   <p class="job-2-description-1" style="font-family: 'Open Sans';">Translator, linguistic tester, translated texts for various media including video games, film, and legal, checked video games for linguistic bugs and translation errors, translation of .xml databases for in-game script</p>
                 </div>
@@ -1437,14 +1437,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Executive Assistant to the CEO</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Executive Assistant to the CEO</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">January 2008 - December 2008</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">January 2008 - December 2008</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">EZI</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">EZI</h6>
                 <div class="mb-2">
                   <p class="job-3-description-1" style="font-family: 'Open Sans';">Manila, Philippines. Participated in managing daily operations in a bilingual office setting, supervised staff, attended developmental meetings, tracked and prepared development projects, made calls to and from suppliers and manufacturers, purchased investment property, created investment portfolios and marketing and business plans, gaining insights into the world of Big Business.</p>
                 </div>
@@ -1455,14 +1455,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Freelance Translator / Interpreter</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Freelance Translator / Interpreter</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">July 2011 - Present</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">July 2011 - Present</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Various Interpretation Agencies</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Various Interpretation Agencies</h6>
                 <div class="mb-2">
                   <p class="job-4-description-1" style="font-family: 'Open Sans';">Medical, dental and media conferences, on-site medical and legal interpretation for depositions, insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, and various other language-related assignments, primarily in Spanish and Tagalog, some French.</p>
                 </div>
@@ -1475,14 +1475,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Product Specialist - Sales</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Product Specialist - Sales</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">July 2010 - February 2017</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">July 2010 - February 2017</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Toyota of Hollywood &amp; Hollywood Electrics – Electric Cycle Dealership</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Toyota of Hollywood &amp; Hollywood Electrics – Electric Cycle Dealership</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';">New and Pre-owned Conventional and Electric Car and Cycle Sales; Sales made in English, Spanish, Tagalog, French, and Mandarin, Self-directed marketing efforts</p>
                 </div>
@@ -1495,14 +1495,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Grill Chef de Partie</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Grill Chef de Partie</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">August 1998 - August 2018</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">August 1998 - August 2018</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">Many Different Restaurants - mostly a cook, sometimes a bartender</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Many Different Restaurants - mostly a cook, sometimes a bartender</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';">Post Haus Restaurant - St. Moritz, Switzerland stands out as I ran the gamut from helping plan restaurant concept, designed Grill Station, assisted in menu planning and execution, provided back-end data for owners during the length of the contract, offering particular assistance interpreting for members of the multi-cultural staff and management.</p>
                 </div>
@@ -1513,14 +1513,14 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="mb-0" style="font-family: 'Saira Extra Condensed';">Food delivery logistics</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Food delivery logistics</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
-                  <h6 class="pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">April 2017 - April 2019</h6>
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">April 2017 - April 2019</h6>
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="pdf-company" style="font-family: 'Saira Extra Condensed';">DoorDash and Grubhub</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">DoorDash and Grubhub</h6>
                 <div class="mb-2">
                   <p class="job-2-description-1" style="font-family: 'Open Sans';">Operating 2 apps at the same time to maximize earnings, while maintaining customer satisfaction and high ratings, experienced first hand the effects of data collection of market and labor fluctuations and how they determined the logic behind the apps while I was learning to code.</p>
                 </div>
@@ -1532,7 +1532,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
     </section>
     <section id="education" class="resume-section-render ml-3 mt-2 mb-3">
       <div class="my-auto">
-        <h4 class="pdf-subheading" style="font-family: 'Saira Extra Condensed';">Education</h4>
+        <h4 class="heading heading-4 pdf-subheading" style="font-family: 'Saira Extra Condensed';">Education</h4>
         <div>
           <div class="resume-item d-flex flex-column justify-content-between">
             <div class="d-flex flex-row">
@@ -1544,7 +1544,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
               </div>
             </div>
             <div class="d-flex flex-column">
-              <h6 class="pdf-degree" style="font-family: 'Saira Extra Condensed';">Data Analytics Certificate</h6>
+              <h6 class="heading heading-6 pdf-degree" style="font-family: 'Saira Extra Condensed';">Data Analytics Certificate</h6>
               <p class="resume-content" style="font-family: 'Open Sans';"></p>
             </div>
           </div>
@@ -1560,7 +1560,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
               </div>
             </div>
             <div class="d-flex flex-column">
-              <h6 class="pdf-degree" style="font-family: 'Saira Extra Condensed';">Bachelor of Arts and Sciences</h6>
+              <h6 class="heading heading-6 pdf-degree" style="font-family: 'Saira Extra Condensed';">Bachelor of Arts and Sciences</h6>
               <p class="resume-content" style="font-family: 'Open Sans';"></p>
             </div>
           </div>
@@ -1576,7 +1576,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
               </div>
             </div>
             <div class="d-flex flex-column">
-              <h6 class="pdf-degree" style="font-family: 'Saira Extra Condensed';">High School</h6>
+              <h6 class="heading heading-6 pdf-degree" style="font-family: 'Saira Extra Condensed';">High School</h6>
               <p class="resume-content" style="font-family: 'Open Sans';"></p>
             </div>
           </div>
@@ -1587,7 +1587,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
       <div id="interests-container" class="col-12 col-md-8">
         <section id="interests" class="resume-section mt-2 ml-3" renderpdf="true">
           <div class="my-auto">
-            <h4 class="mb-3" style="font-family: 'Saira Extra Condensed';">Interests</h4>
+            <h4 class="heading heading-4 mb-3" style="font-family: 'Saira Extra Condensed';">Interests</h4>
             <p class="mb-0" style="font-family: 'Open Sans';">When I'm not knuckle-deep in code, I like to knead bread, dig gardens, vermicompost and cook tasty meals. I do some yoga and pilates to work on the code-bod. I have been known to be insipired by the dramatic muses. Ask for an accent sometime! Being a big fan of perspective, when I started going underwater at age 11, what once was a world of fear turned into a world of wonder. When I can, SCUBA is pretty sweet stuff. Speaking of perspective, here's some shortpoetry...
             </p>
           </div>
@@ -1611,7 +1611,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
         <div class="custom-modal-backdrop" style="display: none;">
           <div role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" class="custom-modal">
             <header id="modalTitle" class="custom-modal-header">
-              <h4 class="mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
+              <h4 class="heading heading-4 mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
                   <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path>
                 </svg></button>
             </header>
@@ -1643,7 +1643,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
         <div class="custom-modal-backdrop modal-fade-leave modal-fade-leave-active" style="display: none;">
           <div role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" class="custom-modal">
             <header id="modalTitle" class="custom-modal-header">
-              <h4 class="mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
+              <h4 class="heading heading-4 mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
                   <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path>
                 </svg></button>
             </header>
@@ -1675,7 +1675,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
         <div class="custom-modal-backdrop modal-fade-leave modal-fade-leave-active" style="display: none;">
           <div role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" class="custom-modal">
             <header id="modalTitle" class="custom-modal-header">
-              <h4 class="mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
+              <h4 class="heading heading-4 mr-auto">Save to PDF</h4> <button type="button" aria-label="Close modal" class="btn-ex"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="svg-inline--fa fa-times fa-w-11">
                   <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path>
                 </svg></button>
             </header>

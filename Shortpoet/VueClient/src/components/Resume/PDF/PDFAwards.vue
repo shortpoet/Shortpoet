@@ -48,9 +48,9 @@ export default {
     },
     headingClass () {
       return this.renderPDF ?
-        'mb-2'
+        'heading heading-4 mb-2'
         :
-        'mb-4 ml-1'
+        'heading heading-4 mb-4 ml-1'
     },
     typeClass () {
       return this.renderPDF ?

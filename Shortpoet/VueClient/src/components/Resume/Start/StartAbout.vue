@@ -6,7 +6,7 @@
   -->
   <section class="resume-section p-3 px-lg-5 d-flex d-column" id="about">
     <div class="my-auto">
-      <h1 class="mb-0">{{ name }}
+      <h1 class="heading heading-1 mb-0">{{ name }}
         <span class="text-primary">{{ surname }}</span>
       </h1>
       <!-- https://lonewolfonline.net/html-character-codes-ascii-entity-unicode-symbols/ -->
@@ -60,4 +60,3 @@ export default {
     }
 }
 </script>
-

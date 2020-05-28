@@ -1,4 +1,4 @@
-﻿using DbConnect.Data.Models.Resume;
+﻿using DbConnect.Data.Models.ResumeData;
 using Microsoft.EntityFrameworkCore;
 
 namespace DbConnect.Data
