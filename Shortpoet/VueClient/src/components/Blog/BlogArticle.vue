@@ -7,7 +7,7 @@
           <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="" role="button" aria-haspopup="true" aria-expanded="false">Languages</router-link>
           <div class="dropdown-menu">
             <router-link class="dropdown-item" to="/blog/learning-to-unit-test-en">English</router-link>
-            <router-link class="dropdown-item" to="/blog/">Spanish</router-link>
+            <router-link class="dropdown-item" to="/blog/learning-to-unit-test-es">Spanish</router-link>
           </div>
         </li>      
     </ul>
@@ -32,11 +32,9 @@ export default {
     // correct
     selectedArticle: function () {
       console.log(this.language)
-      // const title = 'learning-to-unit-test'
-      // const articlePath = `./../../components/Blog/Articles/${title}.md`
-      // console.log(articlePath)
-      return () => import('./../../components/Blog/Articles/learning-to-unit-test.md')
-      // return () => import(articlePath)
+      const english = () => import('./../../components/Blog/Articles/learning-to-unit-test-en.md')
+      const spanish = () => import('./../../components/Blog/Articles/learning-to-unit-test-es.md')
+      return this.language === 'en' ? english : spanish
     }
   },
   mounted() {

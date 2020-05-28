@@ -24,6 +24,7 @@ const paths = [
   {
     path: '/blog',
     view: 'Blog',
+    props: true,
     children: [
       // {
       //   path: '/blog/:title',
@@ -34,14 +35,14 @@ const paths = [
         path: '/blog/learning-to-unit-test-en',
         name: 'learning-to-unit-test-en',
         props: {
-          language: 'english'
+          language: 'en'
         }
       },
       {
         path: '/blog/learning-to-unit-test-es',
         name: 'learning-to-unit-test-es',
         props: {
-          language: 'spanish'
+          language: 'es'
         }
       }
     ]

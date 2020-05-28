@@ -21,7 +21,7 @@ export default {
   computed: {
     blogRoot() {
       console.log(this.$route)
-      return this.$route.path === '/blog/'
+      return this.$route.path === '/blog'
     }
   },
   mounted() {

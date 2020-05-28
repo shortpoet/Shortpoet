@@ -18,20 +18,9 @@ export default {
     language: String
   },
   computed: {
-    // incorrect
-    // selectedArticle: () => import('./../../components/Blog/Articles/')
-    // correct
-    selectedArticle: function () {
-      console.log(this.language)
-      // const title = 'learning-to-unit-test'
-      // const articlePath = `./../../components/Blog/Articles/${title}.md`
-      // console.log(articlePath)
-      return () => import('./../../components/Blog/Articles/learning-to-unit-test.md')
-      // return () => import(articlePath)
-    }
   },
   mounted() {
-    console.log('mounted from blogarticle')
+    console.log('mounted from bloglist')
     console.log(this.$route)
   }
 }
