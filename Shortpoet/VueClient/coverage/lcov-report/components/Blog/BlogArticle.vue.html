@@ -32,14 +32,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
@@ -105,8 +105,9 @@
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,12 +142,15 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -159,15 +163,14 @@
   &lt;nav class="nav"&gt;
     &lt;ul class="nav"&gt;
       &lt;li class="nav-item dropdown"&gt;
-          &lt;router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="" role="button" aria-haspopup="true" aria-expanded="false"&gt;Languages&lt;/router-link&gt;
+          &lt;router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="" role="button" aria-haspopup="true" aria-expanded="false"&gt;{{ dropDown }}&lt;/router-link&gt;
           &lt;div class="dropdown-menu"&gt;
-            &lt;router-link class="dropdown-item" to="/blog/learning-to-unit-test-en"&gt;English&lt;/router-link&gt;
-            &lt;router-link class="dropdown-item" to="/blog/learning-to-unit-test-es"&gt;Spanish&lt;/router-link&gt;
+            &lt;router-link class="dropdown-item" to="/blog/learning-to-unit-test-en"&gt;{{ englishLink }}&lt;/router-link&gt;
+            &lt;router-link class="dropdown-item" to="/blog/learning-to-unit-test-es"&gt;{{ spanishLink }}&lt;/router-link&gt;
           &lt;/div&gt;
         &lt;/li&gt;      
     &lt;/ul&gt;
   &lt;/nav&gt;
-  &lt;p&gt;Test Article&lt;/p&gt;
   &lt;div class="article-container"&gt;
     &lt;component :is="selectedArticle" /&gt;
   &lt;/div&gt;
@@ -186,15 +189,18 @@ export default {
     // selectedArticle: () =&gt; import('./../../components/Blog/Articles/')
     // correct
 <span class="fstat-no" title="function not covered" >    selectedArticle: function () {</span>
-<span class="cstat-no" title="statement not covered" >      console.log(this.language)</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      const english = () =&gt; import('./../../components/Blog/Articles/learning-to-unit-test-en.md')</span></span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      const spanish = () =&gt; import('./../../components/Blog/Articles/learning-to-unit-test-es.md')</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      const english = () =&gt; import(`./../../components/Blog/Articles/learning-to-unit-test-en.md`)</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      const spanish = () =&gt; import(`./../../components/Blog/Articles/learning-to-unit-test-es.md`)</span></span>
 <span class="cstat-no" title="statement not covered" >      return this.language === 'en' ? english : spanish</span>
-    }
+    },
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    dropDown() { return this.language === `en` ? `Languages` : `Idiomas` },</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    englishLink() {return this.language === `en` ? `English` : `Inglés`},</span></span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    spanishLink() {return this.language === `en` ? `Spanish` : `Español`}</span></span>
   },
 <span class="fstat-no" title="function not covered" >  mounted() {</span>
-<span class="cstat-no" title="statement not covered" >    console.log('mounted from blogarticle')</span>
-<span class="cstat-no" title="statement not covered" >    console.log(this.$route)</span>
+    // possible future option 
+    // https://stackoverflow.com/questions/50053556/dynamic-imported-vue-component-failed-to-resolve
+    // https://stackoverflow.com/questions/53630683/webpack-dependency-management-and-vue-js-async-component-loading
   }
 }
 &lt;/script&gt;
@@ -208,7 +214,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu May 28 2020 12:07:07 GMT-0500 (Central Daylight Time)
+                at Thu May 28 2020 14:22:59 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

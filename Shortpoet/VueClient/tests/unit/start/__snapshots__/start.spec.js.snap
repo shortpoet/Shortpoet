@@ -17,7 +17,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
   <div class="container-fluid p-0">
     <section id="about" class="resume-section p-3 px-lg-5 d-flex d-column">
       <div class="my-auto">
-        <h1 class="mb-0">CARLOS
+        <h1 class="heading heading-1 mb-0">CARLOS
           <span class="text-primary">SORIANO</span></h1>
         <div class="ml-2 d-inline-flex flex-column subheading">
           <div class="d-inline-flex flex-column"><span id="start-flags" class="not-name">🇪🇸 🇵🇭 🇺🇸 🇨🇳 🇫🇷 🇮🇹 🇩🇪 🇧🇷</span> <a href="mailto:soriano.carlitos@gmail.com">soriano.carlitos@gmail.com</a> <span id="start-address">Currently in St. Louis, MO</span></div>
@@ -32,13 +32,13 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="https://www.linkedin.com/in/carlos-soriano-49aaa97/"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li>
           <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="https://www.instagram.com/shortpoet/"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li>
           <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="https://twitter.com/shortpoet3"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
-          <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="http://localhost/pdf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="far fa-file-pdf-o fa-stack-1x fa-inverse"></i></span></a></li>
+          <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="/"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-home fa-stack-1x fa-inverse"></i></span></a></li>
         </ul>
       </div>
     </section>
     <section id="skills" class="resume-section pl-3 p-lg-5 d-flex flex-column">
       <div class="my-auto">
-        <h2 class="mb-4 mb-md-3">Skills</h2>
+        <h2 class="heading heading-2 mb-4 mb-md-3">Skills</h2>
         <div class="subheading mb-3">
           Programming Languages &amp; Tools
         </div>
@@ -332,7 +332,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
     </section>
     <section id="awards" class="resume-section p-3 p-lg-5 d-flex flex-column">
       <div class="my-auto">
-        <h2 class="mb-4 mb-md-3">Natural Languages</h2>
+        <h2 class="heading heading-2 mb-4 mb-md-3">Natural Languages</h2>
         <ul class="fa-ul mb-0">
           <li><i class="proficient language-icon fa fa-flag fa-li"></i> <span class="mb-5">Italian (Proficient) </span></li>
           <li><i class="native language-icon fa fa-flag fa-li"></i> <span class="mb-5">English, Spanish, Tagalog (Native) </span></li>
@@ -373,12 +373,12 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
     </section>
     <section id="experience" class="resume-section p-3 p-lg-5 d-flex flex-column">
       <div class="my-auto">
-        <h2 class="start-experience-header mb-4 mb-md-3">Experience</h2>
+        <h2 class="heading heading-2 start-experience-header mb-4 mb-md-3">Experience</h2>
         <div class="resume-item d-flex flex-column mb-2">
-          <h2 class="start-experience-type mb-3">software</h2>
+          <h2 class="heading heading-2 start-experience-type mb-3">software</h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Developer</h3>
+              <h3 class="heading heading-3 mb-0">Developer</h3>
               <div class="start-company subheading mb-3">Personal Project</div>
               <div>
                 <p class="job-1-description-1">• Escoba Card Game App </p>
@@ -401,7 +401,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Developer</h3>
+              <h3 class="heading heading-3 mb-0">Developer</h3>
               <div class="start-company subheading mb-3">Personal Project</div>
               <div>
                 <p class="job-2-description-1">• Poet University </p>
@@ -421,7 +421,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Developer</h3>
+              <h3 class="heading heading-3 mb-0">Developer</h3>
               <div class="start-company subheading mb-3">Personal Project</div>
               <div>
                 <p class="job-3-description-1">• Web App and Social Integration Dashboard </p>
@@ -441,7 +441,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Software Engineer</h3>
+              <h3 class="heading heading-3 mb-0">Software Engineer</h3>
               <div class="start-company subheading mb-3">Boeing</div>
               <div>
                 <p class="job-4-description-1">• Built an application to assess the validity of employee timesheet entries. Managers asked for functionality to parse different types of copy/pasted input of time data. A SQL databse function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
@@ -470,10 +470,10 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
         </div>
         <div class="resume-item d-flex flex-column mb-2">
-          <h2 class="start-experience-type mb-3">language</h2>
+          <h2 class="heading heading-2 start-experience-type mb-3">language</h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Sinologist</h3>
+              <h3 class="heading heading-3 mb-0">Sinologist</h3>
               <div class="start-company subheading mb-3">World Eye Reports</div>
               <div>
                 <p class="job-1-description-1">Shanghai, PRC. Translator, Interpreter, media Sales, wrote articles and sold ads for advertorial project based out of Shanghai.</p>
@@ -483,7 +483,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">QA Tester</h3>
+              <h3 class="heading heading-3 mb-0">QA Tester</h3>
               <div class="start-company subheading mb-3">GTL Media</div>
               <div>
                 <p class="job-2-description-1">Translator, linguistic tester, translated texts for various media including video games, film, and legal, checked video games for linguistic bugs and translation errors, translation of .xml databases for in-game script</p>
@@ -493,7 +493,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Executive Assistant to the CEO</h3>
+              <h3 class="heading heading-3 mb-0">Executive Assistant to the CEO</h3>
               <div class="start-company subheading mb-3">EZI</div>
               <div>
                 <p class="job-3-description-1">Manila, Philippines. Participated in managing daily operations in a bilingual office setting, supervised staff, attended developmental meetings, tracked and prepared development projects, made calls to and from suppliers and manufacturers, purchased investment property, created investment portfolios and marketing and business plans, gaining insights into the world of Big Business.</p>
@@ -503,7 +503,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Freelance Translator / Interpreter</h3>
+              <h3 class="heading heading-3 mb-0">Freelance Translator / Interpreter</h3>
               <div class="start-company subheading mb-3">Various Interpretation Agencies</div>
               <div>
                 <p class="job-4-description-1">Medical, dental and media conferences, on-site medical and legal interpretation for depositions, insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, and various other language-related assignments, primarily in Spanish and Tagalog, some French.</p>
@@ -513,10 +513,10 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
         </div>
         <div class="resume-item d-flex flex-column mb-2">
-          <h2 class="start-experience-type mb-3">sales</h2>
+          <h2 class="heading heading-2 start-experience-type mb-3">sales</h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Product Specialist - Sales</h3>
+              <h3 class="heading heading-3 mb-0">Product Specialist - Sales</h3>
               <div class="start-company subheading mb-3">Toyota of Hollywood &amp; Hollywood Electrics – Electric Cycle Dealership</div>
               <div>
                 <p class="job-1-description-1">New and Pre-owned Conventional and Electric Car and Cycle Sales; Sales made in English, Spanish, Tagalog, French, and Mandarin, Self-directed marketing efforts</p>
@@ -526,10 +526,10 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
         </div>
         <div class="resume-item d-flex flex-column mb-2">
-          <h2 class="start-experience-type mb-3">hospitality</h2>
+          <h2 class="heading heading-2 start-experience-type mb-3">hospitality</h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Grill Chef de Partie</h3>
+              <h3 class="heading heading-3 mb-0">Grill Chef de Partie</h3>
               <div class="start-company subheading mb-3">Many Different Restaurants - mostly a cook, sometimes a bartender</div>
               <div>
                 <p class="job-1-description-1">Post Haus Restaurant - St. Moritz, Switzerland stands out as I ran the gamut from helping plan restaurant concept, designed Grill Station, assisted in menu planning and execution, provided back-end data for owners during the length of the contract, offering particular assistance interpreting for members of the multi-cultural staff and management.</p>
@@ -539,7 +539,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">Food delivery logistics</h3>
+              <h3 class="heading heading-3 mb-0">Food delivery logistics</h3>
               <div class="start-company subheading mb-3">DoorDash and Grubhub</div>
               <div>
                 <p class="job-2-description-1">Operating 2 apps at the same time to maximize earnings, while maintaining customer satisfaction and high ratings, experienced first hand the effects of data collection of market and labor fluctuations and how they determined the logic behind the apps while I was learning to code.</p>
@@ -552,10 +552,10 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
     </section>
     <section id="education" class="resume-section p-3 p-lg-5 d-flex flex-column">
       <div class="my-auto">
-        <h2 class="mb-5">Education</h2>
+        <h2 class="heading heading-2 mb-5">Education</h2>
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
-            <h3 class="mb-0">Washington University in St. Louis</h3>
+            <h3 class="heading heading-3 mb-0">Washington University in St. Louis</h3>
             <div class="start-degree subheading mb-3">Data Analytics Certificate</div>
             <div class="start-education-details"></div>
           </div>
@@ -563,7 +563,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
         </div>
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
-            <h3 class="mb-0">University of Pennsylvania</h3>
+            <h3 class="heading heading-3 mb-0">University of Pennsylvania</h3>
             <div class="start-degree subheading mb-3">Bachelor of Arts and Sciences</div>
             <div class="start-education-details"></div>
           </div>
@@ -571,7 +571,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
         </div>
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
-            <h3 class="mb-0">Thacher School</h3>
+            <h3 class="heading heading-3 mb-0">Thacher School</h3>
             <div class="start-degree subheading mb-3">High School</div>
             <div class="start-education-details"></div>
           </div>
@@ -581,7 +581,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
     </section>
     <section id="interests" class="resume-section p-3 p-lg-5 d-flex flex-column">
       <div class="my-auto">
-        <h2 class="mb-4 mb-md-3">Interests</h2>
+        <h2 class="heading heading-2 mb-4 mb-md-3">Interests</h2>
         <p class="mb-4">When I'm not knuckle-deep in code, I like to knead bread, dig gardens, vermicompost and cook tasty meals. I do some yoga and pilates to work on the code-bod. I have been known to be insipired by the dramatic muses. Ask for an accent sometime! Being a big fan of perspective, when I started going underwater at age 11, what once was a world of fear turned into a world of wonder. When I can, SCUBA is pretty sweet stuff. Speaking of perspective, here's some shortpoetry...
         </p>
       </div>

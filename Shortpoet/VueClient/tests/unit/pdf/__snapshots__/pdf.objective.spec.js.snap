@@ -3,7 +3,7 @@
 exports[`PDFObjective.vue matches objective snapshot 1`] = `
 <section id="pdf-objective" class="resume-section mb-3">
   <div id="objective" class="d-flex align-items-center">
-    <h4 style="font-family: 'Saira Extra Condensed';">
+    <h4 class="heading heading-4" style="font-family: 'Saira Extra Condensed';">
       Objective
     </h4>
   </div>
@@ -22,7 +22,7 @@ exports[`PDFObjective.vue matches objective snapshot 1`] = `
 exports[`PDFObjective.vue matches renderPDF objective snapshot 1`] = `
 <section id="pdf-objective" class="resume-section-render mb-3">
   <div id="objective" class="d-flex align-items-center">
-    <h4 style="font-family: 'Saira Extra Condensed';">
+    <h4 class="heading heading-4" style="font-family: 'Saira Extra Condensed';">
       Objective
     </h4>
   </div>
