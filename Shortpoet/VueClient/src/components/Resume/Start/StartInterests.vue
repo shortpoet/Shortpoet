@@ -1,7 +1,7 @@
 <template>
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
     <div class="my-auto">
-      <h2 class="mb-4 mb-md-3">Interests</h2>
+      <h2 class="heading heading-2 mb-4 mb-md-3">Interests</h2>
       <p class="mb-4">{{ interests }}</p>
     </div>
     <div class="short-poetry my-auto">

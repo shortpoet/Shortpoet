@@ -33,7 +33,7 @@
           id="modalTitle"
         >
           <slot name="header">
-            <h4 class="mr-auto">Save to PDF</h4>
+            <h4 class="heading heading-4 mr-auto">Save to PDF</h4>
             <button
               type="button"
               class="btn-ex"
