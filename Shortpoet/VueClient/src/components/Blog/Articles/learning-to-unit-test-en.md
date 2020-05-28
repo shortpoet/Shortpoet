@@ -105,3 +105,12 @@ For the [future](https://www.shortpoet.com) (because this is finally looking lik
 That file extension is a great opportunity to practice what is known as [TDD](https://en.wikipedia.org/wiki/Test-driven_development) or test driven development.  Basically, one would write a test that would check a method enabling the API to switch between file extensions - such feature! And the way that will work (future Carlos!) is that you will write the test case that should pass (egg boils at perfect temperature) and then write that code that ensures that action (the test passes - a perfect egg).
 
 So in conclusion, learn to cook an egg properly, love your unit tests, and in the process find your [voice](https://www.shortpoet.com/blog).
+
+--- 
+
+Originally published at: 
+https://shortpoet.com/blog/learning-to-unit-test-en
+
+---
+
+[Spanish translation](https://shortpoet.com/blog/learning-to-unit-test-es)
