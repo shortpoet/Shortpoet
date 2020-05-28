@@ -56,6 +56,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store(storeConfig)
 Vue.use(VueRouter)
 const router = new VueRouter(routerConfig)
+console.log(router)
 new Vue({
   router,
   store,

@@ -2,29 +2,27 @@
   <div class="blog-wrapper">
     <BlogNav />
     <div class="blog-container">
-      <!-- <BlogArticle 
-        :title="'test title'"
-      /> -->
-      <ul>
-        <li>
-          <router-link to="/blog/learning-to-unit-test-en">Learning To Unit Test</router-link>
-        </li>
-      </ul>
+      <BlogList v-if="blogRoot" />
+      <router-view v-else />
     </div>
   </div>
 </template>
 
 <script>
 import BlogNav from '@/components/Blog/BlogNav'
-// import BlogArticle from '@/components/Blog/BlogArticle'
+import BlogList from '@/components/Blog/BlogList'
 
 export default {
   name: 'Blog',
   components: {
     BlogNav,
-    // BlogArticle
+    BlogList
   },
   computed: {
+    blogRoot() {
+      console.log(this.$route)
+      return this.$route.path === '/blog/'
+    }
   },
   mounted() {
     console.log(this)
