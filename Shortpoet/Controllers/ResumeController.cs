@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Shortpoet.Data.Models.Resume;
+using Shortpoet.Data.Models.ResumeData;
 using Shortpoet.Data;
 
 namespace Shortpoet.Controllers

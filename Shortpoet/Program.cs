@@ -1,15 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-using Shortpoet.Data;
-using Shortpoet.Data.Seed;
-using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Shortpoet.Data.Models.ResumeData;
+using Shortpoet.Data.ResumeData.Seed;
 
 namespace Shortpoet
 {
@@ -46,12 +42,16 @@ namespace Shortpoet
           // run this code first before DBInit is written to test the rest of the setup
           // context.Database.EnsureCreated();
 
-
           Console.WriteLine("############################");
           Console.WriteLine("About to run CreateDbifNot Exists");
-          Console.WriteLine("############################");
-          Console.WriteLine("Here is connection string");
-          Console.WriteLine(context.Database.GetDbConnection().ConnectionString);
+          
+          // ##
+          // COMMENT OR REMOVE IN PRODUCTION
+          if(hostingEnvironment.EnvironmentName != "Production") {
+            Console.WriteLine("############################");
+            Console.WriteLine("Here is connection string");
+            Console.WriteLine(context.Database.GetDbConnection().ConnectionString);
+          }
 
           DbInitializer.InitializeDb(context, hostingEnvironment);
 

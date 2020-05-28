@@ -7,7 +7,7 @@ exports[`PDFAbout.vue matches renderPDF snapshot 1`] = `
     <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
       <ul class="list-inline">
         <li>
-          <h2 class="mb-0" style="font-family: 'Saira Extra Condensed';">sample name
+          <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">sample name
             <span id="pdf-surname" class="text-primary" style="font-family: 'Saira Extra Condensed';">sample surname</span></h2>
         </li>
         <li><span class="not-name"><a href="mailto:sample email" style="font-family: 'Open Sans';">
@@ -27,7 +27,7 @@ exports[`PDFAbout.vue matches renderPDF snapshot 1`] = `
           <li class="social-item"><a href="https://www.linkedin.com/in/carlos-soriano-49aaa97/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-linkedin fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.linkedin.com/in/carlos-soriano-49aaa97/</span></a></li>
           <li class="social-item"><a href="https://www.instagram.com/shortpoet/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-instagram fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.instagram.com/shortpoet/</span></a></li>
           <li class="social-item"><a href="https://twitter.com/shortpoet3"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-twitter fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://twitter.com/shortpoet3</span></a></li>
-          <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-globe fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
+          <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .65rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-home fa-stack-1x fa-inverse"></i></span> <span class="social-url d-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
         </ul>
       </section>
     </div>
@@ -42,7 +42,7 @@ exports[`PDFAbout.vue matches snapshot 1`] = `
     <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
       <ul class="list-inline">
         <li>
-          <h2 class="mb-0" style="font-family: 'Saira Extra Condensed';">sample name
+          <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">sample name
             <span id="pdf-surname" class="text-primary" style="font-family: 'Saira Extra Condensed';">sample surname</span></h2>
         </li>
         <li><span class="not-name"><a href="mailto:sample email" style="font-family: 'Open Sans';">
@@ -62,7 +62,7 @@ exports[`PDFAbout.vue matches snapshot 1`] = `
           <li class="social-item"><a href="https://www.linkedin.com/in/carlos-soriano-49aaa97/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-linkedin fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.linkedin.com/in/carlos-soriano-49aaa97/</span></a></li>
           <li class="social-item"><a href="https://www.instagram.com/shortpoet/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-instagram fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://www.instagram.com/shortpoet/</span></a></li>
           <li class="social-item"><a href="https://twitter.com/shortpoet3"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-twitter fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://twitter.com/shortpoet3</span></a></li>
-          <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-globe fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
+          <li class="social-item"><a href="/"><span class="social-icon-layer fa-stack fa-lg" style="font-family: FontAwesome; font-size: .85rem;"><i class="fa fa-circle fa-stack-2x"></i> <i class="social-icon fa fa-home fa-stack-1x fa-inverse"></i></span> <span class="social-url d-none d-md-inline" style="font-family: 'Open Sans'; font-size: .55rem;">https://shortpoet.com</span></a></li>
         </ul>
       </section>
     </div>

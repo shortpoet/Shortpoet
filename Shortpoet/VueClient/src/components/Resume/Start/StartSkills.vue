@@ -1,7 +1,7 @@
 <template>
   <section class="resume-section pl-3 p-lg-5 d-flex flex-column" id="skills">
     <div class="my-auto">
-      <h2 class="mb-4 mb-md-3">Skills</h2>
+      <h2 class="heading heading-2 mb-4 mb-md-3">Skills</h2>
       <div class="subheading mb-3">
         Programming Languages &amp; Tools
       </div>

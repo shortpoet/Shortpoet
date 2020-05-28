@@ -1,7 +1,7 @@
 <template>
   <section class="resume-section mt-2 ml-3" id="interests">
     <div class="my-auto">
-      <h4 style="font-family: 'Saira Extra Condensed';" class="mb-3">Interests</h4>
+      <h4 style="font-family: 'Saira Extra Condensed';" class="heading heading-4 mb-3">Interests</h4>
       <p style="font-family: 'Open Sans';" class="mb-0">{{ interests }}</p>
     </div>
   </section>
