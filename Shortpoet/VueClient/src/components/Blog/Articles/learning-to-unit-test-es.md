@@ -21,7 +21,7 @@ Eso puede sonar como un pedazo de ciberanzuelo, pero la euforia es real, damas y
 
 Tan pronto como me despidieron de Boeing tras el golpe del coronavirus, me dispuse a mejorar mi pagina de curriculum vitae y mi presencia en la red. Ha sido un gran viaje de descubrimiento, tanto de uno mismo como del código. Ese código comenzó como un [diseño simple](https://codeburst.io/how-i-created-seo-friendly-portfolio-cv-website-and-hosted-it-on-github-d5c4da43cf2f). Como los desarrolladores suelen hacer, se añadieron [características](https://dev.to/amruthpillai/ever-dreamed-of-a-free-and-open-source-resume-builder-that-doesn-t-store-your-data-meet-reactive-resume-1dpl) e incluso elementos de diseño encontrados al mirar los [documentos](https://html2canvas.hertzen.com/) tecnicos de dichas características.
 
-Eventualmente fue alojado en Azure. Para mantenerme dentro de los límites de mi presupuesto (¡el alojamiento es caro!), tuve que ser creativo para poder tener tanto entornos de [prueba](https://https://shortpoet-test.azurewebsites.net/) como de [producción](https://shortpoet.azurewebsites.net/), así como [mi url](https://shortpoet.com) que en realidad está alojada en páginas github y simplemente apunta al la terminal de la API de datos servida por la aplicación en Azure.
+Eventualmente fue alojado en Azure. Para mantenerme dentro de los límites de mi presupuesto (¡el alojamiento es caro!), tuve que ser creativo para poder tener tanto entornos de [prueba](https://https://shortpoet-test.azurewebsites.net/) como de [producción](https://shortpoet.azurewebsites.net/), así como [mi URL](https://shortpoet.com) que en realidad está alojada en páginas GitHub y simplemente apunta al la terminal de la API de datos servida por la aplicación en Azure.
 
 Cientos de [commit](https://github.com/shortpoet/Shortpoet/commits/dev) después, entrada en vivo.  Una simple aplicación, pero con muchos puntos de posible fracaso, y yo sólo había experimentado unos pocos. Entra las fase del testing unitario. Finalmente empecé a entender las cosas después de arremangarme y escribir algunas de mis primeras funciones de fabrica de pruebas de unidades.
 
@@ -31,7 +31,7 @@ Darme cuenta de que he escrito código que me impide cambiar arbitrariamente los
 
 Estoy escribiendo por 3 razones:
 
-- [SEO](https://es.wikipedia.org/wiki/Posicionamiento_en_buscadores) (posicionamiento en buscadores) de [Linkedin](https://www.linkedin.com/in/carlos-soriano-49aaa97/)
+- [SEO](https://es.wikipedia.org/wiki/Posicionamiento_en_buscadores) (posicionamiento en buscadores) de [LinkedIn](https://www.linkedin.com/in/carlos-soriano-49aaa97/)
 
 - Así recuerdo lo feliz que te hace sentir el éxito la próxima vez que esté listo para rendirme al aprender algo nuevo
 
@@ -60,7 +60,7 @@ Sólo tengo que decidir quién es mi público, ¡obvio! 🙄 Bueno. Ahora, ¿rec
 
 - ¿Otro reclutador 'random' enviando solicitudes para trabajos con requisitos específicos que no coinciden con mis habilidades, preguntándome si tengo tiempo para conectar?
 
-- ¿Eres alguien que tambien está buscando de forma activa el SEO en [Linkedin](https://www.linkedin.com/in/carlos-soriano-49aaa97/) , y aquí te encuentras?
+- ¿Eres alguien que tambien está buscando de forma activa el SEO en [LinkedIn](https://www.linkedin.com/in/carlos-soriano-49aaa97/) , y aquí te encuentras?
 
 - Quién sabe realmente. Tal vez buscaste en Google los tests unitarios y esperabas encontrar el santo grial que hace de tu código una bestia con constitución de [adamantium](https://es.wikipedia.org/wiki/Adamantium).
 

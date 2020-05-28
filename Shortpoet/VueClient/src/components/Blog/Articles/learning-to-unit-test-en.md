@@ -23,7 +23,7 @@ That might sounds like a whole load of click-chum, but the elation is real ladie
 
 As soon as I got laid off from Boeing when Coronavirus hit, I set out to improve my resume site and online presence.  It has been quite a journey of discovery, both of self and code. That code started as a [simple design](https://codeburst.io/how-i-created-seo-friendly-portfolio-cv-website-and-hosted-it-on-github-d5c4da43cf2f). As developers are wont to do, [features](https://dev.to/amruthpillai/ever-dreamed-of-a-free-and-open-source-resume-builder-that-doesn-t-store-your-data-meet-reactive-resume-1dpl) were added and even design elements found from looking at the [docs](https://html2canvas.hertzen.com/) of said features.
 
-Eventually it was hosted on Azure. In order to stick within the limits of my budget (hosting is expensive!), I had to be creative in order to able to have both [testing](https://https://shortpoet-test.azurewebsites.net/) and [production](https://shortpoet.azurewebsites.net/) environments, as well as [my url](https://shortpoet.com) which is actually hosted on github pages and simply points to the data api endpoint served up by the azure app.
+Eventually it was hosted on Azure. In order to stick within the limits of my budget (hosting is expensive!), I had to be creative in order to able to have both [testing](https://https://shortpoet-test.azurewebsites.net/) and [production](https://shortpoet.azurewebsites.net/) environments, as well as [my URL](https://shortpoet.com) which is actually hosted on GitHub pages and simply points to the data API endpoint served up by the azure app.
 
 Hundreds of [commits](https://github.com/shortpoet/Shortpoet/commits/dev) later, it was live.  A simple app, yet many points of possible failure, and I had only experienced a few. So enter testing. I finally started to get a grasp on things after rolling up my sleeves and writing some of my very first unit test factory functions.
 
@@ -33,7 +33,7 @@ And it's at this moment that I was inspired to put thoughts to keyboard and cobb
 
 I am writing for 3 reasons:
 
-- [Linkedin](https://www.linkedin.com/in/carlos-soriano-49aaa97/) [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)
+- [LinkedIn](https://www.linkedin.com/in/carlos-soriano-49aaa97/) [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)
 
 - So I remember how happy success makes me feel next time I'm ready to give up when learning something new
 
@@ -62,7 +62,7 @@ I just need to decide who my audience is, duh! 🙄 Right. Now who are you, agai
 
 - Another random recruiter who sends specific job requirements that totally don't match my skill-set, asking if I have the time to connect?
 
-- Are you someone who is actively pursuing [Linkedin](https://www.linkedin.com/in/carlos-soriano-49aaa97/) SEO for themselves, and so here you are?
+- Are you someone who is actively pursuing [LinkedIn](https://www.linkedin.com/in/carlos-soriano-49aaa97/) SEO for themselves, and so here you are?
 
 - Who knows really. Maybe you googled unit tests and were hoping to find the holy grail that makes your code an [adamantium](https://en.wikipedia.org/wiki/Adamantium)-framed beast.
 
