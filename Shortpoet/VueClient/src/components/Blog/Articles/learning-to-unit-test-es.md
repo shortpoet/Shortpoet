@@ -21,9 +21,11 @@ Eso puede sonar como un pedazo de ciberanzuelo, pero la euforia es real, damas y
 
 Tan pronto como me despidieron de Boeing tras el golpe del coronavirus, me dispuse a mejorar mi pagina de curriculum vitae y mi presencia en la red. Ha sido un gran viaje de descubrimiento, tanto de uno mismo como del código. Ese código comenzó como un [diseño simple](https://codeburst.io/how-i-created-seo-friendly-portfolio-cv-website-and-hosted-it-on-github-d5c4da43cf2f). Como los desarrolladores suelen hacer, se añadieron [características](https://dev.to/amruthpillai/ever-dreamed-of-a-free-and-open-source-resume-builder-that-doesn-t-store-your-data-meet-reactive-resume-1dpl) e incluso elementos de diseño encontrados al mirar los [documentos](https://html2canvas.hertzen.com/) tecnicos de dichas características.
 
-Eventualmente fue alojado en Azure.Para mantenerme dentro de los límites de mi presupuesto (¡el alojamiento es caro!), tuve que ser creativo para poder tener tanto entornos de [prueba](https://https://shortpoet-test.azurewebsites.net/) como de [producción](https://shortpoet.azurewebsites.net/), así como [mi url](https://shortpoet.com) que en realidad está alojada en páginas github y simplemente apunta al la terminal de la API de datos servida por la aplicación en Azure.
+Eventualmente fue alojado en Azure. Para mantenerme dentro de los límites de mi presupuesto (¡el alojamiento es caro!), tuve que ser creativo para poder tener tanto entornos de [prueba](https://https://shortpoet-test.azurewebsites.net/) como de [producción](https://shortpoet.azurewebsites.net/), así como [mi url](https://shortpoet.com) que en realidad está alojada en páginas github y simplemente apunta al la terminal de la API de datos servida por la aplicación en Azure.
 
 Cientos de [commit](https://github.com/shortpoet/Shortpoet/commits/dev) después, entrada en vivo.  Una simple aplicación, pero con muchos puntos de posible fracaso, y yo sólo había experimentado unos pocos. Entra las fase del testing unitario. Finalmente empecé a entender las cosas después de arremangarme y escribir algunas de mis primeras funciones de fabrica de pruebas de unidades.
+
+Y fue en ese momento que me inspiré a poner pensamientos en el teclado y armé el marco de este artículo.
 
 Darme cuenta de que he escrito código que me impide cambiar arbitrariamente los nombres de los métodos hace que vuelva al patio el niño al que le gustaba jugar contando las líneas saltadas con cada pie.
 
@@ -34,6 +36,8 @@ Estoy escribiendo por 3 razones:
 - Así recuerdo lo feliz que te hace sentir el éxito la próxima vez que esté listo para rendirme al aprender algo nuevo
 
 - Ofrecer una o dos pepitas de sabiduría al futuro Carlos u otros buscadores de información
+
+---
 
 Con la mirada perdida en el esqueleto de un borrador, perdido en la desesperación, pensando
 
@@ -86,11 +90,11 @@ Piensa en el castillo de naipes. Sí, más software del que te gustaría saber s
 
 La cosa de la unidad es la parte difícil y también la belleza. Tuve que refactorizar gran parte de mi código en unidades más definidas para ser fácilmente comprobable. Esto me hizo aprender tanto, que como un desarollador en gran parte autodidacta, me había saltado por el camino.
 
-La mayoría podría hervir un huevo. El día que te aburras y decidas sacar el cronómetro (el que tienes en el teléfono te servirá de sobra si tienes el tiempo en tus manos 😉). Aprendes exactamente la diferencia que puede hacer un minuto, o quizás el empezar con agua fría u hirviendo. Las variaciones podrían ser interminables, como con el código. Así que pruebas, encuentras tu preferencia, y estableces un contrato con tu futuro yo para hacerlo bien. Eventualmente, se convierte en una segunda naturaleza, la memoria, como sabemos, es tanto física como metafísica.
+La mayoría podría hervir un huevo. El día que te aburras y decidas sacar el cronómetro (el que tienes en el teléfono te servirá de sobra si tienes el tiempo en tus manos 😉). Aprendes exactamente la diferencia que puede hacer un minuto, o quizás el empezar con agua fría u hirviendo. Las variaciones podrían ser interminables, como con el código. Así que pruebas, encuentras tu preferencia, y estableces un contrato con tu futuro yo para hacerlo bien. Eventualmente, se convierte en una segunda naturaleza. La memoria, como sabemos, es tanto física como metafísica.
 
 ---
 
-Una anécdota - en una versión de mis métodos, el código que causaba que el navegador se colgara se debía a que no se había detectado una diferencia en las extensiones de los archivos.  Lógicamente, el PNG estaba ocupando mucho más espacio que el JPEG y, por tanto, el colgado.Me imaginé que se debía a las dependencias, o tal vez a una mala configuración por mi parte.  No. Sólo una extensión de archivo. Bueno, en el futuro, ese test me mantendrá cuerdo.
+Una anécdota - en una versión de mis métodos, el código que causaba que el navegador se colgara se debía a que no se había detectado una diferencia en las extensiones de los archivos.  Lógicamente, el PNG estaba ocupando mucho más espacio que el JPEG y, por tanto, el colgado. Me habia imaginado que se debía a las dependencias, o tal vez a una mala configuración por mi parte.  No. Sólo una extensión de archivo. Bueno, en el futuro, ese test me mantendrá cuerdo.
 
 Para el yo del [futuro](https://www.shortpoet.com) (¡porque por fin esto parece un post sólido!)...
 

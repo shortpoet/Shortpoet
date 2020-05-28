@@ -35,9 +35,11 @@ I am writing for 3 reasons:
 
 - [Linkedin](https://www.linkedin.com/in/carlos-soriano-49aaa97/) [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)
 
-- So I remember how happy success makes you feel next time i'm ready to give up when learning something new
+- So I remember how happy success makes me feel next time I'm ready to give up when learning something new
 
 - To offer a nugget or two of wisdom to future Carlos or other seekers of information
+
+---
 
 As I was staring blankly at the bare bones of an outline, lost in despair, thinking
 
@@ -90,11 +92,11 @@ Think house of cards. Yes, more software than you would like to know resembles a
 
 The unit thing is the tricky part and also the beauty. I had to refactor much of my code into more defined units to be easily testable. This made me learn so much, that as a largely self-taught dev, I had missed along the way.
 
-Most could boil an egg. The day you're bored and decide to get out the stopwatch (the one on your phone will do in a pinch if you happen to have the time on your hands 😉). You learn exactly what a difference a minute can make, or perhaps starting with cold or boiling water. The variations could be endless, much like with code. So you test, find your preference, and set a contract with your future self to do it right. Eventually, it becomes like second nature, memory, as we know, is both physical as well as metaphysical.
+Most could boil an egg. The day you're bored and decide to get out the stopwatch (the one on your phone will do in a pinch if you happen to have the time on your hands 😉). You learn exactly what a difference a minute can make, or perhaps starting with cold or boiling water. The variations could be endless, much like with code. So you test, find your preference, and set a contract with your future self to do it right. Eventually, it becomes like second nature. Memory, as we know, is both physical as well as metaphysical.
 
 ---
 
-One anecdote - in one version of my methods, code that was causing the browser to hang was due to not having caught a difference in file extensions. Logically, the PNG was taking up far more compute that the JPEG and hence the hang. I figured it was because of the dependencies, or maybe some misconfiguration on my part. Nope. Just a file extension. Well, in the future, that test will keep me sane.
+One anecdote - in one version of my methods, code that was causing the browser to hang was due to not having caught a difference in file extensions. Logically, the PNG was taking up far more compute that the JPEG and hence the hang. I had figured it was because of the dependencies, or maybe some misconfiguration on my part. Nope. Just a file extension. Well, in the future, that test will keep me sane.
 
 ---
 
