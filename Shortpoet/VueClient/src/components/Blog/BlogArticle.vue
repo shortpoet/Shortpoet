@@ -4,15 +4,14 @@
   <nav class="nav">
     <ul class="nav">
       <li class="nav-item dropdown">
-          <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="" role="button" aria-haspopup="true" aria-expanded="false">Languages</router-link>
+          <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="" role="button" aria-haspopup="true" aria-expanded="false">{{ dropDown }}</router-link>
           <div class="dropdown-menu">
-            <router-link class="dropdown-item" to="/blog/learning-to-unit-test-en">English</router-link>
-            <router-link class="dropdown-item" to="/blog/learning-to-unit-test-es">Spanish</router-link>
+            <router-link class="dropdown-item" to="/blog/learning-to-unit-test-en">{{ englishLink }}</router-link>
+            <router-link class="dropdown-item" to="/blog/learning-to-unit-test-es">{{ spanishLink }}</router-link>
           </div>
         </li>      
     </ul>
   </nav>
-  <p>Test Article</p>
   <div class="article-container">
     <component :is="selectedArticle" />
   </div>
@@ -31,10 +30,13 @@ export default {
     // selectedArticle: () => import('./../../components/Blog/Articles/')
     // correct
     selectedArticle: function () {
-      const english = () => import('./../../components/Blog/Articles/learning-to-unit-test-en.md')
-      const spanish = () => import('./../../components/Blog/Articles/learning-to-unit-test-es.md')
+      const english = () => import(`./../../components/Blog/Articles/learning-to-unit-test-en.md`)
+      const spanish = () => import(`./../../components/Blog/Articles/learning-to-unit-test-es.md`)
       return this.language === 'en' ? english : spanish
-    }
+    },
+    dropDown() { return this.language === `en` ? `Languages` : `Idiomas` },
+    englishLink() {return this.language === `en` ? `English` : `Inglés`},
+    spanishLink() {return this.language === `en` ? `Spanish` : `Español`}
   },
   mounted() {
     // possible future option 

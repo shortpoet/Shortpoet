@@ -34,6 +34,13 @@ $border-radius: .7rem;
 .article-wrapper {
   nav {
     border-bottom: 0rem;
+    ul {
+      li {
+        .dropdown-menu {
+          margin-right: 1rem;
+        }
+      }
+    }
   }
 }
 
