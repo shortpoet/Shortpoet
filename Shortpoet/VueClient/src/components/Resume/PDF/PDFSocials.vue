@@ -85,15 +85,17 @@ export default {
         fontSize: '.85rem'
       }
     },
-      socialsComputed() {
-        return this.socialsData.map(_social => {
-          // this allows to override by hardcoding here
-          if (_social.url === undefined) {
-            _social.url = this.socials.filter(social => social.provider === _social.social)[0].url
-          }
-          return _social
-        })
-      }
+    socialsComputed() {
+      return this.socialsData.map(_social => {
+        // console.log(this.socials)
+        // console.log(this.socials.filter(social => social.provider === _social.social)[0].url)
+        // this allows to override by hardcoding here
+        if (_social.url === undefined) {
+          _social.url = this.socials.filter(social => social.provider === _social.social)[0].url
+        }
+        return _social
+      })
+    }
   },
   methods: {
   }
