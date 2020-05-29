@@ -250,7 +250,7 @@ socials:
   resumeSocials: []
 - id: 2
   provider: linkedin
-  url: https://www.linkedin.com/in/carlos-soriano-49aaa97/
+  url: https://www.linkedin.com/in/carlos-soriano/
   resumeSocials: []
 - id: 3
   provider: instagram

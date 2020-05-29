@@ -40,7 +40,7 @@
 
       <!-- socials column -->
       <div class="d-flex flex-column ml-auto mr-1 mr-md-3" id="socials">
-        <PDFSocials :renderPDF="renderPDF" />
+        <PDFSocials :renderPDF="renderPDF" :socials="socials" />
       </div>
 
     </div>
@@ -81,38 +81,14 @@ export default {
       renderPDF: {
         type: Boolean,
         default: false
+      },
+      socials: {
+        type: Array
       }
     },
     data () {
       return {
-        pic: require('@/assets/github_profile_pic.png'),
-        socials: [
-          {
-            social: 'github',
-            url: 'https://github.com/shortpoet',
-            transform: 'shrink-5'
-          },
-          {
-            social: 'linkedin',
-            url: 'https://www.linkedin.com/in/carlos-soriano-49aaa97/',
-            transform: 'shrink-6 right-1'
-          },
-          {
-            social: 'instagram',
-            url: 'https://www.instagram.com/shortpoet/',
-            transform: 'shrink-5 right-1'
-          },
-          {
-            social: 'twitter',
-            url: 'https://twitter.com/shortpoet3',
-            transform: 'shrink-6'
-          },
-          {
-            social: 'globe',
-            url: 'https://shortpoet.com',
-            transform: 'shrink-6 right-.25'
-          }
-        ]
+        pic: require('@/assets/github_profile_pic.png')
       }
     },
     computed: {
