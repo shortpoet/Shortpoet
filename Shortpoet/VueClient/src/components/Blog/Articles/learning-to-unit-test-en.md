@@ -109,8 +109,8 @@ So in conclusion, learn to cook an egg properly, love your unit tests, and in th
 --- 
 
 Originally published at: 
-https://shortpoet.com/blog/learning-to-unit-test-en
+https://www.shortpoet.com/blog/learning-to-unit-test-en
 
 ---
 
-[Spanish translation](https://shortpoet.com/blog/learning-to-unit-test-es)
+[Spanish translation](https://www.shortpoet.com/blog/learning-to-unit-test-es)
