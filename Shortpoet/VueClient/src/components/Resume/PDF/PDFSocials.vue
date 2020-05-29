@@ -3,7 +3,7 @@
     <ul class="list-inline list-social-icons mb-0 mt-0 mr-lg-2">
       <li
         class="social-item"
-        v-for="(social, i) in socials"
+        v-for="(social, i) in socialsComputed"
         :key="i"
       >
         <a :href="social.url">
@@ -29,33 +29,32 @@ export default {
   renderPDF: {
     type: Boolean,
     default: false
+  },
+  socials: {
+    type: Array
   }
 },
   data () {
     return {
-      socials: [
+      socialsData: [
         {
           social: 'github',
           icon: 'fa fa-github',
-          url: 'https://github.com/shortpoet',
           transform: 'shrink-5'
         },
         {
           social: 'linkedin',
           icon: 'fa fa-linkedin',
-          url: 'https://www.linkedin.com/in/carlos-soriano-49aaa97/',
           transform: 'shrink-6 right-1'
         },
         {
           social: 'instagram',
           icon: 'fa fa-instagram',
-          url: 'https://www.instagram.com/shortpoet/',
           transform: 'shrink-5 right-1'
         },
         {
           social: 'twitter',
           icon: 'fa fa-twitter',
-          url: 'https://twitter.com/shortpoet3',
           transform: 'shrink-6'
         },
         {
@@ -86,6 +85,17 @@ export default {
         fontSize: '.85rem'
       }
     },
+    socialsComputed() {
+      return this.socialsData.map(_social => {
+        // console.log(this.socials)
+        // console.log(this.socials.filter(social => social.provider === _social.social)[0].url)
+        // this allows to override by hardcoding here
+        if (_social.url === undefined) {
+          _social.url = this.socials.filter(social => social.provider === _social.social)[0].url
+        }
+        return _social
+      })
+    }
   },
   methods: {
   }

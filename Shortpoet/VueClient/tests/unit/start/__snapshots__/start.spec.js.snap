@@ -29,7 +29,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
       <div class="my-auto">
         <ul class="list-inline list-social-icons mb-0 mt-0">
           <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="https://github.com/shortpoet"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-github fa-stack-1x fa-inverse"></i></span></a></li>
-          <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="https://www.linkedin.com/in/carlos-soriano-49aaa97/"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li>
+          <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="https://www.linkedin.com/in/carlos-soriano/"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li>
           <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="https://www.instagram.com/shortpoet/"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li>
           <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="https://twitter.com/shortpoet3"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
           <li class="social-item list-inline-item " style="font-family: FontAwesome;"><a href="/"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-home fa-stack-1x fa-inverse"></i></span></a></li>

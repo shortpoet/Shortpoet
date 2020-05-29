@@ -9,6 +9,7 @@
         :visas="getResume.visas"
         :flags="getResume.flags"
         :renderPDF="renderPDF"
+        :socials="getResume.socials"
       />
       <PDFBorder class="my-2" :size=".25"/>
       

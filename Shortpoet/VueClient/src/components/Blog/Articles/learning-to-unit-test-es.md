@@ -105,8 +105,8 @@ Así que en conclusión, aprende a cocinar un huevo correctamente, ama tus prueb
 --- 
 
 Publicado orignalmente en: 
-https://shortpoet.com/blog/learning-to-unit-test-es
+https://www.shortpoet.com/blog/learning-to-unit-test-es
 
 ---
 
-[Traducción al inglés](https://shortpoet.com/blog/learning-to-unit-test-ene)
+[Traducción al inglés](https://www.shortpoet.com/blog/learning-to-unit-test-ene)

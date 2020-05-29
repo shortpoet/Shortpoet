@@ -10,7 +10,9 @@
         :visas="getResume.visas"
         :flags="getResume.flags"
       />
-      <StartSocials />
+      <StartSocials 
+        :socials="getResume.socials"
+      />
       <StartSkills
         :skills="getResume.skills"
       />
@@ -92,7 +94,7 @@ export default {
       this.$('body').scrollspy({
         target: '#sideNav'
       })
-      this.loadResume()
+      this.loadResume().then(() => console.log(this.getResume.socials))
     })
   }
 

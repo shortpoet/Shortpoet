@@ -6,7 +6,7 @@
         <li
           :style="{fontFamily: 'FontAwesome'}"
           class="social-item list-inline-item "
-          v-for="(social, i) in socials"
+          v-for="(social, i) in socialsComputed"
           :key="i"
         >
           <a :href="social.url">
@@ -28,36 +28,35 @@ export default {
     components: {
     },
     props: {
+      socials: {
+        type: Array
+      }
     },
     data () {
       return {
-        socials: [
+        socialsData: [
           {
             social: 'github',
             icon: 'fa fa-github',
-            url: 'https://github.com/shortpoet',
             transform: 'shrink-5'
           },
           {
             social: 'linkedin',
             icon: 'fa fa-linkedin',
-            url: 'https://www.linkedin.com/in/carlos-soriano-49aaa97/',
             transform: 'shrink-6 right-1'
           },
           {
             social: 'instagram',
             icon: 'fa fa-instagram',
-            url: 'https://www.instagram.com/shortpoet/',
             transform: 'shrink-5 right-1'
           },
           {
             social: 'twitter',
             icon: 'fa fa-twitter',
-            url: 'https://twitter.com/shortpoet3',
             transform: 'shrink-6'
           },
           {
-            social: 'file-pdf',
+            social: 'website',
             icon: 'fa fa-home',
             url: '/',
             // for router-link version to test built dist
@@ -67,6 +66,15 @@ export default {
       }
     },
     computed: {
+      socialsComputed() {
+        return this.socialsData.map(_social => {
+          // this allows to override by hardcoding here
+          if (_social.url === undefined) {
+            _social.url = this.socials.filter(social => social.provider === _social.social)[0].url
+          }
+          return _social
+        })
+      }
     }
 }
 </script>

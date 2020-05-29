@@ -22,17 +22,44 @@ describe('PDFAbout.vue', () => {
   let mockProp = true
   
   const props = propDicts.map(d => d.prop)
-  let wrapper = createWrapper(component, propsMocker(props))
   
-  const propsObject = propsMocker(props)
+  let propsObject = propsMocker(props)
 
-  // this function creates an it/test:
-  // 'renders interests ${dict.selector} that matches ${dict.prop} prop'
-  // for each prop in prop dict
-  textMatcherFactory(component, propDicts)
+  propsObject.propsData['socials'] = [        
+    {
+      provider: 'github',
+      url: 'github',
+    },
+    {
+      provider: 'linkedin',
+      url: 'linkedin',
+    },
+    {
+      provider: 'instagram',
+      url: 'instagram',
+    },
+    {
+      provider: 'twitter',
+      url: 'twitter',
+    },
+    {
+      provider: 'website',
+      url: '/',
+    }
+  ]
+
+  console.log(propsObject)
+
+  let wrapper = createWrapper(component, propsObject)
+
+  propDicts.forEach(dict => {
+    it(`renders interests ${dict.selector} that matches ${dict.prop} prop`, () => {
+      expect(wrapper.find(`${dict.selector}`).text()).toMatch(propMocker(`${dict.prop}`).propsData[`${dict.prop}`])
+    })  
+  })
 
   it('email href matches email prop', () => {
-    // interesting that althouhg snapshot includes deeply mounted child (pdfsocials)
+    // interesting that although snapshot includes deeply mounted child (pdfsocials)
     // the wrapper doesn't find those elements
     const prop = 'email'
     const propDict = propDicts.filter(d => d.prop === prop)[0]

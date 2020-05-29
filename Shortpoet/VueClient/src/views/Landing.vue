@@ -18,12 +18,9 @@
           <p>></p>
         </div>
       </div>
-
-      <pre>
-        <code>
-          *cd => change directory / navigate
-        </code>
-      </pre>
+      <div class="landing-instruction">
+        *cd => change directory / navigate
+      </div>
 
     </div>
 
