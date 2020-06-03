@@ -61,6 +61,13 @@ namespace Shortpoet.Data.Models.ResumeData
         public string Languages { get; set; }
         public bool TranslationInterpretationProfessional { get; set; }
         public virtual ICollection<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; } = new List<ResumeSpokenLanguages>();
+        public DateTime DateCreated
+        {
+            get => dateCreated ?? DateTime.Now;
+            set => this.dateCreated = value;
+        }
+        private DateTime? dateCreated = null;
+        public string Comments { get; set; }
 
     }
 }

@@ -14,8 +14,6 @@ namespace Shortpoet.Data.Models.ResumeData
         public int Id { get; set; }
         // https://stackoverflow.com/questions/691035/setting-the-default-value-of-a-datetime-property-to-datetime-now-inside-the-syst
 
-        public DateTime DateCreated { get; set; } = DateTime.Now;
-
         public string Title { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -31,6 +29,13 @@ namespace Shortpoet.Data.Models.ResumeData
         public virtual ICollection<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; } = new List<ResumeSpokenLanguages>();
         public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
         public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
+        public DateTime DateCreated
+        {
+            get => dateCreated ?? DateTime.Now;
+            set => this.dateCreated = value;
+        }
+        private DateTime? dateCreated = null;
+        public string Comments { get; set; }
 
         public static Resume LoadJson(string path)
         {
