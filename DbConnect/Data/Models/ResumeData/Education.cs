@@ -14,6 +14,13 @@ namespace DbConnect.Data.Models.ResumeData
         public string Degree { get; set; }
         public string Focus { get; set; }
         public virtual ICollection<ResumeEducations> ResumeEducations { get; set; } = new List<ResumeEducations>();
+        public DateTime DateCreated
+        {
+            get => dateCreated ?? DateTime.Now;
+            set => this.dateCreated = value;
+        }
+        private DateTime? dateCreated = null;
+        public string Comments { get; set; }
 
     }
 

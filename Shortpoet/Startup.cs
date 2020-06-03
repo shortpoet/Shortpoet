@@ -40,7 +40,7 @@ namespace Shortpoet
                     options
                         .UseSqlServer(
                             Configuration.GetConnectionString("DefaultConnectionTest"))
-                        .EnableSensitiveDataLogging()
+                        // .EnableSensitiveDataLogging()
                         );    
             } 
             else if (Environment.IsProduction())
@@ -49,27 +49,10 @@ namespace Shortpoet
                 options
                     .UseSqlServer(
                         Configuration.GetConnectionString("DefaultConnection"))
-                    .EnableSensitiveDataLogging()
+                    // .EnableSensitiveDataLogging()
                     );
             }
 
-            // services.AddDbContext<ResumeDbContext>(options =>
-            //     options
-            //         .UseSqlServer(
-            //             Configuration.GetConnectionString("DefaultConnectionTest"))
-            //         .EnableSensitiveDataLogging()
-            //         );
-
-            // services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //     .AddEntityFrameworkStores<ApplicationDbContext>();
-
-            // services.AddIdentityServer()
-            //     .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
-
-            // services.AddAuthentication()
-            //     .AddIdentityServerJwt();
-
-            // use below with option to enable UseMvc
             services.AddMvc(options => {
                 options.EnableEndpointRouting = false;
             }).AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
@@ -77,12 +60,6 @@ namespace Shortpoet
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            // services.AddHttpsRedirection(options =>
-            // {
-            //     // options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
-            //     options.HttpsPort = 5001;
-            // });
-            // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 //configuration.RootPath = "ClientApp/build";
@@ -129,9 +106,6 @@ namespace Shortpoet
 
             app.UseRouting();
 
-            // app.UseAuthentication();
-            // app.UseIdentityServer();
-            // app.UseAuthorization();
 
             app.UseCors(MyAllowSpecificOrigins);
 
@@ -142,17 +116,6 @@ namespace Shortpoet
                     // pattern: "api/{area:exists}/{controller}/{action=Index}/{id?}");
                     pattern: "api/{controller}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
-
-                // endpoints.MapFallbackToFile("VueClient/dist/index.html");
-
-                // if (env.IsDevelopment())
-                // {
-                //     endpoints.MapToVueCliProxy("{*path}", new SpaOptions { SourcePath = "VueClient" }, "serve", regex: "running at");
-                // }
-                // else
-                // {
-                //     endpoints.MapFallbackToFile("VueClient/dist/index.html");
-                // }
 
             });
 

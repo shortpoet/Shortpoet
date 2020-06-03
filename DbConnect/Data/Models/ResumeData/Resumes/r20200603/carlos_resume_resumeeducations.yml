@@ -1,0 +1,8 @@
+---
+resumeEducations:
+  - resumeId: 3
+    educationId: 1
+  - resumeId: 3
+    educationId: 2
+  - resumeId: 3
+    educationId: 4

@@ -39,10 +39,10 @@ namespace DbConnect
             // Results.ShowJson(resume);
             string dateFolder = "d20200602";
 
-            // ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dateFolder);
             ResumeService.AddResumeData(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dateFolder);
+            ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dateFolder);
 
-            // Console.WriteLine(ResumeFiles.fileMap);
+            ResumeService.WriteJson(dateFolder);
 
         }
     }
