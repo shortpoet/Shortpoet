@@ -10,7 +10,7 @@ namespace DbConnect.Data.Models.ResumeData
     {
         [JsonProperty("resumeJobs")]
         public IList<ResumeJobs> ResumeJobs { get; set; }
-        public static ResumeJobsJson LoadResumeJobs(string path, Boolean writeJson)
+        public static ResumeJobsJson LoadType(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {

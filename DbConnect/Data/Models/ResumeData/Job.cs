@@ -6,11 +6,23 @@ using YamlDotNet.Serialization;
 
 namespace DbConnect.Data.Models.ResumeData
 {
+    public class Job
+    {
+        public int Id { get; set; }
+        public string ExperienceType { get; set; }
+        public string Position { get; set; }
+        public string Company { get; set; }
+        public string Description { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+
+    }
+
     public class JobJson
     {
         [JsonProperty("jobs")]
         public IList<Job> Jobs { get; set; }
-        public static JobJson LoadJobs(string path, Boolean writeJson)
+        public static IList<Job> LoadType(ResumeDbContext context, string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -39,7 +51,9 @@ namespace DbConnect.Data.Models.ResumeData
 
                 JobJson jobs = JsonConvert.DeserializeObject<JobJson>(json);
 
-                return jobs;
+                context.Add(jobs.Jobs);
+
+                return jobs.Jobs;
             }
         }
         public static JobJson LoadJson(string path)
@@ -54,15 +68,4 @@ namespace DbConnect.Data.Models.ResumeData
 
     }
 
-    public class Job
-    {
-        public int Id { get; set; }
-        public string ExperienceType { get; set; }
-        public string Position { get; set; }
-        public string Company { get; set; }
-        public string Description { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
-
-    }
 }

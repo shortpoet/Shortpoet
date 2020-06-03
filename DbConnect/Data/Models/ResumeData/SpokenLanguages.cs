@@ -5,11 +5,21 @@ using Newtonsoft.Json;
 using YamlDotNet.Serialization;
 namespace DbConnect.Data.Models.ResumeData
 {
-    public class LanguageJson
+    public class SpokenLanguages
+    {
+        public int Id { get; set; }
+        public string Type { get; set; }
+        public string Languages { get; set; }
+        public bool TranslationInterpretationProfessional { get; set; }
+        public virtual ICollection<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; } = new List<ResumeSpokenLanguages>();
+
+    }
+
+    public class SpokenLanguagesJson
     {
         [JsonProperty("spokenLanguages")]
         public IList<SpokenLanguages> SpokenLanguages { get; set; }
-        public static LanguageJson LoadLanguages(string path, Boolean writeJson)
+        public static IList<SpokenLanguages> LoadType(ResumeDbContext context, string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -36,30 +46,20 @@ namespace DbConnect.Data.Models.ResumeData
 
                 // string json = r.ReadToEnd();
 
-                LanguageJson languages = JsonConvert.DeserializeObject<LanguageJson>(json);
-
-                return languages;
+                SpokenLanguagesJson spokenLanguages = JsonConvert.DeserializeObject<SpokenLanguagesJson>(json);
+                context.Add(spokenLanguages.SpokenLanguages);
+                return spokenLanguages.SpokenLanguages;
             }
         }
-        public static LanguageJson LoadJson(string path)
+        public static SpokenLanguagesJson LoadJson(string path)
         {
             using (StreamReader r = new StreamReader(path))
             {
                 string json = r.ReadToEnd();
-                LanguageJson resume = JsonConvert.DeserializeObject<LanguageJson>(json);
+                SpokenLanguagesJson resume = JsonConvert.DeserializeObject<SpokenLanguagesJson>(json);
                 return resume;
             }
         }
-
-    }
-
-    public class SpokenLanguages
-    {
-        public int Id { get; set; }
-        public string Type { get; set; }
-        public string Languages { get; set; }
-        public bool TranslationInterpretationProfessional { get; set; }
-        public virtual ICollection<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; } = new List<ResumeSpokenLanguages>();
 
     }
 }

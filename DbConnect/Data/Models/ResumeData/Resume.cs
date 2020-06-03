@@ -70,7 +70,9 @@ namespace DbConnect.Data.Models.ResumeData
                 return yamlObject;
             }
         }
-        public static Resume LoadResume(string path, Boolean writeJson)
+
+        
+        public static Resume LoadType(ResumeDbContext context, string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -97,6 +99,8 @@ namespace DbConnect.Data.Models.ResumeData
                 }
 
                 Resume resume = JsonConvert.DeserializeObject<Resume>(json);
+
+                context.Add(resume);
 
                 return resume;
             }

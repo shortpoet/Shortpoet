@@ -10,7 +10,7 @@ namespace DbConnect.Data.Models.ResumeData
     {
         [JsonProperty("resumeSpokenLanguages")]
         public IList<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; }
-        public static ResumeSpokenLanguagesJson LoadResumeSpokenLanguages(string path, Boolean writeJson)
+        public static ResumeSpokenLanguagesJson LoadType(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {

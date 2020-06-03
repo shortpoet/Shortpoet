@@ -7,11 +7,20 @@ using YamlDotNet.Serialization;
 
 namespace DbConnect.Data.Models.ResumeData
 {
+    public class Social
+    {
+        public int Id { get; set; }
+        public string Provider { get; set; }
+        public string Url { get; set; }
+        public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
+
+    }
+
     public class SocialJson
     {
         [JsonProperty("socials")]
         public IList<Social> Socials { get; set; }
-        public static SocialJson LoadSocials(string path, Boolean writeJson)
+        public static IList<Social> LoadType(ResumeDbContext context, string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -40,7 +49,9 @@ namespace DbConnect.Data.Models.ResumeData
 
                 SocialJson socials = JsonConvert.DeserializeObject<SocialJson>(json);
 
-                return socials;
+                context.Add(socials.Socials);
+
+                return socials.Socials;
             }
         }
         public static SocialJson LoadJson(string path)
@@ -55,12 +66,4 @@ namespace DbConnect.Data.Models.ResumeData
 
     }
 
-    public class Social
-    {
-        public int Id { get; set; }
-        public string Provider { get; set; }
-        public string Url { get; set; }
-        public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
-
-    }
 }
