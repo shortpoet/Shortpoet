@@ -8,7 +8,7 @@ visas: USA, EU, UK
 flags: 🇪🇸, 🇵🇭, 🇺🇸, 🇨🇳, 🇫🇷, 🇮🇹, 🇩🇪, 🇧🇷
 aboutMe: "Language Data Specialist. \\n\\r Through living, studying and working internationally,
   I have developed an expertise in language and culture. Considering where spoken languages
-  intersect with data got me interested in programming. I apply
+  intersect with data got me interested in programming. \\n\\r I apply
   my advanced tech skills to analyses that consider where culture and computation
   converge. This, combined with my fluency for the most widely spoken languages, allows
   me to engineer unique solutions to diverse problems."
@@ -19,3 +19,4 @@ interests: >
   Yoga teacher training - YogaWorks 200hr.
   Adobe Creative dabbler.
   SCUBA certified.
+comments: simplify aboutMe and interests

@@ -26,7 +26,7 @@ namespace DbConnect
     public const string ResumeJobs = "carlos_resume_resumejobs.yml";
     public const string ResumeSkills = "carlos_resume_resumeskills.yml";
     public const string ResumeSocials = "carlos_resume_resumesocials.yml";
-    public const string ResumeSpokenLanguages = "carlos_resume_resumelanguages.yml";
+    public const string ResumeSpokenLanguages = "carlos_resume_resumespokenlanguages.yml";
 
   }
   // https://support.microsoft.com/en-us/help/322022/how-to-make-a-visual-c-class-usable-in-a-foreach-statement

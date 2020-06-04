@@ -80,9 +80,9 @@ namespace DbConnect
             IList<ResumeSocials> resumeSocials = resumeSocialsJson.ResumeSocials;
             AddItemsReverse(context, resumeSocials);
           }
-          if (File.Exists(files.ResumeSocials)) 
+          if (File.Exists(files.ResumeSpokenLanguages)) 
           {
-            ResumeSpokenLanguagesJson resumeSpokenLanguagesJson = Utilities.SerializeYml<ResumeSpokenLanguagesJson>(files.ResumeSocials);
+            ResumeSpokenLanguagesJson resumeSpokenLanguagesJson = Utilities.SerializeYml<ResumeSpokenLanguagesJson>(files.ResumeSpokenLanguages);
             IList<ResumeSpokenLanguages> resumeSpokenLanguages = resumeSpokenLanguagesJson.ResumeSpokenLanguages;
             AddItemsReverse(context, resumeSpokenLanguages);
           }
@@ -102,7 +102,7 @@ namespace DbConnect
     {
       try 
       {
-        if (dateFolder[0] == 'r')
+        if (dateFolder[0] == 'd')
         {
 
           ResumeFiles files = new ResumeFiles(dateFolder);

@@ -1,8 +1,11 @@
 ---
 resumeEducations:
   - resumeId: 3
-    educationId: 1
-  - resumeId: 3
     educationId: 2
+    comments: "Sameer edit 20200601"
+  - resumeId: 3
+    educationId: 3
+    comments: "Sameer edit 20200601"
   - resumeId: 3
     educationId: 4
+    comments: "Sameer edit 20200601"

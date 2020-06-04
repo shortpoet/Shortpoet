@@ -37,12 +37,14 @@ namespace DbConnect
             // Resume resume = DbTransact.GetResume(ContextConfig.GetConfig(connStr));
 
             // Results.ShowJson(resume);
-            string dateFolder = "d20200602";
+            string dataFolder = "d20200603";
+            string resumeFolder = "r20200603";
 
-            ResumeService.AddResumeData(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dateFolder);
-            ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dateFolder);
+            ResumeService.AddResumeData(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dataFolder);
+            ResumeService.WriteJson(dataFolder);
 
-            ResumeService.WriteJson(dateFolder);
+            ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), resumeFolder);
+            ResumeService.WriteJson(resumeFolder);
 
         }
     }

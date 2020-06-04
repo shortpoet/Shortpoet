@@ -61,12 +61,14 @@ namespace DbConnect.Data.Models.ResumeData
         public virtual Resume Resume { get; set; }
         public int EducationId { get; set; }
         public virtual Education Education { get; set; }
-        public DateTime DateCreated
-        {
-            get => dateCreated ?? DateTime.Now;
-            set => this.dateCreated = value;
-        }
-        private DateTime? dateCreated = null;
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+
+        // public DateTime DateCreated
+        // {
+        //     get => dateCreated ?? DateTime.Now;
+        //     set => this.dateCreated = value;
+        // }
+        // private DateTime? dateCreated = null;
         public string Comments { get; set; }
 
     }

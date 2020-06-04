@@ -29,19 +29,19 @@ namespace DbConnect.Data.Models.ResumeData
         public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
 
         // https://stackoverflow.com/questions/691035/setting-the-default-value-of-a-datetime-property-to-datetime-now-inside-the-syst
-        public DateTime DateCreated
-        {
-        // get
+        public DateTime DateCreated { get; set; } = DateTime.Now;
         // {
-        //     return this.dateCreated.HasValue
-        //         ? this.dateCreated.Value
-        //         : DateTime.Now;
-        // }
+        // // get
+        // // {
+        // //     return this.dateCreated.HasValue
+        // //         ? this.dateCreated.Value
+        // //         : DateTime.Now;
+        // // }
 
-            get => dateCreated ?? DateTime.Now;
-            set => this.dateCreated = value;
-        }
-        private DateTime? dateCreated = null;
+        //     get => dateCreated ?? DateTime.Now;
+        //     set => this.dateCreated = value;
+        // }
+        // private DateTime? dateCreated = null;
         public string Comments { get; set; }
 
 
