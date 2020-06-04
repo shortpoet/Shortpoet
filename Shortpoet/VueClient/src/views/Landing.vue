@@ -1,53 +1,72 @@
 <template>
-  <div class="landing-container">
-    <div class="terminal-container">
-
-      <div class="title-bar">carlos@shortpoet: ~</div>
-
-      <div class="code-container">
-        <div @click="navigate('/resume')" class="clickable-area">
-          <p>> cd Resume</p>
-          <p>></p>
-          <p>></p>
-          <p>></p>
-        </div>
-        <div @click="navigate('/blog')" class="clickable-area">
-          <p>> cd Blog</p>
-          <p>></p>
-          <p>></p>
-          <p>></p>
-        </div>
-      </div>
-      <div class="landing-instruction">
-        *cd => change directory / navigate
-      </div>
+  <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
+    <LandingNav />
+    <div class="container-fluid p-0">
+      <LandingAbout
+        :name="getResume.name"
+        :surname="getResume.surname"
+        :email="getResume.email"
+        :address="getResume.address"
+        :visas="getResume.visas"
+        :flags="getResume.flags"
+      />
+      <LandingSocials 
+        :socials="getResume.socials"
+      />
 
     </div>
-
 
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import LandingNav from '@/components/Landing/LandingNav.vue'
+import LandingAbout from '@/components/Landing/LandingAbout'
+import LandingSocials from '@/components/Landing/LandingSocials'
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
-  name: 'Landing',
+  name: 'Start',
   components: {
-    
+    LandingNav,
+    LandingAbout,
+    LandingSocials,
+  },
+  data () {
+    return {
+      rippleExpanded: false
+    }
+  },
+  computed: {
+    ...mapGetters('resume', ['getResume', 'getResumeLoaded']),
   },
   methods: {
     ...mapActions(['loadEnv']),
-    navigate(route) {
-      this.$router.push(route)
-    }
+    ...mapActions('resume', ['loadResume']),
+    toggleVisibility (args) {
+      if (args) {
+        this.rippleExpanded = !this.rippleExpanded
+      } else {
+        this.rippleExpanded = args
+      }
+    },
   },
   mounted () {
-    // this.loadEnv()
+    const env = process.env.NODE_ENV
+    this.loadEnv(env)
+    this.$nextTick(() => {
+      // Activate scrollspy to add active class to navbar items on scroll
+      this.$('body').scrollspy({
+        target: '#sideNav'
+      })
+      this.loadResume()
+    })
   }
+
 }
 </script>
 
 <style lang="scss">
-@import './../assets/scss/landing.scss';
-
+// using @ for import doesn't seem to work only relative path
+@import './../assets/scss/start.scss';
 </style>
