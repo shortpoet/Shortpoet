@@ -24,7 +24,11 @@ export const getters = {
 export const mutations = {
   [SET_RESUME_RAW] (state, data) { 
     // const experienceTypes = response.data.resumeJobs.map(j => j.job.experienceType).filter((v, i, a) => a.indexOf(v) === i && v !== null)
-    const experienceTypes = ['software', 'language', 'sales', 'hospitality']
+    // TODO
+    // hardcoded experience types for order - not ideal
+    // either add order to db schema or some kind of switch logic
+    // #TODO
+    const experienceTypes = ['software', 'language', 'hospitality']
     const resume = {
       aboutMe: data.aboutMe,
       address: data.address,
