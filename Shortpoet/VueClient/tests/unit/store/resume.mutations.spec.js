@@ -26,7 +26,15 @@ describe('Resume Store Mutations', () => {
         title: 'Test title',
         visas: 'Test visas',
         resumeEducations: [{education: {institution: 'test education'}}],
-        resumeJobs: [{job: {company: 'test job', experienceType: 'software'}}, {job: {company: 'test job', experienceType: 'language'}}, {job: {company: 'test job', experienceType: 'sales'}}, {job: {company: 'test job', experienceType: 'hospitality'}}],
+        resumeJobs: [
+          // not having line breaks here resulted in poor readability and
+          // taking extra time to find the correct 'line' (which wasn't a line lol)
+          {job: {company: 'test job', experienceType: 'software'}},
+          {job: {company: 'test job', experienceType: 'language'}},
+          // see below
+          // {job: {company: 'test job', experienceType: 'sales'}},
+          {job: {company: 'test job', experienceType: 'hospitality'}}
+        ],
         resumeSkills: [{skill: {details: 'test skill'}}],
         resumeSocials: [{social: {social: 'test skill'}}],
         resumeSpokenLanguages: [{spokenLanguages: {language: 'test skill'}}],
@@ -47,7 +55,8 @@ describe('Resume Store Mutations', () => {
         jobs: [
           {company: 'test job', experienceType: 'software'},
           {company: 'test job', experienceType: 'language'},
-          {company: 'test job', experienceType: 'sales'},
+          // see below
+          // {company: 'test job', experienceType: 'sales'},
           {company: 'test job', experienceType: 'hospitality'}
         ],
         skills: [{details: 'test skill'}],
@@ -56,7 +65,11 @@ describe('Resume Store Mutations', () => {
         experiences: [
           {type: 'software', jobs: [{company: 'test job', experienceType: 'software'}]},
           {type: 'language', jobs: [{company: 'test job', experienceType: 'language'}]},
-          {type: 'sales', jobs: [{company: 'test job', experienceType: 'sales'}]}, 
+          // TODO
+          // commenting here since no sales category for now
+          // this test is likely in need of review and refactor
+          // #TODO
+          // {type: 'sales', jobs: [{company: 'test job', experienceType: 'sales'}]}, 
           {type: 'hospitality', jobs: [{company: 'test job', experienceType: 'hospitality'}]}
         ]
       }

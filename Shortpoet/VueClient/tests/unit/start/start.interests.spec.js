@@ -30,11 +30,6 @@ describe('StartInterests.vue', () => {
     textMatcher(component, props, prop, selector)
 
   })
-  it('renders photo', () => {
-
-    expect(wrapper.find("img").exists()).toBe(true)
-
-  })
   it('matches snapshot', () => {
     
     expect(wrapper.html()).toMatchSnapshot()
