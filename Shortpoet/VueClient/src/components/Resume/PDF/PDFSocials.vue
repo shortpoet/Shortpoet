@@ -85,16 +85,26 @@ export default {
         fontSize: '.85rem'
       }
     },
+    availableSocials() {
+      let providerNames = this.socials.map(s => s.provider)
+      return this.socialsData.filter(social => providerNames.includes(social.social))
+        // filter out null entries first if not including in that version
+        // can't use break in map reduce forEach but can filter first
+        // or could use simple for loop with iterator
+    },
     socialsComputed() {
-      return this.socialsData.map(_social => {
-        // console.log(this.socials)
-        // console.log(this.socials.filter(social => social.provider === _social.social)[0].url)
-        // this allows to override by hardcoding here
-        if (_social.url === undefined) {
-          _social.url = this.socials.filter(social => social.provider === _social.social)[0].url
-        }
-        return _social
-      })
+      return this.availableSocials
+        .map(availableSocial => {
+          // this allows to override by hardcoding here
+          if (availableSocial.url === undefined) {
+            this.socials.forEach(social => {
+              if (social.provider === availableSocial.social) {
+                availableSocial.url = social.url
+              }
+            })
+          }
+          return availableSocial
+        })
     }
   },
   methods: {

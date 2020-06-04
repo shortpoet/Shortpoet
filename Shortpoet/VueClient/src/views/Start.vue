@@ -94,7 +94,7 @@ export default {
       this.$('body').scrollspy({
         target: '#sideNav'
       })
-      this.loadResume().then(() => console.log(this.getResume.socials))
+      this.loadResume()
     })
   }
 

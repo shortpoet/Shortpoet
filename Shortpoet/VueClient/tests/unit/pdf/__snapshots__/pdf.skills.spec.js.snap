@@ -6,7 +6,7 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
     <h4 class="heading heading-4 subheading mb-4 mb-md-3 ml-4" style="font-family: 'Saira Extra Condensed';">
       Programming Languages &amp; Tools
     </h4>
-    <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mr-0 mr-md-3">
+    <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mx-5 px-0">
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
           <div><i class="devicons devicons-html5"></i>

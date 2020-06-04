@@ -4,9 +4,12 @@
       <li class="nav-item">
         <router-link to="/">Home</router-link>
       </li>
+      <!--
+        commenting until further articles written 
       <li class="nav-item">
         <router-link to="/blog">Blog</router-link>
-      </li>
+      </li> 
+      -->
     </ul>
   </nav>
 </template>

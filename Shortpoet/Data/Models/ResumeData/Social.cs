@@ -61,6 +61,13 @@ namespace Shortpoet.Data.Models.ResumeData
         public string Provider { get; set; }
         public string Url { get; set; }
         public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
+        public DateTime DateCreated
+        {
+            get => dateCreated ?? DateTime.Now;
+            set => this.dateCreated = value;
+        }
+        private DateTime? dateCreated = null;
+        public string Comments { get; set; }
 
     }
 }

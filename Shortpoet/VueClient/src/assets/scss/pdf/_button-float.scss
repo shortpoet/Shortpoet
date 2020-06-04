@@ -2,7 +2,7 @@
   cursor: pointer;
   z-index: 1000;
   position: fixed;
-  right: 9rem;
+  right: 8rem;
   bottom: 3rem;
   // using percect here seemed to be a problem for the css compiler regex i think
   opacity: .5;
@@ -142,6 +142,6 @@
 
 .mobile {
   font-size: 1rem;
-  right: 2rem;
-  bottom: 2rem;
+  right: 3rem;
+  bottom: 4rem;
 }

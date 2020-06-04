@@ -3,16 +3,14 @@ using System.Data;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Shortpoet.Data.Models.ResumeData;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
 using YamlDotNet.Serialization;
 
-namespace Shortpoet.Data.Models.ResumeData
+namespace DbConnect.Data.Models.ResumeData.Seed
 {
   public class AddResume
   {
-    public static void Seed(ResumeDbContext context, IWebHostEnvironment environment)
+    public static void Seed(ResumeDbContext context)
     {
 
       AddItems(context, EducationJson.LoadJson("Data/Seed/carlos_resume_educations.json").Educations);
@@ -20,7 +18,7 @@ namespace Shortpoet.Data.Models.ResumeData
       context.Add(Resume.LoadJson("Data/Seed/carlos_resume_about.json"));
       AddItems(context, SkillJson.LoadJson("Data/Seed/carlos_resume_skills.json").Skills);
       AddItems(context, SocialJson.LoadJson("Data/Seed/carlos_resume_socials.json").Socials);
-      AddItems(context, LanguageJson.LoadJson("Data/Seed/carlos_resume_languages.json").SpokenLanguages);
+      AddItems(context, SpokenLanguagesJson.LoadJson("Data/Seed/carlos_resume_languages.json").SpokenLanguages);
       context.SaveChanges();
       
       AddItems(context, ResumeEducationsJson.LoadJson("Data/Seed/carlos_resume_resumeeducations.json").ResumeEducations);

@@ -1,0 +1,19 @@
+{
+  "resumeEducations": [
+    {
+      "resumeId": "2",
+      "educationId": "2",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "educationId": "3",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "educationId": "4",
+      "comments": "Sameer edit 20200601"
+    }
+  ]
+}

@@ -6,7 +6,8 @@ export const routeMapper = function(paths) {
         path: path.path,
         component: path.view ? resolve => import(`@/views/${path.view}.vue`).then(resolve) : resolve => import(`@/components/Blog/BlogArticle.vue`).then(resolve),
         children: path.children ? routeMapper(path.children) : null,
-        props: path.props ? path.props : null
+        props: path.props ? path.props : null,
+        redirect: path.redirect ? path.redirect : null
       }
     })
     // catch-all route

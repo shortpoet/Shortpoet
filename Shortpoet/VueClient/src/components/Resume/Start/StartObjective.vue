@@ -1,6 +1,6 @@
 <template>
-  <section class="resume-section p-3 p-lg-5 d-flex d-column" id="start-objective">
-    <div class="aboutme-container mb-4 mb-md-3">
+  <section class="resume-section p-3 px-lg-5 d-flex d-column mb-4 mb-md-3" id="start-objective">
+    <div class="aboutme-container">
       <div
         v-for="(text, i) in aboutMe.split('\\n\\r')"
         :key="i"

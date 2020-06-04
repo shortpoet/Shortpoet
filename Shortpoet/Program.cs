@@ -5,7 +5,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Shortpoet.Data.Models.ResumeData;
-using Shortpoet.Data.ResumeData.Seed;
 
 namespace Shortpoet
 {
@@ -23,12 +22,12 @@ namespace Shortpoet
           var host = CreateHostBuilder(args)
             .Build();
 
-          CreateDbIfNotExists(host);
+          LogEnvData(host);
 
           host.Run();
         }
     // adding this method to init db
-    private static void CreateDbIfNotExists(IHost host)
+    private static void LogEnvData(IHost host)
     {
       using (var scope = host.Services.CreateScope())
       {
@@ -38,24 +37,15 @@ namespace Shortpoet
         {
           var context = services.GetRequiredService<ResumeDbContext>();
           var hostingEnvironment = services.GetService<IWebHostEnvironment>();
-          
-          // run this code first before DBInit is written to test the rest of the setup
-          // context.Database.EnsureCreated();
 
           Console.WriteLine("############################");
-          Console.WriteLine("About to run CreateDbifNot Exists");
-          
-          // ##
-          // COMMENT OR REMOVE IN PRODUCTION
-          if(hostingEnvironment.EnvironmentName != "Production") {
-            Console.WriteLine("############################");
-            Console.WriteLine("Here is connection string");
-            Console.WriteLine(context.Database.GetDbConnection().ConnectionString);
-          }
+          Console.WriteLine(hostingEnvironment.EnvironmentName);
+          Console.WriteLine("############################");
+          Console.WriteLine(hostingEnvironment.ContentRootPath);
+          Console.WriteLine("############################");
+          Console.WriteLine(hostingEnvironment.WebRootPath);
+          Console.WriteLine("############################");
 
-          DbInitializer.InitializeDb(context, hostingEnvironment);
-
-          context.Database.Migrate();
         }
         catch (Exception ex)
         {

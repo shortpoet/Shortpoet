@@ -1,6 +1,6 @@
 <template>
   <!-- TODO set fontFamily only on icon not text - only req'd on pdf -->
-  <section class="resume-section pl-3 pl-lg-5 py-1 d-flex d-column" id="start-socials">
+  <section class="resume-section pl-3 pl-lg-5 py-1 mt-3 d-flex d-column" id="start-socials">
     <div class="my-auto">
       <ul class="list-inline list-social-icons mb-0 mt-0">
         <li
@@ -66,14 +66,26 @@ export default {
       }
     },
     computed: {
+      availableSocials() {
+        let providerNames = this.socials.map(s => s.provider)
+        return this.socialsData.filter(social => providerNames.includes(social.social))
+          // filter out null entries first if not including in that version
+          // can't use break in map reduce forEach but can filter first
+          // or could use simple for loop with iterator
+      },
       socialsComputed() {
-        return this.socialsData.map(_social => {
-          // this allows to override by hardcoding here
-          if (_social.url === undefined) {
-            _social.url = this.socials.filter(social => social.provider === _social.social)[0].url
-          }
-          return _social
-        })
+        return this.availableSocials
+          .map(availableSocial => {
+            // this allows to override by hardcoding here
+            if (availableSocial.url === undefined) {
+              this.socials.forEach(social => {
+                if (social.provider === availableSocial.social) {
+                  availableSocial.url = social.url
+                }
+              })
+            }
+            return availableSocial
+          })
       }
     }
 }

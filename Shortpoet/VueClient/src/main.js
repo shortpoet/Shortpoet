@@ -45,7 +45,7 @@ library.add(
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)
 
-Vue.config.devtools=false
+Vue.config.devtools = false
 Vue.prototype.$ = jquery
 Vue.config.productionTip = false
 

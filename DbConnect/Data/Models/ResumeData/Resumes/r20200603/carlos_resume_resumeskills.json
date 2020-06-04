@@ -1,0 +1,44 @@
+{
+  "resumeSkills": [
+    {
+      "resumeId": "2",
+      "skillId": "1",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "2",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "3",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "4",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "5",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "6",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "7",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "skillId": "9",
+      "comments": "Sameer edit 20200601"
+    }
+  ]
+}

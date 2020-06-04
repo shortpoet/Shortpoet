@@ -108,18 +108,6 @@ describe('PDF.vue', () => {
 
     })
 
-    it('correctly renders poemStyle', () => {
-
-      let expected = [
-        `height: 16rem;`,
-        `width: 16rem;`,
-      ]
-
-      expected = expected.join(' ')
-
-      expect(wrapper.find('.img-poem').attributes().style).toMatch(expected)
-
-    })
     it('renders PDFSkills dynamic component :is using skillComp computed prop', () => {
       const localThis = { renderPDF: false }
       expect(wrapper.find('.skill-grid')).toBeTruthy()
@@ -180,18 +168,6 @@ describe('PDF.vue', () => {
 
     })
 
-    it('correctly renders poemStyle', () => {
-
-      let expected = [
-        `height: 10rem;`,
-        `width: 10rem;`,
-      ]
-
-      expected = expected.join(' ')
-
-      expect(_wrapper.find('.img-poem').attributes().style).toMatch(expected)
-
-    })
     it('renders PDFSkillsRender dynamic component :is using skillComp computed prop', () => {
       const localThis = { renderPDF: true }
       expect(_wrapper.find('.skill-grid-render')).toBeTruthy()

@@ -15,11 +15,11 @@ namespace Shortpoet.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.1")
+                .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.Education", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.Education", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,7 +40,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("Educations");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.Job", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.Job", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -70,7 +70,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("Jobs");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.Resume", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.Resume", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -115,7 +115,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("Resumes");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeEducations", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeEducations", b =>
                 {
                     b.Property<int>("ResumeId")
                         .HasColumnType("int");
@@ -130,7 +130,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("ResumeEducations");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeJobs", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeJobs", b =>
                 {
                     b.Property<int>("ResumeId")
                         .HasColumnType("int");
@@ -145,7 +145,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("ResumeJobs");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSkills", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeSkills", b =>
                 {
                     b.Property<int>("ResumeId")
                         .HasColumnType("int");
@@ -160,7 +160,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("ResumeSkills");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSocials", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeSocials", b =>
                 {
                     b.Property<int>("ResumeId")
                         .HasColumnType("int");
@@ -175,7 +175,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("ResumeSocials");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSpokenLanguages", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeSpokenLanguages", b =>
                 {
                     b.Property<int>("ResumeId")
                         .HasColumnType("int");
@@ -190,7 +190,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("ResumeSpokenLanguages");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.Skill", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.Skill", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -208,7 +208,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("Skills");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.Social", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.Social", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -226,7 +226,7 @@ namespace Shortpoet.Migrations
                     b.ToTable("Socials");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.SpokenLanguages", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.SpokenLanguages", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -247,75 +247,75 @@ namespace Shortpoet.Migrations
                     b.ToTable("SpokenLanguages");
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeEducations", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeEducations", b =>
                 {
-                    b.HasOne("Shortpoet.Data.Models.Resume.Education", "Education")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Education", "Education")
                         .WithMany("ResumeEducations")
                         .HasForeignKey("EducationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Shortpoet.Data.Models.Resume.Resume", "Resume")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Resume", "Resume")
                         .WithMany("ResumeEducations")
                         .HasForeignKey("ResumeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeJobs", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeJobs", b =>
                 {
-                    b.HasOne("Shortpoet.Data.Models.Resume.Job", "Job")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Job", "Job")
                         .WithMany()
                         .HasForeignKey("JobId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Shortpoet.Data.Models.Resume.Resume", "Resume")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Resume", "Resume")
                         .WithMany("ResumeJobs")
                         .HasForeignKey("ResumeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSkills", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeSkills", b =>
                 {
-                    b.HasOne("Shortpoet.Data.Models.Resume.Resume", "Resume")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Resume", "Resume")
                         .WithMany("ResumeSkills")
                         .HasForeignKey("ResumeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Shortpoet.Data.Models.Resume.Skill", "Skill")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Skill", "Skill")
                         .WithMany("ResumeSkills")
                         .HasForeignKey("SkillId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSocials", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeSocials", b =>
                 {
-                    b.HasOne("Shortpoet.Data.Models.Resume.Resume", "Resume")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Resume", "Resume")
                         .WithMany("ResumeSocials")
                         .HasForeignKey("ResumeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Shortpoet.Data.Models.Resume.Social", "Social")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Social", "Social")
                         .WithMany("ResumeSocials")
                         .HasForeignKey("SocialId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Shortpoet.Data.Models.Resume.ResumeSpokenLanguages", b =>
+            modelBuilder.Entity("Shortpoet.Data.Models.ResumeData.ResumeSpokenLanguages", b =>
                 {
-                    b.HasOne("Shortpoet.Data.Models.Resume.Resume", "Resume")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.Resume", "Resume")
                         .WithMany("ResumeSpokenLanguages")
                         .HasForeignKey("ResumeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Shortpoet.Data.Models.Resume.SpokenLanguages", "SpokenLanguages")
+                    b.HasOne("Shortpoet.Data.Models.ResumeData.SpokenLanguages", "SpokenLanguages")
                         .WithMany("ResumeSpokenLanguages")
                         .HasForeignKey("SpokenLanguagesId")
                         .OnDelete(DeleteBehavior.Cascade)

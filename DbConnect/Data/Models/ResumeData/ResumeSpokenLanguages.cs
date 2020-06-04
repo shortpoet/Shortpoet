@@ -10,7 +10,7 @@ namespace DbConnect.Data.Models.ResumeData
     {
         [JsonProperty("resumeSpokenLanguages")]
         public IList<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; }
-        public static ResumeSpokenLanguagesJson LoadResumeSpokenLanguages(string path, Boolean writeJson)
+        public static ResumeSpokenLanguagesJson LoadType(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -59,6 +59,15 @@ namespace DbConnect.Data.Models.ResumeData
         public virtual Resume Resume { get; set; }
         public int SpokenLanguagesId { get; set; }
         public virtual SpokenLanguages SpokenLanguages { get; set; }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+
+        // public DateTime DateCreated
+        // {
+        //     get => dateCreated ?? DateTime.Now;
+        //     set => this.dateCreated = value;
+        // }
+        // private DateTime? dateCreated = null;
+        public string Comments { get; set; }
 
     }
 }

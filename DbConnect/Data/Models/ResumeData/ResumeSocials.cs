@@ -10,7 +10,7 @@ namespace DbConnect.Data.Models.ResumeData
     {
         [JsonProperty("resumeSocials")]
         public IList<ResumeSocials> ResumeSocials { get; set; }
-        public static ResumeSocialsJson LoadResumeSocials(string path, Boolean writeJson)
+        public static ResumeSocialsJson LoadType(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -59,6 +59,15 @@ namespace DbConnect.Data.Models.ResumeData
         public virtual Resume Resume { get; set; }
         public int SocialId { get; set; }
         public virtual Social Social { get; set; }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+
+        // public DateTime DateCreated
+        // {
+        //     get => dateCreated ?? DateTime.Now;
+        //     set => this.dateCreated = value;
+        // }
+        // private DateTime? dateCreated = null;
+        public string Comments { get; set; }
 
     }
 }

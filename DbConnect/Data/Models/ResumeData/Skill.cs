@@ -7,11 +7,20 @@ using YamlDotNet.Serialization;
 
 namespace DbConnect.Data.Models.ResumeData
 {
+    public class Skill
+    {
+        public int Id { get; set; }
+        public string Type { get; set; }
+        public string Details { get; set; }
+        public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
+
+    }
+
     public class SkillJson
     {
         [JsonProperty("skills")]
         public IList<Skill> Skills { get; set; }
-        public static SkillJson LoadSkills(string path, Boolean writeJson)
+        public static IList<Skill> LoadType(ResumeDbContext context, string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -40,7 +49,9 @@ namespace DbConnect.Data.Models.ResumeData
 
                 SkillJson skills = JsonConvert.DeserializeObject<SkillJson>(json);
 
-                return skills;
+                context.Add(skills.Skills);
+
+                return skills.Skills;
             }
         }
         public static SkillJson LoadJson(string path)
@@ -52,16 +63,16 @@ namespace DbConnect.Data.Models.ResumeData
                 return resume;
             }
         }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
 
+        // public DateTime DateCreated
+        // {
+        //     get => dateCreated ?? DateTime.Now;
+        //     set => this.dateCreated = value;
+        // }
+        // private DateTime? dateCreated = null;
+        public string Comments { get; set; }
 
-    }
-
-    public class Skill
-    {
-        public int Id { get; set; }
-        public string Type { get; set; }
-        public string Details { get; set; }
-        public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
 
     }
 }

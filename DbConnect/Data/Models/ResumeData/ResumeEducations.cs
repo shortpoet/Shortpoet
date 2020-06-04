@@ -10,7 +10,8 @@ namespace DbConnect.Data.Models.ResumeData
     {
         [JsonProperty("resumeEducations")]
         public IList<ResumeEducations> ResumeEducations { get; set; }
-        public static ResumeEducationsJson LoadResumeEducations(string path, Boolean writeJson)
+
+        public static ResumeEducationsJson LoadType(string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -60,6 +61,15 @@ namespace DbConnect.Data.Models.ResumeData
         public virtual Resume Resume { get; set; }
         public int EducationId { get; set; }
         public virtual Education Education { get; set; }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+
+        // public DateTime DateCreated
+        // {
+        //     get => dateCreated ?? DateTime.Now;
+        //     set => this.dateCreated = value;
+        // }
+        // private DateTime? dateCreated = null;
+        public string Comments { get; set; }
 
     }
 }

@@ -52,7 +52,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
               <h4 class="heading heading-4 subheading mb-4 mb-md-3 ml-4" style="font-family: 'Saira Extra Condensed';">
                 Programming Languages &amp; Tools
               </h4>
-              <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mr-0 mr-md-3">
+              <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mx-5 px-0">
                 <div class="skill-grid">
                   <div class="list-devicons devicon-row d-flex justify-content-around my-0">
                     <div><i class="devicons devicons-html5"></i>
@@ -432,18 +432,26 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
           <div class="resume-item d-flex flex-column justify-content-between">
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                As a lifelong polyglot turned software developer, I have come to describe myself as a Language Data Specialist. A fascination with where human interaction, behaviour and spoken language meets the many layers of data and programming has driven me to provide insight from data sources as they reflect human behavior.
+                As a lifelong polyglot and software developer, I have come to describe myself as a Language Data Specialist.
               </p>
             </div>
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                In this sense, my route into programming was atypical. The call to bridge the gap between my linguistic expertise and (long-dormant) digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp.
+                Through living, studying and working internationally, I developed keen and varied insight into human interaction, motivation, and the sheer nitty-gritty of life - witnessed everywhere from hospitals to courthouses and union halls in between.
               </p>
             </div>
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                Today, my advanced tech skills combined with my fluency for the most widely spoken languages, allows my clients a unique perspective on their field of choice.
+                Over time, considering where spoken languages and behavior intersect with data got me interested in programming. The call to bridge the gap between my linguistic expertise and (long-dormant) digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp.
               </p>
+            </div>
+            <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
+              <p>
+                Today, I apply my advanced tech skills to analyses that consider where the cultural and the computational collide. This, combined with my fluency for the most widely spoken languages, allows my clients a unique perspective on their field of choice.
+              </p>
+            </div>
+            <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
+              <p> Showcasing the evolution of these skills in this - <em>work-in-progress</em> - resume site has been a learning process of its own. This site is hosted on <a href="https://shortpoet.azurewebsites.net">Azure</a> with a linked database to dynamically populate different resume formats. Please check out the <a href="/pdf">PDF-friendly</a> version. And coming soon, a guestbook that will fully illustrate the capabilities of a linked data source! 🤓</p>
             </div>
           </div>
         </div>
@@ -766,7 +774,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
       </div>
     </section>
     <div id="interests-poem-container" class="row mb-5">
-      <div id="interests-container" class="col-12 col-md-8">
+      <div id="interests-container" class="col-12">
         <section id="interests" class="resume-section mt-2 ml-3">
           <div class="my-auto">
             <h4 class="heading heading-4 mb-3" style="font-family: 'Saira Extra Condensed';">Interests</h4>
@@ -775,7 +783,6 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
           </div>
         </section>
       </div>
-      <div id="poem-container" class="col-12 col-md-4 mt-3 mt-md-0 mr-0 text-center"><img src="" alt="poem" class="img-fluid img-poem rounded" style="height: 16rem; width: 16rem;"></div>
     </div>
     <div class="pdf-target vue-portal-target">
       <div type="input" class="button-float">
@@ -1250,18 +1257,26 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
           <div class="resume-item d-flex flex-column justify-content-between">
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                As a lifelong polyglot turned software developer, I have come to describe myself as a Language Data Specialist. A fascination with where human interaction, behaviour and spoken language meets the many layers of data and programming has driven me to provide insight from data sources as they reflect human behavior.
+                As a lifelong polyglot and software developer, I have come to describe myself as a Language Data Specialist.
               </p>
             </div>
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                In this sense, my route into programming was atypical. The call to bridge the gap between my linguistic expertise and (long-dormant) digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp.
+                Through living, studying and working internationally, I developed keen and varied insight into human interaction, motivation, and the sheer nitty-gritty of life - witnessed everywhere from hospitals to courthouses and union halls in between.
               </p>
             </div>
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                Today, my advanced tech skills combined with my fluency for the most widely spoken languages, allows my clients a unique perspective on their field of choice.
+                Over time, considering where spoken languages and behavior intersect with data got me interested in programming. The call to bridge the gap between my linguistic expertise and (long-dormant) digital dexterity came in the form of my brother’s coaching, freecodecamp, and finally formal training at Washington University St. Louis Data Analytics Boot Camp.
               </p>
+            </div>
+            <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
+              <p>
+                Today, I apply my advanced tech skills to analyses that consider where the cultural and the computational collide. This, combined with my fluency for the most widely spoken languages, allows my clients a unique perspective on their field of choice.
+              </p>
+            </div>
+            <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
+              <p> Showcasing the evolution of these skills in this - <em>work-in-progress</em> - resume site has been a learning process of its own. This site is hosted on <a href="https://shortpoet.azurewebsites.net">Azure</a> with a linked database to dynamically populate different resume formats. Please check out the <a href="/pdf">PDF-friendly</a> version. And coming soon, a guestbook that will fully illustrate the capabilities of a linked data source! 🤓</p>
             </div>
           </div>
         </div>
@@ -1584,7 +1599,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
       </div>
     </section>
     <div id="interests-poem-container" class="row mb-5">
-      <div id="interests-container" class="col-12 col-md-8">
+      <div id="interests-container" class="col-12">
         <section id="interests" class="resume-section mt-2 ml-3" renderpdf="true">
           <div class="my-auto">
             <h4 class="heading heading-4 mb-3" style="font-family: 'Saira Extra Condensed';">Interests</h4>
@@ -1593,7 +1608,6 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
           </div>
         </section>
       </div>
-      <div id="poem-container" class="col-12 col-md-4 mt-3 mt-md-0 mr-0 text-center"><img src="" alt="poem" class="img-fluid img-poem rounded" style="height: 10rem; width: 10rem;"></div>
     </div>
     <div class="pdf-target vue-portal-target">
       <div type="input" class="button-float">

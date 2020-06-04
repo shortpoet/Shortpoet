@@ -48,7 +48,7 @@
       <div class="resume-section ml-3">
         <PDFObjective
           :renderPDF="renderPDF"
-          :aboutMe="getResume.brief" 
+          :aboutMe="getResume.aboutMe" 
         />
       </div>
 
@@ -61,14 +61,11 @@
         :educations="getResume.educations"
       />
       <div id="interests-poem-container" class="row mb-5">
-        <div id="interests-container" class="col-12 col-md-8">
+        <div id="interests-container" class="col-12">
           <PDFInterests
             :interests="getResume.interests"
             :renderPDF="renderPDF"
           />
-        </div>
-        <div id="poem-container" class="col-12 col-md-4 mt-3 mt-md-0 mr-0 text-center">
-          <img class="img-fluid img-poem rounded" :src="pic" alt="poem" :style="poemStyle">
         </div>
       </div>
 

@@ -12,10 +12,6 @@ namespace DbConnect.Data.Models.ResumeData
     public class Resume
     {
         public int Id { get; set; }
-        // https://stackoverflow.com/questions/691035/setting-the-default-value-of-a-datetime-property-to-datetime-now-inside-the-syst
-
-        public DateTime DateCreated { get; set; } = DateTime.Now;
-
         public string Title { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -31,6 +27,23 @@ namespace DbConnect.Data.Models.ResumeData
         public virtual ICollection<ResumeSpokenLanguages> ResumeSpokenLanguages { get; set; } = new List<ResumeSpokenLanguages>();
         public virtual ICollection<ResumeSkills> ResumeSkills { get; set; } = new List<ResumeSkills>();
         public virtual ICollection<ResumeSocials> ResumeSocials { get; set; } = new List<ResumeSocials>();
+
+        // https://stackoverflow.com/questions/691035/setting-the-default-value-of-a-datetime-property-to-datetime-now-inside-the-syst
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+        // {
+        // // get
+        // // {
+        // //     return this.dateCreated.HasValue
+        // //         ? this.dateCreated.Value
+        // //         : DateTime.Now;
+        // // }
+
+        //     get => dateCreated ?? DateTime.Now;
+        //     set => this.dateCreated = value;
+        // }
+        // private DateTime? dateCreated = null;
+        public string Comments { get; set; }
+
 
         public static Resume LoadJson(string path)
         {
@@ -70,7 +83,9 @@ namespace DbConnect.Data.Models.ResumeData
                 return yamlObject;
             }
         }
-        public static Resume LoadResume(string path, Boolean writeJson)
+
+        
+        public static Resume LoadType(ResumeDbContext context, string path, Boolean writeJson)
         {
             using (StreamReader r = new StreamReader(path))
             {
@@ -97,6 +112,8 @@ namespace DbConnect.Data.Models.ResumeData
                 }
 
                 Resume resume = JsonConvert.DeserializeObject<Resume>(json);
+
+                context.Add(resume);
 
                 return resume;
             }

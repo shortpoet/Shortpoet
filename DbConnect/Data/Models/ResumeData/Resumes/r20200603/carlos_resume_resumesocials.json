@@ -1,0 +1,29 @@
+{
+  "resumeSocials": [
+    {
+      "resumeId": "2",
+      "socialId": "1",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "socialId": "2",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "socialId": "3",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "socialId": "5",
+      "comments": "Sameer edit 20200601"
+    },
+    {
+      "resumeId": "2",
+      "socialId": "6",
+      "comments": "Sameer edit 20200601"
+    }
+  ]
+}

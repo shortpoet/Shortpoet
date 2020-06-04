@@ -22,8 +22,11 @@ namespace DbConnect
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
             var Configuration = builder.Build();
 
-            string connStr = Configuration.GetConnectionString("localClientTest");
-            
+            // string connStr = Configuration.GetConnectionString("localClient");
+            // string connStr = Configuration.GetConnectionString("localClientTest");
+            // string connStr = Configuration.GetConnectionString("spClientTestAzure");
+            string connStr = Configuration.GetConnectionString("spClientProdAzure");
+
             Console.WriteLine(connStr);
             
             string schema = "Profiles";
@@ -37,9 +40,15 @@ namespace DbConnect
             // Resume resume = DbTransact.GetResume(ContextConfig.GetConfig(connStr));
 
             // Results.ShowJson(resume);
-            string dateFolder = "20200427";
+            string dataFolder = "d20200603";
+            string resumeFolder = "r20200603";
 
-            ResumeService.Add(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dateFolder);
+            ResumeService.AddResumeData(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dataFolder);
+            ResumeService.WriteJson(dataFolder);
+
+            ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), resumeFolder);
+            ResumeService.WriteJson(resumeFolder);
+
         }
     }
 }
