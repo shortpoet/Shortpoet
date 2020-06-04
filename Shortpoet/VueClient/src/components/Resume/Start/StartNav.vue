@@ -6,7 +6,7 @@
   >
   <!-- $event apparently helps make sure jest sees the event -->
     <a class="navbar-brand js-scroll-trigger" href="#about">
-      <span class="d-block d-lg-none">Carlos Soriano - Resume</span>
+      <span class="d-block d-lg-none">Resume</span>
       <span id="pic" class="d-none d-lg-block">
         <img class="img-fluid img-profile mx-auto mb-2" :src="pic" alt="profile pic">
       </span>

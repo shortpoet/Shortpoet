@@ -25,6 +25,8 @@ const paths = [
     path: '/blog',
     view: 'Blog',
     props: true,
+    // until further articles written
+    redirect: '/blog/learning-to-unit-test-en',
     children: [
       // {
       //   path: '/blog/:title',

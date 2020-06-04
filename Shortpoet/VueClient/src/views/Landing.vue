@@ -1,8 +1,8 @@
 <template>
   <div class="main-wrapper" v-if="getResumeLoaded" id="resume-anchor">
-    <LandingNav />
+    <StartNav v-if="isResume"/>
     <div class="container-fluid p-0">
-      <LandingAbout
+      <StartAbout
         :name="getResume.name"
         :surname="getResume.surname"
         :email="getResume.email"
@@ -10,9 +10,37 @@
         :visas="getResume.visas"
         :flags="getResume.flags"
       />
-      <LandingSocials 
+      <StartSocials 
         :socials="getResume.socials"
       />
+      <LandingNav v-if="!isResume" @show-resume="showResume" />
+      <StartSkills
+        :skills="getResume.skills"
+        v-if="isResume"        
+      />
+      <StartAwards
+        :spokenLanguages="getResume.spokenLanguages"
+        v-if="isResume"        
+      />
+      <StartObjective
+        :aboutMe="getResume.aboutMe"
+        v-if="isResume"        
+      />
+      <StartExperience
+        :experiences="getResume.experiences"      
+        v-if="isResume"        
+      />
+      <StartEducation
+        :educations="getResume.educations"
+        v-if="isResume"        
+      />
+      <StartInterests
+        :interests="getResume.interests"
+        v-if="isResume"        
+      />
+
+      <portal-target v-if="isResume" class="start-target" name="pdf-button-float"/>
+      <StartButtonFloat :target="'pdf-button-float'" :href="'/pdf'" :isExpanded="rippleExpanded"  @ripple-open="toggleVisibility(true)" @ripple-close="toggleVisibility(false)" />      
 
     </div>
 
@@ -20,21 +48,38 @@
 </template>
 
 <script>
+import StartNav from '@/components/Resume/Start/StartNav.vue'
 import LandingNav from '@/components/Landing/LandingNav.vue'
-import LandingAbout from '@/components/Landing/LandingAbout'
-import LandingSocials from '@/components/Landing/LandingSocials'
+import StartAbout from '@/components/Resume/Start/StartAbout'
+import StartSocials from '@/components/Resume/Start/StartSocials'
+import StartSkills from '@/components/Resume/Start/StartSkills'
+import StartObjective from '@/components/Resume/Start/StartObjective'
+import StartExperience from '@/components/Resume/Start/StartExperience'
+import StartEducation from '@/components/Resume/Start/StartEducation'
+import StartInterests from '@/components/Resume/Start/StartInterests'
+import StartAwards from '@/components/Resume/Start/StartAwards'
+import StartButtonFloat from '@/components/Resume/Start/StartButtonFloat'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Start',
   components: {
+    StartNav,
     LandingNav,
-    LandingAbout,
-    LandingSocials,
+    StartAbout,
+    StartSocials,
+    StartSkills,
+    StartObjective,
+    StartExperience,
+    StartEducation,
+    StartInterests,
+    StartAwards,
+    StartButtonFloat
   },
   data () {
     return {
-      rippleExpanded: false
+      rippleExpanded: false,
+      isResume: false
     }
   },
   computed: {
@@ -50,6 +95,9 @@ export default {
         this.rippleExpanded = args
       }
     },
+    showResume() {
+      this.isResume = true
+    }
   },
   mounted () {
     const env = process.env.NODE_ENV
