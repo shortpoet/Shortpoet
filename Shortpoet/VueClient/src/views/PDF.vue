@@ -48,7 +48,7 @@
       <div class="resume-section ml-3">
         <PDFObjective
           :renderPDF="renderPDF"
-          :aboutMe="getResume.brief" 
+          :aboutMe="getResume.aboutMe" 
         />
       </div>
 
