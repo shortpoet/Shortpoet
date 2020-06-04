@@ -27,6 +27,8 @@ namespace DbConnect
     public const string ResumeSkills = "carlos_resume_resumeskills.yml";
     public const string ResumeSocials = "carlos_resume_resumesocials.yml";
     public const string ResumeSpokenLanguages = "carlos_resume_resumespokenlanguages.yml";
+    public const string HardResume = "carlos_resume.yml";
+    public const string JavaScriptPath = "H:/source/repos/shortpoet/Shortpoet/VueClient/src/assets/resume.js";
 
   }
   // https://support.microsoft.com/en-us/help/322022/how-to-make-a-visual-c-class-usable-in-a-foreach-statement
@@ -35,7 +37,7 @@ namespace DbConnect
     private string[] fileArray;
     public ResumeFiles(string dateFolder)
     {
-      fileArray = new string[11];
+      fileArray = new string[13];
       fileArray[0] = Resume = $"{ResumeFileStrings.ProjectRoot}/{dateFolder}/{ResumeFileStrings.Resume}";
       fileArray[1] = Education = $"{ResumeFileStrings.ProjectRoot}/{dateFolder}/{ResumeFileStrings.Education}";
       fileArray[2] = Job = $"{ResumeFileStrings.ProjectRoot}/{dateFolder}/{ResumeFileStrings.Job}";
@@ -47,6 +49,8 @@ namespace DbConnect
       fileArray[8] = ResumeSkills = $"{ResumeFileStrings.ProjectRoot}/{dateFolder}/{ResumeFileStrings.ResumeSkills}";
       fileArray[9] = ResumeSocials = $"{ResumeFileStrings.ProjectRoot}/{dateFolder}/{ResumeFileStrings.ResumeSocials}";
       fileArray[10] = ResumeSpokenLanguages = $"{ResumeFileStrings.ProjectRoot}/{dateFolder}/{ResumeFileStrings.ResumeSpokenLanguages}";
+      fileArray[11] = HardResume = $"{ResumeFileStrings.ProjectRoot}/{dateFolder}/{ResumeFileStrings.HardResume}";
+      fileArray[12] = JavaScriptPath = $"{ResumeFileStrings.JavaScriptPath}";
     }
     public string Resume { get; set; }
     public string Education { get; set; }
@@ -59,6 +63,8 @@ namespace DbConnect
     public string ResumeSkills { get; set; }
     public string ResumeSocials { get; set; }
     public string ResumeSpokenLanguages { get; set; }
+    public string HardResume { get; set; }
+    public string JavaScriptPath { get; set; }
 
     int position = -1;
     public object Current => fileArray[position];
