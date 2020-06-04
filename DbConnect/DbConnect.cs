@@ -52,7 +52,28 @@ namespace DbConnect
           return response;
         }
     
-      public static Resume GetResume (DbContextOptions<ResumeDbContext> options)
+      // public static Resume GetResume (DbContextOptions<ResumeDbContext> options)
+      // {
+      //   using (var db = new ResumeDbContext(options))
+      //   {
+      //     var resume = db.Resumes
+      //       .Include(r => r.ResumeEducations)
+      //         .ThenInclude(r => r.Education)
+      //       .Include(r => r.ResumeJobs)
+      //         .ThenInclude(r => r.Job)
+      //       .Include(r => r.ResumeSkills)
+      //         .ThenInclude(r => r.Skill)
+      //       .Include(r => r.ResumeSocials)
+      //         .ThenInclude(r => r.Social)
+      //       .Include(r => r.ResumeSpokenLanguages)
+      //         .ThenInclude(r => r.SpokenLanguages)
+      //       .AsNoTracking()
+      //       .OrderByDescending(r => r.DateCreated)
+      //       .FirstOrDefault();
+      //     return resume;
+      //   }
+      // }
+      public static Resume GetLatestResume (DbContextOptions<ResumeDbContext> options)
       {
         using (var db = new ResumeDbContext(options))
         {

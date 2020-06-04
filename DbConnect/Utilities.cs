@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using YamlDotNet.Serialization;
 using DbConnect.Data;
+using DbConnect.Data.Models.ResumeData;
+
 namespace DbConnect
 {
   class Utilities
@@ -121,6 +123,62 @@ namespace DbConnect
             Console.WriteLine($"JSON wrote at {jsonPath}");
           }
         }
+      }
+    }
+    public static void WriteHardResume(string dateFolder, Resume resume)
+    {
+
+      ResumeFiles files =  new ResumeFiles(dateFolder);
+      string ymlPath = files.HardResume;
+      
+      // write to json
+      string json = JsonConvert.SerializeObject(
+        resume,
+        Formatting.Indented,
+        new JsonSerializerSettings()
+        { 
+          ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+        }     
+      );
+
+      string jsonPath = ymlPath.Replace("yml", "json");
+
+      Resume decircularized = JsonConvert.DeserializeObject<Resume>(json);
+      
+      using (StreamWriter w = new StreamWriter(jsonPath)) 
+      {
+        w.Write(json);
+        Console.WriteLine("##############################");
+        Console.WriteLine($"JSON wrote at {jsonPath}");
+      }
+
+      //write to yml
+      var serializer = new YamlDotNet.Serialization.Serializer();
+
+      string yaml;
+      
+      using (StringWriter w = new StringWriter()) 
+      {
+        serializer.Serialize(w, decircularized);
+        yaml = w.ToString();
+      }
+
+      using (StreamWriter w2 = new StreamWriter(ymlPath)) 
+      {
+        w2.Write(yaml);
+        Console.WriteLine("##############################");
+        Console.WriteLine($"YML wrote at {ymlPath}");
+      }
+
+      // write to javascript
+      string javascript = "export default " + json;
+      string jsPath = files.JavaScriptPath;
+      Console.WriteLine(jsPath);
+      using (StreamWriter w3 = new StreamWriter(jsPath)) 
+      {
+        w3.Write(javascript);
+        Console.WriteLine("##############################");
+        Console.WriteLine($"JS wrote at {jsPath}");
       }
     }
 
