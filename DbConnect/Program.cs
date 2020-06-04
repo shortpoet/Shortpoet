@@ -23,9 +23,9 @@ namespace DbConnect
             var Configuration = builder.Build();
 
             // string connStr = Configuration.GetConnectionString("localClient");
-            // string connStr = Configuration.GetConnectionString("localClientTest");
+            string connStr = Configuration.GetConnectionString("localClientTest");
             // string connStr = Configuration.GetConnectionString("spClientTestAzure");
-            string connStr = Configuration.GetConnectionString("spClientProdAzure");
+            // string connStr = Configuration.GetConnectionString("spClientProdAzure");
 
             Console.WriteLine(connStr);
             
@@ -37,9 +37,7 @@ namespace DbConnect
 
             // Results.ShowDataTable(results);
 
-            // Resume resume = DbTransact.GetResume(ContextConfig.GetConfig(connStr));
 
-            // Results.ShowJson(resume);
             string dataFolder = "d20200603";
             string resumeFolder = "r20200603";
 
@@ -48,6 +46,12 @@ namespace DbConnect
 
             ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), resumeFolder);
             ResumeService.WriteJson(resumeFolder);
+
+            Resume resume = DbTransact.GetLatestResume(ContextConfig.GetConfig(connStr));                
+            // Results.ShowJson(resume);
+
+            Utilities.WriteHardResume(dataFolder, resume);
+
 
         }
     }
