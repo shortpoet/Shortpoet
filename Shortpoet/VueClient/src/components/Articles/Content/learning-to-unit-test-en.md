@@ -33,7 +33,7 @@ And it's at this moment that I was inspired to put thoughts to keyboard and cobb
 
 I am writing for 3 reasons:
 
-- [LinkedIn](https://www.linkedin.com/in/carlos-soriano-49aaa97/) [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)
+- [LinkedIn](https://www.linkedin.com/in/carlos-soriano/) [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)
 
 - So I remember how happy success makes me feel next time I'm ready to give up when learning something new
 
@@ -62,7 +62,7 @@ I just need to decide who my audience is, duh! 🙄 Right. Now who are you, agai
 
 - Another random recruiter who sends specific job requirements that totally don't match my skill-set, asking if I have the time to connect?
 
-- Are you someone who is actively pursuing [LinkedIn](https://www.linkedin.com/in/carlos-soriano-49aaa97/) SEO for themselves, and so here you are?
+- Are you someone who is actively pursuing [LinkedIn](https://www.linkedin.com/in/carlos-soriano/) SEO for themselves, and so here you are?
 
 - Who knows really. Maybe you googled unit tests and were hoping to find the holy grail that makes your code an [adamantium](https://en.wikipedia.org/wiki/Adamantium)-framed beast.
 
@@ -104,13 +104,13 @@ For the [future](https://www.shortpoet.com) (because this is finally looking lik
 
 That file extension is a great opportunity to practice what is known as [TDD](https://en.wikipedia.org/wiki/Test-driven_development) or test driven development.  Basically, one would write a test that would check a method enabling the API to switch between file extensions - such feature! And the way that will work (future Carlos!) is that you will write the test case that should pass (egg boils at perfect temperature) and then write that code that ensures that action (the test passes - a perfect egg).
 
-So in conclusion, learn to cook an egg properly, love your unit tests, and in the process find your [voice](https://www.shortpoet.com/blog).
+So in conclusion, learn to cook an egg properly, love your unit tests, and in the process find your [voice](https://www.shortpoet.com/articles).
 
 --- 
 
 Originally published at: 
-https://www.shortpoet.com/blog/learning-to-unit-test-en
+https://www.shortpoet.com/articles/learning-to-unit-test-en
 
 ---
 
-[Spanish translation](https://www.shortpoet.com/blog/learning-to-unit-test-es)
+[Spanish translation](https://www.shortpoet.com/articles/learning-to-unit-test-es)

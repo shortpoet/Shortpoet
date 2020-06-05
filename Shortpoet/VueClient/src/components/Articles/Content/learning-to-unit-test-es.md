@@ -31,7 +31,7 @@ Darme cuenta de que he escrito código que me impide cambiar arbitrariamente los
 
 Estoy escribiendo por 3 razones:
 
-- [SEO](https://es.wikipedia.org/wiki/Posicionamiento_en_buscadores) (posicionamiento en buscadores) de [LinkedIn](https://www.linkedin.com/in/carlos-soriano-49aaa97/)
+- [SEO](https://es.wikipedia.org/wiki/Posicionamiento_en_buscadores) (posicionamiento en buscadores) de [LinkedIn](https://www.linkedin.com/in/carlos-soriano/)
 
 - Así recuerdo lo feliz que te hace sentir el éxito la próxima vez que esté listo para rendirme al aprender algo nuevo
 
@@ -60,7 +60,7 @@ Sólo tengo que decidir quién es mi público, ¡obvio! 🙄 Bueno. Ahora, ¿rec
 
 - ¿Otro reclutador 'random' enviando solicitudes para trabajos con requisitos específicos que no coinciden con mis habilidades, preguntándome si tengo tiempo para conectar?
 
-- ¿Eres alguien que tambien está buscando de forma activa el SEO en [LinkedIn](https://www.linkedin.com/in/carlos-soriano-49aaa97/) , y aquí te encuentras?
+- ¿Eres alguien que tambien está buscando de forma activa el SEO en [LinkedIn](https://www.linkedin.com/in/carlos-soriano/) , y aquí te encuentras?
 
 - Quién sabe realmente. Tal vez buscaste en Google los tests unitarios y esperabas encontrar el santo grial que hace de tu código una bestia con constitución de [adamantium](https://es.wikipedia.org/wiki/Adamantium).
 
@@ -100,13 +100,13 @@ Para el yo del [futuro](https://www.shortpoet.com) (¡porque por fin esto parece
 
 Esa extensión de archivo es una gran oportunidad para practicar lo que se conoce como [TDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas) o el desarrollo guiado por pruebas.  Básicamente, uno escribiría un test que comprobaría un método permitiendo a la API cambiar entre las extensiones de archivo - ¡que tan característica! Y la forma en que eso funcionará (¡futuro Carlos!) es que se escribirá el caso de prueba que debe pasar (el huevo hierve a temperatura perfecta) y luego se escribirá el código que asegure esa acción (la prueba pasa - un huevo perfecto).
 
-Así que en conclusión, aprende a cocinar un huevo correctamente, ama tus pruebas de unidad, y en el proceso encuentra tu [voz](https://www.shortpoet.com/blog).
+Así que en conclusión, aprende a cocinar un huevo correctamente, ama tus pruebas de unidad, y en el proceso encuentra tu [voz](https://www.shortpoet.com/articles).
 
 --- 
 
 Publicado orignalmente en: 
-https://www.shortpoet.com/blog/learning-to-unit-test-es
+https://www.shortpoet.com/articles/learning-to-unit-test-es
 
 ---
 
-[Traducción al inglés](https://www.shortpoet.com/blog/learning-to-unit-test-ene)
+[Traducción al inglés](https://www.shortpoet.com/articles/learning-to-unit-test-ene)
