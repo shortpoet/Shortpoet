@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using YamlDotNet.Serialization;
 using DbConnect.Data;
 using DbConnect.Data.Models.ResumeData;
+using Newtonsoft.Json.Serialization;
 
 namespace DbConnect
 {
@@ -132,18 +133,37 @@ namespace DbConnect
       string ymlPath = files.HardResume;
       
       // write to json
-      string json = JsonConvert.SerializeObject(
+      string jsonDCircle = JsonConvert.SerializeObject(
         resume,
-        Formatting.Indented,
         new JsonSerializerSettings()
         { 
-          ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+          ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+          Formatting = Formatting.Indented,
+          ContractResolver = new DefaultContractResolver
+          {
+            NamingStrategy = new CamelCaseNamingStrategy()
+          }
         }     
       );
 
       string jsonPath = ymlPath.Replace("yml", "json");
 
-      Resume decircularized = JsonConvert.DeserializeObject<Resume>(json);
+      Resume resumeDCircle = JsonConvert.DeserializeObject<Resume>(jsonDCircle);
+
+      ResumeDTO parsed = parseResume(resumeDCircle);
+
+      string json = JsonConvert.SerializeObject(
+        parsed,
+        new JsonSerializerSettings()
+        { 
+          ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+          Formatting = Formatting.Indented,
+          ContractResolver = new DefaultContractResolver
+          {
+            NamingStrategy = new CamelCaseNamingStrategy()
+          }
+        }     
+      );
       
       using (StreamWriter w = new StreamWriter(jsonPath)) 
       {
@@ -159,7 +179,7 @@ namespace DbConnect
       
       using (StringWriter w = new StringWriter()) 
       {
-        serializer.Serialize(w, decircularized);
+        serializer.Serialize(w, parsed);
         yaml = w.ToString();
       }
 
@@ -181,6 +201,42 @@ namespace DbConnect
         Console.WriteLine($"JS wrote at {jsPath}");
       }
     }
-
+  private static List<Experience> parseExperiences(IEnumerable<Job> jobs)
+  {
+    List<Experience> experiences = new List<Experience>();
+    foreach (ExperienceType type in (ExperienceType[]) Enum.GetValues(typeof(ExperienceType)))
+    {
+      experiences.Add(new Experience(){
+        Type = type.ToString(),
+        Jobs = jobs.Select(j => j).Where(j => j.ExperienceType == type.ToString()).ToList()
+      });
+    }
+    return experiences;
+  }
+    public static ResumeDTO parseResume(Resume input)
+    {
+      ResumeDTO resume = new ResumeDTO()
+      {
+        AboutMe = input.AboutMe,
+        Address = input.Address,
+        Brief = input.Brief,
+        Email = input.Email,
+        Flags = input.Flags,
+        Interests = input.Interests,
+        Name = input.Name,
+        Surname = input.Surname,
+        Title = input.Title,
+        Visas = input.Visas,
+        Educations = input.ResumeEducations.Select(e => e.Education).ToList(),
+        Jobs = input.ResumeJobs.Select(j => j.Job).ToList(),
+        Skills = input.ResumeSkills.Select(sk => sk.Skill).ToList(),
+        Socials = input.ResumeSocials.Select(so => so.Social).ToList(),
+        SpokenLanguages = input.ResumeSpokenLanguages.Select(sp => sp.SpokenLanguages).ToList(),
+        Experiences = parseExperiences(input.ResumeJobs.Select(j => j.Job)),
+        DateCreated = input.DateCreated,
+        Comments = input.Comments
+      };
+      return resume;
+    }
   }
 }
