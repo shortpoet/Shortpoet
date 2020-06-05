@@ -22,11 +22,11 @@ const paths = [
     view: 'PDF'
   },
   {
-    path: '/blog',
-    view: 'Blog',
+    path: '/articles',
+    view: 'Articles',
     props: true,
     // until further articles written
-    redirect: '/blog/learning-to-unit-test-en',
+    redirect: '/articles/learning-to-unit-test-en',
     children: [
       // {
       //   path: '/blog/:title',
@@ -34,14 +34,14 @@ const paths = [
       //   props: (route) => ({ title: route.query.q })
       // },
       {
-        path: '/blog/learning-to-unit-test-en',
+        path: '/articles/learning-to-unit-test-en',
         name: 'learning-to-unit-test-en',
         props: {
           language: 'en'
         }
       },
       {
-        path: '/blog/learning-to-unit-test-es',
+        path: '/articles/learning-to-unit-test-es',
         name: 'learning-to-unit-test-es',
         props: {
           language: 'es'

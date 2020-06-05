@@ -6,8 +6,8 @@
       <li class="nav-item dropdown">
           <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="" role="button" aria-haspopup="true" aria-expanded="false">{{ dropDown }}</router-link>
           <div class="dropdown-menu">
-            <router-link class="dropdown-item" to="/blog/learning-to-unit-test-en">{{ englishLink }}</router-link>
-            <router-link class="dropdown-item" to="/blog/learning-to-unit-test-es">{{ spanishLink }}</router-link>
+            <router-link class="dropdown-item" to="/articles/learning-to-unit-test-en">{{ englishLink }}</router-link>
+            <router-link class="dropdown-item" to="/articles/learning-to-unit-test-es">{{ spanishLink }}</router-link>
           </div>
         </li>      
     </ul>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'BlogArticle',
+  name: 'ArticleLayout',
   props: {
     language: String
   },
@@ -30,8 +30,8 @@ export default {
     // selectedArticle: () => import('./../../components/Blog/Articles/')
     // correct
     selectedArticle: function () {
-      const english = () => import(`./../../components/Blog/Articles/learning-to-unit-test-en.md`)
-      const spanish = () => import(`./../../components/Blog/Articles/learning-to-unit-test-es.md`)
+      const english = () => import(`./../../components/Articles/Content/learning-to-unit-test-en.md`)
+      const spanish = () => import(`./../../components/Articles/Content/learning-to-unit-test-es.md`)
       return this.language === 'en' ? english : spanish
     },
     dropDown() { return this.language === `en` ? `Languages` : `Idiomas` },

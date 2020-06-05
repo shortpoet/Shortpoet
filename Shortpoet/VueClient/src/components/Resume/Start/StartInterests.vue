@@ -16,7 +16,6 @@ export default {
   },
   data () {
     return {
-      pic: require('@/assets/poem.jpg'),
     }
   }
 }

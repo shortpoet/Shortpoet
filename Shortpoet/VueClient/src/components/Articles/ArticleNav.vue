@@ -7,7 +7,7 @@
       <!--
         commenting until further articles written 
       <li class="nav-item">
-        <router-link to="/blog">Blog</router-link>
+        <router-link to="/articles">Articles</router-link>
       </li> 
       -->
     </ul>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'BlogNav'
+  name: 'ArticleNav'
 }
 </script>
 

@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'BlogArticle',
+  name: 'ArticleList',
   props: {
     language: String
   },
