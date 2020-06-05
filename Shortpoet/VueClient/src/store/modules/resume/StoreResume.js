@@ -53,7 +53,7 @@ export const mutations = {
         jobs: resume.jobs.filter(j => j.experienceType === et)
       })
     })
-    // console.log(resume)
+    console.log(resume)
     state.resume = resume
   },
   [SET_RESUME] (state, newResume) { state.resume = newResume },
@@ -67,7 +67,7 @@ export const actions = {
       const resPoint = endpoints.resume.RESUME_FETCH_LATEST_API
       const url = rootGetters.getUrlPrefix + resPoint
       const response = await axios.get(url)
-      // console.log(response.data)
+      console.log(response.data)
       commit(SET_RESUME_RAW, response.data)
       const hasResume = !!response.data
       commit(SET_RESUME_LOADED, hasResume)
