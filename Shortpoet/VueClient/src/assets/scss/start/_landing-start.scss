@@ -1,20 +1,18 @@
-.landing-button-1 {
+.landing-button {
   width: 8rem;
   border-radius: 1rem;
   font-weight: 700;
   font-size: 1.2rem;
-  background-color: $royal-purple;
+  background-color: $forest-green;
   color: $white;
-  border: .25rem solid $royal-purple;
-}
-.landing-button-2 {
-  width: 8rem;
-  border-radius: 1rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-  background-color: $white;
-  color: $royal-purple;
-  border: .25rem solid $royal-purple;
+  border: .25rem solid $forest-green;
+  &:hover {
+    background-color: $gray-400;
+    color: $forest-green;    
+    background-color: $royal-purple;
+    color: $white;    
+    border: .25rem solid $royal-purple;
+  }
 }
 // copied from bootstrap .button class
 // so that the global doesn't reload incorrectly on browser back 
