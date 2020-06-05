@@ -47,14 +47,10 @@ namespace DbConnect
             ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), resumeFolder);
             ResumeService.WriteJson(resumeFolder);
 
-            // TODO
-            // maybe
-            // this has PascalCase keys and possibly too much extra info
-            // #TODO
-            // Resume resume = DbTransact.GetLatestResume(ContextConfig.GetConfig(connStr));                
+            Resume resume = DbTransact.GetLatestResume(ContextConfig.GetConfig(connStr));                
             // // Results.ShowJson(resume);
 
-            // Utilities.WriteHardResume(dataFolder, resume);
+            Utilities.WriteHardResume(dataFolder, resume);
 
 
         }

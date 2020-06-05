@@ -9,101 +9,7 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
     <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mx-5 px-0">
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class="devicons devicons-html5"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-css3"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-bootstrap"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-sass"></i>
-            <!---->
-          </div>
-        </div>
-        <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
-          <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Markdown</div>
-          </div>
-        </div>
-        <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
-        <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  HTML
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   CSS
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   YAML
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   MD
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   SCSS
-                </span> <span></span></div>
-          </div>
-        </div>
-        <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
-      </div>
-      <div class="skill-grid">
-        <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class="fa fa-beer"></i>
-            <!---->
-          </div>
-          <div><i class="fa fa-magic"></i>
-            <!---->
-          </div>
-        </div>
-        <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
-          <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Miscellaneous</div>
-          </div>
-        </div>
-        <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
-        <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  Cooking
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Gardening
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   YogaWorks Teacher Traning
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Cicerone Beer Server Certification
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Adobe Creative Suite
-                </span> <span></span></div>
-          </div>
-        </div>
-        <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
-      </div>
-      <div class="skill-grid">
-        <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class=""></i>
+          <div><i class="devicons devicons-javascript"></i>
             <!---->
           </div>
           <div><i class=""></i>
@@ -112,19 +18,29 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
         </div>
         <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
           <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Data Vizualization</div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Javascript</div>
           </div>
         </div>
         <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
         <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  D3
+                  Vue
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Tableau
+                   Leafly
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Plotly
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   c3
                 </span> <span></span></div>
           </div>
         </div>
@@ -132,25 +48,49 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
       </div>
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class="devicons devicons-mongodb"></i>
+          <div><i class="devicons devicons-visualstudio"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-git"></i>
+            <!---->
+          </div>
+          <div><i class="fa fa-cogs"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-linux"></i>
             <!---->
           </div>
         </div>
         <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
           <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Document Db</div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Workflow</div>
           </div>
         </div>
         <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
         <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  mongoDB
+                  Mobile-First &amp; Responsive Design
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Pymongo
+                   Cross Browser Testing &amp; Debugging
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   CI/CD
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Agile Development &amp; Scrum
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Visual Studio / VSCode
                 </span> <span></span></div>
           </div>
         </div>
@@ -240,7 +180,7 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
       </div>
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class="devicons devicons-javascript"></i>
+          <div><i class=""></i>
             <!---->
           </div>
           <div><i class=""></i>
@@ -249,29 +189,19 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
         </div>
         <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
           <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Javascript</div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Data Vizualization</div>
           </div>
         </div>
         <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
         <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  Vue
+                  D3
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Leafly
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Plotly
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   c3
+                   Tableau
                 </span> <span></span></div>
           </div>
         </div>
@@ -279,49 +209,75 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
       </div>
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class="devicons devicons-visualstudio"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-git"></i>
-            <!---->
-          </div>
-          <div><i class="fa fa-cogs"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-linux"></i>
+          <div><i class="devicons devicons-mongodb"></i>
             <!---->
           </div>
         </div>
         <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
           <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Workflow</div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Document Db</div>
           </div>
         </div>
         <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
         <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  Mobile-First &amp; Responsive Design
+                  mongoDB
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Cross Browser Testing &amp; Debugging
+                   Pymongo
+                </span> <span></span></div>
+          </div>
+        </div>
+        <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+      </div>
+      <div class="skill-grid">
+        <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+          <div><i class="devicons devicons-html5"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-css3"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-bootstrap"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-sass"></i>
+            <!---->
+          </div>
+        </div>
+        <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+          <div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Markdown</div>
+          </div>
+        </div>
+        <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+        <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  HTML
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   CI/CD
+                   CSS
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Agile Development &amp; Scrum
+                   YAML
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Visual Studio / VSCode
+                   MD
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   SCSS
                 </span> <span></span></div>
           </div>
         </div>
