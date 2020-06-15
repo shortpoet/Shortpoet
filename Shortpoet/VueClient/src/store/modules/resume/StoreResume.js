@@ -1,5 +1,5 @@
 import axios from 'axios'
-import hardResume from '@/assets/resume.js'
+import {hardResume} from '@/assets/resume.js'
 
 import {
   SET_RESUME_RAW,

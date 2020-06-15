@@ -3,7 +3,7 @@ const {propMocker, propFinder, propsMocker, propsFinder, factory, createWrapper}
 
 import { mount, createLocalVue } from '@vue/test-utils'
 import {cloneDeep} from 'lodash'
-import hardResume from '@/assets/resume.js'
+import {hardResume} from '@/assets/resume.js'
 import Start from '@/views/Start'
 import Vue from 'vue'
 import Vuex from 'vuex'

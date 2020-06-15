@@ -1,4 +1,4 @@
-export default {
+exports.hardResume = {
   "id": 0,
   "title": "Carlos Resume 2020 06 02",
   "name": "CARLOS",

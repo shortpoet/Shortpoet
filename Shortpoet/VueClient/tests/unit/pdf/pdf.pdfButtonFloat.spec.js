@@ -29,7 +29,7 @@ import moment from "moment";
 // SUT
 import PDFButtonFloat from "@/components/Resume/PDF/PDFButtonFloat";
 import PDF from "@/views/PDF";
-import hardResume from "@/assets/resume.js";
+import {hardResume} from "@/assets/resume.js";
 
 // mocks
 // the first way wasn't being 'called'

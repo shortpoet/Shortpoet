@@ -3,7 +3,7 @@ const { createWrapper } = myTest.default
 import { cloneDeep } from 'lodash'
 // even just importing throws the error
 import PDF from '@/views/PDF'
-import hardResume from '@/assets/resume.js'
+import {hardResume} from '@/assets/resume.js'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCircle, faFilePdf, faSave, faTimes, faRocket} from '@fortawesome/free-solid-svg-icons'

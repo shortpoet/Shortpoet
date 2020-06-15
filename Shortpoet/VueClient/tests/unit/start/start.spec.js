@@ -1,7 +1,7 @@
 import * as myTest from '@/utils/myTest'
 const { createWrapper } = myTest.default
 import Start from '@/views/Start'
-import hardResume from '@/assets/resume.js'
+import {hardResume} from '@/assets/resume.js'
 import { FontAwesomeIcon, FontAwesomeLayers } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCircle, faFilePdf, faSave, faTimes, faRocket, faGrinTongueSquint} from '@fortawesome/free-solid-svg-icons'

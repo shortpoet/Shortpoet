@@ -1,5 +1,5 @@
 import { actions } from '@/store/modules/resume/StoreResume'
-import hardResume from '@/assets/resume.js'
+import {hardResume} from '@/assets/resume.js'
 import axios from 'axios'
 
 import {

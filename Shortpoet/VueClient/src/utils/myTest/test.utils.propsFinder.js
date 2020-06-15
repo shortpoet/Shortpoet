@@ -1,4 +1,4 @@
-import hardResume from '@/assets/resume.js'
+import {hardResume} from '@/assets/resume.js'
 
 export const propsFinder = (props) => {
   let propsData = {}
