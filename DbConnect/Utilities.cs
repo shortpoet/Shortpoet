@@ -191,7 +191,7 @@ namespace DbConnect
       }
 
       // write to javascript
-      string javascript = "export default " + json;
+      string javascript = "exports.resume = " + json;
       string jsPath = files.JavaScriptPath;
       Console.WriteLine(jsPath);
       using (StreamWriter w3 = new StreamWriter(jsPath)) 
