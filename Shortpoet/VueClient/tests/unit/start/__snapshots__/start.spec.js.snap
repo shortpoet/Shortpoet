@@ -63,12 +63,22 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
             </div>
           </li>
           <li class="list-inline-item">
+            <div><i class="devicons devicons-docker"></i>
+              <!---->
+            </div>
+          </li>
+          <li class="list-inline-item">
             <div><i class="devicons devicons-dotnet"></i>
               <!---->
             </div>
           </li>
           <li class="list-inline-item">
             <div><i class="devicons devicons-javascript"></i>
+              <!---->
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div><i class=""></i>
               <!---->
             </div>
           </li>
@@ -155,25 +165,6 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
         </ul>
         <div class="skill-grid">
           <div class="subheading mb-3">
-            Javascript
-          </div>
-          <ul class="fa-ul mb-3 skill-list">
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              Vue
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Leafly
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Plotly
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               c3
-            </span></li>
-          </ul>
-        </div>
-        <div class="skill-grid">
-          <div class="subheading mb-3">
             Workflow
           </div>
           <ul class="fa-ul mb-3 skill-list">
@@ -190,7 +181,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
                Agile Development &amp; Scrum
             </span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Visual Studio / VSCode
+               Docker
             </span></li>
           </ul>
         </div>
@@ -218,6 +209,28 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
         </div>
         <div class="skill-grid">
           <div class="subheading mb-3">
+            Javascript
+          </div>
+          <ul class="fa-ul mb-3 skill-list">
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+              Vue
+            </span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+               Typescript
+            </span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+               Leafly
+            </span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+               Plotly
+            </span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+               c3
+            </span></li>
+          </ul>
+        </div>
+        <div class="skill-grid">
+          <div class="subheading mb-3">
             Python
           </div>
           <ul class="fa-ul mb-3 skill-list">
@@ -240,14 +253,20 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
         </div>
         <div class="skill-grid">
           <div class="subheading mb-3">
-            Data Vizualization
+            Relational Db
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              D3
+              msSQL
             </span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Tableau
+               mySQL
+            </span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+               Entity Framework
+            </span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+               SQLAlchemy
             </span></li>
           </ul>
         </div>
@@ -288,20 +307,14 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
         </div>
         <div class="skill-grid">
           <div class="subheading mb-3">
-            Relational Db
+            Data Visualization
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              msSQL
+              D3
             </span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               mySQL
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Entity Framework
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               SQLAlchemy
+               Tableau
             </span></li>
           </ul>
         </div>

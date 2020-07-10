@@ -2,11 +2,13 @@
 skills:
   - type: Workflow
     details: Mobile-First & Responsive Design, Cross Browser Testing & Debugging, 
-      CI/CD, Agile Development & Scrum, Visual Studio / VSCode
+      CI/CD, Agile Development & Scrum, Docker
+    comments: Add Docker, remove IDEs
   - type: Dotnet
     details: Framework 4.x, Core, Entity Framework, Razor, MVC
   - type: Javascript
-    details: Vue, Leafly, Plotly, c3
+    details: Vue, Typescript, Leafly, Plotly, c3
+    comments: Add Typescript
   - type: Python
     details: Pandas, Matplotlib, Flask, Selenium, Sklearn
   - type: Relational Db

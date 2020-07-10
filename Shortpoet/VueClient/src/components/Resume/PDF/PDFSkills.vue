@@ -77,6 +77,7 @@ export default {
       return skills.split(',')
     },
     mapIcons(skill) {
+      console.log(skill)
       let iconKeys = this.iconMap.filter(im => im.skill === skill)[0]['icons']
       return iconKeys.map(ik => {
         return this.icons.filter(i => i.name === ik)[0]

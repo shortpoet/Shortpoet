@@ -9,45 +9,6 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
     <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mx-5 px-0">
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class="devicons devicons-javascript"></i>
-            <!---->
-          </div>
-          <div><i class=""></i>
-            <!---->
-          </div>
-        </div>
-        <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
-          <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Javascript</div>
-          </div>
-        </div>
-        <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
-        <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  Vue
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Leafly
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Plotly
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   c3
-                </span> <span></span></div>
-          </div>
-        </div>
-        <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
-      </div>
-      <div class="skill-grid">
-        <div class="list-devicons devicon-row d-flex justify-content-around my-0">
           <div><i class="devicons devicons-visualstudio"></i>
             <!---->
           </div>
@@ -58,6 +19,9 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
             <!---->
           </div>
           <div><i class="devicons devicons-linux"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-docker"></i>
             <!---->
           </div>
         </div>
@@ -90,7 +54,7 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Visual Studio / VSCode
+                   Docker
                 </span> <span></span></div>
           </div>
         </div>
@@ -139,6 +103,53 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
       </div>
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+          <div><i class="devicons devicons-javascript"></i>
+            <!---->
+          </div>
+          <div><i class=""></i>
+            <!---->
+          </div>
+          <div><i class=""></i>
+            <!---->
+          </div>
+        </div>
+        <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+          <div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Javascript</div>
+          </div>
+        </div>
+        <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+        <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Vue
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Typescript
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Leafly
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Plotly
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   c3
+                </span> <span></span></div>
+          </div>
+        </div>
+        <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+      </div>
+      <div class="skill-grid">
+        <div class="list-devicons devicon-row d-flex justify-content-around my-0">
           <div><i class="devicons devicons-python"></i>
             <!---->
           </div>
@@ -180,28 +191,41 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
       </div>
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class=""></i>
+          <div><i class="devicons devicons-msql_server"></i>
             <!---->
           </div>
-          <div><i class=""></i>
+          <div><i class="devicons devicons-mysql"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-sqllite"></i>
             <!---->
           </div>
         </div>
         <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
           <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Data Vizualization</div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Relational Db</div>
           </div>
         </div>
         <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
         <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  D3
+                  msSQL
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Tableau
+                   mySQL
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Entity Framework
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   SQLAlchemy
                 </span> <span></span></div>
           </div>
         </div>
@@ -285,41 +309,28 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
       </div>
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class="devicons devicons-msql_server"></i>
+          <div><i class=""></i>
             <!---->
           </div>
-          <div><i class="devicons devicons-mysql"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-sqllite"></i>
+          <div><i class=""></i>
             <!---->
           </div>
         </div>
         <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
           <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Relational Db</div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Data Visualization</div>
           </div>
         </div>
         <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
         <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  msSQL
+                  D3
                 </span> <span></span></div>
           </div>
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   mySQL
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Entity Framework
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   SQLAlchemy
+                   Tableau
                 </span> <span></span></div>
           </div>
         </div>

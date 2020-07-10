@@ -39,6 +39,9 @@ export default {
         case 'vue':
           imgClass = 'vue-devicon'
           break;
+        case 'ts':
+          imgClass = 'ts-devicon'
+          break;
         case 'tableau':
           imgClass = 'tableau-devicon'
           break;

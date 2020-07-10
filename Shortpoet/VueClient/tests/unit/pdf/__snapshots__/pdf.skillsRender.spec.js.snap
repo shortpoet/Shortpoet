@@ -10,44 +10,6 @@ exports[`PDFSkillsRender.vue element and class checks matches snapshot 1`] = `
       <div class="skill-grid-row-1 d-flex flex-row justify-content-between">
         <div class="skill-grid-render">
           <div class="list-devicons devicon-row d-flex justify-content-around">
-            <div><i class="devicons devicons-javascript"></i>
-              <!---->
-            </div>
-            <div><i class=""></i>
-              <!---->
-            </div>
-          </div>
-          <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
-            <div>
-              <div class="pdf-skill-type-1" style="font-family: 'Open Sans';">Javascript</div>
-            </div>
-          </div>
-          <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
-          <div class="skill-list-container d-flex flex-column mb-2">
-            <div class="skill-list d-flex flex-column mx-2 mb-2">
-              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                    Vue
-                  </span> <span></span></div>
-            </div>
-            <div class="skill-list d-flex flex-column mx-2 mb-2">
-              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     Leafly
-                  </span> <span></span></div>
-            </div>
-            <div class="skill-list d-flex flex-column mx-2 mb-2">
-              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     Plotly
-                  </span> <span></span></div>
-            </div>
-            <div class="skill-list d-flex flex-column mx-2 mb-2">
-              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     c3
-                  </span> <span></span></div>
-            </div>
-          </div>
-        </div>
-        <div class="skill-grid-render">
-          <div class="list-devicons devicon-row d-flex justify-content-around">
             <div><i class="devicons devicons-visualstudio"></i>
               <!---->
             </div>
@@ -60,10 +22,13 @@ exports[`PDFSkillsRender.vue element and class checks matches snapshot 1`] = `
             <div><i class="devicons devicons-linux"></i>
               <!---->
             </div>
+            <div><i class="devicons devicons-docker"></i>
+              <!---->
+            </div>
           </div>
           <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
             <div>
-              <div class="pdf-skill-type-2" style="font-family: 'Open Sans';">Workflow</div>
+              <div class="pdf-skill-type-1" style="font-family: 'Open Sans';">Workflow</div>
             </div>
           </div>
           <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -90,7 +55,7 @@ exports[`PDFSkillsRender.vue element and class checks matches snapshot 1`] = `
             </div>
             <div class="skill-list d-flex flex-column mx-2 mb-2">
               <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     Visual Studio / VSCode
+                     Docker
                   </span> <span></span></div>
             </div>
           </div>
@@ -103,7 +68,7 @@ exports[`PDFSkillsRender.vue element and class checks matches snapshot 1`] = `
           </div>
           <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
             <div>
-              <div class="pdf-skill-type-3" style="font-family: 'Open Sans';">Dotnet</div>
+              <div class="pdf-skill-type-2" style="font-family: 'Open Sans';">Dotnet</div>
             </div>
           </div>
           <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -131,6 +96,52 @@ exports[`PDFSkillsRender.vue element and class checks matches snapshot 1`] = `
             <div class="skill-list d-flex flex-column mx-2 mb-2">
               <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
                      MVC
+                  </span> <span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-grid-render">
+          <div class="list-devicons devicon-row d-flex justify-content-around">
+            <div><i class="devicons devicons-javascript"></i>
+              <!---->
+            </div>
+            <div><i class=""></i>
+              <!---->
+            </div>
+            <div><i class=""></i>
+              <!---->
+            </div>
+          </div>
+          <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
+            <div>
+              <div class="pdf-skill-type-3" style="font-family: 'Open Sans';">Javascript</div>
+            </div>
+          </div>
+          <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
+          <div class="skill-list-container d-flex flex-column mb-2">
+            <div class="skill-list d-flex flex-column mx-2 mb-2">
+              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                    Vue
+                  </span> <span></span></div>
+            </div>
+            <div class="skill-list d-flex flex-column mx-2 mb-2">
+              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Typescript
+                  </span> <span></span></div>
+            </div>
+            <div class="skill-list d-flex flex-column mx-2 mb-2">
+              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Leafly
+                  </span> <span></span></div>
+            </div>
+            <div class="skill-list d-flex flex-column mx-2 mb-2">
+              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Plotly
+                  </span> <span></span></div>
+            </div>
+            <div class="skill-list d-flex flex-column mx-2 mb-2">
+              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     c3
                   </span> <span></span></div>
             </div>
           </div>
@@ -177,28 +188,41 @@ exports[`PDFSkillsRender.vue element and class checks matches snapshot 1`] = `
         </div>
         <div class="skill-grid-render">
           <div class="list-devicons devicon-row d-flex justify-content-around">
-            <div><i class=""></i>
+            <div><i class="devicons devicons-msql_server"></i>
               <!---->
             </div>
-            <div><i class=""></i>
+            <div><i class="devicons devicons-mysql"></i>
+              <!---->
+            </div>
+            <div><i class="devicons devicons-sqllite"></i>
               <!---->
             </div>
           </div>
           <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
             <div>
-              <div class="pdf-skill-type-5" style="font-family: 'Open Sans';">Data Viz</div>
+              <div class="pdf-skill-type-5" style="font-family: 'Open Sans';">Relational Db</div>
             </div>
           </div>
           <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
           <div class="skill-list-container d-flex flex-column mb-2">
             <div class="skill-list d-flex flex-column mx-2 mb-2">
               <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                    D3
+                    msSQL
                   </span> <span></span></div>
             </div>
             <div class="skill-list d-flex flex-column mx-2 mb-2">
               <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     Tableau
+                     mySQL
+                  </span> <span></span></div>
+            </div>
+            <div class="skill-list d-flex flex-column mx-2 mb-2">
+              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Entity Framework
+                  </span> <span></span></div>
+            </div>
+            <div class="skill-list d-flex flex-column mx-2 mb-2">
+              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     SQLAlchemy
                   </span> <span></span></div>
             </div>
           </div>
@@ -279,41 +303,28 @@ exports[`PDFSkillsRender.vue element and class checks matches snapshot 1`] = `
         </div>
         <div class="skill-grid-render">
           <div class="list-devicons devicon-row d-flex justify-content-around">
-            <div><i class="devicons devicons-msql_server"></i>
+            <div><i class=""></i>
               <!---->
             </div>
-            <div><i class="devicons devicons-mysql"></i>
-              <!---->
-            </div>
-            <div><i class="devicons devicons-sqllite"></i>
+            <div><i class=""></i>
               <!---->
             </div>
           </div>
           <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
             <div>
-              <div class="pdf-skill-type-8" style="font-family: 'Open Sans';">Relational Db</div>
+              <div class="pdf-skill-type-8" style="font-family: 'Open Sans';">Data Visualization</div>
             </div>
           </div>
           <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
           <div class="skill-list-container d-flex flex-column mb-2">
             <div class="skill-list d-flex flex-column mx-2 mb-2">
               <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                    msSQL
+                    D3
                   </span> <span></span></div>
             </div>
             <div class="skill-list d-flex flex-column mx-2 mb-2">
               <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     mySQL
-                  </span> <span></span></div>
-            </div>
-            <div class="skill-list d-flex flex-column mx-2 mb-2">
-              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     Entity Framework
-                  </span> <span></span></div>
-            </div>
-            <div class="skill-list d-flex flex-column mx-2 mb-2">
-              <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     SQLAlchemy
+                     Tableau
                   </span> <span></span></div>
             </div>
           </div>

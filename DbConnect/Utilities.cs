@@ -173,7 +173,9 @@ namespace DbConnect
       }
 
       //write to yml
-      var serializer = new YamlDotNet.Serialization.Serializer();
+      var serializer = new YamlDotNet.Serialization.SerializerBuilder()
+        .DisableAliases()
+        .Build();
 
       string yaml;
       
@@ -191,7 +193,7 @@ namespace DbConnect
       }
 
       // write to javascript
-      string javascript = "exports.resume = " + json;
+      string javascript = "exports.hardResume = " + json;
       string jsPath = files.JavaScriptPath;
       Console.WriteLine(jsPath);
       using (StreamWriter w3 = new StreamWriter(jsPath)) 

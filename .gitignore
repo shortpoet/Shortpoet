@@ -365,3 +365,5 @@ VueClient/dist
 
 #all config
 *.config
+
+**/coverage/

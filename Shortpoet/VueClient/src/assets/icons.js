@@ -2,7 +2,7 @@
     iconMap: [
       {
         skill: 'Workflow',
-        icons: ['visualstudio', 'git', 'cogs', 'linux']
+        icons: ['visualstudio', 'git', 'cogs', 'linux', 'docker']
       },
       {
         skill: 'Dotnet',
@@ -10,7 +10,7 @@
       },
       {
         skill: 'Javascript',
-        icons: ['js', 'vue']
+        icons: ['js', 'vue', 'ts']
       },
       {
         skill: 'Python',
@@ -29,7 +29,7 @@
         icons: ['html', 'css', 'bootstrap', 'sass']
       },
       {
-        skill: 'Data Vizualization',
+        skill: 'Data Visualization',
         icons: ['d3', 'tableau']
       },
       {
@@ -59,6 +59,11 @@
       displayName: 'Linux'
     },
     {
+      icon: 'devicons devicons-docker',
+      name: 'docker',
+      displayName: 'Docker'
+    },
+    {
       icon: 'devicons devicons-dotnet',
       name: 'dotnet',
       displayName: 'Dotnet'
@@ -72,6 +77,11 @@
       icon: require('@/assets/vue_devicon_forest_green.svg'),
       name: 'vue',
       displayName: 'VueJs'
+    },
+    {
+      icon: require('@/assets/ts_devicon_forest_green.svg'),
+      name: 'ts',
+      displayName: 'Typescript'
     },
     {
       icon: 'devicons devicons-python',
