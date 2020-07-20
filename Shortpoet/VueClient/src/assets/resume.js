@@ -74,17 +74,6 @@ exports.hardResume = {
       "comments": "remove start and end dates"
     },
     {
-      "id": 15,
-      "experienceType": "software",
-      "position": "Developer",
-      "company": "Software Project",
-      "description": "•  Poet University \\n\\r •  c#, vuejs, IdentityServer \\n\\r •  An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider.  Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. \\n\\r •  Future... More variety with the faker library.  Better auth.  Cleaner UI. Complete the university environment.\n",
-      "startDate": "",
-      "endDate": "",
-      "dateCreated": "2020-06-04T12:30:24.55",
-      "comments": "remove start and end dates"
-    },
-    {
       "id": 16,
       "experienceType": "language",
       "position": "Translator / Interpreter",
