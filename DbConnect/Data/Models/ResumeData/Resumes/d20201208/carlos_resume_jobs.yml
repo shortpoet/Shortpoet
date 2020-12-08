@@ -1,0 +1,45 @@
+---
+  jobs:
+  - experienceType: software
+    position: Developer
+    company: Clip Management (freelance)
+    description: "
+      • Apply consistent CI/CD procedures to previous and current projects. \\n\\r 
+      • Developed and implemented prototype for G-suite integrated CRM database and multi-role 
+      admin panel web app. \\n\\r 
+      • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs \\n\\r 
+      • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions
+      to ensure well-tested and consistent deployments. \\n\\r 
+      • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. \\n\\r 
+      • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic
+      access to services. \\n\\r 
+      • User jwt for authentication. Auth0 and Google as identity providers for different access roles. \\n\\r 
+      • Use cases include managing automated communication, databasing, and visualization 
+      of customer interactions and internal metrics. \\n\\r 
+      "
+    startDate: "2020 (June)"
+    endDate: "2020 (December)"
+    comments: add clip mgt
+  - experienceType: software
+    position: Software Engineer
+    company: Boeing - St Louis, MO
+    description: "• Team devops lead - deployment of products using Cloud Foundry, Gitlab
+      CI/CD, bash and powershell scripting, and windows server virtual machine.\\n\\r 
+      • Built an application to assess the validity of employee timesheet
+      entries.  A SQL database function checked against translation tables
+      maintained in collaboration with the business operations team.  Data output was
+      displayed using d3 for data visualization to help understand labor costs. \\n\\r
+      • Learned and fully implemented advanced features of the Vue framework for a variety
+      of data analytics applications and reconstructing legacy Angular products to help
+      transition an aging library of corporate applications. \\n\\r • Parts and labor
+      tracking system to integrate the builds across teams and systems, enabling
+      wider-reaching analytics. \\n\\r • Centralized data visualization dashboard with
+      responsive layout and reusable data viz components.  Charts and tables that are
+      dynamically populated to avoid repetitive hard-coding and save on future similar
+      requests from customers. Wrapper for tableau api to better integrate server and
+      dashboard functionality across apps. \\n\\r • Ensured data integrity of daily loading from source
+      systems mostly using c#/dotnet and sql scripts with python and R developing
+      new ETL architecture for reusable data analytics pipeline."
+    startDate: "2019"
+    endDate: 2020 (April)
+    comments: move devops to top
