@@ -338,17 +338,17 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
       <div class="aboutme-container">
         <div class="aboutme-paragraph lead">
           <p>
-            Language Data Specialist.
+            Through living, studying and, working internationally, I have developed an expertise in language and culture. Considering where spoken languages intersect with data got me interested in programming.
           </p>
         </div>
         <div class="aboutme-paragraph lead">
           <p>
-            Through living, studying and working internationally, I have developed an expertise in language and culture. Considering where spoken languages intersect with data got me interested in programming.
+            Software engineering is translating business requirements into solutions. I apply my advanced tech skills to analyses that consider where culture and computation converge. This, combined with my fluency for the most widely spoken languages, allows me to engineer unique solutions to diverse problems.
           </p>
         </div>
         <div class="aboutme-paragraph lead">
           <p>
-            I apply my advanced tech skills to analyses that consider where culture and computation converge. This, combined with my fluency for the most widely spoken languages, allows me to engineer unique solutions to diverse problems.
+            I am eager to collaborate with highly motivated and experienced teams whose constant curiosity is tempered by a drive to produce excellent work.
           </p>
         </div>
       </div>
@@ -360,93 +360,62 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           <h2 class="heading heading-2 start-experience-type mb-3">software</h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-3">
             <div class="resume-content mr-auto">
+              <h3 class="heading heading-3 mb-0">Developer</h3>
+              <div class="start-company subheading mb-3">Clip Mgmt (freelance)</div>
+              <div>
+                <p class="job-1-description-1"> • Apply consistent CI/CD procedures to previous and current projects. </p>
+              </div>
+              <div>
+                <p class="job-1-description-2"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
+              </div>
+              <div>
+                <p class="job-1-description-3"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
+              </div>
+              <div>
+                <p class="job-1-description-4"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
+              </div>
+              <div>
+                <p class="job-1-description-5"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
+              </div>
+              <div>
+                <p class="job-1-description-6"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
+              </div>
+              <div>
+                <p class="job-1-description-7"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
+              </div>
+              <div>
+                <p class="job-1-description-8"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
+              </div>
+              <div>
+                <p class="job-1-description-9"> </p>
+              </div>
+            </div>
+            <div class="resume-date text-md-right mt-1"><span class="text-primary">2020 (June) - 2020 (December)</span></div>
+          </div>
+          <div class="resume-item d-flex flex-column flex-md-row mb-3">
+            <div class="resume-content mr-auto">
               <h3 class="heading heading-3 mb-0">Software Engineer</h3>
-              <div class="start-company subheading mb-3">Boeing- St Louis, MO</div>
+              <div class="start-company subheading mb-3">Boeing - St Louis, MO</div>
               <div>
-                <p class="job-1-description-1">• Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
+                <p class="job-2-description-1">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
               </div>
               <div>
-                <p class="job-1-description-2"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
+                <p class="job-2-description-2"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
               </div>
               <div>
-                <p class="job-1-description-3"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
+                <p class="job-2-description-3"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
               </div>
               <div>
-                <p class="job-1-description-4"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
+                <p class="job-2-description-4"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
               </div>
               <div>
-                <p class="job-1-description-5"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline. </p>
+                <p class="job-2-description-5"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
               </div>
               <div>
-                <p class="job-1-description-6"> • Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
+                <p class="job-2-description-6"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
               </div>
             </div>
             <div class="resume-date text-md-right mt-1"><span class="text-primary">2019 - 2020 (April)</span></div>
-          </div>
-          <div class="resume-item d-flex flex-column flex-md-row mb-3">
-            <div class="resume-content mr-auto">
-              <h3 class="heading heading-3 mb-0">Developer</h3>
-              <div class="start-company subheading mb-3">Software Project</div>
-              <div>
-                <p class="job-2-description-1">• Web App and Social Integration Dashboard </p>
-              </div>
-              <div>
-                <p class="job-2-description-2"> • c#, node.js, vuejs, Auth0, Gapi, REST APIs </p>
-              </div>
-              <div>
-                <p class="job-2-description-3"> • Authentication to Google API (gmail, sheets, drive, etc), LinkedIn, Facebook and access to account's data and programattic access to APIs. User jwt for authentication. Use cases include mass unsubscribe, sending emails that are programatically created, integrating Linkedin searches with gmail messages for job search, and many others. Intricacies of authentication through the use of Auth0 and Google as identity providers. </p>
-              </div>
-              <div>
-                <p class="job-2-description-4"> • Future... More integrations and built-in functionality. Using headless browser to unsubscribe from senders that don't provide a 'mailto' but rather a url.
-                </p>
-              </div>
-            </div>
-            <div class="resume-date text-md-right mt-1">
-              <!---->
-            </div>
-          </div>
-          <div class="resume-item d-flex flex-column flex-md-row mb-3">
-            <div class="resume-content mr-auto">
-              <h3 class="heading heading-3 mb-0">Developer</h3>
-              <div class="start-company subheading mb-3">Software Project</div>
-              <div>
-                <p class="job-3-description-1">• Poet University </p>
-              </div>
-              <div>
-                <p class="job-3-description-2"> • c#, vuejs, IdentityServer </p>
-              </div>
-              <div>
-                <p class="job-3-description-3"> • An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider. Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. </p>
-              </div>
-              <div>
-                <p class="job-3-description-4"> • Future... More variety with the faker library. Better auth. Cleaner UI. Complete the university environment.</p>
-              </div>
-            </div>
-            <div class="resume-date text-md-right mt-1">
-              <!---->
-            </div>
-          </div>
-          <div class="resume-item d-flex flex-column flex-md-row mb-3">
-            <div class="resume-content mr-auto">
-              <h3 class="heading heading-3 mb-0">Developer</h3>
-              <div class="start-company subheading mb-3">Software Project</div>
-              <div>
-                <p class="job-4-description-1">• Poet University </p>
-              </div>
-              <div>
-                <p class="job-4-description-2"> • c#, vuejs, IdentityServer </p>
-              </div>
-              <div>
-                <p class="job-4-description-3"> • An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider. Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. </p>
-              </div>
-              <div>
-                <p class="job-4-description-4"> • Future... More variety with the faker library. Better auth. Cleaner UI. Complete the university environment.
-                </p>
-              </div>
-            </div>
-            <div class="resume-date text-md-right mt-1">
-              <!---->
-            </div>
           </div>
         </div>
         <div class="resume-item d-flex flex-column mb-2">
