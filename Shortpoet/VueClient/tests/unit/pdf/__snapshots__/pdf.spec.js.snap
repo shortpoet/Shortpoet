@@ -430,7 +430,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Clip Management (freelance)</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Clip Mgmt (freelance)</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';"> • Apply consistent CI/CD procedures to previous and current projects. </p>
                 </div>
@@ -1127,7 +1127,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Clip Management (freelance)</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Clip Mgmt (freelance)</h6>
                 <div class="mb-2">
                   <p class="job-1-description-1" style="font-family: 'Open Sans';"> • Apply consistent CI/CD procedures to previous and current projects. </p>
                 </div>

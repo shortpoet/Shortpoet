@@ -361,7 +361,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           <div class="resume-item d-flex flex-column flex-md-row mb-3">
             <div class="resume-content mr-auto">
               <h3 class="heading heading-3 mb-0">Developer</h3>
-              <div class="start-company subheading mb-3">Clip Management (freelance)</div>
+              <div class="start-company subheading mb-3">Clip Mgmt (freelance)</div>
               <div>
                 <p class="job-1-description-1"> • Apply consistent CI/CD procedures to previous and current projects. </p>
               </div>
