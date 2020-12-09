@@ -1,6 +1,6 @@
 {
   "id": 0,
-  "title": "Carlos Resume 2020 07 10",
+  "title": "Carlos Resume 2020 12 08",
   "name": "CARLOS",
   "surname": "SORIANO",
   "address": "St. Louis, MO (willing to relocate)",
@@ -8,7 +8,7 @@
   "visas": "USA, EU, UK",
   "flags": "🇪🇸, 🇵🇭, 🇺🇸, 🇨🇳, 🇫🇷, 🇮🇹, 🇩🇪, 🇧🇷",
   "brief": "",
-  "aboutMe": "Language Data Specialist. \\n\\r Through living, studying and working internationally, I have developed an expertise in language and culture. Considering where spoken languages intersect with data got me interested in programming. \\n\\r I apply my advanced tech skills to analyses that consider where culture and computation converge. This, combined with my fluency for the most widely spoken languages, allows me to engineer unique solutions to diverse problems.",
+  "aboutMe": "Through living, studying and, working internationally, I have developed an expertise in language and culture. Considering where spoken languages intersect with data got me interested in programming.\\n\\r Software engineering is translating business requirements into solutions. I apply my advanced tech skills to analyses that consider where culture and computation converge. This, combined with my fluency for the most widely spoken languages, allows me to engineer unique solutions to diverse problems. \\n\\r I am eager to collaborate with highly motivated and experienced teams whose constant curiosity is tempered by a drive to produce excellent work.",
   "interests": "Kneading bread, digging gardens, vermicomposting and cooking tasty meals.  Expert at translations and accents. Yoga teacher training - YogaWorks 200hr. Adobe Creative dabbler. SCUBA certified.\n",
   "educations": [
     {
@@ -35,44 +35,11 @@
       "degree": "High School",
       "focus": "Languages",
       "resumeEducations": [],
-      "dateCreated": "2020-06-04T12:37:54.75",
+      "dateCreated": "2020-07-10T09:15:35.297",
       "comments": "simplify focus"
     }
   ],
   "jobs": [
-    {
-      "id": 12,
-      "experienceType": "software",
-      "position": "Software Engineer",
-      "company": "Boeing- St Louis, MO",
-      "description": "• Built an application to assess the validity of employee timesheet entries.  A SQL database function checked against translation tables maintained in collaboration with the business operations team.  Data output was displayed using d3 for data visualization to help understand labor costs. \\n\\r • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. \\n\\r • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. \\n\\r • Centralized data visualization dashboard with responsive layout and reusable data viz components.  Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. \\n\\r • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline. \\n\\r • Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.",
-      "startDate": "2019",
-      "endDate": "2020 (April)",
-      "dateCreated": "2020-06-04T12:37:54.76",
-      "comments": "reduce task description"
-    },
-    {
-      "id": 13,
-      "experienceType": "software",
-      "position": "Developer",
-      "company": "Software Project",
-      "description": "•  Web App and Social Integration Dashboard \\n\\r •  c#, node.js, vuejs, Auth0, Gapi, REST APIs \\n\\r •  Authentication to Google API (gmail, sheets, drive, etc), LinkedIn, Facebook and access to account's data and programattic access to APIs. User jwt for authentication.  Use cases include mass unsubscribe, sending emails that are programatically created, integrating Linkedin searches with gmail messages for job search, and many others.  Intricacies of authentication through the use of Auth0 and Google as identity providers. \\n\\r •  Future... More integrations and built-in functionality.  Using headless browser to unsubscribe from senders that don't provide a 'mailto' but rather a url.\n",
-      "startDate": "",
-      "endDate": "",
-      "dateCreated": "2020-06-04T12:37:54.763",
-      "comments": "remove start and end dates"
-    },
-    {
-      "id": 14,
-      "experienceType": "software",
-      "position": "Developer",
-      "company": "Software Project",
-      "description": "•  Poet University \\n\\r •  c#, vuejs, IdentityServer \\n\\r •  An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider.  Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. \\n\\r •  Future... More variety with the faker library.  Better auth.  Cleaner UI. Complete the university environment.",
-      "startDate": "",
-      "endDate": "",
-      "dateCreated": "2020-06-04T12:37:54.763",
-      "comments": "remove start and end dates"
-    },
     {
       "id": 16,
       "experienceType": "language",
@@ -81,7 +48,7 @@
       "description": "Medical, dental and media conferences, on-site medical and legal interpretation for depositions, insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, and various other language-related assignments, primarily in Spanish, Tagalog and French.",
       "startDate": "2011",
       "endDate": "Present",
-      "dateCreated": "2020-06-04T12:37:54.763",
+      "dateCreated": "2020-07-10T09:15:35.317",
       "comments": "change company to more clearly reflect many"
     },
     {
@@ -92,7 +59,7 @@
       "description": "Translator, linguistic tester, translated texts for various media including video games, film, and legal, checked video games for linguistic bugs and translation errors, translation of .xml databases for in-game script",
       "startDate": "2011",
       "endDate": "2014",
-      "dateCreated": "2020-06-04T12:37:54.763",
+      "dateCreated": "2020-07-10T09:15:35.317",
       "comments": null
     },
     {
@@ -103,7 +70,7 @@
       "description": "Managed daily operations in a bilingual office setting, purchased investment property, created investment portfolios, marketing and business plans.",
       "startDate": "2009",
       "endDate": "2010",
-      "dateCreated": "2020-06-04T12:37:54.763",
+      "dateCreated": "2020-07-10T09:15:35.317",
       "comments": "simplify description"
     },
     {
@@ -114,7 +81,7 @@
       "description": "Translator, interpreter, media sales, wrote articles and for advertorial project",
       "startDate": "2003",
       "endDate": "2004",
-      "dateCreated": "2020-06-04T12:37:54.763",
+      "dateCreated": "2020-07-10T09:15:35.317",
       "comments": "explain Sinologist; fix dates"
     },
     {
@@ -125,8 +92,30 @@
       "description": "Expert chef and translator at world-class restaurants",
       "startDate": "2002",
       "endDate": "2018",
-      "dateCreated": "2020-06-04T12:37:54.763",
+      "dateCreated": "2020-07-10T09:15:35.317",
       "comments": "simplify and fix dates"
+    },
+    {
+      "id": 21,
+      "experienceType": "software",
+      "position": "Developer",
+      "company": "Clip Management (freelance)",
+      "description": " • Apply consistent CI/CD procedures to previous and current projects. \\n\\r • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. \\n\\r • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs \\n\\r • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. \\n\\r • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. \\n\\r • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. \\n\\r • User jwt for authentication. Auth0 and Google as identity providers for different access roles. \\n\\r • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. \\n\\r ",
+      "startDate": "2020 (June)",
+      "endDate": "2020 (December)",
+      "dateCreated": "2020-12-09T18:04:39.133",
+      "comments": "add clip mgt"
+    },
+    {
+      "id": 22,
+      "experienceType": "software",
+      "position": "Software Engineer",
+      "company": "Boeing - St Louis, MO",
+      "description": "• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.\\n\\r • Built an application to assess the validity of employee timesheet entries.  A SQL database function checked against translation tables maintained in collaboration with the business operations team.  Data output was displayed using d3 for data visualization to help understand labor costs. \\n\\r • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. \\n\\r • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. \\n\\r • Centralized data visualization dashboard with responsive layout and reusable data viz components.  Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. \\n\\r • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.",
+      "startDate": "2019",
+      "endDate": "2020 (April)",
+      "dateCreated": "2020-12-09T18:04:39.137",
+      "comments": "move devops to top"
     }
   ],
   "spokenLanguages": [
@@ -263,37 +252,26 @@
     {
       "jobs": [
         {
-          "id": 12,
+          "id": 21,
+          "experienceType": "software",
+          "position": "Developer",
+          "company": "Clip Management (freelance)",
+          "description": " • Apply consistent CI/CD procedures to previous and current projects. \\n\\r • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. \\n\\r • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs \\n\\r • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. \\n\\r • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. \\n\\r • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. \\n\\r • User jwt for authentication. Auth0 and Google as identity providers for different access roles. \\n\\r • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. \\n\\r ",
+          "startDate": "2020 (June)",
+          "endDate": "2020 (December)",
+          "dateCreated": "2020-12-09T18:04:39.133",
+          "comments": "add clip mgt"
+        },
+        {
+          "id": 22,
           "experienceType": "software",
           "position": "Software Engineer",
-          "company": "Boeing- St Louis, MO",
-          "description": "• Built an application to assess the validity of employee timesheet entries.  A SQL database function checked against translation tables maintained in collaboration with the business operations team.  Data output was displayed using d3 for data visualization to help understand labor costs. \\n\\r • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. \\n\\r • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. \\n\\r • Centralized data visualization dashboard with responsive layout and reusable data viz components.  Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. \\n\\r • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline. \\n\\r • Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.",
+          "company": "Boeing - St Louis, MO",
+          "description": "• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.\\n\\r • Built an application to assess the validity of employee timesheet entries.  A SQL database function checked against translation tables maintained in collaboration with the business operations team.  Data output was displayed using d3 for data visualization to help understand labor costs. \\n\\r • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. \\n\\r • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. \\n\\r • Centralized data visualization dashboard with responsive layout and reusable data viz components.  Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. \\n\\r • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.",
           "startDate": "2019",
           "endDate": "2020 (April)",
-          "dateCreated": "2020-06-04T12:37:54.76",
-          "comments": "reduce task description"
-        },
-        {
-          "id": 13,
-          "experienceType": "software",
-          "position": "Developer",
-          "company": "Software Project",
-          "description": "•  Web App and Social Integration Dashboard \\n\\r •  c#, node.js, vuejs, Auth0, Gapi, REST APIs \\n\\r •  Authentication to Google API (gmail, sheets, drive, etc), LinkedIn, Facebook and access to account's data and programattic access to APIs. User jwt for authentication.  Use cases include mass unsubscribe, sending emails that are programatically created, integrating Linkedin searches with gmail messages for job search, and many others.  Intricacies of authentication through the use of Auth0 and Google as identity providers. \\n\\r •  Future... More integrations and built-in functionality.  Using headless browser to unsubscribe from senders that don't provide a 'mailto' but rather a url.\n",
-          "startDate": "",
-          "endDate": "",
-          "dateCreated": "2020-06-04T12:37:54.763",
-          "comments": "remove start and end dates"
-        },
-        {
-          "id": 14,
-          "experienceType": "software",
-          "position": "Developer",
-          "company": "Software Project",
-          "description": "•  Poet University \\n\\r •  c#, vuejs, IdentityServer \\n\\r •  An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider.  Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. \\n\\r •  Future... More variety with the faker library.  Better auth.  Cleaner UI. Complete the university environment.",
-          "startDate": "",
-          "endDate": "",
-          "dateCreated": "2020-06-04T12:37:54.763",
-          "comments": "remove start and end dates"
+          "dateCreated": "2020-12-09T18:04:39.137",
+          "comments": "move devops to top"
         }
       ],
       "type": "software"
@@ -308,7 +286,7 @@
           "description": "Medical, dental and media conferences, on-site medical and legal interpretation for depositions, insurance and immigration interviews, simultaneous interpretation of contract negotiations, guided tours, consecutive and simultaneous interpretation for training meetings, document translation of many types, including legal, medical, media localization, and various other language-related assignments, primarily in Spanish, Tagalog and French.",
           "startDate": "2011",
           "endDate": "Present",
-          "dateCreated": "2020-06-04T12:37:54.763",
+          "dateCreated": "2020-07-10T09:15:35.317",
           "comments": "change company to more clearly reflect many"
         },
         {
@@ -319,7 +297,7 @@
           "description": "Translator, linguistic tester, translated texts for various media including video games, film, and legal, checked video games for linguistic bugs and translation errors, translation of .xml databases for in-game script",
           "startDate": "2011",
           "endDate": "2014",
-          "dateCreated": "2020-06-04T12:37:54.763",
+          "dateCreated": "2020-07-10T09:15:35.317",
           "comments": null
         },
         {
@@ -330,7 +308,7 @@
           "description": "Managed daily operations in a bilingual office setting, purchased investment property, created investment portfolios, marketing and business plans.",
           "startDate": "2009",
           "endDate": "2010",
-          "dateCreated": "2020-06-04T12:37:54.763",
+          "dateCreated": "2020-07-10T09:15:35.317",
           "comments": "simplify description"
         },
         {
@@ -341,7 +319,7 @@
           "description": "Translator, interpreter, media sales, wrote articles and for advertorial project",
           "startDate": "2003",
           "endDate": "2004",
-          "dateCreated": "2020-06-04T12:37:54.763",
+          "dateCreated": "2020-07-10T09:15:35.317",
           "comments": "explain Sinologist; fix dates"
         }
       ],
@@ -357,13 +335,13 @@
           "description": "Expert chef and translator at world-class restaurants",
           "startDate": "2002",
           "endDate": "2018",
-          "dateCreated": "2020-06-04T12:37:54.763",
+          "dateCreated": "2020-07-10T09:15:35.317",
           "comments": "simplify and fix dates"
         }
       ],
       "type": "hospitality"
     }
   ],
-  "dateCreated": "2020-12-09T18:03:08.4828849",
-  "comments": "add new skills"
+  "dateCreated": "2020-12-09T18:04:38.7183854",
+  "comments": "personalize aboutMe"
 }
