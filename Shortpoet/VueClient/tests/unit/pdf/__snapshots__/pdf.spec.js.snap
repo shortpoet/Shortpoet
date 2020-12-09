@@ -398,17 +398,17 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
           <div class="resume-item d-flex flex-column justify-content-between">
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                Language Data Specialist.
+                Through living, studying and, working internationally, I have developed an expertise in language and culture. Considering where spoken languages intersect with data got me interested in programming.
               </p>
             </div>
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                Through living, studying and working internationally, I have developed an expertise in language and culture. Considering where spoken languages intersect with data got me interested in programming.
+                Software engineering is translating business requirements into solutions. I apply my advanced tech skills to analyses that consider where culture and computation converge. This, combined with my fluency for the most widely spoken languages, allows me to engineer unique solutions to diverse problems.
               </p>
             </div>
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                I apply my advanced tech skills to analyses that consider where culture and computation converge. This, combined with my fluency for the most widely spoken languages, allows me to engineer unique solutions to diverse problems.
+                I am eager to collaborate with highly motivated and experienced teams whose constant curiosity is tempered by a drive to produce excellent work.
               </p>
             </div>
           </div>
@@ -423,6 +423,48 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">2020 (June) - 2020 (December)</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Clip Management (freelance)</h6>
+                <div class="mb-2">
+                  <p class="job-1-description-1" style="font-family: 'Open Sans';"> • Apply consistent CI/CD procedures to previous and current projects. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-2" style="font-family: 'Open Sans';"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-3" style="font-family: 'Open Sans';"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-4" style="font-family: 'Open Sans';"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-5" style="font-family: 'Open Sans';"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-6" style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-7" style="font-family: 'Open Sans';"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-8" style="font-family: 'Open Sans';"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-9" style="font-family: 'Open Sans';"> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
                   <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
@@ -430,107 +472,24 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing- St Louis, MO</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing - St Louis, MO</h6>
                 <div class="mb-2">
-                  <p class="job-1-description-1" style="font-family: 'Open Sans';">• Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-1-description-2" style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
+                  <p class="job-2-description-1" style="font-family: 'Open Sans';">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-3" style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
+                  <p class="job-2-description-2" style="font-family: 'Open Sans';"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-4" style="font-family: 'Open Sans';"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
+                  <p class="job-2-description-3" style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-5" style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline. </p>
+                  <p class="job-2-description-4" style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-6" style="font-family: 'Open Sans';"> • Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex flex-column justify-content-between">
-              <div class="d-flex flex-row">
-                <div class="mr-auto">
-                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
-                </div>
-                <div class="resume-date text-md-right mr-4">
-                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';"> - </h6>
-                </div>
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Software Project</h6>
-                <div class="mb-2">
-                  <p class="job-2-description-1" style="font-family: 'Open Sans';">• Web App and Social Integration Dashboard </p>
+                  <p class="job-2-description-5" style="font-family: 'Open Sans';"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-2" style="font-family: 'Open Sans';"> • c#, node.js, vuejs, Auth0, Gapi, REST APIs </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-2-description-3" style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc), LinkedIn, Facebook and access to account's data and programattic access to APIs. User jwt for authentication. Use cases include mass unsubscribe, sending emails that are programatically created, integrating Linkedin searches with gmail messages for job search, and many others. Intricacies of authentication through the use of Auth0 and Google as identity providers. </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-2-description-4" style="font-family: 'Open Sans';"> • Future... More integrations and built-in functionality. Using headless browser to unsubscribe from senders that don't provide a 'mailto' but rather a url.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex flex-column justify-content-between">
-              <div class="d-flex flex-row">
-                <div class="mr-auto">
-                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
-                </div>
-                <div class="resume-date text-md-right mr-4">
-                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';"> - </h6>
-                </div>
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Software Project</h6>
-                <div class="mb-2">
-                  <p class="job-3-description-1" style="font-family: 'Open Sans';">• Poet University </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-3-description-2" style="font-family: 'Open Sans';"> • c#, vuejs, IdentityServer </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-3-description-3" style="font-family: 'Open Sans';"> • An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider. Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-3-description-4" style="font-family: 'Open Sans';"> • Future... More variety with the faker library. Better auth. Cleaner UI. Complete the university environment.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex flex-column justify-content-between">
-              <div class="d-flex flex-row">
-                <div class="mr-auto">
-                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
-                </div>
-                <div class="resume-date text-md-right mr-4">
-                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';"> - </h6>
-                </div>
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Software Project</h6>
-                <div class="mb-2">
-                  <p class="job-4-description-1" style="font-family: 'Open Sans';">• Poet University </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-4-description-2" style="font-family: 'Open Sans';"> • c#, vuejs, IdentityServer </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-4-description-3" style="font-family: 'Open Sans';"> • An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider. Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-4-description-4" style="font-family: 'Open Sans';"> • Future... More variety with the faker library. Better auth. Cleaner UI. Complete the university environment.
-                  </p>
+                  <p class="job-2-description-6" style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
                 </div>
               </div>
             </div>
@@ -1136,17 +1095,17 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
           <div class="resume-item d-flex flex-column justify-content-between">
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                Language Data Specialist.
+                Through living, studying and, working internationally, I have developed an expertise in language and culture. Considering where spoken languages intersect with data got me interested in programming.
               </p>
             </div>
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                Through living, studying and working internationally, I have developed an expertise in language and culture. Considering where spoken languages intersect with data got me interested in programming.
+                Software engineering is translating business requirements into solutions. I apply my advanced tech skills to analyses that consider where culture and computation converge. This, combined with my fluency for the most widely spoken languages, allows me to engineer unique solutions to diverse problems.
               </p>
             </div>
             <div class="aboutme-paragraph mb-2 mb-md-1" style="font-family: 'Open Sans';">
               <p>
-                I apply my advanced tech skills to analyses that consider where culture and computation converge. This, combined with my fluency for the most widely spoken languages, allows me to engineer unique solutions to diverse problems.
+                I am eager to collaborate with highly motivated and experienced teams whose constant curiosity is tempered by a drive to produce excellent work.
               </p>
             </div>
           </div>
@@ -1161,6 +1120,48 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-1">
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">2020 (June) - 2020 (December)</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Clip Management (freelance)</h6>
+                <div class="mb-2">
+                  <p class="job-1-description-1" style="font-family: 'Open Sans';"> • Apply consistent CI/CD procedures to previous and current projects. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-2" style="font-family: 'Open Sans';"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-3" style="font-family: 'Open Sans';"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-4" style="font-family: 'Open Sans';"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-5" style="font-family: 'Open Sans';"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-6" style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-7" style="font-family: 'Open Sans';"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-8" style="font-family: 'Open Sans';"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-9" style="font-family: 'Open Sans';"> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
                   <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
@@ -1168,107 +1169,24 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                 </div>
               </div>
               <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing- St Louis, MO</h6>
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing - St Louis, MO</h6>
                 <div class="mb-2">
-                  <p class="job-1-description-1" style="font-family: 'Open Sans';">• Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-1-description-2" style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
+                  <p class="job-2-description-1" style="font-family: 'Open Sans';">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-3" style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
+                  <p class="job-2-description-2" style="font-family: 'Open Sans';"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-4" style="font-family: 'Open Sans';"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
+                  <p class="job-2-description-3" style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-5" style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline. </p>
+                  <p class="job-2-description-4" style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-6" style="font-family: 'Open Sans';"> • Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex flex-column justify-content-between">
-              <div class="d-flex flex-row">
-                <div class="mr-auto">
-                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
-                </div>
-                <div class="resume-date text-md-right mr-1">
-                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';"> - </h6>
-                </div>
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Software Project</h6>
-                <div class="mb-2">
-                  <p class="job-2-description-1" style="font-family: 'Open Sans';">• Web App and Social Integration Dashboard </p>
+                  <p class="job-2-description-5" style="font-family: 'Open Sans';"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-2" style="font-family: 'Open Sans';"> • c#, node.js, vuejs, Auth0, Gapi, REST APIs </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-2-description-3" style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc), LinkedIn, Facebook and access to account's data and programattic access to APIs. User jwt for authentication. Use cases include mass unsubscribe, sending emails that are programatically created, integrating Linkedin searches with gmail messages for job search, and many others. Intricacies of authentication through the use of Auth0 and Google as identity providers. </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-2-description-4" style="font-family: 'Open Sans';"> • Future... More integrations and built-in functionality. Using headless browser to unsubscribe from senders that don't provide a 'mailto' but rather a url.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex flex-column justify-content-between">
-              <div class="d-flex flex-row">
-                <div class="mr-auto">
-                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
-                </div>
-                <div class="resume-date text-md-right mr-1">
-                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';"> - </h6>
-                </div>
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Software Project</h6>
-                <div class="mb-2">
-                  <p class="job-3-description-1" style="font-family: 'Open Sans';">• Poet University </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-3-description-2" style="font-family: 'Open Sans';"> • c#, vuejs, IdentityServer </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-3-description-3" style="font-family: 'Open Sans';"> • An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider. Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-3-description-4" style="font-family: 'Open Sans';"> • Future... More variety with the faker library. Better auth. Cleaner UI. Complete the university environment.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex flex-column justify-content-between">
-              <div class="d-flex flex-row">
-                <div class="mr-auto">
-                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
-                </div>
-                <div class="resume-date text-md-right mr-1">
-                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';"> - </h6>
-                </div>
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Software Project</h6>
-                <div class="mb-2">
-                  <p class="job-4-description-1" style="font-family: 'Open Sans';">• Poet University </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-4-description-2" style="font-family: 'Open Sans';"> • c#, vuejs, IdentityServer </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-4-description-3" style="font-family: 'Open Sans';"> • An extension of Contoso University in microsoft docs. Has a working implementation of an IdentityServer auth provider. Frontend client app uses IdentityServer as well as Auth0 to provide authentication for authorization experiments on the protected routes of the University. </p>
-                </div>
-                <div class="mb-2">
-                  <p class="job-4-description-4" style="font-family: 'Open Sans';"> • Future... More variety with the faker library. Better auth. Cleaner UI. Complete the university environment.
-                  </p>
+                  <p class="job-2-description-6" style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
                 </div>
               </div>
             </div>
