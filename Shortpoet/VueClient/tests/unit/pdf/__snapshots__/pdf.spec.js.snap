@@ -423,7 +423,7 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
                   <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">2020 (June) - 2020 (December)</h6>
@@ -1120,7 +1120,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
-                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Developer</h5>
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
                   <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">2020 (June) - 2020 (December)</h6>
