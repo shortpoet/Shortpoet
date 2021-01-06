@@ -21,7 +21,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "@trainiac/html2canvas": "^1.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "chalk": "^4.0.0",
     "core-js": "^3.6.5",
