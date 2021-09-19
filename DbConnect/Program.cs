@@ -37,9 +37,14 @@ namespace DbConnect
 
       // Results.ShowDataTable(results);
 
-
-      string dataFolder = "d20201208";
-      string resumeFolder = "r20201208";
+      // ###################
+      // #### IMPORTANT ####
+      // ###################
+      // CHANGE ME FIRST BEFORE RUNNING
+      string dataFolder = "d20210919";
+      string resumeFolder = "r20210919";
+      //   string dataFolder = "d20201208";
+      //   string resumeFolder = "r20201208";
       // string dataFolder = "d20200710";
       // string resumeFolder = "r20200710";
 
