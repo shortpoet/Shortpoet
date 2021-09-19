@@ -9,52 +9,52 @@ using System.Linq;
 
 namespace DbConnect
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("###################");
-            Console.WriteLine("Init Query");
+      Console.WriteLine("###################");
+      Console.WriteLine("Init Query");
 
-            var builder = new ConfigurationBuilder();
-            builder
-                .SetBasePath(System.Environment.CurrentDirectory)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-            var Configuration = builder.Build();
+      var builder = new ConfigurationBuilder();
+      builder
+          .SetBasePath(System.Environment.CurrentDirectory)
+          .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+      var Configuration = builder.Build();
 
-            string connStr = Configuration.GetConnectionString("localClient");
-            // string connStr = Configuration.GetConnectionString("localClientTest");
-            // string connStr = Configuration.GetConnectionString("spClientTestAzure");
-            // string connStr = Configuration.GetConnectionString("spClientProdAzure");
+      // string connStr = Configuration.GetConnectionString("localClient");
+      string connStr = Configuration.GetConnectionString("localClientTest");
+      // string connStr = Configuration.GetConnectionString("spClientTestAzure");
+      // string connStr = Configuration.GetConnectionString("spClientProdAzure");
 
-              // Console.WriteLine(connStr);
-            
-            string schema = "Profiles";
-            string table = "Resumes";
-            string query = $"SELECT * FROM [{schema}].[{table}]";
+      // Console.WriteLine(connStr);
 
-            // DataTable results = DbTransact.GetDataTable(connStr, query);
+      string schema = "Profiles";
+      string table = "Resumes";
+      string query = $"SELECT * FROM [{schema}].[{table}]";
 
-            // Results.ShowDataTable(results);
+      // DataTable results = DbTransact.GetDataTable(connStr, query);
+
+      // Results.ShowDataTable(results);
 
 
-            string dataFolder = "d20201208";
-            string resumeFolder = "r20201208";
-            // string dataFolder = "d20200710";
-            // string resumeFolder = "r20200710";
+      string dataFolder = "d20201208";
+      string resumeFolder = "r20201208";
+      // string dataFolder = "d20200710";
+      // string resumeFolder = "r20200710";
 
-            ResumeService.AddResumeData(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dataFolder);
-            // ResumeService.WriteJson(dataFolder);
+      ResumeService.AddResumeData(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), dataFolder);
+      // ResumeService.WriteJson(dataFolder);
 
-            ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), resumeFolder);
-            // ResumeService.WriteJson(resumeFolder);
+      ResumeService.AddResume(new Data.ResumeDbContext(ContextConfig.GetConfig(connStr)), resumeFolder);
+      // ResumeService.WriteJson(resumeFolder);
 
-            Resume resume = DbTransact.GetLatestResume(ContextConfig.GetConfig(connStr));                
-            // // Results.ShowJson(resume);
+      Resume resume = DbTransact.GetLatestResume(ContextConfig.GetConfig(connStr));
+      // // Results.ShowJson(resume);
 
-            Utilities.WriteHardResume(dataFolder, resume);
+      Utilities.WriteHardResume(dataFolder, resume);
 
 
-        }
     }
+  }
 }
