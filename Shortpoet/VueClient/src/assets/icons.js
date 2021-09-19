@@ -1,43 +1,51 @@
-  export default {
-    iconMap: [
-      {
-        skill: 'Workflow',
-        icons: ['visualstudio', 'git', 'cogs', 'linux', 'docker']
-      },
-      {
-        skill: 'Dotnet',
-        icons: ['dotnet']
-      },
-      {
-        skill: 'Javascript',
-        icons: ['js', 'vue', 'ts']
-      },
-      {
-        skill: 'Python',
-        icons: ['python']
-      },
-      {
-        skill: 'Relational Db',
-        icons: ['mssql', 'mysql', 'sqllite']
-      },
-      {
-        skill: 'Document Db',
-        icons: ['mongo']
-      },
-      {
-        skill: 'Markdown',
-        icons: ['html', 'css', 'bootstrap', 'sass']
-      },
-      {
-        skill: 'Data Visualization',
-        icons: ['d3', 'tableau']
-      },
-      {
-        skill: 'Miscellaneous',
-        icons: ['beer', 'magic']
-      }
-    ],
-    icons: [
+export default {
+  iconMap: [
+    {
+      skill: 'Workflow',
+      icons: ['visualstudio', 'git', 'cogs', 'linux']
+    },
+    {
+      skill: 'DevOps',
+      icons: ['docker', 'aws', 'go']
+    },
+    // {
+    //   skill: 'DevOps',
+    //   icons: ['docker', 'azure', 'aws', 'terraform', 'go', 'powershell', 'bash']
+    // },
+    {
+      skill: 'Dotnet',
+      icons: ['dotnet']
+    },
+    {
+      skill: 'Javascript',
+      icons: ['js', 'vue', 'ts']
+    },
+    {
+      skill: 'Python',
+      icons: ['python']
+    },
+    {
+      skill: 'Relational Db',
+      icons: ['mssql', 'mysql', 'sqllite']
+    },
+    {
+      skill: 'Document Db',
+      icons: ['mongo']
+    },
+    {
+      skill: 'Markdown',
+      icons: ['html', 'css', 'bootstrap', 'sass']
+    },
+    {
+      skill: 'Data Visualization',
+      icons: ['d3', 'tableau']
+    },
+    {
+      skill: 'Miscellaneous',
+      icons: ['beer', 'magic']
+    }
+  ],
+  icons: [
     {
       icon: 'devicons devicons-visualstudio',
       name: 'visualstudio',
@@ -63,6 +71,36 @@
       name: 'docker',
       displayName: 'Docker'
     },
+    // {
+    //   icon: require('@/assets/azure_devicon_forest_green.svg'),
+    //   name: 'azure',
+    //   displayName: 'Azure'
+    // },
+    {
+      icon: 'devicons devicons-aws',
+      name: 'aws',
+      displayName: 'AWS'
+    },
+    // {
+    //   icon: require('@/assets/terraform_devicon_forest_green.svg'),
+    //   name: 'terraform',
+    //   displayName: 'Terraform'
+    // },
+    {
+      icon: 'devicons devicons-go',
+      name: 'go',
+      displayName: 'Go'
+    },
+    // {
+    //   icon: require('@/assets/powershell_devicon_forest_green.svg'),
+    //   name: 'powershell',
+    //   displayName: 'Powershell'
+    // },
+    // {
+    //   icon: require('@/assets/bash_devicon_forest_green.svg'),
+    //   name: 'bash',
+    //   displayName: 'Bash'
+    // },
     {
       icon: 'devicons devicons-dotnet',
       name: 'dotnet',
