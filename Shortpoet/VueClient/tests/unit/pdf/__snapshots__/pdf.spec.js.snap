@@ -9,15 +9,16 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
         <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
           <ul class="list-inline">
             <li>
-              <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">CARLOS
+              <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">
+                CARLOS
                 <span id="pdf-surname" class="text-primary" style="font-family: 'Saira Extra Condensed';">SORIANO</span></h2>
             </li>
             <li><span class="not-name"><a href="mailto:soriano.carlitos@gmail.com" style="font-family: 'Open Sans';">
-              soriano.carlitos@gmail.com
-            </a></span></li>
+soriano.carlitos@gmail.com
+</a></span></li>
             <li><span id="pdf-address" class="not-name" style="font-family: 'Saira Extra Condensed';">
-            St. Louis, MO (willing to relocate)
-          </span></li>
+St. Louis, MO (willing to relocate)
+</span></li>
             <li><span id="pdf-flags" class="not-name">🇪🇸 🇵🇭 🇺🇸 🇨🇳 🇫🇷 🇮🇹 🇩🇪 🇧🇷</span></li>
             <li><span id="pdf-visas" class="not-name" style="font-family: 'Saira Extra Condensed';">Valid Work Visas: USA, EU, UK</span></li>
           </ul>
@@ -52,59 +53,6 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
                 Programming Languages &amp; Tools
               </h4>
               <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mx-5 px-0">
-                <div class="skill-grid">
-                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-                    <div><i class="devicons devicons-visualstudio"></i>
-                      <!---->
-                    </div>
-                    <div><i class="devicons devicons-git"></i>
-                      <!---->
-                    </div>
-                    <div><i class="fa fa-cogs"></i>
-                      <!---->
-                    </div>
-                    <div><i class="devicons devicons-linux"></i>
-                      <!---->
-                    </div>
-                    <div><i class="devicons devicons-docker"></i>
-                      <!---->
-                    </div>
-                  </div>
-                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
-                    <div>
-                      <div class="pdf-skill-type" style="font-family: 'Open Sans';">Workflow</div>
-                    </div>
-                  </div>
-                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
-                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  Mobile-First &amp; Responsive Design
-                </span> <span></span></div>
-                    </div>
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Cross Browser Testing &amp; Debugging
-                </span> <span></span></div>
-                    </div>
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   CI/CD
-                </span> <span></span></div>
-                    </div>
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Agile Development &amp; Scrum
-                </span> <span></span></div>
-                    </div>
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Docker
-                </span> <span></span></div>
-                    </div>
-                  </div>
-                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
-                </div>
                 <div class="skill-grid">
                   <div class="list-devicons devicon-row d-flex justify-content-around my-0">
                     <div><i class="devicons devicons-dotnet"></i>
@@ -379,6 +327,130 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
                 </span> <span></span></div>
                     </div>
                   </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-visualstudio"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-git"></i>
+                      <!---->
+                    </div>
+                    <div><i class="fa fa-cogs"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-linux"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div class="pdf-skill-type" style="font-family: 'Open Sans';">Workflow</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Mobile-First &amp; Responsive Design
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Cross Browser Testing &amp; Debugging
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Agile Development &amp; Scrum
+                </span> <span></span></div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+                </div>
+                <div class="skill-grid">
+                  <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+                    <div><i class="devicons devicons-docker"></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-aws"></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-go"></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+                    <div>
+                      <div class="pdf-skill-type" style="font-family: 'Open Sans';">DevOps</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+                  <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Docker
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Azure DevOps CI/CD Build &amp; Release Pipelines
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   AWS
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Azure Resource Manager
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Yeoman Templates
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Terraform
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Terratest
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Go
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Powershell
+                </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Bash
+                </span> <span></span></div>
+                    </div>
+                  </div>
                   <!---->
                 </div>
               </div>
@@ -423,6 +495,66 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Senior DevOps Engineer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">2021 (August) - Present</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Facilisgroup</h6>
+                <div class="mb-2">
+                  <p class="job-1-description-1" style="font-family: 'Open Sans';"> • As senior devops engineer for a greenfield project, owns the infrastructure design and implementation for a customer-facing web app. Uses Azure Resource Manager and Azure Devops to manage CI/CD pipelines and storage, network, security, virtual machines, kubernetes clusters, among other services for front and back end deployments.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-2" style="font-family: 'Open Sans';"> • Built infrastructure as code using custom Terraform modules for repeatable and immutable deployments. Ensured processes are well-tested through unit tests written in Go. Wrote extensive documentation to achieve permanence of the solution stack and educate others in the company.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-3" style="font-family: 'Open Sans';"> • Developed tools for the team to use to streamline application development and save time by automating repetitive tasks including Powershell modules, template generators, docker containers, and other scripting solutions.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-4" style="font-family: 'Open Sans';"> • Additional technologies used: Terraform, Terratest, Go, Docker, Powershell, Bash, Azure Cloud, Agile/SAFe.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-5" style="font-family: 'Open Sans';"> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Build Engineer &amp; DevOps Application Developer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-4">
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">2021 (February) - 2021 (August)</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Stifel Financial</h6>
+                <div class="mb-2">
+                  <p class="job-2-description-1" style="font-family: 'Open Sans';"> • As a devops application developer, provided dev teams with a self service interface that reduced infrastructure friction using sequential build and release pipelines, infrastructure as code, Azure DevOps extensions, Terraform HCL, and Yeoman Generators, allowing them to spend more time on delivering value.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-2-description-2" style="font-family: 'Open Sans';"> • As a build engineer, homogenized technical strategy to cloud services with a structured approach to templating new development using build and application templates in yaml, dotnet, &amp; typescript.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-2-description-3" style="font-family: 'Open Sans';"> • Advocated for and created extensive documentation to assist in understanding these processes and help prepare for disaster recovery scenarios.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-2-description-4" style="font-family: 'Open Sans';"> • Additional technologies used: Octopus Deploy, TeamCity, TFS, Docker, Powershell, Bash, Jira, Agile/SAFe.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-2-description-5" style="font-family: 'Open Sans';"> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
                   <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-4">
@@ -432,31 +564,31 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
               <div class="d-flex flex-column">
                 <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Clip Mgmt (freelance)</h6>
                 <div class="mb-2">
-                  <p class="job-1-description-1" style="font-family: 'Open Sans';"> • Apply consistent CI/CD procedures to previous and current projects. </p>
+                  <p class="job-3-description-1" style="font-family: 'Open Sans';"> • Apply consistent CI/CD procedures to previous and current projects. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-2" style="font-family: 'Open Sans';"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
+                  <p class="job-3-description-2" style="font-family: 'Open Sans';"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-3" style="font-family: 'Open Sans';"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
+                  <p class="job-3-description-3" style="font-family: 'Open Sans';"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-4" style="font-family: 'Open Sans';"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
+                  <p class="job-3-description-4" style="font-family: 'Open Sans';"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-5" style="font-family: 'Open Sans';"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
+                  <p class="job-3-description-5" style="font-family: 'Open Sans';"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-6" style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
+                  <p class="job-3-description-6" style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-7" style="font-family: 'Open Sans';"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
+                  <p class="job-3-description-7" style="font-family: 'Open Sans';"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-8" style="font-family: 'Open Sans';"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
+                  <p class="job-3-description-8" style="font-family: 'Open Sans';"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-9" style="font-family: 'Open Sans';"> </p>
+                  <p class="job-3-description-9" style="font-family: 'Open Sans';"> </p>
                 </div>
               </div>
             </div>
@@ -474,22 +606,22 @@ exports[`PDF.vue pdf.regular matches hard resume snapshot with renderPDF defualt
               <div class="d-flex flex-column">
                 <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing - St Louis, MO</h6>
                 <div class="mb-2">
-                  <p class="job-2-description-1" style="font-family: 'Open Sans';">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
+                  <p class="job-4-description-1" style="font-family: 'Open Sans';">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-2" style="font-family: 'Open Sans';"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
+                  <p class="job-4-description-2" style="font-family: 'Open Sans';"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-3" style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
+                  <p class="job-4-description-3" style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-4" style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
+                  <p class="job-4-description-4" style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-5" style="font-family: 'Open Sans';"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
+                  <p class="job-4-description-5" style="font-family: 'Open Sans';"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-6" style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
+                  <p class="job-4-description-6" style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
                 </div>
               </div>
             </div>
@@ -716,15 +848,16 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
         <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
           <ul class="list-inline">
             <li>
-              <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">CARLOS
+              <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">
+                CARLOS
                 <span id="pdf-surname" class="text-primary" style="font-family: 'Saira Extra Condensed';">SORIANO</span></h2>
             </li>
             <li><span class="not-name"><a href="mailto:soriano.carlitos@gmail.com" style="font-family: 'Open Sans';">
-              soriano.carlitos@gmail.com
-            </a></span></li>
+soriano.carlitos@gmail.com
+</a></span></li>
             <li><span id="pdf-address" class="not-name" style="font-family: 'Saira Extra Condensed';">
-            St. Louis, MO (willing to relocate)
-          </span></li>
+St. Louis, MO (willing to relocate)
+</span></li>
             <li><span id="pdf-flags" class="not-name">🇪🇸 🇵🇭 🇺🇸 🇨🇳 🇫🇷 🇮🇹 🇩🇪 🇧🇷</span></li>
             <li><span id="pdf-visas" class="not-name" style="font-family: 'Saira Extra Condensed';">Valid Work Visas: USA, EU, UK</span></li>
           </ul>
@@ -759,65 +892,13 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
               <div class="skill-grid-row-1 d-flex flex-row justify-content-between">
                 <div class="skill-grid-render">
                   <div class="list-devicons devicon-row d-flex justify-content-around">
-                    <div><i class="devicons devicons-visualstudio"></i>
-                      <!---->
-                    </div>
-                    <div><i class="devicons devicons-git"></i>
-                      <!---->
-                    </div>
-                    <div><i class="fa fa-cogs"></i>
-                      <!---->
-                    </div>
-                    <div><i class="devicons devicons-linux"></i>
-                      <!---->
-                    </div>
-                    <div><i class="devicons devicons-docker"></i>
-                      <!---->
-                    </div>
-                  </div>
-                  <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
-                    <div>
-                      <div class="pdf-skill-type-1" style="font-family: 'Open Sans';">Workflow</div>
-                    </div>
-                  </div>
-                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
-                  <div class="skill-list-container d-flex flex-column mb-2">
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                    Mobile-First &amp; Responsive Design
-                  </span> <span></span></div>
-                    </div>
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     Cross Browser Testing &amp; Debugging
-                  </span> <span></span></div>
-                    </div>
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     CI/CD
-                  </span> <span></span></div>
-                    </div>
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     Agile Development &amp; Scrum
-                  </span> <span></span></div>
-                    </div>
-                    <div class="skill-list d-flex flex-column mx-2 mb-2">
-                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
-                     Docker
-                  </span> <span></span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="skill-grid-render">
-                  <div class="list-devicons devicon-row d-flex justify-content-around">
                     <div><i class="devicons devicons-dotnet"></i>
                       <!---->
                     </div>
                   </div>
                   <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
                     <div>
-                      <div class="pdf-skill-type-2" style="font-family: 'Open Sans';">Dotnet</div>
+                      <div class="pdf-skill-type-1" style="font-family: 'Open Sans';">Dotnet</div>
                     </div>
                   </div>
                   <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -863,7 +944,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                   </div>
                   <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
                     <div>
-                      <div class="pdf-skill-type-3" style="font-family: 'Open Sans';">Javascript</div>
+                      <div class="pdf-skill-type-2" style="font-family: 'Open Sans';">Javascript</div>
                     </div>
                   </div>
                   <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -903,7 +984,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                   </div>
                   <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
                     <div>
-                      <div class="pdf-skill-type-4" style="font-family: 'Open Sans';">Python</div>
+                      <div class="pdf-skill-type-3" style="font-family: 'Open Sans';">Python</div>
                     </div>
                   </div>
                   <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -949,7 +1030,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                   </div>
                   <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
                     <div>
-                      <div class="pdf-skill-type-5" style="font-family: 'Open Sans';">Relational Db</div>
+                      <div class="pdf-skill-type-4" style="font-family: 'Open Sans';">Relational Db</div>
                     </div>
                   </div>
                   <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -984,7 +1065,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                   </div>
                   <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
                     <div>
-                      <div class="pdf-skill-type-6" style="font-family: 'Open Sans';">Doc Db</div>
+                      <div class="pdf-skill-type-5" style="font-family: 'Open Sans';">Doc Db</div>
                     </div>
                   </div>
                   <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -1018,7 +1099,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                   </div>
                   <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
                     <div>
-                      <div class="pdf-skill-type-7" style="font-family: 'Open Sans';">Markdown</div>
+                      <div class="pdf-skill-type-6" style="font-family: 'Open Sans';">Markdown</div>
                     </div>
                   </div>
                   <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -1061,7 +1142,7 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                   </div>
                   <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
                     <div>
-                      <div class="pdf-skill-type-8" style="font-family: 'Open Sans';">Data Visualization</div>
+                      <div class="pdf-skill-type-7" style="font-family: 'Open Sans';">Data Visualization</div>
                     </div>
                   </div>
                   <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
@@ -1074,6 +1155,128 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
                     <div class="skill-list d-flex flex-column mx-2 mb-2">
                       <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
                      Tableau
+                  </span> <span></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-grid-render">
+                  <div class="list-devicons devicon-row d-flex justify-content-around">
+                    <div><i class="devicons devicons-visualstudio"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-git"></i>
+                      <!---->
+                    </div>
+                    <div><i class="fa fa-cogs"></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-linux"></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
+                    <div>
+                      <div class="pdf-skill-type-8" style="font-family: 'Open Sans';">Workflow</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
+                  <div class="skill-list-container d-flex flex-column mb-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                    Mobile-First &amp; Responsive Design
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Cross Browser Testing &amp; Debugging
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Agile Development &amp; Scrum
+                  </span> <span></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-grid-render">
+                  <div class="list-devicons devicon-row d-flex justify-content-around">
+                    <div><i class="devicons devicons-docker"></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-aws"></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                    <div><i class="devicons devicons-go"></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                    <div><i class=""></i>
+                      <!---->
+                    </div>
+                  </div>
+                  <div class="skill-type-render d-flex flex-row align-items-center justify-content-around my-0">
+                    <div>
+                      <div class="pdf-skill-type-9" style="font-family: 'Open Sans';">DevOps</div>
+                    </div>
+                  </div>
+                  <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-block my-2">
+                  <div class="skill-list-container d-flex flex-column mb-2">
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                    Docker
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Azure DevOps CI/CD Build &amp; Release Pipelines
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     AWS
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Azure Resource Manager
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Yeoman Templates
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Terraform
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Terratest
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Go
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Powershell
+                  </span> <span></span></div>
+                    </div>
+                    <div class="skill-list d-flex flex-column mx-2 mb-2">
+                      <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill-render" style="font-family: 'Open Sans';">
+                     Bash
                   </span> <span></span></div>
                     </div>
                   </div>
@@ -1120,6 +1323,66 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
             <div class="d-flex flex-column justify-content-between">
               <div class="d-flex flex-row">
                 <div class="mr-auto">
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Senior DevOps Engineer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-1">
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">2021 (August) - Present</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Facilisgroup</h6>
+                <div class="mb-2">
+                  <p class="job-1-description-1" style="font-family: 'Open Sans';"> • As senior devops engineer for a greenfield project, owns the infrastructure design and implementation for a customer-facing web app. Uses Azure Resource Manager and Azure Devops to manage CI/CD pipelines and storage, network, security, virtual machines, kubernetes clusters, among other services for front and back end deployments.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-2" style="font-family: 'Open Sans';"> • Built infrastructure as code using custom Terraform modules for repeatable and immutable deployments. Ensured processes are well-tested through unit tests written in Go. Wrote extensive documentation to achieve permanence of the solution stack and educate others in the company.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-3" style="font-family: 'Open Sans';"> • Developed tools for the team to use to streamline application development and save time by automating repetitive tasks including Powershell modules, template generators, docker containers, and other scripting solutions.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-4" style="font-family: 'Open Sans';"> • Additional technologies used: Terraform, Terratest, Go, Docker, Powershell, Bash, Azure Cloud, Agile/SAFe.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-1-description-5" style="font-family: 'Open Sans';"> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
+                  <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Build Engineer &amp; DevOps Application Developer</h5>
+                </div>
+                <div class="resume-date text-md-right mr-1">
+                  <h6 class="heading heading-6 pdf-experience-dates text-primary" style="font-family: 'Saira Extra Condensed';">2021 (February) - 2021 (August)</h6>
+                </div>
+              </div>
+              <div class="d-flex flex-column">
+                <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Stifel Financial</h6>
+                <div class="mb-2">
+                  <p class="job-2-description-1" style="font-family: 'Open Sans';"> • As a devops application developer, provided dev teams with a self service interface that reduced infrastructure friction using sequential build and release pipelines, infrastructure as code, Azure DevOps extensions, Terraform HCL, and Yeoman Generators, allowing them to spend more time on delivering value.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-2-description-2" style="font-family: 'Open Sans';"> • As a build engineer, homogenized technical strategy to cloud services with a structured approach to templating new development using build and application templates in yaml, dotnet, &amp; typescript.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-2-description-3" style="font-family: 'Open Sans';"> • Advocated for and created extensive documentation to assist in understanding these processes and help prepare for disaster recovery scenarios.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-2-description-4" style="font-family: 'Open Sans';"> • Additional technologies used: Octopus Deploy, TeamCity, TFS, Docker, Powershell, Bash, Jira, Agile/SAFe.</p>
+                </div>
+                <div class="mb-2">
+                  <p class="job-2-description-5" style="font-family: 'Open Sans';"> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-flex flex-row">
+                <div class="mr-auto">
                   <h5 id="job-position" class="heading heading-5 mb-0" style="font-family: 'Saira Extra Condensed';">Software Engineer</h5>
                 </div>
                 <div class="resume-date text-md-right mr-1">
@@ -1129,31 +1392,31 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
               <div class="d-flex flex-column">
                 <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Clip Mgmt (freelance)</h6>
                 <div class="mb-2">
-                  <p class="job-1-description-1" style="font-family: 'Open Sans';"> • Apply consistent CI/CD procedures to previous and current projects. </p>
+                  <p class="job-3-description-1" style="font-family: 'Open Sans';"> • Apply consistent CI/CD procedures to previous and current projects. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-2" style="font-family: 'Open Sans';"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
+                  <p class="job-3-description-2" style="font-family: 'Open Sans';"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-3" style="font-family: 'Open Sans';"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
+                  <p class="job-3-description-3" style="font-family: 'Open Sans';"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-4" style="font-family: 'Open Sans';"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
+                  <p class="job-3-description-4" style="font-family: 'Open Sans';"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-5" style="font-family: 'Open Sans';"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
+                  <p class="job-3-description-5" style="font-family: 'Open Sans';"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-6" style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
+                  <p class="job-3-description-6" style="font-family: 'Open Sans';"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-7" style="font-family: 'Open Sans';"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
+                  <p class="job-3-description-7" style="font-family: 'Open Sans';"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-8" style="font-family: 'Open Sans';"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
+                  <p class="job-3-description-8" style="font-family: 'Open Sans';"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-1-description-9" style="font-family: 'Open Sans';"> </p>
+                  <p class="job-3-description-9" style="font-family: 'Open Sans';"> </p>
                 </div>
               </div>
             </div>
@@ -1171,22 +1434,22 @@ exports[`PDF.vue pdf.renderPDF matches hard resume snapshot with renderPDF set t
               <div class="d-flex flex-column">
                 <h6 class="heading heading-6 pdf-company" style="font-family: 'Saira Extra Condensed';">Boeing - St Louis, MO</h6>
                 <div class="mb-2">
-                  <p class="job-2-description-1" style="font-family: 'Open Sans';">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
+                  <p class="job-4-description-1" style="font-family: 'Open Sans';">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-2" style="font-family: 'Open Sans';"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
+                  <p class="job-4-description-2" style="font-family: 'Open Sans';"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-3" style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
+                  <p class="job-4-description-3" style="font-family: 'Open Sans';"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-4" style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
+                  <p class="job-4-description-4" style="font-family: 'Open Sans';"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-5" style="font-family: 'Open Sans';"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
+                  <p class="job-4-description-5" style="font-family: 'Open Sans';"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
                 </div>
                 <div class="mb-2">
-                  <p class="job-2-description-6" style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
+                  <p class="job-4-description-6" style="font-family: 'Open Sans';"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
                 </div>
               </div>
             </div>

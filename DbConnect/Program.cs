@@ -22,9 +22,13 @@ namespace DbConnect
           .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
       var Configuration = builder.Build();
 
+      // ###################
+      // #### IMPORTANT ####
+      // ###################
+      // CHECK ME FIRST BEFORE RUNNING
       // string connStr = Configuration.GetConnectionString("localClient");
-      string connStr = Configuration.GetConnectionString("localClientTest");
-      // string connStr = Configuration.GetConnectionString("spClientTestAzure");
+      // string connStr = Configuration.GetConnectionString("localClientTest");
+      string connStr = Configuration.GetConnectionString("spClientTestAzure");
       // string connStr = Configuration.GetConnectionString("spClientProdAzure");
 
       // Console.WriteLine(connStr);

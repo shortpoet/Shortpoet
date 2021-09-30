@@ -7,15 +7,16 @@ exports[`PDFAbout.vue matches renderPDF snapshot 1`] = `
     <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
       <ul class="list-inline">
         <li>
-          <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">sample name
+          <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">
+            sample name
             <span id="pdf-surname" class="text-primary" style="font-family: 'Saira Extra Condensed';">sample surname</span></h2>
         </li>
         <li><span class="not-name"><a href="mailto:sample email" style="font-family: 'Open Sans';">
-              sample email
-            </a></span></li>
+sample email
+</a></span></li>
         <li><span id="pdf-address" class="not-name" style="font-family: 'Saira Extra Condensed';">
-            sample address
-          </span></li>
+sample address
+</span></li>
         <li><span id="pdf-flags" class="not-name">sample flags</span></li>
         <li><span id="pdf-visas" class="not-name" style="font-family: 'Saira Extra Condensed';">Valid Work Visas: sample visas</span></li>
       </ul>
@@ -42,15 +43,16 @@ exports[`PDFAbout.vue matches snapshot 1`] = `
     <div id="name-contact" class="d-flex flex-column mt-1 mt-md-2 ml-2">
       <ul class="list-inline">
         <li>
-          <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">sample name
+          <h2 class="heading heading-2 mb-0" style="font-family: 'Saira Extra Condensed';">
+            sample name
             <span id="pdf-surname" class="text-primary" style="font-family: 'Saira Extra Condensed';">sample surname</span></h2>
         </li>
         <li><span class="not-name"><a href="mailto:sample email" style="font-family: 'Open Sans';">
-              sample email
-            </a></span></li>
+sample email
+</a></span></li>
         <li><span id="pdf-address" class="not-name" style="font-family: 'Saira Extra Condensed';">
-            sample address
-          </span></li>
+sample address
+</span></li>
         <li><span id="pdf-flags" class="not-name">sample flags</span></li>
         <li><span id="pdf-visas" class="not-name" style="font-family: 'Saira Extra Condensed';">Valid Work Visas: sample visas</span></li>
       </ul>

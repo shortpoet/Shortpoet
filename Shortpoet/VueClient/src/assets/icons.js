@@ -6,12 +6,8 @@ export default {
     },
     {
       skill: 'DevOps',
-      icons: ['docker', 'aws', 'go']
+      icons: ['docker', 'azure', 'aws', 'terraform', 'go', 'powershell', 'bash']
     },
-    // {
-    //   skill: 'DevOps',
-    //   icons: ['docker', 'azure', 'aws', 'terraform', 'go', 'powershell', 'bash']
-    // },
     {
       skill: 'Dotnet',
       icons: ['dotnet']
@@ -71,36 +67,36 @@ export default {
       name: 'docker',
       displayName: 'Docker'
     },
-    // {
-    //   icon: require('@/assets/azure_devicon_forest_green.svg'),
-    //   name: 'azure',
-    //   displayName: 'Azure'
-    // },
+    {
+      icon: require('@/assets/azure_devicon_forest_green.svg'),
+      name: 'azure',
+      displayName: 'Azure'
+    },
     {
       icon: 'devicons devicons-aws',
       name: 'aws',
       displayName: 'AWS'
     },
-    // {
-    //   icon: require('@/assets/terraform_devicon_forest_green.svg'),
-    //   name: 'terraform',
-    //   displayName: 'Terraform'
-    // },
+    {
+      icon: require('@/assets/terraform_devicon_forest_green.svg'),
+      name: 'terraform',
+      displayName: 'Terraform'
+    },
     {
       icon: 'devicons devicons-go',
       name: 'go',
       displayName: 'Go'
     },
-    // {
-    //   icon: require('@/assets/powershell_devicon_forest_green.svg'),
-    //   name: 'powershell',
-    //   displayName: 'Powershell'
-    // },
-    // {
-    //   icon: require('@/assets/bash_devicon_forest_green.svg'),
-    //   name: 'bash',
-    //   displayName: 'Bash'
-    // },
+    {
+      icon: require('@/assets/powershell_devicon_forest_green.svg'),
+      name: 'powershell',
+      displayName: 'Powershell'
+    },
+    {
+      icon: require('@/assets/bash_devicon_forest_green.svg'),
+      name: 'bash',
+      displayName: 'Bash'
+    },
     {
       icon: 'devicons devicons-dotnet',
       name: 'dotnet',
