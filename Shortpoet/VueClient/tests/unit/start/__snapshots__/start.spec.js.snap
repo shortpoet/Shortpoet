@@ -38,9 +38,7 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
     <section id="skills" class="resume-section pl-3 px-lg-5 mt-5 mb-4 mb-md-3 d-flex flex-column">
       <div class="my-auto">
         <h2 class="heading heading-2 mb-4 mb-md-3">Skills</h2>
-        <div class="subheading mb-3">
-          Programming Languages &amp; Tools
-        </div>
+        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
         <ul class="list-devicons list-inline list-icons">
           <li class="list-inline-item">
             <div><i class="devicons devicons-visualstudio"></i>
@@ -64,6 +62,36 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </li>
           <li class="list-inline-item">
             <div><i class="devicons devicons-docker"></i>
+              <!---->
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div><i class=""></i>
+              <!---->
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div><i class="devicons devicons-aws"></i>
+              <!---->
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div><i class=""></i>
+              <!---->
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div><i class="devicons devicons-go"></i>
+              <!---->
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div><i class=""></i>
+              <!---->
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div><i class=""></i>
               <!---->
             </div>
           </li>
@@ -165,46 +193,24 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
         </ul>
         <div class="skill-grid">
           <div class="subheading mb-3">
-            Workflow
-          </div>
-          <ul class="fa-ul mb-3 skill-list">
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              Mobile-First &amp; Responsive Design
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Cross Browser Testing &amp; Debugging
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               CI/CD
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Agile Development &amp; Scrum
-            </span></li>
-            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Docker
-            </span></li>
-          </ul>
-        </div>
-        <div class="skill-grid">
-          <div class="subheading mb-3">
             Dotnet
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              Framework 4.x
-            </span></li>
+Framework 4.x
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Core
-            </span></li>
+ Core
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Entity Framework
-            </span></li>
+ Entity Framework
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Razor
-            </span></li>
+ Razor
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               MVC
-            </span></li>
+ MVC
+</span></li>
           </ul>
         </div>
         <div class="skill-grid">
@@ -213,20 +219,20 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              Vue
-            </span></li>
+Vue
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Typescript
-            </span></li>
+ Typescript
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Leafly
-            </span></li>
+ Leafly
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Plotly
-            </span></li>
+ Plotly
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               c3
-            </span></li>
+ c3
+</span></li>
           </ul>
         </div>
         <div class="skill-grid">
@@ -235,20 +241,20 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              Pandas
-            </span></li>
+Pandas
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Matplotlib
-            </span></li>
+ Matplotlib
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Flask
-            </span></li>
+ Flask
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Selenium
-            </span></li>
+ Selenium
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Sklearn
-            </span></li>
+ Sklearn
+</span></li>
           </ul>
         </div>
         <div class="skill-grid">
@@ -257,17 +263,17 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              msSQL
-            </span></li>
+msSQL
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               mySQL
-            </span></li>
+ mySQL
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Entity Framework
-            </span></li>
+ Entity Framework
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               SQLAlchemy
-            </span></li>
+ SQLAlchemy
+</span></li>
           </ul>
         </div>
         <div class="skill-grid">
@@ -276,11 +282,11 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              mongoDB
-            </span></li>
+mongoDB
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Pymongo
-            </span></li>
+ Pymongo
+</span></li>
           </ul>
         </div>
         <div class="skill-grid">
@@ -289,20 +295,20 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              HTML
-            </span></li>
+HTML
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               CSS
-            </span></li>
+ CSS
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               YAML
-            </span></li>
+ YAML
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               MD
-            </span></li>
+ MD
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               SCSS
-            </span></li>
+ SCSS
+</span></li>
           </ul>
         </div>
         <div class="skill-grid">
@@ -311,11 +317,64 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           </div>
           <ul class="fa-ul mb-3 skill-list">
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-              D3
-            </span></li>
+D3
+</span></li>
             <li><span class="skill"><i class="skill-icon fa fa-check"></i>
-               Tableau
-            </span></li>
+ Tableau
+</span></li>
+          </ul>
+        </div>
+        <div class="skill-grid">
+          <div class="subheading mb-3">
+            Workflow
+          </div>
+          <ul class="fa-ul mb-3 skill-list">
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+Mobile-First &amp; Responsive Design
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Cross Browser Testing &amp; Debugging
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Agile Development &amp; Scrum
+</span></li>
+          </ul>
+        </div>
+        <div class="skill-grid">
+          <div class="subheading mb-3">
+            DevOps
+          </div>
+          <ul class="fa-ul mb-3 skill-list">
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+Docker
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Azure DevOps CI/CD Build &amp; Release Pipelines
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ AWS
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Azure Resource Manager
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Yeoman Templates
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Terraform
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Terratest
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Go
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Powershell
+</span></li>
+            <li><span class="skill"><i class="skill-icon fa fa-check"></i>
+ Bash
+</span></li>
           </ul>
         </div>
       </div>
@@ -360,34 +419,78 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
           <h2 class="heading heading-2 start-experience-type mb-3">software</h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-3">
             <div class="resume-content mr-auto">
+              <h3 class="heading heading-3 mb-0">Senior DevOps Engineer</h3>
+              <div class="start-company subheading mb-3">Facilisgroup</div>
+              <div>
+                <p class="job-1-description-1"> • As senior devops engineer for a greenfield project, owns the infrastructure design and implementation for a customer-facing web app. Uses Azure Resource Manager and Azure Devops to manage CI/CD pipelines and storage, network, security, virtual machines, kubernetes clusters, among other services for front and back end deployments.</p>
+              </div>
+              <div>
+                <p class="job-1-description-2"> • Built infrastructure as code using custom Terraform modules for repeatable and immutable deployments. Ensured processes are well-tested through unit tests written in Go. Wrote extensive documentation to achieve permanence of the solution stack and educate others in the company.</p>
+              </div>
+              <div>
+                <p class="job-1-description-3"> • Developed tools for the team to use to streamline application development and save time by automating repetitive tasks including Powershell modules, template generators, docker containers, and other scripting solutions.</p>
+              </div>
+              <div>
+                <p class="job-1-description-4"> • Additional technologies used: Terraform, Terratest, Go, Docker, Powershell, Bash, Azure Cloud, Agile/SAFe.</p>
+              </div>
+              <div>
+                <p class="job-1-description-5"> </p>
+              </div>
+            </div>
+            <div class="resume-date text-md-right mt-1"><span class="text-primary">2021 (August) - Present</span></div>
+          </div>
+          <div class="resume-item d-flex flex-column flex-md-row mb-3">
+            <div class="resume-content mr-auto">
+              <h3 class="heading heading-3 mb-0">Build Engineer &amp; DevOps Application Developer</h3>
+              <div class="start-company subheading mb-3">Stifel Financial</div>
+              <div>
+                <p class="job-2-description-1"> • As a devops application developer, provided dev teams with a self service interface that reduced infrastructure friction using sequential build and release pipelines, infrastructure as code, Azure DevOps extensions, Terraform HCL, and Yeoman Generators, allowing them to spend more time on delivering value.</p>
+              </div>
+              <div>
+                <p class="job-2-description-2"> • As a build engineer, homogenized technical strategy to cloud services with a structured approach to templating new development using build and application templates in yaml, dotnet, &amp; typescript.</p>
+              </div>
+              <div>
+                <p class="job-2-description-3"> • Advocated for and created extensive documentation to assist in understanding these processes and help prepare for disaster recovery scenarios.</p>
+              </div>
+              <div>
+                <p class="job-2-description-4"> • Additional technologies used: Octopus Deploy, TeamCity, TFS, Docker, Powershell, Bash, Jira, Agile/SAFe.</p>
+              </div>
+              <div>
+                <p class="job-2-description-5"> </p>
+              </div>
+            </div>
+            <div class="resume-date text-md-right mt-1"><span class="text-primary">2021 (February) - 2021 (August)</span></div>
+          </div>
+          <div class="resume-item d-flex flex-column flex-md-row mb-3">
+            <div class="resume-content mr-auto">
               <h3 class="heading heading-3 mb-0">Software Engineer</h3>
               <div class="start-company subheading mb-3">Clip Mgmt (freelance)</div>
               <div>
-                <p class="job-1-description-1"> • Apply consistent CI/CD procedures to previous and current projects. </p>
+                <p class="job-3-description-1"> • Apply consistent CI/CD procedures to previous and current projects. </p>
               </div>
               <div>
-                <p class="job-1-description-2"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
+                <p class="job-3-description-2"> • Developed and implemented prototype for G-suite integrated CRM database and multi-role admin panel web app. </p>
               </div>
               <div>
-                <p class="job-1-description-3"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
+                <p class="job-3-description-3"> • Azure DevOps Pipelines, docker, c#, vuejs, node.js, Gapi, Auth0, REST APIs </p>
               </div>
               <div>
-                <p class="job-1-description-4"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
+                <p class="job-3-description-4"> • Hosted on Azure, managed through docker containers, Azure pipelines, and GitHub actions to ensure well-tested and consistent deployments. </p>
               </div>
               <div>
-                <p class="job-1-description-5"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
+                <p class="job-3-description-5"> • Azure MSSQL database interfaced through Entity Framework Core integreted into CI/CD pipeline. </p>
               </div>
               <div>
-                <p class="job-1-description-6"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
+                <p class="job-3-description-6"> • Authentication to Google API (gmail, sheets, drive, etc) account data and programattic access to services. </p>
               </div>
               <div>
-                <p class="job-1-description-7"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
+                <p class="job-3-description-7"> • User jwt for authentication. Auth0 and Google as identity providers for different access roles. </p>
               </div>
               <div>
-                <p class="job-1-description-8"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
+                <p class="job-3-description-8"> • Use cases include managing automated communication, databasing, and visualization of customer interactions and internal metrics. </p>
               </div>
               <div>
-                <p class="job-1-description-9"> </p>
+                <p class="job-3-description-9"> </p>
               </div>
             </div>
             <div class="resume-date text-md-right mt-1"><span class="text-primary">2020 (June) - 2020 (December)</span></div>
@@ -397,22 +500,22 @@ exports[`Start.vue start.snapshots matches snapshot 1`] = `
               <h3 class="heading heading-3 mb-0">Software Engineer</h3>
               <div class="start-company subheading mb-3">Boeing - St Louis, MO</div>
               <div>
-                <p class="job-2-description-1">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
+                <p class="job-4-description-1">• Team devops lead - deployment of products using Cloud Foundry, Gitlab CI/CD, bash and powershell scripting, and windows server virtual machine.</p>
               </div>
               <div>
-                <p class="job-2-description-2"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
+                <p class="job-4-description-2"> • Built an application to assess the validity of employee timesheet entries. A SQL database function checked against translation tables maintained in collaboration with the business operations team. Data output was displayed using d3 for data visualization to help understand labor costs. </p>
               </div>
               <div>
-                <p class="job-2-description-3"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
+                <p class="job-4-description-3"> • Learned and fully implemented advanced features of the Vue framework for a variety of data analytics applications and reconstructing legacy Angular products to help transition an aging library of corporate applications. </p>
               </div>
               <div>
-                <p class="job-2-description-4"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
+                <p class="job-4-description-4"> • Parts and labor tracking system to integrate the builds across teams and systems, enabling wider-reaching analytics. </p>
               </div>
               <div>
-                <p class="job-2-description-5"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
+                <p class="job-4-description-5"> • Centralized data visualization dashboard with responsive layout and reusable data viz components. Charts and tables that are dynamically populated to avoid repetitive hard-coding and save on future similar requests from customers. Wrapper for tableau api to better integrate server and dashboard functionality across apps. </p>
               </div>
               <div>
-                <p class="job-2-description-6"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
+                <p class="job-4-description-6"> • Ensured data integrity of daily loading from source systems mostly using c#/dotnet and sql scripts with python and R developing new ETL architecture for reusable data analytics pipeline.</p>
               </div>
             </div>
             <div class="resume-date text-md-right mt-1"><span class="text-primary">2019 - 2020 (April)</span></div>
