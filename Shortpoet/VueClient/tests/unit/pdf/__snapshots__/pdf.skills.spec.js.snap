@@ -9,59 +9,6 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
     <div id="skill-grid-container" class="d-flex flex-column flex-md-row justify-content-between mt-2 mx-5 px-0">
       <div class="skill-grid">
         <div class="list-devicons devicon-row d-flex justify-content-around my-0">
-          <div><i class="devicons devicons-visualstudio"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-git"></i>
-            <!---->
-          </div>
-          <div><i class="fa fa-cogs"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-linux"></i>
-            <!---->
-          </div>
-          <div><i class="devicons devicons-docker"></i>
-            <!---->
-          </div>
-        </div>
-        <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
-          <div>
-            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Workflow</div>
-          </div>
-        </div>
-        <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
-        <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                  Mobile-First &amp; Responsive Design
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Cross Browser Testing &amp; Debugging
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   CI/CD
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Agile Development &amp; Scrum
-                </span> <span></span></div>
-          </div>
-          <div class="skill-list d-flex flex-column mx-2 mb-2">
-            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
-                   Docker
-                </span> <span></span></div>
-          </div>
-        </div>
-        <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
-      </div>
-      <div class="skill-grid">
-        <div class="list-devicons devicon-row d-flex justify-content-around my-0">
           <div><i class="devicons devicons-dotnet"></i>
             <!---->
           </div>
@@ -331,6 +278,130 @@ exports[`PDFSkills.vue element and class checks matches snapshot 1`] = `
           <div class="skill-list d-flex flex-column mx-2 mb-2">
             <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
                    Tableau
+                </span> <span></span></div>
+          </div>
+        </div>
+        <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+      </div>
+      <div class="skill-grid">
+        <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+          <div><i class="devicons devicons-visualstudio"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-git"></i>
+            <!---->
+          </div>
+          <div><i class="fa fa-cogs"></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-linux"></i>
+            <!---->
+          </div>
+        </div>
+        <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+          <div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">Workflow</div>
+          </div>
+        </div>
+        <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+        <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Mobile-First &amp; Responsive Design
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Cross Browser Testing &amp; Debugging
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Agile Development &amp; Scrum
+                </span> <span></span></div>
+          </div>
+        </div>
+        <hr style="border-width: 0.0625rem; margin: 6.25rem;" class="d-md-none d-block my-3 my-md-2">
+      </div>
+      <div class="skill-grid">
+        <div class="list-devicons devicon-row d-flex justify-content-around my-0">
+          <div><i class="devicons devicons-docker"></i>
+            <!---->
+          </div>
+          <div><i class=""></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-aws"></i>
+            <!---->
+          </div>
+          <div><i class=""></i>
+            <!---->
+          </div>
+          <div><i class="devicons devicons-go"></i>
+            <!---->
+          </div>
+          <div><i class=""></i>
+            <!---->
+          </div>
+          <div><i class=""></i>
+            <!---->
+          </div>
+        </div>
+        <div class="skill-type d-flex flex-row align-items-center justify-content-around my-2 my-md-0">
+          <div>
+            <div class="pdf-skill-type" style="font-family: 'Open Sans';">DevOps</div>
+          </div>
+        </div>
+        <hr style="border-width: 0.0625rem; margin: 0.5rem;" class="d-none d-md-block my-3 my-md-2">
+        <div class="skill-list-container d-flex flex-column mb-4 mb-md-2">
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                  Docker
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Azure DevOps CI/CD Build &amp; Release Pipelines
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   AWS
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Azure Resource Manager
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Yeoman Templates
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Terraform
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Terratest
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Go
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Powershell
+                </span> <span></span></div>
+          </div>
+          <div class="skill-list d-flex flex-column mx-2 mb-2">
+            <div class="skill-pill-container d-flex justify-content-around"><span></span> <span class="skill badge badge-pill" style="font-family: 'Open Sans';">
+                   Bash
                 </span> <span></span></div>
           </div>
         </div>

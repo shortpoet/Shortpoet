@@ -1,0 +1,9 @@
+---
+skills:
+  - type: Workflow
+    details: Mobile-First & Responsive Design, Cross Browser Testing & Debugging, 
+      Agile Development & Scrum
+    comments: Add Docker, remove IDEs
+  - type: DevOps
+    details: Docker, Azure DevOps CI/CD Build & Release Pipelines, AWS, Azure Resource Manager, Yeoman Templates, 
+      Terraform, Terratest, Go, Powershell, Bash
