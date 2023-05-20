@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+
+  # Database instance
+  mssql:
+    platform: linux/x86_64
+    # image: mcr.microsoft.com/azure-sql-edge:latest
+    # image: mcr.microsoft.com/mssql/server:2022-latest
+    hostname: mssql
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mssql
+    volumes:
+      - events_mssql:/var/opt/mssql
+      - ./setup.sql:/usr/config/setup.sql
+      - ./ShortpoetDb.bacpac:/usr/config/ShortpoetDb.bacpac
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Passw@rd
+      - MSSQL_PID=Developer
+      - MSSQL_DB=events_service
+      - MSSQL_USER=SA
+      - MSSQL_PASSWORD=Passw@rd
+      - MSSQL_DB_AUDIT_LOG=events_service_audit_log
+    # command: sqlpackage  /a:Import /SourceFile:'/usr/config/ShortpoetDb.bacpac' /TargetServerName:'mssql' /TargetDatabaseName:ShortpoetDb /tu:'sa' /tp:'Passw@rd' /tec:false
+    command: ['/bin/bash', '/usr/src/entrypoint.sh']
+
+volumes:
+  events_mssql:
